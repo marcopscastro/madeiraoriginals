@@ -96,6 +96,7 @@ const Header = () => {
       </header>
 
       <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 };
