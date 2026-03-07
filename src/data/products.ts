@@ -1,6 +1,8 @@
 import productTee from "@/assets/product-tee.png";
 import productHat from "@/assets/product-tote.png";
 
+export type ProductCategory = "tees" | "canvas" | "headwear";
+
 export interface Product {
   id: string;
   name: string;
@@ -10,6 +12,7 @@ export interface Product {
   sizes: string[];
   description: string;
   details: string[];
+  category: ProductCategory;
 }
 
 export const products: Product[] = [
@@ -20,6 +23,7 @@ export const products: Product[] = [
     tag: "Bestseller",
     images: [productTee],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    category: "tees",
     description:
       "Blame it on the poncha. This heavyweight cotton tee features our signature hand-drawn poncha glass graphic — perfect for anyone who's had one too many at a Funchal tasca.",
     details: [
@@ -36,6 +40,7 @@ export const products: Product[] = [
     price: 28,
     images: [null],
     sizes: ["One Size"],
+    category: "canvas",
     description:
       "A sturdy canvas tote inspired by the traditional Vilhoa patterns of Madeira. Roomy enough for market runs, beach days, or hauling bolo do caco home.",
     details: [
@@ -52,6 +57,7 @@ export const products: Product[] = [
     price: 25,
     images: [productHat],
     sizes: ["One Size"],
+    category: "headwear",
     description:
       "Rep the island's most iconic bread with this embroidered dad hat. The garlic butter is not included, but the compliments are guaranteed.",
     details: [
@@ -68,6 +74,7 @@ export const products: Product[] = [
     price: 38,
     images: [null],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    category: "tees",
     description:
       "A clean pocket tee with subtle heritage stripe detailing inspired by traditional Madeiran textiles. Understated island pride.",
     details: [
@@ -81,3 +88,9 @@ export const products: Product[] = [
 ];
 
 export const getProductById = (id: string) => products.find((p) => p.id === id);
+
+export const categoryLabels: Record<ProductCategory, string> = {
+  tees: "Shop Tees",
+  canvas: "Canvas Goods",
+  headwear: "Headwear",
+};
