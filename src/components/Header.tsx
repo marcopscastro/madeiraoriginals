@@ -52,7 +52,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button aria-label="Search" className="text-foreground hover:text-primary transition-colors">
+            <button aria-label="Search" className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
             <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
