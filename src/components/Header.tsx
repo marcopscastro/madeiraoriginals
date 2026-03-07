@@ -1,18 +1,21 @@
 import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useCart } from "@/context/CartContext";
 
 const navLinks = ["Shop Tees", "Canvas Goods", "Headwear", "Our Story"];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { totalItems } = useCart();
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-foreground/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary">
+        <Link to="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary">
           Madeira Originals
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
@@ -35,8 +38,13 @@ const Header = () => {
           <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
             <User size={20} />
           </button>
-          <button aria-label="Cart" className="text-foreground hover:text-primary transition-colors">
+          <button aria-label="Cart" className="relative text-foreground hover:text-primary transition-colors">
             <ShoppingCart size={20} />
+            {totalItems > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground font-heading text-[10px] font-bold w-4 h-4 flex items-center justify-center">
+                {totalItems}
+              </span>
+            )}
           </button>
           <button
             aria-label="Menu"

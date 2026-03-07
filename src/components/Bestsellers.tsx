@@ -1,29 +1,5 @@
-import productTee from "@/assets/product-tee.png";
-import productHat from "@/assets/product-tote.png";
-
-const products = [
-  {
-    name: 'The "Poncha Made Me Do It" Tee',
-    price: "€35",
-    tag: "Bestseller",
-    image: productTee,
-  },
-  {
-    name: "Classic Vilhoa Canvas Tote",
-    price: "€28",
-    image: null,
-  },
-  {
-    name: '"Bolo do Caco" Embroidered Dad Hat',
-    price: "€25",
-    image: productHat,
-  },
-  {
-    name: "Heritage Stripe Pocket Tee",
-    price: "€38",
-    image: null,
-  },
-];
+import { Link } from "react-router-dom";
+import { products } from "@/data/products";
 
 const Bestsellers = () => {
   return (
@@ -34,16 +10,16 @@ const Bestsellers = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <a
-            key={product.name}
-            href="#"
+          <Link
+            key={product.id}
+            to={`/product/${product.id}`}
             className="group block"
           >
             {/* Image */}
             <div className="relative overflow-hidden bg-muted aspect-[3/4]">
-              {product.image ? (
+              {product.images[0] ? (
                 <img
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -65,10 +41,10 @@ const Bestsellers = () => {
                 {product.name}
               </h3>
               <p className="mt-1 font-body text-base text-muted-foreground">
-                {product.price}
+                €{product.price}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
