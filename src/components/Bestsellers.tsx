@@ -12,12 +12,12 @@ const products = [
   {
     name: "Classic Vilhoa Canvas Tote",
     price: "€28",
-    image: productTote,
+    image: productHat,
   },
   {
     name: '"Bolo do Caco" Embroidered Dad Hat',
     price: "€25",
-    image: productHat,
+    image: productTote,
   },
   {
     name: "Heritage Stripe Pocket Tee",

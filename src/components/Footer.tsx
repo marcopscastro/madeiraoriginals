@@ -17,7 +17,7 @@ const Footer = () => {
             <p className="mt-2 font-body text-muted-foreground">
               Drop your email to get early access to new designs and island stories.
             </p>
-            <div className="mt-4 flex">
+            <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-0">
               <input
                 type="email"
                 value={email}
@@ -25,7 +25,7 @@ const Footer = () => {
                 placeholder="Enter your email..."
                 className="flex-1 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
               />
-              <button className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity">
+              <button className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity whitespace-nowrap">
                 Subscribe
               </button>
             </div>
