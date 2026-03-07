@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import SearchOverlay from "@/components/SearchOverlay";
 
 const navLinks = [
   { label: "Shop Tees", href: "/shop?category=tees" },
@@ -14,6 +15,7 @@ const navLinks = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { totalItems } = useCart();
   const navigate = useNavigate();
 
@@ -50,7 +52,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button aria-label="Search" className="text-foreground hover:text-primary transition-colors">
+            <button aria-label="Search" className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
             <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
@@ -94,6 +96,7 @@ const Header = () => {
       </header>
 
       <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 };
