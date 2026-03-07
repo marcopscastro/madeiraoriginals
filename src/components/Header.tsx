@@ -1,76 +1,100 @@
 import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "@/context/CartContext";
+import CartDrawer from "@/components/CartDrawer";
 
-const navLinks = ["Shop Tees", "Canvas Goods", "Headwear", "Our Story"];
+const navLinks = [
+  { label: "Shop Tees", href: "/shop?category=tees" },
+  { label: "Canvas Goods", href: "/shop?category=canvas" },
+  { label: "Headwear", href: "/shop?category=headwear" },
+  { label: "Our Story", href: "/#about" },
+];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const { totalItems } = useCart();
+  const navigate = useNavigate();
+
+  const handleNavClick = (href: string) => {
+    setMobileOpen(false);
+    if (href.startsWith("/#")) {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(href.slice(2))?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      navigate(href);
+    }
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Logo */}
-        <Link to="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary">
-          Madeira Originals
-        </Link>
+    <>
+      <header className="sticky top-0 z-50 bg-background border-b border-foreground/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+          <Link to="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary">
+            Madeira Originals
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.label}
+                onClick={() => handleNavClick(link.href)}
+                className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <button aria-label="Search" className="text-foreground hover:text-primary transition-colors">
+              <Search size={20} />
+            </button>
+            <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
+              <User size={20} />
+            </button>
+            <button
+              aria-label="Cart"
+              className="relative text-foreground hover:text-primary transition-colors"
+              onClick={() => setCartOpen(true)}
             >
-              {link}
-            </a>
-          ))}
-        </nav>
-
-        {/* Icons */}
-        <div className="flex items-center gap-4">
-          <button aria-label="Search" className="text-foreground hover:text-primary transition-colors">
-            <Search size={20} />
-          </button>
-          <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
-            <User size={20} />
-          </button>
-          <button aria-label="Cart" className="relative text-foreground hover:text-primary transition-colors">
-            <ShoppingCart size={20} />
-            {totalItems > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground font-heading text-[10px] font-bold w-4 h-4 flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </button>
-          <button
-            aria-label="Menu"
-            className="md:hidden text-foreground"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+              <ShoppingCart size={20} />
+              {totalItems > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground font-heading text-[10px] font-bold w-4 h-4 flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
+            </button>
+            <button
+              aria-label="Menu"
+              className="md:hidden text-foreground"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4">
-          {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="block py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
-      )}
-    </header>
+        {mobileOpen && (
+          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4">
+            {navLinks.map((link) => (
+              <button
+                key={link.label}
+                onClick={() => handleNavClick(link.href)}
+                className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+        )}
+      </header>
+
+      <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
+    </>
   );
 };
 
