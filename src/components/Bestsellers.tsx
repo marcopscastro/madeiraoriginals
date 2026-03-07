@@ -1,6 +1,5 @@
 import productTee from "@/assets/product-tee.png";
-import productTote from "@/assets/product-tote.png";
-import productHat from "@/assets/product-hat.png";
+import productHat from "@/assets/product-tote.png";
 
 const products = [
   {
@@ -12,12 +11,12 @@ const products = [
   {
     name: "Classic Vilhoa Canvas Tote",
     price: "€28",
-    image: productHat,
+    image: null,
   },
   {
     name: '"Bolo do Caco" Embroidered Dad Hat',
     price: "€25",
-    image: productTote,
+    image: productHat,
   },
   {
     name: "Heritage Stripe Pocket Tee",
