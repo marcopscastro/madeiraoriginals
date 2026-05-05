@@ -1,8 +1,9 @@
-import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
+import { useProducts } from "@/hooks/useShopifyProducts";
 
-const RelatedProducts = ({ currentId }: { currentId: string }) => {
-  const related = products.filter((p) => p.id !== currentId).slice(0, 3);
+const RelatedProducts = ({ currentHandle }: { currentHandle: string }) => {
+  const { data: products = [] } = useProducts(8);
+  const related = products.filter((p) => p.node.handle !== currentHandle).slice(0, 3);
 
   if (related.length === 0) return null;
 
@@ -12,8 +13,8 @@ const RelatedProducts = ({ currentId }: { currentId: string }) => {
         You May Also Like
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {related.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {related.map((p) => (
+          <ProductCard key={p.node.id} product={p} />
         ))}
       </div>
     </section>

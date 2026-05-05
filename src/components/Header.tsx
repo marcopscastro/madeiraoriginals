@@ -1,14 +1,12 @@
 import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useCart } from "@/context/CartContext";
+import { useCartTotals } from "@/stores/cartStore";
 import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 
 const navLinks = [
-  { label: "Shop Tees", href: "/shop?category=tees" },
-  { label: "Canvas Goods", href: "/shop?category=canvas" },
-  { label: "Headwear", href: "/shop?category=headwear" },
+  { label: "Shop", href: "/shop" },
   { label: "Our Story", href: "/#about" },
 ];
 
@@ -16,7 +14,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { totalItems } = useCart();
+  const { totalItems } = useCartTotals();
   const navigate = useNavigate();
 
   const handleNavClick = (href: string) => {
