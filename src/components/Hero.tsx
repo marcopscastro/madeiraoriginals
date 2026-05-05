@@ -27,6 +27,9 @@ const Hero = () => {
             src={heroImage}
             alt="Person wearing a cool graphic tee looking out at the Madeiran coast"
             className="w-full h-auto object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </div>
