@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Minus, Plus, Trash2 } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { ExternalLink, Loader2, Minus, Plus, Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCartStore, useCartTotals } from "@/stores/cartStore";
+import { formatPrice } from "@/lib/shopify";
 
 interface CartDrawerProps {
   open: boolean;
@@ -10,7 +12,24 @@ interface CartDrawerProps {
 }
 
 const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
-  const { items, updateQuantity, removeItem, totalPrice, totalItems } = useCart();
+  const items = useCartStore((s) => s.items);
+  const updateQuantity = useCartStore((s) => s.updateQuantity);
+  const removeItem = useCartStore((s) => s.removeItem);
+  const checkoutUrl = useCartStore((s) => s.checkoutUrl);
+  const isLoading = useCartStore((s) => s.isLoading);
+  const isSyncing = useCartStore((s) => s.isSyncing);
+  const syncCart = useCartStore((s) => s.syncCart);
+  const { totalItems, totalPrice, currencyCode } = useCartTotals();
+
+  useEffect(() => {
+    if (open) syncCart();
+  }, [open, syncCart]);
+
+  const handleCheckout = () => {
+    if (!checkoutUrl) return;
+    window.open(checkoutUrl, "_blank");
+    onOpenChange(false);
+  };
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -31,71 +50,93 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
         ) : (
           <>
             <div className="flex-1 overflow-y-auto space-y-4 py-4">
-              {items.map((item) => (
-                <div key={`${item.id}-${item.size}`} className="flex gap-4 border-b border-foreground/10 pb-4">
-                  <div className="w-20 h-20 bg-muted flex-shrink-0">
-                    {item.image ? (
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
-                        Soon
+              {items.map((item) => {
+                const image = item.product.node.images?.edges?.[0]?.node;
+                return (
+                  <div
+                    key={item.variantId}
+                    className="flex gap-4 border-b border-foreground/10 pb-4"
+                  >
+                    <div className="w-20 h-20 bg-muted flex-shrink-0">
+                      {image ? (
+                        <img
+                          src={image.url}
+                          alt={item.product.node.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
+                          Soon
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground truncate">
+                        {item.product.node.title}
+                      </p>
+                      {item.selectedOptions.length > 0 && (
+                        <p className="font-body text-xs text-muted-foreground mt-0.5">
+                          {item.selectedOptions.map((o) => o.value).join(" · ")}
+                        </p>
+                      )}
+                      <p className="font-heading text-sm font-bold text-primary mt-1">
+                        {formatPrice(item.price)}
+                      </p>
+                      <div className="flex items-center gap-2 mt-2">
+                        <button
+                          onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
+                          className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
+                          aria-label="Decrease"
+                        >
+                          <Minus size={12} />
+                        </button>
+                        <span className="font-heading text-xs font-bold w-6 text-center">
+                          {item.quantity}
+                        </span>
+                        <button
+                          onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
+                          className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
+                          aria-label="Increase"
+                        >
+                          <Plus size={12} />
+                        </button>
+                        <button
+                          onClick={() => removeItem(item.variantId)}
+                          className="ml-auto p-1 text-muted-foreground hover:text-destructive transition-colors"
+                          aria-label="Remove"
+                        >
+                          <Trash2 size={14} />
+                        </button>
                       </div>
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground truncate">
-                      {item.name}
-                    </p>
-                    <p className="font-body text-xs text-muted-foreground mt-0.5">Size: {item.size}</p>
-                    <p className="font-heading text-sm font-bold text-primary mt-1">€{item.price}</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <button
-                        onClick={() => updateQuantity(item.id, item.size, item.quantity - 1)}
-                        className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
-                        aria-label="Decrease"
-                      >
-                        <Minus size={12} />
-                      </button>
-                      <span className="font-heading text-xs font-bold w-6 text-center">{item.quantity}</span>
-                      <button
-                        onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)}
-                        className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
-                        aria-label="Increase"
-                      >
-                        <Plus size={12} />
-                      </button>
-                      <button
-                        onClick={() => removeItem(item.id, item.size)}
-                        className="ml-auto p-1 text-muted-foreground hover:text-destructive transition-colors"
-                        aria-label="Remove"
-                      >
-                        <Trash2 size={14} />
-                      </button>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="border-t border-foreground/10 pt-4 space-y-3">
               <div className="flex justify-between font-heading text-sm uppercase tracking-wide">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span className="font-bold text-foreground">€{totalPrice.toFixed(2)}</span>
+                <span className="font-bold text-foreground">
+                  {formatPrice({ amount: totalPrice.toFixed(2), currencyCode })}
+                </span>
               </div>
+              <p className="font-body text-xs text-muted-foreground">
+                Shipping & taxes calculated at checkout.
+              </p>
               <Button
+                onClick={handleCheckout}
+                disabled={!checkoutUrl || isLoading || isSyncing}
                 className="w-full rounded-none font-heading font-bold text-sm uppercase tracking-widest py-6"
-                asChild
-                onClick={() => onOpenChange(false)}
               >
-                <Link to="/cart">View Cart</Link>
-              </Button>
-              <Button
-                className="w-full rounded-none font-heading font-bold text-sm uppercase tracking-widest py-6"
-                variant="outline"
-                asChild
-                onClick={() => onOpenChange(false)}
-              >
-                <Link to="/checkout">Checkout</Link>
+                {isLoading || isSyncing ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <>
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Checkout
+                  </>
+                )}
               </Button>
             </div>
           </>

@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-import type { Product } from "@/data/products";
+import { formatPrice, ShopifyProduct } from "@/lib/shopify";
 
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard = ({ product }: { product: ShopifyProduct }) => {
+  const node = product.node;
+  const image = node.images.edges[0]?.node;
+  const price = node.priceRange.minVariantPrice;
+
   return (
-    <Link to={`/product/${product.id}`} className="group block">
+    <Link to={`/product/${node.handle}`} className="group block">
       <div className="relative overflow-hidden bg-muted aspect-[3/4]">
-        {product.images[0] ? (
+        {image ? (
           <img
-            src={product.images[0]}
-            alt={product.name}
+            src={image.url}
+            alt={image.altText || node.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
@@ -16,19 +20,12 @@ const ProductCard = ({ product }: { product: Product }) => {
             Coming Soon
           </div>
         )}
-        {product.tag && (
-          <span className="absolute top-3 left-3 bg-primary text-primary-foreground font-heading text-xs font-bold uppercase tracking-wider px-3 py-1">
-            {product.tag}
-          </span>
-        )}
       </div>
       <div className="mt-4">
         <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground group-hover:text-primary transition-colors">
-          {product.name}
+          {node.title}
         </h3>
-        <p className="mt-1 font-body text-base text-muted-foreground">
-          €{product.price}
-        </p>
+        <p className="mt-1 font-body text-base text-muted-foreground">{formatPrice(price)}</p>
       </div>
     </Link>
   );

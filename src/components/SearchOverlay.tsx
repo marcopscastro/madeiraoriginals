@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { products } from "@/data/products";
+import { useProducts } from "@/hooks/useShopifyProducts";
+import { formatPrice } from "@/lib/shopify";
 
 interface SearchOverlayProps {
   open: boolean;
@@ -11,6 +12,7 @@ interface SearchOverlayProps {
 const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const { data: products = [] } = useProducts(50);
 
   useEffect(() => {
     if (open) {
@@ -20,17 +22,17 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
   }, [open]);
 
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
+    const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    if (open) window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
+    if (open) window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
   if (!open) return null;
 
   const filtered = query.trim()
-    ? products.filter((p) => p.name.toLowerCase().includes(query.toLowerCase()))
+    ? products.filter((p) => p.node.title.toLowerCase().includes(query.toLowerCase()))
     : [];
 
   return (
@@ -54,30 +56,35 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
           {query.trim() && filtered.length === 0 && (
             <p className="text-center text-muted-foreground font-body py-8">No products found</p>
           )}
-          {filtered.map((product) => (
-            <Link
-              key={product.id}
-              to={`/product/${product.id}`}
-              onClick={onClose}
-              className="flex items-center gap-4 p-3 hover:bg-muted/50 transition-colors"
-            >
-              <div className="w-14 h-14 bg-muted flex-shrink-0 overflow-hidden">
-                {product.images[0] ? (
-                  <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover" />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
-                    Soon
-                  </div>
-                )}
-              </div>
-              <div>
-                <p className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground">
-                  {product.name}
-                </p>
-                <p className="font-body text-sm text-muted-foreground">€{product.price}</p>
-              </div>
-            </Link>
-          ))}
+          {filtered.map((p) => {
+            const image = p.node.images.edges[0]?.node;
+            return (
+              <Link
+                key={p.node.id}
+                to={`/product/${p.node.handle}`}
+                onClick={onClose}
+                className="flex items-center gap-4 p-3 hover:bg-muted/50 transition-colors"
+              >
+                <div className="w-14 h-14 bg-muted flex-shrink-0 overflow-hidden">
+                  {image ? (
+                    <img src={image.url} alt={p.node.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
+                      Soon
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <p className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground">
+                    {p.node.title}
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground">
+                    {formatPrice(p.node.priceRange.minVariantPrice)}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
