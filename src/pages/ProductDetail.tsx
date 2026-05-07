@@ -4,6 +4,7 @@ import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import ImageLightbox from "@/components/ImageLightbox";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
@@ -18,6 +19,7 @@ const ProductDetail = () => {
   const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const variants = useMemo(
     () => product?.variants.edges.map((e) => e.node) ?? [],
@@ -111,11 +113,18 @@ const ProductDetail = () => {
           <div className="space-y-4">
             <div className="relative overflow-hidden bg-muted aspect-[3/4]">
               {currentImage ? (
-                <img
-                  src={currentImage.url}
-                  alt={currentImage.altText || product.title}
-                  className="w-full h-full object-cover"
-                />
+                <button
+                  type="button"
+                  onClick={() => setLightboxOpen(true)}
+                  className="w-full h-full block cursor-zoom-in"
+                  aria-label="Zoom image"
+                >
+                  <img
+                    src={currentImage.url}
+                    alt={currentImage.altText || product.title}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
                   Coming Soon
@@ -228,6 +237,14 @@ const ProductDetail = () => {
 
       <RelatedProducts currentHandle={product.handle} />
       <Footer />
+
+      <ImageLightbox
+        images={images}
+        startIndex={selectedImage}
+        open={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        title={product.title}
+      />
     </div>
   );
 };
