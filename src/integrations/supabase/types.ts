@@ -62,6 +62,48 @@ export type Database = {
         }
         Relationships: []
       }
+      horeca_leads: {
+        Row: {
+          business_name: string
+          contact_name: string
+          created_at: string
+          deadline: string | null
+          email: string
+          estimated_quantity: string | null
+          id: string
+          message: string | null
+          phone: string | null
+          product_type: string | null
+          status: string
+        }
+        Insert: {
+          business_name: string
+          contact_name: string
+          created_at?: string
+          deadline?: string | null
+          email: string
+          estimated_quantity?: string | null
+          id?: string
+          message?: string | null
+          phone?: string | null
+          product_type?: string | null
+          status?: string
+        }
+        Update: {
+          business_name?: string
+          contact_name?: string
+          created_at?: string
+          deadline?: string | null
+          email?: string
+          estimated_quantity?: string | null
+          id?: string
+          message?: string | null
+          phone?: string | null
+          product_type?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
       newsletter_subscribers: {
         Row: {
           created_at: string
@@ -80,6 +122,69 @@ export type Database = {
           email?: string
           id?: string
           source?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          approved: boolean
+          author_name: string
+          body: string
+          created_at: string
+          id: string
+          product_handle: string
+          product_title: string | null
+          rating: number
+          title: string | null
+          user_id: string
+        }
+        Insert: {
+          approved?: boolean
+          author_name: string
+          body: string
+          created_at?: string
+          id?: string
+          product_handle: string
+          product_title?: string | null
+          rating: number
+          title?: string | null
+          user_id: string
+        }
+        Update: {
+          approved?: boolean
+          author_name?: string
+          body?: string
+          created_at?: string
+          id?: string
+          product_handle?: string
+          product_title?: string | null
+          rating?: number
+          title?: string | null
+          user_id?: string
         }
         Relationships: []
       }
