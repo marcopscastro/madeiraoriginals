@@ -1,8 +1,21 @@
-## Plan: Replace Lovable favicon with Madeira Originals logo
+# Replace tee artwork with shirt mockups
 
-1. Copy the uploaded logo to `public/favicon.png`.
-2. Delete the existing `public/favicon.ico` so browsers don't fall back to the old Lovable icon.
-3. Add a `<link rel="icon" href="/favicon.png" type="image/png">` tag inside `<head>` in `index.html`. Also add `<link rel="apple-touch-icon" href="/favicon.png">` for iOS.
+Right now the three tee products use flat design artwork as their main image. I'll swap them for proper on-shirt mockups (the design printed on an actual tee, front view, clean studio background) so the storefront shows what customers actually receive.
 
-### Notes
-- The logo includes the full "MADEIRA ORIGINALS" wordmark, which will be hard to read at 32x32 favicon size. The triple-mountain "M" mark on its own would render much more clearly. If you'd like, I can crop/generate a square mark-only version (just the mountains + wave) as the favicon instead — let me know after approving and I'll do that as a follow-up. For now this plan uses the full logo as uploaded.
+## Affected products
+1. Mercado dos Lavradores Tee
+2. The Original Madeira Uber Tee
+3. Liquid Software Tee
+
+## Steps
+1. Generate three new mockup images — design centered on a flat-laid / ghost-mannequin tee, neutral background, matching each tee's primary color (Sand for Mercado & Uber, White for Liquid). Save to `src/assets/`:
+   - `mockup-tee-mercado.png`
+   - `mockup-tee-uber.png`
+   - `mockup-tee-liquid.png`
+2. For each Shopify product, call `shopify--update_product` with the new image. Note: per the tool spec, providing `images` replaces all existing images, so the flat artwork will be removed and replaced by the mockup.
+3. No code changes — `Bestsellers` and `ProductCard` already pull images from the Storefront API, so the new mockups appear automatically on reload.
+
+## Out of scope
+- Pint glass products (keep current images).
+- No variant, price, or copy changes.
+- Not adding multiple angles yet — single front mockup per product. We can add back/detail shots later if you want.
