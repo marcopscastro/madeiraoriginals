@@ -101,7 +101,7 @@ const ProductDetail = () => {
     });
   };
 
-  const productLd = {
+  const productLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
@@ -119,6 +119,13 @@ const ProductDetail = () => {
       url: `${SITE_URL}/product/${product.handle}`,
     },
   };
+  if (rating && rating.count > 0) {
+    productLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: rating.avg.toFixed(1),
+      reviewCount: rating.count,
+    };
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -295,6 +302,10 @@ const ProductDetail = () => {
           </div>
         </section>
       </main>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ProductReviews productHandle={product.handle} productTitle={product.title} />
+      </div>
 
       <RelatedProducts currentHandle={product.handle} />
       <Footer />
