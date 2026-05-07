@@ -11,6 +11,9 @@ import Culture from "./pages/Culture";
 import About from "./pages/About";
 import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
+import Auth from "./pages/Auth";
+import AdminJournal from "./pages/admin/AdminJournal";
+import AdminJournalEdit from "./pages/admin/AdminJournalEdit";
 import NotFound from "./pages/NotFound";
 import { useCartSync } from "@/hooks/useCartSync";
 
@@ -28,6 +31,9 @@ const AppRoutes = () => {
       <Route path="/journal" element={<Journal />} />
       <Route path="/journal/:slug" element={<JournalPost />} />
       <Route path="/product/:handle" element={<ProductDetail />} />
+      <Route path="/auth" element={<Auth />} />
+      <Route path="/admin/journal" element={<AdminJournal />} />
+      <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
