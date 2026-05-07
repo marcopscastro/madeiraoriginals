@@ -48,22 +48,33 @@ const Journal = () => {
               <Link
                 key={a.slug}
                 to={`/journal/${a.slug}`}
-                className="group block border border-foreground/10 hover:border-foreground transition-colors p-6 md:p-8"
+                className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
               >
-                <div className="aspect-[16/10] bg-muted mb-5" />
-                {a.tags?.[0] && (
-                  <p className="font-heading text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2">
-                    {a.tags[0]}
-                  </p>
-                )}
-                <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {a.title}
-                </h2>
-                {a.excerpt && (
-                  <p className="mt-3 font-body text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
-                    {a.excerpt}
-                  </p>
-                )}
+                <div className="aspect-[16/10] bg-muted overflow-hidden">
+                  {a.cover_url && (
+                    <img
+                      src={a.cover_url}
+                      alt={a.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  )}
+                </div>
+                <div className="p-6 md:p-8">
+                  {a.tags?.[0] && (
+                    <p className="font-heading text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2">
+                      {a.tags[0]}
+                    </p>
+                  )}
+                  <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {a.title}
+                  </h2>
+                  {a.excerpt && (
+                    <p className="mt-3 font-body text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
+                      {a.excerpt}
+                    </p>
+                  )}
+                </div>
               </Link>
             ))}
           </div>
