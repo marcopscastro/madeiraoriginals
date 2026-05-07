@@ -18,6 +18,7 @@ const ProductDetail = () => {
   const { data: product, isLoading } = useProductByHandle(handle);
   const addItem = useCartStore((s) => s.addItem);
   const isAdding = useCartStore((s) => s.isLoading);
+  const rating = useProductRating(handle);
 
   const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);

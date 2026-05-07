@@ -66,6 +66,17 @@ const Horeca = () => {
             </div>
           )}
         </section>
+
+        <section id="quote" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
+          <div className="text-center mb-8">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Request a quote</p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground">
+              Tell us about your business.
+            </h2>
+            <p className="mt-3 font-body text-muted-foreground">We reply within 24 hours with pricing and lead times.</p>
+          </div>
+          <HorecaLeadForm />
+        </section>
       </main>
       <Footer />
     </div>
