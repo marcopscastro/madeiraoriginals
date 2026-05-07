@@ -99,8 +99,38 @@ const ProductDetail = () => {
     });
   };
 
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description?.slice(0, 5000),
+    image: images.map((i) => i.url),
+    sku: activeVariant?.id,
+    brand: { "@type": "Brand", name: SITE_NAME },
+    offers: {
+      "@type": "Offer",
+      price: price.amount,
+      priceCurrency: price.currencyCode,
+      availability: activeVariant?.availableForSale
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      url: `${SITE_URL}/product/${product.handle}`,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${product.title} — Madeira Originals`}
+        description={
+          product.description?.slice(0, 160) ||
+          `Premium ${product.title} inspired by Madeira Island culture and identity.`
+        }
+        path={`/product/${product.handle}`}
+        type="product"
+        image={images[0]?.url}
+        jsonLd={productLd}
+      />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
