@@ -4,6 +4,7 @@ import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
+import ImageLightbox from "@/components/ImageLightbox";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
