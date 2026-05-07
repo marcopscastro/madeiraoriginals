@@ -29,7 +29,17 @@ const HorecaLeadForm = () => {
     const parsed = schema.safeParse(form);
     if (!parsed.success) return toast.error(parsed.error.issues[0].message);
     setSubmitting(true);
-    const { error } = await supabase.from("horeca_leads").insert(parsed.data as Required<Pick<typeof parsed.data, "business_name" | "contact_name" | "email">> & typeof parsed.data);
+    const d = parsed.data;
+    const { error } = await supabase.from("horeca_leads").insert({
+      business_name: d.business_name,
+      contact_name: d.contact_name,
+      email: d.email,
+      phone: d.phone || null,
+      product_type: d.product_type || null,
+      estimated_quantity: d.estimated_quantity || null,
+      deadline: d.deadline || null,
+      message: d.message || null,
+    });
     setSubmitting(false);
     if (error) return toast.error("Could not send. Try again or email hello@madeiraoriginals.pt");
     setDone(true);
