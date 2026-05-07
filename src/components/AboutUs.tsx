@@ -1,12 +1,20 @@
 const AboutUs = () => {
   return (
-    <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
+    <section id="about" className="bg-background py-16 md:py-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-wide mb-8">
-          Tradition, but make it wearable.
+        <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
+          Brand Story
+        </p>
+        <h2 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-foreground leading-tight">
+          Inspired by Madeira.<br />
+          <span className="italic">Designed for everywhere.</span>
         </h2>
-        <p className="font-body text-lg leading-relaxed opacity-90">
-          We love the vibrant colors of the Traje de Vilhoa and the rich history of Madeira, but we also love a really good, comfortable T-shirt. Madeira Originals was born from the idea that you can celebrate island heritage without looking like a walking souvenir shop. We design premium apparel and canvas gear with a nod to tradition and a touch of local humor.
+        <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground">
+          Madeira Originals was created to bring the spirit of Madeira Island into modern apparel
+          and lifestyle design. Inspired by the island's mountains, ocean, traditions and
+          culture, our products combine authentic Madeira identity with contemporary aesthetics —
+          made to feel as at home in Funchal as in Lisbon, London, or anywhere the diaspora
+          carries the island.
         </p>
       </div>
     </section>

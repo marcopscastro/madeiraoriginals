@@ -5,8 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import ImageLightbox from "@/components/ImageLightbox";
+import SEO from "@/components/SEO";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 
@@ -97,8 +99,38 @@ const ProductDetail = () => {
     });
   };
 
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description?.slice(0, 5000),
+    image: images.map((i) => i.url),
+    sku: activeVariant?.id,
+    brand: { "@type": "Brand", name: SITE_NAME },
+    offers: {
+      "@type": "Offer",
+      price: price.amount,
+      priceCurrency: price.currencyCode,
+      availability: activeVariant?.availableForSale
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      url: `${SITE_URL}/product/${product.handle}`,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${product.title} — Madeira Originals`}
+        description={
+          product.description?.slice(0, 160) ||
+          `Premium ${product.title} inspired by Madeira Island culture and identity.`
+        }
+        path={`/product/${product.handle}`}
+        type="product"
+        image={images[0]?.url}
+        jsonLd={productLd}
+      />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
@@ -233,6 +265,30 @@ const ProductDetail = () => {
             </button>
           </div>
         </div>
+
+        <section className="mt-20 grid md:grid-cols-2 gap-10 lg:gap-16">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+              Designed with Madeira inspiration.
+            </h2>
+            <p className="font-body text-base text-muted-foreground leading-relaxed">
+              Every Madeira Originals piece is rooted in the landscapes, traditions and modern
+              culture of Madeira Island — translated through premium materials and editorial
+              cuts. Wear the island in Funchal, Lisbon, or anywhere the diaspora carries it.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+              Materials, fit & care.
+            </h2>
+            <ul className="font-body text-base text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
+              <li>Premium cotton construction, made to last and soften with wear.</li>
+              <li>Modern unisex fit — true to size for most; size up for an oversized look.</li>
+              <li>Machine wash cold, inside out. Tumble dry low or hang to dry.</li>
+              <li>Designed in Madeira. Shipped worldwide.</li>
+            </ul>
+          </div>
+        </section>
       </main>
 
       <RelatedProducts currentHandle={product.handle} />
