@@ -107,7 +107,9 @@ const ProductReviews = ({ productHandle, productTitle }: Props) => {
   const avg = reviews.length ? reviews.reduce((s, r) => s + r.rating, 0) / reviews.length : 0;
 
   return (
-    <section className="mt-20 border-t border-foreground/10 pt-12">
+    <section id="reviews" className="mt-20 border-t border-foreground/10 pt-12">
+      <a id="reviews" />
+
       <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
         <div>
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">Reviews</h2>
