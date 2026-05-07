@@ -41,10 +41,7 @@ const Horeca = () => {
                 Premium pint glasses and branded glassware for the Madeiran hospitality industry.
                 Low minimums, full custom branding, designed and printed locally.
               </p>
-              <a
-                href="mailto:hello@madeiraoriginals.pt?subject=HORECA%20Quote%20Request"
-                className="mt-8 inline-flex items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
-              >
+              <a href="#quote" className="mt-8 inline-flex items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity">
                 Request a Quote
               </a>
             </div>
