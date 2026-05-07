@@ -41,7 +41,7 @@ const About = () => (
         </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 prose-editorial">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 prose-editorial">
         <h2>What we make</h2>
         <p>
           Madeira Originals designs premium clothing, accessories, and lifestyle products inspired
