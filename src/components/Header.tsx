@@ -99,6 +99,22 @@ const Header = () => {
                 {link.label}
               </button>
             ))}
+            {isAdmin && (
+              <button
+                onClick={() => go("/admin/journal")}
+                className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-primary"
+              >
+                Admin
+              </button>
+            )}
+            {!user && (
+              <button
+                onClick={() => go("/auth")}
+                className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground"
+              >
+                Sign in
+              </button>
+            )}
           </nav>
         )}
       </header>
