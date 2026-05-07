@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCartTotals } from "@/stores/cartStore";
 import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
+import { useAuth } from "@/hooks/useAuth";
 
 const navLinks = [
   { label: "Shop", href: "/shop" },
@@ -18,6 +19,7 @@ const Header = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { totalItems } = useCartTotals();
+  const { user, isAdmin } = useAuth();
   const navigate = useNavigate();
 
   const go = (href: string) => {
@@ -49,7 +51,11 @@ const Header = () => {
             <button aria-label="Search" className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
-            <button aria-label="Account" className="text-foreground hover:text-primary transition-colors hidden sm:block">
+            <button
+              aria-label={user ? "Account" : "Sign in"}
+              onClick={() => navigate(isAdmin ? "/admin/journal" : user ? "/" : "/auth")}
+              className="text-foreground hover:text-primary transition-colors hidden sm:block"
+            >
               <User size={20} />
             </button>
             <button

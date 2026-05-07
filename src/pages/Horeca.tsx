@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import SEO from "@/components/SEO";
 import { useProducts } from "@/hooks/useShopifyProducts";
+import HorecaLeadForm from "@/components/HorecaLeadForm";
 import horecaHero from "@/assets/horeca-hero.jpg";
 
 const Horeca = () => {
@@ -40,10 +41,7 @@ const Horeca = () => {
                 Premium pint glasses and branded glassware for the Madeiran hospitality industry.
                 Low minimums, full custom branding, designed and printed locally.
               </p>
-              <a
-                href="mailto:hello@madeiraoriginals.pt?subject=HORECA%20Quote%20Request"
-                className="mt-8 inline-flex items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
-              >
+              <a href="#quote" className="mt-8 inline-flex items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity">
                 Request a Quote
               </a>
             </div>
@@ -67,6 +65,17 @@ const Horeca = () => {
               ))}
             </div>
           )}
+        </section>
+
+        <section id="quote" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
+          <div className="text-center mb-8">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Request a quote</p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground">
+              Tell us about your business.
+            </h2>
+            <p className="mt-3 font-body text-muted-foreground">We reply within 24 hours with pricing and lead times.</p>
+          </div>
+          <HorecaLeadForm />
         </section>
       </main>
       <Footer />

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import ImageLightbox from "@/components/ImageLightbox";
 import SEO from "@/components/SEO";
+import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
@@ -17,6 +18,7 @@ const ProductDetail = () => {
   const { data: product, isLoading } = useProductByHandle(handle);
   const addItem = useCartStore((s) => s.addItem);
   const isAdding = useCartStore((s) => s.isLoading);
+  const rating = useProductRating(handle);
 
   const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
