@@ -45,6 +45,14 @@ const Header = () => {
                 {link.label}
               </button>
             ))}
+            {isAdmin && (
+              <button
+                onClick={() => go("/admin/journal")}
+                className="font-heading text-sm font-semibold uppercase tracking-wide text-primary hover:opacity-70 transition-opacity"
+              >
+                Admin
+              </button>
+            )}
           </nav>
 
           <div className="flex items-center gap-4">
