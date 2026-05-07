@@ -41,17 +41,28 @@ const JournalPreview = () => {
           <Link
             key={a.slug}
             to={`/journal/${a.slug}`}
-            className="group block border border-foreground/10 hover:border-foreground transition-colors p-6"
+            className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
           >
-            <div className="aspect-[4/3] bg-muted mb-5" />
-            <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-              {a.title}
-            </h3>
-            {a.excerpt && (
-              <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                {a.excerpt}
-              </p>
-            )}
+            <div className="aspect-[4/3] bg-muted overflow-hidden">
+              {a.cover_url && (
+                <img
+                  src={a.cover_url}
+                  alt={a.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              )}
+            </div>
+            <div className="p-6">
+              <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                {a.title}
+              </h3>
+              {a.excerpt && (
+                <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  {a.excerpt}
+                </p>
+              )}
+            </div>
           </Link>
         ))}
       </div>
