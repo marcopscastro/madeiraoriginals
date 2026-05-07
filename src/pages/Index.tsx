@@ -7,6 +7,7 @@ import Bestsellers from "@/components/Bestsellers";
 import CultureTeaser from "@/components/CultureTeaser";
 import GiftPositioning from "@/components/GiftPositioning";
 import JournalPreview from "@/components/JournalPreview";
+import HomeNewsletter from "@/components/HomeNewsletter";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -27,6 +28,7 @@ const Index = () => (
       <CultureTeaser />
       <GiftPositioning />
       <JournalPreview />
+      <HomeNewsletter />
     </main>
     <Footer />
   </div>

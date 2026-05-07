@@ -97,6 +97,15 @@ const JournalPost = () => {
           )}
         </header>
 
+        {article.cover_url && (
+          <img
+            src={article.cover_url}
+            alt={article.title}
+            className="w-full aspect-[16/9] object-cover mb-10"
+            loading="eager"
+          />
+        )}
+
         <div className="prose-editorial">
           <ReactMarkdown>{article.body_md}</ReactMarkdown>
         </div>

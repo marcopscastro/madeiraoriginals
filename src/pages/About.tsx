@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import NewsletterForm from "@/components/NewsletterForm";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const About = () => (
   <div className="min-h-screen bg-background">
@@ -12,17 +13,35 @@ const About = () => (
     />
     <Header />
     <main>
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-        <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-          About
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl font-semibold text-foreground leading-[1.05]">
-          A modern Madeira<br />
-          <span className="italic">lifestyle brand.</span>
-        </h1>
+      <section className="grid md:grid-cols-2 gap-0 items-stretch border-b border-foreground/10">
+        <div className="flex items-center px-6 sm:px-10 lg:px-16 py-16 md:py-24">
+          <div>
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
+              About
+            </p>
+            <h1 className="font-display text-4xl md:text-6xl font-semibold text-foreground leading-[1.05]">
+              A modern Madeira<br />
+              <span className="italic">lifestyle brand.</span>
+            </h1>
+            <p className="mt-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+              Premium clothing, accessories and lifestyle products — designed in Madeira,
+              made for everywhere.
+            </p>
+          </div>
+        </div>
+        <div className="order-first md:order-last">
+          <img
+            src={aboutHero}
+            alt="Heavyweight cream and navy folded t-shirts beside bougainvillea"
+            width={1600}
+            height={900}
+            className="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
+            fetchPriority="high"
+          />
+        </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 prose-editorial">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 prose-editorial">
         <h2>What we make</h2>
         <p>
           Madeira Originals designs premium clothing, accessories, and lifestyle products inspired
