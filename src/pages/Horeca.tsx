@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import SEO from "@/components/SEO";
 import { useProducts } from "@/hooks/useShopifyProducts";
+import HorecaLeadForm from "@/components/HorecaLeadForm";
 import horecaHero from "@/assets/horeca-hero.jpg";
 
 const Horeca = () => {
