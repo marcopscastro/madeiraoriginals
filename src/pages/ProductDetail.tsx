@@ -189,6 +189,9 @@ const ProductDetail = () => {
             <p className="mt-3 font-heading text-xl sm:text-2xl font-bold text-primary">
               {formatPrice(price)}
             </p>
+            <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
+            </p>
             {product.description && (
               <p className="mt-6 font-body text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                 {product.description}
