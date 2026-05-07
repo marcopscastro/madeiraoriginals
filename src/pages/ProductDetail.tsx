@@ -113,11 +113,18 @@ const ProductDetail = () => {
           <div className="space-y-4">
             <div className="relative overflow-hidden bg-muted aspect-[3/4]">
               {currentImage ? (
-                <img
-                  src={currentImage.url}
-                  alt={currentImage.altText || product.title}
-                  className="w-full h-full object-cover"
-                />
+                <button
+                  type="button"
+                  onClick={() => setLightboxOpen(true)}
+                  className="w-full h-full block cursor-zoom-in"
+                  aria-label="Zoom image"
+                >
+                  <img
+                    src={currentImage.url}
+                    alt={currentImage.altText || product.title}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
                   Coming Soon
