@@ -90,6 +90,14 @@ const Header = () => {
 
         {mobileOpen && (
           <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4">
+            {user && (
+              <div className="py-3 border-b border-foreground/10 mb-1">
+                <span className="inline-flex items-center gap-1.5 font-body text-xs text-foreground">
+                  <User size={14} />
+                  Signed in{isAdmin && <span className="ml-1 inline-flex items-center rounded-none border border-primary bg-primary/10 px-1.5 py-0.5 font-heading text-[10px] font-semibold uppercase tracking-wide text-primary">Admin</span>}
+                </span>
+              </div>
+            )}
             {navLinks.map((link) => (
               <button
                 key={link.label}
