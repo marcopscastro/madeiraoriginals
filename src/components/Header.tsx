@@ -90,6 +90,7 @@ const Header = () => {
 
         {mobileOpen && (
           <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4">
+            <div className="py-2 text-xs text-red-500 font-bold">DEBUG: MOBILE MENU</div>
             {user && (
               <div className="py-3 border-b border-foreground/10 mb-1">
                 <span className="inline-flex items-center gap-1.5 font-body text-xs text-foreground">
