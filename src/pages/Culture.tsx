@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
+import cultureHero from "@/assets/culture-hero.jpg";
 
 const Culture = () => (
   <div className="min-h-screen bg-background">
@@ -12,15 +13,31 @@ const Culture = () => (
     />
     <Header />
     <main>
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-        <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-          Madeira Culture
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl font-semibold text-foreground leading-[1.05]">
-          The island,<br />
-          <span className="italic">in its own words.</span>
-        </h1>
-        <p className="mt-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+      <section className="relative">
+        <img
+          src={cultureHero}
+          alt="Madeira Island volcanic coastline at golden hour"
+          width={1600}
+          height={900}
+          className="w-full h-[55vh] md:h-[70vh] object-cover"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-foreground/30" />
+        <div className="absolute inset-0 flex items-end">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-20 w-full text-background">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4">
+              Madeira Culture
+            </p>
+            <h1 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
+              The island,<br />
+              <span className="italic">in its own words.</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+        <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
           Madeira is one of the most distinctive places in the Atlantic — volcanic, maritime,
           deeply Portuguese, and yet entirely its own. This is the culture that inspires every
           Madeira Originals design.
