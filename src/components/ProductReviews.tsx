@@ -108,7 +108,6 @@ const ProductReviews = ({ productHandle, productTitle }: Props) => {
 
   return (
     <section id="reviews" className="mt-20 border-t border-foreground/10 pt-12">
-      <a id="reviews" />
 
       <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
         <div>
