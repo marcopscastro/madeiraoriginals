@@ -7,7 +7,10 @@ import SearchOverlay from "@/components/SearchOverlay";
 
 const navLinks = [
   { label: "Shop", href: "/shop" },
-  { label: "Our Story", href: "/#about" },
+  { label: "HORECA", href: "/horeca" },
+  { label: "Culture", href: "/culture" },
+  { label: "Journal", href: "/journal" },
+  { label: "About", href: "/about" },
 ];
 
 const Header = () => {
@@ -17,16 +20,9 @@ const Header = () => {
   const { totalItems } = useCartTotals();
   const navigate = useNavigate();
 
-  const handleNavClick = (href: string) => {
+  const go = (href: string) => {
     setMobileOpen(false);
-    if (href.startsWith("/#")) {
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById(href.slice(2))?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      navigate(href);
-    }
+    navigate(href);
   };
 
   return (
@@ -37,11 +33,11 @@ const Header = () => {
             Madeira Originals
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => handleNavClick(link.href)}
+                onClick={() => go(link.href)}
                 className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
               >
                 {link.label}
@@ -53,7 +49,7 @@ const Header = () => {
             <button aria-label="Search" className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
-            <button aria-label="Account" className="text-foreground hover:text-primary transition-colors">
+            <button aria-label="Account" className="text-foreground hover:text-primary transition-colors hidden sm:block">
               <User size={20} />
             </button>
             <button
@@ -83,7 +79,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <button
                 key={link.label}
-                onClick={() => handleNavClick(link.href)}
+                onClick={() => go(link.href)}
                 className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
               >
                 {link.label}

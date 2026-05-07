@@ -2,12 +2,12 @@ import ProductCard from "@/components/ProductCard";
 import { useProducts } from "@/hooks/useShopifyProducts";
 
 const Bestsellers = () => {
-  const { data: products = [], isLoading } = useProducts(4);
+  const { data: products = [], isLoading } = useProducts(4, "tag:streetwear");
 
   return (
     <section id="bestsellers" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <h2 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-wide text-foreground text-center mb-12">
-        Shop the Latest
+      <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-12">
+        Bestsellers
       </h2>
       {isLoading ? (
         <p className="text-center font-body text-muted-foreground">Loading…</p>

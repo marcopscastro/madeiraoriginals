@@ -1,53 +1,62 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import NewsletterForm from "@/components/NewsletterForm";
 
-const footerLinks = ["Shipping & Returns", "Size Guide", "FAQ", "Contact Us"];
+const sections = [
+  {
+    heading: "Shop",
+    links: [
+      { label: "All", to: "/shop" },
+      { label: "HORECA", to: "/horeca" },
+    ],
+  },
+  {
+    heading: "Brand",
+    links: [
+      { label: "About", to: "/about" },
+      { label: "Madeira Culture", to: "/culture" },
+      { label: "Journal", to: "/journal" },
+    ],
+  },
+];
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-
   return (
     <footer className="border-t-2 border-foreground bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-heading text-2xl font-bold uppercase tracking-wide text-foreground">
-              Join the Locals.
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="md:col-span-1">
+            <h3 className="font-display text-2xl font-semibold text-foreground">
+              Join the community.
             </h3>
             <p className="mt-2 font-body text-muted-foreground">
-              Drop your email to get early access to new designs and island stories.
+              Early access to new drops, island stories, and Madeira Originals updates.
             </p>
-            <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-0">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email..."
-                className="flex-1 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
-              />
-              <button className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity whitespace-nowrap">
-                Subscribe
-              </button>
+            <div className="mt-4">
+              <NewsletterForm source="footer" />
             </div>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-col items-start md:items-end gap-3">
-            {footerLinks.map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
+          {sections.map((s) => (
+            <div key={s.heading}>
+              <h4 className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-4">
+                {s.heading}
+              </h4>
+              <ul className="space-y-2">
+                {s.links.map((l) => (
+                  <li key={l.label}>
+                    <Link to={l.to} className="font-body text-sm text-muted-foreground hover:text-foreground">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="mt-12 pt-6 border-t border-foreground/10 text-center">
           <p className="font-body text-sm text-muted-foreground">
-            © 2026 Madeira Originals. Wear the island.
+            © 2026 Madeira Originals — Modern products inspired by Madeira Island.
           </p>
         </div>
       </div>
