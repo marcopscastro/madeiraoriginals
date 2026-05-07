@@ -237,6 +237,14 @@ const ProductDetail = () => {
 
       <RelatedProducts currentHandle={product.handle} />
       <Footer />
+
+      <ImageLightbox
+        images={images}
+        startIndex={selectedImage}
+        open={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        title={product.title}
+      />
     </div>
   );
 };
