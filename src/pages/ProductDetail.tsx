@@ -101,7 +101,7 @@ const ProductDetail = () => {
     });
   };
 
-  const productLd = {
+  const productLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
@@ -119,6 +119,13 @@ const ProductDetail = () => {
       url: `${SITE_URL}/product/${product.handle}`,
     },
   };
+  if (rating && rating.count > 0) {
+    productLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: rating.avg.toFixed(1),
+      reviewCount: rating.count,
+    };
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -191,6 +198,18 @@ const ProductDetail = () => {
             <p className="mt-3 font-heading text-xl sm:text-2xl font-bold text-primary">
               {formatPrice(price)}
             </p>
+            {rating && rating.count > 0 && (
+              <a
+                href="#reviews"
+                className="mt-2 inline-flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground"
+              >
+                <span className="text-accent tracking-tight">
+                  {"★".repeat(Math.round(rating.avg))}
+                  <span className="text-foreground/20">{"★".repeat(5 - Math.round(rating.avg))}</span>
+                </span>
+                {rating.avg.toFixed(1)} · {rating.count} review{rating.count === 1 ? "" : "s"}
+              </a>
+            )}
             <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
             </p>
@@ -295,6 +314,10 @@ const ProductDetail = () => {
           </div>
         </section>
       </main>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ProductReviews productHandle={product.handle} productTitle={product.title} />
+      </div>
 
       <RelatedProducts currentHandle={product.handle} />
       <Footer />
