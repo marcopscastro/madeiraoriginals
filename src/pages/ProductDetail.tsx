@@ -304,6 +304,23 @@ const ProductDetail = () => {
         onClose={() => setLightboxOpen(false)}
         title={product.title}
       />
+
+      {/* Mobile sticky add-to-cart */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-background border-t border-foreground/10 px-4 py-3 flex items-center gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="font-heading text-[10px] uppercase tracking-widest text-muted-foreground truncate">
+            {product.title}
+          </p>
+          <p className="font-heading text-base font-bold text-primary">{formatPrice(price)}</p>
+        </div>
+        <button
+          onClick={handleAddToCart}
+          disabled={isAdding || (hasSizeOption && !activeVariant)}
+          className="bg-primary text-primary-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 disabled:opacity-50"
+        >
+          {isAdding ? <Loader2 className="w-4 h-4 animate-spin" /> : hasSizeOption && !activeVariant ? "Select size" : "Add to cart"}
+        </button>
+      </div>
     </div>
   );
 };
