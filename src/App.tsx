@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import ProductDetail from "./pages/ProductDetail";
 import Shop from "./pages/Shop";
-import Horeca from "./pages/Horeca";
+
 import Culture from "./pages/Culture";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
