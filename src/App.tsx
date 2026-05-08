@@ -16,6 +16,7 @@ import JournalPost from "./pages/JournalPost";
 import Auth from "./pages/Auth";
 import AdminJournal from "./pages/admin/AdminJournal";
 import AdminJournalEdit from "./pages/admin/AdminJournalEdit";
+import AdminQuotes from "./pages/admin/AdminQuotes";
 import NotFound from "./pages/NotFound";
 import { useCartSync } from "@/hooks/useCartSync";
 
