@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,6 +7,9 @@ import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 
 const Journal = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeCategory = searchParams.get("category") ?? "all";
+
   const { data: articles = [], isLoading } = useQuery({
     queryKey: ["articles-list"],
     queryFn: async () => {
@@ -17,6 +21,22 @@ const Journal = () => {
       return data ?? [];
     },
   });
+
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    articles.forEach((a) => a.tags?.forEach((t: string) => set.add(t)));
+    return ["all", ...Array.from(set).sort()];
+  }, [articles]);
+
+  const filtered = useMemo(() => {
+    if (activeCategory === "all") return articles;
+    return articles.filter((a) => a.tags?.includes(activeCategory));
+  }, [articles, activeCategory]);
+
+  const setCategory = (c: string) => {
+    if (c === "all") setSearchParams({});
+    else setSearchParams({ category: c });
+  };
 
   return (
     <div className="min-h-screen bg-background">
