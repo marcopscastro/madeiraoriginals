@@ -55,8 +55,8 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Madeira Streetwear & Apparel — Shop"
-        description="Shop premium Madeira inspired t-shirts, hoodies and accessories. Modern Madeira streetwear designed in Madeira Island."
+        title="Shop Madeira Originals | Madeira Inspired Streetwear & Apparel"
+        description="Shop premium Madeira-inspired t-shirts, hoodies, accessories, and streetwear designed by Madeira Originals in São Vicente, Madeira."
         path="/shop"
       />
       <Header />

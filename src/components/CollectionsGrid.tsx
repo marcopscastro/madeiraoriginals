@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const collections = [
-  { label: "T-Shirts", href: "/shop", desc: "Heavyweight tees with island-rooted graphics" },
-  { label: "Hoodies", href: "/shop", desc: "Atlantic weight, everyday cuts" },
-  { label: "Accessories", href: "/shop", desc: "Totes, caps, island essentials" },
-  { label: "HORECA", href: "/horeca", desc: "Custom glassware for bars & restaurants" },
+  { label: "T-Shirts", href: "/madeira-t-shirts", desc: "Heavyweight tees with island-rooted graphics" },
+  { label: "Hoodies", href: "/madeira-hoodies", desc: "Atlantic weight, everyday cuts" },
+  { label: "Accessories", href: "/madeira-accessories", desc: "Totes, caps, island essentials" },
+  { label: "Production Studio", href: "/production-studio", desc: "Custom apparel & print for brands" },
 ];
 
 const CollectionsGrid = () => {
