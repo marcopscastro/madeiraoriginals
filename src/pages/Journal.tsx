@@ -21,8 +21,8 @@ const Journal = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Madeira Originals Journal — Madeira Culture, Travel & Style"
-        description="Stories about Madeira culture, modern Madeira streetwear, island travel, gifts and the lifestyle behind Madeira Originals."
+        title="Madeira Originals Journal | Culture, Streetwear & Design"
+        description="Read stories about Madeira culture, modern streetwear, island identity, custom apparel production, and the design philosophy behind Madeira Originals."
         path="/journal"
       />
       <Header />
