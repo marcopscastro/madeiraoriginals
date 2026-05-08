@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import ProductDetail from "./pages/ProductDetail";
 import Shop from "./pages/Shop";
+import Collection from "./pages/Collection";
+import { COLLECTIONS } from "./lib/collections";
 
 import Culture from "./pages/Culture";
 import About from "./pages/About";
@@ -28,13 +30,9 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/shop" element={<Shop />} />
-      {/* SEO collection routes — currently alias /shop until per-tag pages ship in Phase 3 */}
-      <Route path="/madeira-t-shirts" element={<Shop />} />
-      <Route path="/madeira-hoodies" element={<Shop />} />
-      <Route path="/madeira-accessories" element={<Shop />} />
-      <Route path="/madeira-stickers" element={<Shop />} />
-      <Route path="/madeira-streetwear" element={<Shop />} />
-      <Route path="/madeira-gifts" element={<Shop />} />
+      {Object.values(COLLECTIONS).map((c) => (
+        <Route key={c.slug} path={`/${c.slug}`} element={<Collection config={c} />} />
+      ))}
       <Route path="/production-studio" element={<ProductionStudio />} />
       {/* Legacy HORECA URL → Production Studio */}
       <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
