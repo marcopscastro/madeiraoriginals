@@ -36,7 +36,8 @@ const AppRoutes = () => {
       <Route path="/madeira-streetwear" element={<Shop />} />
       <Route path="/madeira-gifts" element={<Shop />} />
       <Route path="/production-studio" element={<ProductionStudio />} />
-      <Route path="/horeca" element={<Horeca />} />
+      {/* Legacy HORECA URL → Production Studio */}
+      <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
       <Route path="/culture" element={<Culture />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
