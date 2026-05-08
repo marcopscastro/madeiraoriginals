@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Loader2, Minus, Plus, Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useCartStore, useCartTotals } from "@/stores/cartStore";
-import { formatPrice } from "@/lib/shopify";
+import { formatPrice, FREE_SHIPPING_EUR } from "@/lib/shopify";
 
 interface CartDrawerProps {
   open: boolean;
