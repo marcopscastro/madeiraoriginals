@@ -12,8 +12,9 @@ const Hero = () => {
             & lifestyle.
           </h1>
           <p className="mt-6 text-base md:text-lg text-muted-foreground font-body max-w-lg leading-relaxed">
-            Premium clothing and products inspired by the landscapes, culture, and identity of
-            Madeira Island. Designed in Madeira, made for everywhere.
+            A modern lifestyle brand from the middle of the Atlantic. Heavyweight cotton,
+            editorial cuts, and references rooted in the island — made to wear anywhere
+            the diaspora carries Madeira.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link

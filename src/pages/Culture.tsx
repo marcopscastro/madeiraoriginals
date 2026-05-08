@@ -44,6 +44,47 @@ const Culture = () => (
         </p>
       </section>
 
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12 grid md:grid-cols-3 gap-8 md:gap-10">
+        {[
+          {
+            tag: "Landscape",
+            title: "Levadas",
+            body: "Centuries-old irrigation channels carved into the cliffs. Today they double as the island's most loved hiking network — a slow walk through laurisilva forest with the sound of running water.",
+            img: "https://images.unsplash.com/photo-1602866381-3935e6c2eb39?auto=format&fit=crop&w=900&q=70",
+          },
+          {
+            tag: "Drink",
+            title: "Poncha",
+            body: "Aguardente de cana, honey, and citrus, mixed in a glass with a wooden mexelote. Order one in any village bar and you've ordered the island's whole social ritual.",
+            img: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=70",
+          },
+          {
+            tag: "Craft",
+            title: "Bordado da Madeira",
+            body: "A centuries-old embroidery tradition, still produced on the island. The motifs — flora, geometry, restrained palettes — quietly inform a lot of what we design.",
+            img: "https://images.unsplash.com/photo-1528461160043-aa6f0fc26b32?auto=format&fit=crop&w=900&q=70",
+          },
+        ].map((b) => (
+          <article key={b.title}>
+            <div className="aspect-[4/5] overflow-hidden bg-muted mb-4">
+              <img src={b.img} alt={b.title} loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-primary mb-2">{b.tag}</p>
+            <h3 className="font-display text-2xl font-semibold text-foreground mb-2">{b.title}</h3>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed">{b.body}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 md:pb-8 text-center">
+        <Link
+          to="/journal"
+          className="inline-flex items-center gap-2 font-heading text-xs font-bold uppercase tracking-widest text-primary hover:opacity-80"
+        >
+          Read the Journal →
+        </Link>
+      </section>
+
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 prose-editorial">
         <h2>A volcanic island in the middle of the Atlantic</h2>
         <p>

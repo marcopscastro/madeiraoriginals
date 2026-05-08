@@ -1,6 +1,7 @@
 import { toast } from "sonner";
 
 export const SHOPIFY_API_VERSION = "2025-07";
+export const FREE_SHIPPING_EUR = 60;
 export const SHOPIFY_STORE_PERMANENT_DOMAIN = "madeiraoriginals-cve6q.myshopify.com";
 export const SHOPIFY_STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 export const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
