@@ -56,15 +56,33 @@ const Journal = () => {
           </h1>
         </div>
 
+        {categories.length > 2 && (
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
+            {categories.map((c) => (
+              <button
+                key={c}
+                onClick={() => setCategory(c)}
+                className={`font-heading text-[11px] font-semibold uppercase tracking-widest px-3 py-2 border transition-colors ${
+                  activeCategory === c
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-foreground/20 text-foreground hover:border-foreground"
+                }`}
+              >
+                {c === "all" ? "All" : c}
+              </button>
+            ))}
+          </div>
+        )}
+
         {isLoading ? (
           <p className="text-center font-body text-muted-foreground py-16">Loading…</p>
-        ) : articles.length === 0 ? (
+        ) : filtered.length === 0 ? (
           <p className="text-center font-body text-muted-foreground py-16">
-            No articles yet.
+            No articles in this category yet.
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {articles.map((a) => (
+            {filtered.map((a) => (
               <Link
                 key={a.slug}
                 to={`/journal/${a.slug}`}
