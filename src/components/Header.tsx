@@ -1,4 +1,4 @@
-import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
+import { Search, User, ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartTotals } from "@/stores/cartStore";
@@ -6,16 +6,43 @@ import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import { useAuth } from "@/hooks/useAuth";
 
-const navLinks = [
-  { label: "Shop", href: "/shop" },
-  { label: "HORECA", href: "/horeca" },
-  { label: "Culture", href: "/culture" },
+type NavItem = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
+
+const navLinks: NavItem[] = [
+  {
+    label: "Shop",
+    href: "/shop",
+    children: [
+      { label: "All", href: "/shop" },
+      { label: "T-Shirts", href: "/madeira-t-shirts" },
+      { label: "Hoodies", href: "/madeira-hoodies" },
+      { label: "Accessories", href: "/madeira-accessories" },
+      { label: "Stickers", href: "/madeira-stickers" },
+    ],
+  },
+  {
+    label: "Production Studio",
+    href: "/production-studio",
+    children: [
+      { label: "Custom Apparel", href: "/production-studio#custom-apparel" },
+      { label: "DTF Gang Sheets", href: "/production-studio#dtf" },
+      { label: "UV DTF Stickers", href: "/production-studio#uv-dtf" },
+      { label: "Business Merch", href: "/production-studio#business-merch" },
+      { label: "Rally & Performance", href: "/production-studio#rally" },
+    ],
+  },
   { label: "Journal", href: "/journal" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { totalItems } = useCartTotals();
@@ -24,6 +51,7 @@ const Header = () => {
 
   const go = (href: string) => {
     setMobileOpen(false);
+    setOpenDropdown(null);
     navigate(href);
   };
 
@@ -36,15 +64,47 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => go(link.href)}
-                className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.children ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(link.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    onClick={() => go(link.href)}
+                    className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors flex items-center gap-1"
+                  >
+                    {link.label}
+                    <ChevronDown size={14} />
+                  </button>
+                  {openDropdown === link.label && (
+                    <div className="absolute left-0 top-full pt-2 min-w-[220px]">
+                      <div className="bg-background border border-foreground/15 py-2">
+                        {link.children.map((c) => (
+                          <button
+                            key={c.label}
+                            onClick={() => go(c.href)}
+                            className="block w-full text-left px-4 py-2 font-body text-sm text-foreground hover:bg-muted transition-colors"
+                          >
+                            {c.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <button
+                  key={link.label}
+                  onClick={() => go(link.href)}
+                  className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </button>
+              )
+            )}
             {isAdmin && (
               <button
                 onClick={() => go("/admin/journal")}
@@ -89,7 +149,7 @@ const Header = () => {
         </div>
 
         {mobileOpen && (
-          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4">
+          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4 max-h-[80vh] overflow-y-auto">
             {user && (
               <div className="py-3 border-b border-foreground/10 mb-1">
                 <span className="inline-flex items-center gap-1.5 font-body text-xs text-foreground">
@@ -99,13 +159,27 @@ const Header = () => {
               </div>
             )}
             {navLinks.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => go(link.href)}
-                className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
-              >
-                {link.label}
-              </button>
+              <div key={link.label} className="border-b border-foreground/5">
+                <button
+                  onClick={() => go(link.href)}
+                  className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground"
+                >
+                  {link.label}
+                </button>
+                {link.children && (
+                  <div className="pl-3 pb-2">
+                    {link.children.map((c) => (
+                      <button
+                        key={c.label}
+                        onClick={() => go(c.href)}
+                        className="block w-full text-left py-1.5 font-body text-sm text-muted-foreground"
+                      >
+                        {c.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             {isAdmin && (
               <button

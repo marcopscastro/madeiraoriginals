@@ -1,11 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueBanner from "@/components/ValueBanner";
-import AboutUs from "@/components/AboutUs";
-import CollectionsGrid from "@/components/CollectionsGrid";
+import Manifesto from "@/components/Manifesto";
 import Bestsellers from "@/components/Bestsellers";
-import CultureTeaser from "@/components/CultureTeaser";
-import GiftPositioning from "@/components/GiftPositioning";
+import NoTouristTrap from "@/components/NoTouristTrap";
+import DesignDirections from "@/components/DesignDirections";
+import ProductionStudioPreview from "@/components/ProductionStudioPreview";
+import Diaspora from "@/components/Diaspora";
 import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
 import Footer from "@/components/Footer";
@@ -14,19 +15,20 @@ import SEO from "@/components/SEO";
 const Index = () => (
   <div className="min-h-screen bg-background">
     <SEO
-      title="Madeira Originals — Modern Madeira Inspired Apparel & Lifestyle"
-      description="Premium Madeira inspired clothing, streetwear and lifestyle products. Modern apparel rooted in Madeira Island culture, landscapes and identity."
+      title="Madeira Originals | Premium Madeira Streetwear & Custom Apparel"
+      description="Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap."
       path="/"
     />
     <Header />
     <main>
       <Hero />
       <ValueBanner />
-      <AboutUs />
-      <CollectionsGrid />
+      <Manifesto />
       <Bestsellers />
-      <CultureTeaser />
-      <GiftPositioning />
+      <NoTouristTrap />
+      <DesignDirections />
+      <ProductionStudioPreview />
+      <Diaspora />
       <JournalPreview />
       <HomeNewsletter />
     </main>
