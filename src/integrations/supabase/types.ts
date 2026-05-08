@@ -125,6 +125,54 @@ export type Database = {
         }
         Relationships: []
       }
+      production_quotes: {
+        Row: {
+          artwork_url: string | null
+          business_name: string
+          contact_name: string
+          created_at: string
+          deadline: string | null
+          email: string
+          id: string
+          message: string | null
+          phone: string | null
+          quantity: string | null
+          service_type: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          artwork_url?: string | null
+          business_name: string
+          contact_name: string
+          created_at?: string
+          deadline?: string | null
+          email: string
+          id?: string
+          message?: string | null
+          phone?: string | null
+          quantity?: string | null
+          service_type: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          artwork_url?: string | null
+          business_name?: string
+          contact_name?: string
+          created_at?: string
+          deadline?: string | null
+          email?: string
+          id?: string
+          message?: string | null
+          phone?: string | null
+          quantity?: string | null
+          service_type?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
