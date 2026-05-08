@@ -47,6 +47,7 @@ const AppRoutes = () => {
       <Route path="/auth" element={<Auth />} />
       <Route path="/admin/journal" element={<AdminJournal />} />
       <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
+      <Route path="/admin/quotes" element={<AdminQuotes />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
