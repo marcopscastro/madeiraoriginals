@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import ProductDetail from "./pages/ProductDetail";
 import Shop from "./pages/Shop";
-import Horeca from "./pages/Horeca";
+
 import Culture from "./pages/Culture";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -16,6 +16,7 @@ import JournalPost from "./pages/JournalPost";
 import Auth from "./pages/Auth";
 import AdminJournal from "./pages/admin/AdminJournal";
 import AdminJournalEdit from "./pages/admin/AdminJournalEdit";
+import AdminQuotes from "./pages/admin/AdminQuotes";
 import NotFound from "./pages/NotFound";
 import { useCartSync } from "@/hooks/useCartSync";
 
@@ -35,7 +36,8 @@ const AppRoutes = () => {
       <Route path="/madeira-streetwear" element={<Shop />} />
       <Route path="/madeira-gifts" element={<Shop />} />
       <Route path="/production-studio" element={<ProductionStudio />} />
-      <Route path="/horeca" element={<Horeca />} />
+      {/* Legacy HORECA URL → Production Studio */}
+      <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
       <Route path="/culture" element={<Culture />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
@@ -45,6 +47,7 @@ const AppRoutes = () => {
       <Route path="/auth" element={<Auth />} />
       <Route path="/admin/journal" element={<AdminJournal />} />
       <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
+      <Route path="/admin/quotes" element={<AdminQuotes />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

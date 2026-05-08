@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import studioImg from "@/assets/production-studio.jpg";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
+import ProductionQuoteForm from "@/components/ProductionQuoteForm";
 
 const services = [
   {
@@ -140,12 +141,14 @@ const ProductionStudio = () => (
           Request a production quote.
         </h2>
         <p className="mt-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-          The quote form is coming online shortly. In the meantime, email{" "}
-          <a href="mailto:studio@madeiraoriginals.pt" className="text-primary underline underline-offset-4">
-            studio@madeiraoriginals.pt
-          </a>{" "}
-          with your project, quantity, deadline, and artwork — we'll come back to you within one
-          working day.
+          Tell us about the project — service, quantity, deadline, and artwork if you have it.
+          We reply within one working day with pricing and next steps.
+        </p>
+        <div className="mt-10">
+          <ProductionQuoteForm />
+        </div>
+        <p className="mt-6 font-body text-sm text-muted-foreground">
+          Prefer email? <a href="mailto:studio@madeiraoriginals.pt" className="text-primary underline underline-offset-4">studio@madeiraoriginals.pt</a>
         </p>
       </section>
     </main>
