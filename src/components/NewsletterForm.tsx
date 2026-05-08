@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({ email: z.string().email("Enter a valid email") });
@@ -13,6 +14,7 @@ interface Props {
 const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,8 +33,18 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
       return;
     }
     setEmail("");
+    setDone(true);
     toast.success("You're on the list. Welcome to Madeira Originals.");
   };
+
+  if (done) {
+    return (
+      <div className="flex items-center justify-center gap-2 border border-foreground/30 px-4 py-3 font-heading text-sm uppercase tracking-widest text-foreground">
+        <Check size={16} className="text-primary" />
+        You're in. First to know about drops.
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
