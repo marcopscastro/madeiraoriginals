@@ -127,6 +127,16 @@ const ProductDetail = () => {
     };
   }
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Shop", item: `${SITE_URL}/shop` },
+      { "@type": "ListItem", position: 3, name: product.title, item: `${SITE_URL}/product/${product.handle}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -138,7 +148,7 @@ const ProductDetail = () => {
         path={`/product/${product.handle}`}
         type="product"
         image={images[0]?.url}
-        jsonLd={productLd}
+        jsonLd={[productLd, breadcrumbLd]}
       />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">

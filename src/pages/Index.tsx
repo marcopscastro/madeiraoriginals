@@ -11,6 +11,19 @@ import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { SITE_URL, SITE_NAME, LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
+
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${SITE_URL}/shop?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -18,6 +31,7 @@ const Index = () => (
       title="Madeira Originals | Premium Madeira Streetwear & Custom Apparel"
       description="Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap."
       path="/"
+      jsonLd={[websiteLd, LOCAL_BUSINESS_JSONLD]}
     />
     <Header />
     <main>

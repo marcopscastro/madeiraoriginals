@@ -103,6 +103,8 @@ const JournalPost = () => {
             alt={article.title}
             className="w-full aspect-[16/9] object-cover mb-10"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         )}
 
