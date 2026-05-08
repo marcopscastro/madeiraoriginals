@@ -115,6 +115,22 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
             </div>
 
             <div className="border-t border-foreground/10 pt-4 space-y-3">
+              {currencyCode === "EUR" && (() => {
+                const remaining = Math.max(0, FREE_SHIPPING_EUR - totalPrice);
+                const pct = Math.min(100, (totalPrice / FREE_SHIPPING_EUR) * 100);
+                return (
+                  <div>
+                    <p className="font-heading text-[11px] uppercase tracking-widest text-muted-foreground mb-1.5">
+                      {remaining > 0
+                        ? `€${remaining.toFixed(2)} away from free shipping`
+                        : "Free shipping unlocked ✦"}
+                    </p>
+                    <div className="h-[2px] bg-foreground/10">
+                      <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+                    </div>
+                  </div>
+                );
+              })()}
               <div className="flex justify-between font-heading text-sm uppercase tracking-wide">
                 <span className="text-muted-foreground">Subtotal</span>
                 <span className="font-bold text-foreground">
