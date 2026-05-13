@@ -19,7 +19,7 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
               src={image.url}
               alt={image.altText || node.title}
               loading="lazy"
-              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+              className={`w-full h-full object-cover transition-opacity duration-500 ${hoverImage ? "group-hover:opacity-0" : ""}`}
             />
             {hoverImage && (
               <img
