@@ -34,7 +34,7 @@ export interface PageSeoTemplate {
   intro?: string;
 }
 
-export const PAGE_SEO = {
+export const PAGE_SEO: Record<string, PageSeoTemplate> = {
   home: {
     title: "Madeira Streetwear & Custom Apparel",
     description:
