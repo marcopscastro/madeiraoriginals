@@ -34,7 +34,18 @@ export interface PageSeoTemplate {
   intro?: string;
 }
 
-export const PAGE_SEO: Record<string, PageSeoTemplate> = {
+export type PageSeoKey =
+  | "home"
+  | "shop"
+  | "about"
+  | "contact"
+  | "culture"
+  | "horeca"
+  | "journal"
+  | "productionStudio"
+  | "auth";
+
+export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
     title: "Madeira Streetwear & Custom Apparel",
     description:
