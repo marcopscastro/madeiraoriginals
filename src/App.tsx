@@ -44,10 +44,10 @@ const AppRoutes = () => {
         {Object.values(COLLECTIONS).map((c) => (
           <Route key={c.slug} path={`/${c.slug}`} element={<Collection config={c} />} />
         ))}
-        <Route path="/production-studio" element={<ProductionStudio />} />
+        <Route path="/production-studio" element={<Navigate to="/" replace />} />
         <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="/madeira-souvenirs" element={<MadeiraSouvenirs />} />
-        <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
+        <Route path="/horeca" element={<Navigate to="/" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
