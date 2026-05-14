@@ -1,4 +1,4 @@
-export const SITE_URL = "https://www.madeiraoriginals.pt";
+export const SITE_URL = "https://madeiraoriginals.pt";
 export const SITE_NAME = "Madeira Originals";
 export const SITE_DEFAULT_DESC =
   "Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap.";
