@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { Link } from "react-router-dom";
 import studioImg from "@/assets/production-studio.jpg";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
