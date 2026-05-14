@@ -43,6 +43,7 @@ export type PageSeoKey =
   | "horeca"
   | "journal"
   | "productionStudio"
+  | "portugalStreetwear"
   | "auth";
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
