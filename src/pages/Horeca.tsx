@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { useProducts } from "@/hooks/useShopifyProducts";
 import HorecaLeadForm from "@/components/HorecaLeadForm";
 import horecaHero from "@/assets/horeca-hero.jpg";
@@ -11,11 +11,7 @@ const Horeca = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="HORECA — Custom Glassware for Madeira Bars & Restaurants"
-        description="Custom branded pint glasses and glassware for hotels, restaurants, cafés and bars across Madeira. Designed and produced by Madeira Originals."
-        path="/horeca"
-      />
+      <PageSEO routeKey="horeca" />
       <Header />
       <main>
         <section className="relative">

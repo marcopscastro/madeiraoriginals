@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { supabase } from "@/integrations/supabase/client";
 
 const Journal = () => {
@@ -40,11 +40,7 @@ const Journal = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Madeira Originals Journal | Culture, Streetwear & Design"
-        description="Read stories about Madeira culture, modern streetwear, island identity, custom apparel production, and the design philosophy behind Madeira Originals."
-        path="/journal"
-      />
+      <PageSEO routeKey="journal" />
       <Header />
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center mb-12">

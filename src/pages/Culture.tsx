@@ -1,16 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { Link } from "react-router-dom";
 import cultureHero from "@/assets/culture-hero.jpg";
 
 const Culture = () => (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Madeira Culture — Identity, Landscape & Atlantic Heritage"
-      description="A guide to Madeira culture: volcanic landscapes, Atlantic identity, traditions, food, drink, and the modern Madeira lifestyle that inspires our designs."
-      path="/culture"
-    />
+    <PageSEO routeKey="culture" />
     <Header />
     <main>
       <section className="relative">

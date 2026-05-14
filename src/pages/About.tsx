@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import NewsletterForm from "@/components/NewsletterForm";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
@@ -8,11 +8,7 @@ import saoVicente from "@/assets/sao-vicente.webp";
 
 const About = () => (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="About Madeira Originals | Streetwear from Madeira"
-      description="Madeira Originals is a premium streetwear and custom apparel brand from São Vicente, Madeira — inspired by island heritage, culture, and modern design."
-      path="/about"
-    />
+    <PageSEO routeKey="about" />
     <Header />
     <main>
       <section className="grid md:grid-cols-2 gap-0 items-stretch border-b border-foreground/10">
