@@ -158,7 +158,7 @@ const ProductDetail = () => {
       toast.error(missingOption ? `Please select ${missingOption.toLowerCase()}` : "Please select options");
       return;
     }
-    await addItem({
+    const ok = await addItem({
       product: {
         node: {
           id: product.id,
@@ -173,6 +173,13 @@ const ProductDetail = () => {
       quantity,
       selectedOptions: activeVariant.selectedOptions,
     });
+    if (!ok) {
+      toast.error("Couldn't add to cart", {
+        description: "That variant may be out of stock. Please try again.",
+        position: "top-center",
+      });
+      return;
+    }
     toast.success(`${product.title} added to cart`, {
       description: needsSelection
         ? `${activeVariant.title} · Qty: ${quantity}`
