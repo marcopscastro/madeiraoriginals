@@ -41,7 +41,7 @@ const Hero = () => {
             src={heroImage}
             alt="Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline"
             className="w-full h-auto object-cover"
-            width={1200}
+            width={896}
             height={1200}
             fetchPriority="high"
             loading="eager"
