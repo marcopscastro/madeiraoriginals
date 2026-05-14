@@ -26,6 +26,7 @@ const sections = [
     heading: "Brand",
     links: [
       { label: "About", to: "/about" },
+      { label: "Portugal Streetwear", to: "/portugal-streetwear" },
       { label: "Journal", to: "/journal" },
       { label: "Contact", to: "/contact" },
     ],
