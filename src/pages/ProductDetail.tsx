@@ -215,7 +215,7 @@ const ProductDetail = () => {
         jsonLd={[productLd, breadcrumbLd]}
       />
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-28 md:pb-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
           <Link to="/" className="hover:text-foreground">Home</Link>
           <span>/</span>
