@@ -269,6 +269,8 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
+                    aria-label={`View image ${i + 1} of ${images.length}`}
+                    aria-current={selectedImage === i}
                     className={`w-20 h-20 overflow-hidden bg-muted border-2 transition-colors ${
                       selectedImage === i
                         ? "border-primary"
