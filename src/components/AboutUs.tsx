@@ -12,10 +12,9 @@ const AboutUs = () => {
           <span className="italic">A Nossa Marca.</span>
         </h2>
         <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground">
-          Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente,
+          Madeira Originals is a premium streetwear brand born in São Vicente,
           Madeira. Operating under the philosophy <em>Inspired by Madeira. Designed for
-          everywhere</em>, we bridge deep island heritage with contemporary design — and back it
-          with our own production studio.
+          everywhere</em>, we bridge deep island heritage with contemporary design.
         </p>
         <Link
           to="/about"
