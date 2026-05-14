@@ -129,6 +129,7 @@ export const PRODUCT_BY_HANDLE_QUERY = `
       description
       descriptionHtml
       handle
+      productType
       priceRange { minVariantPrice { amount currencyCode } }
       images(first: 10) { edges { node { url altText } } }
       variants(first: 25) {
