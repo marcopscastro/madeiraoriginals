@@ -89,6 +89,15 @@ const ProductDetail = () => {
     if (idx >= 0) setSelectedImage(idx);
   }, [activeVariant?.id, product]);
 
+  // Clamp quantity to active variant's stock when it changes
+  useEffect(() => {
+    const stock = activeVariant?.quantityAvailable;
+    if (typeof stock === "number" && stock > 0 && quantity > stock) {
+      setQuantity(stock);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeVariant?.id]);
+
   const sanitizedDescription = useMemo(() => {
     const html = product?.descriptionHtml;
     if (!html) return "";
