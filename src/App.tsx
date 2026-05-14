@@ -16,6 +16,7 @@ const Culture = lazy(() => import("./pages/Culture"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ProductionStudio = lazy(() => import("./pages/ProductionStudio"));
+const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const Journal = lazy(() => import("./pages/Journal"));
 const JournalPost = lazy(() => import("./pages/JournalPost"));
 const Auth = lazy(() => import("./pages/Auth"));
@@ -43,6 +44,7 @@ const AppRoutes = () => {
           <Route key={c.slug} path={`/${c.slug}`} element={<Collection config={c} />} />
         ))}
         <Route path="/production-studio" element={<ProductionStudio />} />
+        <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />

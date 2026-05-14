@@ -43,6 +43,7 @@ export type PageSeoKey =
   | "horeca"
   | "journal"
   | "productionStudio"
+  | "portugalStreetwear"
   | "auth";
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
@@ -124,6 +125,16 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
     h1: "Custom Apparel & DTF Printing in Madeira",
     intro:
       "DTF gang sheets, UV DTF stickers, branded merch and rally graphics — produced in São Vicente for brands across Madeira and beyond.",
+  },
+  portugalStreetwear: {
+    title: "Portugal Streetwear — Madeira Originals",
+    description:
+      "A Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — Portugal streetwear made on the island, shipped worldwide.",
+    path: "/portugal-streetwear",
+    eyebrow: "Portugal Streetwear",
+    h1: "Portuguese Streetwear from Madeira",
+    intro:
+      "Madeira Originals — a premium Portugal streetwear brand born in São Vicente. Designed in PT, made for everywhere.",
   },
   auth: {
     title: "Sign in — Madeira Originals",
