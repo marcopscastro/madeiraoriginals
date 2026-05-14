@@ -121,7 +121,7 @@ const Header = () => {
             </button>
             <button
               aria-label={user ? "Account" : "Sign in"}
-              onClick={() => navigate(isAdmin ? "/admin/journal" : user ? "/" : "/auth")}
+              onClick={() => navigate(isAdmin ? "/admin/journal" : "/auth")}
               className="text-foreground hover:text-primary transition-colors hidden sm:block"
             >
               <User size={20} />
