@@ -134,8 +134,12 @@ const ProductDetail = () => {
   const totalPrice = parseFloat(price.amount) * quantity;
 
   const handleAddToCart = async () => {
+    if (allSoldOut) {
+      toast.error("Sold out");
+      return;
+    }
     if (!activeVariant) {
-      toast.error("Please select a size");
+      toast.error(missingOption ? `Please select ${missingOption.toLowerCase()}` : "Please select options");
       return;
     }
     await addItem({
