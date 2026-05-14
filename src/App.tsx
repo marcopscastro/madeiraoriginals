@@ -15,7 +15,7 @@ const Collection = lazy(() => import("./pages/Collection"));
 const Culture = lazy(() => import("./pages/Culture"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const ProductionStudio = lazy(() => import("./pages/ProductionStudio"));
+
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
 const Journal = lazy(() => import("./pages/Journal"));
