@@ -61,7 +61,7 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEO title="Sign in — Madeira Originals" path="/auth" noIndex />
+      <PageSEO routeKey="auth" noIndex />
       <Header />
       <main className="flex-1 flex items-center">
         <div className="w-full max-w-md mx-auto px-4 sm:px-6 py-12">
