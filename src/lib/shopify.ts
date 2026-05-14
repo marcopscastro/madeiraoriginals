@@ -22,12 +22,14 @@ export interface ShopifyVariant {
   price: ShopifyMoney;
   availableForSale: boolean;
   selectedOptions: Array<{ name: string; value: string }>;
+  image?: ShopifyImage | null;
 }
 
 export interface ShopifyProductNode {
   id: string;
   title: string;
   description: string;
+  descriptionHtml?: string;
   handle: string;
   productType?: string;
   priceRange: { minVariantPrice: ShopifyMoney };
