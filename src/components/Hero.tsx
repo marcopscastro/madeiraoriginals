@@ -25,10 +25,10 @@ const Hero = () => {
               Shop the Collection
             </Link>
             <Link
-              to="/production-studio"
+              to="/about"
               className="inline-flex items-center justify-center border border-foreground text-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-none hover:bg-foreground hover:text-background transition-colors"
             >
-              Explore Production Studio
+              Our Story
             </Link>
           </div>
           <p className="mt-6 font-heading text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
