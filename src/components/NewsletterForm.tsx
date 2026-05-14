@@ -55,6 +55,16 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   return (
     <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
       <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+      <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
