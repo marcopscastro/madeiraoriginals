@@ -10,7 +10,7 @@ import Diaspora from "@/components/Diaspora";
 import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { SITE_URL, SITE_NAME, LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
 
 const websiteLd = {
@@ -27,12 +27,7 @@ const websiteLd = {
 
 const Index = () => (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Madeira Originals | Premium Madeira Streetwear"
-      description="Premium streetwear and custom apparel born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap."
-      path="/"
-      jsonLd={[websiteLd, LOCAL_BUSINESS_JSONLD]}
-    />
+    <PageSEO routeKey="home" jsonLd={[websiteLd, LOCAL_BUSINESS_JSONLD]} />
     <Header />
     <main>
       <Hero />
