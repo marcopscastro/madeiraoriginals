@@ -8,6 +8,11 @@ import { useProducts } from "@/hooks/useShopifyProducts";
 
 type SortOption = "default" | "price-asc" | "price-desc" | "title-asc";
 
+export interface CollectionFaq {
+  question: string;
+  answer: string;
+}
+
 export interface CollectionConfig {
   slug: string;
   eyebrow: string;
@@ -16,6 +21,7 @@ export interface CollectionConfig {
   metaTitle: string;
   metaDescription: string;
   shopifyQuery: string;
+  faqs?: CollectionFaq[];
 }
 
 const Collection = ({ config }: { config: CollectionConfig }) => {
@@ -54,7 +60,24 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={config.metaTitle} description={config.metaDescription} path={`/${config.slug}`} />
+      <SEO
+        title={config.metaTitle}
+        description={config.metaDescription}
+        path={`/${config.slug}`}
+        jsonLd={
+          config.faqs && config.faqs.length > 0
+            ? {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: config.faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: { "@type": "Answer", text: f.answer },
+                })),
+              }
+            : undefined
+        }
+      />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
@@ -141,6 +164,29 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
               <ProductCard key={p.node.id} product={p} />
             ))}
           </div>
+        )}
+
+        {config.faqs && config.faqs.length > 0 && (
+          <section className="mt-20 md:mt-28 max-w-3xl mx-auto border-t border-foreground/10 pt-12 md:pt-16">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 text-center">
+              FAQ
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-10">
+              {config.title} — Questions, Answered
+            </h2>
+            <dl className="space-y-8">
+              {config.faqs.map((faq) => (
+                <div key={faq.question} className="border-b border-foreground/10 pb-8 last:border-b-0">
+                  <dt className="font-display text-lg md:text-xl font-semibold text-foreground mb-2">
+                    {faq.question}
+                  </dt>
+                  <dd className="font-body text-base text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
         )}
       </main>
       <Footer />
