@@ -28,8 +28,8 @@ const websiteLd = {
 const Index = () => (
   <div className="min-h-screen bg-background">
     <SEO
-      title="Madeira Originals | Premium Madeira Streetwear & Custom Apparel"
-      description="Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap."
+      title="Madeira Originals | Premium Madeira Streetwear"
+      description="Premium streetwear and custom apparel born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap."
       path="/"
       jsonLd={[websiteLd, LOCAL_BUSINESS_JSONLD]}
     />
