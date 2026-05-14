@@ -5,7 +5,7 @@ import Manifesto from "@/components/Manifesto";
 import Bestsellers from "@/components/Bestsellers";
 import NoTouristTrap from "@/components/NoTouristTrap";
 import DesignDirections from "@/components/DesignDirections";
-import ProductionStudioPreview from "@/components/ProductionStudioPreview";
+
 import Diaspora from "@/components/Diaspora";
 import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
