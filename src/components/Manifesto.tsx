@@ -1,4 +1,4 @@
-import manifestoImg from "@/assets/manifesto-uber-mockup.jpg";
+import manifestoImg from "@/assets/manifesto-uber-teen.jpg";
 
 const pillars = [
   {
