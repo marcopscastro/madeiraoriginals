@@ -46,6 +46,7 @@ const AppRoutes = () => {
         ))}
         <Route path="/production-studio" element={<ProductionStudio />} />
         <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
+        <Route path="/madeira-souvenirs" element={<MadeiraSouvenirs />} />
         <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />
