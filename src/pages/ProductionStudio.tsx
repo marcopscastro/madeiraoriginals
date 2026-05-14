@@ -48,7 +48,7 @@ const trust = [
 const ProductionStudio = () => (
   <div className="min-h-screen bg-background">
     <SEO
-      title="Production Studio Madeira | DTF, UV DTF & Custom Apparel Printing"
+      title="Production Studio | DTF & Custom Apparel Madeira"
       description="Madeira Originals Production Studio offers custom apparel printing, DTF gang sheets, UV DTF stickers, business merch, and rally team graphics in Madeira."
       path="/production-studio"
       jsonLd={LOCAL_BUSINESS_JSONLD}
