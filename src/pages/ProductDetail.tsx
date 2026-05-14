@@ -172,12 +172,7 @@ const ProductDetail = () => {
     });
   };
 
-  // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
-  const plainDescription = useMemo(() => {
-    const raw = product?.descriptionHtml || product?.description || "";
-    const noTags = raw.replace(/<[^>]*>/g, " ");
-    return stripTagline(noTags).replace(/\s+/g, " ").trim();
-  }, [product?.descriptionHtml, product?.description]);
+  // (plainDescription is computed above before early returns)
 
   const truncate = (s: string, n: number) => {
     if (s.length <= n) return s;
