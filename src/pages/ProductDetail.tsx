@@ -360,11 +360,15 @@ const ProductDetail = () => {
 
             <button
               onClick={handleAddToCart}
-              disabled={isAdding || (needsSelection && !activeVariant)}
+              disabled={isAdding || allSoldOut || (needsSelection && !activeVariant)}
               className="mt-8 w-full inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-none hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               {isAdding ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
+              ) : allSoldOut ? (
+                "Sold Out"
+              ) : needsSelection && missingOption ? (
+                `Select ${missingOption}`
               ) : (
                 <>
                   <ShoppingCart size={18} />
