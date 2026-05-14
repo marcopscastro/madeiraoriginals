@@ -429,10 +429,18 @@ const ProductDetail = () => {
         </div>
         <button
           onClick={handleAddToCart}
-          disabled={isAdding || (needsSelection && !activeVariant)}
+          disabled={isAdding || allSoldOut || (needsSelection && !activeVariant)}
           className="bg-primary text-primary-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 disabled:opacity-50"
         >
-          {isAdding ? <Loader2 className="w-4 h-4 animate-spin" /> : needsSelection && !activeVariant ? "Select size" : "Add to cart"}
+          {isAdding ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : allSoldOut ? (
+            "Sold out"
+          ) : needsSelection && missingOption ? (
+            `Select ${missingOption.toLowerCase()}`
+          ) : (
+            "Add to cart"
+          )}
         </button>
       </div>
     </div>
