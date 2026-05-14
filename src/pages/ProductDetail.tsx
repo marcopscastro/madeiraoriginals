@@ -81,6 +81,21 @@ const ProductDetail = () => {
     });
   };
 
+  // Swap main image when active variant has its own image (e.g. colour change)
+  useEffect(() => {
+    const variantImageUrl = activeVariant?.image?.url;
+    if (!variantImageUrl || !product) return;
+    const idx = product.images.edges.findIndex((e) => e.node.url === variantImageUrl);
+    if (idx >= 0) setSelectedImage(idx);
+  }, [activeVariant?.id, product]);
+
+  const sanitizedDescription = useMemo(() => {
+    const html = product?.descriptionHtml;
+    if (!html) return "";
+    const cleaned = stripTagline(html);
+    return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
+  }, [product?.descriptionHtml]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
