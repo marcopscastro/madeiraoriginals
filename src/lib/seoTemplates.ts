@@ -44,6 +44,7 @@ export type PageSeoKey =
   | "journal"
   | "productionStudio"
   | "portugalStreetwear"
+  | "madeiraSouvenirs"
   | "auth";
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
@@ -143,6 +144,16 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
     path: "/auth",
     eyebrow: "Account",
     h1: "Sign in to Madeira Originals",
+  },
+  madeiraSouvenirs: {
+    title: "Madeira Souvenirs Guide — Real Gifts From Madeira",
+    description:
+      "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran streetwear brand in São Vicente. Worldwide shipping.",
+    path: "/madeira-souvenirs",
+    eyebrow: "Madeira Souvenirs Guide",
+    h1: "The Madeira Souvenirs Guide",
+    intro:
+      "What to buy in Madeira (and what to skip) — curated, gift-ready Madeira souvenirs from São Vicente. 0% tourist trap.",
   },
 };
 

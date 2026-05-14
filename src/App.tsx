@@ -17,6 +17,7 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ProductionStudio = lazy(() => import("./pages/ProductionStudio"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
+const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
 const Journal = lazy(() => import("./pages/Journal"));
 const JournalPost = lazy(() => import("./pages/JournalPost"));
 const Auth = lazy(() => import("./pages/Auth"));
@@ -45,6 +46,7 @@ const AppRoutes = () => {
         ))}
         <Route path="/production-studio" element={<ProductionStudio />} />
         <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
+        <Route path="/madeira-souvenirs" element={<MadeiraSouvenirs />} />
         <Route path="/horeca" element={<Navigate to="/production-studio" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />
