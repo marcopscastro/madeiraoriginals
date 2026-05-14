@@ -14,16 +14,6 @@ const sections = [
     ],
   },
   {
-    heading: "Production Studio",
-    links: [
-      { label: "Custom Apparel", to: "/production-studio#custom-apparel" },
-      { label: "DTF Gang Sheets", to: "/production-studio#dtf" },
-      { label: "UV DTF Stickers", to: "/production-studio#uv-dtf" },
-      { label: "Business Merch", to: "/production-studio#business-merch" },
-      { label: "Rally & Performance", to: "/production-studio#rally" },
-    ],
-  },
-  {
     heading: "Brand",
     links: [
       { label: "About", to: "/about" },
