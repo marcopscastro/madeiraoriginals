@@ -13,11 +13,17 @@ interface Props {
 
 const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (website) {
+      // bot caught — silently succeed
+      setDone(true);
+      return;
+    }
     const parsed = schema.safeParse({ email });
     if (!parsed.success) {
       toast.error(parsed.error.issues[0].message);
