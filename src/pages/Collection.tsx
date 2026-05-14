@@ -165,6 +165,29 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
             ))}
           </div>
         )}
+
+        {config.faqs && config.faqs.length > 0 && (
+          <section className="mt-20 md:mt-28 max-w-3xl mx-auto border-t border-foreground/10 pt-12 md:pt-16">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 text-center">
+              FAQ
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-10">
+              {config.title} — Questions, Answered
+            </h2>
+            <dl className="space-y-8">
+              {config.faqs.map((faq) => (
+                <div key={faq.question} className="border-b border-foreground/10 pb-8 last:border-b-0">
+                  <dt className="font-display text-lg md:text-xl font-semibold text-foreground mb-2">
+                    {faq.question}
+                  </dt>
+                  <dd className="font-body text-base text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
       </main>
       <Footer />
     </div>
