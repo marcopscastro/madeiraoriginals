@@ -352,30 +352,44 @@ const ProductDetail = () => {
               </div>
             ))}
 
-            <div className="mt-8">
-              <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                Quantity
-              </p>
-              <div className="inline-flex items-center border border-foreground/20">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-3 text-foreground hover:bg-muted transition-colors"
-                  aria-label="Decrease quantity"
-                >
-                  <Minus size={16} />
-                </button>
-                <span className="w-12 text-center font-heading text-sm font-bold text-foreground">
-                  {quantity}
-                </span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="p-3 text-foreground hover:bg-muted transition-colors"
-                  aria-label="Increase quantity"
-                >
-                  <Plus size={16} />
-                </button>
-              </div>
-            </div>
+            {(() => {
+              const stock = activeVariant?.quantityAvailable;
+              const maxQty = typeof stock === "number" && stock > 0 ? Math.min(stock, 10) : 10;
+              const atMax = quantity >= maxQty;
+              return (
+                <div className="mt-8">
+                  <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
+                    Quantity
+                    {typeof stock === "number" && stock > 0 && stock <= 5 && (
+                      <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
+                        only {stock} left
+                      </span>
+                    )}
+                  </p>
+                  <div className="inline-flex items-center border border-foreground/20">
+                    <button
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
+                      disabled={quantity <= 1}
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus size={16} />
+                    </button>
+                    <span className="w-12 text-center font-heading text-sm font-bold text-foreground">
+                      {quantity}
+                    </span>
+                    <button
+                      onClick={() => setQuantity(Math.min(maxQty, quantity + 1))}
+                      className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
+                      disabled={atMax}
+                      aria-label="Increase quantity"
+                    >
+                      <Plus size={16} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })()}
 
             <button
               onClick={handleAddToCart}
