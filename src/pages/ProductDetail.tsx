@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
+import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
@@ -12,6 +13,9 @@ import { formatPrice } from "@/lib/shopify";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+
+const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*tourist\s*trap\.?/gi;
+const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
