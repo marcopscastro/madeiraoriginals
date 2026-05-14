@@ -143,6 +143,8 @@ export const PRODUCT_BY_HANDLE_QUERY = `
             availableForSale
             selectedOptions { name value }
             image { url altText }
+            sku
+            quantityAvailable
           }
         }
       }
