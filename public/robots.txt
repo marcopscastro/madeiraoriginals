@@ -3,5 +3,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /admin
 Disallow: /auth
+Disallow: /production-studio
+Disallow: /horeca
 
 Sitemap: https://madeiraoriginals.pt/sitemap.xml
