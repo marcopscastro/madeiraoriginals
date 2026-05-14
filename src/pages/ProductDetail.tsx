@@ -206,7 +206,7 @@ const ProductDetail = () => {
       <SEO
         title={`${product.title} — Madeira Originals`}
         description={
-          product.description?.slice(0, 160) ||
+          stripTagline(product.description).slice(0, 160) ||
           `Premium ${product.title} inspired by Madeira Island culture and identity.`
         }
         path={`/product/${product.handle}`}
