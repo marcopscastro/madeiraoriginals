@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import NewsletterForm from "@/components/NewsletterForm";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
-import saoVicente from "@/assets/sao-vicente.jpg";
+import saoVicente from "@/assets/sao-vicente.webp";
 
 const About = () => (
   <div className="min-h-screen bg-background">

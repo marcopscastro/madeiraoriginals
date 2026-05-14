@@ -1,4 +1,4 @@
-import saoVicente from "@/assets/sao-vicente.jpg";
+import saoVicente from "@/assets/sao-vicente.webp";
 
 const Diaspora = () => (
   <section className="relative">
