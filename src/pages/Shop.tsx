@@ -188,6 +188,29 @@ const Shop = () => {
             </div>
           </>
         )}
+
+        <section className="mt-20 md:mt-28 pt-12 md:pt-16 border-t border-foreground/10">
+          <div className="max-w-3xl mx-auto">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 text-center">
+              FAQ
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-10">
+              Shipping &amp; origin
+            </h2>
+            <dl className="space-y-8">
+              {faqs.map((item) => (
+                <div key={item.q} className="border-b border-foreground/10 pb-8 last:border-b-0 last:pb-0">
+                  <dt className="font-display text-lg md:text-xl font-semibold text-foreground mb-3">
+                    {item.q}
+                  </dt>
+                  <dd className="font-body text-base text-muted-foreground leading-relaxed">
+                    {item.a}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
