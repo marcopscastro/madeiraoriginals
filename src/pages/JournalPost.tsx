@@ -58,11 +58,22 @@ const JournalPost = () => {
     "@type": "Article",
     headline: article.title,
     description: article.excerpt ?? undefined,
+    image: article.cover_url ?? undefined,
     datePublished: article.published_at ?? article.created_at,
     dateModified: article.updated_at,
     author: { "@type": "Organization", name: SITE_NAME },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Journal", item: `${SITE_URL}/journal` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `${SITE_URL}/journal/${article.slug}` },
+    ],
   };
 
   return (
