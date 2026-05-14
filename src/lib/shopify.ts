@@ -127,6 +127,7 @@ export const PRODUCT_BY_HANDLE_QUERY = `
       id
       title
       description
+      descriptionHtml
       handle
       priceRange { minVariantPrice { amount currencyCode } }
       images(first: 10) { edges { node { url altText } } }
@@ -138,6 +139,7 @@ export const PRODUCT_BY_HANDLE_QUERY = `
             price { amount currencyCode }
             availableForSale
             selectedOptions { name value }
+            image { url altText }
           }
         }
       }
