@@ -287,11 +287,16 @@ const ProductDetail = () => {
             <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
             </p>
-            {product.description && (
+            {sanitizedDescription ? (
+              <div
+                className="mt-6 font-body text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-headings:font-heading prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-strong:text-foreground prose-li:my-1"
+                dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
+              />
+            ) : product.description ? (
               <p className="mt-6 font-body text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                {product.description}
+                {stripTagline(product.description)}
               </p>
-            )}
+            ) : null}
 
             {needsSelection && options.map((opt) => (
               <div key={opt.name} className="mt-8">
