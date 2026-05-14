@@ -1,4 +1,4 @@
-import manifestoImg from "@/assets/manifesto-uber-mockup.jpg";
+import manifestoImg from "@/assets/manifesto-uber-teen.jpg";
 
 const pillars = [
   {
@@ -21,7 +21,7 @@ const Manifesto = () => (
       <div>
         <img
           src={manifestoImg}
-          alt="Heavyweight cream and maroon t-shirts on volcanic Madeira basalt by Madeira Originals"
+          alt="Madeiran teenager wearing the Madeira Originals 'Madeira Über' tee on a Funchal calçada street"
           width={1280}
           height={960}
           loading="lazy"
