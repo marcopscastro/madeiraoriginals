@@ -122,7 +122,7 @@ export const PAGE_SEO: Record<string, PageSeoTemplate> = {
     eyebrow: "Account",
     h1: "Sign in to Madeira Originals",
   },
-} satisfies Record<string, PageSeoTemplate>;
+};
 
 export type PageSeoKey = keyof typeof PAGE_SEO;
 
