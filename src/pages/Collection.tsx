@@ -8,6 +8,11 @@ import { useProducts } from "@/hooks/useShopifyProducts";
 
 type SortOption = "default" | "price-asc" | "price-desc" | "title-asc";
 
+export interface CollectionFaq {
+  question: string;
+  answer: string;
+}
+
 export interface CollectionConfig {
   slug: string;
   eyebrow: string;
@@ -16,6 +21,7 @@ export interface CollectionConfig {
   metaTitle: string;
   metaDescription: string;
   shopifyQuery: string;
+  faqs?: CollectionFaq[];
 }
 
 const Collection = ({ config }: { config: CollectionConfig }) => {
