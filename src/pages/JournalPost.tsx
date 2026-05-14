@@ -121,7 +121,7 @@ const JournalPost = () => {
         )}
 
         <div className="prose-editorial">
-          <ReactMarkdown>{article.body_md}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body_md}</ReactMarkdown>
         </div>
 
         <div className="mt-16 pt-8 border-t border-foreground/10 text-center">
