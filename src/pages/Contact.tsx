@@ -1,15 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { Link } from "react-router-dom";
 
 const Contact = () => (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Contact Madeira Originals | São Vicente, Madeira"
-      description="Get in touch with Madeira Originals — premium Madeira streetwear and custom apparel production, based in São Vicente, Madeira, Portugal."
-      path="/contact"
-    />
+    <PageSEO routeKey="contact" />
     <Header />
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
