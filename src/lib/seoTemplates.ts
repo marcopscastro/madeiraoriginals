@@ -135,7 +135,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   },
 };
 
-export type PageSeoKey = keyof typeof PAGE_SEO;
+
 
 /** Get a typed SEO template by route key. */
 export const pageSeo = <K extends PageSeoKey>(key: K): PageSeoTemplate => PAGE_SEO[key];
