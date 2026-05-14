@@ -9,8 +9,8 @@ import saoVicente from "@/assets/sao-vicente.webp";
 const About = () => (
   <div className="min-h-screen bg-background">
     <SEO
-      title="About Madeira Originals | Premium Streetwear Born in Madeira"
-      description="Learn about Madeira Originals, a premium streetwear and custom apparel brand born in São Vicente, Madeira, inspired by island heritage, culture, and modern design."
+      title="About Madeira Originals | Streetwear from Madeira"
+      description="Madeira Originals is a premium streetwear and custom apparel brand from São Vicente, Madeira — inspired by island heritage, culture, and modern design."
       path="/about"
     />
     <Header />

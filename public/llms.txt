@@ -1,0 +1,27 @@
+# Madeira Originals
+
+> Premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap.
+
+Madeira Originals operates two lanes: a retail streetwear line (tees, hoodies, accessories, stickers) and a Production Studio offering DTF printing, UV DTF stickers, custom apparel, and rally/performance graphics for businesses and teams.
+
+## Pages
+
+- [Home](/): Brand overview and featured collections.
+- [Shop](/shop): Full streetwear and apparel catalogue.
+- [Madeira T-Shirts](/madeira-t-shirts): Heavyweight cotton tees with island-rooted graphics.
+- [Madeira Hoodies](/madeira-hoodies): Atlantic-weight hoodies built for Madeira's microclimates.
+- [Madeira Accessories](/madeira-accessories): Caps, totes, beanies, and small island essentials.
+- [Madeira Stickers](/madeira-stickers): Durable die-cut UV DTF stickers.
+- [Madeira Streetwear](/madeira-streetwear): The full streetwear line.
+- [Madeira Gifts](/madeira-gifts): Curated gift selection from Madeira.
+- [Production Studio](/production-studio): DTF, UV DTF, custom apparel, and team graphics for businesses.
+- [Culture](/culture): Stories and inspiration from Madeira.
+- [About](/about): Brand story, values, and team.
+- [Contact](/contact): Get in touch.
+- [Journal](/journal): Articles on Madeira culture, design, and streetwear.
+
+## Optional
+
+- [Best Souvenirs from Madeira](/journal/best-souvenirs-from-madeira)
+- [Modern Madeira Streetwear](/journal/modern-madeira-streetwear)
+- [What Makes Madeira Culture Unique](/journal/what-makes-madeira-culture-unique)
