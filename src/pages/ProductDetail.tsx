@@ -165,13 +165,26 @@ const ProductDetail = () => {
     });
   };
 
+  // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
+  const plainDescription = useMemo(() => {
+    const raw = product?.descriptionHtml || product?.description || "";
+    const noTags = raw.replace(/<[^>]*>/g, " ");
+    return stripTagline(noTags).replace(/\s+/g, " ").trim();
+  }, [product?.descriptionHtml, product?.description]);
+
+  const truncate = (s: string, n: number) => {
+    if (s.length <= n) return s;
+    const cut = s.slice(0, n);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+  };
+
   const productLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
-    description: product.description?.slice(0, 5000),
+    description: plainDescription.slice(0, 5000),
     image: images.map((i) => i.url),
-    sku: activeVariant?.id,
     brand: { "@type": "Brand", name: SITE_NAME },
     offers: {
       "@type": "Offer",
@@ -183,6 +196,7 @@ const ProductDetail = () => {
       url: `${SITE_URL}/product/${product.handle}`,
     },
   };
+  if (activeVariant?.sku) productLd.sku = activeVariant.sku;
   if (rating && rating.count > 0) {
     productLd.aggregateRating = {
       "@type": "AggregateRating",
@@ -201,14 +215,15 @@ const ProductDetail = () => {
     ],
   };
 
+  const seoDescription =
+    truncate(plainDescription, 160) ||
+    `Premium ${product.title} inspired by Madeira Island culture and identity.`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title={`${product.title} — Madeira Originals`}
-        description={
-          stripTagline(product.description).slice(0, 160) ||
-          `Premium ${product.title} inspired by Madeira Island culture and identity.`
-        }
+        description={seoDescription}
         path={`/product/${product.handle}`}
         type="product"
         image={images[0]?.url}
