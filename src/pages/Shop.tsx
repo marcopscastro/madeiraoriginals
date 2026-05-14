@@ -63,7 +63,7 @@ const Shop = () => {
     },
     {
       q: "Are these made in Madeira?",
-      a: "Madeira Originals is designed in São Vicente, on the north coast of Madeira, and the brand is entirely rooted on the island. Production is handled by our vetted fulfilment partners using premium blanks, with our Production Studio in Madeira running custom apparel, DTF and UV DTF for local and international clients.",
+      a: "Madeira Originals is designed in São Vicente, on the north coast of Madeira, and the brand is entirely rooted on the island. Production is handled by our vetted fulfilment partners using premium blanks.",
     },
   ];
 

@@ -4,7 +4,7 @@ const collections = [
   { label: "T-Shirts", href: "/madeira-t-shirts", desc: "Heavyweight tees with island-rooted graphics" },
   { label: "Hoodies", href: "/madeira-hoodies", desc: "Atlantic weight, everyday cuts" },
   { label: "Accessories", href: "/madeira-accessories", desc: "Totes, caps, island essentials" },
-  { label: "Production Studio", href: "/production-studio", desc: "Custom apparel & print for brands" },
+  { label: "Stickers", href: "/madeira-stickers", desc: "Vinyl stickers from the island" },
 ];
 
 const CollectionsGrid = () => {

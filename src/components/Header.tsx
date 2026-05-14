@@ -24,17 +24,6 @@ const navLinks: NavItem[] = [
       { label: "Stickers", href: "/madeira-stickers" },
     ],
   },
-  {
-    label: "Production Studio",
-    href: "/production-studio",
-    children: [
-      { label: "Custom Apparel", href: "/production-studio#custom-apparel" },
-      { label: "DTF Gang Sheets", href: "/production-studio#dtf" },
-      { label: "UV DTF Stickers", href: "/production-studio#uv-dtf" },
-      { label: "Business Merch", href: "/production-studio#business-merch" },
-      { label: "Rally & Performance", href: "/production-studio#rally" },
-    ],
-  },
   { label: "Journal", href: "/journal" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
