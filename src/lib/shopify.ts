@@ -23,6 +23,8 @@ export interface ShopifyVariant {
   availableForSale: boolean;
   selectedOptions: Array<{ name: string; value: string }>;
   image?: ShopifyImage | null;
+  sku?: string | null;
+  quantityAvailable?: number | null;
 }
 
 export interface ShopifyProductNode {
@@ -129,6 +131,7 @@ export const PRODUCT_BY_HANDLE_QUERY = `
       description
       descriptionHtml
       handle
+      productType
       priceRange { minVariantPrice { amount currencyCode } }
       images(first: 10) { edges { node { url altText } } }
       variants(first: 25) {
@@ -140,6 +143,8 @@ export const PRODUCT_BY_HANDLE_QUERY = `
             availableForSale
             selectedOptions { name value }
             image { url altText }
+            sku
+            quantityAvailable
           }
         }
       }

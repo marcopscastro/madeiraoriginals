@@ -89,12 +89,28 @@ const ProductDetail = () => {
     if (idx >= 0) setSelectedImage(idx);
   }, [activeVariant?.id, product]);
 
+  // Clamp quantity to active variant's stock when it changes
+  useEffect(() => {
+    const stock = activeVariant?.quantityAvailable;
+    if (typeof stock === "number" && stock > 0 && quantity > stock) {
+      setQuantity(stock);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeVariant?.id]);
+
   const sanitizedDescription = useMemo(() => {
     const html = product?.descriptionHtml;
     if (!html) return "";
     const cleaned = stripTagline(html);
     return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
   }, [product?.descriptionHtml]);
+
+  // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
+  const plainDescription = useMemo(() => {
+    const raw = product?.descriptionHtml || product?.description || "";
+    const noTags = raw.replace(/<[^>]*>/g, " ");
+    return stripTagline(noTags).replace(/\s+/g, " ").trim();
+  }, [product?.descriptionHtml, product?.description]);
 
   if (isLoading) {
     return (
@@ -165,13 +181,21 @@ const ProductDetail = () => {
     });
   };
 
+  // (plainDescription is computed above before early returns)
+
+  const truncate = (s: string, n: number) => {
+    if (s.length <= n) return s;
+    const cut = s.slice(0, n);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+  };
+
   const productLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
-    description: product.description?.slice(0, 5000),
+    description: plainDescription.slice(0, 5000),
     image: images.map((i) => i.url),
-    sku: activeVariant?.id,
     brand: { "@type": "Brand", name: SITE_NAME },
     offers: {
       "@type": "Offer",
@@ -183,6 +207,7 @@ const ProductDetail = () => {
       url: `${SITE_URL}/product/${product.handle}`,
     },
   };
+  if (activeVariant?.sku) productLd.sku = activeVariant.sku;
   if (rating && rating.count > 0) {
     productLd.aggregateRating = {
       "@type": "AggregateRating",
@@ -201,14 +226,15 @@ const ProductDetail = () => {
     ],
   };
 
+  const seoDescription =
+    truncate(plainDescription, 160) ||
+    `Premium ${product.title} inspired by Madeira Island culture and identity.`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title={`${product.title} — Madeira Originals`}
-        description={
-          stripTagline(product.description).slice(0, 160) ||
-          `Premium ${product.title} inspired by Madeira Island culture and identity.`
-        }
+        description={seoDescription}
         path={`/product/${product.handle}`}
         type="product"
         image={images[0]?.url}
@@ -252,6 +278,8 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
+                    aria-label={`View image ${i + 1} of ${images.length}`}
+                    aria-current={selectedImage === i}
                     className={`w-20 h-20 overflow-hidden bg-muted border-2 transition-colors ${
                       selectedImage === i
                         ? "border-primary"
@@ -333,30 +361,44 @@ const ProductDetail = () => {
               </div>
             ))}
 
-            <div className="mt-8">
-              <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                Quantity
-              </p>
-              <div className="inline-flex items-center border border-foreground/20">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-3 text-foreground hover:bg-muted transition-colors"
-                  aria-label="Decrease quantity"
-                >
-                  <Minus size={16} />
-                </button>
-                <span className="w-12 text-center font-heading text-sm font-bold text-foreground">
-                  {quantity}
-                </span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="p-3 text-foreground hover:bg-muted transition-colors"
-                  aria-label="Increase quantity"
-                >
-                  <Plus size={16} />
-                </button>
-              </div>
-            </div>
+            {(() => {
+              const stock = activeVariant?.quantityAvailable;
+              const maxQty = typeof stock === "number" && stock > 0 ? Math.min(stock, 10) : 10;
+              const atMax = quantity >= maxQty;
+              return (
+                <div className="mt-8">
+                  <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
+                    Quantity
+                    {typeof stock === "number" && stock > 0 && stock <= 5 && (
+                      <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
+                        only {stock} left
+                      </span>
+                    )}
+                  </p>
+                  <div className="inline-flex items-center border border-foreground/20">
+                    <button
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
+                      disabled={quantity <= 1}
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus size={16} />
+                    </button>
+                    <span className="w-12 text-center font-heading text-sm font-bold text-foreground">
+                      {quantity}
+                    </span>
+                    <button
+                      onClick={() => setQuantity(Math.min(maxQty, quantity + 1))}
+                      className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
+                      disabled={atMax}
+                      aria-label="Increase quantity"
+                    >
+                      <Plus size={16} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })()}
 
             <button
               onClick={handleAddToCart}
