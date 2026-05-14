@@ -11,6 +11,38 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     metaDescription:
       "Premium Madeira-inspired t-shirts in heavyweight cotton. Island graphics, coordinates and modern streetwear cuts. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:streetwear AND (product_type:T-Shirt OR title:t-shirt OR title:tee)",
+    faqs: [
+      {
+        question: "Where are your Madeira t-shirts designed?",
+        answer:
+          "Every Madeira t-shirt is designed in São Vicente, on the north coast of Madeira. Graphics draw on island coordinates, levadas, laurissilva forest, and Madeiran humour — never generic souvenir-shop clichés.",
+      },
+      {
+        question: "What size are your Madeira t-shirts?",
+        answer:
+          "Our Madeira t-shirts run true to a modern streetwear fit — slightly boxy, dropped shoulder, with room to layer. Each product page lists exact chest and length measurements so you can pick the right size.",
+      },
+      {
+        question: "What fabric are the Madeira t-shirts made from?",
+        answer:
+          "Heavyweight 100% combed cotton (220–240 gsm depending on the drop). Built to hold its shape after wash and feel substantial — the opposite of thin tourist tees.",
+      },
+      {
+        question: "Do you ship Madeira t-shirts worldwide?",
+        answer:
+          "Yes. We ship Madeira t-shirts worldwide from our fulfilment partners in the EU, UK and US. Madeira and mainland Portugal orders typically arrive in 3–6 working days; international in 5–10.",
+      },
+      {
+        question: "Are these real Madeira t-shirts or just Portugal-themed?",
+        answer:
+          "Real. Madeira Originals is a Madeiran brand born in São Vicente. The graphics, language and references come from the island itself — not generic 'Portugal' iconography.",
+      },
+      {
+        question: "Can I return a Madeira t-shirt if it doesn't fit?",
+        answer:
+          "Yes. Unworn, unwashed Madeira t-shirts can be returned within 14 days of delivery. Email us and we'll send return instructions.",
+      },
+    ],
   },
   "madeira-hoodies": {
     slug: "madeira-hoodies",
