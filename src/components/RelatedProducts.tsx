@@ -1,9 +1,16 @@
 import ProductCard from "./ProductCard";
-import { useProducts } from "@/hooks/useShopifyProducts";
+import { useProducts, useProductByHandle } from "@/hooks/useShopifyProducts";
 
 const RelatedProducts = ({ currentHandle }: { currentHandle: string }) => {
-  const { data: products = [] } = useProducts(8);
-  const related = products.filter((p) => p.node.handle !== currentHandle).slice(0, 3);
+  const { data: products = [] } = useProducts(20);
+  const { data: current } = useProductByHandle(currentHandle);
+  const currentType = current?.productType;
+
+  const others = products.filter((p) => p.node.handle !== currentHandle);
+  const sameType = currentType
+    ? others.filter((p) => p.node.productType === currentType)
+    : [];
+  const related = (sameType.length >= 3 ? sameType : [...sameType, ...others.filter((p) => !sameType.includes(p))]).slice(0, 3);
 
   if (related.length === 0) return null;
 
