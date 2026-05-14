@@ -83,7 +83,7 @@ const JournalPost = () => {
         description={article.seo_description ?? article.excerpt ?? undefined}
         path={`/journal/${article.slug}`}
         type="article"
-        jsonLd={articleLd}
+        jsonLd={[articleLd, breadcrumbLd]}
       />
       <Header />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
