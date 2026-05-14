@@ -49,6 +49,10 @@ const ProductDetail = () => {
   }, [variants, options, selectedOptions, singleVariant]);
 
   const needsSelection = !singleVariant && options.length > 0;
+  const allSoldOut = variants.length > 0 && variants.every((v) => !v.availableForSale);
+  const missingOption = needsSelection
+    ? options.find((o) => !selectedOptions[o.name])?.name
+    : undefined;
 
   // Default-select the first available variant's options
   useEffect(() => {
