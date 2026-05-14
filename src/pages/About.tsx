@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import NewsletterForm from "@/components/NewsletterForm";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
