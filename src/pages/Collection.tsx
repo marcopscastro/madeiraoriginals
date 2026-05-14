@@ -60,7 +60,24 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title={config.metaTitle} description={config.metaDescription} path={`/${config.slug}`} />
+      <SEO
+        title={config.metaTitle}
+        description={config.metaDescription}
+        path={`/${config.slug}`}
+        jsonLd={
+          config.faqs && config.faqs.length > 0
+            ? {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: config.faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: { "@type": "Answer", text: f.answer },
+                })),
+              }
+            : undefined
+        }
+      />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
