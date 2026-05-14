@@ -59,16 +59,10 @@ const About = () => (
           Every design must feel authentic to Madeira and wearable anywhere.
         </p>
 
-        <h2>Our two worlds</h2>
-        <h3>Retail Apparel</h3>
+        <h2>Retail Apparel</h2>
         <p>
           Original collections inspired by Madeira's nature, culture, and everyday identity —
           heavyweight cotton, premium finishes, editorial graphics.
-        </p>
-        <h3>Production Studio</h3>
-        <p>
-          Custom apparel, DTF gang sheets, UV DTF stickers, and technical print services for
-          businesses, brands, teams, and creators. <Link to="/production-studio">Explore the studio →</Link>
         </p>
 
         <h2>Born in São Vicente</h2>
