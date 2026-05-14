@@ -52,12 +52,38 @@ const Shop = () => {
     return list;
   }, [products, sort, query, activeType]);
 
+  const faqs = [
+    {
+      q: "Do you ship worldwide?",
+      a: "Yes. We ship Madeira Originals apparel and accessories worldwide from our fulfilment partners, with tracked delivery to Europe, the UK, the US, and most of the rest of the world. Shipping options and live rates are calculated at checkout based on your destination.",
+    },
+    {
+      q: "Can I order Madeira souvenirs from outside Portugal?",
+      a: "Absolutely. Most of our customers order from outside Portugal — including the Madeiran diaspora in the UK, Channel Islands, South Africa, Venezuela and beyond, plus travellers who discovered us in Funchal or São Vicente and want to order more once they get home.",
+    },
+    {
+      q: "Are these made in Madeira?",
+      a: "Madeira Originals is designed in São Vicente, on the north coast of Madeira, and the brand is entirely rooted on the island. Production is handled by our vetted fulfilment partners using premium blanks, with our Production Studio in Madeira running custom apparel, DTF and UV DTF for local and international clients.",
+    },
+  ];
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Shop Madeira Originals | Streetwear & Apparel"
-        description="Shop premium Madeira-inspired t-shirts, hoodies, accessories, and streetwear designed by Madeira Originals in São Vicente, Madeira."
+        description="Shop premium Madeira-inspired t-shirts, hoodies, accessories, and streetwear designed by Madeira Originals in São Vicente, Madeira. Worldwide shipping."
         path="/shop"
+        jsonLd={faqLd}
       />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -70,7 +96,7 @@ const Shop = () => {
           </h1>
           <p className="mt-4 font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Premium tees, hoodies and accessories inspired by the landscapes, traditions, and
-            modern culture of Madeira Island.
+            modern culture of Madeira — designed in São Vicente, shipped worldwide from Funchal.
           </p>
         </div>
 
