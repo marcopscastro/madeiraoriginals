@@ -131,7 +131,7 @@ const ProductDetail = () => {
       selectedOptions: activeVariant.selectedOptions,
     });
     toast.success(`${product.title} added to cart`, {
-      description: hasSizeOption
+      description: needsSelection
         ? `${activeVariant.title} · Qty: ${quantity}`
         : `Qty: ${quantity}`,
       position: "top-center",
