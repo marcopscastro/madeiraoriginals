@@ -10,6 +10,7 @@ const sections = [
       { label: "Hoodies", to: "/madeira-hoodies" },
       { label: "Accessories", to: "/madeira-accessories" },
       { label: "Stickers", to: "/madeira-stickers" },
+      { label: "Souvenirs Guide", to: "/madeira-souvenirs" },
     ],
   },
   {
