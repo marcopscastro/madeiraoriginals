@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import Header from "@/components/Header";
@@ -20,7 +20,7 @@ const ProductDetail = () => {
   const isAdding = useCartStore((s) => s.isLoading);
   const rating = useProductRating(handle);
 
-  const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
+  const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -29,12 +29,49 @@ const ProductDetail = () => {
     () => product?.variants.edges.map((e) => e.node) ?? [],
     [product]
   );
-  const sizeOption = product?.options.find((o) => o.name.toLowerCase() === "size");
-  const hasSizeOption = !!sizeOption && sizeOption.values.length > 1;
+  const options = product?.options ?? [];
   const singleVariant = variants.length === 1 ? variants[0] : null;
 
-  const activeVariant =
-    variants.find((v) => v.id === selectedVariantId) ?? singleVariant ?? null;
+  const activeVariant = useMemo(() => {
+    if (singleVariant) return singleVariant;
+    if (options.length === 0) return null;
+    const allChosen = options.every((o) => selectedOptions[o.name]);
+    if (!allChosen) return null;
+    return (
+      variants.find((v) =>
+        v.selectedOptions.every((so) => selectedOptions[so.name] === so.value)
+      ) ?? null
+    );
+  }, [variants, options, selectedOptions, singleVariant]);
+
+  const needsSelection = !singleVariant && options.length > 0;
+
+  // Default-select the first available variant's options
+  useEffect(() => {
+    if (!product || singleVariant) return;
+    if (Object.keys(selectedOptions).length > 0) return;
+    const firstAvailable = variants.find((v) => v.availableForSale) ?? variants[0];
+    if (firstAvailable) {
+      const initial: Record<string, string> = {};
+      firstAvailable.selectedOptions.forEach((o) => {
+        initial[o.name] = o.value;
+      });
+      setSelectedOptions(initial);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product?.id]);
+
+  // For a given option, check if a value has any in-stock variant given other current selections
+  const isValueAvailable = (optionName: string, value: string) => {
+    return variants.some((v) => {
+      if (!v.availableForSale) return false;
+      return v.selectedOptions.every((so) => {
+        if (so.name === optionName) return so.value === value;
+        const sel = selectedOptions[so.name];
+        return !sel || sel === so.value;
+      });
+    });
+  };
 
   if (isLoading) {
     return (
@@ -94,7 +131,7 @@ const ProductDetail = () => {
       selectedOptions: activeVariant.selectedOptions,
     });
     toast.success(`${product.title} added to cart`, {
-      description: hasSizeOption
+      description: needsSelection
         ? `${activeVariant.title} · Qty: ${quantity}`
         : `Qty: ${quantity}`,
       position: "top-center",
@@ -229,34 +266,40 @@ const ProductDetail = () => {
               </p>
             )}
 
-            {hasSizeOption && (
-              <div className="mt-8">
+            {needsSelection && options.map((opt) => (
+              <div key={opt.name} className="mt-8">
                 <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                  Size
+                  {opt.name}
+                  {selectedOptions[opt.name] && (
+                    <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
+                      {selectedOptions[opt.name]}
+                    </span>
+                  )}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {variants.map((v) => {
-                    const sizeVal =
-                      v.selectedOptions.find((o) => o.name.toLowerCase() === "size")?.value ??
-                      v.title;
+                  {opt.values.map((val) => {
+                    const available = isValueAvailable(opt.name, val);
+                    const selected = selectedOptions[opt.name] === val;
                     return (
                       <button
-                        key={v.id}
-                        onClick={() => setSelectedVariantId(v.id)}
-                        disabled={!v.availableForSale}
+                        key={val}
+                        onClick={() =>
+                          setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
+                        }
+                        disabled={!available}
                         className={`min-w-[3rem] px-4 py-2.5 border font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
-                          activeVariant?.id === v.id
+                          selected
                             ? "border-primary bg-primary text-primary-foreground"
                             : "border-foreground/20 text-foreground hover:border-foreground"
-                        } ${!v.availableForSale ? "opacity-40 cursor-not-allowed line-through" : ""}`}
+                        } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
                       >
-                        {sizeVal}
+                        {val}
                       </button>
                     );
                   })}
                 </div>
               </div>
-            )}
+            ))}
 
             <div className="mt-8">
               <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
@@ -285,7 +328,7 @@ const ProductDetail = () => {
 
             <button
               onClick={handleAddToCart}
-              disabled={isAdding || (hasSizeOption && !activeVariant)}
+              disabled={isAdding || (needsSelection && !activeVariant)}
               className="mt-8 w-full inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-none hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               {isAdding ? (
@@ -350,10 +393,10 @@ const ProductDetail = () => {
         </div>
         <button
           onClick={handleAddToCart}
-          disabled={isAdding || (hasSizeOption && !activeVariant)}
+          disabled={isAdding || (needsSelection && !activeVariant)}
           className="bg-primary text-primary-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 disabled:opacity-50"
         >
-          {isAdding ? <Loader2 className="w-4 h-4 animate-spin" /> : hasSizeOption && !activeVariant ? "Select size" : "Add to cart"}
+          {isAdding ? <Loader2 className="w-4 h-4 animate-spin" /> : needsSelection && !activeVariant ? "Select size" : "Add to cart"}
         </button>
       </div>
     </div>
