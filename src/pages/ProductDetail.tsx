@@ -20,7 +20,7 @@ const ProductDetail = () => {
   const isAdding = useCartStore((s) => s.isLoading);
   const rating = useProductRating(handle);
 
-  const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
+  const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -29,12 +29,49 @@ const ProductDetail = () => {
     () => product?.variants.edges.map((e) => e.node) ?? [],
     [product]
   );
-  const sizeOption = product?.options.find((o) => o.name.toLowerCase() === "size");
-  const hasSizeOption = !!sizeOption && sizeOption.values.length > 1;
+  const options = product?.options ?? [];
   const singleVariant = variants.length === 1 ? variants[0] : null;
 
-  const activeVariant =
-    variants.find((v) => v.id === selectedVariantId) ?? singleVariant ?? null;
+  const activeVariant = useMemo(() => {
+    if (singleVariant) return singleVariant;
+    if (options.length === 0) return null;
+    const allChosen = options.every((o) => selectedOptions[o.name]);
+    if (!allChosen) return null;
+    return (
+      variants.find((v) =>
+        v.selectedOptions.every((so) => selectedOptions[so.name] === so.value)
+      ) ?? null
+    );
+  }, [variants, options, selectedOptions, singleVariant]);
+
+  const needsSelection = !singleVariant && options.length > 0;
+
+  // Default-select the first available variant's options
+  useEffect(() => {
+    if (!product || singleVariant) return;
+    if (Object.keys(selectedOptions).length > 0) return;
+    const firstAvailable = variants.find((v) => v.availableForSale) ?? variants[0];
+    if (firstAvailable) {
+      const initial: Record<string, string> = {};
+      firstAvailable.selectedOptions.forEach((o) => {
+        initial[o.name] = o.value;
+      });
+      setSelectedOptions(initial);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product?.id]);
+
+  // For a given option, check if a value has any in-stock variant given other current selections
+  const isValueAvailable = (optionName: string, value: string) => {
+    return variants.some((v) => {
+      if (!v.availableForSale) return false;
+      return v.selectedOptions.every((so) => {
+        if (so.name === optionName) return so.value === value;
+        const sel = selectedOptions[so.name];
+        return !sel || sel === so.value;
+      });
+    });
+  };
 
   if (isLoading) {
     return (
