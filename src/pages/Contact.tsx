@@ -28,7 +28,9 @@ const Contact = () => (
           <h2 className="font-heading text-xs font-bold uppercase tracking-widest text-primary mb-3">
             General
           </h2>
-          <p className="font-display text-xl text-foreground">hello@madeiraoriginals.pt</p>
+          <a href="mailto:hello@madeiraoriginals.pt" className="font-display text-xl text-foreground hover:text-primary transition-colors break-all">
+            hello@madeiraoriginals.pt
+          </a>
           <p className="mt-2 font-body text-sm text-muted-foreground">
             Orders, returns, press, collaborations.
           </p>
