@@ -36,7 +36,7 @@ const Index = () => (
       <Bestsellers />
       <NoTouristTrap />
       <DesignDirections />
-      <ProductionStudioPreview />
+      
       <Diaspora />
       <JournalPreview />
       <HomeNewsletter />
