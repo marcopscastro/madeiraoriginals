@@ -52,12 +52,19 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
             <div className="flex-1 overflow-y-auto space-y-4 py-4">
               {items.map((item) => {
                 const image = item.product.node.images?.edges?.[0]?.node;
+                const lineTotal = parseFloat(item.price.amount) * item.quantity;
+                const productHref = `/product/${item.product.node.handle}`;
                 return (
                   <div
                     key={item.variantId}
                     className="flex gap-4 border-b border-foreground/10 pb-4"
                   >
-                    <div className="w-20 h-20 bg-muted flex-shrink-0">
+                    <Link
+                      to={productHref}
+                      onClick={() => onOpenChange(false)}
+                      className="w-20 h-20 bg-muted flex-shrink-0 block"
+                      aria-label={`View ${item.product.node.title}`}
+                    >
                       {image ? (
                         <img
                           src={image.url}
@@ -69,19 +76,30 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                           Soon
                         </div>
                       )}
-                    </div>
+                    </Link>
                     <div className="flex-1 min-w-0">
-                      <p className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground truncate">
+                      <Link
+                        to={productHref}
+                        onClick={() => onOpenChange(false)}
+                        className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground truncate block hover:text-primary transition-colors"
+                      >
                         {item.product.node.title}
-                      </p>
+                      </Link>
                       {item.selectedOptions.length > 0 && (
                         <p className="font-body text-xs text-muted-foreground mt-0.5">
                           {item.selectedOptions.map((o) => o.value).join(" · ")}
                         </p>
                       )}
-                      <p className="font-heading text-sm font-bold text-primary mt-1">
-                        {formatPrice(item.price)}
-                      </p>
+                      <div className="flex items-baseline gap-2 mt-1">
+                        <p className="font-heading text-sm font-bold text-primary">
+                          {formatPrice({ amount: lineTotal.toFixed(2), currencyCode: item.price.currencyCode })}
+                        </p>
+                        {item.quantity > 1 && (
+                          <p className="font-body text-[11px] text-muted-foreground">
+                            {formatPrice(item.price)} each
+                          </p>
+                        )}
+                      </div>
                       <div className="flex items-center gap-2 mt-2">
                         <button
                           onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
