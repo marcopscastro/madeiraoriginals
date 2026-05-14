@@ -96,6 +96,13 @@ const ProductDetail = () => {
     return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
   }, [product?.descriptionHtml]);
 
+  // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
+  const plainDescription = useMemo(() => {
+    const raw = product?.descriptionHtml || product?.description || "";
+    const noTags = raw.replace(/<[^>]*>/g, " ");
+    return stripTagline(noTags).replace(/\s+/g, " ").trim();
+  }, [product?.descriptionHtml, product?.description]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
