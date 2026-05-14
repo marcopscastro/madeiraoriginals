@@ -23,6 +23,8 @@ export interface ShopifyVariant {
   availableForSale: boolean;
   selectedOptions: Array<{ name: string; value: string }>;
   image?: ShopifyImage | null;
+  sku?: string | null;
+  quantityAvailable?: number | null;
 }
 
 export interface ShopifyProductNode {
