@@ -75,7 +75,19 @@ const Journal = () => {
         )}
 
         {isLoading ? (
-          <p className="text-center font-body text-muted-foreground py-16">Loading…</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="border border-foreground/10 overflow-hidden animate-pulse">
+                <div className="aspect-[16/10] bg-muted" />
+                <div className="p-6 md:p-8 space-y-3">
+                  <div className="h-3 bg-muted w-20" />
+                  <div className="h-6 bg-muted w-3/4" />
+                  <div className="h-4 bg-muted w-full" />
+                  <div className="h-4 bg-muted w-2/3" />
+                </div>
+              </div>
+            ))}
+          </div>
         ) : filtered.length === 0 ? (
           <p className="text-center font-body text-muted-foreground py-16">
             No articles in this category yet.

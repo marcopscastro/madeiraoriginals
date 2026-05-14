@@ -13,11 +13,17 @@ interface Props {
 
 const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (website) {
+      // bot caught — silently succeed
+      setDone(true);
+      return;
+    }
     const parsed = schema.safeParse({ email });
     if (!parsed.success) {
       toast.error(parsed.error.issues[0].message);
@@ -48,6 +54,16 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
 
   return (
     <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+      <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <input
         type="email"
         value={email}

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -57,11 +58,22 @@ const JournalPost = () => {
     "@type": "Article",
     headline: article.title,
     description: article.excerpt ?? undefined,
+    image: article.cover_url ?? undefined,
     datePublished: article.published_at ?? article.created_at,
     dateModified: article.updated_at,
     author: { "@type": "Organization", name: SITE_NAME },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Journal", item: `${SITE_URL}/journal` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `${SITE_URL}/journal/${article.slug}` },
+    ],
   };
 
   return (
@@ -71,7 +83,7 @@ const JournalPost = () => {
         description={article.seo_description ?? article.excerpt ?? undefined}
         path={`/journal/${article.slug}`}
         type="article"
-        jsonLd={articleLd}
+        jsonLd={[articleLd, breadcrumbLd]}
       />
       <Header />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -109,7 +121,7 @@ const JournalPost = () => {
         )}
 
         <div className="prose-editorial">
-          <ReactMarkdown>{article.body_md}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body_md}</ReactMarkdown>
         </div>
 
         <div className="mt-16 pt-8 border-t border-foreground/10 text-center">
