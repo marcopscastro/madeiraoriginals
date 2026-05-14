@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
+import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
@@ -12,6 +13,9 @@ import { formatPrice } from "@/lib/shopify";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+
+const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*tourist\s*trap\.?/gi;
+const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
@@ -45,6 +49,10 @@ const ProductDetail = () => {
   }, [variants, options, selectedOptions, singleVariant]);
 
   const needsSelection = !singleVariant && options.length > 0;
+  const allSoldOut = variants.length > 0 && variants.every((v) => !v.availableForSale);
+  const missingOption = needsSelection
+    ? options.find((o) => !selectedOptions[o.name])?.name
+    : undefined;
 
   // Default-select the first available variant's options
   useEffect(() => {
@@ -72,6 +80,21 @@ const ProductDetail = () => {
       });
     });
   };
+
+  // Swap main image when active variant has its own image (e.g. colour change)
+  useEffect(() => {
+    const variantImageUrl = activeVariant?.image?.url;
+    if (!variantImageUrl || !product) return;
+    const idx = product.images.edges.findIndex((e) => e.node.url === variantImageUrl);
+    if (idx >= 0) setSelectedImage(idx);
+  }, [activeVariant?.id, product]);
+
+  const sanitizedDescription = useMemo(() => {
+    const html = product?.descriptionHtml;
+    if (!html) return "";
+    const cleaned = stripTagline(html);
+    return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
+  }, [product?.descriptionHtml]);
 
   if (isLoading) {
     return (
@@ -111,8 +134,12 @@ const ProductDetail = () => {
   const totalPrice = parseFloat(price.amount) * quantity;
 
   const handleAddToCart = async () => {
+    if (allSoldOut) {
+      toast.error("Sold out");
+      return;
+    }
     if (!activeVariant) {
-      toast.error("Please select a size");
+      toast.error(missingOption ? `Please select ${missingOption.toLowerCase()}` : "Please select options");
       return;
     }
     await addItem({
@@ -179,7 +206,7 @@ const ProductDetail = () => {
       <SEO
         title={`${product.title} — Madeira Originals`}
         description={
-          product.description?.slice(0, 160) ||
+          stripTagline(product.description).slice(0, 160) ||
           `Premium ${product.title} inspired by Madeira Island culture and identity.`
         }
         path={`/product/${product.handle}`}
@@ -188,7 +215,7 @@ const ProductDetail = () => {
         jsonLd={[productLd, breadcrumbLd]}
       />
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-28 md:pb-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
           <Link to="/" className="hover:text-foreground">Home</Link>
           <span>/</span>
@@ -260,11 +287,16 @@ const ProductDetail = () => {
             <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
             </p>
-            {product.description && (
+            {sanitizedDescription ? (
+              <div
+                className="mt-6 font-body text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-headings:font-heading prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-foreground prose-strong:text-foreground prose-li:my-1"
+                dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
+              />
+            ) : product.description ? (
               <p className="mt-6 font-body text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                {product.description}
+                {stripTagline(product.description)}
               </p>
-            )}
+            ) : null}
 
             {needsSelection && options.map((opt) => (
               <div key={opt.name} className="mt-8">
@@ -328,11 +360,15 @@ const ProductDetail = () => {
 
             <button
               onClick={handleAddToCart}
-              disabled={isAdding || (needsSelection && !activeVariant)}
+              disabled={isAdding || allSoldOut || (needsSelection && !activeVariant)}
               className="mt-8 w-full inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-none hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               {isAdding ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
+              ) : allSoldOut ? (
+                "Sold Out"
+              ) : needsSelection && missingOption ? (
+                `Select ${missingOption}`
               ) : (
                 <>
                   <ShoppingCart size={18} />
@@ -393,10 +429,18 @@ const ProductDetail = () => {
         </div>
         <button
           onClick={handleAddToCart}
-          disabled={isAdding || (needsSelection && !activeVariant)}
+          disabled={isAdding || allSoldOut || (needsSelection && !activeVariant)}
           className="bg-primary text-primary-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 disabled:opacity-50"
         >
-          {isAdding ? <Loader2 className="w-4 h-4 animate-spin" /> : needsSelection && !activeVariant ? "Select size" : "Add to cart"}
+          {isAdding ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : allSoldOut ? (
+            "Sold out"
+          ) : needsSelection && missingOption ? (
+            `Select ${missingOption.toLowerCase()}`
+          ) : (
+            "Add to cart"
+          )}
         </button>
       </div>
     </div>
