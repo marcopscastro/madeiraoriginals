@@ -79,12 +79,7 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Shop Madeira Originals | Streetwear & Apparel"
-        description="Shop premium Madeira-inspired t-shirts, hoodies, accessories, and streetwear designed by Madeira Originals in São Vicente, Madeira. Worldwide shipping."
-        path="/shop"
-        jsonLd={faqLd}
-      />
+      <PageSEO routeKey="shop" jsonLd={faqLd} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-10">
