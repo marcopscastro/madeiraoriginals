@@ -3,7 +3,7 @@ import { Search, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
-import SEO from "@/components/SEO";
+import PageSEO from "@/components/PageSEO";
 import { useProducts } from "@/hooks/useShopifyProducts";
 
 type SortOption = "default" | "price-asc" | "price-desc" | "title-asc";
