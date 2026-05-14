@@ -266,34 +266,40 @@ const ProductDetail = () => {
               </p>
             )}
 
-            {hasSizeOption && (
-              <div className="mt-8">
+            {needsSelection && options.map((opt) => (
+              <div key={opt.name} className="mt-8">
                 <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                  Size
+                  {opt.name}
+                  {selectedOptions[opt.name] && (
+                    <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
+                      {selectedOptions[opt.name]}
+                    </span>
+                  )}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {variants.map((v) => {
-                    const sizeVal =
-                      v.selectedOptions.find((o) => o.name.toLowerCase() === "size")?.value ??
-                      v.title;
+                  {opt.values.map((val) => {
+                    const available = isValueAvailable(opt.name, val);
+                    const selected = selectedOptions[opt.name] === val;
                     return (
                       <button
-                        key={v.id}
-                        onClick={() => setSelectedVariantId(v.id)}
-                        disabled={!v.availableForSale}
+                        key={val}
+                        onClick={() =>
+                          setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
+                        }
+                        disabled={!available}
                         className={`min-w-[3rem] px-4 py-2.5 border font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
-                          activeVariant?.id === v.id
+                          selected
                             ? "border-primary bg-primary text-primary-foreground"
                             : "border-foreground/20 text-foreground hover:border-foreground"
-                        } ${!v.availableForSale ? "opacity-40 cursor-not-allowed line-through" : ""}`}
+                        } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
                       >
-                        {sizeVal}
+                        {val}
                       </button>
                     );
                   })}
                 </div>
               </div>
-            )}
+            ))}
 
             <div className="mt-8">
               <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
