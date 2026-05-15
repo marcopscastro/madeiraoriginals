@@ -3,7 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import { useProducts } from "@/hooks/useShopifyProducts";
 
 const Bestsellers = () => {
-  const { data: products = [], isLoading } = useProducts(8, "tag:streetwear");
+  const { data: products = [], isLoading } = useProducts(8);
 
   return (
     <section id="latest-drops" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
