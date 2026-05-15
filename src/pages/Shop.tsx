@@ -184,13 +184,23 @@ const Shop = () => {
         ) : (
           <>
             <p className="font-heading text-[11px] uppercase tracking-widest text-muted-foreground mb-4">
-              Showing {filtered.length} of {products.length}
+              Showing {paginated.length} of {filtered.length}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filtered.map((p) => (
+              {paginated.map((p) => (
                 <ProductCard key={p.node.id} product={p} />
               ))}
             </div>
+            {hasMore && (
+              <div className="text-center mt-12">
+                <button
+                  onClick={() => setVisible((v) => v + PAGE_SIZE)}
+                  className="inline-flex items-center justify-center border border-foreground text-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Load more
+                </button>
+              </div>
+            )}
           </>
         )}
 
