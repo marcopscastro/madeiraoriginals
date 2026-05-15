@@ -54,6 +54,14 @@ const Shop = () => {
     return list;
   }, [products, sort, query, activeType]);
 
+  // Reset pagination whenever the filtered list changes
+  useEffect(() => {
+    setVisible(PAGE_SIZE);
+  }, [sort, query, activeType, products.length]);
+
+  const paginated = filtered.slice(0, visible);
+  const hasMore = visible < filtered.length;
+
   const faqs = [
     {
       q: "Do you ship worldwide?",
