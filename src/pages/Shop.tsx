@@ -9,10 +9,12 @@ import { useProducts } from "@/hooks/useShopifyProducts";
 type SortOption = "default" | "price-asc" | "price-desc" | "title-asc";
 
 const Shop = () => {
-  const { data: products = [], isLoading } = useProducts(50, "tag:streetwear");
+  const PAGE_SIZE = 12;
+  const { data: products = [], isLoading } = useProducts(100);
   const [sort, setSort] = useState<SortOption>("default");
   const [query, setQuery] = useState("");
   const [activeType, setActiveType] = useState<string>("all");
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   const types = useMemo(() => {
     const set = new Set<string>();
