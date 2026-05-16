@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -9,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const JournalPost = () => {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
 
   const { data: article, isLoading } = useQuery({
@@ -30,7 +32,7 @@ const JournalPost = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="max-w-3xl mx-auto px-4 py-24 text-center font-body text-muted-foreground">
-          Loading…
+          {t("journal.loading")}
         </div>
         <Footer />
       </div>
@@ -40,12 +42,12 @@ const JournalPost = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
-        <SEO title="Article not found" path={`/journal/${slug}`} noIndex />
+        <SEO title={t("journal.notFoundTitle")} path={`/journal/${slug}`} noIndex />
         <Header />
         <div className="max-w-3xl mx-auto px-4 py-24 text-center">
-          <h1 className="font-display text-3xl font-semibold mb-4">Article not found</h1>
+          <h1 className="font-display text-3xl font-semibold mb-4">{t("journal.notFoundTitle")}</h1>
           <Link to="/journal" className="text-primary underline underline-offset-4">
-            ← Back to Journal
+            {t("journal.backToJournal")}
           </Link>
         </div>
         <Footer />
@@ -88,7 +90,7 @@ const JournalPost = () => {
       <Header />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <nav className="font-heading text-xs uppercase tracking-widest text-muted-foreground mb-6">
-          <Link to="/journal" className="hover:text-foreground">Journal</Link>
+          <Link to="/journal" className="hover:text-foreground">{t("journal.breadcrumb")}</Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">{article.title}</span>
         </nav>
@@ -129,7 +131,7 @@ const JournalPost = () => {
             to="/shop"
             className="inline-flex items-center justify-center bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
           >
-            Shop the Collection
+            {t("journal.ctaShop")}
           </Link>
         </div>
       </main>

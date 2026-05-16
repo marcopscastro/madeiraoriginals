@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import DOMPurify from "dompurify";
 import Header from "@/components/Header";
@@ -18,6 +19,7 @@ const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*t
 const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
 
 const ProductDetail = () => {
+  const { t } = useTranslation();
   const { handle } = useParams<{ handle: string }>();
   const { data: product, isLoading } = useProductByHandle(handle);
   const addItem = useCartStore((s) => s.addItem);
@@ -117,7 +119,7 @@ const ProductDetail = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="max-w-7xl mx-auto px-4 py-24 text-center font-body text-muted-foreground">
-          Loading…
+          {t("product.loading")}
         </div>
         <Footer />
       </div>
@@ -130,13 +132,13 @@ const ProductDetail = () => {
         <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="font-heading text-3xl font-bold uppercase text-foreground mb-4">
-            Product Not Found
+            {t("product.notFound")}
           </h1>
           <Link
             to="/shop"
             className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-wide text-primary hover:opacity-80"
           >
-            <ArrowLeft size={16} /> Back to Shop
+            <ArrowLeft size={16} /> {t("product.backToShop")}
           </Link>
         </div>
         <Footer />
@@ -151,11 +153,15 @@ const ProductDetail = () => {
 
   const handleAddToCart = async () => {
     if (allSoldOut) {
-      toast.error("Sold out");
+      toast.error(t("product.soldOutShort"));
       return;
     }
     if (!activeVariant) {
-      toast.error(missingOption ? `Please select ${missingOption.toLowerCase()}` : "Please select options");
+      toast.error(
+        missingOption
+          ? t("product.pleaseSelect", { name: missingOption.toLowerCase() })
+          : t("product.pleaseSelectOptions")
+      );
       return;
     }
     const ok = await addItem({
@@ -174,16 +180,16 @@ const ProductDetail = () => {
       selectedOptions: activeVariant.selectedOptions,
     });
     if (!ok) {
-      toast.error("Couldn't add to cart", {
-        description: "That variant may be out of stock. Please try again.",
+      toast.error(t("product.addError"), {
+        description: t("product.addErrorBody"),
         position: "top-center",
       });
       return;
     }
-    toast.success(`${product.title} added to cart`, {
+    toast.success(t("product.addedToCart", { title: product.title }), {
       description: needsSelection
-        ? `${activeVariant.title} · Qty: ${quantity}`
-        : `Qty: ${quantity}`,
+        ? t("product.addedVariantQty", { variant: activeVariant.title, qty: quantity })
+        : t("product.addedQty", { qty: quantity }),
       position: "top-center",
     });
   };
@@ -235,7 +241,7 @@ const ProductDetail = () => {
 
   const seoDescription =
     truncate(plainDescription, 160) ||
-    `Premium ${product.title} inspired by Madeira Island culture and identity.`;
+    t("product.seoFallback", { title: product.title });
 
   return (
     <div className="min-h-screen bg-background">
@@ -250,9 +256,9 @@ const ProductDetail = () => {
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-28 md:pb-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-foreground">Home</Link>
+          <Link to="/" className="hover:text-foreground">{t("product.home")}</Link>
           <span>/</span>
-          <Link to="/shop" className="hover:text-foreground">Shop</Link>
+          <Link to="/shop" className="hover:text-foreground">{t("product.shop")}</Link>
           <span>/</span>
           <span className="text-foreground">{product.title}</span>
         </nav>
@@ -265,7 +271,7 @@ const ProductDetail = () => {
                   type="button"
                   onClick={() => setLightboxOpen(true)}
                   className="w-full h-full block cursor-zoom-in"
-                  aria-label="Zoom image"
+                  aria-label={t("product.zoomImage")}
                 >
                   <img
                     src={currentImage.url}
@@ -275,7 +281,7 @@ const ProductDetail = () => {
                 </button>
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
-                  Coming Soon
+                  {t("product.comingSoon")}
                 </div>
               )}
             </div>
@@ -285,7 +291,7 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    aria-label={`View image ${i + 1} of ${images.length}`}
+                    aria-label={t("product.thumbAria", { i: i + 1, total: images.length })}
                     aria-current={selectedImage === i}
                     className={`w-20 h-20 overflow-hidden bg-muted border-2 transition-colors ${
                       selectedImage === i
@@ -316,11 +322,11 @@ const ProductDetail = () => {
                   {"★".repeat(Math.round(rating.avg))}
                   <span className="text-foreground/20">{"★".repeat(5 - Math.round(rating.avg))}</span>
                 </span>
-                {rating.avg.toFixed(1)} · {rating.count} review{rating.count === 1 ? "" : "s"}
+                {rating.avg.toFixed(1)} · {rating.count} {rating.count === 1 ? t("product.reviewsOne") : t("product.reviewsOther")}
               </a>
             )}
             <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
+              {t("product.tagline")}
             </p>
             {sanitizedDescription ? (
               <div
@@ -375,10 +381,10 @@ const ProductDetail = () => {
               return (
                 <div className="mt-8">
                   <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                    Quantity
+                    {t("product.quantity")}
                     {typeof stock === "number" && stock > 0 && stock <= 5 && (
                       <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
-                        only {stock} left
+                        {t("product.onlyLeft", { stock })}
                       </span>
                     )}
                   </p>
@@ -387,7 +393,7 @@ const ProductDetail = () => {
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
                       disabled={quantity <= 1}
-                      aria-label="Decrease quantity"
+                      aria-label={t("product.decreaseQty")}
                     >
                       <Minus size={16} />
                     </button>
@@ -398,7 +404,7 @@ const ProductDetail = () => {
                       onClick={() => setQuantity(Math.min(maxQty, quantity + 1))}
                       className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
                       disabled={atMax}
-                      aria-label="Increase quantity"
+                      aria-label={t("product.increaseQty")}
                     >
                       <Plus size={16} />
                     </button>
@@ -415,13 +421,13 @@ const ProductDetail = () => {
               {isAdding ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
               ) : allSoldOut ? (
-                "Sold Out"
+                t("product.soldOut")
               ) : needsSelection && missingOption ? (
-                `Select ${missingOption}`
+                t("product.selectOption", { name: missingOption })
               ) : (
                 <>
                   <ShoppingCart size={18} />
-                  Add to Cart — {formatPrice({ amount: totalPrice.toFixed(2), currencyCode: price.currencyCode })}
+                  {t("product.addToCart")} — {formatPrice({ amount: totalPrice.toFixed(2), currencyCode: price.currencyCode })}
                 </>
               )}
             </button>
@@ -431,23 +437,20 @@ const ProductDetail = () => {
         <section className="mt-20 grid md:grid-cols-2 gap-10 lg:gap-16">
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Designed with Madeira inspiration.
+              {t("product.inspirationHeading")}
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed">
-              Every Madeira Originals piece is rooted in the landscapes, traditions and modern
-              culture of Madeira Island — translated through premium materials and editorial
-              cuts. Wear the island in Funchal, Lisbon, or anywhere the diaspora carries it.
+              {t("product.inspirationBody")}
             </p>
           </div>
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Materials, fit & care.
+              {t("product.materialsHeading")}
             </h2>
             <ul className="font-body text-base text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
-              <li>Premium cotton construction, made to last and soften with wear.</li>
-              <li>Modern unisex fit — true to size for most; size up for an oversized look.</li>
-              <li>Machine wash cold, inside out. Tumble dry low or hang to dry.</li>
-              <li>Designed in Madeira. Shipped worldwide.</li>
+              {((t("product.materials", { returnObjects: true }) as string[]) ?? []).map((line) => (
+                <li key={line}>{line}</li>
+              ))}
             </ul>
           </div>
         </section>
@@ -484,11 +487,11 @@ const ProductDetail = () => {
           {isAdding ? (
             <Loader2 className="w-4 h-4 animate-spin" />
           ) : allSoldOut ? (
-            "Sold out"
+            t("product.soldOutShort")
           ) : needsSelection && missingOption ? (
-            `Select ${missingOption.toLowerCase()}`
+            t("product.selectOption", { name: missingOption.toLowerCase() })
           ) : (
-            "Add to cart"
+            t("product.addToCartShort")
           )}
         </button>
       </div>
