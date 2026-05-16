@@ -54,7 +54,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   }
 
   return (
-    <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+    <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0 w-full min-w-0">
       <input
         type="text"
         name="website"
@@ -72,7 +72,8 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
         required
         placeholder={t("newsletter.placeholder")}
         aria-label={t("newsletter.ariaEmail")}
-        className="flex-1 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
+        size={1}
+        className="flex-1 min-w-0 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
       />
       <button
         type="submit"
