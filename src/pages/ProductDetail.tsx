@@ -292,7 +292,12 @@ const ProductDetail = () => {
                 >
                   <img
                     src={currentImage.url}
-                    alt={currentImage.altText || product.title}
+                    alt={productAlt({
+                      title: product.title,
+                      shopifyAlt: currentImage.altText,
+                      index: selectedImage,
+                      total: images.length,
+                    })}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -316,7 +321,16 @@ const ProductDetail = () => {
                         : "border-transparent hover:border-muted-foreground/30"
                     }`}
                   >
-                    <img src={img.url} alt="" className="w-full h-full object-cover" />
+                    <img
+                      src={img.url}
+                      alt={productAlt({
+                        title: product.title,
+                        shopifyAlt: img.altText,
+                        index: i,
+                        total: images.length,
+                      })}
+                      className="w-full h-full object-cover"
+                    />
                   </button>
                 ))}
               </div>
