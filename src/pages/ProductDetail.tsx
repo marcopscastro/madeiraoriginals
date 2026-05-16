@@ -381,10 +381,10 @@ const ProductDetail = () => {
               return (
                 <div className="mt-8">
                   <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                    Quantity
+                    {t("product.quantity")}
                     {typeof stock === "number" && stock > 0 && stock <= 5 && (
                       <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
-                        only {stock} left
+                        {t("product.onlyLeft", { stock })}
                       </span>
                     )}
                   </p>
@@ -393,7 +393,7 @@ const ProductDetail = () => {
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
                       disabled={quantity <= 1}
-                      aria-label="Decrease quantity"
+                      aria-label={t("product.decreaseQty")}
                     >
                       <Minus size={16} />
                     </button>
@@ -404,7 +404,7 @@ const ProductDetail = () => {
                       onClick={() => setQuantity(Math.min(maxQty, quantity + 1))}
                       className="p-3 text-foreground hover:bg-muted transition-colors disabled:opacity-40"
                       disabled={atMax}
-                      aria-label="Increase quantity"
+                      aria-label={t("product.increaseQty")}
                     >
                       <Plus size={16} />
                     </button>
@@ -421,13 +421,13 @@ const ProductDetail = () => {
               {isAdding ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
               ) : allSoldOut ? (
-                "Sold Out"
+                t("product.soldOut")
               ) : needsSelection && missingOption ? (
-                `Select ${missingOption}`
+                t("product.selectOption", { name: missingOption })
               ) : (
                 <>
                   <ShoppingCart size={18} />
-                  Add to Cart — {formatPrice({ amount: totalPrice.toFixed(2), currencyCode: price.currencyCode })}
+                  {t("product.addToCart")} — {formatPrice({ amount: totalPrice.toFixed(2), currencyCode: price.currencyCode })}
                 </>
               )}
             </button>
@@ -437,23 +437,20 @@ const ProductDetail = () => {
         <section className="mt-20 grid md:grid-cols-2 gap-10 lg:gap-16">
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Designed with Madeira inspiration.
+              {t("product.inspirationHeading")}
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed">
-              Every Madeira Originals piece is rooted in the landscapes, traditions and modern
-              culture of Madeira Island — translated through premium materials and editorial
-              cuts. Wear the island in Funchal, Lisbon, or anywhere the diaspora carries it.
+              {t("product.inspirationBody")}
             </p>
           </div>
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Materials, fit & care.
+              {t("product.materialsHeading")}
             </h2>
             <ul className="font-body text-base text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
-              <li>Premium cotton construction, made to last and soften with wear.</li>
-              <li>Modern unisex fit — true to size for most; size up for an oversized look.</li>
-              <li>Machine wash cold, inside out. Tumble dry low or hang to dry.</li>
-              <li>Designed in Madeira. Shipped worldwide.</li>
+              {((t("product.materials", { returnObjects: true }) as string[]) ?? []).map((line) => (
+                <li key={line}>{line}</li>
+              ))}
             </ul>
           </div>
         </section>
@@ -490,11 +487,11 @@ const ProductDetail = () => {
           {isAdding ? (
             <Loader2 className="w-4 h-4 animate-spin" />
           ) : allSoldOut ? (
-            "Sold out"
+            t("product.soldOutShort")
           ) : needsSelection && missingOption ? (
-            `Select ${missingOption.toLowerCase()}`
+            t("product.selectOption", { name: missingOption.toLowerCase() })
           ) : (
-            "Add to cart"
+            t("product.addToCartShort")
           )}
         </button>
       </div>
