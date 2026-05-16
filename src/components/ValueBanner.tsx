@@ -1,10 +1,13 @@
-const items = [
-  { emoji: "📍", text: "Designed in Madeira" },
-  { emoji: "🧵", text: "Premium Heavyweight Cotton" },
-  { emoji: "🚫", text: "0% Tourist Trap" },
-];
+import { useTranslation } from "react-i18next";
 
 const ValueBanner = () => {
+  const { t } = useTranslation();
+  const items = [
+    { emoji: "📍", text: t("valueBanner.designed") },
+    { emoji: "🧵", text: t("valueBanner.cotton") },
+    { emoji: "🚫", text: t("valueBanner.noTrap") },
+  ];
+
   return (
     <section className="border-y border-foreground/10 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
