@@ -103,7 +103,7 @@ const Journal = () => {
                   {a.cover_url && (
                     <img
                       src={a.cover_url}
-                      alt={a.title}
+                      alt={(isPt && a.title_pt) || a.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     />
@@ -116,11 +116,11 @@ const Journal = () => {
                     </p>
                   )}
                   <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {a.title}
+                    {(isPt && a.title_pt) || a.title}
                   </h2>
-                  {a.excerpt && (
+                  {((isPt && a.excerpt_pt) || a.excerpt) && (
                     <p className="mt-3 font-body text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
-                      {a.excerpt}
+                      {(isPt && a.excerpt_pt) || a.excerpt}
                     </p>
                   )}
                 </div>
