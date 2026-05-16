@@ -7,6 +7,11 @@ import pt from "./locales/pt.json";
 export const SUPPORTED_LANGS = ["pt", "en"] as const;
 export type Lang = (typeof SUPPORTED_LANGS)[number];
 
+export const HREFLANG_MAP: Record<Lang, string> = {
+  pt: "pt-PT",
+  en: "en",
+};
+
 if (!i18n.isInitialized) {
   i18n
     .use(LanguageDetector)
@@ -18,8 +23,9 @@ if (!i18n.isInitialized) {
       load: "languageOnly",
       interpolation: { escapeValue: false },
       detection: {
-        order: ["localStorage", "navigator"],
+        order: ["querystring", "localStorage", "navigator"],
         caches: ["localStorage"],
+        lookupQuerystring: "lang",
         lookupLocalStorage: "mo_lang",
       },
     });
@@ -27,7 +33,8 @@ if (!i18n.isInitialized) {
 
 const applyHtmlLang = (lng: string) => {
   if (typeof document !== "undefined") {
-    document.documentElement.lang = lng.startsWith("pt") ? "pt-PT" : "en";
+    const short = lng.slice(0, 2) as Lang;
+    document.documentElement.lang = HREFLANG_MAP[short] ?? "en";
   }
 };
 applyHtmlLang(i18n.language);
