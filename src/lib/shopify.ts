@@ -70,7 +70,12 @@ export async function storefrontApiRequest<T = any>(
 
   const data = await response.json();
   if (data.errors) {
-    throw new Error(`Shopify error: ${data.errors.map((e: { message: string }) => e.message).join(", ")}`);
+    const msg = data.errors.map((e: { message: string }) => e.message).join(", ");
+    // Tolerate partial-field errors (e.g. missing inventory scope) as long as data was returned.
+    if (!data.data) {
+      throw new Error(`Shopify error: ${msg}`);
+    }
+    console.warn(`Shopify partial error: ${msg}`);
   }
   return data;
 }
