@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Search, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +10,7 @@ import { useProducts } from "@/hooks/useShopifyProducts";
 type SortOption = "default" | "price-asc" | "price-desc" | "title-asc";
 
 const Shop = () => {
+  const { t } = useTranslation();
   const PAGE_SIZE = 12;
   const { data: products = [], isLoading } = useProducts(100);
   const [sort, setSort] = useState<SortOption>("default");
@@ -62,20 +64,7 @@ const Shop = () => {
   const paginated = filtered.slice(0, visible);
   const hasMore = visible < filtered.length;
 
-  const faqs = [
-    {
-      q: "Do you ship worldwide?",
-      a: "Yes. We ship Madeira Originals apparel and accessories worldwide from our fulfilment partners, with tracked delivery to Europe, the UK, the US, and most of the rest of the world. Shipping options and live rates are calculated at checkout based on your destination.",
-    },
-    {
-      q: "Can I order Madeira souvenirs from outside Portugal?",
-      a: "Absolutely. Most of our customers order from outside Portugal — including the Madeiran diaspora in the UK, Channel Islands, South Africa, Venezuela and beyond, plus travellers who discovered us in Funchal or São Vicente and want to order more once they get home.",
-    },
-    {
-      q: "Are these made in Madeira?",
-      a: "Madeira Originals is designed in São Vicente, on the north coast of Madeira, and the brand is entirely rooted on the island. Production is handled by our vetted fulfilment partners using premium blanks.",
-    },
-  ];
+  const faqs = (t("shop.faqs", { returnObjects: true }) as Array<{ q: string; a: string }>) ?? [];
 
   const faqLd = {
     "@context": "https://schema.org",
