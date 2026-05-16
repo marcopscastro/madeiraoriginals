@@ -119,7 +119,7 @@ const ProductDetail = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="max-w-7xl mx-auto px-4 py-24 text-center font-body text-muted-foreground">
-          Loading…
+          {t("product.loading")}
         </div>
         <Footer />
       </div>
@@ -132,13 +132,13 @@ const ProductDetail = () => {
         <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="font-heading text-3xl font-bold uppercase text-foreground mb-4">
-            Product Not Found
+            {t("product.notFound")}
           </h1>
           <Link
             to="/shop"
             className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-wide text-primary hover:opacity-80"
           >
-            <ArrowLeft size={16} /> Back to Shop
+            <ArrowLeft size={16} /> {t("product.backToShop")}
           </Link>
         </div>
         <Footer />
@@ -153,11 +153,15 @@ const ProductDetail = () => {
 
   const handleAddToCart = async () => {
     if (allSoldOut) {
-      toast.error("Sold out");
+      toast.error(t("product.soldOutShort"));
       return;
     }
     if (!activeVariant) {
-      toast.error(missingOption ? `Please select ${missingOption.toLowerCase()}` : "Please select options");
+      toast.error(
+        missingOption
+          ? t("product.pleaseSelect", { name: missingOption.toLowerCase() })
+          : t("product.pleaseSelectOptions")
+      );
       return;
     }
     const ok = await addItem({
@@ -176,16 +180,16 @@ const ProductDetail = () => {
       selectedOptions: activeVariant.selectedOptions,
     });
     if (!ok) {
-      toast.error("Couldn't add to cart", {
-        description: "That variant may be out of stock. Please try again.",
+      toast.error(t("product.addError"), {
+        description: t("product.addErrorBody"),
         position: "top-center",
       });
       return;
     }
-    toast.success(`${product.title} added to cart`, {
+    toast.success(t("product.addedToCart", { title: product.title }), {
       description: needsSelection
-        ? `${activeVariant.title} · Qty: ${quantity}`
-        : `Qty: ${quantity}`,
+        ? t("product.addedVariantQty", { variant: activeVariant.title, qty: quantity })
+        : t("product.addedQty", { qty: quantity }),
       position: "top-center",
     });
   };
