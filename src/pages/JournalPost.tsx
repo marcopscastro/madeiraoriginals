@@ -10,7 +10,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const JournalPost = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isPt = i18n.language.startsWith("pt");
   const { slug } = useParams<{ slug: string }>();
 
   const { data: article, isLoading } = useQuery({
