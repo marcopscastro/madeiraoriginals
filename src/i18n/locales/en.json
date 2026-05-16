@@ -218,5 +218,51 @@
     "backToJournal": "← Back to Journal",
     "breadcrumb": "Journal",
     "ctaShop": "Shop the Collection"
+  },
+  "pageSeo": {
+    "home": {
+      "title": "Madeira Streetwear & Custom Apparel",
+      "description": "Madeira Originals — premium Madeira streetwear, t-shirts and custom apparel born in São Vicente. Inspired by Madeira, designed for everywhere. 0% tourist trap."
+    },
+    "shop": {
+      "title": "Shop Madeira T-Shirts, Hoodies & Streetwear",
+      "description": "Shop premium Madeira t-shirts, hoodies, accessories and streetwear by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
+    },
+    "about": {
+      "title": "About Madeira Originals — Streetwear from Madeira",
+      "description": "Madeira Originals is a premium Madeira streetwear and custom apparel brand from São Vicente — inspired by island heritage, culture and modern design."
+    },
+    "contact": {
+      "title": "Contact Madeira Originals — São Vicente, Madeira",
+      "description": "Get in touch with Madeira Originals — premium Madeira streetwear and custom apparel production based in São Vicente, Madeira, Portugal."
+    },
+    "culture": {
+      "title": "Madeira Culture — Identity, Landscape & Atlantic Heritage",
+      "description": "A guide to Madeira culture: volcanic landscapes, Atlantic identity, traditions, food, drink and the modern Madeira lifestyle that inspires our designs."
+    },
+    "journal": {
+      "title": "Madeira Originals Journal — Culture, Streetwear & Design",
+      "description": "Stories about Madeira culture, modern streetwear, island identity, custom apparel production and the design philosophy behind Madeira Originals."
+    },
+    "productionStudio": {
+      "title": "Studio — Custom Apparel, DTF & HORECA Branding in Madeira",
+      "description": "Madeira Originals Studio: custom apparel, DTF printing, UV DTF stickers, digital branding and physical signage for HORECA and businesses across Madeira."
+    },
+    "portugalStreetwear": {
+      "title": "Portugal Streetwear — Madeira Originals",
+      "description": "A Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — Portugal streetwear made on the island, shipped worldwide."
+    },
+    "madeiraSouvenirs": {
+      "title": "Madeira Souvenirs Guide — Real Gifts From Madeira",
+      "description": "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran streetwear brand in São Vicente. Worldwide shipping."
+    },
+    "auth": {
+      "title": "Sign in — Madeira Originals",
+      "description": "Sign in to your Madeira Originals account to manage orders, the journal and quote requests."
+    },
+    "wholesale": {
+      "title": "Wholesale — Madeira Originals Distribution Portal",
+      "description": "Wholesale distribution for Madeira Originals: premium Corner Line, white-label apparel and UV DTF production for retailers and distributors. Passcode-protected."
+    }
   }
 }

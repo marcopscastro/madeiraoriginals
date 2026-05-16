@@ -218,5 +218,51 @@
     "backToJournal": "← Voltar ao Diário",
     "breadcrumb": "Diário",
     "ctaShop": "Ver a Colecção"
+  },
+  "pageSeo": {
+    "home": {
+      "title": "Streetwear da Madeira & Vestuário Personalizado",
+      "description": "Madeira Originals — streetwear premium da Madeira, t-shirts e vestuário personalizado nascidos em São Vicente. Inspirada na Madeira, desenhada para o mundo. 0% tourist trap."
+    },
+    "shop": {
+      "title": "Loja — T-Shirts, Hoodies e Streetwear da Madeira",
+      "description": "Compra t-shirts, hoodies, acessórios e streetwear premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
+    },
+    "about": {
+      "title": "Sobre a Madeira Originals — Streetwear da Madeira",
+      "description": "A Madeira Originals é uma marca premium de streetwear e vestuário personalizado de São Vicente, inspirada na herança, cultura e design moderno da ilha."
+    },
+    "contact": {
+      "title": "Contacto — Madeira Originals, São Vicente",
+      "description": "Fala connosco. Madeira Originals — streetwear premium e produção de vestuário personalizado com sede em São Vicente, Madeira, Portugal."
+    },
+    "culture": {
+      "title": "Cultura Madeirense — Identidade, Paisagem e Herança Atlântica",
+      "description": "Um guia da cultura madeirense: paisagens vulcânicas, identidade atlântica, tradições, gastronomia e o estilo de vida moderno que inspira os nossos desenhos."
+    },
+    "journal": {
+      "title": "Diário Madeira Originals — Cultura, Streetwear e Design",
+      "description": "Histórias sobre a cultura madeirense, streetwear moderno, identidade da ilha, produção de vestuário e a filosofia de design da Madeira Originals."
+    },
+    "productionStudio": {
+      "title": "Studio — Vestuário Personalizado, DTF e Branding HORECA na Madeira",
+      "description": "Madeira Originals Studio: vestuário personalizado, impressão DTF, autocolantes UV DTF, branding digital e sinalética física para HORECA e empresas na Madeira."
+    },
+    "portugalStreetwear": {
+      "title": "Streetwear Português — Madeira Originals",
+      "description": "Uma marca portuguesa de streetwear nascida na Madeira. T-shirts, sacos e bonés premium desenhados em São Vicente — feito na ilha, enviado para todo o mundo."
+    },
+    "madeiraSouvenirs": {
+      "title": "Guia de Souvenirs da Madeira — Presentes Verdadeiros",
+      "description": "Um guia curado dos melhores souvenirs da Madeira e presentes do Funchal — peças premium de uma marca de streetwear madeirense em São Vicente. Envio mundial."
+    },
+    "auth": {
+      "title": "Entrar — Madeira Originals",
+      "description": "Entra na tua conta Madeira Originals para gerir encomendas, o diário e pedidos de orçamento."
+    },
+    "wholesale": {
+      "title": "Distribuição — Portal Wholesale Madeira Originals",
+      "description": "Distribuição wholesale Madeira Originals: Corner Line premium, vestuário white-label e produção UV DTF para retalhistas e distribuidores. Acesso por código."
+    }
   }
 }
