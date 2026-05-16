@@ -51,7 +51,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
     title: "Madeira Streetwear & Custom Apparel",
     description:
-      "Madeira Originals — premium Madeira streetwear, t-shirts and custom apparel born in São Vicente. Inspired by Madeira, designed for everywhere. 0% tourist trap.",
+      "Premium Madeira streetwear, t-shirts and custom apparel born in São Vicente. Inspired by Madeira, designed for everywhere. 0% tourist trap.",
     path: "/",
     eyebrow: "Madeira Originals",
     h1: "Premium Madeira Streetwear",
@@ -121,7 +121,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
     title: "Production Studio — DTF Printing & Custom Apparel Madeira",
     description:
       "Madeira Originals Production Studio: custom apparel printing, DTF gang sheets, UV DTF stickers, business merch and rally team graphics — based in Madeira.",
-    path: "/production-studio",
+    path: "/studio",
     eyebrow: "Production Studio",
     h1: "Custom Apparel & DTF Printing in Madeira",
     intro:
@@ -130,7 +130,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   portugalStreetwear: {
     title: "Portugal Streetwear — Madeira Originals",
     description:
-      "A Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — Portugal streetwear made on the island, shipped worldwide.",
+      "Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — shipped worldwide.",
     path: "/portugal-streetwear",
     eyebrow: "Portugal Streetwear",
     h1: "Portuguese Streetwear from Madeira",
@@ -148,7 +148,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   madeiraSouvenirs: {
     title: "Madeira Souvenirs Guide — Real Gifts From Madeira",
     description:
-      "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran streetwear brand in São Vicente. Worldwide shipping.",
+      "Curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a São Vicente streetwear brand.",
     path: "/madeira-souvenirs",
     eyebrow: "Madeira Souvenirs Guide",
     h1: "The Madeira Souvenirs Guide",
