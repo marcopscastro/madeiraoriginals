@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
+import { productAlt } from "@/lib/productAlt";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
