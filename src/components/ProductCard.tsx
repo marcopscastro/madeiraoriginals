@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { formatPrice, ShopifyProduct } from "@/lib/shopify";
 import { useProductRating } from "@/components/ProductReviews";
 
 const ProductCard = ({ product }: { product: ShopifyProduct }) => {
+  const { t } = useTranslation();
   const node = product.node;
   const image = node.images.edges[0]?.node;
   const hoverImage = node.images.edges[1]?.node;
@@ -33,7 +35,7 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
           </>
         ) : (
           <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
-            Coming Soon
+            {t("common.comingSoon")}
           </div>
         )}
       </div>

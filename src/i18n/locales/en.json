@@ -264,5 +264,259 @@
       "title": "Wholesale — Madeira Originals Distribution Portal",
       "description": "Wholesale distribution for Madeira Originals: premium Corner Line, white-label apparel and UV DTF production for retailers and distributors. Passcode-protected."
     }
+  },
+  "common": {
+    "loading": "Loading…",
+    "comingSoon": "Coming Soon",
+    "shopAll": "Shop All",
+    "readMore": "Read more",
+    "viewAll": "View all"
+  },
+  "valueBanner": {
+    "designed": "Designed in Madeira",
+    "cotton": "Premium Heavyweight Cotton",
+    "noTrap": "0% Tourist Trap"
+  },
+  "manifesto": {
+    "overline": "Brand Manifesto",
+    "headingA": "Not souvenirs. Not clichés.",
+    "headingB": "Madeira, properly translated.",
+    "body": "Madeira Originals was created in São Vicente to bring authentic Madeiran identity into modern streetwear and custom apparel. We take the island's landscapes, humour, traditions, coordinates, textures, and cultural details — then translate them into clean, wearable, premium designs.",
+    "pillars": [
+      { "title": "Island Heritage", "body": "Rooted in Madeira's culture, nature, language, humour, and local identity." },
+      { "title": "Modern Streetwear", "body": "Clean typography, heavyweight apparel, minimalist graphics, premium layouts." },
+      { "title": "Production Quality", "body": "Built through our own technical print studio: high-resolution DTF, UV DTF, and custom apparel." }
+    ],
+    "imageAlt": "Madeiran teenager wearing the Madeira Originals 'Madeira Über' tee on a Funchal calçada street"
+  },
+  "bestsellers": {
+    "overline": "Latest Drops",
+    "headingA": "Madeira-inspired apparel,",
+    "headingB": "made to wear anywhere.",
+    "empty": "No products yet — drops coming soon."
+  },
+  "noTouristTrap": {
+    "overline": "Our Standard",
+    "headingMain": "0%",
+    "headingItalic": "Tourist Trap.",
+    "body": "We love Madeira too much to reduce it to clichés. Madeira Originals is for people who want something more considered: modern design, local meaning, premium execution, and real cultural reference."
+  },
+  "designDirections": {
+    "overline": "Collection Directions",
+    "headingA": "Madeira,",
+    "headingB": "reworked.",
+    "items": [
+      { "title": "Contemporary Heritage", "body": "Traditional details, azulejo references, coordinates, and island symbols redesigned for modern apparel." },
+      { "title": "Elevated Local Humour", "body": "Poncha, bolo do caco, expressions, and inside jokes treated with the seriousness of a premium label." },
+      { "title": "Topographic & Nature", "body": "Mountain lines, levadas, coastlines, and volcanic textures translated into clean graphics." },
+      { "title": "Technical / Performance", "body": "Data-driven layouts, spec sheets, sponsor systems, and rally-inspired graphics." }
+    ]
+  },
+  "diaspora": {
+    "overline": "Local by origin. Global by attitude.",
+    "headingA": "Born in São Vicente.",
+    "headingB": "Built for everywhere.",
+    "body": "Made for Madeira, for the diaspora, and for anyone who carries a piece of the island — whether they are in Funchal, Lisbon, London, Jersey, Luxembourg, or anywhere else.",
+    "imageAlt": "Atlantic cliffs of São Vicente on the north coast of Madeira"
+  },
+  "homeNewsletter": {
+    "overline": "Newsletter",
+    "headingA": "Modern Madeira,",
+    "headingB": "in your inbox.",
+    "body": "Early access to drops, journal pieces, and the occasional postcard from the island."
+  },
+  "aboutUs": {
+    "overline": "About",
+    "headingA": "A Nossa Ilha.",
+    "headingB": "A Nossa Marca.",
+    "bodyPre": "Madeira Originals is a premium streetwear brand born in São Vicente, Madeira. Operating under the philosophy ",
+    "bodyEm": "Inspired by Madeira. Designed for everywhere",
+    "bodyPost": ", we bridge deep island heritage with contemporary design.",
+    "cta": "Read the Brand Story"
+  },
+  "cultureTeaser": {
+    "overline": "Madeira Culture",
+    "headingA": "More than clothing —",
+    "headingB": "a Madeira lifestyle.",
+    "body": "Madeira is a volcanic island in the Atlantic with a culture all of its own — dramatic landscapes, a maritime identity, traditions that still live in everyday life, and a diaspora across three continents. Every Madeira Originals piece pulls from that.",
+    "cta": "Read About Madeira"
+  },
+  "giftPositioning": {
+    "overline": "Gifts & Souvenirs",
+    "heading": "Authentic Madeira inspired gifts & apparel.",
+    "body": "Skip the magnets. Bring home — or send abroad — pieces that actually carry the island's identity. Premium materials, modern design, rooted in Madeira."
+  },
+  "collectionsGrid": {
+    "heading": "Featured Collections",
+    "items": [
+      { "label": "T-Shirts", "desc": "Heavyweight tees with island-rooted graphics" },
+      { "label": "Hoodies", "desc": "Atlantic weight, everyday cuts" },
+      { "label": "Accessories", "desc": "Totes, caps, island essentials" },
+      { "label": "Stickers", "desc": "Vinyl stickers from the island" }
+    ]
+  },
+  "productionStudioPreview": {
+    "overline": "Production Studio",
+    "headingA": "Custom apparel.",
+    "headingB": "Built in Madeira.",
+    "body": "Custom apparel, DTF gang sheets, UV DTF stickers, and technical print solutions for brands, businesses, restaurants, teams, and creators.",
+    "services": [
+      { "label": "Custom Apparel Printing", "anchor": "custom-apparel" },
+      { "label": "DTF Gang Sheets", "anchor": "dtf" },
+      { "label": "UV DTF Stickers", "anchor": "uv-dtf" },
+      { "label": "Business Merchandise", "anchor": "business-merch" },
+      { "label": "Rally & Performance Teams", "anchor": "rally" }
+    ],
+    "ctaView": "View Production Services",
+    "ctaQuote": "Request a Quote",
+    "imageAlt": "Custom apparel printing studio with DTF gang sheet and rack of garments by Madeira Originals"
+  },
+  "relatedProducts": {
+    "heading": "You May Also Like"
+  },
+  "aboutPage": {
+    "overline": "About Madeira Originals",
+    "headingA": "A Nossa Ilha.",
+    "headingB": "A Nossa Marca.",
+    "lead": "Premium streetwear and custom apparel born in São Vicente, Madeira.",
+    "heroAlt": "Heavyweight cream and navy folded t-shirts beside bougainvillea by Madeira Originals",
+    "saoVicenteAlt": "Atlantic cliffs of São Vicente, Madeira",
+    "sections": [
+      { "h": "Who we are", "p": "Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Operating under the philosophy Inspired by Madeira. Designed for everywhere, we bridge deep island heritage with contemporary global fashion." },
+      { "h": "Why we exist", "p": "We created Madeira Originals because Madeira deserves better than generic souvenirs. Our island has its own humour, texture, landscapes, language, traditions, diaspora, and visual identity. We translate that into modern apparel and production-quality design." },
+      { "h": "0% Tourist Trap", "p": "Our standard is simple: no clichés, no lazy graphics, no throwaway tourist products. Every design must feel authentic to Madeira and wearable anywhere." },
+      { "h": "Retail Apparel", "p": "Original collections inspired by Madeira's nature, culture, and everyday identity — heavyweight cotton, premium finishes, editorial graphics." },
+      { "h": "Born in São Vicente", "p": "Madeira Originals started in São Vicente, on the north coast of Madeira — a place shaped by mountains, sea, weather, tradition, and working culture." },
+      { "h": "Designed for everywhere", "p": "Our clothing should feel as natural in Funchal as it does in Lisbon, London, Jersey, or anywhere the Madeiran diaspora lives." }
+    ],
+    "newsletterHeading": "Stay close to the island.",
+    "newsletterBody": "First access to new drops, production updates, and stories from Madeira."
+  },
+  "contactPage": {
+    "overline": "Contact",
+    "heading": "Let's talk.",
+    "lead": "Whether you're after a piece from the collection or a collaboration — we're based in São Vicente, Madeira and reachable anywhere.",
+    "generalLabel": "General",
+    "generalNote": "Orders, returns, press, collaborations.",
+    "studioLabel": "Studio",
+    "studioAddress": "São Vicente, Madeira, Portugal"
+  },
+  "culturePage": {
+    "overline": "Madeira Culture",
+    "headingA": "The island,",
+    "headingB": "in its own words.",
+    "heroAlt": "Madeira Island volcanic coastline at golden hour",
+    "lead": "Madeira is one of the most distinctive places in the Atlantic — volcanic, maritime, deeply Portuguese, and yet entirely its own. This is the culture that inspires every Madeira Originals design.",
+    "cards": [
+      { "tag": "Landscape", "title": "Levadas", "body": "Centuries-old irrigation channels carved into the cliffs. Today they double as the island's most loved hiking network — a slow walk through laurisilva forest with the sound of running water." },
+      { "tag": "Drink", "title": "Poncha", "body": "Aguardente de cana, honey, and citrus, mixed in a glass with a wooden mexelote. Order one in any village bar and you've ordered the island's whole social ritual." },
+      { "tag": "Craft", "title": "Bordado da Madeira", "body": "A centuries-old embroidery tradition, still produced on the island. The motifs — flora, geometry, restrained palettes — quietly inform a lot of what we design." }
+    ],
+    "readJournal": "Read the Journal →",
+    "longform": [
+      { "h": "A volcanic island in the middle of the Atlantic", "p": ["Madeira sits roughly 1,000 km from mainland Portugal and 500 km from the African coast. The island rose from underwater volcanoes and the landscape still shows it — sheer cliffs, cloud-covered peaks, terraced hillsides cut into the slopes, and deep ravines that channel water from the mountains down to the sea.", "That geography shapes everything. How Madeirans farm. How they build. How they eat. How they move around an island where the next valley over can be an hour's drive straight down and back up again."] },
+      { "h": "An Atlantic — not Mediterranean — identity", "p": ["Madeira's culture is fundamentally Atlantic. The food is heavier on the sea than on the olive grove. The light is sharper. The weather changes within the same hour. Madeira shares more in common, in some ways, with the Azores and the Canaries than with Lisbon — and yet remains unmistakably Portuguese."] }
+    ],
+    "traditionsHeading": "Traditions that still live in everyday life",
+    "traditions": [
+      { "label": "Mercado dos Lavradores", "body": "Funchal's working market, where flowers, fruit, and Atlantic fish still arrive daily." },
+      { "label": "The Madeira toboggan", "body": "the wicker sleds from Monte that locals still half-jokingly call the original Madeira \"Uber\"." },
+      { "label": "Poncha", "body": "the island's traditional drink: aguardente de cana, honey, and citrus, mixed in a glass and shared." },
+      { "label": "Festa da Flor & Festa do Vinho", "body": "the flower and wine festivals that still mark the island's calendar." },
+      { "label": "Bordado da Madeira", "body": "Madeira embroidery, a centuries-old craft still produced on the island." }
+    ],
+    "diasporaHeading": "A diaspora across three continents",
+    "diasporaBody": "Madeirans have emigrated for generations — South Africa, Venezuela, the Channel Islands, Canada, Australia, the US, the UK. The diaspora keeps Madeira culture alive far beyond the island, and is increasingly driving demand for modern Madeiran products that feel rooted but not nostalgic.",
+    "inspireHeading": "Why Madeira inspires our designs",
+    "inspireBody1": "Madeira gives a designer an unusually rich vocabulary: the green-black of volcanic rock, the colour palette of the market, the geometry of terraced agriculture, the typography of old Funchal signage, the patterns of traditional embroidery. It is a small island with an outsized visual identity.",
+    "inspireBody2": "Madeira Originals was built around that. Modern apparel, lifestyle products and accessories — premium materials, contemporary cuts, references that mean something to anyone who knows the island and quietly invite the question from anyone who does not.",
+    "shopLink": "Shop the collection →"
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Oops! Page not found",
+    "home": "Return to Home"
+  },
+  "souvenirs": {
+    "hero": {
+      "overline": "The Madeira Souvenirs Guide",
+      "headingA": "Real Madeira souvenirs.",
+      "headingB": "0% tourist trap.",
+      "body": "A curated guide to the best souvenirs from Madeira and Funchal — gift-ready picks from a Madeiran streetwear brand based in São Vicente. No magnets. No rooster figurines. Worldwide shipping.",
+      "ctaShop": "Shop Gifts From Madeira",
+      "ctaRead": "Read the Long Guide"
+    },
+    "picksOverline": "Curated Picks",
+    "picksHeading": "Gift-ready Madeira souvenirs by who they're for.",
+    "picks": [
+      { "eyebrow": "For the souvenir-hater", "title": "A Madeira T-Shirt that isn't a tourist tee.", "body": "Heavyweight cotton, island-rooted graphics — coordinates, levadas, Madeiran humour. Worn properly, not folded into a suitcase as an afterthought.", "cta": "Shop Madeira T-Shirts" },
+      { "eyebrow": "For the diaspora", "title": "An Atlantic-weight Madeira hoodie.", "body": "Thicker than a holiday memory. The piece you actually keep — built for Madeira's microclimates and every diaspora winter.", "cta": "Shop Madeira Hoodies" },
+      { "eyebrow": "For the everyday", "title": "Caps, totes & quiet island accessories.", "body": "Editorial branding. No flag prints, no rooster mascots — just well-made pieces with Madeira embedded in the details.", "cta": "Shop Accessories" },
+      { "eyebrow": "For under €15", "title": "Madeira stickers — small, durable, real.", "body": "Die-cut UV DTF stickers built to outlast the airport magnets. Coordinates, micro-icons, real Madeira culture.", "cta": "Shop Stickers" }
+    ],
+    "guideOverline": "Buying Guide",
+    "guideHeading": "What to buy in Madeira (and what to skip).",
+    "guide": [
+      { "title": "Skip the airport.", "body": "Funchal airport souvenirs are designed for the 20-minute browse before boarding — not for keeping. Pieces made on the island, by people from the island, hold up better." },
+      { "title": "Look for the demonym.", "body": "‘Madeira’ on a magnet is geography. ‘Madeiran’ in the design — language, references, place names — is culture. The second one ages well." },
+      { "title": "Choose pieces you'd wear at home.", "body": "The best Madeira souvenir is one you'd buy if you weren't on holiday. Premium tees, hoodies, caps, totes — same standard as your everyday wardrobe." },
+      { "title": "Buy direct, ship anywhere.", "body": "You don't need to fit it in your suitcase. We ship Madeira gifts worldwide from the island — to mainland Portugal, the EU, the UK, the US and beyond." }
+    ],
+    "stockOverline": "In Stock",
+    "stockHeading": "Madeira gifts shipping today.",
+    "stockBody": "From São Vicente, Madeira to anywhere in the world.",
+    "viewAll": "View all gifts →",
+    "emptyHeading": "No gifts in stock yet.",
+    "emptyBody": "New drops land regularly. Browse the full shop in the meantime.",
+    "faqOverline": "FAQ",
+    "faqHeading": "Madeira souvenirs — questions, answered.",
+    "faqs": [
+      { "q": "What are the best souvenirs from Madeira?", "a": "The best souvenirs from Madeira are pieces actually made on the island — premium streetwear (Madeira t-shirts, hoodies, caps), poncha and Madeira wine from local producers, embroidery from established Funchal ateliers, and bolo do caco from a real bakery. Skip the airport magnets and rooster figurines." },
+      { "q": "What to buy in Madeira (and what to skip)?", "a": "Buy: Madeiran streetwear and accessories from local brands, Madeira wine from a producer cellar (Blandy's, D'Oliveiras), poncha from a São Vicente or Câmara de Lobos bar, and embroidery from a credentialed atelier. Skip: anything sold in three different airport shops at three different prices, plastic figurines of folkloric dancers, and 'I love Madeira' t-shirts." },
+      { "q": "What are good Funchal souvenirs?", "a": "In Funchal specifically, look for: streetwear from Madeiran brands (skip the harbour-front tourist shops), Madeira wine from a tasting cellar in São Pedro or Avenida Arriaga, embroidery from Bordal or Patrício & Gouveia on Rua dos Ferreiros, and poncha kits from a proper grocer. Funchal souvenirs done right are island-made, not import-and-print." },
+      { "q": "Can I order Madeira souvenirs online from outside Portugal?", "a": "Yes. Madeira Originals ships premium Madeira gifts and apparel worldwide — to mainland Portugal, the EU, UK, US and the diaspora. You don't need to be on the island, or to fit anything in a suitcase, to buy properly." },
+      { "q": "What is a typical Madeira gift?", "a": "Typical Madeira gifts include Madeira wine, poncha, embroidery (Bordado da Madeira), wickerwork from Camacha, and more recently, modern Madeiran streetwear and accessories. The new wave of Madeira gifts skips the souvenir-shop clichés in favour of pieces locals would actually wear or use." }
+    ],
+    "closingA": "Madeira souvenirs,",
+    "closingB": "made on the island.",
+    "closingBody": "Designed in São Vicente, Madeira. Shipped worldwide.",
+    "closingCtaGifts": "Shop Madeira Gifts",
+    "closingCtaStickers": "Under €15: Stickers"
+  },
+  "pwear": {
+    "hero": {
+      "overline": "Portugal Streetwear · Made in Madeira",
+      "headingA": "A Portuguese streetwear brand",
+      "headingB": "from an island, not a capital.",
+      "body": "Madeira Originals is a premium Portuguese streetwear brand born in São Vicente, Madeira. Heavyweight tees, technical headwear, everyday carry — designed in PT, shipped worldwide.",
+      "ctaShop": "Shop Streetwear",
+      "ctaAbout": "About the Brand"
+    },
+    "lanesOverline": "The Line",
+    "lanesHeading": "Tees, bags, headwear.",
+    "lanesSub": "A focused Portuguese streetwear line. No filler.",
+    "lanes": [
+      { "eyebrow": "T-Shirts", "title": "Tees", "body": "Heavyweight cotton tees with island-rooted graphics — coordinates, levadas, laurissilva, Madeiran humour." },
+      { "eyebrow": "Bags & Totes", "title": "Bags", "body": "Totes and carry pieces. Quiet branding, built to wear in." },
+      { "eyebrow": "Headwear", "title": "Caps & Beanies", "body": "Caps and beanies in Atlantic-weight materials. Modern silhouettes, island detailing." }
+    ],
+    "shopLane": "Shop {{title}} →",
+    "beliefsOverline": "Positioning",
+    "beliefsHeading": "What \u201CPortuguese streetwear\u201D means to us.",
+    "beliefs": [
+      { "title": "Portuguese, but specifically Madeiran.", "body": "Most ‘Portugal’ streetwear is Lisbon or Porto by default. We design from São Vicente, on Madeira's north coast — Atlantic, volcanic, off-continental. That's the lens." },
+      { "title": "0% tourist trap.", "body": "No flag prints, no rooster mascots, no airport-shop clichés. Our graphics come from the actual island — coordinates, microclimates, language, ritual." },
+      { "title": "Designed in PT, made for everywhere.", "body": "Pieces are designed in Madeira and shipped worldwide. Built for the diaspora, for visitors who saw the real island, and for anyone who wants Portuguese streetwear that means something." }
+    ],
+    "stockOverline": "In Stock",
+    "stockHeading": "Currently shipping from Madeira.",
+    "viewAll": "View all streetwear →",
+    "emptyHeading": "No streetwear in stock yet.",
+    "emptyBody": "New drops land regularly — check back, or browse the full shop.",
+    "closingA": "Portuguese streetwear,",
+    "closingB": "made on the island.",
+    "closingBody": "Designed in São Vicente, Madeira. Shipped to mainland Portugal, the EU, the UK, the US and the diaspora worldwide.",
+    "closingCtaTees": "Shop Tees",
+    "closingCtaBags": "Shop Bags & Caps"
   }
 }
