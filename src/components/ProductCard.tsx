@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { formatPrice, ShopifyProduct } from "@/lib/shopify";
+import { productAlt } from "@/lib/productAlt";
 import { useProductRating } from "@/components/ProductReviews";
 
 const ProductCard = ({ product }: { product: ShopifyProduct }) => {
