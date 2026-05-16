@@ -11,24 +11,34 @@ import { useAuth } from "@/hooks/useAuth";
 type Form = {
   slug: string;
   title: string;
+  title_pt: string;
   excerpt: string;
+  excerpt_pt: string;
   body_md: string;
+  body_md_pt: string;
   cover_url: string;
   tags: string;
   seo_title: string;
+  seo_title_pt: string;
   seo_description: string;
+  seo_description_pt: string;
   published: boolean;
 };
 
 const empty: Form = {
   slug: "",
   title: "",
+  title_pt: "",
   excerpt: "",
+  excerpt_pt: "",
   body_md: "",
+  body_md_pt: "",
   cover_url: "",
   tags: "",
   seo_title: "",
+  seo_title_pt: "",
   seo_description: "",
+  seo_description_pt: "",
   published: false,
 };
 
