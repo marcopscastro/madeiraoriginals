@@ -30,12 +30,7 @@
     "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "overline": "Nascida em São Vicente, Madeira",
-    "headline1": "Inspirada na Madeira.",
-    "headline2": "Desenhada para o mundo.",
-    "body": "Streetwear premium e vestuário personalizado nascido em São Vicente, Madeira — construído sobre herança da ilha, design moderno e uma filosofia estrita de 0% Tourist Trap.",
-    "ctaShop": "Ver a Coleção",
-    "ctaStory": "A Nossa História"
+    "imageAlt": "Streetwear premium da Madeira pela Madeira Originals com a costa da Ilha da Madeira"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -142,7 +137,8 @@
     },
     "tableQty": "Qtd",
     "tablePrice": "Preço",
-    "tierLabel": "Escalão {{n}}"
+    "tierLabel": "Escalão {{n}}",
+    "seoTitle": "Distribuição · Madeira Originals"
   },
   "shop": {
     "overline": "Colecção",
@@ -275,11 +271,7 @@
     }
   },
   "common": {
-    "loading": "A carregar…",
-    "comingSoon": "Em Breve",
-    "shopAll": "Ver Tudo",
-    "readMore": "Ler mais",
-    "viewAll": "Ver tudo"
+    "sendFailed": "Não foi possível enviar. Escreve para studio@madeiraoriginals.pt."
   },
   "valueBanner": {
     "designed": "Desenhado na Madeira",
@@ -730,5 +722,68 @@
     "emptyCta": "Ver tudo",
     "faq": "FAQ",
     "faqHeadingSuffix": "— Perguntas, respondidas"
+  },
+  "auth": {
+    "titleLogin": "Entrar.",
+    "titleSignup": "Criar conta.",
+    "subtitle": "Avaliações, ferramentas de administração e acesso antecipado a lançamentos.",
+    "google": "Continuar com Google",
+    "or": "ou",
+    "email": "Email",
+    "password": "Palavra-passe",
+    "signIn": "Entrar",
+    "createAccount": "Criar conta",
+    "loading": "…",
+    "newHere": "Novo por aqui?",
+    "haveAccount": "Já tens conta?",
+    "backToSite": "← Voltar ao site",
+    "checkEmail": "Verifica o teu email para confirmar a conta.",
+    "googleError": "Não foi possível entrar com Google.",
+    "invalidEmail": "Introduz um email válido",
+    "shortPassword": "Usa pelo menos 8 caracteres"
+  },
+  "newsletter": {
+    "placeholder": "Introduz o teu email…",
+    "ariaEmail": "Endereço de email",
+    "joining": "A enviar…",
+    "join": "Juntar",
+    "subscribe": "Subscrever",
+    "done": "Estás dentro. Primeiro a saber dos lançamentos.",
+    "doneToast": "Estás na lista. Bem-vindo à Madeira Originals.",
+    "error": "Algo correu mal. Tenta novamente."
+  },
+  "search": {
+    "placeholder": "Procurar produtos...",
+    "empty": "Nenhum produto encontrado",
+    "soon": "Em breve"
+  },
+  "lightbox": {
+    "viewer": "Visualizador de imagem",
+    "close": "Fechar visualizador",
+    "prev": "Imagem anterior",
+    "next": "Imagem seguinte",
+    "fallbackAlt": "Imagem do produto"
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "reviews": {
+    "heading": "Avaliações",
+    "countOne": "{{count}} avaliação",
+    "countOther": "{{count}} avaliações",
+    "write": "Escrever avaliação",
+    "cancel": "Cancelar",
+    "signInToReview": "Entra para avaliar",
+    "rating": "Classificação",
+    "yourName": "O teu nome",
+    "titleOptional": "Título (opcional)",
+    "review": "Avaliação",
+    "posting": "A publicar…",
+    "post": "Publicar avaliação",
+    "loading": "A carregar…",
+    "empty": "Ainda sem avaliações — sê o primeiro.",
+    "thanks": "Obrigado pela tua avaliação.",
+    "starsAria": "{{n}} estrelas",
+    "bodyMin": "Conta-nos um pouco mais (mín. 10 caracteres)"
   }
 }
