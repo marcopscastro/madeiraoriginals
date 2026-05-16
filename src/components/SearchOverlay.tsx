@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useProducts } from "@/hooks/useShopifyProducts";
@@ -10,6 +11,7 @@ interface SearchOverlayProps {
 }
 
 const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
+  const { t } = useTranslation();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const { data: products = [] } = useProducts(50);
@@ -44,7 +46,7 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search products..."
+            placeholder={t("search.placeholder")}
             className="flex-1 bg-transparent font-heading text-lg uppercase tracking-wide text-foreground placeholder:text-muted-foreground outline-none"
           />
           <button onClick={onClose} className="text-foreground hover:text-primary transition-colors">
@@ -54,7 +56,7 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
 
         <div className="mt-6 space-y-2 max-h-[60vh] overflow-y-auto">
           {query.trim() && filtered.length === 0 && (
-            <p className="text-center text-muted-foreground font-body py-8">No products found</p>
+            <p className="text-center text-muted-foreground font-body py-8">{t("search.empty")}</p>
           )}
           {filtered.map((p) => {
             const image = p.node.images.edges[0]?.node;
@@ -70,7 +72,7 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
                     <img src={image.url} alt={p.node.title} className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
-                      Soon
+                      {t("search.soon")}
                     </div>
                   )}
                 </div>

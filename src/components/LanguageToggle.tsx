@@ -13,7 +13,7 @@ const LanguageToggle = ({ className = "" }: { className?: string }) => {
     <div
       className={`inline-flex items-center border border-foreground/30 font-heading text-[11px] font-bold uppercase tracking-widest ${className}`}
       role="group"
-      aria-label="Language"
+      aria-label={i18n.t("language.label")}
     >
       {SUPPORTED_LANGS.map((l, i) => (
         <button

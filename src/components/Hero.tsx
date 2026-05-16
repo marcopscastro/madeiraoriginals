@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="order-1 md:order-2">
           <img
             src={heroImage}
-            alt="Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline"
+            alt={t("hero.imageAlt")}
             className="w-full h-auto object-cover"
             width={896}
             height={1200}

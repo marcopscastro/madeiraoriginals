@@ -30,12 +30,7 @@
     "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "overline": "Born in São Vicente, Madeira",
-    "headline1": "Inspired by Madeira.",
-    "headline2": "Designed for everywhere.",
-    "body": "Premium streetwear and custom apparel born in São Vicente, Madeira — built from island heritage, modern design, and a strict 0% Tourist Trap philosophy.",
-    "ctaShop": "Shop the Collection",
-    "ctaStory": "Our Story"
+    "imageAlt": "Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -142,7 +137,8 @@
     },
     "tableQty": "Qty",
     "tablePrice": "Price",
-    "tierLabel": "Tier {{n}}"
+    "tierLabel": "Tier {{n}}",
+    "seoTitle": "Wholesale · Madeira Originals"
   },
   "shop": {
     "overline": "Collection",
@@ -275,11 +271,7 @@
     }
   },
   "common": {
-    "loading": "Loading…",
-    "comingSoon": "Coming Soon",
-    "shopAll": "Shop All",
-    "readMore": "Read more",
-    "viewAll": "View all"
+    "sendFailed": "Could not send. Email studio@madeiraoriginals.pt instead."
   },
   "valueBanner": {
     "designed": "Designed in Madeira",
@@ -730,5 +722,68 @@
     "emptyCta": "Browse all",
     "faq": "FAQ",
     "faqHeadingSuffix": "— Questions, Answered"
+  },
+  "auth": {
+    "titleLogin": "Sign in.",
+    "titleSignup": "Create an account.",
+    "subtitle": "Reviews, admin tools, and early access to drops.",
+    "google": "Continue with Google",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "loading": "…",
+    "newHere": "New here?",
+    "haveAccount": "Already have an account?",
+    "backToSite": "← Back to site",
+    "checkEmail": "Check your email to confirm your account.",
+    "googleError": "Could not sign in with Google.",
+    "invalidEmail": "Enter a valid email",
+    "shortPassword": "Use at least 8 characters"
+  },
+  "newsletter": {
+    "placeholder": "Enter your email…",
+    "ariaEmail": "Email address",
+    "joining": "Joining…",
+    "join": "Join",
+    "subscribe": "Subscribe",
+    "done": "You're in. First to know about drops.",
+    "doneToast": "You're on the list. Welcome to Madeira Originals.",
+    "error": "Something went wrong. Try again."
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "empty": "No products found",
+    "soon": "Soon"
+  },
+  "lightbox": {
+    "viewer": "Product image viewer",
+    "close": "Close image viewer",
+    "prev": "Previous image",
+    "next": "Next image",
+    "fallbackAlt": "Product image"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "reviews": {
+    "heading": "Reviews",
+    "countOne": "{{count}} review",
+    "countOther": "{{count}} reviews",
+    "write": "Write a review",
+    "cancel": "Cancel",
+    "signInToReview": "Sign in to review",
+    "rating": "Rating",
+    "yourName": "Your name",
+    "titleOptional": "Title (optional)",
+    "review": "Review",
+    "posting": "Posting…",
+    "post": "Post review",
+    "loading": "Loading…",
+    "empty": "No reviews yet — be the first.",
+    "thanks": "Thanks for your review.",
+    "starsAria": "{{n}} stars",
+    "bodyMin": "Tell us a bit more (min 10 chars)"
   }
 }

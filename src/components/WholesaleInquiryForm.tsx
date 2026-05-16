@@ -64,7 +64,7 @@ const WholesaleInquiryForm = ({ defaultLine }: { defaultLine?: LineKey }) => {
       notes: d.notes || null,
     });
     setSubmitting(false);
-    if (error) return toast.error("Could not send. Email studio@madeiraoriginals.pt instead.");
+    if (error) return toast.error(t("common.sendFailed"));
     setDone(true);
     toast.success(t("wholesale.form.done"));
   };
