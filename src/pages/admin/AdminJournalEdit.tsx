@@ -109,12 +109,17 @@ const AdminJournalEdit = () => {
     const payload = {
       slug,
       title: form.title.trim(),
+      title_pt: form.title_pt.trim() || null,
       excerpt: form.excerpt.trim() || null,
+      excerpt_pt: form.excerpt_pt.trim() || null,
       body_md: form.body_md,
+      body_md_pt: form.body_md_pt.trim() || null,
       cover_url: form.cover_url.trim() || null,
       tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
       seo_title: form.seo_title.trim() || null,
+      seo_title_pt: form.seo_title_pt.trim() || null,
       seo_description: form.seo_description.trim() || null,
+      seo_description_pt: form.seo_description_pt.trim() || null,
       published: form.published,
       published_at: form.published ? new Date().toISOString() : null,
     };
