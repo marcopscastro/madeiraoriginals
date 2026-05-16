@@ -228,7 +228,9 @@
     "notFoundTitle": "Article not found",
     "backToJournal": "← Back to Journal",
     "breadcrumb": "Journal",
-    "ctaShop": "Shop the Collection"
+    "ctaShop": "Shop the Collection",
+    "previewHeading": "Stories from the island.",
+    "viewAll": "View all →"
   },
   "pageSeo": {
     "home": {
