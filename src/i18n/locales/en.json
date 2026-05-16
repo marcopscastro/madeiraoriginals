@@ -30,7 +30,13 @@
     "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "imageAlt": "Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline"
+    "imageAlt": "Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline",
+    "overline": "New Drop — Designed in São Vicente",
+    "headline1": "Inspired by Madeira.",
+    "headline2": "Designed for everywhere.",
+    "body": "Premium streetwear born on the island. Editorial cuts, durable prints, zero souvenir-shop energy.",
+    "ctaShop": "Shop the drop",
+    "ctaStory": "Read our story"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -271,7 +277,11 @@
     }
   },
   "common": {
-    "sendFailed": "Could not send. Email studio@madeiraoriginals.pt instead."
+    "sendFailed": "Could not send. Email studio@madeiraoriginals.pt instead.",
+    "loading": "Loading…",
+    "shopAll": "Shop all",
+    "comingSoon": "Coming soon",
+    "admin": "Admin"
   },
   "valueBanner": {
     "designed": "Designed in Madeira",

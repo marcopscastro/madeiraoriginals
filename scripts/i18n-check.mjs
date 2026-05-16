@@ -120,30 +120,32 @@ for (const file of files) {
     if (!PT.has(key)) push(file, lineNo, `missing PT key: "${key}"`);
   }
 
-  // 2) Hardcoded JSX text nodes & attributes
-  lines.forEach((line, i) => {
-    if (line.includes("i18n-ignore")) return;
-    const lineNo = i + 1;
+  // 2) Hardcoded JSX text nodes & attributes (only .tsx/.jsx — .ts has no JSX)
+  if (/\.(tsx|jsx)$/.test(file)) {
+    lines.forEach((line, i) => {
+      if (line.includes("i18n-ignore")) return;
+      const lineNo = i + 1;
 
-    let jm;
-    JSX_TEXT.lastIndex = 0;
-    while ((jm = JSX_TEXT.exec(line))) {
-      const text = jm[1].trim();
-      if (isAllowed(text)) continue;
-      if (!looksLikeSentence(text)) continue;
-      push(file, lineNo, `hardcoded JSX text: "${text}"`);
-    }
+      let jm;
+      JSX_TEXT.lastIndex = 0;
+      while ((jm = JSX_TEXT.exec(line))) {
+        const text = jm[1].trim();
+        if (isAllowed(text)) continue;
+        if (!looksLikeSentence(text)) continue;
+        push(file, lineNo, `hardcoded JSX text: "${text}"`);
+      }
 
-    let am;
-    ATTR.lastIndex = 0;
-    while ((am = ATTR.exec(line))) {
-      const [, attr, val] = am;
-      if (isAllowed(val)) continue;
-      if (!/^[A-Z]/.test(val.trim())) continue;
-      if (!looksLikeSentence(val)) continue;
-      push(file, lineNo, `hardcoded ${attr}: "${val}"`);
-    }
-  });
+      let am;
+      ATTR.lastIndex = 0;
+      while ((am = ATTR.exec(line))) {
+        const [, attr, val] = am;
+        if (isAllowed(val)) continue;
+        if (!/^[A-Z]/.test(val.trim())) continue;
+        if (!looksLikeSentence(val)) continue;
+        push(file, lineNo, `hardcoded ${attr}: "${val}"`);
+      }
+    });
+  }
 }
 
 // --------------------------------------------------------------------------

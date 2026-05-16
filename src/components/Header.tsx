@@ -144,7 +144,7 @@ const Header = () => {
               {user && (
                 <span className="inline-flex items-center gap-1.5 font-body text-xs text-foreground">
                   <User size={14} />
-                  {isAdmin && <span className="ml-1 inline-flex items-center rounded-none border border-primary bg-primary/10 px-1.5 py-0.5 font-heading text-[10px] font-semibold uppercase tracking-wide text-primary">Admin</span>}
+                  {isAdmin && <span className="ml-1 inline-flex items-center rounded-none border border-primary bg-primary/10 px-1.5 py-0.5 font-heading text-[10px] font-semibold uppercase tracking-wide text-primary">{t("common.admin")}</span>}
                 </span>
               )}
             </div>
