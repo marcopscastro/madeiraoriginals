@@ -17,47 +17,62 @@ export type Database = {
       articles: {
         Row: {
           body_md: string
+          body_md_pt: string | null
           cover_url: string | null
           created_at: string
           excerpt: string | null
+          excerpt_pt: string | null
           id: string
           published: boolean
           published_at: string | null
           seo_description: string | null
+          seo_description_pt: string | null
           seo_title: string | null
+          seo_title_pt: string | null
           slug: string
           tags: string[]
           title: string
+          title_pt: string | null
           updated_at: string
         }
         Insert: {
           body_md: string
+          body_md_pt?: string | null
           cover_url?: string | null
           created_at?: string
           excerpt?: string | null
+          excerpt_pt?: string | null
           id?: string
           published?: boolean
           published_at?: string | null
           seo_description?: string | null
+          seo_description_pt?: string | null
           seo_title?: string | null
+          seo_title_pt?: string | null
           slug: string
           tags?: string[]
           title: string
+          title_pt?: string | null
           updated_at?: string
         }
         Update: {
           body_md?: string
+          body_md_pt?: string | null
           cover_url?: string | null
           created_at?: string
           excerpt?: string | null
+          excerpt_pt?: string | null
           id?: string
           published?: boolean
           published_at?: string | null
           seo_description?: string | null
+          seo_description_pt?: string | null
           seo_title?: string | null
+          seo_title_pt?: string | null
           slug?: string
           tags?: string[]
           title?: string
+          title_pt?: string | null
           updated_at?: string
         }
         Relationships: []
