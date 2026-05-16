@@ -37,7 +37,32 @@ const applyHtmlLang = (lng: string) => {
     document.documentElement.lang = HREFLANG_MAP[short] ?? "en";
   }
 };
+
+/**
+ * Keep the `?lang=` query in sync with the active language so a refresh,
+ * deep-link share, or back/forward nav never reverts the user's choice.
+ * PT is the default and renders without the param; EN keeps `?lang=en`.
+ */
+const syncLangQuery = (lng: string) => {
+  if (typeof window === "undefined") return;
+  const short = (lng.slice(0, 2) as Lang);
+  const url = new URL(window.location.href);
+  const current = url.searchParams.get("lang");
+  if (short === "pt") {
+    if (current === null) return;
+    url.searchParams.delete("lang");
+  } else {
+    if (current === short) return;
+    url.searchParams.set("lang", short);
+  }
+  window.history.replaceState(window.history.state, "", url.toString());
+};
+
 applyHtmlLang(i18n.language);
-i18n.on("languageChanged", applyHtmlLang);
+syncLangQuery(i18n.language);
+i18n.on("languageChanged", (lng) => {
+  applyHtmlLang(lng);
+  syncLangQuery(lng);
+});
 
 export default i18n;
