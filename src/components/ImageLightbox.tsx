@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 type Img = { url: string; altText?: string | null };
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(startIndex);
   const touchStartX = useRef<number | null>(null);
 
@@ -59,14 +61,14 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label="Product image viewer"
+      aria-label={t("lightbox.viewer")}
     >
       <button
         onClick={(e) => {
           e.stopPropagation();
           onClose();
         }}
-        aria-label="Close image viewer"
+        aria-label={t("lightbox.close")}
         className="absolute top-4 right-4 z-10 p-3 text-foreground hover:bg-muted transition-colors"
       >
         <X size={24} />
@@ -79,7 +81,7 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
               e.stopPropagation();
               setIndex((i) => (i - 1 + images.length) % images.length);
             }}
-            aria-label="Previous image"
+            aria-label={t("lightbox.prev")}
             className="absolute left-2 sm:left-4 z-10 p-3 text-foreground hover:bg-muted transition-colors"
           >
             <ChevronLeft size={28} />
@@ -89,7 +91,7 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
               e.stopPropagation();
               setIndex((i) => (i + 1) % images.length);
             }}
-            aria-label="Next image"
+            aria-label={t("lightbox.next")}
             className="absolute right-2 sm:right-4 z-10 p-3 text-foreground hover:bg-muted transition-colors"
           >
             <ChevronRight size={28} />
@@ -105,7 +107,7 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
       >
         <img
           src={img.url}
-          alt={img.altText || title || "Product image"}
+          alt={img.altText || title || t("lightbox.fallbackAlt")}
           className="max-w-full max-h-full object-contain select-none"
           draggable={false}
         />

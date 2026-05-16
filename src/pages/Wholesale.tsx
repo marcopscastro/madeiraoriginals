@@ -16,7 +16,7 @@ const Wholesale = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Wholesale · Madeira Originals" path="/wholesale" noIndex />
+      <SEO title={t("wholesale.seoTitle")} path="/wholesale" noIndex />
       <Header />
       <main>
         <WholesaleGate>

@@ -1,10 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-
-const schema = z.object({ email: z.string().email("Enter a valid email") });
 
 interface Props {
   source?: string;
@@ -12,6 +11,8 @@ interface Props {
 }
 
 const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
+  const { t } = useTranslation();
+  const schema = z.object({ email: z.string().email(t("auth.invalidEmail")) });
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot
   const [loading, setLoading] = useState(false);
@@ -35,19 +36,19 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
       .insert({ email: parsed.data.email, source });
     setLoading(false);
     if (error && !error.message.includes("duplicate")) {
-      toast.error("Something went wrong. Try again.");
+      toast.error(t("newsletter.error"));
       return;
     }
     setEmail("");
     setDone(true);
-    toast.success("You're on the list. Welcome to Madeira Originals.");
+    toast.success(t("newsletter.doneToast"));
   };
 
   if (done) {
     return (
       <div className="flex items-center justify-center gap-2 border border-foreground/30 px-4 py-3 font-heading text-sm uppercase tracking-widest text-foreground">
         <Check size={16} className="text-primary" />
-        You're in. First to know about drops.
+        {t("newsletter.done")}
       </div>
     );
   }
@@ -69,8 +70,8 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        placeholder="Enter your email…"
-        aria-label="Email address"
+        placeholder={t("newsletter.placeholder")}
+        aria-label={t("newsletter.ariaEmail")}
         className="flex-1 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
       />
       <button
@@ -78,7 +79,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
         disabled={loading}
         className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity whitespace-nowrap disabled:opacity-50"
       >
-        {loading ? "Joining…" : variant === "inline" ? "Join" : "Subscribe"}
+        {loading ? t("newsletter.joining") : variant === "inline" ? t("newsletter.join") : t("newsletter.subscribe")}
       </button>
     </form>
   );
