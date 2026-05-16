@@ -54,7 +54,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
   }
 
   return (
-    <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+    <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0 w-full min-w-0">
       <input
         type="text"
         name="website"
