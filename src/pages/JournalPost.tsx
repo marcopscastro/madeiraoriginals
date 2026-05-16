@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const JournalPost = () => {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
 
   const { data: article, isLoading } = useQuery({
@@ -31,7 +32,7 @@ const JournalPost = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="max-w-3xl mx-auto px-4 py-24 text-center font-body text-muted-foreground">
-          Loading…
+          {t("journal.loading")}
         </div>
         <Footer />
       </div>
@@ -41,12 +42,12 @@ const JournalPost = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
-        <SEO title="Article not found" path={`/journal/${slug}`} noIndex />
+        <SEO title={t("journal.notFoundTitle")} path={`/journal/${slug}`} noIndex />
         <Header />
         <div className="max-w-3xl mx-auto px-4 py-24 text-center">
-          <h1 className="font-display text-3xl font-semibold mb-4">Article not found</h1>
+          <h1 className="font-display text-3xl font-semibold mb-4">{t("journal.notFoundTitle")}</h1>
           <Link to="/journal" className="text-primary underline underline-offset-4">
-            ← Back to Journal
+            {t("journal.backToJournal")}
           </Link>
         </div>
         <Footer />
