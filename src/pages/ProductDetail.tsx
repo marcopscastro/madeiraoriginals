@@ -239,14 +239,31 @@ const ProductDetail = () => {
     ],
   };
 
-  const seoDescription =
-    truncate(plainDescription, 160) ||
-    t("product.seoFallback", { title: product.title });
+  // SEO title: cap full title (incl. brand suffix) at ~60 chars so Google doesn't truncate.
+  const BRAND_SUFFIX = " | Madeira Originals";
+  const titleBudget = 60 - BRAND_SUFFIX.length; // ~40 chars for product title
+  const shortTitle =
+    product.title.length > titleBudget
+      ? truncate(product.title, titleBudget)
+      : product.title;
+  const seoTitle = `${shortTitle}${BRAND_SUFFIX}`;
+
+  // SEO description: prefer Shopify copy when it's a real sentence (not a list/heading),
+  // otherwise scaffold a keyword-rich lead. Always capped at 160 chars.
+  const looksLikeSentence =
+    plainDescription.length >= 60 &&
+    /[.!?]/.test(plainDescription.slice(0, 200)) &&
+    !/^[-•*]/.test(plainDescription);
+  const scaffoldLead = t("product.seoFallback", { title: product.title });
+  const seoDescription = truncate(
+    looksLikeSentence ? plainDescription : `${scaffoldLead} ${plainDescription}`.trim(),
+    160
+  );
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${product.title} — Madeira Originals`}
+        title={seoTitle}
         description={seoDescription}
         path={`/product/${product.handle}`}
         type="product"
