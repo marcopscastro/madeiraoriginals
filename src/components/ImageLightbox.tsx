@@ -107,7 +107,7 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
       >
         <img
           src={img.url}
-          alt={img.altText || title || t("lightbox.fallbackAlt")}
+          alt={title ? productAlt({ title, shopifyAlt: img.altText, index, total: images.length }) : (img.altText || t("lightbox.fallbackAlt"))}
           className="max-w-full max-h-full object-contain select-none"
           draggable={false}
         />
