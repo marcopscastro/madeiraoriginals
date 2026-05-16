@@ -1,41 +1,47 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import NewsletterForm from "@/components/NewsletterForm";
 
-const sections = [
-  {
-    heading: "Shop",
-    links: [
-      { label: "All", to: "/shop" },
-      { label: "T-Shirts", to: "/madeira-t-shirts" },
-      { label: "Hoodies", to: "/madeira-hoodies" },
-      { label: "Accessories", to: "/madeira-accessories" },
-      { label: "Stickers", to: "/madeira-stickers" },
-      { label: "Souvenirs Guide", to: "/madeira-souvenirs" },
-    ],
-  },
-  {
-    heading: "Brand",
-    links: [
-      { label: "About", to: "/about" },
-      { label: "Portugal Streetwear", to: "/portugal-streetwear" },
-      { label: "Journal", to: "/journal" },
-      { label: "Contact", to: "/contact" },
-    ],
-  },
-];
-
 const Footer = () => {
+  const { t } = useTranslation();
+
+  const sections = [
+    {
+      heading: t("footer.shop"),
+      links: [
+        { label: t("nav.shopAll"), to: "/shop" },
+        { label: t("nav.tshirts"), to: "/madeira-t-shirts" },
+        { label: t("nav.hoodies"), to: "/madeira-hoodies" },
+        { label: t("nav.accessories"), to: "/madeira-accessories" },
+        { label: t("nav.stickers"), to: "/madeira-stickers" },
+      ],
+    },
+    {
+      heading: t("footer.business"),
+      links: [
+        { label: t("footer.studio"), to: "/studio" },
+        { label: t("footer.wholesale"), to: "/wholesale" },
+      ],
+    },
+    {
+      heading: t("footer.brand"),
+      links: [
+        { label: t("nav.about"), to: "/about" },
+        { label: t("nav.journal"), to: "/journal" },
+        { label: t("nav.contact"), to: "/contact" },
+      ],
+    },
+  ];
+
   return (
     <footer className="border-t-2 border-foreground bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <h3 className="font-display text-2xl font-semibold text-foreground">
-              Join the community.
+              {t("footer.joinHeading")}
             </h3>
-            <p className="mt-2 font-body text-muted-foreground">
-              First access to drops, production updates, and stories from the island.
-            </p>
+            <p className="mt-2 font-body text-muted-foreground">{t("footer.joinBody")}</p>
             <div className="mt-4">
               <NewsletterForm source="footer" />
             </div>
@@ -59,12 +65,12 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-foreground/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-center md:text-left">
-          <p className="font-body text-sm text-muted-foreground">
-            © 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal.
+        <div className="mt-12 pt-8 border-t border-foreground/10">
+          <p className="font-heading text-base md:text-lg font-bold uppercase tracking-[0.35em] text-accent text-center mb-6">
+            {t("tagline")}
           </p>
-          <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-            A Nossa Ilha. A Nossa Marca.
+          <p className="font-body text-sm text-muted-foreground text-center">
+            {t("footer.copyright")}
           </p>
         </div>
       </div>

@@ -16,6 +16,8 @@ const Culture = lazy(() => import("./pages/Culture"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 
+const Studio = lazy(() => import("./pages/Studio"));
+const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
 const Journal = lazy(() => import("./pages/Journal"));
@@ -44,10 +46,13 @@ const AppRoutes = () => {
         {Object.values(COLLECTIONS).map((c) => (
           <Route key={c.slug} path={`/${c.slug}`} element={<Collection config={c} />} />
         ))}
-        <Route path="/production-studio" element={<Navigate to="/" replace />} />
+        <Route path="/studio" element={<Studio />} />
+        <Route path="/b2b" element={<Navigate to="/studio" replace />} />
+        <Route path="/production-studio" element={<Navigate to="/studio" replace />} />
+        <Route path="/horeca" element={<Navigate to="/studio" replace />} />
+        <Route path="/wholesale" element={<Wholesale />} />
         <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="/madeira-souvenirs" element={<MadeiraSouvenirs />} />
-        <Route path="/horeca" element={<Navigate to="/" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

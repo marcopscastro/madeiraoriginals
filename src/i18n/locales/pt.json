@@ -1,0 +1,138 @@
+{
+  "tagline": "A Nossa Ilha. A Nossa Marca.",
+  "nav": {
+    "shop": "Loja",
+    "shopAll": "Tudo",
+    "tshirts": "T-Shirts",
+    "hoodies": "Hoodies",
+    "accessories": "Acessórios",
+    "stickers": "Autocolantes",
+    "studio": "Studio",
+    "wholesale": "Distribuição",
+    "journal": "Diário",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "admin": "Admin",
+    "signIn": "Entrar",
+    "search": "Pesquisar",
+    "cart": "Carrinho",
+    "account": "Conta",
+    "menu": "Menu"
+  },
+  "footer": {
+    "joinHeading": "Junta-te à comunidade.",
+    "joinBody": "Acesso antecipado a lançamentos, atualizações de produção e histórias da ilha.",
+    "shop": "Loja",
+    "brand": "Marca",
+    "business": "Negócios",
+    "studio": "Studio (B2B)",
+    "wholesale": "Distribuição",
+    "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal."
+  },
+  "hero": {
+    "overline": "Nascida em São Vicente, Madeira",
+    "headline1": "Inspirada na Madeira.",
+    "headline2": "Desenhada para o mundo.",
+    "body": "Streetwear premium e vestuário personalizado nascido em São Vicente, Madeira — construído sobre herança da ilha, design moderno e uma filosofia estrita de 0% Tourist Trap.",
+    "ctaShop": "Ver a Coleção",
+    "ctaStory": "A Nossa História"
+  },
+  "studio": {
+    "overline": "Madeira Originals — Studio · B2B",
+    "h1Line1": "Construímos marcas",
+    "h1Line2": "da cozinha até à cloud.",
+    "subcopy": "Infraestrutura digital, vestuário HORECA e branding físico — produzido na Madeira para restaurantes, hotéis, cafés e negócios locais.",
+    "ctaQuote": "Pedir Orçamento Personalizado",
+    "ctaServices": "Ver Serviços",
+    "pillarsHeading": "Pilares de Serviço",
+    "pillars": {
+      "digital": {
+        "title": "Infraestrutura Digital",
+        "items": "Websites à medida · Integração POS · SEO local"
+      },
+      "apparel": {
+        "title": "Vestuário HORECA",
+        "items": "Fardas DTF de alta durabilidade (Sala & Cozinha) · Aventais personalizados"
+      },
+      "physical": {
+        "title": "Branding Físico",
+        "items": "Decalques UV DTF para equipamento · Menus gravados a laser · Sinalética em pedra"
+      }
+    },
+    "trustedBy": "Confiam em nós",
+    "form": {
+      "heading": "Pedir orçamento personalizado",
+      "sub": "Diz-nos o que precisas. Respondemos em um dia útil.",
+      "name": "O teu nome *",
+      "business": "Nome do negócio *",
+      "sector": "Sector HORECA *",
+      "services": "Serviços necessários * (selecciona os aplicáveis)",
+      "email": "Email *",
+      "phone": "Telefone",
+      "message": "Detalhes do projecto",
+      "submit": "Pedir orçamento",
+      "sending": "A enviar…",
+      "done": "Pedido recebido.",
+      "doneBody": "Respondemos em um dia útil com preço e próximos passos.",
+      "sectors": {
+        "restaurant": "Restaurante",
+        "cafe": "Café",
+        "bar": "Bar",
+        "hotel": "Hotel",
+        "bakery": "Pastelaria",
+        "foodTruck": "Food Truck",
+        "other": "Outro"
+      },
+      "serviceDigital": "Digital",
+      "serviceApparel": "Vestuário",
+      "servicePhysical": "Físico"
+    }
+  },
+  "wholesale": {
+    "gate": {
+      "overline": "Portal de Distribuição",
+      "heading": "Apenas distribuidores autorizados.",
+      "body": "Introduz o código do teu cartão de distribuidor Madeira Originals.",
+      "placeholder": "Código de acesso",
+      "submit": "Entrar no portal",
+      "checking": "A verificar…",
+      "invalid": "Código inválido."
+    },
+    "overline": "Distribuição Wholesale",
+    "heading": "Preços por volume, white-label, packs de stickers.",
+    "sub": "Três linhas para parceiros e distribuidores. Todas as encomendas passam pelo studio em São Vicente.",
+    "signOut": "Sair",
+    "sections": {
+      "corner": {
+        "title": "Premium Corner Line",
+        "body": "T-shirts core Madeira Originals, escalões de preço por volume."
+      },
+      "whiteLabel": {
+        "title": "Fabrico White-Label",
+        "body": "Design personalizado e impressão DTF para lojas de souvenirs — a tua marca, a nossa produção."
+      },
+      "uvdtf": {
+        "title": "Merch UV DTF",
+        "body": "Packs de autocolantes à prova de água. Mistura designs, mínimos baixos."
+      }
+    },
+    "tiers": "Escalões",
+    "inquire": "Pedir info sobre esta linha",
+    "form": {
+      "heading": "Pedido de encomenda em volume",
+      "sub": "Diz-nos volume, linha de produto e janela de entrega. Encaminhamos para a fila de produção.",
+      "business": "Nome do negócio *",
+      "contact": "Nome de contacto *",
+      "email": "Email *",
+      "phone": "Telefone",
+      "lines": "Linhas de produto * (selecciona as aplicáveis)",
+      "volume": "Volume estimado",
+      "window": "Janela de entrega",
+      "notes": "Notas",
+      "submit": "Submeter pedido",
+      "sending": "A enviar…",
+      "done": "Pedido recebido.",
+      "doneBody": "Entraremos em contacto em um dia útil."
+    }
+  }
+}
