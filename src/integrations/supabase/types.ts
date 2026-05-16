@@ -133,10 +133,12 @@ export type Database = {
           created_at: string
           deadline: string | null
           email: string
+          horeca_sector: string | null
           id: string
           message: string | null
           phone: string | null
           quantity: string | null
+          required_services: string[] | null
           service_type: string
           status: string
           updated_at: string
@@ -148,10 +150,12 @@ export type Database = {
           created_at?: string
           deadline?: string | null
           email: string
+          horeca_sector?: string | null
           id?: string
           message?: string | null
           phone?: string | null
           quantity?: string | null
+          required_services?: string[] | null
           service_type: string
           status?: string
           updated_at?: string
@@ -163,10 +167,12 @@ export type Database = {
           created_at?: string
           deadline?: string | null
           email?: string
+          horeca_sector?: string | null
           id?: string
           message?: string | null
           phone?: string | null
           quantity?: string | null
+          required_services?: string[] | null
           service_type?: string
           status?: string
           updated_at?: string
@@ -254,6 +260,51 @@ export type Database = {
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
+        }
+        Relationships: []
+      }
+      wholesale_inquiries: {
+        Row: {
+          business_name: string
+          contact_name: string
+          created_at: string
+          delivery_window: string | null
+          email: string
+          estimated_volume: string | null
+          id: string
+          notes: string | null
+          phone: string | null
+          product_lines: string[]
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          business_name: string
+          contact_name: string
+          created_at?: string
+          delivery_window?: string | null
+          email: string
+          estimated_volume?: string | null
+          id?: string
+          notes?: string | null
+          phone?: string | null
+          product_lines?: string[]
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          business_name?: string
+          contact_name?: string
+          created_at?: string
+          delivery_window?: string | null
+          email?: string
+          estimated_volume?: string | null
+          id?: string
+          notes?: string | null
+          phone?: string | null
+          product_lines?: string[]
+          status?: string
+          updated_at?: string
         }
         Relationships: []
       }
