@@ -134,5 +134,89 @@
       "done": "Inquiry received.",
       "doneBody": "We'll be in touch within one working day."
     }
+  },
+  "shop": {
+    "overline": "Collection",
+    "heading": "Madeira Streetwear & Apparel",
+    "sub": "Premium tees, hoodies and accessories inspired by the landscapes, traditions, and modern culture of Madeira — designed in São Vicente, shipped worldwide from Funchal.",
+    "all": "All",
+    "searchPlaceholder": "Search products",
+    "clearSearch": "Clear search",
+    "sortAria": "Sort products",
+    "sortDefault": "Sort by",
+    "sortNameAsc": "Name: A → Z",
+    "sortPriceAsc": "Price: Low → High",
+    "sortPriceDesc": "Price: High → Low",
+    "emptyTitle": "Nothing matches that.",
+    "emptyBody": "Try clearing filters or searching for something else.",
+    "resetFilters": "Reset filters",
+    "showing": "Showing {{count}} of {{total}}",
+    "loadMore": "Load more",
+    "faqOverline": "FAQ",
+    "faqHeading": "Shipping & origin",
+    "faqs": [
+      {
+        "q": "Do you ship worldwide?",
+        "a": "Yes. We ship Madeira Originals apparel and accessories worldwide from our fulfilment partners, with tracked delivery to Europe, the UK, the US, and most of the rest of the world. Shipping options and live rates are calculated at checkout based on your destination."
+      },
+      {
+        "q": "Can I order Madeira souvenirs from outside Portugal?",
+        "a": "Absolutely. Most of our customers order from outside Portugal — including the Madeiran diaspora in the UK, Channel Islands, South Africa, Venezuela and beyond, plus travellers who discovered us in Funchal or São Vicente and want to order more once they get home."
+      },
+      {
+        "q": "Are these made in Madeira?",
+        "a": "Madeira Originals is designed in São Vicente, on the north coast of Madeira, and the brand is entirely rooted on the island. Production is handled by our vetted fulfilment partners using premium blanks."
+      }
+    ]
+  },
+  "product": {
+    "loading": "Loading…",
+    "notFound": "Product Not Found",
+    "backToShop": "Back to Shop",
+    "home": "Home",
+    "shop": "Shop",
+    "zoomImage": "Zoom image",
+    "thumbAria": "View image {{i}} of {{total}}",
+    "comingSoon": "Coming Soon",
+    "reviewsOne": "review",
+    "reviewsOther": "reviews",
+    "tagline": "✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping",
+    "quantity": "Quantity",
+    "onlyLeft": "only {{stock}} left",
+    "decreaseQty": "Decrease quantity",
+    "increaseQty": "Increase quantity",
+    "soldOut": "Sold Out",
+    "soldOutShort": "Sold out",
+    "selectOption": "Select {{name}}",
+    "pleaseSelect": "Please select {{name}}",
+    "pleaseSelectOptions": "Please select options",
+    "addToCart": "Add to Cart",
+    "addToCartShort": "Add to cart",
+    "addedToCart": "{{title}} added to cart",
+    "addedQty": "Qty: {{qty}}",
+    "addedVariantQty": "{{variant}} · Qty: {{qty}}",
+    "addError": "Couldn't add to cart",
+    "addErrorBody": "That variant may be out of stock. Please try again.",
+    "inspirationHeading": "Designed with Madeira inspiration.",
+    "inspirationBody": "Every Madeira Originals piece is rooted in the landscapes, traditions and modern culture of Madeira Island — translated through premium materials and editorial cuts. Wear the island in Funchal, Lisbon, or anywhere the diaspora carries it.",
+    "materialsHeading": "Materials, fit & care.",
+    "materials": [
+      "Premium cotton construction, made to last and soften with wear.",
+      "Modern unisex fit — true to size for most; size up for an oversized look.",
+      "Machine wash cold, inside out. Tumble dry low or hang to dry.",
+      "Designed in Madeira. Shipped worldwide."
+    ],
+    "seoFallback": "Premium {{title}} inspired by Madeira Island culture and identity."
+  },
+  "journal": {
+    "overline": "Journal",
+    "heading": "Stories from Madeira.",
+    "all": "All",
+    "empty": "No articles in this category yet.",
+    "loading": "Loading…",
+    "notFoundTitle": "Article not found",
+    "backToJournal": "← Back to Journal",
+    "breadcrumb": "Journal",
+    "ctaShop": "Shop the Collection"
   }
 }

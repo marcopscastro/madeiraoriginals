@@ -134,5 +134,89 @@
       "done": "Pedido recebido.",
       "doneBody": "Entraremos em contacto em um dia útil."
     }
+  },
+  "shop": {
+    "overline": "Colecção",
+    "heading": "Streetwear & Vestuário da Madeira",
+    "sub": "T-shirts, hoodies e acessórios premium inspirados nas paisagens, tradições e cultura moderna da Madeira — desenhados em São Vicente, enviados para todo o mundo a partir do Funchal.",
+    "all": "Todos",
+    "searchPlaceholder": "Pesquisar produtos",
+    "clearSearch": "Limpar pesquisa",
+    "sortAria": "Ordenar produtos",
+    "sortDefault": "Ordenar por",
+    "sortNameAsc": "Nome: A → Z",
+    "sortPriceAsc": "Preço: Baixo → Alto",
+    "sortPriceDesc": "Preço: Alto → Baixo",
+    "emptyTitle": "Nada corresponde.",
+    "emptyBody": "Experimenta limpar os filtros ou pesquisar outra coisa.",
+    "resetFilters": "Limpar filtros",
+    "showing": "A mostrar {{count}} de {{total}}",
+    "loadMore": "Ver mais",
+    "faqOverline": "FAQ",
+    "faqHeading": "Envios & origem",
+    "faqs": [
+      {
+        "q": "Fazem envios para todo o mundo?",
+        "a": "Sim. Enviamos vestuário e acessórios Madeira Originals para todo o mundo a partir dos nossos parceiros de produção, com entrega rastreada para a Europa, Reino Unido, Estados Unidos e a maior parte do resto do mundo. As opções de envio e portes são calculados no checkout consoante o destino."
+      },
+      {
+        "q": "Posso encomendar souvenirs da Madeira a partir de fora de Portugal?",
+        "a": "Sem dúvida. A maioria dos nossos clientes encomenda de fora de Portugal — incluindo a diáspora madeirense no Reino Unido, Channel Islands, África do Sul, Venezuela e mais além, além de viajantes que nos descobriram no Funchal ou em São Vicente e querem encomendar mais quando regressam a casa."
+      },
+      {
+        "q": "São feitos na Madeira?",
+        "a": "A Madeira Originals é desenhada em São Vicente, na costa norte da Madeira, e a marca está totalmente enraizada na ilha. A produção é feita pelos nossos parceiros de confiança em blanks premium."
+      }
+    ]
+  },
+  "product": {
+    "loading": "A carregar…",
+    "notFound": "Produto não encontrado",
+    "backToShop": "Voltar à Loja",
+    "home": "Início",
+    "shop": "Loja",
+    "zoomImage": "Ampliar imagem",
+    "thumbAria": "Ver imagem {{i}} de {{total}}",
+    "comingSoon": "Em breve",
+    "reviewsOne": "avaliação",
+    "reviewsOther": "avaliações",
+    "tagline": "✦ Desenhado na Madeira · Algodão premium pesado · Envio para todo o mundo",
+    "quantity": "Quantidade",
+    "onlyLeft": "só restam {{stock}}",
+    "decreaseQty": "Diminuir quantidade",
+    "increaseQty": "Aumentar quantidade",
+    "soldOut": "Esgotado",
+    "soldOutShort": "Esgotado",
+    "selectOption": "Selecciona {{name}}",
+    "pleaseSelect": "Por favor selecciona {{name}}",
+    "pleaseSelectOptions": "Por favor selecciona as opções",
+    "addToCart": "Adicionar ao carrinho",
+    "addToCartShort": "Adicionar",
+    "addedToCart": "{{title}} adicionado ao carrinho",
+    "addedQty": "Qtd: {{qty}}",
+    "addedVariantQty": "{{variant}} · Qtd: {{qty}}",
+    "addError": "Não foi possível adicionar ao carrinho",
+    "addErrorBody": "Essa variante pode estar esgotada. Tenta novamente.",
+    "inspirationHeading": "Desenhado com inspiração madeirense.",
+    "inspirationBody": "Cada peça Madeira Originals está enraizada nas paisagens, tradições e cultura moderna da Ilha da Madeira — traduzida em materiais premium e cortes editoriais. Veste a ilha no Funchal, em Lisboa ou onde quer que a diáspora a leve.",
+    "materialsHeading": "Materiais, corte & cuidados.",
+    "materials": [
+      "Construção em algodão premium, feita para durar e amaciar com o uso.",
+      "Corte unissexo moderno — fiel ao tamanho na maioria dos casos; sobe um tamanho para um look oversized.",
+      "Lavar à máquina a frio, do avesso. Secar a baixa temperatura ou ao ar.",
+      "Desenhado na Madeira. Enviado para todo o mundo."
+    ],
+    "seoFallback": "{{title}} premium inspirado na cultura e identidade da Ilha da Madeira."
+  },
+  "journal": {
+    "overline": "Diário",
+    "heading": "Histórias da Madeira.",
+    "all": "Todos",
+    "empty": "Ainda não há artigos nesta categoria.",
+    "loading": "A carregar…",
+    "notFoundTitle": "Artigo não encontrado",
+    "backToJournal": "← Voltar ao Diário",
+    "breadcrumb": "Diário",
+    "ctaShop": "Ver a Colecção"
   }
 }
