@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Loader2, Minus, Plus, Trash2 } from "lucide-react";
@@ -12,6 +13,7 @@ interface CartDrawerProps {
 }
 
 const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
+  const { t } = useTranslation();
   const items = useCartStore((s) => s.items);
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const removeItem = useCartStore((s) => s.removeItem);
@@ -36,15 +38,15 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
       <SheetContent className="flex flex-col bg-background w-full sm:max-w-md">
         <SheetHeader>
           <SheetTitle className="font-heading text-lg font-bold uppercase tracking-widest text-foreground">
-            Cart ({totalItems})
+            {t("cart.title")} ({totalItems})
           </SheetTitle>
         </SheetHeader>
 
         {items.length === 0 ? (
           <div className="flex-1 flex flex-col items-center justify-center gap-4">
-            <p className="font-body text-muted-foreground">Your cart is empty</p>
+            <p className="font-body text-muted-foreground">{t("cart.empty")}</p>
             <Button variant="outline" onClick={() => onOpenChange(false)} asChild>
-              <Link to="/shop">Continue Shopping</Link>
+              <Link to="/shop">{t("cart.continueShopping")}</Link>
             </Button>
           </div>
         ) : (
@@ -73,7 +75,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
-                          Soon
+                          {t("cart.soon")}
                         </div>
                       )}
                     </Link>
@@ -96,7 +98,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                         </p>
                         {item.quantity > 1 && (
                           <p className="font-body text-[11px] text-muted-foreground">
-                            {formatPrice(item.price)} each
+                            {formatPrice(item.price)} {t("cart.each")}
                           </p>
                         )}
                       </div>
@@ -104,7 +106,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                         <button
                           onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
                           className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
-                          aria-label="Decrease"
+                          aria-label={t("cart.decrease")}
                         >
                           <Minus size={12} />
                         </button>
@@ -114,14 +116,14 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                         <button
                           onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
                           className="p-1 border border-foreground/20 hover:bg-muted transition-colors"
-                          aria-label="Increase"
+                          aria-label={t("cart.increase")}
                         >
                           <Plus size={12} />
                         </button>
                         <button
                           onClick={() => removeItem(item.variantId)}
                           className="ml-auto p-1 text-muted-foreground hover:text-destructive transition-colors"
-                          aria-label="Remove"
+                          aria-label={t("cart.remove")}
                         >
                           <Trash2 size={14} />
                         </button>
@@ -140,8 +142,8 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                   <div>
                     <p className="font-heading text-[11px] uppercase tracking-widest text-muted-foreground mb-1.5">
                       {remaining > 0
-                        ? `€${remaining.toFixed(2)} away from free shipping`
-                        : "Free shipping unlocked ✦"}
+                        ? t("cart.freeShippingAway", { amount: remaining.toFixed(2) })
+                        : t("cart.freeShippingUnlocked")}
                     </p>
                     <div className="h-[2px] bg-foreground/10">
                       <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
@@ -150,13 +152,13 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                 );
               })()}
               <div className="flex justify-between font-heading text-sm uppercase tracking-wide">
-                <span className="text-muted-foreground">Subtotal</span>
+                <span className="text-muted-foreground">{t("cart.subtotal")}</span>
                 <span className="font-bold text-foreground">
                   {formatPrice({ amount: totalPrice.toFixed(2), currencyCode })}
                 </span>
               </div>
               <p className="font-body text-xs text-muted-foreground">
-                Shipping & taxes calculated at checkout.
+                {t("cart.shippingNote")}
               </p>
               <Button
                 onClick={handleCheckout}
@@ -168,7 +170,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                 ) : (
                   <>
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Checkout
+                    {t("cart.checkout")}
                   </>
                 )}
               </Button>

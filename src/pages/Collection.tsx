@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Search, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export interface CollectionConfig {
 }
 
 const Collection = ({ config }: { config: CollectionConfig }) => {
+  const { t } = useTranslation();
   const { data: products = [], isLoading } = useProducts(50, config.shopifyQuery);
   const [sort, setSort] = useState<SortOption>("default");
   const [query, setQuery] = useState("");
@@ -81,9 +83,9 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <a href="/" className="hover:text-foreground">Home</a>
+          <a href="/" className="hover:text-foreground">{t("collection.home")}</a>
           <span>/</span>
-          <a href="/shop" className="hover:text-foreground">Shop</a>
+          <a href="/shop" className="hover:text-foreground">{t("collection.shop")}</a>
           <span>/</span>
           <span className="text-foreground">{config.title}</span>
         </nav>
@@ -108,13 +110,13 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search"
+                placeholder={t("collection.searchPlaceholder")}
                 className="bg-background border border-foreground/20 font-body text-sm pl-9 pr-9 py-2 text-foreground focus:outline-none focus:border-foreground rounded-none w-44 sm:w-56"
               />
               {query && (
                 <button
                   onClick={() => setQuery("")}
-                  aria-label="Clear search"
+                  aria-label={t("collection.clearSearch")}
                   className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
                 >
                   <X size={14} />
@@ -124,13 +126,13 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortOption)}
-              aria-label="Sort products"
+              aria-label={t("collection.sortAria")}
               className="bg-background border border-foreground/20 font-heading text-xs font-semibold uppercase tracking-wide px-3 py-2 text-foreground focus:outline-none focus:border-foreground"
             >
-              <option value="default">Sort by</option>
-              <option value="title-asc">Name: A → Z</option>
-              <option value="price-asc">Price: Low → High</option>
-              <option value="price-desc">Price: High → Low</option>
+              <option value="default">{t("collection.sortDefault")}</option>
+              <option value="title-asc">{t("collection.sortNameAsc")}</option>
+              <option value="price-asc">{t("collection.sortPriceAsc")}</option>
+              <option value="price-desc">{t("collection.sortPriceDesc")}</option>
             </select>
           </div>
         </div>
@@ -147,15 +149,15 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
           </div>
         ) : filtered.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-foreground/15">
-            <p className="font-display text-2xl text-foreground">No pieces in this collection yet.</p>
+            <p className="font-display text-2xl text-foreground">{t("collection.emptyTitle")}</p>
             <p className="mt-2 font-body text-muted-foreground">
-              New drops land regularly. Browse the full shop in the meantime.
+              {t("collection.emptyBody")}
             </p>
             <a
               href="/shop"
               className="inline-block mt-6 border border-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 hover:bg-foreground hover:text-background"
             >
-              Browse all
+              {t("collection.emptyCta")}
             </a>
           </div>
         ) : (
@@ -169,10 +171,10 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
         {config.faqs && config.faqs.length > 0 && (
           <section className="mt-20 md:mt-28 max-w-3xl mx-auto border-t border-foreground/10 pt-12 md:pt-16">
             <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 text-center">
-              FAQ
+              {t("collection.faq")}
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-10">
-              {config.title} — Questions, Answered
+              {config.title} {t("collection.faqHeadingSuffix")}
             </h2>
             <dl className="space-y-8">
               {config.faqs.map((faq) => (
