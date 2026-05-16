@@ -1,0 +1,138 @@
+{
+  "tagline": "A Nossa Ilha. A Nossa Marca.",
+  "nav": {
+    "shop": "Shop",
+    "shopAll": "All",
+    "tshirts": "T-Shirts",
+    "hoodies": "Hoodies",
+    "accessories": "Accessories",
+    "stickers": "Stickers",
+    "studio": "Studio",
+    "wholesale": "Wholesale",
+    "journal": "Journal",
+    "about": "About",
+    "contact": "Contact",
+    "admin": "Admin",
+    "signIn": "Sign in",
+    "search": "Search",
+    "cart": "Cart",
+    "account": "Account",
+    "menu": "Menu"
+  },
+  "footer": {
+    "joinHeading": "Join the community.",
+    "joinBody": "First access to drops, production updates, and stories from the island.",
+    "shop": "Shop",
+    "brand": "Brand",
+    "business": "Business",
+    "studio": "Studio (B2B)",
+    "wholesale": "Wholesale",
+    "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal."
+  },
+  "hero": {
+    "overline": "Born in São Vicente, Madeira",
+    "headline1": "Inspired by Madeira.",
+    "headline2": "Designed for everywhere.",
+    "body": "Premium streetwear and custom apparel born in São Vicente, Madeira — built from island heritage, modern design, and a strict 0% Tourist Trap philosophy.",
+    "ctaShop": "Shop the Collection",
+    "ctaStory": "Our Story"
+  },
+  "studio": {
+    "overline": "Madeira Originals — Studio · B2B",
+    "h1Line1": "We build brands",
+    "h1Line2": "from the kitchen to the cloud.",
+    "subcopy": "Digital infrastructure, HORECA apparel, and physical branding — engineered in Madeira for restaurants, hotels, cafés, and local businesses.",
+    "ctaQuote": "Request a Custom Quote",
+    "ctaServices": "See Services",
+    "pillarsHeading": "Service Pillars",
+    "pillars": {
+      "digital": {
+        "title": "Digital Infrastructure",
+        "items": "Custom websites · POS integrations · Local SEO"
+      },
+      "apparel": {
+        "title": "HORECA Apparel",
+        "items": "High-durability DTF staff uniforms (Front & Back of House) · Custom aprons"
+      },
+      "physical": {
+        "title": "Physical Branding",
+        "items": "UV DTF equipment decals · Laser-engraved menus · Stone signage"
+      }
+    },
+    "trustedBy": "Trusted by",
+    "form": {
+      "heading": "Request a custom quote",
+      "sub": "Tell us what you need. We reply within one working day.",
+      "name": "Your name *",
+      "business": "Business name *",
+      "sector": "HORECA sector *",
+      "services": "Required services * (select all that apply)",
+      "email": "Email *",
+      "phone": "Phone",
+      "message": "Project details",
+      "submit": "Request a quote",
+      "sending": "Sending…",
+      "done": "Request received.",
+      "doneBody": "We'll reply within one working day with pricing and next steps.",
+      "sectors": {
+        "restaurant": "Restaurant",
+        "cafe": "Café",
+        "bar": "Bar",
+        "hotel": "Hotel",
+        "bakery": "Bakery",
+        "foodTruck": "Food Truck",
+        "other": "Other"
+      },
+      "serviceDigital": "Digital",
+      "serviceApparel": "Apparel",
+      "servicePhysical": "Physical"
+    }
+  },
+  "wholesale": {
+    "gate": {
+      "overline": "Wholesale Portal",
+      "heading": "Authorized distributors only.",
+      "body": "Enter the passcode from your Madeira Originals distributor card.",
+      "placeholder": "Passcode",
+      "submit": "Enter portal",
+      "checking": "Checking…",
+      "invalid": "Invalid passcode."
+    },
+    "overline": "Wholesale Distribution",
+    "heading": "Bulk pricing, white-label, sticker packs.",
+    "sub": "Three lines for partners and distributors. All orders flow through the studio production queue in São Vicente.",
+    "signOut": "Sign out",
+    "sections": {
+      "corner": {
+        "title": "Premium Corner Line",
+        "body": "Core Madeira Originals tees, bulk pricing tiers."
+      },
+      "whiteLabel": {
+        "title": "White-Label Manufacturing",
+        "body": "Custom design and DTF printing for souvenir shops — your branding, our production."
+      },
+      "uvdtf": {
+        "title": "UV DTF Merch",
+        "body": "Bulk waterproof sticker packs. Mix designs, low minimums."
+      }
+    },
+    "tiers": "Tiers",
+    "inquire": "Inquire about this line",
+    "form": {
+      "heading": "Bulk order inquiry",
+      "sub": "Tell us volume, product line, and delivery window. We route it to the production queue.",
+      "business": "Business name *",
+      "contact": "Contact name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "lines": "Product lines * (select all that apply)",
+      "volume": "Estimated volume",
+      "window": "Delivery window",
+      "notes": "Notes",
+      "submit": "Submit inquiry",
+      "sending": "Sending…",
+      "done": "Inquiry received.",
+      "doneBody": "We'll be in touch within one working day."
+    }
+  }
+}
