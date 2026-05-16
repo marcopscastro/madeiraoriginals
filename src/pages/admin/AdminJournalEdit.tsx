@@ -67,12 +67,17 @@ const AdminJournalEdit = () => {
         setForm({
           slug: data.slug,
           title: data.title,
+          title_pt: data.title_pt ?? "",
           excerpt: data.excerpt ?? "",
+          excerpt_pt: data.excerpt_pt ?? "",
           body_md: data.body_md,
+          body_md_pt: data.body_md_pt ?? "",
           cover_url: data.cover_url ?? "",
           tags: (data.tags ?? []).join(", "),
           seo_title: data.seo_title ?? "",
+          seo_title_pt: data.seo_title_pt ?? "",
           seo_description: data.seo_description ?? "",
+          seo_description_pt: data.seo_description_pt ?? "",
           published: data.published,
         });
       }
