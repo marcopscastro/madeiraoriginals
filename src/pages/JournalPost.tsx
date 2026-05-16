@@ -90,7 +90,7 @@ const JournalPost = () => {
       <Header />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <nav className="font-heading text-xs uppercase tracking-widest text-muted-foreground mb-6">
-          <Link to="/journal" className="hover:text-foreground">Journal</Link>
+          <Link to="/journal" className="hover:text-foreground">{t("journal.breadcrumb")}</Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">{article.title}</span>
         </nav>
@@ -131,7 +131,7 @@ const JournalPost = () => {
             to="/shop"
             className="inline-flex items-center justify-center bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
           >
-            Shop the Collection
+            {t("journal.ctaShop")}
           </Link>
         </div>
       </main>
