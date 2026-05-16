@@ -47,10 +47,10 @@ const Journal = () => {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center mb-12">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-            Journal
+            {t("journal.overline")}
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground">
-            Stories from Madeira.
+            {t("journal.heading")}
           </h1>
         </div>
 
@@ -66,7 +66,7 @@ const Journal = () => {
                     : "border-foreground/20 text-foreground hover:border-foreground"
                 }`}
               >
-                {c === "all" ? "All" : c}
+                {c === "all" ? t("journal.all") : c}
               </button>
             ))}
           </div>
@@ -88,7 +88,7 @@ const Journal = () => {
           </div>
         ) : filtered.length === 0 ? (
           <p className="text-center font-body text-muted-foreground py-16">
-            No articles in this category yet.
+            {t("journal.empty")}
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
