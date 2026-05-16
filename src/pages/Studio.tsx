@@ -82,7 +82,7 @@ const Studio = () => {
               {t("studio.trustedBy")}
             </p>
             <p className="font-body text-base md:text-lg opacity-95">
-              Restaurants · Hotels · Cafés · Bars · Bakeries · Food Trucks · Local brands
+              {t("studio.trustedList")}
             </p>
           </div>
         </section>
