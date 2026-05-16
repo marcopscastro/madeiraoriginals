@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { productAlt } from "@/lib/productAlt";
 
 type Img = { url: string; altText?: string | null };
 
@@ -107,7 +108,7 @@ const ImageLightbox = ({ images, startIndex, open, onClose, title }: Props) => {
       >
         <img
           src={img.url}
-          alt={img.altText || title || t("lightbox.fallbackAlt")}
+          alt={title ? productAlt({ title, shopifyAlt: img.altText, index, total: images.length }) : (img.altText || t("lightbox.fallbackAlt"))}
           className="max-w-full max-h-full object-contain select-none"
           draggable={false}
         />

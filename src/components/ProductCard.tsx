@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { formatPrice, ShopifyProduct } from "@/lib/shopify";
+import { productAlt } from "@/lib/productAlt";
 import { useProductRating } from "@/components/ProductReviews";
 
 const ProductCard = ({ product }: { product: ShopifyProduct }) => {
@@ -19,7 +20,7 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
           <>
             <img
               src={image.url}
-              alt={image.altText || node.title}
+              alt={productAlt({ title: node.title, shopifyAlt: image.altText, index: 0, total: node.images.edges.length })}
               loading="lazy"
               className={`w-full h-full object-cover transition-opacity duration-500 ${hoverImage ? "group-hover:opacity-0" : ""}`}
             />

@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
+import { productAlt } from "@/lib/productAlt";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
@@ -292,7 +293,12 @@ const ProductDetail = () => {
                 >
                   <img
                     src={currentImage.url}
-                    alt={currentImage.altText || product.title}
+                    alt={productAlt({
+                      title: product.title,
+                      shopifyAlt: currentImage.altText,
+                      index: selectedImage,
+                      total: images.length,
+                    })}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -316,7 +322,16 @@ const ProductDetail = () => {
                         : "border-transparent hover:border-muted-foreground/30"
                     }`}
                   >
-                    <img src={img.url} alt="" className="w-full h-full object-cover" />
+                    <img
+                      src={img.url}
+                      alt={productAlt({
+                        title: product.title,
+                        shopifyAlt: img.altText,
+                        index: i,
+                        total: images.length,
+                      })}
+                      className="w-full h-full object-cover"
+                    />
                   </button>
                 ))}
               </div>

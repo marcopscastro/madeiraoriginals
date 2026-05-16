@@ -69,7 +69,7 @@ const SearchOverlay = ({ open, onClose }: SearchOverlayProps) => {
               >
                 <div className="w-14 h-14 bg-muted flex-shrink-0 overflow-hidden">
                   {image ? (
-                    <img src={image.url} alt={p.node.title} className="w-full h-full object-cover" />
+                    <img src={image.url} alt={image.altText || `${p.node.title} — Madeira Originals premium streetwear`} className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-muted-foreground text-[10px] font-heading uppercase">
                       {t("search.soon")}
