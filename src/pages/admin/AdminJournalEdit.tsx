@@ -153,14 +153,20 @@ const AdminJournalEdit = () => {
         </h1>
 
         <div className="space-y-5">
-          <Field label="Title">
+          <Field label="Title (EN)">
             <input className={inp} value={form.title} onChange={(e) => update("title", e.target.value)} onBlur={() => !form.slug && update("slug", slugify(form.title))} />
+          </Field>
+          <Field label="Título (PT)" hint="Leave empty to fall back to EN">
+            <input className={inp} value={form.title_pt} onChange={(e) => update("title_pt", e.target.value)} />
           </Field>
           <Field label="Slug" hint="URL: /journal/{slug}">
             <input className={inp} value={form.slug} onChange={(e) => update("slug", slugify(e.target.value))} />
           </Field>
-          <Field label="Excerpt">
+          <Field label="Excerpt (EN)">
             <textarea rows={2} className={inp} value={form.excerpt} onChange={(e) => update("excerpt", e.target.value)} />
+          </Field>
+          <Field label="Resumo (PT)" hint="Leave empty to fall back to EN">
+            <textarea rows={2} className={inp} value={form.excerpt_pt} onChange={(e) => update("excerpt_pt", e.target.value)} />
           </Field>
           <Field label="Cover image">
             <div className="flex items-center gap-3">
@@ -175,7 +181,7 @@ const AdminJournalEdit = () => {
           <Field label="Tags" hint="Comma separated">
             <input className={inp} value={form.tags} onChange={(e) => update("tags", e.target.value)} />
           </Field>
-          <Field label="Body (Markdown)">
+          <Field label="Body — Markdown (EN)">
             <div className="flex justify-end mb-2">
               <button onClick={() => setPreview((p) => !p)} className="font-heading text-[11px] uppercase tracking-widest text-muted-foreground hover:text-foreground">
                 {preview ? "Edit" : "Preview"}
@@ -189,11 +195,20 @@ const AdminJournalEdit = () => {
               <textarea rows={20} className={`${inp} font-mono text-sm`} value={form.body_md} onChange={(e) => update("body_md", e.target.value)} />
             )}
           </Field>
-          <Field label="SEO title">
+          <Field label="Corpo — Markdown (PT)" hint="Leave empty to fall back to EN">
+            <textarea rows={20} className={`${inp} font-mono text-sm`} value={form.body_md_pt} onChange={(e) => update("body_md_pt", e.target.value)} />
+          </Field>
+          <Field label="SEO title (EN)">
             <input className={inp} value={form.seo_title} onChange={(e) => update("seo_title", e.target.value)} />
           </Field>
-          <Field label="SEO description">
+          <Field label="SEO title (PT)">
+            <input className={inp} value={form.seo_title_pt} onChange={(e) => update("seo_title_pt", e.target.value)} />
+          </Field>
+          <Field label="SEO description (EN)">
             <textarea rows={2} className={inp} value={form.seo_description} onChange={(e) => update("seo_description", e.target.value)} />
+          </Field>
+          <Field label="SEO description (PT)">
+            <textarea rows={2} className={inp} value={form.seo_description_pt} onChange={(e) => update("seo_description_pt", e.target.value)} />
           </Field>
           <label className="flex items-center gap-3 font-heading text-sm font-semibold uppercase tracking-wide">
             <input type="checkbox" checked={form.published} onChange={(e) => update("published", e.target.checked)} />
