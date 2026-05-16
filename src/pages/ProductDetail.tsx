@@ -241,7 +241,7 @@ const ProductDetail = () => {
 
   const seoDescription =
     truncate(plainDescription, 160) ||
-    `Premium ${product.title} inspired by Madeira Island culture and identity.`;
+    t("product.seoFallback", { title: product.title });
 
   return (
     <div className="min-h-screen bg-background">
@@ -256,9 +256,9 @@ const ProductDetail = () => {
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-28 md:pb-16">
         <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-foreground">Home</Link>
+          <Link to="/" className="hover:text-foreground">{t("product.home")}</Link>
           <span>/</span>
-          <Link to="/shop" className="hover:text-foreground">Shop</Link>
+          <Link to="/shop" className="hover:text-foreground">{t("product.shop")}</Link>
           <span>/</span>
           <span className="text-foreground">{product.title}</span>
         </nav>
@@ -271,7 +271,7 @@ const ProductDetail = () => {
                   type="button"
                   onClick={() => setLightboxOpen(true)}
                   className="w-full h-full block cursor-zoom-in"
-                  aria-label="Zoom image"
+                  aria-label={t("product.zoomImage")}
                 >
                   <img
                     src={currentImage.url}
@@ -281,7 +281,7 @@ const ProductDetail = () => {
                 </button>
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
-                  Coming Soon
+                  {t("product.comingSoon")}
                 </div>
               )}
             </div>
@@ -291,7 +291,7 @@ const ProductDetail = () => {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    aria-label={`View image ${i + 1} of ${images.length}`}
+                    aria-label={t("product.thumbAria", { i: i + 1, total: images.length })}
                     aria-current={selectedImage === i}
                     className={`w-20 h-20 overflow-hidden bg-muted border-2 transition-colors ${
                       selectedImage === i
@@ -322,11 +322,11 @@ const ProductDetail = () => {
                   {"★".repeat(Math.round(rating.avg))}
                   <span className="text-foreground/20">{"★".repeat(5 - Math.round(rating.avg))}</span>
                 </span>
-                {rating.avg.toFixed(1)} · {rating.count} review{rating.count === 1 ? "" : "s"}
+                {rating.avg.toFixed(1)} · {rating.count} {rating.count === 1 ? t("product.reviewsOne") : t("product.reviewsOther")}
               </a>
             )}
             <p className="mt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              ✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping
+              {t("product.tagline")}
             </p>
             {sanitizedDescription ? (
               <div
