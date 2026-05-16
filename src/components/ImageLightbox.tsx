@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { productAlt } from "@/lib/productAlt";
 
 type Img = { url: string; altText?: string | null };
 
