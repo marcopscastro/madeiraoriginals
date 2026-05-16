@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import DOMPurify from "dompurify";
 import Header from "@/components/Header";
@@ -18,6 +19,7 @@ const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*t
 const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
 
 const ProductDetail = () => {
+  const { t } = useTranslation();
   const { handle } = useParams<{ handle: string }>();
   const { data: product, isLoading } = useProductByHandle(handle);
   const addItem = useCartStore((s) => s.addItem);
