@@ -8,7 +8,8 @@ import PageSEO from "@/components/PageSEO";
 import { supabase } from "@/integrations/supabase/client";
 
 const Journal = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isPt = i18n.language.startsWith("pt");
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get("category") ?? "all";
 
@@ -17,7 +18,7 @@ const Journal = () => {
     queryFn: async () => {
       const { data } = await supabase
         .from("articles")
-        .select("slug,title,excerpt,published_at,cover_url,tags")
+        .select("slug,title,title_pt,excerpt,excerpt_pt,published_at,cover_url,tags")
         .eq("published", true)
         .order("published_at", { ascending: false });
       return data ?? [];
