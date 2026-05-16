@@ -56,11 +56,17 @@ const JournalPost = () => {
     );
   }
 
+  const title = (isPt && article.title_pt) || article.title;
+  const excerpt = (isPt && article.excerpt_pt) || article.excerpt;
+  const bodyMd = (isPt && article.body_md_pt) || article.body_md;
+  const seoTitle = (isPt && article.seo_title_pt) || article.seo_title;
+  const seoDescription = (isPt && article.seo_description_pt) || article.seo_description;
+
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
-    description: article.excerpt ?? undefined,
+    headline: title,
+    description: excerpt ?? undefined,
     image: article.cover_url ?? undefined,
     datePublished: article.published_at ?? article.created_at,
     dateModified: article.updated_at,
@@ -75,15 +81,15 @@ const JournalPost = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Journal", item: `${SITE_URL}/journal` },
-      { "@type": "ListItem", position: 3, name: article.title, item: `${SITE_URL}/journal/${article.slug}` },
+      { "@type": "ListItem", position: 3, name: title, item: `${SITE_URL}/journal/${article.slug}` },
     ],
   };
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={article.seo_title ?? article.title}
-        description={article.seo_description ?? article.excerpt ?? undefined}
+        title={seoTitle ?? title}
+        description={seoDescription ?? excerpt ?? undefined}
         path={`/journal/${article.slug}`}
         type="article"
         jsonLd={[articleLd, breadcrumbLd]}
@@ -93,7 +99,7 @@ const JournalPost = () => {
         <nav className="font-heading text-xs uppercase tracking-widest text-muted-foreground mb-6">
           <Link to="/journal" className="hover:text-foreground">{t("journal.breadcrumb")}</Link>
           <span className="mx-2">/</span>
-          <span className="text-foreground">{article.title}</span>
+          <span className="text-foreground">{title}</span>
         </nav>
 
         <header className="mb-10">
@@ -103,11 +109,11 @@ const JournalPost = () => {
             </p>
           )}
           <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.1]">
-            {article.title}
+            {title}
           </h1>
-          {article.excerpt && (
+          {excerpt && (
             <p className="mt-5 font-body text-lg text-muted-foreground leading-relaxed">
-              {article.excerpt}
+              {excerpt}
             </p>
           )}
         </header>
@@ -115,7 +121,7 @@ const JournalPost = () => {
         {article.cover_url && (
           <img
             src={article.cover_url}
-            alt={article.title}
+            alt={title}
             className="w-full aspect-[16/9] object-cover mb-10"
             loading="eager"
             decoding="async"
@@ -124,7 +130,7 @@ const JournalPost = () => {
         )}
 
         <div className="prose-editorial">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body_md}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{bodyMd}</ReactMarkdown>
         </div>
 
         <div className="mt-16 pt-8 border-t border-foreground/10 text-center">
