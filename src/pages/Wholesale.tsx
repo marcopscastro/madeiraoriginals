@@ -61,13 +61,13 @@ const Wholesale = () => {
             <div className="border border-foreground/20">
               <div className="grid grid-cols-3 bg-foreground text-background font-heading text-[11px] font-bold uppercase tracking-widest">
                 <div className="px-4 py-3">{t("wholesale.tiers")}</div>
-                <div className="px-4 py-3">Qty</div>
-                <div className="px-4 py-3">Price</div>
+                <div className="px-4 py-3">{t("wholesale.tableQty")}</div>
+                <div className="px-4 py-3">{t("wholesale.tablePrice")}</div>
               </div>
               {tiers.map((tier, i) => (
                 <div key={tier.qty} className="grid grid-cols-3 border-t border-foreground/15 font-body text-sm">
                   <div className="px-4 py-3 font-heading text-xs uppercase tracking-widest text-primary">
-                    Tier {i + 1}
+                    {t("wholesale.tierLabel", { n: i + 1 })}
                   </div>
                   <div className="px-4 py-3">{tier.qty}</div>
                   <div className="px-4 py-3">{tier.price}</div>

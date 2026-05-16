@@ -6,6 +6,11 @@ import { supabase } from "@/integrations/supabase/client";
 
 const LINES = ["Corner Line tees", "White-label DTF", "UV DTF stickers"] as const;
 type LineKey = (typeof LINES)[number];
+const LINE_I18N: Record<LineKey, string> = {
+  "Corner Line tees": "wholesale.form.lineCorner",
+  "White-label DTF": "wholesale.form.lineWhiteLabel",
+  "UV DTF stickers": "wholesale.form.lineUv",
+};
 
 const schema = z.object({
   business_name: z.string().trim().min(2).max(120),
@@ -98,14 +103,14 @@ const WholesaleInquiryForm = ({ defaultLine }: { defaultLine?: LineKey }) => {
                 onChange={() => toggleLine(l)}
                 className="h-4 w-4 accent-primary"
               />
-              {l}
+              {t(LINE_I18N[l])}
             </label>
           ))}
         </div>
       </div>
 
-      <Field label={t("wholesale.form.volume")} value={form.estimated_volume} onChange={(v) => update("estimated_volume", v)} placeholder="e.g. 250 units" />
-      <Field label={t("wholesale.form.window")} value={form.delivery_window} onChange={(v) => update("delivery_window", v)} placeholder="e.g. 4-6 weeks" />
+      <Field label={t("wholesale.form.volume")} value={form.estimated_volume} onChange={(v) => update("estimated_volume", v)} placeholder={t("wholesale.form.volumeHint")} />
+      <Field label={t("wholesale.form.window")} value={form.delivery_window} onChange={(v) => update("delivery_window", v)} placeholder={t("wholesale.form.windowHint")} />
 
       <div className="sm:col-span-2">
         <label className="font-heading text-xs font-bold uppercase tracking-widest mb-2 block">

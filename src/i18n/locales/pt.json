@@ -86,7 +86,8 @@
       "serviceDigital": "Digital",
       "serviceApparel": "Vestuário",
       "servicePhysical": "Físico"
-    }
+    },
+    "trustedList": "Restaurantes · Hotéis · Cafés · Bares · Pastelarias · Food Trucks · Marcas locais"
   },
   "wholesale": {
     "gate": {
@@ -132,8 +133,16 @@
       "submit": "Submeter pedido",
       "sending": "A enviar…",
       "done": "Pedido recebido.",
-      "doneBody": "Entraremos em contacto em um dia útil."
-    }
+      "doneBody": "Entraremos em contacto em um dia útil.",
+      "volumeHint": "ex.: 250 unidades",
+      "windowHint": "ex.: 4-6 semanas",
+      "lineCorner": "T-shirts Corner Line",
+      "lineWhiteLabel": "DTF white-label",
+      "lineUv": "Autocolantes UV DTF"
+    },
+    "tableQty": "Qtd",
+    "tablePrice": "Preço",
+    "tierLabel": "Escalão {{n}}"
   },
   "shop": {
     "overline": "Colecção",
@@ -283,9 +292,18 @@
     "headingB": "Madeira, traduzida como deve ser.",
     "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade madeirense autêntica ao streetwear moderno e vestuário personalizado. Pegamos nas paisagens, no humor, nas tradições, coordenadas, texturas e detalhes culturais da ilha — e traduzimo-los em desenhos limpos, vestíveis e premium.",
     "pillars": [
-      { "title": "Herança da Ilha", "body": "Enraizado na cultura, natureza, língua, humor e identidade local da Madeira." },
-      { "title": "Streetwear Moderno", "body": "Tipografia limpa, vestuário pesado, gráficos minimalistas, layouts premium." },
-      { "title": "Qualidade de Produção", "body": "Construído no nosso próprio estúdio técnico: DTF de alta resolução, UV DTF e vestuário personalizado." }
+      {
+        "title": "Herança da Ilha",
+        "body": "Enraizado na cultura, natureza, língua, humor e identidade local da Madeira."
+      },
+      {
+        "title": "Streetwear Moderno",
+        "body": "Tipografia limpa, vestuário pesado, gráficos minimalistas, layouts premium."
+      },
+      {
+        "title": "Qualidade de Produção",
+        "body": "Construído no nosso próprio estúdio técnico: DTF de alta resolução, UV DTF e vestuário personalizado."
+      }
     ],
     "imageAlt": "Adolescente madeirense com a t-shirt 'Madeira Über' da Madeira Originals numa calçada do Funchal"
   },
@@ -306,10 +324,22 @@
     "headingA": "Madeira,",
     "headingB": "reinterpretada.",
     "items": [
-      { "title": "Herança Contemporânea", "body": "Detalhes tradicionais, referências em azulejo, coordenadas e símbolos da ilha redesenhados para vestuário moderno." },
-      { "title": "Humor Local Elevado", "body": "Poncha, bolo do caco, expressões e piadas internas tratados com a seriedade de uma marca premium." },
-      { "title": "Topográfico & Natureza", "body": "Linhas de montanha, levadas, costas e texturas vulcânicas traduzidas em gráficos limpos." },
-      { "title": "Técnico / Performance", "body": "Layouts orientados por dados, fichas técnicas, sistemas de patrocínio e gráficos inspirados em ralis." }
+      {
+        "title": "Herança Contemporânea",
+        "body": "Detalhes tradicionais, referências em azulejo, coordenadas e símbolos da ilha redesenhados para vestuário moderno."
+      },
+      {
+        "title": "Humor Local Elevado",
+        "body": "Poncha, bolo do caco, expressões e piadas internas tratados com a seriedade de uma marca premium."
+      },
+      {
+        "title": "Topográfico & Natureza",
+        "body": "Linhas de montanha, levadas, costas e texturas vulcânicas traduzidas em gráficos limpos."
+      },
+      {
+        "title": "Técnico / Performance",
+        "body": "Layouts orientados por dados, fichas técnicas, sistemas de patrocínio e gráficos inspirados em ralis."
+      }
     ]
   },
   "diaspora": {
@@ -349,10 +379,22 @@
   "collectionsGrid": {
     "heading": "Colecções em Destaque",
     "items": [
-      { "label": "T-Shirts", "desc": "T-shirts pesadas com gráficos enraizados na ilha" },
-      { "label": "Hoodies", "desc": "Peso atlântico, cortes do dia a dia" },
-      { "label": "Acessórios", "desc": "Sacos, bonés, essenciais da ilha" },
-      { "label": "Autocolantes", "desc": "Vinil da ilha" }
+      {
+        "label": "T-Shirts",
+        "desc": "T-shirts pesadas com gráficos enraizados na ilha"
+      },
+      {
+        "label": "Hoodies",
+        "desc": "Peso atlântico, cortes do dia a dia"
+      },
+      {
+        "label": "Acessórios",
+        "desc": "Sacos, bonés, essenciais da ilha"
+      },
+      {
+        "label": "Autocolantes",
+        "desc": "Vinil da ilha"
+      }
     ]
   },
   "productionStudioPreview": {
@@ -361,11 +403,26 @@
     "headingB": "Feito na Madeira.",
     "body": "Vestuário personalizado, gang sheets DTF, autocolantes UV DTF e soluções técnicas de impressão para marcas, empresas, restaurantes, equipas e criadores.",
     "services": [
-      { "label": "Impressão de Vestuário Personalizado", "anchor": "custom-apparel" },
-      { "label": "Gang Sheets DTF", "anchor": "dtf" },
-      { "label": "Autocolantes UV DTF", "anchor": "uv-dtf" },
-      { "label": "Merchandise Empresarial", "anchor": "business-merch" },
-      { "label": "Ralis & Equipas de Performance", "anchor": "rally" }
+      {
+        "label": "Impressão de Vestuário Personalizado",
+        "anchor": "custom-apparel"
+      },
+      {
+        "label": "Gang Sheets DTF",
+        "anchor": "dtf"
+      },
+      {
+        "label": "Autocolantes UV DTF",
+        "anchor": "uv-dtf"
+      },
+      {
+        "label": "Merchandise Empresarial",
+        "anchor": "business-merch"
+      },
+      {
+        "label": "Ralis & Equipas de Performance",
+        "anchor": "rally"
+      }
     ],
     "ctaView": "Ver Serviços de Produção",
     "ctaQuote": "Pedir Orçamento",
@@ -382,12 +439,30 @@
     "heroAlt": "T-shirts pesadas em cru e marinho dobradas junto a buganvílias pela Madeira Originals",
     "saoVicenteAlt": "Falésias atlânticas de São Vicente, Madeira",
     "sections": [
-      { "h": "Quem somos", "p": "A Madeira Originals é uma marca premium de streetwear e vestuário personalizado nascida em São Vicente, Madeira. Sob a filosofia Inspirada na Madeira. Desenhada para o mundo, unimos a herança profunda da ilha à moda global contemporânea." },
-      { "h": "Porque existimos", "p": "Criámos a Madeira Originals porque a Madeira merece mais do que souvenirs genéricos. A nossa ilha tem o seu próprio humor, textura, paisagens, língua, tradições, diáspora e identidade visual. Traduzimos isso em vestuário moderno e design com qualidade de produção." },
-      { "h": "0% Tourist Trap", "p": "O nosso padrão é simples: sem clichés, sem gráficos preguiçosos, sem produtos turísticos descartáveis. Cada desenho tem de parecer autêntico da Madeira e vestível em qualquer lugar." },
-      { "h": "Vestuário de Retalho", "p": "Colecções originais inspiradas na natureza, cultura e identidade quotidiana da Madeira — algodão pesado, acabamentos premium, gráficos editoriais." },
-      { "h": "Nascida em São Vicente", "p": "A Madeira Originals começou em São Vicente, na costa norte da Madeira — um lugar moldado por montanhas, mar, clima, tradição e cultura de trabalho." },
-      { "h": "Desenhada para o mundo", "p": "A nossa roupa deve sentir-se tão natural no Funchal como em Lisboa, Londres, Jersey ou em qualquer lugar onde a diáspora madeirense viva." }
+      {
+        "h": "Quem somos",
+        "p": "A Madeira Originals é uma marca premium de streetwear e vestuário personalizado nascida em São Vicente, Madeira. Sob a filosofia Inspirada na Madeira. Desenhada para o mundo, unimos a herança profunda da ilha à moda global contemporânea."
+      },
+      {
+        "h": "Porque existimos",
+        "p": "Criámos a Madeira Originals porque a Madeira merece mais do que souvenirs genéricos. A nossa ilha tem o seu próprio humor, textura, paisagens, língua, tradições, diáspora e identidade visual. Traduzimos isso em vestuário moderno e design com qualidade de produção."
+      },
+      {
+        "h": "0% Tourist Trap",
+        "p": "O nosso padrão é simples: sem clichés, sem gráficos preguiçosos, sem produtos turísticos descartáveis. Cada desenho tem de parecer autêntico da Madeira e vestível em qualquer lugar."
+      },
+      {
+        "h": "Vestuário de Retalho",
+        "p": "Colecções originais inspiradas na natureza, cultura e identidade quotidiana da Madeira — algodão pesado, acabamentos premium, gráficos editoriais."
+      },
+      {
+        "h": "Nascida em São Vicente",
+        "p": "A Madeira Originals começou em São Vicente, na costa norte da Madeira — um lugar moldado por montanhas, mar, clima, tradição e cultura de trabalho."
+      },
+      {
+        "h": "Desenhada para o mundo",
+        "p": "A nossa roupa deve sentir-se tão natural no Funchal como em Lisboa, Londres, Jersey ou em qualquer lugar onde a diáspora madeirense viva."
+      }
     ],
     "newsletterHeading": "Mantém-te perto da ilha.",
     "newsletterBody": "Acesso antecipado a novos lançamentos, atualizações de produção e histórias da Madeira."
@@ -408,22 +483,60 @@
     "heroAlt": "Costa vulcânica da Ilha da Madeira ao pôr do sol",
     "lead": "A Madeira é um dos lugares mais distintos do Atlântico — vulcânica, marítima, profundamente portuguesa, mas inteiramente sua. É esta a cultura que inspira cada desenho Madeira Originals.",
     "cards": [
-      { "tag": "Paisagem", "title": "Levadas", "body": "Canais de irrigação centenários esculpidos nas falésias. Hoje servem como a rede de caminhadas mais querida da ilha — uma caminhada lenta pela laurissilva ao som da água a correr." },
-      { "tag": "Bebida", "title": "Poncha", "body": "Aguardente de cana, mel e citrinos, misturados num copo com mexelote de madeira. Pede uma em qualquer bar de aldeia e estás a pedir todo o ritual social da ilha." },
-      { "tag": "Ofício", "title": "Bordado da Madeira", "body": "Uma tradição centenária de bordado, ainda produzida na ilha. Os motivos — flora, geometria, paletas contidas — informam discretamente muito do que desenhamos." }
+      {
+        "tag": "Paisagem",
+        "title": "Levadas",
+        "body": "Canais de irrigação centenários esculpidos nas falésias. Hoje servem como a rede de caminhadas mais querida da ilha — uma caminhada lenta pela laurissilva ao som da água a correr."
+      },
+      {
+        "tag": "Bebida",
+        "title": "Poncha",
+        "body": "Aguardente de cana, mel e citrinos, misturados num copo com mexelote de madeira. Pede uma em qualquer bar de aldeia e estás a pedir todo o ritual social da ilha."
+      },
+      {
+        "tag": "Ofício",
+        "title": "Bordado da Madeira",
+        "body": "Uma tradição centenária de bordado, ainda produzida na ilha. Os motivos — flora, geometria, paletas contidas — informam discretamente muito do que desenhamos."
+      }
     ],
     "readJournal": "Ler o Diário →",
     "longform": [
-      { "h": "Uma ilha vulcânica no meio do Atlântico", "p": ["A Madeira fica a cerca de 1.000 km de Portugal continental e a 500 km da costa africana. A ilha emergiu de vulcões submarinos e a paisagem ainda o mostra — falésias a pique, picos cobertos de nuvens, encostas em socalcos e ribeiras profundas que canalizam a água das montanhas até ao mar.", "Essa geografia molda tudo. Como os madeirenses cultivam. Como constroem. Como comem. Como se deslocam numa ilha onde o vale a seguir pode ser uma hora a descer e a subir."] },
-      { "h": "Identidade atlântica — não mediterrânica", "p": ["A cultura da Madeira é fundamentalmente atlântica. A comida pende mais para o mar do que para o olival. A luz é mais nítida. O tempo muda na mesma hora. A Madeira tem, de certo modo, mais em comum com os Açores e as Canárias do que com Lisboa — e continua, ainda assim, inconfundivelmente portuguesa."] }
+      {
+        "h": "Uma ilha vulcânica no meio do Atlântico",
+        "p": [
+          "A Madeira fica a cerca de 1.000 km de Portugal continental e a 500 km da costa africana. A ilha emergiu de vulcões submarinos e a paisagem ainda o mostra — falésias a pique, picos cobertos de nuvens, encostas em socalcos e ribeiras profundas que canalizam a água das montanhas até ao mar.",
+          "Essa geografia molda tudo. Como os madeirenses cultivam. Como constroem. Como comem. Como se deslocam numa ilha onde o vale a seguir pode ser uma hora a descer e a subir."
+        ]
+      },
+      {
+        "h": "Identidade atlântica — não mediterrânica",
+        "p": [
+          "A cultura da Madeira é fundamentalmente atlântica. A comida pende mais para o mar do que para o olival. A luz é mais nítida. O tempo muda na mesma hora. A Madeira tem, de certo modo, mais em comum com os Açores e as Canárias do que com Lisboa — e continua, ainda assim, inconfundivelmente portuguesa."
+        ]
+      }
     ],
     "traditionsHeading": "Tradições que ainda vivem no dia a dia",
     "traditions": [
-      { "label": "Mercado dos Lavradores", "body": "o mercado de trabalho do Funchal, onde flores, fruta e peixe atlântico ainda chegam diariamente." },
-      { "label": "O carro de cesto", "body": "os trenós de vime do Monte que os locais ainda apelidam, meio a brincar, do \"Uber\" original da Madeira." },
-      { "label": "Poncha", "body": "a bebida tradicional da ilha: aguardente de cana, mel e citrinos, misturados num copo e partilhados." },
-      { "label": "Festa da Flor & Festa do Vinho", "body": "as festas da flor e do vinho que ainda marcam o calendário da ilha." },
-      { "label": "Bordado da Madeira", "body": "o bordado da Madeira, um ofício centenário ainda produzido na ilha." }
+      {
+        "label": "Mercado dos Lavradores",
+        "body": "o mercado de trabalho do Funchal, onde flores, fruta e peixe atlântico ainda chegam diariamente."
+      },
+      {
+        "label": "O carro de cesto",
+        "body": "os trenós de vime do Monte que os locais ainda apelidam, meio a brincar, do \"Uber\" original da Madeira."
+      },
+      {
+        "label": "Poncha",
+        "body": "a bebida tradicional da ilha: aguardente de cana, mel e citrinos, misturados num copo e partilhados."
+      },
+      {
+        "label": "Festa da Flor & Festa do Vinho",
+        "body": "as festas da flor e do vinho que ainda marcam o calendário da ilha."
+      },
+      {
+        "label": "Bordado da Madeira",
+        "body": "o bordado da Madeira, um ofício centenário ainda produzido na ilha."
+      }
     ],
     "diasporaHeading": "Uma diáspora em três continentes",
     "diasporaBody": "Os madeirenses emigram há gerações — África do Sul, Venezuela, Ilhas do Canal, Canadá, Austrália, EUA, Reino Unido. A diáspora mantém viva a cultura madeirense muito para lá da ilha, e está cada vez mais a impulsionar a procura por produtos madeirenses modernos que se sintam enraizados sem serem nostálgicos.",
@@ -449,18 +562,50 @@
     "picksOverline": "Selecção Curada",
     "picksHeading": "Souvenirs da Madeira, prontos para presente, por destinatário.",
     "picks": [
-      { "eyebrow": "Para quem odeia souvenirs", "title": "Uma t-shirt da Madeira que não é tee de turista.", "body": "Algodão pesado, gráficos enraizados na ilha — coordenadas, levadas, humor madeirense. Vestida como deve ser, não dobrada na mala como reflexão tardia.", "cta": "Ver T-Shirts da Madeira" },
-      { "eyebrow": "Para a diáspora", "title": "Uma hoodie da Madeira em peso atlântico.", "body": "Mais grossa que uma memória de férias. A peça que guardas mesmo — feita para os microclimas da Madeira e para todos os invernos da diáspora.", "cta": "Ver Hoodies da Madeira" },
-      { "eyebrow": "Para o dia a dia", "title": "Bonés, sacos & acessórios discretos da ilha.", "body": "Branding editorial. Sem estampas de bandeira, sem galos mascote — só peças bem feitas com Madeira escondida nos detalhes.", "cta": "Ver Acessórios" },
-      { "eyebrow": "Abaixo de €15", "title": "Autocolantes da Madeira — pequenos, duradouros, reais.", "body": "Autocolantes UV DTF die-cut feitos para sobreviver aos ímanes do aeroporto. Coordenadas, micro-ícones, cultura madeirense verdadeira.", "cta": "Ver Autocolantes" }
+      {
+        "eyebrow": "Para quem odeia souvenirs",
+        "title": "Uma t-shirt da Madeira que não é tee de turista.",
+        "body": "Algodão pesado, gráficos enraizados na ilha — coordenadas, levadas, humor madeirense. Vestida como deve ser, não dobrada na mala como reflexão tardia.",
+        "cta": "Ver T-Shirts da Madeira"
+      },
+      {
+        "eyebrow": "Para a diáspora",
+        "title": "Uma hoodie da Madeira em peso atlântico.",
+        "body": "Mais grossa que uma memória de férias. A peça que guardas mesmo — feita para os microclimas da Madeira e para todos os invernos da diáspora.",
+        "cta": "Ver Hoodies da Madeira"
+      },
+      {
+        "eyebrow": "Para o dia a dia",
+        "title": "Bonés, sacos & acessórios discretos da ilha.",
+        "body": "Branding editorial. Sem estampas de bandeira, sem galos mascote — só peças bem feitas com Madeira escondida nos detalhes.",
+        "cta": "Ver Acessórios"
+      },
+      {
+        "eyebrow": "Abaixo de €15",
+        "title": "Autocolantes da Madeira — pequenos, duradouros, reais.",
+        "body": "Autocolantes UV DTF die-cut feitos para sobreviver aos ímanes do aeroporto. Coordenadas, micro-ícones, cultura madeirense verdadeira.",
+        "cta": "Ver Autocolantes"
+      }
     ],
     "guideOverline": "Guia de Compra",
     "guideHeading": "O que comprar na Madeira (e o que evitar).",
     "guide": [
-      { "title": "Evita o aeroporto.", "body": "Os souvenirs do aeroporto do Funchal são feitos para a vista de 20 minutos antes de embarcar — não para guardar. Peças feitas na ilha, por gente da ilha, duram mais." },
-      { "title": "Procura o gentílico.", "body": "‘Madeira’ num íman é geografia. ‘Madeirense’ no desenho — língua, referências, topónimos — é cultura. O segundo envelhece bem." },
-      { "title": "Escolhe peças que usarias em casa.", "body": "O melhor souvenir da Madeira é aquele que comprarias mesmo sem estar de férias. T-shirts premium, hoodies, bonés, sacos — o mesmo padrão do teu guarda-roupa diário." },
-      { "title": "Compra direto, envia para qualquer lado.", "body": "Não precisas de o caber na mala. Enviamos presentes da Madeira para todo o mundo a partir da ilha — Portugal continental, UE, Reino Unido, EUA e mais." }
+      {
+        "title": "Evita o aeroporto.",
+        "body": "Os souvenirs do aeroporto do Funchal são feitos para a vista de 20 minutos antes de embarcar — não para guardar. Peças feitas na ilha, por gente da ilha, duram mais."
+      },
+      {
+        "title": "Procura o gentílico.",
+        "body": "‘Madeira’ num íman é geografia. ‘Madeirense’ no desenho — língua, referências, topónimos — é cultura. O segundo envelhece bem."
+      },
+      {
+        "title": "Escolhe peças que usarias em casa.",
+        "body": "O melhor souvenir da Madeira é aquele que comprarias mesmo sem estar de férias. T-shirts premium, hoodies, bonés, sacos — o mesmo padrão do teu guarda-roupa diário."
+      },
+      {
+        "title": "Compra direto, envia para qualquer lado.",
+        "body": "Não precisas de o caber na mala. Enviamos presentes da Madeira para todo o mundo a partir da ilha — Portugal continental, UE, Reino Unido, EUA e mais."
+      }
     ],
     "stockOverline": "Em Stock",
     "stockHeading": "Presentes da Madeira a enviar hoje.",
@@ -471,11 +616,26 @@
     "faqOverline": "FAQ",
     "faqHeading": "Souvenirs da Madeira — perguntas, respondidas.",
     "faqs": [
-      { "q": "Quais são os melhores souvenirs da Madeira?", "a": "Os melhores souvenirs da Madeira são peças realmente feitas na ilha — streetwear premium (t-shirts, hoodies, bonés da Madeira), poncha e vinho Madeira de produtores locais, bordado de ateliers consagrados do Funchal, e bolo do caco de uma padaria a sério. Esquece os ímanes do aeroporto e os galos." },
-      { "q": "O que comprar na Madeira (e o que evitar)?", "a": "Compra: streetwear e acessórios madeirenses de marcas locais, vinho Madeira de uma adega produtora (Blandy's, D'Oliveiras), poncha de um bar em São Vicente ou Câmara de Lobos e bordado de um atelier credenciado. Evita: o que é vendido em três lojas do aeroporto a três preços diferentes, figurinhas de plástico de folclore, e t-shirts 'I love Madeira'." },
-      { "q": "Quais são bons souvenirs do Funchal?", "a": "No Funchal procura: streetwear de marcas madeirenses (evita as lojas turísticas da marginal), vinho Madeira numa adega de prova em São Pedro ou na Avenida Arriaga, bordado da Bordal ou Patrício & Gouveia na Rua dos Ferreiros, e kits de poncha numa mercearia a sério. Souvenirs do Funchal bem feitos são da ilha, não import-and-print." },
-      { "q": "Posso encomendar souvenirs da Madeira online de fora de Portugal?", "a": "Sim. A Madeira Originals envia presentes e vestuário premium da Madeira para todo o mundo — Portugal continental, UE, Reino Unido, EUA e diáspora. Não precisas de estar na ilha, ou de caber tudo na mala, para comprar como deve ser." },
-      { "q": "O que é um presente típico da Madeira?", "a": "Presentes típicos da Madeira incluem vinho Madeira, poncha, bordado (Bordado da Madeira), obra de vime de Camacha e, mais recentemente, streetwear e acessórios madeirenses modernos. A nova vaga de presentes da Madeira passa ao lado dos clichés de loja de souvenirs em favor de peças que os locais usariam de facto." }
+      {
+        "q": "Quais são os melhores souvenirs da Madeira?",
+        "a": "Os melhores souvenirs da Madeira são peças realmente feitas na ilha — streetwear premium (t-shirts, hoodies, bonés da Madeira), poncha e vinho Madeira de produtores locais, bordado de ateliers consagrados do Funchal, e bolo do caco de uma padaria a sério. Esquece os ímanes do aeroporto e os galos."
+      },
+      {
+        "q": "O que comprar na Madeira (e o que evitar)?",
+        "a": "Compra: streetwear e acessórios madeirenses de marcas locais, vinho Madeira de uma adega produtora (Blandy's, D'Oliveiras), poncha de um bar em São Vicente ou Câmara de Lobos e bordado de um atelier credenciado. Evita: o que é vendido em três lojas do aeroporto a três preços diferentes, figurinhas de plástico de folclore, e t-shirts 'I love Madeira'."
+      },
+      {
+        "q": "Quais são bons souvenirs do Funchal?",
+        "a": "No Funchal procura: streetwear de marcas madeirenses (evita as lojas turísticas da marginal), vinho Madeira numa adega de prova em São Pedro ou na Avenida Arriaga, bordado da Bordal ou Patrício & Gouveia na Rua dos Ferreiros, e kits de poncha numa mercearia a sério. Souvenirs do Funchal bem feitos são da ilha, não import-and-print."
+      },
+      {
+        "q": "Posso encomendar souvenirs da Madeira online de fora de Portugal?",
+        "a": "Sim. A Madeira Originals envia presentes e vestuário premium da Madeira para todo o mundo — Portugal continental, UE, Reino Unido, EUA e diáspora. Não precisas de estar na ilha, ou de caber tudo na mala, para comprar como deve ser."
+      },
+      {
+        "q": "O que é um presente típico da Madeira?",
+        "a": "Presentes típicos da Madeira incluem vinho Madeira, poncha, bordado (Bordado da Madeira), obra de vime de Camacha e, mais recentemente, streetwear e acessórios madeirenses modernos. A nova vaga de presentes da Madeira passa ao lado dos clichés de loja de souvenirs em favor de peças que os locais usariam de facto."
+      }
     ],
     "closingA": "Souvenirs da Madeira,",
     "closingB": "feitos na ilha.",
@@ -496,17 +656,38 @@
     "lanesHeading": "T-shirts, sacos, headwear.",
     "lanesSub": "Uma linha focada de streetwear português. Sem enchimento.",
     "lanes": [
-      { "eyebrow": "T-Shirts", "title": "Tees", "body": "T-shirts pesadas de algodão com gráficos enraizados na ilha — coordenadas, levadas, laurissilva, humor madeirense." },
-      { "eyebrow": "Sacos & Totes", "title": "Sacos", "body": "Sacos e peças de transporte. Branding discreto, feitos para amaciar com o uso." },
-      { "eyebrow": "Headwear", "title": "Bonés & Beanies", "body": "Bonés e beanies em materiais de peso atlântico. Silhuetas modernas, detalhes da ilha." }
+      {
+        "eyebrow": "T-Shirts",
+        "title": "Tees",
+        "body": "T-shirts pesadas de algodão com gráficos enraizados na ilha — coordenadas, levadas, laurissilva, humor madeirense."
+      },
+      {
+        "eyebrow": "Sacos & Totes",
+        "title": "Sacos",
+        "body": "Sacos e peças de transporte. Branding discreto, feitos para amaciar com o uso."
+      },
+      {
+        "eyebrow": "Headwear",
+        "title": "Bonés & Beanies",
+        "body": "Bonés e beanies em materiais de peso atlântico. Silhuetas modernas, detalhes da ilha."
+      }
     ],
     "shopLane": "Ver {{title}} →",
     "beliefsOverline": "Posicionamento",
-    "beliefsHeading": "O que \u201Cstreetwear português\u201D significa para nós.",
+    "beliefsHeading": "O que “streetwear português” significa para nós.",
     "beliefs": [
-      { "title": "Português, mas especificamente madeirense.", "body": "Quase todo o streetwear ‘Portugal’ é Lisboa ou Porto por defeito. Nós desenhamos a partir de São Vicente, na costa norte da Madeira — atlântico, vulcânico, fora do continente. É essa a lente." },
-      { "title": "0% tourist trap.", "body": "Sem estampas de bandeira, sem galos mascote, sem clichés de loja de aeroporto. Os nossos gráficos vêm da ilha real — coordenadas, microclimas, língua, ritual." },
-      { "title": "Desenhado em PT, feito para o mundo.", "body": "As peças são desenhadas na Madeira e enviadas para todo o mundo. Construído para a diáspora, para quem viu a ilha a sério e para quem quer streetwear português que signifique algo." }
+      {
+        "title": "Português, mas especificamente madeirense.",
+        "body": "Quase todo o streetwear ‘Portugal’ é Lisboa ou Porto por defeito. Nós desenhamos a partir de São Vicente, na costa norte da Madeira — atlântico, vulcânico, fora do continente. É essa a lente."
+      },
+      {
+        "title": "0% tourist trap.",
+        "body": "Sem estampas de bandeira, sem galos mascote, sem clichés de loja de aeroporto. Os nossos gráficos vêm da ilha real — coordenadas, microclimas, língua, ritual."
+      },
+      {
+        "title": "Desenhado em PT, feito para o mundo.",
+        "body": "As peças são desenhadas na Madeira e enviadas para todo o mundo. Construído para a diáspora, para quem viu a ilha a sério e para quem quer streetwear português que signifique algo."
+      }
     ],
     "stockOverline": "Em Stock",
     "stockHeading": "A enviar agora a partir da Madeira.",
@@ -518,5 +699,36 @@
     "closingBody": "Desenhado em São Vicente, Madeira. Enviado para Portugal continental, UE, Reino Unido, EUA e diáspora.",
     "closingCtaTees": "Ver T-Shirts",
     "closingCtaBags": "Ver Sacos & Bonés"
+  },
+  "cart": {
+    "title": "Carrinho",
+    "empty": "O teu carrinho está vazio",
+    "continueShopping": "Continuar a comprar",
+    "each": "cada",
+    "soon": "Em breve",
+    "decrease": "Diminuir",
+    "increase": "Aumentar",
+    "remove": "Remover",
+    "freeShippingAway": "Faltam €{{amount}} para portes grátis",
+    "freeShippingUnlocked": "Portes grátis desbloqueados ✦",
+    "subtotal": "Subtotal",
+    "shippingNote": "Portes e impostos calculados na finalização.",
+    "checkout": "Finalizar compra"
+  },
+  "collection": {
+    "home": "Início",
+    "shop": "Loja",
+    "searchPlaceholder": "Procurar",
+    "clearSearch": "Limpar pesquisa",
+    "sortAria": "Ordenar produtos",
+    "sortDefault": "Ordenar por",
+    "sortNameAsc": "Nome: A → Z",
+    "sortPriceAsc": "Preço: do mais baixo",
+    "sortPriceDesc": "Preço: do mais alto",
+    "emptyTitle": "Ainda não há peças nesta coleção.",
+    "emptyBody": "Lançamos novidades regularmente. Vê entretanto a loja completa.",
+    "emptyCta": "Ver tudo",
+    "faq": "FAQ",
+    "faqHeadingSuffix": "— Perguntas, respondidas"
   }
 }
