@@ -41,6 +41,8 @@ const Hero = () => {
         <div className="order-1 md:order-2">
           <img
             src={heroImage}
+            srcSet={`${heroImage800} 800w, ${heroImage} 1200w`}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={t("hero.imageAlt")}
             className="w-full h-auto object-cover"
             width={896}
