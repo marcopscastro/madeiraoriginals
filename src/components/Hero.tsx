@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/hero-shirt-printed.jpg";
+import heroImage from "@/assets/hero-shirt-printed-1200.webp";
+import heroImage800 from "@/assets/hero-shirt-printed-800.webp";
 
 const Hero = () => {
   const { t } = useTranslation();
