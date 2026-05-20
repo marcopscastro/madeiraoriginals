@@ -1,47 +1,59 @@
-## PageSpeed Mobile — 58 → target 90+
+# Add "POS Brasa" Case Study to /studio
 
-Lighthouse flagged 4 things actually moving the needle. Everything else is noise.
+Add a new **Case Study** section on the `/studio` page featuring the POS Brasa system built for Brasa Viva (São Vicente). This becomes the first entry in a reusable "Projects" block, so future case studies can be appended.
 
-### What's slow (and why)
+## Where it goes
 
-| Issue | Impact |
-|---|---|
-| Hero JPG **1.49 MB** at 896×1200 (displayed 665×891) | LCP 11.6s — biggest win |
-| Manifesto JPG **1.44 MB** | Wastes ~1.4 MB on scroll |
-| `/journal/*.jpg` oversized + **no cache headers** | Repeat-visit + LCP cost |
-| Google Fonts CSS **render-blocking 780 ms** | Pushes FCP to 3.9s |
-| LCP image not preloaded → **2.23s "resource load delay"** | Browser waits for JS to discover it |
+Inserted between the **Trusted by** strip and the **Quote form** on `src/pages/Studio.tsx`, under a new section id `#projects`. The Studio hero CTA list stays unchanged.
 
-### Fixes
+## Section structure
 
-**1. Convert bundled hero + manifesto images to WebP + responsive sizes**
-- Add `vite-imagetools` plugin.
-- Re-author `Hero.tsx` and `Manifesto.tsx` to import multiple widths and emit `<img srcset sizes>` with the AVIF/WebP variants. Expected: hero drops from 1.5 MB → ~120 KB at the actual displayed size.
-- Hero gets `fetchpriority="high"` (already there) + new `<link rel="preload" as="image" imagesrcset ...>` in `index.html` so the browser starts the download before parsing JS.
+```text
+┌─ #projects ───────────────────────────────────────────┐
+│  Overline: "Selected Work / Trabalho Selecionado"     │
+│  H2: "Projetos que construímos"                       │
+│                                                       │
+│  ┌─ Case Card: POS Brasa ─────────────────────────┐  │
+│  │  [Image slot — placeholder until screenshots]  │  │
+│  │  Eyebrow: "Brasa Viva · São Vicente · 2025"    │  │
+│  │  H3: "POS Brasa — Sistema de Gestão            │  │
+│  │       para Restauração"                        │  │
+│  │  Intro paragraph (About the project)           │  │
+│  │  Tagline (italic accent)                       │  │
+│  │  Capabilities — 2-column checklist (12 items)  │  │
+│  │  Disclaimer box (muted, bordered)              │  │
+│  └────────────────────────────────────────────────┘  │
+└───────────────────────────────────────────────────────┘
+```
 
-**2. Compress + responsive-size the `/public/journal/*.jpg` previews**
-- Run `sharp` once to emit `.webp` at 800w and 1200w; update `JournalPreview.tsx` and `Journal.tsx` to use them.
-- These are static so we can't set Cache-Control from the app (host config), but cutting size ~60% removes most of the cost anyway.
+Visual language follows existing Studio brutalism: flat, sharp corners, hairline borders (`border-foreground/15`), Fraunces display for H3, Montserrat for eyebrow/labels, Inter for body. No shadows, no rounded CTAs.
 
-**3. Stop fonts from blocking render**
-- Replace the synchronous Google Fonts `<link>` with the `media="print" onload` swap pattern (or a `<link rel="preload" as="style">` + onload). Keeps Fraunces / Montserrat / Inter, but they no longer block FCP.
-- Already have `display=swap` — keep it; this just removes the 780 ms blocking penalty.
+## Content (PT-default, EN translation added)
 
-**4. Don't fire Supabase review queries on the home page**
-- `RelatedProducts` / Bestsellers currently trigger `reviews?select=rating` for each tile during initial render, extending the critical chain to 3.7s. Defer those calls until after first paint (`requestIdleCallback` or move into a `useEffect` that runs after the carousel mounts). Small change, removes 3 round trips from the LCP path.
+**Eyebrow:** Brasa Viva · São Vicente · 2025
+**Title:** POS Brasa — Sistema de Gestão para Restauração
+**Lede:** "Um sistema completo de gestão para restaurantes, churrascarias e cafés, desenhado e construído internamente pela Madeira Originals."
+**About:** "Desenvolvemos o POS Brasa de raiz para responder às necessidades diárias de uma operação de restauração ativa. Não é um produto genérico — é uma ferramenta moldada à mesa, à cozinha e ao balcão, refinada todos os dias em ambiente real."
+**Tagline (chosen):** "Construído à medida, refinado em serviço."
+**Capabilities:** 12 items from the brief (mesas/pedidos, impressão térmica, caixa/MB WAY, correção auditada, ementa+tradução, website multilingue, loja online, offline, desktop Windows, painel, reservas/inventário, etc.).
+**Disclaimer:** Full "Sistema de uso interno…" notice in a muted bordered box.
 
-### Out of scope
-- Shopify CDN images already sized 2048 — would need a srcset overhaul of `ProductCard`. Defer to a follow-up; not needed to hit 90.
-- DOM size / TBT 240ms are fine.
+## Image slot
 
-### Files touched
-- `vite.config.ts` (add `imagetools`)
-- `package.json` (add `vite-imagetools`, `sharp` as devDep)
-- `index.html` (font swap + LCP preload)
-- `src/components/Hero.tsx`, `src/components/Manifesto.tsx`
-- `src/components/JournalPreview.tsx`, `src/pages/Journal.tsx`
-- `src/components/Bestsellers.tsx` / wherever review ratings are fetched
-- new compressed assets under `public/journal/`
+A 4:3 placeholder block with the text "Screenshots em breve / Screenshots coming soon" using `bg-secondary/10` and a thin border. Once the user provides screenshots, swap in an `<img>` (or small gallery) without touching layout.
 
-### Expected result
-LCP 11.6s → ~2.5s, FCP 3.9s → ~1.8s, Performance 58 → ~90.
+## i18n
+
+All new strings added to `src/i18n/locales/pt.json` and `src/i18n/locales/en.json` under a new `studio.projects.posBrasa.*` namespace, plus `studio.projects.overline` / `studio.projects.heading`. EN is a faithful translation; PT is verbatim from the brief.
+
+## Files to touch
+
+- `src/pages/Studio.tsx` — insert new `<section id="projects">` before `#quote`.
+- `src/i18n/locales/pt.json` and `src/i18n/locales/en.json` — add `studio.projects.*` keys.
+- (Optional) anchor link added to Studio hero secondary CTA list if desired — flagged but not required.
+
+## Out of scope
+
+- No new route, no separate `/work` page yet (kept as a section so it's discoverable from the Studio funnel).
+- No CMS — content is hardcoded in i18n. When we add a second project we can refactor into a small array/map.
+- No screenshots wired up until the user uploads them.
