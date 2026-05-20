@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { supabase } from "@/integrations/supabase/client";
+import { journalCoverProps } from "@/lib/journalImages";
 
 const Journal = () => {
   const { t, i18n } = useTranslation();
@@ -93,18 +94,25 @@ const Journal = () => {
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {filtered.map((a) => (
+            {filtered.map((a) => {
+              const cover = journalCoverProps(a.cover_url);
+              return (
               <Link
                 key={a.slug}
                 to={`/journal/${a.slug}`}
                 className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
               >
                 <div className="aspect-[16/10] bg-muted overflow-hidden">
-                  {a.cover_url && (
+                  {cover && (
                     <img
-                      src={a.cover_url}
+                      src={cover.src}
+                      srcSet={cover.srcSet}
+                      sizes="(min-width: 768px) 50vw, 100vw"
                       alt={(isPt && a.title_pt) || a.title}
+                      width={1000}
+                      height={625}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     />
                   )}
@@ -125,7 +133,8 @@ const Journal = () => {
                   )}
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         )}
       </main>

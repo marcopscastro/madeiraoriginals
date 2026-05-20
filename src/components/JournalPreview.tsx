@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { journalCoverProps } from "@/lib/journalImages";
 
 const JournalPreview = () => {
   const { t, i18n } = useTranslation();
@@ -44,6 +45,7 @@ const JournalPreview = () => {
         {articles.map((a) => {
           const title = (isPt && a.title_pt) || a.title;
           const excerpt = (isPt && a.excerpt_pt) || a.excerpt;
+          const cover = journalCoverProps(a.cover_url);
           return (
             <Link
               key={a.slug}
@@ -51,11 +53,16 @@ const JournalPreview = () => {
               className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
             >
               <div className="aspect-[4/3] bg-muted overflow-hidden">
-                {a.cover_url && (
+                {cover && (
                   <img
-                    src={a.cover_url}
+                    src={cover.src}
+                    srcSet={cover.srcSet}
+                    sizes="(min-width: 768px) 33vw, 100vw"
                     alt={title}
+                    width={1000}
+                    height={750}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
                 )}

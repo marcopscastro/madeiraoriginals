@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { journalCoverProps } from "@/lib/journalImages";
 
 const JournalPost = () => {
   const { t, i18n } = useTranslation();
@@ -118,16 +119,21 @@ const JournalPost = () => {
           )}
         </header>
 
-        {article.cover_url && (
-          <img
-            src={article.cover_url}
-            alt={title}
-            className="w-full aspect-[16/9] object-cover mb-10"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-          />
-        )}
+        {(() => {
+          const cover = journalCoverProps(article.cover_url);
+          return cover ? (
+            <img
+              src={cover.src}
+              srcSet={cover.srcSet}
+              sizes="(min-width: 1024px) 800px, 100vw"
+              alt={title}
+              className="w-full aspect-[16/9] object-cover mb-10"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          ) : null;
+        })()}
 
         <div className="prose-editorial">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{bodyMd}</ReactMarkdown>

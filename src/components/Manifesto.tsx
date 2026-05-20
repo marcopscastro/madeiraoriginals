@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import manifestoImg from "@/assets/manifesto-uber-teen.jpg";
+import manifestoImg from "@/assets/manifesto-uber-teen-1200.webp";
+import manifestoImg800 from "@/assets/manifesto-uber-teen-800.webp";
 
 const Manifesto = () => {
   const { t } = useTranslation();
@@ -11,10 +12,13 @@ const Manifesto = () => {
         <div>
           <img
             src={manifestoImg}
+            srcSet={`${manifestoImg800} 800w, ${manifestoImg} 1200w`}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={t("manifesto.imageAlt")}
             width={1280}
             height={960}
             loading="lazy"
+            decoding="async"
             className="w-full h-auto object-cover"
           />
         </div>
