@@ -87,6 +87,70 @@ const Studio = () => {
           </div>
         </section>
 
+        {/* Projects / Case studies */}
+        <section id="projects" className="bg-background border-t border-foreground/10 scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
+              {t("studio.projects.overline")}
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05] max-w-3xl">
+              {t("studio.projects.heading")}
+            </h2>
+
+            <article className="mt-12 border border-foreground/15 bg-background">
+              {/* Image slot — placeholder until screenshots */}
+              <div className="aspect-[4/3] md:aspect-[16/9] w-full bg-secondary/10 border-b border-foreground/15 flex items-center justify-center">
+                <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
+                  {t("studio.projects.imageSoon")}
+                </p>
+              </div>
+
+              <div className="p-6 sm:p-10 md:p-12">
+                <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-accent mb-4">
+                  {t("studio.projects.posBrasa.eyebrow")}
+                </p>
+                <h3 className="font-display text-2xl md:text-4xl font-semibold text-foreground leading-[1.1]">
+                  {t("studio.projects.posBrasa.title")}
+                </h3>
+                <p className="mt-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                  {t("studio.projects.posBrasa.lede")}
+                </p>
+                <p className="mt-4 font-body text-base text-muted-foreground leading-relaxed max-w-3xl">
+                  {t("studio.projects.posBrasa.about")}
+                </p>
+                <p className="mt-6 font-display italic text-xl md:text-2xl text-primary max-w-3xl">
+                  &ldquo;{t("studio.projects.posBrasa.tagline")}&rdquo;
+                </p>
+
+                <div className="mt-10 pt-8 border-t border-foreground/10">
+                  <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6">
+                    {t("studio.projects.posBrasa.capabilitiesHeading")}
+                  </p>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
+                    {(t("studio.projects.posBrasa.capabilities", { returnObjects: true }) as string[]).map((cap, i) => (
+                      <li key={i} className="flex gap-3 font-body text-sm md:text-base text-foreground/90 leading-relaxed">
+                        <span aria-hidden className="font-heading text-accent font-bold shrink-0">→</span>
+                        <span>{cap}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-10 border-l-2 border-accent bg-secondary/5 p-5 md:p-6">
+                  <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-accent mb-2">
+                    {t("studio.projects.posBrasa.disclaimerLabel")}
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    {t("studio.projects.posBrasa.disclaimer")}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+
+
         {/* Quote form */}
         <section id="quote" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 scroll-mt-24">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
