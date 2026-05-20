@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { journalCoverProps } from "@/lib/journalImages";
 
 const JournalPost = () => {
   const { t, i18n } = useTranslation();
