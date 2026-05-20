@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import manifestoImg from "@/assets/manifesto-uber-teen.jpg";
+import manifestoImg from "@/assets/manifesto-uber-teen-1200.webp";
+import manifestoImg800 from "@/assets/manifesto-uber-teen-800.webp";
 
 const Manifesto = () => {
   const { t } = useTranslation();
