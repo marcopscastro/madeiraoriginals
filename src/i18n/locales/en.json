@@ -88,7 +88,35 @@
       "serviceApparel": "Apparel",
       "servicePhysical": "Physical"
     },
-    "trustedList": "Restaurants · Hotels · Cafés · Bars · Bakeries · Food Trucks · Local brands"
+    "trustedList": "Restaurants · Hotels · Cafés · Bars · Bakeries · Food Trucks · Local brands",
+    "projects": {
+      "overline": "Selected Work",
+      "heading": "Projects we've built",
+      "imageSoon": "Screenshots coming soon",
+      "posBrasa": {
+        "eyebrow": "Brasa Viva · São Vicente · 2025",
+        "title": "POS Brasa — Restaurant Management System",
+        "lede": "A complete management system for restaurants, churrascarias and cafés, designed and built in-house by Madeira Originals. Built for the real pace of service: fast, reliable, and shaped around how a Madeiran house actually works.",
+        "about": "We developed POS Brasa from the ground up to meet the daily needs of a live restaurant operation. It's not a generic product — it's a tool shaped at the table, in the kitchen and at the counter, refined every day in real service.",
+        "tagline": "Built bespoke, refined in service.",
+        "capabilitiesHeading": "Capabilities",
+        "capabilities": [
+          "Real-time table and order management, synced across waitstaff, kitchen, grill and bar",
+          "Automatic thermal printing for kitchen, bar, grill tickets and bills (80mm / 58mm)",
+          "Cash and payments — cash, card, MB WAY and split payments",
+          "Audited bill corrections with full change history",
+          "Menu management with categories, options, VIP pricing and automatic translation",
+          "Integrated multilingual website (PT / EN / FR) with an always-updated public menu",
+          "Online store with checkout integration and made-to-order production",
+          "Robust offline mode — keeps working even when the internet drops",
+          "Desktop application (Windows) for POS terminals, with native printing and cash drawer",
+          "Management dashboard with sales, dish popularity, expenses and daily reports",
+          "Reservations, expenses, inventory and suppliers in one place"
+        ],
+        "disclaimerLabel": "Important notice",
+        "disclaimer": "Internal-use system. POS Brasa is a solution developed for in-house use in our own restaurants and cafés. It is not certified by the Portuguese Tax Authority (AT) and therefore does not replace a certified invoicing program for issuing official invoices. All documents produced by the system are considered internal management documents."
+      }
+    }
   },
   "wholesale": {
     "gate": {
