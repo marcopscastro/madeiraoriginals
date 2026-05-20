@@ -12,10 +12,13 @@ const Manifesto = () => {
         <div>
           <img
             src={manifestoImg}
+            srcSet={`${manifestoImg800} 800w, ${manifestoImg} 1200w`}
+            sizes="(min-width: 768px) 50vw, 100vw"
             alt={t("manifesto.imageAlt")}
             width={1280}
             height={960}
             loading="lazy"
+            decoding="async"
             className="w-full h-auto object-cover"
           />
         </div>
