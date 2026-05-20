@@ -133,7 +133,8 @@ const Journal = () => {
                   )}
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         )}
       </main>
