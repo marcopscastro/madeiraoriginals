@@ -88,7 +88,35 @@
       "serviceApparel": "Vestuário",
       "servicePhysical": "Físico"
     },
-    "trustedList": "Restaurantes · Hotéis · Cafés · Bares · Pastelarias · Food Trucks · Marcas locais"
+    "trustedList": "Restaurantes · Hotéis · Cafés · Bares · Pastelarias · Food Trucks · Marcas locais",
+    "projects": {
+      "overline": "Trabalho Selecionado",
+      "heading": "Projetos que construímos",
+      "imageSoon": "Screenshots em breve",
+      "posBrasa": {
+        "eyebrow": "Brasa Viva · São Vicente · 2025",
+        "title": "POS Brasa — Sistema de Gestão para Restauração",
+        "lede": "Um sistema completo de gestão para restaurantes, churrascarias e cafés, desenhado e construído internamente pela Madeira Originals. Pensado para o ritmo real do serviço: rápido, fiável e adaptado à forma como uma casa madeirense trabalha.",
+        "about": "Desenvolvemos o POS Brasa de raiz para responder às necessidades diárias de uma operação de restauração ativa. Não é um produto genérico — é uma ferramenta moldada à mesa, à cozinha e ao balcão, refinada todos os dias em ambiente real.",
+        "tagline": "Construído à medida, refinado em serviço.",
+        "capabilitiesHeading": "Capacidades",
+        "capabilities": [
+          "Gestão de mesas e pedidos em tempo real, com sincronização entre empregados, cozinha, churrasco e bar",
+          "Impressão térmica automática para talões de cozinha, bar, churrasco e contas (80mm / 58mm)",
+          "Caixa e pagamentos — numerário, multibanco, MB WAY e pagamentos mistos",
+          "Correção de contas auditada com registo completo de alterações",
+          "Gestão de ementa com categorias, opções, preços VIP e tradução automática",
+          "Website integrado multilingue (PT / EN / FR) com ementa pública sempre atualizada",
+          "Loja online com integração de checkout e produção sob encomenda",
+          "Modo offline robusto — continua a funcionar mesmo com falhas de internet",
+          "Aplicação desktop (Windows) para postos de caixa, com impressão nativa e gaveta de dinheiro",
+          "Painel de gestão com vendas, popularidade de pratos, despesas e relatórios diários",
+          "Reservas, despesas, inventário e fornecedores num só sítio"
+        ],
+        "disclaimerLabel": "Aviso importante",
+        "disclaimer": "Sistema de uso interno. O POS Brasa é uma solução desenvolvida para utilização própria em restaurantes e cafés. Não é um software certificado pela Autoridade Tributária e, como tal, não substitui um programa de faturação certificado para emissão de faturas oficiais. Todos os documentos emitidos pelo sistema são considerados documentos internos de gestão."
+      }
+    }
   },
   "wholesale": {
     "gate": {
