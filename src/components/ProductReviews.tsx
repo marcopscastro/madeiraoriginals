@@ -190,16 +190,32 @@ export const useProductRating = (handle: string | undefined) => {
   const [stats, setStats] = useState<{ count: number; avg: number } | null>(null);
   useEffect(() => {
     if (!handle) return;
-    supabase
-      .from("reviews")
-      .select("rating", { count: "exact" })
-      .eq("product_handle", handle)
-      .eq("approved", true)
-      .then(({ data, count }) => {
-        const ratings = (data ?? []).map((r: { rating: number }) => r.rating);
-        const avg = ratings.length ? ratings.reduce((s, n) => s + n, 0) / ratings.length : 0;
-        setStats({ count: count ?? 0, avg });
-      });
+    let cancelled = false;
+    const run = () => {
+      if (cancelled) return;
+      supabase
+        .from("reviews")
+        .select("rating", { count: "exact" })
+        .eq("product_handle", handle)
+        .eq("approved", true)
+        .then(({ data, count }) => {
+          if (cancelled) return;
+          const ratings = (data ?? []).map((r: { rating: number }) => r.rating);
+          const avg = ratings.length ? ratings.reduce((s, n) => s + n, 0) / ratings.length : 0;
+          setStats({ count: count ?? 0, avg });
+        });
+    };
+    // Defer until the browser is idle so review fetches don't compete with LCP.
+    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback;
+    const handle1 = ric
+      ? ric(run, { timeout: 2000 })
+      : window.setTimeout(run, 1200);
+    return () => {
+      cancelled = true;
+      const cic = (window as unknown as { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
+      if (ric && cic) cic(handle1 as number);
+      else window.clearTimeout(handle1 as number);
+    };
   }, [handle]);
   return stats;
 };
