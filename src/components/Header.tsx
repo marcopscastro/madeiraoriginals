@@ -48,8 +48,19 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
-          <Link to="/" className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap truncate min-w-0">
-            Madeira Originals
+          <Link to="/" aria-label="Madeira Originals — Home" className="flex items-center gap-2 min-w-0">
+            <img
+              src={logoMark}
+              alt=""
+              aria-hidden="true"
+              className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
+              loading="eager"
+              decoding="async"
+            />
+            <span className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase whitespace-nowrap truncate min-w-0">
+              <span className="text-primary">MADEIRA</span>{" "}
+              <span className="text-accent">ORIGINALS</span>
+            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
