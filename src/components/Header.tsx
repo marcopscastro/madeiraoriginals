@@ -7,7 +7,7 @@ import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useAuth } from "@/hooks/useAuth";
-import logoMark from "@/assets/madeira-originals-logo.svg";
+import logoMark from "@/assets/madeira-originals-wordmark.svg";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -57,10 +57,6 @@ const Header = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase whitespace-nowrap truncate min-w-0">
-              <span className="text-primary">MADEIRA</span>{" "}
-              <span className="text-accent">ORIGINALS</span>
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
