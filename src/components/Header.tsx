@@ -57,10 +57,6 @@ const Header = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase whitespace-nowrap truncate min-w-0">
-              <span className="text-primary">MADEIRA</span>{" "}
-              <span className="text-accent">ORIGINALS</span>
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
