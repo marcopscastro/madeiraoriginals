@@ -35,7 +35,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="flex flex-col bg-background w-full sm:max-w-md">
+      <SheetContent className="flex flex-col bg-background w-full sm:max-w-md pt-safe pb-safe">
         <SheetHeader>
           <SheetTitle className="font-heading text-lg font-bold uppercase tracking-widest text-foreground">
             {t("cart.title")} ({totalItems})
