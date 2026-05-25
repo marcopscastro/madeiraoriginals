@@ -103,7 +103,7 @@ const Header = () => {
             )}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <LanguageToggle className="hidden sm:inline-flex" />
             <button aria-label={t("nav.search")} className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
@@ -138,7 +138,7 @@ const Header = () => {
         </div>
 
         {mobileOpen && (
-          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4 max-h-[80vh] overflow-y-auto">
+          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pl-safe pr-safe max-h-[80vh] overflow-y-auto">
             <div className="py-3 border-b border-foreground/10 mb-1 flex items-center justify-between">
               <LanguageToggle />
               {user && (
