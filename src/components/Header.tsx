@@ -51,7 +51,7 @@ const Header = () => {
             Madeira Originals
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.map((link) =>
               link.children ? (
                 <div
@@ -129,7 +129,7 @@ const Header = () => {
             </button>
             <button
               aria-label={t("nav.menu")}
-              className="md:hidden text-foreground"
+              className="lg:hidden text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -138,7 +138,7 @@ const Header = () => {
         </div>
 
         {mobileOpen && (
-          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pl-safe pr-safe max-h-[80vh] overflow-y-auto">
+          <nav className="lg:hidden border-t border-foreground/10 bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pl-safe pr-safe max-h-[80vh] overflow-y-auto">
             <div className="py-3 border-b border-foreground/10 mb-1 flex items-center justify-between">
               <LanguageToggle />
               {user && (
