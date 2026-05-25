@@ -45,9 +45,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-background border-b border-foreground/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-          <Link to="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary whitespace-nowrap">
+      <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
+          <Link to="/" className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap truncate min-w-0">
             Madeira Originals
           </Link>
 
