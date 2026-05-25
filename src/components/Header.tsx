@@ -45,13 +45,13 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-background border-b border-foreground/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-          <Link to="/" className="font-heading font-bold text-lg sm:text-xl tracking-widest uppercase text-primary whitespace-nowrap">
+      <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
+          <Link to="/" className="font-heading font-bold text-[15px] sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap truncate min-w-0">
             Madeira Originals
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navLinks.map((link) =>
               link.children ? (
                 <div
@@ -103,7 +103,7 @@ const Header = () => {
             )}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <LanguageToggle className="hidden sm:inline-flex" />
             <button aria-label={t("nav.search")} className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
@@ -129,7 +129,7 @@ const Header = () => {
             </button>
             <button
               aria-label={t("nav.menu")}
-              className="md:hidden text-foreground"
+              className="lg:hidden text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -138,7 +138,7 @@ const Header = () => {
         </div>
 
         {mobileOpen && (
-          <nav className="md:hidden border-t border-foreground/10 bg-background px-4 pb-4 max-h-[80vh] overflow-y-auto">
+          <nav className="lg:hidden border-t border-foreground/10 bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pl-safe pr-safe max-h-[80vh] overflow-y-auto">
             <div className="py-3 border-b border-foreground/10 mb-1 flex items-center justify-between">
               <LanguageToggle />
               {user && (

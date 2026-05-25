@@ -1,59 +1,73 @@
-# Add "POS Brasa" Case Study to /studio
+# Responsive & Safe-Zone Audit
 
-Add a new **Case Study** section on the `/studio` page featuring the POS Brasa system built for Brasa Viva (São Vicente). This becomes the first entry in a reusable "Projects" block, so future case studies can be appended.
+Goal: verify every page renders cleanly on mobile, tablet, and desktop, with no horizontal scroll, no clipped text/CTAs, and proper safe-area insets on notched devices (iPhone, Android).
 
-## Where it goes
+## Scope
 
-Inserted between the **Trusted by** strip and the **Quote form** on `src/pages/Studio.tsx`, under a new section id `#projects`. The Studio hero CTA list stays unchanged.
+Pages to test:
+- `/` (Home: Hero, ValueBanner, Manifesto, Bestsellers, NoTouristTrap, DesignDirections, Diaspora, JournalPreview, HomeNewsletter)
+- `/shop` + all collection routes (`/madeira-t-shirts`, `/madeira-hoodies`, `/madeira-accessories`, `/madeira-stickers`, `/madeira-streetwear`, `/madeira-gifts`)
+- `/product/:handle` (PDP)
+- `/studio` (incl. new POS Brasa section)
+- `/wholesale` (gate + portal)
+- `/journal` + `/journal/:slug`
+- `/about`, `/contact`, `/culture`
+- `/auth`, admin pages
+- Header (mobile menu, dropdowns, cart drawer, search overlay)
+- Footer
 
-## Section structure
+Breakpoints to verify:
+- 320×568 (small phone)
+- 375×812 (iPhone 12/13/14 — notch)
+- 390×844 (iPhone 14 Pro)
+- 768×1024 (iPad portrait)
+- 1024×768 (iPad landscape)
+- 1366×768 (laptop)
+- 1920×1080 (desktop)
 
-```text
-┌─ #projects ───────────────────────────────────────────┐
-│  Overline: "Selected Work / Trabalho Selecionado"     │
-│  H2: "Projetos que construímos"                       │
-│                                                       │
-│  ┌─ Case Card: POS Brasa ─────────────────────────┐  │
-│  │  [Image slot — placeholder until screenshots]  │  │
-│  │  Eyebrow: "Brasa Viva · São Vicente · 2025"    │  │
-│  │  H3: "POS Brasa — Sistema de Gestão            │  │
-│  │       para Restauração"                        │  │
-│  │  Intro paragraph (About the project)           │  │
-│  │  Tagline (italic accent)                       │  │
-│  │  Capabilities — 2-column checklist (12 items)  │  │
-│  │  Disclaimer box (muted, bordered)              │  │
-│  └────────────────────────────────────────────────┘  │
-└───────────────────────────────────────────────────────┘
-```
+## What I'll check on every page
 
-Visual language follows existing Studio brutalism: flat, sharp corners, hairline borders (`border-foreground/15`), Fraunces display for H3, Montserrat for eyebrow/labels, Inter for body. No shadows, no rounded CTAs.
+1. **No horizontal scroll** — body width must equal viewport at every breakpoint.
+2. **Tap targets** — buttons/links ≥ 44×44px on mobile.
+3. **Typography** — display headings don't overflow or clip; line-height holds.
+4. **Images** — proper aspect ratios, no squash, no overflow.
+5. **Forms** — inputs full-width on mobile, labels visible, keyboards don't cover submit.
+6. **Sticky header** — doesn't cover content; mobile menu scrolls when long.
+7. **Cart drawer / Search overlay / Lightbox** — fit screen, close button reachable.
+8. **Footer** — grid collapses correctly, newsletter form usable.
+9. **Safe-area insets** — iOS notch / home indicator respected via `env(safe-area-inset-*)` on:
+   - Sticky `<header>` (top inset)
+   - Fixed CTAs / cart drawer bottom (bottom inset)
+   - Mobile menu (top + bottom)
+   - Any full-bleed sections (left/right insets in landscape)
 
-## Content (PT-default, EN translation added)
+## How I'll run the audit
 
-**Eyebrow:** Brasa Viva · São Vicente · 2025
-**Title:** POS Brasa — Sistema de Gestão para Restauração
-**Lede:** "Um sistema completo de gestão para restaurantes, churrascarias e cafés, desenhado e construído internamente pela Madeira Originals."
-**About:** "Desenvolvemos o POS Brasa de raiz para responder às necessidades diárias de uma operação de restauração ativa. Não é um produto genérico — é uma ferramenta moldada à mesa, à cozinha e ao balcão, refinada todos os dias em ambiente real."
-**Tagline (chosen):** "Construído à medida, refinado em serviço."
-**Capabilities:** 12 items from the brief (mesas/pedidos, impressão térmica, caixa/MB WAY, correção auditada, ementa+tradução, website multilingue, loja online, offline, desktop Windows, painel, reservas/inventário, etc.).
-**Disclaimer:** Full "Sistema de uso interno…" notice in a muted bordered box.
+Use the in-sandbox browser at multiple viewports:
+- Navigate each route, screenshot full page at 375, 768, 1366.
+- Open mobile menu, cart drawer, search overlay, lightbox — screenshot each.
+- Inspect for horizontal overflow via `document.documentElement.scrollWidth > clientWidth`.
+- Check console for layout warnings.
 
-## Image slot
+Findings are logged into a single audit report (one row per issue: page, breakpoint, problem, fix).
 
-A 4:3 placeholder block with the text "Screenshots em breve / Screenshots coming soon" using `bg-secondary/10` and a thin border. Once the user provides screenshots, swap in an `<img>` (or small gallery) without touching layout.
+## Fixes I'll apply
 
-## i18n
-
-All new strings added to `src/i18n/locales/pt.json` and `src/i18n/locales/en.json` under a new `studio.projects.posBrasa.*` namespace, plus `studio.projects.overline` / `studio.projects.heading`. EN is a faithful translation; PT is verbatim from the brief.
-
-## Files to touch
-
-- `src/pages/Studio.tsx` — insert new `<section id="projects">` before `#quote`.
-- `src/i18n/locales/pt.json` and `src/i18n/locales/en.json` — add `studio.projects.*` keys.
-- (Optional) anchor link added to Studio hero secondary CTA list if desired — flagged but not required.
+For each confirmed issue, the smallest change:
+- Add `min-w-0`, `overflow-x-hidden`, `break-words`, `flex-wrap` where overflow occurs.
+- Adjust Tailwind responsive prefixes (`sm:`, `md:`, `lg:`) on grid/padding/text.
+- Add safe-area utilities. In `tailwind.config.ts` extend spacing with `safe-t/b/l/r` mapped to `env(safe-area-inset-*)`, then apply `pt-safe-t`, `pb-safe-b` to sticky header, mobile menu, cart drawer, footer.
+- Ensure `index.html` has `<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">` (required for safe-area insets to activate).
+- No new dependencies, no design overhaul — only responsive corrections.
 
 ## Out of scope
 
-- No new route, no separate `/work` page yet (kept as a section so it's discoverable from the Studio funnel).
-- No CMS — content is hardcoded in i18n. When we add a second project we can refactor into a small array/map.
-- No screenshots wired up until the user uploads them.
+- New features, copy changes, redesigns.
+- Backend / business logic.
+- SEO / performance work (already covered in prior passes).
+
+## Deliverable
+
+1. Audit report (in chat) listing issues found per page/breakpoint with screenshots.
+2. Targeted code edits to fix each issue.
+3. Re-test pass at the same breakpoints to confirm clean.
