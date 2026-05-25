@@ -62,8 +62,8 @@ const Header = () => {
                 MADEIRA
               </span>
               <span
-                className="font-body font-light uppercase text-accent whitespace-nowrap sm:text-[10px] md:text-[11px] mt-0.5 text-center text-lg my-0"
-                style={{ letterSpacing: "0.35em" }}
+                className="font-body font-light uppercase text-accent whitespace-nowrap sm:text-[10px] md:text-[11px] -mt-0.5 text-center text-lg my-0"
+                style={{ letterSpacing: "0.45em" }}
               >
                 ORIGINALS
               </span>
