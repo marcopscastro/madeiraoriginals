@@ -7,7 +7,7 @@ import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useAuth } from "@/hooks/useAuth";
-import logoMark from "@/assets/madeira-originals-logo.svg";
+import logoMark from "@/assets/madeira-originals-wordmark.svg";
 
 const Header = () => {
   const { t } = useTranslation();
