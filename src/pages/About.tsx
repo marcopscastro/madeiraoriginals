@@ -30,7 +30,6 @@ const About = () => {
               alt={t("aboutPage.opener.heroAlt")}
               width={1920}
               height={1080}
-              fetchPriority="high"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover img-cinematic animate-ken-burns"
             />
