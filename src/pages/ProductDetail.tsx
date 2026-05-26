@@ -392,9 +392,9 @@ const ProductDetail = () => {
                           setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
                         }
                         disabled={!available}
-                        className={`min-w-[3rem] px-4 py-2.5 border font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
+                        className={`min-w-[3rem] px-4 py-2.5 border font-heading text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors ${
                           selected
-                            ? "border-primary bg-primary text-primary-foreground"
+                            ? "border-foreground bg-foreground text-background"
                             : "border-foreground/20 text-foreground hover:border-foreground"
                         } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
                       >
