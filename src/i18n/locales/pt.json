@@ -27,7 +27,11 @@
     "business": "Negócios",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
-    "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal."
+    "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal.",
+    "support": "Suporte",
+    "shipping": "Envio",
+    "returns": "Devoluções",
+    "care": "Cuidados"
   },
   "hero": {
     "imageAlt": "Falésias de basalto vulcânico com nevoeiro e o Oceano Atlântico na costa norte da Madeira",
@@ -431,10 +435,22 @@
     "imageAlt": "Vila de São Vicente sob nevoeiro na costa norte da Madeira",
     "captionPlace": "São Vicente · Madeira",
     "facts": [
-      { "k": "Origem", "v": "Madeira" },
-      { "k": "Studio", "v": "São Vicente" },
-      { "k": "Produção", "v": "Interna" },
-      { "k": "Envio", "v": "Mundial" }
+      {
+        "k": "Origem",
+        "v": "Madeira"
+      },
+      {
+        "k": "Studio",
+        "v": "São Vicente"
+      },
+      {
+        "k": "Produção",
+        "v": "Interna"
+      },
+      {
+        "k": "Envio",
+        "v": "Mundial"
+      }
     ]
   },
   "divider": {
@@ -524,7 +540,8 @@
     "imageAlt": "Estúdio de impressão de vestuário personalizado com gang sheet DTF e cabide de peças pela Madeira Originals"
   },
   "relatedProducts": {
-    "heading": "Também Podes Gostar"
+    "overline": "Continua a coleção",
+    "heading": "Mais do estúdio."
   },
   "aboutPage": {
     "seoOverline": "Sobre a Madeira Originals",
@@ -553,11 +570,31 @@
       "headingA": "Contida.",
       "headingB": "Enraizada. Vestível em qualquer lugar.",
       "pillars": [
-        { "k": "01", "title": "Autenticidade", "body": "Referências com significado — língua, geografia, clima, ofício. Nada copiado de um postal." },
-        { "k": "02", "title": "Localidade", "body": "Desenhado, impresso e acabado no nosso estúdio em São Vicente. Sem produção externa, sem fulfilment de terceiros." },
-        { "k": "03", "title": "Design Vestível", "body": "Peças que funcionam no Funchal, em Lisboa, Londres ou Jersey. Enraizadas na ilha, cortadas para o mundo." },
-        { "k": "04", "title": "Qualidade Premium", "body": "Algodão pesado, construção pensada, acabamentos feitos para amaciar com o uso." },
-        { "k": "05", "title": "0% Tourist Trap", "body": "Sem ímanes. Sem galos estampados. Sem gráficos preguiçosos. A ilha merece mais — e tu também." }
+        {
+          "k": "01",
+          "title": "Autenticidade",
+          "body": "Referências com significado — língua, geografia, clima, ofício. Nada copiado de um postal."
+        },
+        {
+          "k": "02",
+          "title": "Localidade",
+          "body": "Desenhado, impresso e acabado no nosso estúdio em São Vicente. Sem produção externa, sem fulfilment de terceiros."
+        },
+        {
+          "k": "03",
+          "title": "Design Vestível",
+          "body": "Peças que funcionam no Funchal, em Lisboa, Londres ou Jersey. Enraizadas na ilha, cortadas para o mundo."
+        },
+        {
+          "k": "04",
+          "title": "Qualidade Premium",
+          "body": "Algodão pesado, construção pensada, acabamentos feitos para amaciar com o uso."
+        },
+        {
+          "k": "05",
+          "title": "0% Tourist Trap",
+          "body": "Sem ímanes. Sem galos estampados. Sem gráficos preguiçosos. A ilha merece mais — e tu também."
+        }
       ]
     },
     "field": {
@@ -831,7 +868,8 @@
     "freeShippingUnlocked": "Portes grátis desbloqueados ✦",
     "subtotal": "Subtotal",
     "shippingNote": "Portes e impostos calculados na finalização.",
-    "checkout": "Finalizar compra"
+    "checkout": "Finalizar compra",
+    "reassurance": "Checkout seguro · Enviado da Madeira"
   },
   "collection": {
     "home": "Início",
@@ -911,5 +949,127 @@
     "thanks": "Obrigado pela tua avaliação.",
     "starsAria": "{{n}} estrelas",
     "bodyMin": "Conta-nos um pouco mais (mín. 10 caracteres)"
+  },
+  "productTrust": {
+    "origin": "Desenhado em São Vicente",
+    "shipping": "Envio mundial",
+    "secure": "Checkout seguro",
+    "built": "Feito para durar"
+  },
+  "productInfo": {
+    "shipping": {
+      "title": "Envio",
+      "body": "As peças são feitas e acabadas no nosso estúdio em São Vicente e enviadas para todo o mundo.\n\nPortugal e Madeira: 2–4 dias úteis.\nEuropa: 4–7 dias úteis.\nReino Unido, EUA e resto do mundo: 7–14 dias úteis.\n\nEnvio gratuito na UE acima de 60€.",
+      "link": "Ver política de envio completa"
+    },
+    "returns": {
+      "title": "Devoluções",
+      "body": "14 dias para devolver peças não usadas, em estado original, para reembolso ou troca. Peças por encomenda ou personalizadas não são devolvíveis.",
+      "link": "Ver política de devoluções"
+    },
+    "care": {
+      "title": "Cuidados",
+      "body": "Lavar a frio, do avesso. Secar ao ar. Não passar a ferro diretamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
+      "link": "Instruções completas"
+    }
+  },
+  "policy": {
+    "questions": "Dúvidas sobre a tua encomenda?",
+    "contactLink": "Fala com o estúdio"
+  },
+  "shippingPage": {
+    "seoTitle": "Envio | Madeira Originals",
+    "seoDescription": "Para onde enviamos, prazos e custos. Peças premium enviadas de São Vicente, Madeira, para todo o mundo.",
+    "overline": "Envio",
+    "title": "De São Vicente até à tua porta.",
+    "lead": "Cada peça é feita e acabada no nosso estúdio na costa norte da Madeira, e depois enviada com cuidado. Eis o que esperar.",
+    "sections": [
+      {
+        "heading": "01 — Para onde enviamos",
+        "body": "Enviamos para todo o mundo. Portugal e Madeira, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo."
+      },
+      {
+        "heading": "02 — Tempo de processamento",
+        "body": "A maioria das peças em stock sai do estúdio em 1–2 dias úteis. Peças por encomenda ou personalizadas demoram 3–7 dias úteis a imprimir, acabar e embalar."
+      },
+      {
+        "heading": "03 — Prazos de entrega",
+        "body": "Portugal e Madeira: 2–4 dias úteis.\nUnião Europeia: 4–7 dias úteis.\nReino Unido, EUA, resto do mundo: 7–14 dias úteis.\n\nO prazo exato depende da transportadora local."
+      },
+      {
+        "heading": "04 — Custo de envio",
+        "body": "Taxa fixa, calculada no checkout consoante o destino.\n\nEnvio gratuito na UE acima de 60€."
+      },
+      {
+        "heading": "05 — Direitos e impostos",
+        "body": "Encomendas fora da União Europeia podem estar sujeitas a direitos de importação e impostos locais à chegada. Esses custos são da responsabilidade do destinatário."
+      },
+      {
+        "heading": "06 — Tracking",
+        "body": "Todas as encomendas seguem com tracking. Receberás um email com o número assim que a encomenda sair do estúdio."
+      }
+    ]
+  },
+  "returnsPage": {
+    "seoTitle": "Devoluções | Madeira Originals",
+    "seoDescription": "Política de devoluções e trocas. 14 dias para devolver peças não usadas em estado original.",
+    "overline": "Devoluções",
+    "title": "Honestas, simples, sem letras pequenas.",
+    "lead": "As nossas peças são feitas para durar anos. Se algo não estiver bem, resolvemos.",
+    "sections": [
+      {
+        "heading": "01 — Prazo",
+        "body": "Tens 14 dias a partir do dia em que a encomenda chega para pedir uma devolução ou troca."
+      },
+      {
+        "heading": "02 — Estado",
+        "body": "As peças têm de estar por usar, por lavar, em estado original e com todas as etiquetas. Devoluções fora destas condições podem ser recusadas."
+      },
+      {
+        "heading": "03 — Como iniciar",
+        "body": "Envia email ao estúdio com o número da encomenda e uma nota curta sobre o que queres devolver ou trocar. Respondemos com instruções em 1–2 dias úteis."
+      },
+      {
+        "heading": "04 — Reembolsos",
+        "body": "Depois de recebermos e inspecionarmos a devolução, o reembolso é emitido no método de pagamento original em 5–10 dias úteis. O custo de envio original não é reembolsável."
+      },
+      {
+        "heading": "05 — Trocas",
+        "body": "Precisas de outro tamanho ou cor? Diz no email de devolução e reservamos a nova peça enquanto a tua devolução está a caminho."
+      },
+      {
+        "heading": "06 — Não elegíveis",
+        "body": "Peças por encomenda, personalizadas ou em saldo final não podem ser devolvidas ou trocadas. Está sempre indicado na página do produto."
+      }
+    ]
+  },
+  "carePage": {
+    "seoTitle": "Cuidados | Madeira Originals",
+    "seoDescription": "Como cuidar do algodão pesado, das estampas DTF e dos bordados para durarem anos.",
+    "overline": "Cuidados",
+    "title": "Feito para amaciar com o uso.",
+    "lead": "As nossas peças são em algodão pesado com estampagem DTF premium. Bem tratadas, envelhecem com beleza — mais macias, mais pessoais, mais tuas.",
+    "sections": [
+      {
+        "heading": "01 — Lavagem",
+        "body": "Lavar a frio (máx. 30°C), do avesso, com cores semelhantes. Detergente suave. Sem amaciador — cobre o algodão e desgasta a estampa com o tempo."
+      },
+      {
+        "heading": "02 — Secagem",
+        "body": "Secar ao ar, à sombra. Evita a máquina de secar sempre que possível — o calor é inimigo do algodão e da estampa. Se mesmo assim usares, programa mais baixo."
+      },
+      {
+        "heading": "03 — Engomar",
+        "body": "Engomar do avesso, em temperatura média. Nunca diretamente sobre a estampa. Para peças bordadas, passar à volta do bordado ou colocar um pano entre o ferro e o desenho."
+      },
+      {
+        "heading": "04 — Arrumação",
+        "body": "Dobra as peças pesadas em vez de pendurar — pendurar muito tempo estica os ombros. Longe de sol direto para preservar a cor."
+      },
+      {
+        "heading": "05 — Com o tempo",
+        "body": "O algodão pesado amacia a cada lavagem. Algum desbotamento ligeiro e textura natural fazem parte do material — não são defeito. As peças são feitas para serem usadas, muito."
+      }
+    ]
   }
 }

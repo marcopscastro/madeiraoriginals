@@ -160,6 +160,9 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
               <p className="font-body text-xs text-muted-foreground">
                 {t("cart.shippingNote")}
               </p>
+              <p className="font-heading text-[10px] uppercase tracking-[0.3em] text-muted-foreground/70">
+                {t("cart.reassurance")}
+              </p>
               <Button
                 onClick={handleCheckout}
                 disabled={!checkoutUrl || isLoading || isSyncing}
