@@ -182,20 +182,20 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
         </section>
 
         {config.faqs && config.faqs.length > 0 && (
-          <section className="mt-20 md:mt-28 max-w-3xl mx-auto border-t border-foreground/10 pt-12 md:pt-16">
-            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3 text-center">
+          <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12 pb-32 md:pb-40 border-t border-foreground/10 pt-20 md:pt-28">
+            <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6 text-center">
               {t("collection.faq")}
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-10">
-              {config.title} {t("collection.faqHeadingSuffix")}
+            <h2 className="font-display text-3xl md:text-5xl font-medium text-foreground text-center mb-16 tracking-tight leading-tight">
+              {config.title} <span className="text-foreground/40">{t("collection.faqHeadingSuffix")}</span>
             </h2>
-            <dl className="space-y-8">
+            <dl className="space-y-10">
               {config.faqs.map((faq) => (
-                <div key={faq.question} className="border-b border-foreground/10 pb-8 last:border-b-0">
-                  <dt className="font-display text-lg md:text-xl font-semibold text-foreground mb-2">
+                <div key={faq.question} className="border-b border-foreground/10 pb-10 last:border-b-0">
+                  <dt className="font-display text-xl md:text-2xl font-medium text-foreground mb-3 tracking-tight">
                     {faq.question}
                   </dt>
-                  <dd className="font-body text-base text-muted-foreground leading-relaxed">
+                  <dd className="font-body text-base text-foreground/70 leading-relaxed">
                     {faq.answer}
                   </dd>
                 </div>
