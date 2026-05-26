@@ -27,7 +27,11 @@
     "business": "Business",
     "studio": "Studio (B2B)",
     "wholesale": "Wholesale",
-    "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal."
+    "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal.",
+    "support": "Support",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "care": "Care"
   },
   "hero": {
     "imageAlt": "Foggy black basalt cliffs and the Atlantic Ocean on the north coast of Madeira",
@@ -431,10 +435,22 @@
     "imageAlt": "São Vicente village under fog on the north coast of Madeira",
     "captionPlace": "São Vicente · Madeira",
     "facts": [
-      { "k": "Founded", "v": "Madeira" },
-      { "k": "Studio", "v": "São Vicente" },
-      { "k": "Production", "v": "In-house" },
-      { "k": "Shipping", "v": "Worldwide" }
+      {
+        "k": "Founded",
+        "v": "Madeira"
+      },
+      {
+        "k": "Studio",
+        "v": "São Vicente"
+      },
+      {
+        "k": "Production",
+        "v": "In-house"
+      },
+      {
+        "k": "Shipping",
+        "v": "Worldwide"
+      }
     ]
   },
   "divider": {
@@ -524,7 +540,8 @@
     "imageAlt": "Custom apparel printing studio with DTF gang sheet and rack of garments by Madeira Originals"
   },
   "relatedProducts": {
-    "heading": "You May Also Like"
+    "overline": "Continue the collection",
+    "heading": "More from the studio."
   },
   "aboutPage": {
     "seoOverline": "About Madeira Originals",
@@ -553,11 +570,31 @@
       "headingA": "Restrained.",
       "headingB": "Rooted. Wearable everywhere.",
       "pillars": [
-        { "k": "01", "title": "Authenticity", "body": "References that mean something — language, geography, weather, craft. Nothing borrowed from a postcard." },
-        { "k": "02", "title": "Locality", "body": "Designed, printed and finished in our own studio in São Vicente. No outsourced print farms, no third-party fulfilment." },
-        { "k": "03", "title": "Wearable Design", "body": "Pieces that work in Funchal, Lisbon, London or Jersey. Island-rooted, globally cut." },
-        { "k": "04", "title": "Premium Quality", "body": "Heavyweight cotton, considered construction, finishes built to soften with wear rather than fall apart." },
-        { "k": "05", "title": "0% Tourist Trap", "body": "No magnets. No rooster prints. No lazy graphics. The island deserves better and so do you." }
+        {
+          "k": "01",
+          "title": "Authenticity",
+          "body": "References that mean something — language, geography, weather, craft. Nothing borrowed from a postcard."
+        },
+        {
+          "k": "02",
+          "title": "Locality",
+          "body": "Designed, printed and finished in our own studio in São Vicente. No outsourced print farms, no third-party fulfilment."
+        },
+        {
+          "k": "03",
+          "title": "Wearable Design",
+          "body": "Pieces that work in Funchal, Lisbon, London or Jersey. Island-rooted, globally cut."
+        },
+        {
+          "k": "04",
+          "title": "Premium Quality",
+          "body": "Heavyweight cotton, considered construction, finishes built to soften with wear rather than fall apart."
+        },
+        {
+          "k": "05",
+          "title": "0% Tourist Trap",
+          "body": "No magnets. No rooster prints. No lazy graphics. The island deserves better and so do you."
+        }
       ]
     },
     "field": {
@@ -831,7 +868,8 @@
     "freeShippingUnlocked": "Free shipping unlocked ✦",
     "subtotal": "Subtotal",
     "shippingNote": "Shipping & taxes calculated at checkout.",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "reassurance": "Secure checkout · Ships from Madeira"
   },
   "collection": {
     "home": "Home",
@@ -911,5 +949,127 @@
     "thanks": "Thanks for your review.",
     "starsAria": "{{n}} stars",
     "bodyMin": "Tell us a bit more (min 10 chars)"
+  },
+  "productTrust": {
+    "origin": "Designed in São Vicente",
+    "shipping": "Worldwide shipping",
+    "secure": "Secure checkout",
+    "built": "Built for long-term wear"
+  },
+  "productInfo": {
+    "shipping": {
+      "title": "Shipping",
+      "body": "Pieces are made and finished in our São Vicente studio, then shipped worldwide.\n\nPortugal & Madeira: 2–4 business days.\nEurope: 4–7 business days.\nUK, US & rest of world: 7–14 business days.\n\nFree shipping in the EU over €60.",
+      "link": "Read full shipping policy"
+    },
+    "returns": {
+      "title": "Returns",
+      "body": "14 days to return unworn pieces in original condition for a refund or exchange. Made-to-order and personalised items are non-returnable.",
+      "link": "Read full returns policy"
+    },
+    "care": {
+      "title": "Care",
+      "body": "Wash cold, inside out. Hang to dry. Do not iron directly on the print. Our heavyweight cotton softens with wear — it is built for the long haul.",
+      "link": "Full care instructions"
+    }
+  },
+  "policy": {
+    "questions": "Questions about your order?",
+    "contactLink": "Talk to the studio"
+  },
+  "shippingPage": {
+    "seoTitle": "Shipping | Madeira Originals",
+    "seoDescription": "Where we ship, how long it takes, and what it costs. Premium garments shipped worldwide from São Vicente, Madeira.",
+    "overline": "Shipping",
+    "title": "From São Vicente to your door.",
+    "lead": "Every piece is made and finished in our studio on the north coast of Madeira, then sent into the world with care. Here is what to expect.",
+    "sections": [
+      {
+        "heading": "01 — Where we ship",
+        "body": "We ship worldwide. Portugal and Madeira, the European Union, United Kingdom, United States, and most of the rest of the world."
+      },
+      {
+        "heading": "02 — Processing time",
+        "body": "Most in-stock pieces leave the studio within 1–2 business days. Made-to-order and personalised pieces take 3–7 business days to print, finish and pack."
+      },
+      {
+        "heading": "03 — Delivery windows",
+        "body": "Portugal & Madeira: 2–4 business days.\nEuropean Union: 4–7 business days.\nUnited Kingdom, United States, rest of world: 7–14 business days.\n\nExact delivery time depends on your local carrier."
+      },
+      {
+        "heading": "04 — Shipping cost",
+        "body": "Flat rate, calculated at checkout based on destination.\n\nFree shipping on EU orders over €60."
+      },
+      {
+        "heading": "05 — Duties & taxes",
+        "body": "Orders outside the European Union may be subject to import duties and local taxes on arrival. These are the responsibility of the recipient."
+      },
+      {
+        "heading": "06 — Tracking",
+        "body": "Every order ships with tracking. You will receive an email with your tracking number as soon as your parcel leaves the studio."
+      }
+    ]
+  },
+  "returnsPage": {
+    "seoTitle": "Returns | Madeira Originals",
+    "seoDescription": "Our return and exchange policy. 14 days to return unworn pieces in original condition.",
+    "overline": "Returns",
+    "title": "Honest, simple, no fine print.",
+    "lead": "We build pieces to be worn for years. If something is not right, we will make it right.",
+    "sections": [
+      {
+        "heading": "01 — Window",
+        "body": "You have 14 days from the day your order arrives to request a return or exchange."
+      },
+      {
+        "heading": "02 — Condition",
+        "body": "Pieces must be unworn, unwashed, and in original condition with all tags attached. Returned items that do not meet these conditions may be refused."
+      },
+      {
+        "heading": "03 — How to start a return",
+        "body": "Email the studio with your order number and a short note about what you want to return or exchange. We will reply with instructions within 1–2 business days."
+      },
+      {
+        "heading": "04 — Refunds",
+        "body": "Once we receive and inspect the return, your refund is issued to the original payment method within 5–10 business days. Original shipping costs are non-refundable."
+      },
+      {
+        "heading": "05 — Exchanges",
+        "body": "Need a different size or colour? Tell us in your return email and we will hold the new piece for you while your return is on the way."
+      },
+      {
+        "heading": "06 — Not eligible",
+        "body": "Made-to-order, personalised, and final-sale pieces cannot be returned or exchanged. This is always noted clearly on the product page."
+      }
+    ]
+  },
+  "carePage": {
+    "seoTitle": "Care | Madeira Originals",
+    "seoDescription": "How to care for heavyweight cotton, DTF prints, and embroidered pieces so they last for years.",
+    "overline": "Care",
+    "title": "Built to soften with wear.",
+    "lead": "Our pieces are made from heavyweight cotton with premium DTF printing. Treated well, they age beautifully — softer, more personal, more yours.",
+    "sections": [
+      {
+        "heading": "01 — Washing",
+        "body": "Wash cold (max 30°C), inside out, with similar colours. Use a mild detergent. Skip the fabric softener — it coats the cotton and dulls the print over time."
+      },
+      {
+        "heading": "02 — Drying",
+        "body": "Hang to dry in the shade. Avoid the tumble dryer when possible — heat is the enemy of both cotton and print. If you must tumble dry, use the lowest setting."
+      },
+      {
+        "heading": "03 — Ironing",
+        "body": "Iron inside out, on medium heat. Never iron directly on the print. For embroidered pieces, iron around the embroidery or place a cloth between the iron and the design."
+      },
+      {
+        "heading": "04 — Storage",
+        "body": "Fold heavyweight pieces flat rather than hanging — long-term hanging stretches the shoulders. Keep away from direct sunlight to preserve the colour."
+      },
+      {
+        "heading": "05 — Over time",
+        "body": "Heavyweight cotton softens with every wash. A small amount of fading and natural texture is part of the material — not a defect. The pieces are built to be worn, often."
+      }
+    ]
   }
 }
