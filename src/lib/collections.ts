@@ -99,4 +99,51 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
       "Premium gifts from Madeira — streetwear, accessories, stickers. Editorial, modern, 0% tourist trap. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:streetwear",
   },
+
+  /* ─────────── Themed editorial collections ─────────── */
+
+  "atlantic-utility": {
+    slug: "atlantic-utility",
+    eyebrow: "Collection 01 · Atlantic Utility",
+    title: "Atlantic Utility",
+    intro:
+      "Minimal rugged essentials inspired by volcanic island life. Heavyweight cotton, technical detailing, built for fog, wind and salt — the quiet uniform of the north coast.",
+    metaTitle: "Atlantic Utility | Madeira Originals",
+    metaDescription:
+      "Atlantic Utility — minimal rugged apparel essentials for volcanic island life. Heavyweight cotton, technical detailing. Designed in São Vicente, Madeira.",
+    shopifyQuery: "tag:atlantic-utility OR tag:utility",
+  },
+  "norte": {
+    slug: "norte",
+    eyebrow: "Collection 02 · Norte",
+    title: "Norte",
+    intro:
+      "São Vicente in fabric form — foggy peaks, basalt textures and the quiet weather of the north coast. A study of Madeira's wildest face.",
+    metaTitle: "Norte | Madeira Originals",
+    metaDescription:
+      "Norte — apparel inspired by São Vicente fog, basalt cliffs and the Atlantic weather of Madeira's north coast. Designed in São Vicente.",
+    shopifyQuery: "tag:norte OR tag:sao-vicente",
+  },
+  "contemporary-heritage": {
+    slug: "contemporary-heritage",
+    eyebrow: "Collection 03 · Contemporary Heritage",
+    title: "Contemporary Heritage",
+    intro:
+      "Tradition, properly translated. Madeiran symbols, azulejo geometry and island coordinates redrawn with the restraint of a modern label.",
+    metaTitle: "Contemporary Heritage | Madeira Originals",
+    metaDescription:
+      "Contemporary Heritage — traditional Madeira references reinterpreted in modern apparel design. Designed in São Vicente, Madeira.",
+    shopifyQuery: "tag:heritage OR tag:contemporary-heritage",
+  },
+  "island-humour": {
+    slug: "island-humour",
+    eyebrow: "Collection 04 · Island Humour",
+    title: "Island Humour",
+    intro:
+      "Poncha, bolo do caco and inside jokes — treated with the seriousness of a premium label. Tasteful Madeiran wit, never souvenir.",
+    metaTitle: "Island Humour | Madeira Originals",
+    metaDescription:
+      "Island Humour — tasteful Madeiran cultural references on premium apparel. Designed in São Vicente, Madeira.",
+    shopifyQuery: "tag:humour OR tag:island-humour",
+  },
 };
