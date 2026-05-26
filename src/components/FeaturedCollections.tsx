@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import imgCoast from "@/assets/hero-volcanic-coast.jpg";
-import imgBasalt from "@/assets/divider-basalt-texture.jpg";
-import imgVillage from "@/assets/origin-sao-vicente-village.jpg";
-import imgFog from "@/assets/divider-fog-road.jpg";
-
-const IMAGES = [imgCoast, imgFog, imgVillage, imgBasalt];
+import { FEATURED_COLLECTION_IMAGES } from "@/lib/sectionImages";
 
 const FeaturedCollections = () => {
   const { t } = useTranslation();
@@ -48,13 +43,16 @@ const FeaturedCollections = () => {
               className="group block"
             >
               <div className="relative overflow-hidden bg-foreground aspect-[4/5]">
-                <img
-                  src={IMAGES[i]}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover img-cinematic transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
-                />
+                <picture>
+                  <source media="(max-width: 767px)" srcSet={FEATURED_COLLECTION_IMAGES[i].mobile} />
+                  <img
+                    src={FEATURED_COLLECTION_IMAGES[i].desktop}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover img-cinematic transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
+                  />
+                </picture>
                 <div
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-transparent to-transparent"

@@ -4,8 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import NewsletterForm from "@/components/NewsletterForm";
-import heroImg from "@/assets/hero-volcanic-coast.jpg";
-import villageImg from "@/assets/origin-sao-vicente-village.jpg";
+import { SECTION_IMAGES } from "@/lib/sectionImages";
 import basaltImg from "@/assets/divider-basalt-texture.jpg";
 import fogRoad from "@/assets/divider-fog-road.jpg";
 
@@ -24,15 +23,18 @@ const About = () => {
       <main>
         {/* OPENER — full-bleed cinematic */}
         <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden bg-foreground text-background">
-          <img
-            src={heroImg}
-            alt={t("aboutPage.opener.heroAlt")}
-            width={1920}
-            height={1280}
-            fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover img-cinematic animate-ken-burns"
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={SECTION_IMAGES.hero.mobile} />
+            <img
+              src={SECTION_IMAGES.hero.desktop}
+              alt={t("aboutPage.opener.heroAlt")}
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover img-cinematic animate-ken-burns"
+            />
+          </picture>
           <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/20 to-foreground/85" />
 
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col">
@@ -89,15 +91,18 @@ const About = () => {
             </div>
             <div className="lg:col-span-6 order-1 lg:order-2">
               <div className="relative aspect-[4/5] overflow-hidden bg-foreground">
-                <img
-                  src={villageImg}
-                  alt={t("aboutPage.origin.imageAlt")}
-                  width={1600}
-                  height={2000}
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover img-cinematic"
-                />
+                <picture>
+                  <source media="(max-width: 767px)" srcSet={SECTION_IMAGES.about.mobile} />
+                  <img
+                    src={SECTION_IMAGES.about.desktop}
+                    alt={t("aboutPage.origin.imageAlt")}
+                    width={1080}
+                    height={1350}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover img-cinematic"
+                  />
+                </picture>
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-background/85">
                   <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em]">
                     São Vicente · Madeira

@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "@/pages/Collection";
+import { SECTION_IMAGES } from "@/lib/sectionImages";
 
 export const COLLECTIONS: Record<string, CollectionConfig> = {
   "madeira-t-shirts": {
@@ -112,6 +113,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     metaDescription:
       "Atlantic Utility — minimal rugged apparel essentials for volcanic island life. Heavyweight cotton, technical detailing. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:atlantic-utility OR tag:utility",
+    image: SECTION_IMAGES["atlantic-utility"],
   },
   "norte": {
     slug: "norte",
@@ -123,6 +125,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     metaDescription:
       "Norte — apparel inspired by São Vicente fog, basalt cliffs and the Atlantic weather of Madeira's north coast. Designed in São Vicente.",
     shopifyQuery: "tag:norte OR tag:sao-vicente",
+    image: SECTION_IMAGES.norte,
   },
   "contemporary-heritage": {
     slug: "contemporary-heritage",
@@ -134,6 +137,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     metaDescription:
       "Contemporary Heritage — traditional Madeira references reinterpreted in modern apparel design. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:heritage OR tag:contemporary-heritage",
+    image: SECTION_IMAGES["contemporary-heritage"],
   },
   "island-humour": {
     slug: "island-humour",
@@ -145,5 +149,6 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     metaDescription:
       "Island Humour — tasteful Madeiran cultural references on premium apparel. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:humour OR tag:island-humour",
+    image: SECTION_IMAGES["island-humour"],
   },
 };
