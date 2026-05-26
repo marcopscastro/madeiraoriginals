@@ -3,19 +3,26 @@ import { useTranslation } from "react-i18next";
 const ValueBanner = () => {
   const { t } = useTranslation();
   const items = [
-    { emoji: "📍", text: t("valueBanner.designed") },
-    { emoji: "🧵", text: t("valueBanner.cotton") },
-    { emoji: "🚫", text: t("valueBanner.noTrap") },
+    t("valueBanner.designed"),
+    t("valueBanner.cotton"),
+    t("valueBanner.noTrap"),
+    t("valueBanner.shipped"),
   ];
 
+  // Marquee-style row, repeated for seamless feel
   return (
-    <section className="border-y border-foreground/10 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-          {items.map((item) => (
-            <p key={item.text} className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground">
-              <span className="mr-2">{item.emoji}</span>
-              {item.text}
+    <section className="bg-foreground text-background border-y border-background/10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+          {items.map((item, i) => (
+            <p
+              key={item}
+              className="font-heading text-[11px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-background/85 flex items-center gap-10"
+            >
+              {item}
+              {i < items.length - 1 && (
+                <span aria-hidden className="hidden sm:inline-block w-1 h-1 rounded-full bg-accent" />
+              )}
             </p>
           ))}
         </div>

@@ -30,13 +30,15 @@
     "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "imageAlt": "Premium Madeira streetwear by Madeira Originals against the Madeira Island coastline",
-    "overline": "New Drop — Designed in São Vicente",
+    "imageAlt": "Foggy black basalt cliffs and the Atlantic Ocean on the north coast of Madeira",
+    "overline": "Volume 01 · A Nossa Ilha",
+    "coords": "32°N · Atlantic Ocean",
+    "scroll": "Scroll",
     "headline1": "Inspired by Madeira.",
     "headline2": "Designed for everywhere.",
-    "body": "Premium streetwear born on the island. Editorial cuts, durable prints, zero souvenir-shop energy.",
-    "ctaShop": "Shop the drop",
-    "ctaStory": "Read our story"
+    "body": "Premium Atlantic lifestyle apparel, rooted in São Vicente. Volcanic, rugged, considered — built for the island and for everywhere it travels.",
+    "ctaShop": "Shop the collection",
+    "ctaStory": "Explore the brand"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -314,30 +316,32 @@
     "admin": "Admin"
   },
   "valueBanner": {
-    "designed": "Designed in Madeira",
-    "cotton": "Premium Heavyweight Cotton",
-    "noTrap": "0% Tourist Trap"
+    "designed": "Designed in São Vicente",
+    "cotton": "Premium heavyweight cotton",
+    "noTrap": "0% tourist trap",
+    "shipped": "Shipped worldwide"
   },
   "manifesto": {
-    "overline": "Brand Manifesto",
-    "headingA": "Not souvenirs. Not clichés.",
-    "headingB": "Madeira, properly translated.",
-    "body": "Madeira Originals was created in São Vicente to bring authentic Madeiran identity into modern streetwear and custom apparel. We take the island's landscapes, humour, traditions, coordinates, textures, and cultural details — then translate them into clean, wearable, premium designs.",
+    "overline": "Manifesto",
+    "lineA": "Not souvenirs.",
+    "lineB": "Not clichés.",
+    "lineC": "Madeira, properly translated.",
+    "body": "Madeira Originals was created in São Vicente to bring the island's volcanic, rugged, Atlantic identity into modern apparel. We take the landscapes, the weather, the textures and the culture — and translate them into premium, considered pieces built to live anywhere.",
     "pillars": [
       {
-        "title": "Island Heritage",
-        "body": "Rooted in Madeira's culture, nature, language, humour, and local identity."
+        "title": "Atlantic Heritage",
+        "body": "Rooted in São Vicente — volcanic coastlines, foggy peaks, levadas, and a working island culture."
       },
       {
-        "title": "Modern Streetwear",
-        "body": "Clean typography, heavyweight apparel, minimalist graphics, premium layouts."
+        "title": "Editorial Design",
+        "body": "Restrained typography, heavyweight construction, minimalist graphics, premium execution."
       },
       {
-        "title": "Production Quality",
-        "body": "Built through our own technical print studio: high-resolution DTF, UV DTF, and custom apparel."
+        "title": "Made in-house",
+        "body": "Designed, printed and finished in our own studio in São Vicente — no third-party print farms."
       }
     ],
-    "imageAlt": "Madeiran teenager wearing the Madeira Originals 'Madeira Über' tee on a Funchal calçada street"
+    "imageAlt": "Madeira Originals manifesto image"
   },
   "bestsellers": {
     "overline": "Latest Drops",
@@ -375,11 +379,70 @@
     ]
   },
   "diaspora": {
-    "overline": "Local by origin. Global by attitude.",
+    "overline": "Born in São Vicente · Worn everywhere",
     "headingA": "Born in São Vicente.",
-    "headingB": "Built for everywhere.",
-    "body": "Made for Madeira, for the diaspora, and for anyone who carries a piece of the island — whether they are in Funchal, Lisbon, London, Jersey, Luxembourg, or anywhere else.",
-    "imageAlt": "Atlantic cliffs of São Vicente on the north coast of Madeira"
+    "headingB": "Worn everywhere.",
+    "body": "Made for the island, for the diaspora, and for anyone who carries a piece of Madeira — from Funchal to Lisbon, Jersey, London, Luxembourg and beyond.",
+    "imageAlt": "Foggy laurel forest road on the north coast of Madeira"
+  },
+  "collections": {
+    "overline": "Featured Collections",
+    "headingA": "Four ways to wear",
+    "headingB": "the island.",
+    "viewAll": "View all",
+    "items": [
+      {
+        "index": "01",
+        "title": "Atlantic Utility",
+        "body": "Minimal rugged essentials. Heavyweight cotton, technical detailing, built for fog, wind and salt.",
+        "cta": "Shop Utility",
+        "to": "/madeira-t-shirts"
+      },
+      {
+        "index": "02",
+        "title": "Norte",
+        "body": "São Vicente in fabric form — foggy peaks, basalt textures, the quiet weather of the north coast.",
+        "cta": "Shop Norte",
+        "to": "/madeira-hoodies"
+      },
+      {
+        "index": "03",
+        "title": "Contemporary Heritage",
+        "body": "Tradition, properly translated. Azulejo geometry, coordinates and island symbols, redrawn for now.",
+        "cta": "Shop Heritage",
+        "to": "/madeira-streetwear"
+      },
+      {
+        "index": "04",
+        "title": "Island Humour",
+        "body": "Poncha, bolo do caco and inside jokes treated with the seriousness of a premium label.",
+        "cta": "Shop Humour",
+        "to": "/madeira-accessories"
+      }
+    ]
+  },
+  "origin": {
+    "overline": "Origin",
+    "headingA": "Made in São Vicente.",
+    "headingB": "On the north coast of an Atlantic island.",
+    "body1": "São Vicente sits on the rugged north of Madeira, where the Atlantic meets black basalt cliffs and fog rolls down the laurel forest into the village. It's quiet, wind-shaped, and stubbornly itself.",
+    "body2": "Madeira Originals exists because this island deserves a brand that translates it properly — not into souvenirs, but into apparel that could exist anywhere in the world, while staying unmistakably from here.",
+    "cta": "Read the full story",
+    "imageAlt": "São Vicente village under fog on the north coast of Madeira",
+    "captionPlace": "São Vicente · Madeira",
+    "facts": [
+      { "k": "Founded", "v": "Madeira" },
+      { "k": "Studio", "v": "São Vicente" },
+      { "k": "Production", "v": "In-house" },
+      { "k": "Shipping", "v": "Worldwide" }
+    ]
+  },
+  "divider": {
+    "overline": "Atlantic · Volcanic · Considered",
+    "line1": "Basalt, fog,",
+    "line2": "and Atlantic salt.",
+    "location": "ER101 · North Coast",
+    "imageAlt": "Wet black basalt stone wall with moss in São Vicente, Madeira"
   },
   "homeNewsletter": {
     "overline": "Newsletter",

@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueBanner from "@/components/ValueBanner";
 import Manifesto from "@/components/Manifesto";
+import FeaturedCollections from "@/components/FeaturedCollections";
 import Bestsellers from "@/components/Bestsellers";
-import NoTouristTrap from "@/components/NoTouristTrap";
-import DesignDirections from "@/components/DesignDirections";
-
+import VisualDivider from "@/components/VisualDivider";
+import OriginStory from "@/components/OriginStory";
 import Diaspora from "@/components/Diaspora";
 import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
@@ -33,10 +33,10 @@ const Index = () => (
       <Hero />
       <ValueBanner />
       <Manifesto />
+      <FeaturedCollections />
+      <VisualDivider />
       <Bestsellers />
-      <NoTouristTrap />
-      <DesignDirections />
-      
+      <OriginStory />
       <Diaspora />
       <JournalPreview />
       <HomeNewsletter />

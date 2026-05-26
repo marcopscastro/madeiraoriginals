@@ -1,32 +1,32 @@
 import { useTranslation } from "react-i18next";
-import saoVicente from "@/assets/sao-vicente.webp";
+import fogRoad from "@/assets/divider-fog-road.jpg";
 
 const Diaspora = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative">
+    <section className="relative w-full bg-foreground text-background">
       <img
-        src={saoVicente}
+        src={fogRoad}
         alt={t("diaspora.imageAlt")}
-        width={1600}
-        height={900}
+        width={1920}
+        height={1080}
         loading="lazy"
-        className="w-full h-[60vh] md:h-[70vh] object-cover"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
       />
-      <div className="absolute inset-0 bg-secondary/70" />
-      <div className="absolute inset-0 flex items-center">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-secondary-foreground">
-          <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4">
-            {t("diaspora.overline")}
-          </p>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold leading-[1.05]">
-            {t("diaspora.headingA")}<br />
-            <span className="italic">{t("diaspora.headingB")}</span>
-          </h2>
-          <p className="mt-6 font-body text-base md:text-lg leading-relaxed opacity-90 max-w-xl mx-auto">
-            {t("diaspora.body")}
-          </p>
-        </div>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/80 to-foreground/40" />
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 py-28 md:py-40 text-center">
+        <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.45em] text-background/70 mb-8">
+          {t("diaspora.overline")}
+        </p>
+        <h2 className="font-display font-medium leading-[0.98] tracking-tight text-4xl sm:text-6xl md:text-7xl">
+          {t("diaspora.headingA")}
+          <br />
+          <span className="text-background/55">{t("diaspora.headingB")}</span>
+        </h2>
+        <p className="mt-10 font-body text-base md:text-lg leading-relaxed text-background/80 max-w-2xl mx-auto">
+          {t("diaspora.body")}
+        </p>
       </div>
     </section>
   );

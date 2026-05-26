@@ -30,13 +30,15 @@
     "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "imageAlt": "Streetwear premium da Madeira pela Madeira Originals com a costa da Ilha da Madeira",
-    "overline": "Novo Lançamento — Desenhado em São Vicente",
+    "imageAlt": "Falésias de basalto vulcânico com nevoeiro e o Oceano Atlântico na costa norte da Madeira",
+    "overline": "Volume 01 · A Nossa Ilha",
+    "coords": "32°N · Oceano Atlântico",
+    "scroll": "Scroll",
     "headline1": "Inspirado pela Madeira.",
     "headline2": "Desenhado para todo o lado.",
-    "body": "Streetwear premium nascido na ilha. Cortes editoriais, estampas duradouras, zero energia de souvenir shop.",
-    "ctaShop": "Ver coleção",
-    "ctaStory": "Ler a nossa história"
+    "body": "Vestuário Atlântico premium, com raízes em São Vicente. Vulcânico, rude, ponderado — feito para a ilha e para onde quer que ela viaje.",
+    "ctaShop": "Ver a colecção",
+    "ctaStory": "Explorar a marca"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -314,30 +316,32 @@
     "admin": "Admin"
   },
   "valueBanner": {
-    "designed": "Desenhado na Madeira",
-    "cotton": "Algodão Premium Pesado",
-    "noTrap": "0% Tourist Trap"
+    "designed": "Desenhado em São Vicente",
+    "cotton": "Algodão premium pesado",
+    "noTrap": "0% tourist trap",
+    "shipped": "Envio para todo o mundo"
   },
   "manifesto": {
-    "overline": "Manifesto da Marca",
-    "headingA": "Sem souvenirs. Sem clichés.",
-    "headingB": "Madeira, traduzida como deve ser.",
-    "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade madeirense autêntica ao streetwear moderno e vestuário personalizado. Pegamos nas paisagens, no humor, nas tradições, coordenadas, texturas e detalhes culturais da ilha — e traduzimo-los em desenhos limpos, vestíveis e premium.",
+    "overline": "Manifesto",
+    "lineA": "Sem souvenirs.",
+    "lineB": "Sem clichés.",
+    "lineC": "Madeira, traduzida como deve ser.",
+    "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade vulcânica, rude e atlântica da ilha para vestuário moderno. Pegamos nas paisagens, no clima, nas texturas e na cultura — e traduzimo-las em peças premium, ponderadas, feitas para viver em qualquer lado.",
     "pillars": [
       {
-        "title": "Herança da Ilha",
-        "body": "Enraizado na cultura, natureza, língua, humor e identidade local da Madeira."
+        "title": "Herança Atlântica",
+        "body": "Enraizado em São Vicente — costa vulcânica, picos com nevoeiro, levadas e uma cultura de ilha que trabalha."
       },
       {
-        "title": "Streetwear Moderno",
-        "body": "Tipografia limpa, vestuário pesado, gráficos minimalistas, layouts premium."
+        "title": "Design Editorial",
+        "body": "Tipografia contida, construção pesada, gráficos minimalistas, execução premium."
       },
       {
-        "title": "Qualidade de Produção",
-        "body": "Construído no nosso próprio estúdio técnico: DTF de alta resolução, UV DTF e vestuário personalizado."
+        "title": "Feito em casa",
+        "body": "Desenhado, impresso e acabado no nosso próprio estúdio em São Vicente — sem print farms de terceiros."
       }
     ],
-    "imageAlt": "Adolescente madeirense com a t-shirt 'Madeira Über' da Madeira Originals numa calçada do Funchal"
+    "imageAlt": "Imagem do manifesto Madeira Originals"
   },
   "bestsellers": {
     "overline": "Últimos Lançamentos",
@@ -375,11 +379,70 @@
     ]
   },
   "diaspora": {
-    "overline": "Local de origem. Global de atitude.",
+    "overline": "Nascida em São Vicente · Vestida em todo o lado",
     "headingA": "Nascida em São Vicente.",
-    "headingB": "Construída para o mundo.",
-    "body": "Feita para a Madeira, para a diáspora e para quem leva consigo um pedaço da ilha — esteja no Funchal, Lisboa, Londres, Jersey, Luxemburgo ou em qualquer outro lugar.",
-    "imageAlt": "Falésias atlânticas de São Vicente na costa norte da Madeira"
+    "headingB": "Vestida em todo o lado.",
+    "body": "Feita para a ilha, para a diáspora e para quem leva consigo um pedaço da Madeira — do Funchal a Lisboa, Jersey, Londres, Luxemburgo e mais além.",
+    "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira"
+  },
+  "collections": {
+    "overline": "Colecções em Destaque",
+    "headingA": "Quatro formas de vestir",
+    "headingB": "a ilha.",
+    "viewAll": "Ver tudo",
+    "items": [
+      {
+        "index": "01",
+        "title": "Atlantic Utility",
+        "body": "Essenciais minimais e robustos. Algodão pesado, detalhes técnicos, feitos para nevoeiro, vento e sal.",
+        "cta": "Ver Utility",
+        "to": "/madeira-t-shirts"
+      },
+      {
+        "index": "02",
+        "title": "Norte",
+        "body": "São Vicente em tecido — picos com nevoeiro, texturas de basalto, o clima silencioso da costa norte.",
+        "cta": "Ver Norte",
+        "to": "/madeira-hoodies"
+      },
+      {
+        "index": "03",
+        "title": "Herança Contemporânea",
+        "body": "Tradição, traduzida como deve ser. Geometria de azulejo, coordenadas e símbolos da ilha, redesenhados para hoje.",
+        "cta": "Ver Herança",
+        "to": "/madeira-streetwear"
+      },
+      {
+        "index": "04",
+        "title": "Humor da Ilha",
+        "body": "Poncha, bolo do caco e piadas internas tratadas com a seriedade de uma marca premium.",
+        "cta": "Ver Humor",
+        "to": "/madeira-accessories"
+      }
+    ]
+  },
+  "origin": {
+    "overline": "Origem",
+    "headingA": "Feito em São Vicente.",
+    "headingB": "Na costa norte de uma ilha Atlântica.",
+    "body1": "São Vicente fica no norte rude da Madeira, onde o Atlântico encontra falésias de basalto negro e o nevoeiro desce da floresta laurissilva até à vila. É silenciosa, moldada pelo vento, e teimosamente ela própria.",
+    "body2": "A Madeira Originals existe porque esta ilha merece uma marca que a traduza como deve ser — não em souvenirs, mas em vestuário que poderia existir em qualquer parte do mundo, mantendo-se inequivocamente daqui.",
+    "cta": "Ler a história completa",
+    "imageAlt": "Vila de São Vicente sob nevoeiro na costa norte da Madeira",
+    "captionPlace": "São Vicente · Madeira",
+    "facts": [
+      { "k": "Origem", "v": "Madeira" },
+      { "k": "Studio", "v": "São Vicente" },
+      { "k": "Produção", "v": "Interna" },
+      { "k": "Envio", "v": "Mundial" }
+    ]
+  },
+  "divider": {
+    "overline": "Atlântico · Vulcânico · Ponderado",
+    "line1": "Basalto, nevoeiro,",
+    "line2": "e sal do Atlântico.",
+    "location": "ER101 · Costa Norte",
+    "imageAlt": "Muro de pedra de basalto molhado com musgo em São Vicente, Madeira"
   },
   "homeNewsletter": {
     "overline": "Newsletter",

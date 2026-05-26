@@ -6,44 +6,46 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 214 54% 24%;
+    /* Madeira Originals — Premium Atlantic palette
+       Basalt #0E0E10 · Warm Ivory #F4F1EA · Laurel #3B5A3A · Fog #8A8B83 */
+    --background: 40 25% 95%;
+    --foreground: 240 8% 8%;
 
-    --card: 40 33% 96%;
-    --card-foreground: 214 54% 24%;
+    --card: 40 25% 95%;
+    --card-foreground: 240 8% 8%;
 
-    --popover: 40 33% 96%;
-    --popover-foreground: 214 54% 24%;
+    --popover: 40 25% 95%;
+    --popover-foreground: 240 8% 8%;
 
-    --primary: 352 69% 39%;
-    --primary-foreground: 40 33% 96%;
+    --primary: 240 9% 6%;
+    --primary-foreground: 40 27% 94%;
 
-    --secondary: 214 54% 24%;
-    --secondary-foreground: 40 33% 96%;
+    --secondary: 240 9% 6%;
+    --secondary-foreground: 40 27% 94%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 214 20% 46%;
+    --muted: 40 14% 90%;
+    --muted-foreground: 70 4% 42%;
 
-    --accent: 37 89% 61%;
-    --accent-foreground: 214 54% 24%;
+    --accent: 118 21% 29%;
+    --accent-foreground: 40 27% 94%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 40 33% 96%;
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 40 27% 94%;
 
-    --border: 214 54% 24%;
-    --input: 214 30% 80%;
-    --ring: 352 69% 39%;
+    --border: 240 8% 12%;
+    --input: 70 5% 78%;
+    --ring: 118 21% 29%;
 
     --radius: 0rem;
 
-    --sidebar-background: 40 33% 96%;
-    --sidebar-foreground: 214 54% 24%;
-    --sidebar-primary: 352 69% 39%;
-    --sidebar-primary-foreground: 40 33% 96%;
-    --sidebar-accent: 37 89% 61%;
-    --sidebar-accent-foreground: 214 54% 24%;
-    --sidebar-border: 214 54% 24%;
-    --sidebar-ring: 352 69% 39%;
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 240 8% 8%;
+    --sidebar-primary: 240 9% 6%;
+    --sidebar-primary-foreground: 40 27% 94%;
+    --sidebar-accent: 118 21% 29%;
+    --sidebar-accent-foreground: 40 27% 94%;
+    --sidebar-border: 240 8% 12%;
+    --sidebar-ring: 118 21% 29%;
   }
 
   .dark {
@@ -99,9 +101,16 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    letter-spacing: -0.02em;
   }
 
   .font-display {
+    font-family: '"Space Grotesk"', system-ui, sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.035em;
+  }
+
+  .font-serif-display {
     font-family: 'Fraunces', Georgia, serif;
     font-optical-sizing: auto;
     letter-spacing: -0.01em;
