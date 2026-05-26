@@ -81,92 +81,105 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
         }
       />
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <a href="/" className="hover:text-foreground">{t("collection.home")}</a>
-          <span>/</span>
-          <a href="/shop" className="hover:text-foreground">{t("collection.shop")}</a>
-          <span>/</span>
-          <span className="text-foreground">{config.title}</span>
-        </nav>
+      <main>
+        {/* Editorial collection hero */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-20 md:pt-32 pb-12 md:pb-20">
+          <nav className="flex items-center gap-2 font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/55 mb-10 md:mb-16">
+            <a href="/" className="hover:text-foreground transition-colors">{t("collection.home")}</a>
+            <span>·</span>
+            <a href="/shop" className="hover:text-foreground transition-colors">{t("collection.shop")}</a>
+            <span>·</span>
+            <span className="text-foreground">{config.title}</span>
+          </nav>
 
-        <div className="text-center mb-10 max-w-3xl mx-auto">
-          <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
-            {config.eyebrow}
-          </p>
-          <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground">
-            {config.title}
-          </h1>
-          <p className="mt-4 font-body text-base md:text-lg text-muted-foreground">
-            {config.intro}
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 mb-8 md:flex-row md:items-center md:justify-end">
-          <div className="flex items-center gap-3 md:ml-auto">
-            <div className="relative">
-              <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={t("collection.searchPlaceholder")}
-                className="bg-background border border-foreground/20 font-body text-sm pl-9 pr-9 py-2 text-foreground focus:outline-none focus:border-foreground rounded-none w-44 sm:w-56"
-              />
-              {query && (
-                <button
-                  onClick={() => setQuery("")}
-                  aria-label={t("collection.clearSearch")}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                >
-                  <X size={14} />
-                </button>
-              )}
+          <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-end">
+            <div className="md:col-span-8">
+              <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
+                {config.eyebrow}
+              </p>
+              <h1 className="font-display font-medium text-foreground leading-[0.98] tracking-tight text-5xl md:text-7xl lg:text-[5.5rem]">
+                {config.title}
+              </h1>
             </div>
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value as SortOption)}
-              aria-label={t("collection.sortAria")}
-              className="bg-background border border-foreground/20 font-heading text-xs font-semibold uppercase tracking-wide px-3 py-2 text-foreground focus:outline-none focus:border-foreground"
-            >
-              <option value="default">{t("collection.sortDefault")}</option>
-              <option value="title-asc">{t("collection.sortNameAsc")}</option>
-              <option value="price-asc">{t("collection.sortPriceAsc")}</option>
-              <option value="price-desc">{t("collection.sortPriceDesc")}</option>
-            </select>
-          </div>
-        </div>
-
-        {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="animate-pulse">
-                <div className="aspect-[3/4] bg-muted" />
-                <div className="h-4 bg-muted mt-4 w-2/3" />
-                <div className="h-4 bg-muted mt-2 w-1/3" />
-              </div>
-            ))}
-          </div>
-        ) : filtered.length === 0 ? (
-          <div className="text-center py-20 border border-dashed border-foreground/15">
-            <p className="font-display text-2xl text-foreground">{t("collection.emptyTitle")}</p>
-            <p className="mt-2 font-body text-muted-foreground">
-              {t("collection.emptyBody")}
+            <p className="md:col-span-4 font-body text-base md:text-lg text-foreground/70 leading-relaxed max-w-md">
+              {config.intro}
             </p>
-            <a
-              href="/shop"
-              className="inline-block mt-6 border border-foreground font-heading font-bold text-xs uppercase tracking-widest px-5 py-3 hover:bg-foreground hover:text-background"
-            >
-              {t("collection.emptyCta")}
-            </a>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((p) => (
-              <ProductCard key={p.node.id} product={p} />
-            ))}
+        </section>
+
+        {/* Calm controls — no border, just a soft baseline */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex items-center justify-between gap-4 border-t border-foreground/10 pt-6 mb-12 md:mb-16">
+            <p className="font-heading text-[10px] uppercase tracking-[0.3em] text-foreground/55">
+              {isLoading ? "" : `${filtered.length} ${filtered.length === 1 ? "piece" : "pieces"}`}
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="relative hidden sm:block">
+                <Search size={13} className="absolute left-0 top-1/2 -translate-y-1/2 text-foreground/45 pointer-events-none" />
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder={t("collection.searchPlaceholder")}
+                  className="bg-transparent border-0 border-b border-foreground/15 font-body text-sm pl-5 pr-6 py-2 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-foreground/60 rounded-none w-44"
+                />
+                {query && (
+                  <button
+                    onClick={() => setQuery("")}
+                    aria-label={t("collection.clearSearch")}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 text-foreground/45 hover:text-foreground"
+                  >
+                    <X size={13} />
+                  </button>
+                )}
+              </div>
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as SortOption)}
+                aria-label={t("collection.sortAria")}
+                className="bg-transparent border-0 font-heading text-[11px] font-semibold uppercase tracking-[0.3em] px-0 py-2 text-foreground/70 hover:text-foreground focus:outline-none cursor-pointer"
+              >
+                <option value="default">{t("collection.sortDefault")}</option>
+                <option value="title-asc">{t("collection.sortNameAsc")}</option>
+                <option value="price-asc">{t("collection.sortPriceAsc")}</option>
+                <option value="price-desc">{t("collection.sortPriceDesc")}</option>
+              </select>
+            </div>
           </div>
-        )}
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-28 md:pb-40">
+          {isLoading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-x-10 md:gap-y-20">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="animate-pulse">
+                  <div className="aspect-[4/5] bg-muted" />
+                  <div className="h-4 bg-muted mt-6 w-2/3" />
+                  <div className="h-4 bg-muted mt-3 w-1/4" />
+                </div>
+              ))}
+            </div>
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-28 md:py-40">
+              <p className="font-display text-3xl md:text-4xl font-medium text-foreground tracking-tight">{t("collection.emptyTitle")}</p>
+              <p className="mt-4 font-body text-foreground/65 max-w-md mx-auto">
+                {t("collection.emptyBody")}
+              </p>
+              <a
+                href="/shop"
+                className="inline-flex items-center mt-10 font-heading text-[12px] font-semibold uppercase tracking-[0.3em] text-foreground border-b border-foreground pb-1 hover:text-accent hover:border-accent transition-colors"
+              >
+                {t("collection.emptyCta")} →
+              </a>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 md:gap-x-10 md:gap-y-24">
+              {filtered.map((p) => (
+                <ProductCard key={p.node.id} product={p} />
+              ))}
+            </div>
+          )}
+        </section>
 
         {config.faqs && config.faqs.length > 0 && (
           <section className="mt-20 md:mt-28 max-w-3xl mx-auto border-t border-foreground/10 pt-12 md:pt-16">
