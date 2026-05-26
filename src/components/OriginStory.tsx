@@ -7,8 +7,8 @@ const OriginStory = () => {
   const facts = t("origin.facts", { returnObjects: true }) as { k: string; v: string }[];
 
   return (
-    <section className="bg-background border-t border-foreground/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-24 md:py-36 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+    <section className="bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-32 md:py-48 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
           <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
             {t("origin.overline")}
@@ -55,7 +55,7 @@ const OriginStory = () => {
               height={1024}
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover img-cinematic"
             />
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-background/85">
               <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em]">

@@ -8,14 +8,14 @@ const Bestsellers = () => {
   const { data: products = [], isLoading } = useProducts(8);
 
   return (
-    <section id="latest-drops" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="text-center mb-12">
-        <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
+    <section id="latest-drops" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40">
+      <div className="text-center mb-16 md:mb-20">
+        <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
           {t("bestsellers.overline")}
         </p>
-        <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.05]">
+        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium text-foreground leading-[1.02] tracking-tight">
           {t("bestsellers.headingA")}<br />
-          <span className="italic">{t("bestsellers.headingB")}</span>
+          <span className="text-foreground/40">{t("bestsellers.headingB")}</span>
         </h2>
       </div>
       {isLoading ? (
