@@ -87,7 +87,7 @@ const JournalPost = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background grain-fixed">
       <SEO
         title={seoTitle ?? title}
         description={seoDescription ?? excerpt ?? undefined}
@@ -96,57 +96,69 @@ const JournalPost = () => {
         jsonLd={[articleLd, breadcrumbLd]}
       />
       <Header />
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <nav className="font-heading text-xs uppercase tracking-widest text-muted-foreground mb-6">
-          <Link to="/journal" className="hover:text-foreground">{t("journal.breadcrumb")}</Link>
-          <span className="mx-2">/</span>
-          <span className="text-foreground">{title}</span>
-        </nav>
+      <main>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-40">
+          <nav className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-10">
+            <Link to="/journal" className="hover:text-foreground transition-colors">{t("journal.breadcrumb")}</Link>
+            <span className="mx-3 text-foreground/30">/</span>
+            <span className="text-foreground/60">{title}</span>
+          </nav>
 
-        <header className="mb-10">
-          {article.tags?.[0] && (
-            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
-              {article.tags[0]}
-            </p>
-          )}
-          <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-[1.1]">
-            {title}
-          </h1>
-          {excerpt && (
-            <p className="mt-5 font-body text-lg text-muted-foreground leading-relaxed">
-              {excerpt}
-            </p>
-          )}
-        </header>
+          <header className="mb-14">
+            {article.tags?.[0] && (
+              <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
+                {article.tags[0]}
+              </p>
+            )}
+            <h1 className="font-display font-medium tracking-tight text-foreground leading-[1.02] text-4xl md:text-6xl lg:text-7xl">
+              {title}
+            </h1>
+            {excerpt && (
+              <p className="mt-8 font-body text-lg md:text-xl text-foreground/70 leading-relaxed max-w-2xl">
+                {excerpt}
+              </p>
+            )}
+          </header>
+        </div>
 
         {(() => {
           const cover = journalCoverProps(article.cover_url);
           return cover ? (
-            <img
-              src={cover.src}
-              srcSet={cover.srcSet}
-              sizes="(min-width: 1024px) 800px, 100vw"
-              alt={title}
-              className="w-full aspect-[16/9] object-cover mb-10"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-            />
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
+              <img
+                src={cover.src}
+                srcSet={cover.srcSet}
+                sizes="(min-width: 1024px) 1100px, 100vw"
+                alt={title}
+                className="w-full aspect-[16/9] object-cover img-cinematic"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </div>
           ) : null;
         })()}
 
-        <div className="prose-editorial">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{bodyMd}</ReactMarkdown>
-        </div>
+        <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
+          <div className="prose-editorial">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{bodyMd}</ReactMarkdown>
+          </div>
 
-        <div className="mt-16 pt-8 border-t border-foreground/10 text-center">
-          <Link
-            to="/shop"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
-          >
-            {t("journal.ctaShop")}
-          </Link>
-        </div>
+          <div className="mt-20 pt-10 border-t border-foreground/15 flex flex-wrap items-center justify-between gap-6">
+            <Link
+              to="/journal"
+              className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground/60 hover:text-foreground transition-colors"
+            >
+              ← {t("journal.breadcrumb")}
+            </Link>
+            <Link
+              to="/shop"
+              className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground border-b border-foreground pb-1 hover:opacity-70 transition-opacity"
+            >
+              {t("journal.ctaShop")} →
+            </Link>
+          </div>
+        </article>
       </main>
       <Footer />
     </div>

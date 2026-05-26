@@ -527,40 +527,63 @@
     "heading": "You May Also Like"
   },
   "aboutPage": {
+    "seoOverline": "About Madeira Originals",
+    "volume": "Volume 02 — A História",
+    "opener": {
+      "overline": "A Nossa Ilha · A Nossa Marca",
+      "headingA": "Madeira,",
+      "headingB": "properly translated.",
+      "lead": "An Atlantic lifestyle brand born in São Vicente — on the north coast of a volcanic island in the middle of the ocean.",
+      "coords": "32.80° N · 17.04° W",
+      "heroAlt": "Foggy black basalt cliffs and Atlantic Ocean on the north coast of Madeira"
+    },
+    "origin": {
+      "chapter": "Chapter I",
+      "overline": "Origin",
+      "headingA": "São Vicente.",
+      "headingB": "Where the brand begins.",
+      "p1": "São Vicente sits on the rugged north of Madeira, where the Atlantic meets black basalt cliffs and fog rolls down the laurel forest into the village. It is quiet, wind-shaped, and stubbornly itself.",
+      "p2": "Madeira Originals exists because this island deserves a brand that translates it properly — not into souvenirs, but into pieces that could live anywhere in the world while staying unmistakably from here.",
+      "p3": "Atlantic identity. Volcanic landscapes. Contemporary heritage. The brand was built around those three coordinates and refuses to move from them.",
+      "imageAlt": "São Vicente village under fog on the north coast of Madeira"
+    },
+    "philosophy": {
+      "chapter": "Chapter II",
+      "overline": "Philosophy",
+      "headingA": "Restrained.",
+      "headingB": "Rooted. Wearable everywhere.",
+      "pillars": [
+        { "k": "01", "title": "Authenticity", "body": "References that mean something — language, geography, weather, craft. Nothing borrowed from a postcard." },
+        { "k": "02", "title": "Locality", "body": "Designed, printed and finished in our own studio in São Vicente. No outsourced print farms, no third-party fulfilment." },
+        { "k": "03", "title": "Wearable Design", "body": "Pieces that work in Funchal, Lisbon, London or Jersey. Island-rooted, globally cut." },
+        { "k": "04", "title": "Premium Quality", "body": "Heavyweight cotton, considered construction, finishes built to soften with wear rather than fall apart." },
+        { "k": "05", "title": "0% Tourist Trap", "body": "No magnets. No rooster prints. No lazy graphics. The island deserves better and so do you." }
+      ]
+    },
+    "field": {
+      "chapter": "Chapter III",
+      "overline": "Field Notes",
+      "headingA": "Fog, basalt,",
+      "headingB": "and Atlantic salt.",
+      "p1": "The weather changes every hour. ER101 winds along the cliffs above villages built into the rock. Laurel forest holds the moisture in. Salt sticks to everything that faces the sea.",
+      "p2": "Those are the materials of the brand — not as metaphor, but as actual reference. Textures, palettes, weight, restraint.",
+      "imageAlt": "Wet black basalt stone wall in São Vicente, Madeira"
+    },
+    "closing": {
+      "overline": "A Nossa Ilha. A Nossa Marca.",
+      "headingA": "Born in São Vicente.",
+      "headingB": "Worn everywhere.",
+      "body": "From the island, for the diaspora, and for anyone who carries a piece of Madeira with them."
+    },
+    "newsletterHeading": "Stay close to the island.",
+    "newsletterBody": "First access to new drops, production updates, and stories from Madeira.",
     "overline": "About Madeira Originals",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Premium streetwear and custom apparel born in São Vicente, Madeira.",
-    "heroAlt": "Heavyweight cream and navy folded t-shirts beside bougainvillea by Madeira Originals",
+    "heroAlt": "Foggy basalt cliffs of São Vicente, Madeira",
     "saoVicenteAlt": "Atlantic cliffs of São Vicente, Madeira",
-    "sections": [
-      {
-        "h": "Who we are",
-        "p": "Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Operating under the philosophy Inspired by Madeira. Designed for everywhere, we bridge deep island heritage with contemporary global fashion."
-      },
-      {
-        "h": "Why we exist",
-        "p": "We created Madeira Originals because Madeira deserves better than generic souvenirs. Our island has its own humour, texture, landscapes, language, traditions, diaspora, and visual identity. We translate that into modern apparel and production-quality design."
-      },
-      {
-        "h": "0% Tourist Trap",
-        "p": "Our standard is simple: no clichés, no lazy graphics, no throwaway tourist products. Every design must feel authentic to Madeira and wearable anywhere."
-      },
-      {
-        "h": "Retail Apparel",
-        "p": "Original collections inspired by Madeira's nature, culture, and everyday identity — heavyweight cotton, premium finishes, editorial graphics."
-      },
-      {
-        "h": "Born in São Vicente",
-        "p": "Madeira Originals started in São Vicente, on the north coast of Madeira — a place shaped by mountains, sea, weather, tradition, and working culture."
-      },
-      {
-        "h": "Designed for everywhere",
-        "p": "Our clothing should feel as natural in Funchal as it does in Lisbon, London, Jersey, or anywhere the Madeiran diaspora lives."
-      }
-    ],
-    "newsletterHeading": "Stay close to the island.",
-    "newsletterBody": "First access to new drops, production updates, and stories from Madeira."
+    "sections": []
   },
   "contactPage": {
     "overline": "Contact",

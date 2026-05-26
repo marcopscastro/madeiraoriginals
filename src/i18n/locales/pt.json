@@ -527,40 +527,63 @@
     "heading": "Também Podes Gostar"
   },
   "aboutPage": {
+    "seoOverline": "Sobre a Madeira Originals",
+    "volume": "Volume 02 — A História",
+    "opener": {
+      "overline": "A Nossa Ilha · A Nossa Marca",
+      "headingA": "Madeira,",
+      "headingB": "como deve ser traduzida.",
+      "lead": "Uma marca de lifestyle atlântico nascida em São Vicente — na costa norte de uma ilha vulcânica no meio do oceano.",
+      "coords": "32.80° N · 17.04° W",
+      "heroAlt": "Falésias negras de basalto e oceano Atlântico na costa norte da Madeira"
+    },
+    "origin": {
+      "chapter": "Capítulo I",
+      "overline": "Origem",
+      "headingA": "São Vicente.",
+      "headingB": "Onde a marca começa.",
+      "p1": "São Vicente fica no norte rugoso da Madeira, onde o Atlântico encontra as falésias de basalto negro e a neblina desce da laurissilva até à vila. É silenciosa, moldada pelo vento e teimosamente fiel a si mesma.",
+      "p2": "A Madeira Originals existe porque esta ilha merece uma marca que a traduza como deve ser — não em souvenirs, mas em peças que possam viver em qualquer parte do mundo continuando, inequivocamente, daqui.",
+      "p3": "Identidade atlântica. Paisagens vulcânicas. Herança contemporânea. A marca foi construída em torno destas três coordenadas e recusa afastar-se delas.",
+      "imageAlt": "Vila de São Vicente sob neblina, costa norte da Madeira"
+    },
+    "philosophy": {
+      "chapter": "Capítulo II",
+      "overline": "Filosofia",
+      "headingA": "Contida.",
+      "headingB": "Enraizada. Vestível em qualquer lugar.",
+      "pillars": [
+        { "k": "01", "title": "Autenticidade", "body": "Referências com significado — língua, geografia, clima, ofício. Nada copiado de um postal." },
+        { "k": "02", "title": "Localidade", "body": "Desenhado, impresso e acabado no nosso estúdio em São Vicente. Sem produção externa, sem fulfilment de terceiros." },
+        { "k": "03", "title": "Design Vestível", "body": "Peças que funcionam no Funchal, em Lisboa, Londres ou Jersey. Enraizadas na ilha, cortadas para o mundo." },
+        { "k": "04", "title": "Qualidade Premium", "body": "Algodão pesado, construção pensada, acabamentos feitos para amaciar com o uso." },
+        { "k": "05", "title": "0% Tourist Trap", "body": "Sem ímanes. Sem galos estampados. Sem gráficos preguiçosos. A ilha merece mais — e tu também." }
+      ]
+    },
+    "field": {
+      "chapter": "Capítulo III",
+      "overline": "Notas de Campo",
+      "headingA": "Neblina, basalto",
+      "headingB": "e sal atlântico.",
+      "p1": "O tempo muda a cada hora. A ER101 serpenteia pelas falésias acima das vilas construídas na rocha. A laurissilva segura a humidade. O sal cola-se a tudo o que enfrenta o mar.",
+      "p2": "Estes são os materiais da marca — não como metáfora, mas como referência real. Texturas, paletas, peso, contenção.",
+      "imageAlt": "Muro de pedra basáltica molhada em São Vicente, Madeira"
+    },
+    "closing": {
+      "overline": "A Nossa Ilha. A Nossa Marca.",
+      "headingA": "Nascida em São Vicente.",
+      "headingB": "Vestida em todo o lado.",
+      "body": "Da ilha, para a diáspora, e para quem leva consigo um pedaço da Madeira."
+    },
+    "newsletterHeading": "Mantém-te perto da ilha.",
+    "newsletterBody": "Acesso antecipado a novos lançamentos, atualizações de produção e histórias da Madeira.",
     "overline": "Sobre a Madeira Originals",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Streetwear premium e vestuário personalizado nascidos em São Vicente, Madeira.",
-    "heroAlt": "T-shirts pesadas em cru e marinho dobradas junto a buganvílias pela Madeira Originals",
+    "heroAlt": "Falésias de basalto sob neblina em São Vicente, Madeira",
     "saoVicenteAlt": "Falésias atlânticas de São Vicente, Madeira",
-    "sections": [
-      {
-        "h": "Quem somos",
-        "p": "A Madeira Originals é uma marca premium de streetwear e vestuário personalizado nascida em São Vicente, Madeira. Sob a filosofia Inspirada na Madeira. Desenhada para o mundo, unimos a herança profunda da ilha à moda global contemporânea."
-      },
-      {
-        "h": "Porque existimos",
-        "p": "Criámos a Madeira Originals porque a Madeira merece mais do que souvenirs genéricos. A nossa ilha tem o seu próprio humor, textura, paisagens, língua, tradições, diáspora e identidade visual. Traduzimos isso em vestuário moderno e design com qualidade de produção."
-      },
-      {
-        "h": "0% Tourist Trap",
-        "p": "O nosso padrão é simples: sem clichés, sem gráficos preguiçosos, sem produtos turísticos descartáveis. Cada desenho tem de parecer autêntico da Madeira e vestível em qualquer lugar."
-      },
-      {
-        "h": "Vestuário de Retalho",
-        "p": "Colecções originais inspiradas na natureza, cultura e identidade quotidiana da Madeira — algodão pesado, acabamentos premium, gráficos editoriais."
-      },
-      {
-        "h": "Nascida em São Vicente",
-        "p": "A Madeira Originals começou em São Vicente, na costa norte da Madeira — um lugar moldado por montanhas, mar, clima, tradição e cultura de trabalho."
-      },
-      {
-        "h": "Desenhada para o mundo",
-        "p": "A nossa roupa deve sentir-se tão natural no Funchal como em Lisboa, Londres, Jersey ou em qualquer lugar onde a diáspora madeirense viva."
-      }
-    ],
-    "newsletterHeading": "Mantém-te perto da ilha.",
-    "newsletterBody": "Acesso antecipado a novos lançamentos, atualizações de produção e histórias da Madeira."
+    "sections": []
   },
   "contactPage": {
     "overline": "Contacto",
