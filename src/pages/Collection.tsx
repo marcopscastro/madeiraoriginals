@@ -22,6 +22,10 @@ export interface CollectionConfig {
   metaTitle: string;
   metaDescription: string;
   shopifyQuery: string;
+  image?: {
+    desktop: string;
+    mobile: string;
+  };
   faqs?: CollectionFaq[];
 }
 
@@ -105,6 +109,24 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
               {config.intro}
             </p>
           </div>
+
+          {config.image && (
+            <div className="relative overflow-hidden bg-foreground aspect-[16/10] md:aspect-[16/7] mt-14 md:mt-20">
+              <picture>
+                <source media="(max-width: 767px)" srcSet={config.image.mobile} />
+                <img
+                  src={config.image.desktop}
+                  alt={config.title}
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover img-cinematic"
+                />
+              </picture>
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-foreground/10 to-transparent" />
+            </div>
+          )}
         </section>
 
         {/* Calm controls — no border, just a soft baseline */}

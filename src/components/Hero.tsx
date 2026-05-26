@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/hero-volcanic-coast.jpg";
+import { SECTION_IMAGES } from "@/lib/sectionImages";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -8,16 +8,18 @@ const Hero = () => {
   return (
     <section className="relative w-full h-[100svh] min-h-[680px] overflow-hidden bg-foreground grain">
       {/* Cinematic background */}
-      <img
-        src={heroImage}
-        alt={t("hero.imageAlt")}
-        width={1920}
-        height={1280}
-        fetchPriority="high"
-        loading="eager"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover img-cinematic animate-ken-burns"
-      />
+      <picture>
+        <source media="(max-width: 767px)" srcSet={SECTION_IMAGES.hero.mobile} />
+        <img
+          src={SECTION_IMAGES.hero.desktop}
+          alt={t("hero.imageAlt")}
+          width={1920}
+          height={1080}
+          loading="eager"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover img-cinematic animate-ken-burns"
+        />
+      </picture>
 
       {/* Atmospheric scrim — restrained, lets the imagery breathe */}
       <div

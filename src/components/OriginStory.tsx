@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import villageImg from "@/assets/origin-sao-vicente-village.jpg";
+import { SECTION_IMAGES } from "@/lib/sectionImages";
 
 const OriginStory = () => {
   const { t } = useTranslation();
@@ -48,15 +48,18 @@ const OriginStory = () => {
 
         <div className="lg:col-span-6 order-1 lg:order-2">
           <div className="relative aspect-[4/5] overflow-hidden bg-foreground">
-            <img
-              src={villageImg}
-              alt={t("origin.imageAlt")}
-              width={1600}
-              height={1024}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-cover img-cinematic"
-            />
+            <picture>
+              <source media="(max-width: 767px)" srcSet={SECTION_IMAGES.about.mobile} />
+              <img
+                src={SECTION_IMAGES.about.desktop}
+                alt={t("origin.imageAlt")}
+                width={1080}
+                height={1350}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover img-cinematic"
+              />
+            </picture>
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-background/85">
               <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em]">
                 {t("origin.captionPlace")}
