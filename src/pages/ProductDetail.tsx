@@ -272,18 +272,18 @@ const ProductDetail = () => {
         jsonLd={[productLd, breadcrumbLd]}
       />
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-28 md:pb-16">
-        <nav className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-foreground">{t("product.home")}</Link>
-          <span>/</span>
-          <Link to="/shop" className="hover:text-foreground">{t("product.shop")}</Link>
-          <span>/</span>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 md:pt-20 pb-28 md:pb-32">
+        <nav className="flex items-center gap-2 font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/55 mb-10 md:mb-16">
+          <Link to="/" className="hover:text-foreground transition-colors">{t("product.home")}</Link>
+          <span>·</span>
+          <Link to="/shop" className="hover:text-foreground transition-colors">{t("product.shop")}</Link>
+          <span>·</span>
           <span className="text-foreground">{product.title}</span>
         </nav>
 
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
-          <div className="space-y-4">
-            <div className="relative overflow-hidden bg-muted aspect-[3/4]">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+          <div className="space-y-5">
+            <div className="relative overflow-hidden bg-muted aspect-[4/5]">
               {currentImage ? (
                 <button
                   type="button"
@@ -299,11 +299,11 @@ const ProductDetail = () => {
                       index: selectedImage,
                       total: images.length,
                     })}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover img-cinematic"
                   />
                 </button>
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
+                <div className="w-full h-full flex items-center justify-center text-foreground/45 font-heading text-xs uppercase tracking-[0.3em]">
                   {t("product.comingSoon")}
                 </div>
               )}
@@ -316,10 +316,10 @@ const ProductDetail = () => {
                     onClick={() => setSelectedImage(i)}
                     aria-label={t("product.thumbAria", { i: i + 1, total: images.length })}
                     aria-current={selectedImage === i}
-                    className={`w-20 h-20 overflow-hidden bg-muted border-2 transition-colors ${
+                    className={`w-20 h-24 overflow-hidden bg-muted transition-opacity ${
                       selectedImage === i
-                        ? "border-primary"
-                        : "border-transparent hover:border-muted-foreground/30"
+                        ? "opacity-100 ring-1 ring-foreground"
+                        : "opacity-60 hover:opacity-100"
                     }`}
                   >
                     <img
@@ -338,11 +338,11 @@ const ProductDetail = () => {
             )}
           </div>
 
-          <div className="flex flex-col">
-            <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-wide text-foreground leading-tight">
+          <div className="flex flex-col md:pt-4">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-foreground leading-[1.05] tracking-tight">
               {product.title}
             </h1>
-            <p className="mt-3 font-heading text-xl sm:text-2xl font-bold text-primary">
+            <p className="mt-5 font-body text-lg sm:text-xl text-foreground/75">
               {formatPrice(price)}
             </p>
             {rating && rating.count > 0 && (
@@ -392,9 +392,9 @@ const ProductDetail = () => {
                           setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
                         }
                         disabled={!available}
-                        className={`min-w-[3rem] px-4 py-2.5 border font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
+                        className={`min-w-[3rem] px-4 py-2.5 border font-heading text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors ${
                           selected
-                            ? "border-primary bg-primary text-primary-foreground"
+                            ? "border-foreground bg-foreground text-background"
                             : "border-foreground/20 text-foreground hover:border-foreground"
                         } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
                       >

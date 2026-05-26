@@ -15,14 +15,14 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
 
   return (
     <Link to={`/product/${node.handle}`} className="group block">
-      <div className="relative overflow-hidden bg-muted aspect-[3/4]">
+      <div className="relative overflow-hidden bg-muted aspect-[4/5]">
         {image ? (
           <>
             <img
               src={image.url}
               alt={productAlt({ title: node.title, shopifyAlt: image.altText, index: 0, total: node.images.edges.length })}
               loading="lazy"
-              className={`w-full h-full object-cover transition-opacity duration-500 ${hoverImage ? "group-hover:opacity-0" : ""}`}
+              className={`w-full h-full object-cover img-cinematic transition-all duration-[1400ms] ease-out group-hover:scale-[1.03] ${hoverImage ? "group-hover:opacity-0" : ""}`}
             />
             {hoverImage && (
               <img
@@ -30,25 +30,25 @@ const ProductCard = ({ product }: { product: ShopifyProduct }) => {
                 alt=""
                 aria-hidden
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover img-cinematic opacity-0 transition-opacity duration-[1400ms] ease-out group-hover:opacity-100"
               />
             )}
           </>
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-sm uppercase tracking-wide">
+          <div className="w-full h-full flex items-center justify-center text-muted-foreground font-heading text-xs uppercase tracking-[0.3em]">
             {t("common.comingSoon")}
           </div>
         )}
       </div>
-      <div className="mt-4">
-        <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground group-hover:text-primary transition-colors">
+      <div className="mt-6">
+        <h3 className="font-display text-lg md:text-xl font-medium text-foreground leading-snug tracking-tight group-hover:text-accent transition-colors">
           {node.title}
         </h3>
-        <div className="mt-1 flex items-center justify-between gap-3">
-          <p className="font-body text-base text-muted-foreground">{formatPrice(price)}</p>
+        <div className="mt-2 flex items-center justify-between gap-3">
+          <p className="font-body text-sm md:text-base text-foreground/65">{formatPrice(price)}</p>
           {rating && rating.count > 0 && (
-            <span className="inline-flex items-center gap-1 font-heading text-[11px] uppercase tracking-widest text-muted-foreground">
-              <Star size={12} className="fill-accent text-accent" strokeWidth={1.5} />
+            <span className="inline-flex items-center gap-1 font-heading text-[10px] uppercase tracking-[0.25em] text-foreground/55">
+              <Star size={11} className="fill-accent text-accent" strokeWidth={1.5} />
               {rating.avg.toFixed(1)} ({rating.count})
             </span>
           )}
