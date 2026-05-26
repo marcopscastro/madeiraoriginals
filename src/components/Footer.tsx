@@ -31,12 +31,20 @@ const Footer = () => {
         { label: t("nav.contact"), to: "/contact" },
       ],
     },
+    {
+      heading: t("footer.support"),
+      links: [
+        { label: t("footer.shipping"), to: "/shipping" },
+        { label: t("footer.returns"), to: "/returns" },
+        { label: t("footer.care"), to: "/care" },
+      ],
+    },
   ];
 
   return (
     <footer className="border-t-2 border-foreground bg-background pb-safe pl-safe pr-safe">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-5 gap-12">
           <div className="md:col-span-1">
             <h3 className="font-display text-2xl font-semibold text-foreground">
               {t("footer.joinHeading")}

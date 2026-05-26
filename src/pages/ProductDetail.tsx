@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import RelatedProducts from "@/components/RelatedProducts";
 import ImageLightbox from "@/components/ImageLightbox";
 import SEO from "@/components/SEO";
+import ProductTrustSignals from "@/components/ProductTrustSignals";
+import ProductDetailsAccordion from "@/components/ProductDetailsAccordion";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
@@ -463,6 +465,9 @@ const ProductDetail = () => {
                 </>
               )}
             </button>
+
+            <ProductTrustSignals />
+            <ProductDetailsAccordion />
           </div>
         </div>
 

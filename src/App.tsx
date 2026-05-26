@@ -27,6 +27,9 @@ const AdminJournal = lazy(() => import("./pages/admin/AdminJournal"));
 const AdminJournalEdit = lazy(() => import("./pages/admin/AdminJournalEdit"));
 const AdminQuotes = lazy(() => import("./pages/admin/AdminQuotes"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Shipping = lazy(() => import("./pages/Shipping"));
+const Returns = lazy(() => import("./pages/Returns"));
+const Care = lazy(() => import("./pages/Care"));
 
 const queryClient = new QueryClient();
 
@@ -59,6 +62,9 @@ const AppRoutes = () => {
         <Route path="/journal" element={<Journal />} />
         <Route path="/journal/:slug" element={<JournalPost />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/returns" element={<Returns />} />
+        <Route path="/care" element={<Care />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin/journal" element={<AdminJournal />} />
         <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
