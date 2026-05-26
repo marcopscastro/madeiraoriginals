@@ -28,7 +28,7 @@ const Journal = () => {
 
   const categories = useMemo(() => {
     const set = new Set<string>();
-    articles.forEach((a) => a.tags?.forEach((t: string) => set.add(t)));
+    articles.forEach((a) => a.tags?.forEach((tag: string) => set.add(tag)));
     return ["all", ...Array.from(set).sort()];
   }, [articles]);
 
@@ -42,101 +42,160 @@ const Journal = () => {
     else setSearchParams({ category: c });
   };
 
+  const [lead, ...rest] = filtered;
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background grain-fixed">
       <PageSEO routeKey="journal" />
       <Header />
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="text-center mb-12">
-          <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-            {t("journal.overline")}
-          </p>
-          <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground">
-            {t("journal.heading")}
-          </h1>
-        </div>
-
-        {categories.length > 2 && (
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {categories.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCategory(c)}
-                className={`font-heading text-[11px] font-semibold uppercase tracking-widest px-3 py-2 border transition-colors ${
-                  activeCategory === c
-                    ? "border-foreground bg-foreground text-background"
-                    : "border-foreground/20 text-foreground hover:border-foreground"
-                }`}
-              >
-                {c === "all" ? t("journal.all") : c}
-              </button>
-            ))}
+      <main>
+        {/* Editorial masthead */}
+        <section className="border-b border-foreground/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-32 md:pt-44 pb-16 md:pb-24">
+            <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.45em] text-accent mb-6">
+              {t("journal.overline")} · Field Notes · Atlantic Dispatches
+            </p>
+            <h1 className="font-display font-medium leading-[0.98] tracking-tight text-5xl sm:text-7xl md:text-8xl text-foreground max-w-5xl">
+              {t("journal.heading")}
+            </h1>
+            <p className="mt-8 max-w-xl font-body text-base md:text-lg text-foreground/65 leading-relaxed">
+              Stories, field notes and dispatches from São Vicente and the wider Atlantic — culture, craft, weather and the modern Madeira identity.
+            </p>
           </div>
-        )}
 
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="border border-foreground/10 overflow-hidden animate-pulse">
-                <div className="aspect-[16/10] bg-muted" />
-                <div className="p-6 md:p-8 space-y-3">
-                  <div className="h-3 bg-muted w-20" />
-                  <div className="h-6 bg-muted w-3/4" />
-                  <div className="h-4 bg-muted w-full" />
-                  <div className="h-4 bg-muted w-2/3" />
-                </div>
+          {categories.length > 2 && (
+            <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-10">
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                {categories.map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setCategory(c)}
+                    className={`font-heading text-[11px] font-semibold uppercase tracking-[0.3em] pb-1 border-b transition-colors ${
+                      activeCategory === c
+                        ? "border-foreground text-foreground"
+                        : "border-transparent text-foreground/50 hover:text-foreground"
+                    }`}
+                  >
+                    {c === "all" ? t("journal.all") : c}
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : filtered.length === 0 ? (
-          <p className="text-center font-body text-muted-foreground py-16">
-            {t("journal.empty")}
-          </p>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {filtered.map((a) => {
-              const cover = journalCoverProps(a.cover_url);
-              return (
-              <Link
-                key={a.slug}
-                to={`/journal/${a.slug}`}
-                className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
-              >
-                <div className="aspect-[16/10] bg-muted overflow-hidden">
-                  {cover && (
-                    <img
-                      src={cover.src}
-                      srcSet={cover.srcSet}
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      alt={(isPt && a.title_pt) || a.title}
-                      width={1000}
-                      height={625}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                  )}
+            </div>
+          )}
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-20 md:py-28">
+          {isLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="animate-pulse">
+                  <div className="aspect-[4/5] bg-muted" />
+                  <div className="mt-5 space-y-3">
+                    <div className="h-3 bg-muted w-24" />
+                    <div className="h-6 bg-muted w-3/4" />
+                  </div>
                 </div>
-                <div className="p-6 md:p-8">
-                  {a.tags?.[0] && (
-                    <p className="font-heading text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2">
-                      {a.tags[0]}
-                    </p>
-                  )}
-                  <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {(isPt && a.title_pt) || a.title}
-                  </h2>
-                  {((isPt && a.excerpt_pt) || a.excerpt) && (
-                    <p className="mt-3 font-body text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
-                      {(isPt && a.excerpt_pt) || a.excerpt}
-                    </p>
-                  )}
+              ))}
+            </div>
+          ) : filtered.length === 0 ? (
+            <p className="text-center font-body text-muted-foreground py-16">
+              {t("journal.empty")}
+            </p>
+          ) : (
+            <>
+              {/* Lead story */}
+              {lead && (() => {
+                const cover = journalCoverProps(lead.cover_url);
+                return (
+                  <Link to={`/journal/${lead.slug}`} className="group block mb-24 md:mb-32">
+                    <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+                      <div className="lg:col-span-8 aspect-[16/10] overflow-hidden bg-muted">
+                        {cover && (
+                          <img
+                            src={cover.src}
+                            srcSet={cover.srcSet}
+                            sizes="(min-width: 1024px) 66vw, 100vw"
+                            alt={(isPt && lead.title_pt) || lead.title}
+                            width={1600}
+                            height={1000}
+                            loading="eager"
+                            decoding="async"
+                            className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
+                          />
+                        )}
+                      </div>
+                      <div className="lg:col-span-4">
+                        {lead.tags?.[0] && (
+                          <p className="font-heading text-[10px] font-semibold uppercase tracking-[0.4em] text-accent mb-4">
+                            {lead.tags[0]}
+                          </p>
+                        )}
+                        <h2 className="font-display font-medium tracking-tight text-3xl md:text-5xl text-foreground leading-[1.05] group-hover:text-foreground/70 transition-colors">
+                          {(isPt && lead.title_pt) || lead.title}
+                        </h2>
+                        {((isPt && lead.excerpt_pt) || lead.excerpt) && (
+                          <p className="mt-5 font-body text-base text-foreground/65 leading-relaxed line-clamp-4">
+                            {(isPt && lead.excerpt_pt) || lead.excerpt}
+                          </p>
+                        )}
+                        <span className="mt-6 inline-block font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground border-b border-foreground pb-1">
+                          Read →
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })()}
+
+              {/* Remaining stories */}
+              {rest.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-20">
+                  {rest.map((a) => {
+                    const cover = journalCoverProps(a.cover_url);
+                    return (
+                      <Link
+                        key={a.slug}
+                        to={`/journal/${a.slug}`}
+                        className="group block"
+                      >
+                        <div className="aspect-[4/5] overflow-hidden bg-muted">
+                          {cover && (
+                            <img
+                              src={cover.src}
+                              srcSet={cover.srcSet}
+                              sizes="(min-width: 768px) 50vw, 100vw"
+                              alt={(isPt && a.title_pt) || a.title}
+                              width={1200}
+                              height={1500}
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
+                            />
+                          )}
+                        </div>
+                        <div className="mt-6">
+                          {a.tags?.[0] && (
+                            <p className="font-heading text-[10px] font-semibold uppercase tracking-[0.4em] text-accent mb-3">
+                              {a.tags[0]}
+                            </p>
+                          )}
+                          <h3 className="font-display font-medium tracking-tight text-2xl md:text-3xl text-foreground leading-[1.1] group-hover:text-foreground/70 transition-colors">
+                            {(isPt && a.title_pt) || a.title}
+                          </h3>
+                          {((isPt && a.excerpt_pt) || a.excerpt) && (
+                            <p className="mt-3 font-body text-sm md:text-base text-foreground/60 leading-relaxed line-clamp-3">
+                              {(isPt && a.excerpt_pt) || a.excerpt}
+                            </p>
+                          )}
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
-              </Link>
-              );
-            })}
-          </div>
-        )}
+              )}
+            </>
+          )}
+        </section>
       </main>
       <Footer />
     </div>
