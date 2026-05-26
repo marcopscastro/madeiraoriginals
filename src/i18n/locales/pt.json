@@ -30,13 +30,15 @@
     "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal."
   },
   "hero": {
-    "imageAlt": "Streetwear premium da Madeira pela Madeira Originals com a costa da Ilha da Madeira",
-    "overline": "Novo Lançamento — Desenhado em São Vicente",
+    "imageAlt": "Falésias de basalto vulcânico com nevoeiro e o Oceano Atlântico na costa norte da Madeira",
+    "overline": "Volume 01 · A Nossa Ilha",
+    "coords": "32°N · Oceano Atlântico",
+    "scroll": "Scroll",
     "headline1": "Inspirado pela Madeira.",
     "headline2": "Desenhado para todo o lado.",
-    "body": "Streetwear premium nascido na ilha. Cortes editoriais, estampas duradouras, zero energia de souvenir shop.",
-    "ctaShop": "Ver coleção",
-    "ctaStory": "Ler a nossa história"
+    "body": "Vestuário Atlântico premium, com raízes em São Vicente. Vulcânico, rude, ponderado — feito para a ilha e para onde quer que ela viaje.",
+    "ctaShop": "Ver a colecção",
+    "ctaStory": "Explorar a marca"
   },
   "studio": {
     "overline": "Madeira Originals — Studio · B2B",
@@ -314,30 +316,32 @@
     "admin": "Admin"
   },
   "valueBanner": {
-    "designed": "Desenhado na Madeira",
-    "cotton": "Algodão Premium Pesado",
-    "noTrap": "0% Tourist Trap"
+    "designed": "Desenhado em São Vicente",
+    "cotton": "Algodão premium pesado",
+    "noTrap": "0% tourist trap",
+    "shipped": "Envio para todo o mundo"
   },
   "manifesto": {
-    "overline": "Manifesto da Marca",
-    "headingA": "Sem souvenirs. Sem clichés.",
-    "headingB": "Madeira, traduzida como deve ser.",
-    "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade madeirense autêntica ao streetwear moderno e vestuário personalizado. Pegamos nas paisagens, no humor, nas tradições, coordenadas, texturas e detalhes culturais da ilha — e traduzimo-los em desenhos limpos, vestíveis e premium.",
+    "overline": "Manifesto",
+    "lineA": "Sem souvenirs.",
+    "lineB": "Sem clichés.",
+    "lineC": "Madeira, traduzida como deve ser.",
+    "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade vulcânica, rude e atlântica da ilha para vestuário moderno. Pegamos nas paisagens, no clima, nas texturas e na cultura — e traduzimo-las em peças premium, ponderadas, feitas para viver em qualquer lado.",
     "pillars": [
       {
-        "title": "Herança da Ilha",
-        "body": "Enraizado na cultura, natureza, língua, humor e identidade local da Madeira."
+        "title": "Herança Atlântica",
+        "body": "Enraizado em São Vicente — costa vulcânica, picos com nevoeiro, levadas e uma cultura de ilha que trabalha."
       },
       {
-        "title": "Streetwear Moderno",
-        "body": "Tipografia limpa, vestuário pesado, gráficos minimalistas, layouts premium."
+        "title": "Design Editorial",
+        "body": "Tipografia contida, construção pesada, gráficos minimalistas, execução premium."
       },
       {
-        "title": "Qualidade de Produção",
-        "body": "Construído no nosso próprio estúdio técnico: DTF de alta resolução, UV DTF e vestuário personalizado."
+        "title": "Feito em casa",
+        "body": "Desenhado, impresso e acabado no nosso próprio estúdio em São Vicente — sem print farms de terceiros."
       }
     ],
-    "imageAlt": "Adolescente madeirense com a t-shirt 'Madeira Über' da Madeira Originals numa calçada do Funchal"
+    "imageAlt": "Imagem do manifesto Madeira Originals"
   },
   "bestsellers": {
     "overline": "Últimos Lançamentos",
