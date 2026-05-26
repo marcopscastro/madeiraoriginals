@@ -379,11 +379,70 @@
     ]
   },
   "diaspora": {
-    "overline": "Local de origem. Global de atitude.",
+    "overline": "Nascida em São Vicente · Vestida em todo o lado",
     "headingA": "Nascida em São Vicente.",
-    "headingB": "Construída para o mundo.",
-    "body": "Feita para a Madeira, para a diáspora e para quem leva consigo um pedaço da ilha — esteja no Funchal, Lisboa, Londres, Jersey, Luxemburgo ou em qualquer outro lugar.",
-    "imageAlt": "Falésias atlânticas de São Vicente na costa norte da Madeira"
+    "headingB": "Vestida em todo o lado.",
+    "body": "Feita para a ilha, para a diáspora e para quem leva consigo um pedaço da Madeira — do Funchal a Lisboa, Jersey, Londres, Luxemburgo e mais além.",
+    "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira"
+  },
+  "collections": {
+    "overline": "Colecções em Destaque",
+    "headingA": "Quatro formas de vestir",
+    "headingB": "a ilha.",
+    "viewAll": "Ver tudo",
+    "items": [
+      {
+        "index": "01",
+        "title": "Atlantic Utility",
+        "body": "Essenciais minimais e robustos. Algodão pesado, detalhes técnicos, feitos para nevoeiro, vento e sal.",
+        "cta": "Ver Utility",
+        "to": "/madeira-t-shirts"
+      },
+      {
+        "index": "02",
+        "title": "Norte",
+        "body": "São Vicente em tecido — picos com nevoeiro, texturas de basalto, o clima silencioso da costa norte.",
+        "cta": "Ver Norte",
+        "to": "/madeira-hoodies"
+      },
+      {
+        "index": "03",
+        "title": "Herança Contemporânea",
+        "body": "Tradição, traduzida como deve ser. Geometria de azulejo, coordenadas e símbolos da ilha, redesenhados para hoje.",
+        "cta": "Ver Herança",
+        "to": "/madeira-streetwear"
+      },
+      {
+        "index": "04",
+        "title": "Humor da Ilha",
+        "body": "Poncha, bolo do caco e piadas internas tratadas com a seriedade de uma marca premium.",
+        "cta": "Ver Humor",
+        "to": "/madeira-accessories"
+      }
+    ]
+  },
+  "origin": {
+    "overline": "Origem",
+    "headingA": "Feito em São Vicente.",
+    "headingB": "Na costa norte de uma ilha Atlântica.",
+    "body1": "São Vicente fica no norte rude da Madeira, onde o Atlântico encontra falésias de basalto negro e o nevoeiro desce da floresta laurissilva até à vila. É silenciosa, moldada pelo vento, e teimosamente ela própria.",
+    "body2": "A Madeira Originals existe porque esta ilha merece uma marca que a traduza como deve ser — não em souvenirs, mas em vestuário que poderia existir em qualquer parte do mundo, mantendo-se inequivocamente daqui.",
+    "cta": "Ler a história completa",
+    "imageAlt": "Vila de São Vicente sob nevoeiro na costa norte da Madeira",
+    "captionPlace": "São Vicente · Madeira",
+    "facts": [
+      { "k": "Origem", "v": "Madeira" },
+      { "k": "Studio", "v": "São Vicente" },
+      { "k": "Produção", "v": "Interna" },
+      { "k": "Envio", "v": "Mundial" }
+    ]
+  },
+  "divider": {
+    "overline": "Atlântico · Vulcânico · Ponderado",
+    "line1": "Basalto, nevoeiro,",
+    "line2": "e sal do Atlântico.",
+    "location": "ER101 · Costa Norte",
+    "imageAlt": "Muro de pedra de basalto molhado com musgo em São Vicente, Madeira"
   },
   "homeNewsletter": {
     "overline": "Newsletter",
