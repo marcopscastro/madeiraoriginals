@@ -6,7 +6,7 @@ const Manifesto = () => {
 
   return (
     <section className="bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-24 md:py-36">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-32 md:py-48">
         <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-8">
           {t("manifesto.overline")}
         </p>
@@ -18,7 +18,7 @@ const Manifesto = () => {
           <span className="block">{t("manifesto.lineC")}</span>
         </h2>
 
-        <div className="mt-16 md:mt-24 grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+        <div className="mt-20 md:mt-32 grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <p className="md:col-span-5 md:col-start-2 font-body text-base md:text-lg text-foreground/75 leading-relaxed">
             {t("manifesto.body")}
           </p>

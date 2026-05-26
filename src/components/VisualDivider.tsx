@@ -4,7 +4,7 @@ import basaltImg from "@/assets/divider-basalt-texture.jpg";
 const VisualDivider = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative w-full h-[55vh] md:h-[75vh] overflow-hidden bg-foreground">
+    <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-foreground grain">
       <img
         src={basaltImg}
         alt={t("divider.imageAlt")}
@@ -12,7 +12,7 @@ const VisualDivider = () => {
         height={900}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover img-cinematic"
       />
       <div
         aria-hidden

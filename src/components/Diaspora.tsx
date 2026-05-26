@@ -4,7 +4,7 @@ import fogRoad from "@/assets/divider-fog-road.jpg";
 const Diaspora = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative w-full bg-foreground text-background">
+    <section className="relative w-full bg-foreground text-background grain overflow-hidden">
       <img
         src={fogRoad}
         alt={t("diaspora.imageAlt")}
@@ -12,10 +12,10 @@ const Diaspora = () => {
         height={1080}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        className="absolute inset-0 w-full h-full object-cover img-cinematic opacity-50"
       />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/80 to-foreground/40" />
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 py-28 md:py-40 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 py-36 md:py-56 text-center">
         <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.45em] text-background/70 mb-8">
           {t("diaspora.overline")}
         </p>

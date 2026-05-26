@@ -26,7 +26,7 @@ const websiteLd = {
 };
 
 const Index = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-background grain-fixed">
     <PageSEO routeKey="home" jsonLd={[websiteLd, LOCAL_BUSINESS_JSONLD]} />
     <Header />
     <main>
