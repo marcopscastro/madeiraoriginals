@@ -6,7 +6,7 @@ import PageSEO from "@/components/PageSEO";
 import NewsletterForm from "@/components/NewsletterForm";
 import { SECTION_IMAGES } from "@/lib/sectionImages";
 import basaltImg from "@/assets/divider-basalt-texture.jpg";
-import fogRoad from "@/assets/divider-fog-road.jpg";
+import fogRoad from "@/assets/real-sao-vicente/closing-desktop.webp";
 
 const About = () => {
   const { t } = useTranslation();
