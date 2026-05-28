@@ -17,7 +17,9 @@
     "search": "Search",
     "cart": "Cart",
     "account": "Account",
-    "menu": "Menu"
+    "menu": "Menu",
+    "firstDrop": "First Drop",
+    "custom": "Custom"
   },
   "footer": {
     "joinHeading": "Join the community.",
@@ -31,7 +33,8 @@
     "support": "Support",
     "shipping": "Shipping",
     "returns": "Returns",
-    "care": "Care"
+    "care": "Care",
+    "designedIn": "Designed in São Vicente, Madeira · Inspired by the Atlantic"
   },
   "hero": {
     "imageAlt": "Foggy black basalt cliffs and the Atlantic Ocean on the north coast of Madeira",
@@ -387,7 +390,10 @@
     "headingA": "Born in São Vicente.",
     "headingB": "Worn everywhere.",
     "body": "Made for the island, for the diaspora, and for anyone who carries a piece of Madeira — from Funchal to Lisbon, Jersey, London, Luxembourg and beyond.",
-    "imageAlt": "Foggy laurel forest road on the north coast of Madeira"
+    "imageAlt": "Foggy laurel forest road on the north coast of Madeira",
+    "ctaShop": "Shop the Collection",
+    "ctaStory": "Explore the Story",
+    "designedIn": "Designed in São Vicente, Madeira"
   },
   "collections": {
     "overline": "Featured Collections",
@@ -1071,5 +1077,84 @@
         "body": "Heavyweight cotton softens with every wash. A small amount of fading and natural texture is part of the material — not a defect. The pieces are built to be worn, often."
       }
     ]
+  },
+  "firstDrop": {
+    "overline": "First Drop · São Vicente Collection",
+    "headingA": "The first drop,",
+    "headingB": "from São Vicente.",
+    "body": "A small, curated launch — heavyweight tees, a hoodie, a cap and a tote. Designed in São Vicente, Madeira. Built to last.",
+    "cta": "Explore the First Drop",
+    "soonTitle": "Coming soon.",
+    "soonBody": "The First Drop is being prepared in São Vicente. Join the list below to get early access when it lands."
+  },
+  "productSpecs": {
+    "storyHeading": "The Story",
+    "storyFallback": "A São Vicente original. Designed on the north coast of Madeira, where the Atlantic meets black basalt and fog rolls down the laurel forest into the village. Built to translate the island — not to advertise it.",
+    "detailsHeading": "Garment Details",
+    "materialFallback": "Heavyweight 100% combed cotton",
+    "fitFallback": "Modern unisex fit — relaxed, slightly boxy, true-to-size",
+    "gsmLine": "{{gsm}} gsm — heavyweight build",
+    "printFallback": "Premium DTF print, made to survive the wash",
+    "origin": "Designed in São Vicente, Madeira",
+    "builtToLast": "Built for long-term wear",
+    "sizeHeading": "Size & Fit",
+    "sizeIntro": "Modern relaxed cut. Size up for a more oversized streetwear silhouette. Measurements are approximate and may vary by ±1 cm.",
+    "tSize": "Size",
+    "tChest": "Chest (half)",
+    "tLength": "Length",
+    "sizeNote": "Half-chest is measured flat from armpit to armpit. Length is from highest point of the shoulder to hem."
+  },
+  "custom": {
+    "seoTitle": "Custom Apparel & Merch — Madeira Originals",
+    "seoDescription": "Custom T-shirts, staff uniforms, event apparel and branded merch — designed and printed in São Vicente, Madeira. Premium DTF, UV DTF stickers, small-batch friendly.",
+    "overline": "Custom Apparel · Made in São Vicente",
+    "headingA": "Your brand,",
+    "headingB": "in our materials.",
+    "subcopy": "Custom T-shirts, staff uniforms, event apparel, and small-batch merch — produced in São Vicente with the same premium materials and finishing as our retail line. Built for restaurants, hotels, cafés, bars, events, clubs and local businesses.",
+    "ctaQuote": "Request a Quote",
+    "ctaStudio": "See full Studio services",
+    "designedIn": "Designed in São Vicente, Madeira · Inspired by the Atlantic",
+    "services": {
+      "overline": "What we make",
+      "heading": "Premium custom apparel, without the agency overhead.",
+      "items": [
+        { "title": "Custom T-Shirts", "body": "Heavyweight cotton tees with your design, printed in DTF for long-term wear and crisp colour." },
+        { "title": "Staff Uniforms", "body": "Hard-wearing front-of-house and back-of-house pieces. Built for daily service and frequent washing." },
+        { "title": "Event Apparel", "body": "Small or large runs for festivals, races, openings and pop-ups. Fast turnaround when you need it." },
+        { "title": "Small-Business Merch", "body": "Caps, totes, hoodies and accessories. Treated with the same care as our retail line — never souvenir-grade." },
+        { "title": "DTF Printing", "body": "Direct-to-film printing for vivid colour, fine detail and excellent wash durability on cotton blends." },
+        { "title": "UV DTF Stickers", "body": "Waterproof, weatherproof die-cut stickers for windows, equipment, packaging and merch." }
+      ]
+    },
+    "audiences": {
+      "overline": "Built for",
+      "items": ["Restaurants", "Hotels", "Cafés", "Bars", "Events", "Tourism", "Clubs", "Local Businesses"]
+    },
+    "form": {
+      "overline": "Request a Quote",
+      "heading": "Tell us about your project.",
+      "sub": "Give us a quick brief — we reply within one working day with pricing and next steps.",
+      "name": "Your name *",
+      "business": "Business / project name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "projectType": "Project type *",
+      "quantity": "Estimated quantity",
+      "quantityHint": "e.g. 50 units",
+      "message": "Project details",
+      "messageHint": "Garment type, sizes, deadline, logo / artwork notes, anything else we should know.",
+      "submit": "Request a quote",
+      "sending": "Sending…",
+      "done": "Request received.",
+      "doneBody": "We'll reply within one working day with pricing and next steps.",
+      "projectTypes": {
+        "tshirts": "Custom T-shirts",
+        "uniforms": "Staff uniforms",
+        "events": "Event apparel",
+        "merch": "Branded merch",
+        "stickers": "UV DTF stickers",
+        "other": "Other"
+      }
+    }
   }
 }
