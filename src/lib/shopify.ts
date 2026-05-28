@@ -161,6 +161,18 @@ export const PRODUCT_BY_HANDLE_QUERY = `
         }
       }
       options { name values }
+      metafields(identifiers: [
+        { namespace: "custom", key: "story" },
+        { namespace: "custom", key: "material" },
+        { namespace: "custom", key: "fit" },
+        { namespace: "custom", key: "gsm" },
+        { namespace: "custom", key: "print_method" },
+        { namespace: "custom", key: "size_guide" }
+      ]) {
+        key
+        namespace
+        value
+      }
     }
   }
 `;
