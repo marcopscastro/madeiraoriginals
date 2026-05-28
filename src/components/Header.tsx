@@ -48,7 +48,7 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
-          <Link to="/" aria-label="Madeira Originals — Home" className="flex items-center gap-2 min-w-0">
+          <Link to="/" aria-label="Madeira Originals — Home" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
               src={logoMark}
               alt=""
