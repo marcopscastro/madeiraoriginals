@@ -27,6 +27,12 @@ export interface ShopifyVariant {
   quantityAvailable?: number | null;
 }
 
+export interface ShopifyMetafield {
+  key: string;
+  namespace: string;
+  value: string;
+}
+
 export interface ShopifyProductNode {
   id: string;
   title: string;
@@ -38,6 +44,7 @@ export interface ShopifyProductNode {
   images: { edges: Array<{ node: ShopifyImage }> };
   variants: { edges: Array<{ node: ShopifyVariant }> };
   options: Array<{ name: string; values: string[] }>;
+  metafields?: Array<ShopifyMetafield | null>;
 }
 
 export interface ShopifyProduct {
