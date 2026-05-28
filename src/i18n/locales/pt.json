@@ -34,7 +34,7 @@
     "shipping": "Envio",
     "returns": "Devoluções",
     "care": "Cuidados",
-    "designedIn": "Desenhado em São Vicente, Madeira · Inspirado pelo Atlântico"
+    "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico."
   },
   "hero": {
     "imageAlt": "Falésias de basalto vulcânico com nevoeiro e o Oceano Atlântico na costa norte da Madeira",
@@ -351,9 +351,10 @@
     "imageAlt": "Imagem do manifesto Madeira Originals"
   },
   "bestsellers": {
-    "overline": "Últimos Lançamentos",
-    "headingA": "Vestuário inspirado na Madeira,",
-    "headingB": "feito para vestir em qualquer lado.",
+    "overline": "First Drop · São Vicente",
+    "heading": "O First Drop",
+    "subheading": "Vestuário inspirado na Madeira, feito para vestir em qualquer lado.",
+    "cta": "Explorar o First Drop",
     "empty": "Sem produtos ainda — lançamentos a caminho."
   },
   "noTouristTrap": {
@@ -393,7 +394,7 @@
     "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira",
     "ctaShop": "Ver a Colecção",
     "ctaStory": "Conhecer a História",
-    "designedIn": "Desenhado em São Vicente, Madeira"
+    "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico."
   },
   "collections": {
     "overline": "Colecções em Destaque",
@@ -468,9 +469,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "headingA": "Madeira moderna,",
-    "headingB": "na tua caixa de entrada.",
-    "body": "Acesso antecipado a lançamentos, peças do diário e o postal ocasional da ilha."
+    "heading": "Junta-te ao First Drop",
+    "body": "Acesso antecipado a novos lançamentos, edições limitadas e originais feitos em São Vicente."
   },
   "aboutUs": {
     "overline": "Sobre",

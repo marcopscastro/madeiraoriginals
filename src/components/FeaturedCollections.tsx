@@ -14,7 +14,7 @@ const FeaturedCollections = () => {
 
   return (
     <section className="bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-28 md:pt-40 pb-10 md:pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-24 md:pt-32 pb-10 md:pb-14">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-2xl">
             <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
@@ -34,7 +34,7 @@ const FeaturedCollections = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-32 md:pb-48">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-28 md:pb-40">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 md:gap-x-12 md:gap-y-32">
           {items.map((item, i) => (
             <Link

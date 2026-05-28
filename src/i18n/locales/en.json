@@ -34,7 +34,7 @@
     "shipping": "Shipping",
     "returns": "Returns",
     "care": "Care",
-    "designedIn": "Designed in São Vicente, Madeira · Inspired by the Atlantic"
+    "designedIn": "Designed in São Vicente, Madeira. Inspired by the Atlantic."
   },
   "hero": {
     "imageAlt": "Foggy black basalt cliffs and the Atlantic Ocean on the north coast of Madeira",
@@ -351,9 +351,10 @@
     "imageAlt": "Madeira Originals manifesto image"
   },
   "bestsellers": {
-    "overline": "Latest Drops",
-    "headingA": "Madeira-inspired apparel,",
-    "headingB": "made to wear anywhere.",
+    "overline": "First Drop · São Vicente",
+    "heading": "The First Drop",
+    "subheading": "Madeira-inspired apparel, made to wear anywhere.",
+    "cta": "Explore the First Drop",
     "empty": "No products yet — drops coming soon."
   },
   "noTouristTrap": {
@@ -393,7 +394,7 @@
     "imageAlt": "Foggy laurel forest road on the north coast of Madeira",
     "ctaShop": "Shop the Collection",
     "ctaStory": "Explore the Story",
-    "designedIn": "Designed in São Vicente, Madeira"
+    "designedIn": "Designed in São Vicente, Madeira. Inspired by the Atlantic."
   },
   "collections": {
     "overline": "Featured Collections",
@@ -468,9 +469,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "headingA": "Modern Madeira,",
-    "headingB": "in your inbox.",
-    "body": "Early access to drops, journal pieces, and the occasional postcard from the island."
+    "heading": "Join the First Drop",
+    "body": "Early access to new releases, limited runs and São Vicente-made originals."
   },
   "aboutUs": {
     "overline": "About",
