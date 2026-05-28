@@ -27,6 +27,12 @@ export interface ShopifyVariant {
   quantityAvailable?: number | null;
 }
 
+export interface ShopifyMetafield {
+  key: string;
+  namespace: string;
+  value: string;
+}
+
 export interface ShopifyProductNode {
   id: string;
   title: string;
@@ -38,6 +44,7 @@ export interface ShopifyProductNode {
   images: { edges: Array<{ node: ShopifyImage }> };
   variants: { edges: Array<{ node: ShopifyVariant }> };
   options: Array<{ name: string; values: string[] }>;
+  metafields?: Array<ShopifyMetafield | null>;
 }
 
 export interface ShopifyProduct {
@@ -154,6 +161,18 @@ export const PRODUCT_BY_HANDLE_QUERY = `
         }
       }
       options { name values }
+      metafields(identifiers: [
+        { namespace: "custom", key: "story" },
+        { namespace: "custom", key: "material" },
+        { namespace: "custom", key: "fit" },
+        { namespace: "custom", key: "gsm" },
+        { namespace: "custom", key: "print_method" },
+        { namespace: "custom", key: "size_guide" }
+      ]) {
+        key
+        namespace
+        value
+      }
     }
   }
 `;

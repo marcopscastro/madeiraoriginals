@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import fogRoad from "@/assets/divider-fog-road.jpg";
 
@@ -27,9 +28,29 @@ const Diaspora = () => {
         <p className="mt-10 font-body text-base md:text-lg leading-relaxed text-background/80 max-w-2xl mx-auto">
           {t("diaspora.body")}
         </p>
+
+        <div className="mt-12 md:mt-14 flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center">
+          <Link
+            to="/first-drop"
+            className="inline-flex items-center justify-center bg-background text-foreground font-heading font-semibold text-[12px] uppercase tracking-[0.3em] px-10 py-[18px] hover:bg-accent hover:text-accent-foreground transition-colors duration-500"
+          >
+            {t("diaspora.ctaShop")}
+          </Link>
+          <Link
+            to="/about"
+            className="inline-flex items-center justify-center text-background font-heading font-semibold text-[12px] uppercase tracking-[0.3em] px-2 py-[18px] border-b border-background/60 hover:border-background hover:text-background/90 transition-colors duration-500"
+          >
+            {t("diaspora.ctaStory")} →
+          </Link>
+        </div>
+
+        <p className="mt-12 font-heading text-[10px] uppercase tracking-[0.4em] text-background/45">
+          {t("diaspora.designedIn")}
+        </p>
       </div>
     </section>
   );
 };
 
 export default Diaspora;
+

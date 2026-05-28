@@ -10,6 +10,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import SEO from "@/components/SEO";
 import ProductTrustSignals from "@/components/ProductTrustSignals";
 import ProductDetailsAccordion from "@/components/ProductDetailsAccordion";
+import ProductSpecs from "@/components/ProductSpecs";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
@@ -470,6 +471,8 @@ const ProductDetail = () => {
             <ProductDetailsAccordion />
           </div>
         </div>
+
+        <ProductSpecs metafields={product.metafields} productTitle={product.title} />
 
         <section className="mt-20 grid md:grid-cols-2 gap-10 lg:gap-16">
           <div>

@@ -101,6 +101,21 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     shopifyQuery: "tag:streetwear",
   },
 
+  /* ─────────── Launch collection ─────────── */
+
+  "first-drop": {
+    slug: "first-drop",
+    eyebrow: "First Drop · São Vicente Collection",
+    title: "First Drop",
+    intro:
+      "The opening chapter. A small, curated set of premium pieces — heavyweight tees, a hoodie, a cap, a tote, and one limited São Vicente-inspired design. Designed in São Vicente, Madeira. Made to last well past the launch.",
+    metaTitle: "First Drop — São Vicente Collection | Madeira Originals",
+    metaDescription:
+      "The Madeira Originals First Drop — a curated launch collection of premium streetwear designed in São Vicente, Madeira. Limited pieces. Built for long-term wear.",
+    shopifyQuery: "tag:first-drop",
+    image: SECTION_IMAGES.hero,
+  },
+
   /* ─────────── Themed editorial collections ─────────── */
 
   "atlantic-utility": {

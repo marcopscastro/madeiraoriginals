@@ -17,7 +17,9 @@
     "search": "Pesquisar",
     "cart": "Carrinho",
     "account": "Conta",
-    "menu": "Menu"
+    "menu": "Menu",
+    "firstDrop": "First Drop",
+    "custom": "Personalizado"
   },
   "footer": {
     "joinHeading": "Junta-te à comunidade.",
@@ -31,7 +33,8 @@
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
-    "care": "Cuidados"
+    "care": "Cuidados",
+    "designedIn": "Desenhado em São Vicente, Madeira · Inspirado pelo Atlântico"
   },
   "hero": {
     "imageAlt": "Falésias de basalto vulcânico com nevoeiro e o Oceano Atlântico na costa norte da Madeira",
@@ -387,7 +390,10 @@
     "headingA": "Nascida em São Vicente.",
     "headingB": "Vestida em todo o lado.",
     "body": "Feita para a ilha, para a diáspora e para quem leva consigo um pedaço da Madeira — do Funchal a Lisboa, Jersey, Londres, Luxemburgo e mais além.",
-    "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira"
+    "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira",
+    "ctaShop": "Ver a Colecção",
+    "ctaStory": "Conhecer a História",
+    "designedIn": "Desenhado em São Vicente, Madeira"
   },
   "collections": {
     "overline": "Colecções em Destaque",
@@ -1071,5 +1077,84 @@
         "body": "O algodão pesado amacia a cada lavagem. Algum desbotamento ligeiro e textura natural fazem parte do material — não são defeito. As peças são feitas para serem usadas, muito."
       }
     ]
+  },
+  "firstDrop": {
+    "overline": "First Drop · Colecção São Vicente",
+    "headingA": "O primeiro drop,",
+    "headingB": "feito em São Vicente.",
+    "body": "Um lançamento curado e pequeno — t-shirts de algodão pesado, um hoodie, um boné e uma tote. Desenhado em São Vicente, Madeira. Feito para durar.",
+    "cta": "Explorar o First Drop",
+    "soonTitle": "Em breve.",
+    "soonBody": "O First Drop está a ser preparado em São Vicente. Junta-te à lista abaixo para acesso antecipado quando lançar."
+  },
+  "productSpecs": {
+    "storyHeading": "A História",
+    "storyFallback": "Um original de São Vicente. Desenhado na costa norte da Madeira, onde o Atlântico encontra o basalto negro e o nevoeiro desce da laurissilva até à vila. Feito para traduzir a ilha — não para a anunciar.",
+    "detailsHeading": "Detalhes da Peça",
+    "materialFallback": "Algodão 100% penteado, gramagem pesada",
+    "fitFallback": "Corte unissexo moderno — descontraído, ligeiramente boxy, fiel à medida",
+    "gsmLine": "{{gsm}} gsm — construção pesada",
+    "printFallback": "Impressão DTF premium, feita para resistir à lavagem",
+    "origin": "Desenhado em São Vicente, Madeira",
+    "builtToLast": "Feito para uso duradouro",
+    "sizeHeading": "Tamanho & Corte",
+    "sizeIntro": "Corte moderno e descontraído. Sobe um tamanho para uma silhueta mais oversized. Medidas aproximadas, podem variar ±1 cm.",
+    "tSize": "Tamanho",
+    "tChest": "Peito (½)",
+    "tLength": "Comprimento",
+    "sizeNote": "O meio-peito é medido a plano, de axila a axila. O comprimento vai do ponto mais alto do ombro até à bainha."
+  },
+  "custom": {
+    "seoTitle": "Vestuário & Merch Personalizado — Madeira Originals",
+    "seoDescription": "T-shirts personalizadas, fardamentos, vestuário para eventos e merch — desenhado e impresso em São Vicente, Madeira. DTF premium, autocolantes UV DTF, pequenas séries.",
+    "overline": "Vestuário Personalizado · Feito em São Vicente",
+    "headingA": "A tua marca,",
+    "headingB": "nos nossos materiais.",
+    "subcopy": "T-shirts personalizadas, fardamentos, vestuário para eventos e pequenas séries de merch — produzidos em São Vicente com os mesmos materiais e acabamento da nossa linha retalho. Para restaurantes, hotéis, cafés, bares, eventos, clubes e negócios locais.",
+    "ctaQuote": "Pedir Orçamento",
+    "ctaStudio": "Ver serviços completos do Studio",
+    "designedIn": "Desenhado em São Vicente, Madeira · Inspirado pelo Atlântico",
+    "services": {
+      "overline": "O que fazemos",
+      "heading": "Vestuário personalizado premium, sem o custo de agência.",
+      "items": [
+        { "title": "T-shirts Personalizadas", "body": "T-shirts em algodão pesado com o teu design, impressas em DTF para uso duradouro e cor nítida." },
+        { "title": "Fardamentos", "body": "Peças resistentes de sala e cozinha. Feitas para serviço diário e lavagens frequentes." },
+        { "title": "Vestuário para Eventos", "body": "Séries pequenas ou grandes para festivais, provas, aberturas e pop-ups. Resposta rápida quando é preciso." },
+        { "title": "Merch para Pequenos Negócios", "body": "Bonés, totes, hoodies e acessórios. Tratados com o mesmo cuidado da nossa linha retalho — nunca souvenir." },
+        { "title": "Impressão DTF", "body": "Impressão direct-to-film para cor vibrante, detalhe fino e excelente durabilidade na lavagem em mistos de algodão." },
+        { "title": "Autocolantes UV DTF", "body": "Autocolantes recortados, à prova de água e intempéries, para vidros, equipamento, embalagem e merch." }
+      ]
+    },
+    "audiences": {
+      "overline": "Para",
+      "items": ["Restaurantes", "Hotéis", "Cafés", "Bares", "Eventos", "Turismo", "Clubes", "Negócios Locais"]
+    },
+    "form": {
+      "overline": "Pedir Orçamento",
+      "heading": "Conta-nos o teu projecto.",
+      "sub": "Dá-nos um briefing rápido — respondemos no prazo de um dia útil com preço e próximos passos.",
+      "name": "O teu nome *",
+      "business": "Nome do negócio / projecto *",
+      "email": "Email *",
+      "phone": "Telefone",
+      "projectType": "Tipo de projecto *",
+      "quantity": "Quantidade estimada",
+      "quantityHint": "ex. 50 unidades",
+      "message": "Detalhes do projecto",
+      "messageHint": "Tipo de peça, tamanhos, prazo, notas sobre logo / artwork, e tudo o que devamos saber.",
+      "submit": "Pedir orçamento",
+      "sending": "A enviar…",
+      "done": "Pedido recebido.",
+      "doneBody": "Respondemos no prazo de um dia útil com preço e próximos passos.",
+      "projectTypes": {
+        "tshirts": "T-shirts personalizadas",
+        "uniforms": "Fardamentos",
+        "events": "Vestuário para eventos",
+        "merch": "Merch de marca",
+        "stickers": "Autocolantes UV DTF",
+        "other": "Outro"
+      }
+    }
   }
 }
