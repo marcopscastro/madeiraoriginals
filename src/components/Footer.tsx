@@ -10,6 +10,7 @@ const Footer = () => {
       heading: t("footer.shop"),
       links: [
         { label: t("nav.shopAll"), to: "/shop" },
+        { label: t("nav.firstDrop"), to: "/first-drop" },
         { label: t("nav.tshirts"), to: "/madeira-t-shirts" },
         { label: t("nav.hoodies"), to: "/madeira-hoodies" },
         { label: t("nav.accessories"), to: "/madeira-accessories" },
@@ -20,6 +21,7 @@ const Footer = () => {
       heading: t("footer.business"),
       links: [
         { label: t("footer.studio"), to: "/studio" },
+        { label: t("nav.custom"), to: "/custom" },
         { label: t("footer.wholesale"), to: "/wholesale" },
       ],
     },
@@ -74,8 +76,11 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-foreground/10">
-          <p className="font-heading text-base md:text-lg font-bold uppercase tracking-[0.35em] text-accent text-center mb-6">
+          <p className="font-heading text-base md:text-lg font-bold uppercase tracking-[0.35em] text-accent text-center mb-4">
             {t("tagline")}
+          </p>
+          <p className="font-heading text-[10px] uppercase tracking-[0.35em] text-muted-foreground text-center mb-6">
+            {t("footer.designedIn")}
           </p>
           <p className="font-body text-sm text-muted-foreground text-center">
             {t("footer.copyright")}

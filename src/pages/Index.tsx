@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ValueBanner from "@/components/ValueBanner";
 import Manifesto from "@/components/Manifesto";
 import FeaturedCollections from "@/components/FeaturedCollections";
+import FirstDropFeature from "@/components/FirstDropFeature";
 import Bestsellers from "@/components/Bestsellers";
 import VisualDivider from "@/components/VisualDivider";
 import OriginStory from "@/components/OriginStory";
@@ -33,16 +34,18 @@ const Index = () => (
       <Hero />
       <ValueBanner />
       <Manifesto />
+      <FirstDropFeature />
       <FeaturedCollections />
       <VisualDivider />
       <Bestsellers />
       <OriginStory />
-      <Diaspora />
       <JournalPreview />
       <HomeNewsletter />
+      <Diaspora />
     </main>
     <Footer />
   </div>
 );
 
 export default Index;
+
