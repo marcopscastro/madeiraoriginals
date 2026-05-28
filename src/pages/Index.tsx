@@ -34,7 +34,7 @@ const Index = () => (
       <Hero />
       <ValueBanner />
       <Manifesto />
-      <FirstDropFeature />
+      
       <FeaturedCollections />
       <VisualDivider />
       <Bestsellers />

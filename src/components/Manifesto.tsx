@@ -6,7 +6,7 @@ const Manifesto = () => {
 
   return (
     <section className="bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-32 md:py-48">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-28 md:py-40">
         <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-8">
           {t("manifesto.overline")}
         </p>

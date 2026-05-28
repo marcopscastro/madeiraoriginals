@@ -8,7 +8,7 @@ const OriginStory = () => {
 
   return (
     <section className="bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-32 md:py-48 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-28 md:py-40 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
           <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
             {t("origin.overline")}
