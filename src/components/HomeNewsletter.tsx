@@ -15,7 +15,7 @@ const HomeNewsletter = () => {
         <p className="font-body text-base md:text-lg opacity-90 mb-7 max-w-lg mx-auto">
           {t("homeNewsletter.body")}
         </p>
-        <NewsletterForm source="home" />
+        <NewsletterForm source="home" ctaLabel={t("newsletter.earlyAccess")} />
       </div>
     </section>
   );
