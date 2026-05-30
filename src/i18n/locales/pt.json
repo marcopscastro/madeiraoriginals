@@ -960,12 +960,16 @@
     "bodyMin": "Conta-nos um pouco mais (mín. 10 caracteres)"
   },
   "productTrust": {
-    "origin": "Desenhado em São Vicente",
-    "shipping": "Envio mundial",
+    "origin": "Desenhado em São Vicente, Madeira",
+    "shipping": "Envio a partir da Madeira",
     "secure": "Checkout seguro",
-    "built": "Feito para durar"
+    "built": "Qualidade de impressão premium"
   },
   "productInfo": {
+    "carePreview": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa.",
+    "viewCareLink": "Ver guia de cuidados →",
+    "shippingPreview": "Envio a partir da Madeira. Tempos de entrega variam consoante o destino.",
+    "viewShippingLink": "Ver envios e devoluções →",
     "shipping": {
       "title": "Envio",
       "body": "As peças são feitas e acabadas no nosso estúdio em São Vicente e enviadas para todo o mundo.\n\nPortugal e Madeira: 2–4 dias úteis.\nEuropa: 4–7 dias úteis.\nReino Unido, EUA e resto do mundo: 7–14 dias úteis.\n\nEnvio gratuito na UE acima de 60€.",
@@ -978,7 +982,7 @@
     },
     "care": {
       "title": "Cuidados",
-      "body": "Lavar a frio, do avesso. Secar ao ar. Não passar a ferro diretamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
+      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
       "link": "Instruções completas"
     }
   },
