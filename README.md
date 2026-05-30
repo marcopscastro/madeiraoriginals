@@ -71,3 +71,33 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Prerendering (for SEO + AI tooling)
+
+Public routes are snapshotted to static HTML after every build so crawlers
+and AI tools (like Claude) can read real content without executing JS.
+
+- Runs automatically as a `postbuild` step (`scripts/prerender.mjs`).
+- Boots `vite preview`, walks every route with headless Chromium, writes
+  `dist/<route>/index.html`. The SPA still hydrates on load — snapshots only
+  seed the initial HTML.
+- Route list: `src/lib/prerenderRoutes.ts` (static) plus all published
+  journal posts (Lovable Cloud) and Shopify products fetched at build time.
+- Safe-by-default: if Chromium can't launch, the script logs a warning and
+  exits 0 so the build never fails.
+
+To regenerate snapshots manually after content changes:
+
+```sh
+npm run build      # also runs prerender
+# or, against an existing dist/:
+npm run prerender
+```
+
+## Editing the codebase outside Lovable (Claude Code, etc.)
+
+Connect this project to GitHub via the **GitHub** button in the Lovable
+top bar. Once connected, every change syncs both ways. You can then
+`git clone` the repo locally and use Claude Code (or any IDE) to read and
+edit files — pushes to `main` flow back into Lovable automatically.
+
