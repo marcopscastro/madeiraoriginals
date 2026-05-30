@@ -405,29 +405,29 @@
       {
         "index": "01",
         "title": "Atlantic Utility",
-        "body": "Essenciais minimais e robustos. Algodão pesado, detalhes técnicos, feitos para nevoeiro, vento e sal.",
+        "body": "Essenciais robustos inspirados pela costa norte da Madeira — falésias de basalto, vento marítimo e clima atlântico.",
         "cta": "Ver Utility",
         "to": "/atlantic-utility"
       },
       {
         "index": "02",
         "title": "Norte",
-        "body": "São Vicente em tecido — picos com nevoeiro, texturas de basalto, o clima silencioso da costa norte.",
+        "body": "Estradas no nevoeiro, vales profundos e a força silenciosa da costa norte de São Vicente.",
         "cta": "Ver Norte",
         "to": "/norte"
       },
       {
         "index": "03",
         "title": "Herança Contemporânea",
-        "body": "Tradição, traduzida como deve ser. Geometria de azulejo, coordenadas e símbolos da ilha, redesenhados para hoje.",
+        "body": "Laurissilva, levadas e antigos símbolos da Madeira — reinterpretados em peças modernas para vestir.",
         "cta": "Ver Herança",
         "to": "/contemporary-heritage"
       },
       {
         "index": "04",
-        "title": "Humor da Ilha",
-        "body": "Poncha, bolo do caco e piadas internas tratadas com a seriedade de uma marca premium.",
-        "cta": "Ver Humor",
+        "title": "Ícones da Ilha",
+        "body": "Detalhes reconhecíveis da Madeira, símbolos locais e pequenos momentos da vida insular — redesenhados para hoje.",
+        "cta": "Ver Ícones",
         "to": "/island-humour"
       }
     ]
