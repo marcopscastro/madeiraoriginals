@@ -1079,6 +1079,20 @@
       }
     ]
   },
+  "sizeGuidePage": {
+    "seoTitle": "Guia de Tamanhos | Madeira Originals",
+    "seoDescription": "Encontra o teu tamanho. Medidas e notas de fit para t-shirts, hoodies e acessórios Madeira Originals.",
+    "overline": "Guia de Tamanhos",
+    "title": "Encontra o teu tamanho.",
+    "lead": "As nossas peças seguem um corte unissexo moderno — descontraído, ligeiramente boxy, fiel ao tamanho. Sobe um tamanho para uma silhueta mais oversized. Todas as medidas são planas, em centímetros, e podem variar ±1 cm.",
+    "sections": [
+      { "heading": "Como medir", "body": "Estende uma peça semelhante. O meio-peito mede-se de axila a axila. O comprimento mede-se do ponto mais alto do ombro até à bainha. Compara com a tabela abaixo." },
+      { "heading": "T-shirts (meio-peito / comprimento, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
+      { "heading": "Hoodies (meio-peito / comprimento, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
+      { "heading": "Notas de fit", "body": "O algodão pesado tem queda estruturada que amacia com o uso. Se estiveres entre tamanhos, desce um para um fit limpo, sobe um para um look oversized. Os bonés são one-size ajustáveis; as totes são one-size." },
+      { "heading": "Ainda em dúvida?", "body": "Escreve para hello@madeiraoriginals.pt com o teu tamanho habitual e como gostas que assente — recomendamos o certo." }
+    ]
+  }
   "firstDrop": {
     "overline": "First Drop · Colecção São Vicente",
     "headingA": "O primeiro drop,",
