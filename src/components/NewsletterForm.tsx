@@ -81,7 +81,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Pro
         disabled={loading}
         className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity whitespace-nowrap disabled:opacity-50"
       >
-        {loading ? t("newsletter.joining") : variant === "inline" ? t("newsletter.join") : t("newsletter.subscribe")}
+        {loading ? t("newsletter.joining") : ctaLabel ?? (variant === "inline" ? t("newsletter.join") : t("newsletter.subscribe"))}
       </button>
     </form>
   );
