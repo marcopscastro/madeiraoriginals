@@ -353,7 +353,7 @@
   },
   "bestsellers": {
     "overline": "First Drop · São Vicente",
-    "heading": "O First Drop",
+    "heading": "First Drop: São Vicente",
     "subheading": "Vestuário inspirado na Madeira, feito para vestir em qualquer lado.",
     "cta": "Explorar o First Drop",
     "empty": "Sem produtos ainda — lançamentos a caminho."
@@ -388,9 +388,9 @@
     ]
   },
   "diaspora": {
-    "overline": "Nascida em São Vicente · Vestida em todo o lado",
+    "overline": "Nascida em São Vicente · Usada em qualquer lugar",
     "headingA": "Nascida em São Vicente.",
-    "headingB": "Vestida em todo o lado.",
+    "headingB": "Usada em qualquer lugar.",
     "body": "Feita para a ilha, para a diáspora e para quem leva consigo um pedaço da Madeira — do Funchal a Lisboa, Jersey, Londres, Luxemburgo e mais além.",
     "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira",
     "ctaShop": "Ver a Colecção",
