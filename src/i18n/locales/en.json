@@ -237,6 +237,7 @@
     "soldOut": "Sold Out",
     "soldOutShort": "Sold out",
     "selectOption": "Select {{name}}",
+    "sizeGuideLink": "Size Guide →",
     "pleaseSelect": "Please select {{name}}",
     "pleaseSelectOptions": "Please select options",
     "addToCart": "Add to Cart",
@@ -959,12 +960,16 @@
     "bodyMin": "Tell us a bit more (min 10 chars)"
   },
   "productTrust": {
-    "origin": "Designed in São Vicente",
-    "shipping": "Worldwide shipping",
+    "origin": "Designed in São Vicente, Madeira",
+    "shipping": "Shipping from Madeira",
     "secure": "Secure checkout",
-    "built": "Built for long-term wear"
+    "built": "Premium print quality"
   },
   "productInfo": {
+    "carePreview": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on print.",
+    "viewCareLink": "View full care guide →",
+    "shippingPreview": "Ships from Madeira. Delivery times vary by destination.",
+    "viewShippingLink": "View shipping & returns →",
     "shipping": {
       "title": "Shipping",
       "body": "Pieces are made and finished in our São Vicente studio, then shipped worldwide.\n\nPortugal & Madeira: 2–4 business days.\nEurope: 4–7 business days.\nUK, US & rest of world: 7–14 business days.\n\nFree shipping in the EU over €60.",
@@ -977,7 +982,7 @@
     },
     "care": {
       "title": "Care",
-      "body": "Wash cold, inside out. Hang to dry. Do not iron directly on the print. Our heavyweight cotton softens with wear — it is built for the long haul.",
+      "body": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on the print. Our heavyweight cotton softens with wear — it is built for the long haul.",
       "link": "Full care instructions"
     }
   },
@@ -1105,13 +1110,14 @@
   },
   "productSpecs": {
     "storyHeading": "The Story",
-    "storyFallback": "A São Vicente original. Designed on the north coast of Madeira, where the Atlantic meets black basalt and fog rolls down the laurel forest into the village. Built to translate the island — not to advertise it.",
+    "storyFallback": "Rooted in the north coast of Madeira, this piece reflects the basalt cliffs, Atlantic weather and quiet force of São Vicente.",
     "detailsHeading": "Garment Details",
-    "materialFallback": "Heavyweight 100% combed cotton",
-    "fitFallback": "Modern unisex fit — relaxed, slightly boxy, true-to-size",
-    "gsmLine": "{{gsm}} gsm — heavyweight build",
-    "printFallback": "Premium DTF print, made to survive the wash",
-    "origin": "Designed in São Vicente, Madeira",
+    "materialFallback": "Material: To be confirmed",
+    "fitFallback": "Fit: Regular / relaxed fit",
+    "gsmLine": "Weight: {{gsm}} gsm",
+    "printFallback": "Print: Premium DTF print",
+    "care": "Care: Wash inside out at 30°C",
+    "origin": "Origin: Designed in São Vicente, Madeira",
     "builtToLast": "Built for long-term wear",
     "sizeHeading": "Size & Fit",
     "sizeIntro": "Modern relaxed cut. Size up for a more oversized streetwear silhouette. Measurements are approximate and may vary by ±1 cm.",

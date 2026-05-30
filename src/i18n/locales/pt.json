@@ -237,6 +237,7 @@
     "soldOut": "Esgotado",
     "soldOutShort": "Esgotado",
     "selectOption": "Selecciona {{name}}",
+    "sizeGuideLink": "Guia de Tamanhos →",
     "pleaseSelect": "Por favor selecciona {{name}}",
     "pleaseSelectOptions": "Por favor selecciona as opções",
     "addToCart": "Adicionar ao carrinho",
@@ -959,12 +960,16 @@
     "bodyMin": "Conta-nos um pouco mais (mín. 10 caracteres)"
   },
   "productTrust": {
-    "origin": "Desenhado em São Vicente",
-    "shipping": "Envio mundial",
+    "origin": "Desenhado em São Vicente, Madeira",
+    "shipping": "Envio a partir da Madeira",
     "secure": "Checkout seguro",
-    "built": "Feito para durar"
+    "built": "Qualidade de impressão premium"
   },
   "productInfo": {
+    "carePreview": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa.",
+    "viewCareLink": "Ver guia de cuidados →",
+    "shippingPreview": "Envio a partir da Madeira. Tempos de entrega variam consoante o destino.",
+    "viewShippingLink": "Ver envios e devoluções →",
     "shipping": {
       "title": "Envio",
       "body": "As peças são feitas e acabadas no nosso estúdio em São Vicente e enviadas para todo o mundo.\n\nPortugal e Madeira: 2–4 dias úteis.\nEuropa: 4–7 dias úteis.\nReino Unido, EUA e resto do mundo: 7–14 dias úteis.\n\nEnvio gratuito na UE acima de 60€.",
@@ -977,7 +982,7 @@
     },
     "care": {
       "title": "Cuidados",
-      "body": "Lavar a frio, do avesso. Secar ao ar. Não passar a ferro diretamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
+      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
       "link": "Instruções completas"
     }
   },
@@ -1105,13 +1110,14 @@
   },
   "productSpecs": {
     "storyHeading": "A História",
-    "storyFallback": "Um original de São Vicente. Desenhado na costa norte da Madeira, onde o Atlântico encontra o basalto negro e o nevoeiro desce da laurissilva até à vila. Feito para traduzir a ilha — não para a anunciar.",
+    "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflecte as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
     "detailsHeading": "Detalhes da Peça",
-    "materialFallback": "Algodão 100% penteado, gramagem pesada",
-    "fitFallback": "Corte unissexo moderno — descontraído, ligeiramente boxy, fiel à medida",
-    "gsmLine": "{{gsm}} gsm — construção pesada",
-    "printFallback": "Impressão DTF premium, feita para resistir à lavagem",
-    "origin": "Desenhado em São Vicente, Madeira",
+    "materialFallback": "Material: A confirmar",
+    "fitFallback": "Corte: Regular / descontraído",
+    "gsmLine": "Gramagem: {{gsm}} gsm",
+    "printFallback": "Impressão: DTF premium",
+    "care": "Cuidados: Lavar do avesso a 30°C",
+    "origin": "Origem: Desenhado em São Vicente, Madeira",
     "builtToLast": "Feito para uso duradouro",
     "sizeHeading": "Tamanho & Corte",
     "sizeIntro": "Corte moderno e descontraído. Sobe um tamanho para uma silhueta mais oversized. Medidas aproximadas, podem variar ±1 cm.",

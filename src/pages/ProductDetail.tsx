@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import ProductTrustSignals from "@/components/ProductTrustSignals";
 import ProductDetailsAccordion from "@/components/ProductDetailsAccordion";
 import ProductSpecs from "@/components/ProductSpecs";
+import ProductGallery from "@/components/ProductGallery";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
@@ -285,61 +286,13 @@ const ProductDetail = () => {
         </nav>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          <div className="space-y-5">
-            <div className="relative overflow-hidden bg-muted aspect-[4/5]">
-              {currentImage ? (
-                <button
-                  type="button"
-                  onClick={() => setLightboxOpen(true)}
-                  className="w-full h-full block cursor-zoom-in"
-                  aria-label={t("product.zoomImage")}
-                >
-                  <img
-                    src={currentImage.url}
-                    alt={productAlt({
-                      title: product.title,
-                      shopifyAlt: currentImage.altText,
-                      index: selectedImage,
-                      total: images.length,
-                    })}
-                    className="w-full h-full object-cover img-cinematic"
-                  />
-                </button>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-foreground/45 font-heading text-xs uppercase tracking-[0.3em]">
-                  {t("product.comingSoon")}
-                </div>
-              )}
-            </div>
-            {images.length > 1 && (
-              <div className="flex gap-3 flex-wrap">
-                {images.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setSelectedImage(i)}
-                    aria-label={t("product.thumbAria", { i: i + 1, total: images.length })}
-                    aria-current={selectedImage === i}
-                    className={`w-20 h-24 overflow-hidden bg-muted transition-opacity ${
-                      selectedImage === i
-                        ? "opacity-100 ring-1 ring-foreground"
-                        : "opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={img.url}
-                      alt={productAlt({
-                        title: product.title,
-                        shopifyAlt: img.altText,
-                        index: i,
-                        total: images.length,
-                      })}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProductGallery
+            images={images}
+            productTitle={product.title}
+            selectedIndex={selectedImage}
+            onSelect={setSelectedImage}
+            onZoom={() => setLightboxOpen(true)}
+          />
 
           <div className="flex flex-col md:pt-4">
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-foreground leading-[1.05] tracking-tight">
@@ -374,40 +327,53 @@ const ProductDetail = () => {
               </p>
             ) : null}
 
-            {needsSelection && options.map((opt) => (
-              <div key={opt.name} className="mt-8">
-                <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground mb-3">
-                  {opt.name}
-                  {selectedOptions[opt.name] && (
-                    <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
-                      {selectedOptions[opt.name]}
-                    </span>
-                  )}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {opt.values.map((val) => {
-                    const available = isValueAvailable(opt.name, val);
-                    const selected = selectedOptions[opt.name] === val;
-                    return (
-                      <button
-                        key={val}
-                        onClick={() =>
-                          setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
-                        }
-                        disabled={!available}
-                        className={`min-w-[3rem] px-4 py-2.5 border font-heading text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors ${
-                          selected
-                            ? "border-foreground bg-foreground text-background"
-                            : "border-foreground/20 text-foreground hover:border-foreground"
-                        } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
+            {needsSelection && options.map((opt) => {
+              const isSize = /size|tamanho/i.test(opt.name);
+              return (
+                <div key={opt.name} className="mt-8">
+                  <div className="flex items-baseline justify-between gap-4 mb-3">
+                    <p className="font-heading text-xs font-bold uppercase tracking-widest text-foreground">
+                      {opt.name}
+                      {selectedOptions[opt.name] && (
+                        <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
+                          {selectedOptions[opt.name]}
+                        </span>
+                      )}
+                    </p>
+                    {isSize && (
+                      <Link
+                        to="/size-guide"
+                        className="font-heading text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground border-b border-foreground/30 hover:border-foreground"
                       >
-                        {val}
-                      </button>
-                    );
-                  })}
+                        {t("product.sizeGuideLink")}
+                      </Link>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {opt.values.map((val) => {
+                      const available = isValueAvailable(opt.name, val);
+                      const selected = selectedOptions[opt.name] === val;
+                      return (
+                        <button
+                          key={val}
+                          onClick={() =>
+                            setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
+                          }
+                          disabled={!available}
+                          className={`min-w-[3rem] px-4 py-2.5 border font-heading text-[12px] font-semibold uppercase tracking-[0.2em] transition-colors ${
+                            selected
+                              ? "border-foreground bg-foreground text-background"
+                              : "border-foreground/20 text-foreground hover:border-foreground"
+                          } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
+                        >
+                          {val}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {(() => {
               const stock = activeVariant?.quantityAvailable;
@@ -468,6 +434,38 @@ const ProductDetail = () => {
             </button>
 
             <ProductTrustSignals />
+
+            <div className="mt-8 space-y-5 border-t border-foreground/10 pt-6">
+              <div>
+                <p className="font-heading text-[10px] font-bold uppercase tracking-[0.3em] text-foreground mb-1.5">
+                  {t("productInfo.care.title")}
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {t("productInfo.carePreview")}{" "}
+                  <Link
+                    to="/care"
+                    className="text-foreground border-b border-foreground/40 hover:border-foreground"
+                  >
+                    {t("productInfo.viewCareLink")}
+                  </Link>
+                </p>
+              </div>
+              <div>
+                <p className="font-heading text-[10px] font-bold uppercase tracking-[0.3em] text-foreground mb-1.5">
+                  {t("productInfo.shipping.title")}
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {t("productInfo.shippingPreview")}{" "}
+                  <Link
+                    to="/shipping"
+                    className="text-foreground border-b border-foreground/40 hover:border-foreground"
+                  >
+                    {t("productInfo.viewShippingLink")}
+                  </Link>
+                </p>
+              </div>
+            </div>
+
             <ProductDetailsAccordion />
           </div>
         </div>

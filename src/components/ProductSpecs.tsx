@@ -28,8 +28,8 @@ const ProductSpecs = ({ metafields, productTitle }: Props) => {
     fit,
     gsm ? t("productSpecs.gsmLine", { gsm }) : null,
     printMethod,
+    t("productSpecs.care"),
     t("productSpecs.origin"),
-    t("productSpecs.builtToLast"),
   ].filter(Boolean) as string[];
 
   // Standard apparel sizing table (used when metafield absent)
