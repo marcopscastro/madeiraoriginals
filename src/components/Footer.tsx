@@ -39,6 +39,7 @@ const Footer = () => {
         { label: t("footer.shipping"), to: "/shipping" },
         { label: t("footer.returns"), to: "/returns" },
         { label: t("footer.care"), to: "/care" },
+        { label: t("footer.sizeGuide"), to: "/size-guide" },
       ],
     },
   ];

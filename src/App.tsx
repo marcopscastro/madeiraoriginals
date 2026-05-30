@@ -30,6 +30,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Shipping = lazy(() => import("./pages/Shipping"));
 const Returns = lazy(() => import("./pages/Returns"));
 const Care = lazy(() => import("./pages/Care"));
+const SizeGuide = lazy(() => import("./pages/SizeGuide"));
 const Custom = lazy(() => import("./pages/Custom"));
 
 const queryClient = new QueryClient();
@@ -67,6 +68,8 @@ const AppRoutes = () => {
         <Route path="/returns" element={<Returns />} />
         <Route path="/care" element={<Care />} />
         <Route path="/care-guide" element={<Navigate to="/care" replace />} />
+        <Route path="/size-guide" element={<SizeGuide />} />
+        <Route path="/sizing" element={<Navigate to="/size-guide" replace />} />
         <Route path="/shipping-returns" element={<Navigate to="/shipping" replace />} />
         <Route path="/custom" element={<Custom />} />
         <Route path="/auth" element={<Auth />} />
