@@ -156,14 +156,14 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
   },
   "island-humour": {
     slug: "island-humour",
-    eyebrow: "Collection 04 · Island Humour",
-    title: "Island Humour",
+    eyebrow: "Collection 04 · Island Icons",
+    title: "Island Icons",
     intro:
-      "Poncha, bolo do caco and inside jokes — treated with the seriousness of a premium label. Tasteful Madeiran wit, never souvenir.",
-    metaTitle: "Island Humour | Madeira Originals",
+      "Recognisable Madeira details, local symbols and small moments from island life — redrawn for now. Treated with the seriousness of a premium label.",
+    metaTitle: "Island Icons | Madeira Originals",
     metaDescription:
-      "Island Humour — tasteful Madeiran cultural references on premium apparel. Designed in São Vicente, Madeira.",
-    shopifyQuery: "tag:humour OR tag:island-humour",
+      "Island Icons — recognisable Madeira details and local symbols on premium apparel. Designed in São Vicente, Madeira.",
+    shopifyQuery: "tag:icons OR tag:island-icons OR tag:humour OR tag:island-humour",
     image: SECTION_IMAGES["island-humour"],
   },
 };

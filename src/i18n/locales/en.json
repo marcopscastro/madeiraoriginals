@@ -405,29 +405,29 @@
       {
         "index": "01",
         "title": "Atlantic Utility",
-        "body": "Minimal rugged essentials. Heavyweight cotton, technical detailing, built for fog, wind and salt.",
+        "body": "Rugged essentials inspired by Madeira's north coast — basalt cliffs, sea wind and Atlantic weather.",
         "cta": "Shop Utility",
         "to": "/atlantic-utility"
       },
       {
         "index": "02",
         "title": "Norte",
-        "body": "São Vicente in fabric form — foggy peaks, basalt textures, the quiet weather of the north coast.",
+        "body": "Foggy roads, deep valleys and the quiet force of São Vicente's north coast.",
         "cta": "Shop Norte",
         "to": "/norte"
       },
       {
         "index": "03",
         "title": "Contemporary Heritage",
-        "body": "Tradition, properly translated. Azulejo geometry, coordinates and island symbols, redrawn for now.",
+        "body": "Laurissilva, levadas and old Madeira symbols — reworked into modern wearable pieces.",
         "cta": "Shop Heritage",
         "to": "/contemporary-heritage"
       },
       {
         "index": "04",
-        "title": "Island Humour",
-        "body": "Poncha, bolo do caco and inside jokes treated with the seriousness of a premium label.",
-        "cta": "Shop Humour",
+        "title": "Island Icons",
+        "body": "Recognisable Madeira details, local symbols and small moments from island life — redrawn for now.",
+        "cta": "Shop Icons",
         "to": "/island-humour"
       }
     ]
