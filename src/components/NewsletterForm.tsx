@@ -8,9 +8,10 @@ import { supabase } from "@/integrations/supabase/client";
 interface Props {
   source?: string;
   variant?: "footer" | "inline";
+  ctaLabel?: string;
 }
 
-const NewsletterForm = ({ source = "footer", variant = "footer" }: Props) => {
+const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Props) => {
   const { t } = useTranslation();
   const schema = z.object({ email: z.string().email(t("auth.invalidEmail")) });
   const [email, setEmail] = useState("");
