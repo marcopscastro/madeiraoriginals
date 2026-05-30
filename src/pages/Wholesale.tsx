@@ -6,9 +6,9 @@ import WholesaleGate, { wholesaleSignOut } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
 
 const tiers = [
-  { qty: "25+", price: "€18 / unit" },
-  { qty: "50+", price: "€15 / unit" },
-  { qty: "100+", price: "€12 / unit" },
+  { qty: "25–49 units", price: "€19 / unit" },
+  { qty: "50–99 units", price: "€16 / unit" },
+  { qty: "100+ units", price: "€13.50 / unit" },
 ];
 
 const Wholesale = () => {
