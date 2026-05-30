@@ -286,61 +286,13 @@ const ProductDetail = () => {
         </nav>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          <div className="space-y-5">
-            <div className="relative overflow-hidden bg-muted aspect-[4/5]">
-              {currentImage ? (
-                <button
-                  type="button"
-                  onClick={() => setLightboxOpen(true)}
-                  className="w-full h-full block cursor-zoom-in"
-                  aria-label={t("product.zoomImage")}
-                >
-                  <img
-                    src={currentImage.url}
-                    alt={productAlt({
-                      title: product.title,
-                      shopifyAlt: currentImage.altText,
-                      index: selectedImage,
-                      total: images.length,
-                    })}
-                    className="w-full h-full object-cover img-cinematic"
-                  />
-                </button>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-foreground/45 font-heading text-xs uppercase tracking-[0.3em]">
-                  {t("product.comingSoon")}
-                </div>
-              )}
-            </div>
-            {images.length > 1 && (
-              <div className="flex gap-3 flex-wrap">
-                {images.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setSelectedImage(i)}
-                    aria-label={t("product.thumbAria", { i: i + 1, total: images.length })}
-                    aria-current={selectedImage === i}
-                    className={`w-20 h-24 overflow-hidden bg-muted transition-opacity ${
-                      selectedImage === i
-                        ? "opacity-100 ring-1 ring-foreground"
-                        : "opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <img
-                      src={img.url}
-                      alt={productAlt({
-                        title: product.title,
-                        shopifyAlt: img.altText,
-                        index: i,
-                        total: images.length,
-                      })}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProductGallery
+            images={images}
+            productTitle={product.title}
+            selectedIndex={selectedImage}
+            onSelect={setSelectedImage}
+            onZoom={() => setLightboxOpen(true)}
+          />
 
           <div className="flex flex-col md:pt-4">
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-foreground leading-[1.05] tracking-tight">
