@@ -30,6 +30,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Shipping = lazy(() => import("./pages/Shipping"));
 const Returns = lazy(() => import("./pages/Returns"));
 const Care = lazy(() => import("./pages/Care"));
+const SizeGuide = lazy(() => import("./pages/SizeGuide"));
 const Custom = lazy(() => import("./pages/Custom"));
 
 const queryClient = new QueryClient();
