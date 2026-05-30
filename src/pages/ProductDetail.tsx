@@ -434,6 +434,38 @@ const ProductDetail = () => {
             </button>
 
             <ProductTrustSignals />
+
+            <div className="mt-8 space-y-5 border-t border-foreground/10 pt-6">
+              <div>
+                <p className="font-heading text-[10px] font-bold uppercase tracking-[0.3em] text-foreground mb-1.5">
+                  {t("productInfo.care.title")}
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {t("productInfo.carePreview")}{" "}
+                  <Link
+                    to="/care"
+                    className="text-foreground border-b border-foreground/40 hover:border-foreground"
+                  >
+                    {t("productInfo.viewCareLink")}
+                  </Link>
+                </p>
+              </div>
+              <div>
+                <p className="font-heading text-[10px] font-bold uppercase tracking-[0.3em] text-foreground mb-1.5">
+                  {t("productInfo.shipping.title")}
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {t("productInfo.shippingPreview")}{" "}
+                  <Link
+                    to="/shipping"
+                    className="text-foreground border-b border-foreground/40 hover:border-foreground"
+                  >
+                    {t("productInfo.viewShippingLink")}
+                  </Link>
+                </p>
+              </div>
+            </div>
+
             <ProductDetailsAccordion />
           </div>
         </div>
