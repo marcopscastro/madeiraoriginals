@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import ProductTrustSignals from "@/components/ProductTrustSignals";
 import ProductDetailsAccordion from "@/components/ProductDetailsAccordion";
 import ProductSpecs from "@/components/ProductSpecs";
+import ProductGallery from "@/components/ProductGallery";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
