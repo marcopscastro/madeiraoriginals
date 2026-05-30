@@ -1079,6 +1079,20 @@
       }
     ]
   },
+  "sizeGuidePage": {
+    "seoTitle": "Size Guide | Madeira Originals",
+    "seoDescription": "Find your fit. Measurements and fit notes for Madeira Originals heavyweight tees, hoodies and accessories.",
+    "overline": "Size Guide",
+    "title": "Find your fit.",
+    "lead": "Our pieces follow a modern unisex cut — relaxed, slightly boxy, true-to-size. Size up for a more oversized streetwear silhouette. All measurements are flat, in centimetres, and may vary by ±1 cm.",
+    "sections": [
+      { "heading": "How to measure", "body": "Lay a similar garment flat. Half-chest is measured from armpit to armpit. Length is from the highest point of the shoulder straight down to the hem. Compare to the table below." },
+      { "heading": "T-shirts (half-chest / length, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
+      { "heading": "Hoodies (half-chest / length, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
+      { "heading": "Fit notes", "body": "Heavyweight cotton has a structured drape that softens with wear. If you're between sizes, size down for a clean fit, size up for an oversized streetwear look. Caps are one-size adjustable; totes are one-size." },
+      { "heading": "Still unsure?", "body": "Email hello@madeiraoriginals.pt with your usual size and how you like it to fit — we'll recommend the right one." }
+    ]
+  }
   "firstDrop": {
     "overline": "First Drop · São Vicente Collection",
     "headingA": "The first drop,",
