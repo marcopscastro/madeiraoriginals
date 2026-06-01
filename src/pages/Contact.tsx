@@ -25,8 +25,8 @@ const Contact = () => {
             <h2 className="font-heading text-xs font-bold uppercase tracking-widest text-primary mb-3">
               {t("contactPage.generalLabel")}
             </h2>
-            <a href="mailto:hello@madeiraoriginals.pt" className="font-display text-xl text-foreground hover:text-primary transition-colors break-all">
-              hello@madeiraoriginals.pt
+            <a href="mailto:geral@madeiraoriginals.pt" className="font-display text-xl text-foreground hover:text-primary transition-colors break-all">
+              geral@madeiraoriginals.pt
             </a>
             <p className="mt-2 font-body text-sm text-muted-foreground">
               {t("contactPage.generalNote")}
