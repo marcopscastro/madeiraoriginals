@@ -20,6 +20,7 @@ const Studio = lazy(() => import("./pages/Studio"));
 const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
+const IslandOfFlowers = lazy(() => import("./pages/IslandOfFlowers"));
 const Journal = lazy(() => import("./pages/Journal"));
 const JournalPost = lazy(() => import("./pages/JournalPost"));
 const Auth = lazy(() => import("./pages/Auth"));
