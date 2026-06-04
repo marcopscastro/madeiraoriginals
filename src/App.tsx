@@ -21,6 +21,7 @@ const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
 const IslandOfFlowers = lazy(() => import("./pages/IslandOfFlowers"));
+const IslandFlowerProduct = lazy(() => import("./pages/IslandFlowerProduct"));
 const Journal = lazy(() => import("./pages/Journal"));
 const JournalPost = lazy(() => import("./pages/JournalPost"));
 const Auth = lazy(() => import("./pages/Auth"));
