@@ -106,19 +106,29 @@ const ProductDetail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeVariant?.id]);
 
-  const sanitizedDescription = useMemo(() => {
+  const { cleanedHtml, gpsrHtml } = useMemo(() => {
     const html = product?.descriptionHtml;
-    if (!html) return "";
-    const cleaned = stripTagline(html);
-    return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
+    if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+    const noTagline = stripTagline(html);
+    return extractGpsrBlock(noTagline);
   }, [product?.descriptionHtml]);
+
+  const sanitizedDescription = useMemo(() => {
+    if (!cleanedHtml) return "";
+    return DOMPurify.sanitize(cleanedHtml, { USE_PROFILES: { html: true } });
+  }, [cleanedHtml]);
+
+  const sanitizedGpsr = useMemo(() => {
+    if (!gpsrHtml) return "";
+    return DOMPurify.sanitize(gpsrHtml, { USE_PROFILES: { html: true } });
+  }, [gpsrHtml]);
 
   // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
   const plainDescription = useMemo(() => {
-    const raw = product?.descriptionHtml || product?.description || "";
+    const raw = cleanedHtml || product?.description || "";
     const noTags = raw.replace(/<[^>]*>/g, " ");
     return stripTagline(noTags).replace(/\s+/g, " ").trim();
-  }, [product?.descriptionHtml, product?.description]);
+  }, [cleanedHtml, product?.description]);
 
   if (isLoading) {
     return (
