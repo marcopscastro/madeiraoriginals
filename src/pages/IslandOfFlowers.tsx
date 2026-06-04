@@ -140,7 +140,7 @@ const IslandOfFlowers = () => {
         startIndex={lightboxIndex}
         open={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        title="Island of Flowers"
+        title="Island of Flowers" // i18n-ignore
       />
 
       <style>{`
