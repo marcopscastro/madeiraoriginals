@@ -5,7 +5,7 @@ import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 
