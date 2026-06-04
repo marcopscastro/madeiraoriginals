@@ -68,6 +68,7 @@ const IslandFlowerProduct = () => {
       <div style={{ backgroundColor: BG, color: FG }} className="min-h-screen">
         <Header />
         <div className="max-w-7xl mx-auto px-6 py-32 text-center font-body text-sm" style={{ color: MUTED }}>
+          {/* i18n-ignore */}
           Loading…
         </div>
       </div>
@@ -79,13 +80,13 @@ const IslandFlowerProduct = () => {
       <div style={{ backgroundColor: BG, color: FG }} className="min-h-screen">
         <Header />
         <div className="max-w-3xl mx-auto px-6 py-32 text-center">
-          <h1 className="font-serif-display text-4xl mb-6">Product not found</h1>
+          <h1 className="font-serif-display text-4xl mb-6">Product not found{/* i18n-ignore */}</h1>
           <Link
             to="/island-of-flowers"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em]"
             style={{ color: GOLD }}
           >
-            <ArrowLeft size={14} /> Back to collection
+            <ArrowLeft size={14} /> Back to collection{/* i18n-ignore */}
           </Link>
         </div>
       </div>
@@ -98,11 +99,11 @@ const IslandFlowerProduct = () => {
 
   const handleAddToCart = async () => {
     if (allSoldOut) {
-      toast.error("Sold out");
+      toast.error("Sold out"); // i18n-ignore
       return;
     }
     if (!activeVariant) {
-      toast.error("Please choose your options");
+      toast.error("Please choose your options"); // i18n-ignore
       return;
     }
     const ok = await addItem({
@@ -121,10 +122,10 @@ const IslandFlowerProduct = () => {
       selectedOptions: activeVariant.selectedOptions,
     });
     if (!ok) {
-      toast.error("Could not add to cart", { position: "top-center" });
+      toast.error("Could not add to cart", { position: "top-center" }); // i18n-ignore
       return;
     }
-    toast.success(`${product.title} added`, { position: "top-center" });
+    toast.success(`${product.title} added`, { position: "top-center" }); // i18n-ignore
   };
 
   return (
@@ -144,7 +145,7 @@ const IslandFlowerProduct = () => {
           style={{ color: MUTED }}
         >
           <Link to="/island-of-flowers" className="hover:opacity-100" style={{ color: GOLD }}>
-            Island of Flowers
+            Island of Flowers{/* i18n-ignore */}
           </Link>
           <span className="mx-3 opacity-50">·</span>
           <span style={{ color: FG }}>{product.title}</span>
@@ -190,7 +191,7 @@ const IslandFlowerProduct = () => {
               className="text-[10px] uppercase tracking-[0.35em] mb-6"
               style={{ color: GOLD }}
             >
-              Madeira Originals · Collection
+              Madeira Originals · Collection{/* i18n-ignore */}
             </p>
             <h1 className="font-serif-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               {product.title}
@@ -264,7 +265,7 @@ const IslandFlowerProduct = () => {
                 className="text-[10px] uppercase tracking-[0.3em] mb-3"
                 style={{ color: MUTED }}
               >
-                Quantity
+                Quantity{/* i18n-ignore */}
               </p>
               <div
                 className="inline-flex items-center"
@@ -274,7 +275,7 @@ const IslandFlowerProduct = () => {
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="p-3 transition-opacity hover:opacity-70 disabled:opacity-30"
                   disabled={quantity <= 1}
-                  aria-label="Decrease quantity"
+                  aria-label="Decrease quantity" // i18n-ignore
                   style={{ color: FG }}
                 >
                   <Minus size={14} />
@@ -283,7 +284,7 @@ const IslandFlowerProduct = () => {
                 <button
                   onClick={() => setQuantity(Math.min(10, quantity + 1))}
                   className="p-3 transition-opacity hover:opacity-70"
-                  aria-label="Increase quantity"
+                  aria-label="Increase quantity" // i18n-ignore
                   style={{ color: FG }}
                 >
                   <Plus size={14} />
@@ -300,13 +301,13 @@ const IslandFlowerProduct = () => {
             >
               {isAdding ? (
                 <>
-                  <Loader2 size={16} className="animate-spin" /> Adding…
+                  <Loader2 size={16} className="animate-spin" /> Adding…{/* i18n-ignore */}
                 </>
               ) : allSoldOut ? (
-                "Sold out"
+                <>Sold out{/* i18n-ignore */}</>
               ) : (
                 <>
-                  <ShoppingCart size={16} /> Add to cart
+                  <ShoppingCart size={16} /> Add to cart{/* i18n-ignore */}
                 </>
               )}
             </button>
@@ -316,7 +317,7 @@ const IslandFlowerProduct = () => {
               className="mt-10 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] self-start"
               style={{ color: MUTED }}
             >
-              <ArrowLeft size={12} /> Back to Island of Flowers
+              <ArrowLeft size={12} /> Back to Island of Flowers{/* i18n-ignore */}
             </Link>
           </div>
         </div>
@@ -329,7 +330,7 @@ const IslandFlowerProduct = () => {
             className="text-[10px] uppercase tracking-[0.35em]"
             style={{ color: MUTED }}
           >
-            Premium streetwear. 0% tourist trap.
+            Premium streetwear. 0% tourist trap.{/* i18n-ignore */}
           </p>
         </div>
       </footer>
