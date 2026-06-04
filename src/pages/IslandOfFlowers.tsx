@@ -46,7 +46,7 @@ const IslandOfFlowers = () => {
   return (
     <div style={{ backgroundColor: BG, color: FG }} className="min-h-screen">
       <SEO
-        title="Island of Flowers — Madeira Originals Collection"
+        title="Island of Flowers — Madeira Originals Collection" // i18n-ignore
         description="Nine botanicals from the garden island. A premium editorial collection by Madeira Originals."
       />
       <Header />
@@ -140,7 +140,7 @@ const IslandOfFlowers = () => {
         startIndex={lightboxIndex}
         open={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        title="Island of Flowers"
+        title="Island of Flowers" // i18n-ignore
       />
 
       <style>{`
