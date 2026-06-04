@@ -21,6 +21,7 @@ const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
 const IslandOfFlowers = lazy(() => import("./pages/IslandOfFlowers"));
+const IslandFlowerProduct = lazy(() => import("./pages/IslandFlowerProduct"));
 const Journal = lazy(() => import("./pages/Journal"));
 const JournalPost = lazy(() => import("./pages/JournalPost"));
 const Auth = lazy(() => import("./pages/Auth"));
@@ -66,6 +67,7 @@ const AppRoutes = () => {
         <Route path="/journal" element={<Journal />} />
         <Route path="/journal/:slug" element={<JournalPost />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
+        <Route path="/products/:handle" element={<IslandFlowerProduct />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/care" element={<Care />} />
