@@ -70,9 +70,9 @@ const IslandOfFlowers = () => {
         <section className="mt-16 md:mt-24 px-4 md:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
             {FLOWERS.map((f, i) => (
-              <Link
+              <a
                 key={f.name}
-                to={f.link}
+                href={f.link}
                 className="group relative block overflow-hidden opacity-0 animate-[iofFade_600ms_ease-out_forwards]"
                 style={{ borderRadius: "8px", animationDelay: `${i * 80}ms`, aspectRatio: "2 / 3" }}
                 aria-label={`Shop ${f.name} print`}
@@ -109,7 +109,7 @@ const IslandOfFlowers = () => {
                 >
                   View
                 </button>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
