@@ -122,6 +122,37 @@ export function formatSizeLabel(value: string): string {
   return SIZE_LABEL_MAP[normalizeQuotes(value)] ?? value;
 }
 
+/**
+ * Extract the GPSR (Product Safety & Compliance) block from Shopify description HTML.
+ * Returns the cleaned description (without GPSR) and the GPSR HTML separately.
+ */
+export function extractGpsrBlock(html: string): { cleanedHtml: string; gpsrHtml: string } {
+  if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+
+  // Look for <hr> followed by GPSR heading
+  const hrMatch = html.match(/<hr\b[^>]*>/i);
+  if (hrMatch && hrMatch.index !== undefined) {
+    const afterHr = html.slice(hrMatch.index + hrMatch[0].length);
+    if (/Product Safety.*Compliance.*GPSR/i.test(afterHr)) {
+      return {
+        cleanedHtml: html.slice(0, hrMatch.index).trim(),
+        gpsrHtml: afterHr.trim(),
+      };
+    }
+  }
+
+  // Fallback: heading without <hr>
+  const headingMatch = html.match(/<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)/i);
+  if (headingMatch && headingMatch.index !== undefined) {
+    return {
+      cleanedHtml: html.slice(0, headingMatch.index).trim(),
+      gpsrHtml: html.slice(headingMatch.index),
+    };
+  }
+
+  return { cleanedHtml: html, gpsrHtml: "" };
+}
+
 // ---------- Queries ----------
 
 export const PRODUCTS_QUERY = `

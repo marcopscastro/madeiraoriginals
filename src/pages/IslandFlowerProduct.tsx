@@ -5,9 +5,10 @@ import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice, formatSizeLabel } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel, extractGpsrBlock } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const BG = "#0d0d0d";
 const FG = "#f0ead8";
@@ -57,11 +58,21 @@ const IslandFlowerProduct = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product?.id]);
 
-  const sanitizedDescription = useMemo(() => {
+  const { cleanedHtml, gpsrHtml } = useMemo(() => {
     const html = product?.descriptionHtml;
-    if (!html) return "";
-    return DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
+    if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+    return extractGpsrBlock(html);
   }, [product?.descriptionHtml]);
+
+  const sanitizedDescription = useMemo(() => {
+    if (!cleanedHtml) return "";
+    return DOMPurify.sanitize(cleanedHtml, { USE_PROFILES: { html: true } });
+  }, [cleanedHtml]);
+
+  const sanitizedGpsr = useMemo(() => {
+    if (!gpsrHtml) return "";
+    return DOMPurify.sanitize(gpsrHtml, { USE_PROFILES: { html: true } });
+  }, [gpsrHtml]);
 
   if (isLoading) {
     return (
@@ -311,6 +322,26 @@ const IslandFlowerProduct = () => {
                 </>
               )}
             </button>
+
+            {sanitizedGpsr && (
+              <Accordion type="single" collapsible className="mt-8" style={{ border: `1px solid ${BORDER}` }}>
+                <AccordionItem value="gpsr" className="border-0">
+                  <AccordionTrigger
+                    className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest transition-colors hover:no-underline"
+                    style={{ color: FG }}
+                  >
+                    Product safety & compliance{/* i18n-ignore */}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div
+                      className="font-body text-sm leading-relaxed"
+                      style={{ color: MUTED }}
+                      dangerouslySetInnerHTML={{ __html: sanitizedGpsr }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
 
             <Link
               to="/island-of-flowers"

@@ -14,11 +14,12 @@ import ProductSpecs from "@/components/ProductSpecs";
 import ProductGallery from "@/components/ProductGallery";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice, formatSizeLabel } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel, extractGpsrBlock } from "@/lib/shopify";
 import { productAlt } from "@/lib/productAlt";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*tourist\s*trap\.?/gi;
 const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
@@ -105,19 +106,29 @@ const ProductDetail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeVariant?.id]);
 
-  const sanitizedDescription = useMemo(() => {
+  const { cleanedHtml, gpsrHtml } = useMemo(() => {
     const html = product?.descriptionHtml;
-    if (!html) return "";
-    const cleaned = stripTagline(html);
-    return DOMPurify.sanitize(cleaned, { USE_PROFILES: { html: true } });
+    if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+    const noTagline = stripTagline(html);
+    return extractGpsrBlock(noTagline);
   }, [product?.descriptionHtml]);
+
+  const sanitizedDescription = useMemo(() => {
+    if (!cleanedHtml) return "";
+    return DOMPurify.sanitize(cleanedHtml, { USE_PROFILES: { html: true } });
+  }, [cleanedHtml]);
+
+  const sanitizedGpsr = useMemo(() => {
+    if (!gpsrHtml) return "";
+    return DOMPurify.sanitize(gpsrHtml, { USE_PROFILES: { html: true } });
+  }, [gpsrHtml]);
 
   // Strip HTML tags + tagline + collapse whitespace for SEO/JSON-LD copy
   const plainDescription = useMemo(() => {
-    const raw = product?.descriptionHtml || product?.description || "";
+    const raw = cleanedHtml || product?.description || "";
     const noTags = raw.replace(/<[^>]*>/g, " ");
     return stripTagline(noTags).replace(/\s+/g, " ").trim();
-  }, [product?.descriptionHtml, product?.description]);
+  }, [cleanedHtml, product?.description]);
 
   if (isLoading) {
     return (
@@ -432,6 +443,22 @@ const ProductDetail = () => {
                 </>
               )}
             </button>
+
+            {sanitizedGpsr && (
+              <Accordion type="single" collapsible className="mt-6 border border-foreground/10">
+                <AccordionItem value="gpsr" className="border-0">
+                  <AccordionTrigger className="px-4 py-3 font-heading text-[11px] font-bold uppercase tracking-widest text-foreground hover:no-underline hover:text-primary [&[data-state=open]]:text-primary">
+                    Product safety & compliance{/* i18n-ignore */}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div
+                      className="font-body text-sm text-muted-foreground leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: sanitizedGpsr }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
 
             <ProductTrustSignals />
 
