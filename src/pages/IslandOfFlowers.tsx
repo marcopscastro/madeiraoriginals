@@ -124,7 +124,7 @@ const IslandOfFlowers = () => {
             Premium streetwear. 0% tourist trap.
           </p>
           <a
-            href="/collections/island-of-flowers"
+            href="https://madeiraoriginals.pt/collections/island-of-flowers"
             className="inline-block px-8 py-4 font-heading text-xs uppercase tracking-[0.3em] transition-colors duration-300"
             style={{ backgroundColor: GOLD, color: BG }}
           >
