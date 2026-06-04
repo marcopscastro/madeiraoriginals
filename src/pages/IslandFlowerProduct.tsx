@@ -231,7 +231,7 @@ const IslandFlowerProduct = () => {
                     {opt.name}
                     {selectedOptions[opt.name] && (
                       <span className="ml-3" style={{ color: FG }}>
-                        {selectedOptions[opt.name]}
+                        {formatSizeLabel(selectedOptions[opt.name])}
                       </span>
                     )}
                   </p>
@@ -251,7 +251,7 @@ const IslandFlowerProduct = () => {
                             color: selected ? BG : FG,
                           }}
                         >
-                          {val}
+                          {formatSizeLabel(val)}
                         </button>
                       );
                     })}
