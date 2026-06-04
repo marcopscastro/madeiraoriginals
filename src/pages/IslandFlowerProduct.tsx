@@ -323,6 +323,26 @@ const IslandFlowerProduct = () => {
               )}
             </button>
 
+            {sanitizedGpsr && (
+              <Accordion type="single" collapsible className="mt-8" style={{ border: `1px solid ${BORDER}` }}>
+                <AccordionItem value="gpsr" className="border-0">
+                  <AccordionTrigger
+                    className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest transition-colors hover:no-underline"
+                    style={{ color: FG }}
+                  >
+                    Product safety & compliance{/* i18n-ignore */}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div
+                      className="font-body text-sm leading-relaxed"
+                      style={{ color: MUTED }}
+                      dangerouslySetInnerHTML={{ __html: sanitizedGpsr }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
+
             <Link
               to="/island-of-flowers"
               className="mt-10 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] self-start"
