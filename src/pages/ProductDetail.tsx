@@ -444,6 +444,22 @@ const ProductDetail = () => {
               )}
             </button>
 
+            {sanitizedGpsr && (
+              <Accordion type="single" collapsible className="mt-6 border border-foreground/10">
+                <AccordionItem value="gpsr" className="border-0">
+                  <AccordionTrigger className="px-4 py-3 font-heading text-[11px] font-bold uppercase tracking-widest text-foreground hover:no-underline hover:text-primary [&[data-state=open]]:text-primary">
+                    Product safety & compliance{/* i18n-ignore */}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div
+                      className="font-body text-sm text-muted-foreground leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: sanitizedGpsr }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            )}
+
             <ProductTrustSignals />
 
             <div className="mt-8 space-y-5 border-t border-foreground/10 pt-6">
