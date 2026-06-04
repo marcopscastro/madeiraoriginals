@@ -129,19 +129,20 @@ export function formatSizeLabel(value: string): string {
 export function extractGpsrBlock(html: string): { cleanedHtml: string; gpsrHtml: string } {
   if (!html) return { cleanedHtml: "", gpsrHtml: "" };
 
-  // GPSR blocks typically start after an <hr> with "Product Safety & Compliance (GPSR)"
-  const gpsrPattern = /<hr[^>]*>\s*<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)[\s\S]*$/i;
-  const match = html.match(gpsrPattern);
-  if (match && match.index !== undefined) {
-    return {
-      cleanedHtml: html.slice(0, match.index).trim(),
-      gpsrHtml: html.slice(match.index + html.slice(match.index).match(/<hr[^>]*>\s*/)![0].length),
-    };
+  // Look for <hr> followed by GPSR heading
+  const hrMatch = html.match(/<hr\b[^>]*>/i);
+  if (hrMatch && hrMatch.index !== undefined) {
+    const afterHr = html.slice(hrMatch.index + hrMatch[0].length);
+    if (/Product Safety.*Compliance.*GPSR/i.test(afterHr)) {
+      return {
+        cleanedHtml: html.slice(0, hrMatch.index).trim(),
+        gpsrHtml: afterHr.trim(),
+      };
+    }
   }
 
   // Fallback: heading without <hr>
-  const headingPattern = /<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)[\s\S]*$/i;
-  const headingMatch = html.match(headingPattern);
+  const headingMatch = html.match(/<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)/i);
   if (headingMatch && headingMatch.index !== undefined) {
     return {
       cleanedHtml: html.slice(0, headingMatch.index).trim(),
