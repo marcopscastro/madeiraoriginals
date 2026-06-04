@@ -5,9 +5,10 @@ import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice, formatSizeLabel } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel, extractGpsrBlock } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const BG = "#0d0d0d";
 const FG = "#f0ead8";
