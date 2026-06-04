@@ -103,6 +103,25 @@ export function formatPrice(money: ShopifyMoney): string {
   return `${symbol}${amount.toFixed(2)}`;
 }
 
+// Display-only remap for inch-based art-print sizes → EU format.
+// Keeps original Shopify values untouched for checkout.
+function normalizeQuotes(str: string): string {
+  return str
+    .replace(/[\u201C\u201D\u2033]/g, '"')
+    .replace(/[\u2018\u2019\u2032]/g, "'")
+    .trim();
+}
+
+const SIZE_LABEL_MAP: Record<string, string> = {
+  '8.3" x 11.7"': "A4  ·  21 × 30 cm",
+  '11.7" x 16.5"': "A3  ·  30 × 42 cm",
+  '16.5" x 23.4"': "A2  ·  42 × 59 cm",
+};
+
+export function formatSizeLabel(value: string): string {
+  return SIZE_LABEL_MAP[normalizeQuotes(value)] ?? value;
+}
+
 // ---------- Queries ----------
 
 export const PRODUCTS_QUERY = `

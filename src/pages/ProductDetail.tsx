@@ -14,7 +14,7 @@ import ProductSpecs from "@/components/ProductSpecs";
 import ProductGallery from "@/components/ProductGallery";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel } from "@/lib/shopify";
 import { productAlt } from "@/lib/productAlt";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
@@ -336,7 +336,7 @@ const ProductDetail = () => {
                       {opt.name}
                       {selectedOptions[opt.name] && (
                         <span className="ml-2 text-muted-foreground font-normal normal-case tracking-normal">
-                          {selectedOptions[opt.name]}
+                          {formatSizeLabel(selectedOptions[opt.name])}
                         </span>
                       )}
                     </p>
@@ -366,7 +366,7 @@ const ProductDetail = () => {
                               : "border-foreground/20 text-foreground hover:border-foreground"
                           } ${!available ? "opacity-40 cursor-not-allowed line-through" : ""}`}
                         >
-                          {val}
+                          {formatSizeLabel(val)}
                         </button>
                       );
                     })}

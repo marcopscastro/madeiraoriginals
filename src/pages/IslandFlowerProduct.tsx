@@ -5,7 +5,7 @@ import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 
@@ -231,7 +231,7 @@ const IslandFlowerProduct = () => {
                     {opt.name}
                     {selectedOptions[opt.name] && (
                       <span className="ml-3" style={{ color: FG }}>
-                        {selectedOptions[opt.name]}
+                        {formatSizeLabel(selectedOptions[opt.name])}
                       </span>
                     )}
                   </p>
@@ -251,7 +251,7 @@ const IslandFlowerProduct = () => {
                             color: selected ? BG : FG,
                           }}
                         >
-                          {val}
+                          {formatSizeLabel(val)}
                         </button>
                       );
                     })}
