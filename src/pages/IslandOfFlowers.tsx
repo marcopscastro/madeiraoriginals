@@ -73,7 +73,7 @@ const IslandOfFlowers = () => {
               <a
                 key={f.name}
                 href={f.link}
-                className="group relative block overflow-hidden opacity-0 animate-[iofFade_600ms_ease-out_forwards]"
+                className="group relative block overflow-hidden motion-safe:opacity-0 motion-safe:animate-[iofFade_600ms_ease-out_forwards]"
                 style={{ borderRadius: "8px", animationDelay: `${i * 80}ms`, aspectRatio: "2 / 3" }}
                 aria-label={`Shop ${f.name} print`}
               >
