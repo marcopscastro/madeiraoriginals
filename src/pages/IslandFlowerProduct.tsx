@@ -330,7 +330,7 @@ const IslandFlowerProduct = () => {
             className="text-[10px] uppercase tracking-[0.35em]"
             style={{ color: MUTED }}
           >
-            Premium streetwear. 0% tourist trap.
+            Premium streetwear. 0% tourist trap.{/* i18n-ignore */}
           </p>
         </div>
       </footer>
