@@ -58,11 +58,21 @@ const IslandFlowerProduct = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product?.id]);
 
-  const sanitizedDescription = useMemo(() => {
+  const { cleanedHtml, gpsrHtml } = useMemo(() => {
     const html = product?.descriptionHtml;
-    if (!html) return "";
-    return DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
+    if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+    return extractGpsrBlock(html);
   }, [product?.descriptionHtml]);
+
+  const sanitizedDescription = useMemo(() => {
+    if (!cleanedHtml) return "";
+    return DOMPurify.sanitize(cleanedHtml, { USE_PROFILES: { html: true } });
+  }, [cleanedHtml]);
+
+  const sanitizedGpsr = useMemo(() => {
+    if (!gpsrHtml) return "";
+    return DOMPurify.sanitize(gpsrHtml, { USE_PROFILES: { html: true } });
+  }, [gpsrHtml]);
 
   if (isLoading) {
     return (
