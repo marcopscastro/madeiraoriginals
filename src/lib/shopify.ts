@@ -122,6 +122,36 @@ export function formatSizeLabel(value: string): string {
   return SIZE_LABEL_MAP[normalizeQuotes(value)] ?? value;
 }
 
+/**
+ * Extract the GPSR (Product Safety & Compliance) block from Shopify description HTML.
+ * Returns the cleaned description (without GPSR) and the GPSR HTML separately.
+ */
+export function extractGpsrBlock(html: string): { cleanedHtml: string; gpsrHtml: string } {
+  if (!html) return { cleanedHtml: "", gpsrHtml: "" };
+
+  // GPSR blocks typically start after an <hr> with "Product Safety & Compliance (GPSR)"
+  const gpsrPattern = /<hr[^>]*>\s*<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)[\s\S]*$/i;
+  const match = html.match(gpsrPattern);
+  if (match && match.index !== undefined) {
+    return {
+      cleanedHtml: html.slice(0, match.index).trim(),
+      gpsrHtml: html.slice(match.index + html.slice(match.index).match(/<hr[^>]*>\s*/)![0].length),
+    };
+  }
+
+  // Fallback: heading without <hr>
+  const headingPattern = /<p>\s*<strong>\s*Product Safety [&amp;]*\s*Compliance\s*\(GPSR\)[\s\S]*$/i;
+  const headingMatch = html.match(headingPattern);
+  if (headingMatch && headingMatch.index !== undefined) {
+    return {
+      cleanedHtml: html.slice(0, headingMatch.index).trim(),
+      gpsrHtml: html.slice(headingMatch.index),
+    };
+  }
+
+  return { cleanedHtml: html, gpsrHtml: "" };
+}
+
 // ---------- Queries ----------
 
 export const PRODUCTS_QUERY = `
