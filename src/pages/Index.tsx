@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueBanner from "@/components/ValueBanner";
 import Manifesto from "@/components/Manifesto";
+import IslandOfFlowersTeaser from "@/components/IslandOfFlowersTeaser";
 import FeaturedCollections from "@/components/FeaturedCollections";
 import Bestsellers from "@/components/Bestsellers";
 import VisualDivider from "@/components/VisualDivider";
@@ -33,7 +34,7 @@ const Index = () => (
       <Hero />
       <ValueBanner />
       <Manifesto />
-      
+      <IslandOfFlowersTeaser />
       <FeaturedCollections />
       <VisualDivider />
       <Bestsellers />
