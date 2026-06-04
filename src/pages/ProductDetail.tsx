@@ -14,11 +14,12 @@ import ProductSpecs from "@/components/ProductSpecs";
 import ProductGallery from "@/components/ProductGallery";
 import ProductReviews, { useProductRating } from "@/components/ProductReviews";
 import { useProductByHandle } from "@/hooks/useShopifyProducts";
-import { formatPrice, formatSizeLabel } from "@/lib/shopify";
+import { formatPrice, formatSizeLabel, extractGpsrBlock } from "@/lib/shopify";
 import { productAlt } from "@/lib/productAlt";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const TAGLINE_RE = /inspired by madeira\.?\s*designed for everywhere\.?\s*0%\s*tourist\s*trap\.?/gi;
 const stripTagline = (s?: string) => (s ?? "").replace(TAGLINE_RE, "").trim();
