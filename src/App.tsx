@@ -67,6 +67,7 @@ const AppRoutes = () => {
         <Route path="/journal" element={<Journal />} />
         <Route path="/journal/:slug" element={<JournalPost />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
+        <Route path="/products/:handle" element={<IslandFlowerProduct />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/care" element={<Care />} />
