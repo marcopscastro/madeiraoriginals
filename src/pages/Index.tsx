@@ -34,7 +34,7 @@ const Index = () => (
       <Hero />
       <ValueBanner />
       <Manifesto />
-      <IslandOfFlowersTeaser />
+      <FirstDropFeature />
       <FeaturedCollections />
       <VisualDivider />
       <Bestsellers />
