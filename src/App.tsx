@@ -59,7 +59,7 @@ const AppRoutes = () => {
         <Route path="/wholesale" element={<Wholesale />} />
         <Route path="/portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="/madeira-souvenirs" element={<MadeiraSouvenirs />} />
-        <Route path="/island-of-flowers" element={<IslandOfFlowers />} />
+        <Route path="/island-of-flowers" element={<Navigate to="/shop" replace />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
