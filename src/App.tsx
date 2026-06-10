@@ -78,6 +78,9 @@ const AppRoutes = () => {
         <Route path="/sizing" element={<Navigate to="/size-guide" replace />} />
         <Route path="/shipping-returns" element={<Navigate to="/shipping" replace />} />
         <Route path="/custom" element={<Custom />} />
+        <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/catalogo/produto/:id" element={<CatalogoProduto />} />
+        <Route path="/catalogo/:category" element={<CatalogoCategory />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin/journal" element={<AdminJournal />} />
         <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
