@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WholesaleGate, { wholesaleSignOut } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
+import { Link } from "react-router-dom";
 
 const tiers = [
   { qty: "25–49 units", price: "€19 / unit" },
@@ -46,6 +47,29 @@ const Wholesale = () => {
               >
                 {t("wholesale.signOut")}
               </button>
+            </div>
+          </section>
+
+          {/* Catalogue link */}
+          <section className="border-b border-foreground/15">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-primary mb-2">
+                  Catálogo B2B
+                </p>
+                <h3 className="font-display text-xl md:text-2xl font-semibold">
+                  Vestuário e acessórios personalizáveis
+                </h3>
+                <p className="font-body text-sm text-muted-foreground mt-1">
+                  T-shirts, polos, hoodies, totes e bonés — preços por escalão.
+                </p>
+              </div>
+              <Link
+                to="/catalogo"
+                className="self-start md:self-auto font-heading text-xs font-bold uppercase tracking-widest bg-foreground text-background px-5 py-3 hover:opacity-90"
+              >
+                Abrir catálogo →
+              </Link>
             </div>
           </section>
 

@@ -33,6 +33,9 @@ const Returns = lazy(() => import("./pages/Returns"));
 const Care = lazy(() => import("./pages/Care"));
 const SizeGuide = lazy(() => import("./pages/SizeGuide"));
 const Custom = lazy(() => import("./pages/Custom"));
+const Catalogo = lazy(() => import("./pages/Catalogo"));
+const CatalogoCategory = lazy(() => import("./pages/CatalogoCategory"));
+const CatalogoProduto = lazy(() => import("./pages/CatalogoProduto"));
 
 const queryClient = new QueryClient();
 
@@ -75,6 +78,9 @@ const AppRoutes = () => {
         <Route path="/sizing" element={<Navigate to="/size-guide" replace />} />
         <Route path="/shipping-returns" element={<Navigate to="/shipping" replace />} />
         <Route path="/custom" element={<Custom />} />
+        <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/catalogo/produto/:id" element={<CatalogoProduto />} />
+        <Route path="/catalogo/:category" element={<CatalogoCategory />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin/journal" element={<AdminJournal />} />
         <Route path="/admin/journal/:id" element={<AdminJournalEdit />} />
