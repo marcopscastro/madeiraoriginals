@@ -33,6 +33,9 @@ const Returns = lazy(() => import("./pages/Returns"));
 const Care = lazy(() => import("./pages/Care"));
 const SizeGuide = lazy(() => import("./pages/SizeGuide"));
 const Custom = lazy(() => import("./pages/Custom"));
+const Catalogo = lazy(() => import("./pages/Catalogo"));
+const CatalogoCategory = lazy(() => import("./pages/CatalogoCategory"));
+const CatalogoProduto = lazy(() => import("./pages/CatalogoProduto"));
 
 const queryClient = new QueryClient();
 
