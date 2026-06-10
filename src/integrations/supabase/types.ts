@@ -77,6 +77,66 @@ export type Database = {
         }
         Relationships: []
       }
+      catalog_products: {
+        Row: {
+          category: string
+          colors: Json
+          composition: string | null
+          created_at: string
+          gsm: number | null
+          id: string
+          image_url: string | null
+          material: string | null
+          name: string
+          price_from: number | null
+          price_on_request: boolean
+          price_tiers: Json
+          sizes: Json
+          supplier: string
+          supplier_ref: string
+          supplier_url: string | null
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          colors?: Json
+          composition?: string | null
+          created_at?: string
+          gsm?: number | null
+          id: string
+          image_url?: string | null
+          material?: string | null
+          name: string
+          price_from?: number | null
+          price_on_request?: boolean
+          price_tiers?: Json
+          sizes?: Json
+          supplier: string
+          supplier_ref: string
+          supplier_url?: string | null
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          colors?: Json
+          composition?: string | null
+          created_at?: string
+          gsm?: number | null
+          id?: string
+          image_url?: string | null
+          material?: string | null
+          name?: string
+          price_from?: number | null
+          price_on_request?: boolean
+          price_tiers?: Json
+          sizes?: Json
+          supplier?: string
+          supplier_ref?: string
+          supplier_url?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       horeca_leads: {
         Row: {
           business_name: string
@@ -218,6 +278,56 @@ export type Database = {
         }
         Relationships: []
       }
+      quote_requests: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string | null
+          name: string
+          product_id: string | null
+          product_name: string | null
+          quantity: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message?: string | null
+          name: string
+          product_id?: string | null
+          product_name?: string | null
+          quantity?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string | null
+          name?: string
+          product_id?: string | null
+          product_name?: string | null
+          quantity?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quote_requests_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       reviews: {
         Row: {
           approved: boolean
@@ -335,6 +445,8 @@ export type Database = {
         }
         Returns: boolean
       }
+      show_limit: { Args: never; Returns: number }
+      show_trgm: { Args: { "": string }; Returns: string[] }
     }
     Enums: {
       app_role: "admin" | "user"
