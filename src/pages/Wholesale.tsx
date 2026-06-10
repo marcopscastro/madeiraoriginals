@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WholesaleGate, { wholesaleSignOut } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
+import { Link } from "react-router-dom";
 
 const tiers = [
   { qty: "25–49 units", price: "€19 / unit" },
