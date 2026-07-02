@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "madeira-originals-mcp",
+      "version": "0.1.0",
+      "title": "Madeira Originals"
+    },
+    "tools": [
+      {
+        "name": "search_products",
+        "title": "Search products",
+        "description": "Search Madeira Originals products (t-shirts, hoodies, prints, accessories) from the live Shopify catalog. Returns title, handle, price, image, and product URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "description": "Shopify search query, e.g. 'levada', 'tag:streetwear', 'product_type:hoodie'. Leave empty to list latest products.",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Max results (default 12).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_product",
+        "title": "Get product",
+        "description": "Fetch a single Madeira Originals product by its handle, including full description, variants, and images.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Product handle, e.g. 'levada-walks-madeira-island-t-shirt'."
+            }
+          },
+          "required": [
+            "handle"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_journal_posts",
+        "title": "List journal posts",
+        "description": "List published Madeira Originals journal articles (title, slug, excerpt, tags, published date).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "description": "Max results (default 20).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            },
+            "tag": {
+              "description": "Filter by tag (exact match).",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_journal_post",
+        "title": "Get journal post",
+        "description": "Fetch the full body of a published Madeira Originals journal article by slug (English + Portuguese if present).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Article slug."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "subscribe_newsletter",
+        "title": "Subscribe to newsletter",
+        "description": "Subscribe an email address to the Madeira Originals newsletter.",
+        "annotations": {
+          "readOnlyHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Subscriber email address."
+            },
+            "source": {
+              "description": "Where the subscription originated (default: 'mcp').",
+              "type": "string"
+            }
+          },
+          "required": [
+            "email"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
