@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { supabase } from "@/integrations/supabase/client";
-import { journalCoverProps } from "@/lib/journalImages";
+import { journalCoverProps, JOURNAL_FALLBACK_COVER } from "@/lib/journalImages";
 
 const Journal = () => {
   const { t, i18n } = useTranslation();
