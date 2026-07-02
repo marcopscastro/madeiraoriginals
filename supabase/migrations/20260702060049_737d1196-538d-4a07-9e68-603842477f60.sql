@@ -1,0 +1,2 @@
+UPDATE public.articles SET cover_url = '/journal/journal-streetwear-cover.webp' WHERE slug = 'modern-madeira-streetwear';
+UPDATE public.articles SET cover_url = '/journal/journal-souvenirs-cover.webp' WHERE slug = 'best-souvenirs-from-madeira';

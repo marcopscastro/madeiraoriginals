@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { supabase } from "@/integrations/supabase/client";
-import { journalCoverProps } from "@/lib/journalImages";
+import { journalCoverProps, JOURNAL_FALLBACK_COVER } from "@/lib/journalImages";
 
 const Journal = () => {
   const { t, i18n } = useTranslation();
@@ -110,19 +110,23 @@ const Journal = () => {
                   <Link to={`/journal/${lead.slug}`} className="group block mb-24 md:mb-32">
                     <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
                       <div className="lg:col-span-8 aspect-[16/10] overflow-hidden bg-muted">
-                        {cover && (
-                          <img
-                            src={cover.src}
-                            srcSet={cover.srcSet}
-                            sizes="(min-width: 1024px) 66vw, 100vw"
-                            alt={(isPt && lead.title_pt) || lead.title}
-                            width={1600}
-                            height={1000}
-                            loading="eager"
-                            decoding="async"
-                            className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
-                          />
-                        )}
+                        <img
+                          src={cover.src}
+                          srcSet={cover.srcSet}
+                          sizes="(min-width: 1024px) 66vw, 100vw"
+                          alt={(isPt && lead.title_pt) || lead.title}
+                          width={1600}
+                          height={1000}
+                          loading="eager"
+                          decoding="async"
+                          onError={(e) => {
+                            const img = e.currentTarget;
+                            if (img.src.endsWith(JOURNAL_FALLBACK_COVER)) return;
+                            img.srcset = "";
+                            img.src = JOURNAL_FALLBACK_COVER;
+                          }}
+                          className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
+                        />
                       </div>
                       <div className="lg:col-span-4">
                         {lead.tags?.[0] && (
@@ -159,19 +163,23 @@ const Journal = () => {
                         className="group block"
                       >
                         <div className="aspect-[4/5] overflow-hidden bg-muted">
-                          {cover && (
-                            <img
-                              src={cover.src}
-                              srcSet={cover.srcSet}
-                              sizes="(min-width: 768px) 50vw, 100vw"
-                              alt={(isPt && a.title_pt) || a.title}
-                              width={1200}
-                              height={1500}
-                              loading="lazy"
-                              decoding="async"
-                              className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
-                            />
-                          )}
+                          <img
+                            src={cover.src}
+                            srcSet={cover.srcSet}
+                            sizes="(min-width: 768px) 50vw, 100vw"
+                            alt={(isPt && a.title_pt) || a.title}
+                            width={1200}
+                            height={1500}
+                            loading="lazy"
+                            decoding="async"
+                            onError={(e) => {
+                              const img = e.currentTarget;
+                              if (img.src.endsWith(JOURNAL_FALLBACK_COVER)) return;
+                              img.srcset = "";
+                              img.src = JOURNAL_FALLBACK_COVER;
+                            }}
+                            className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
+                          />
                         </div>
                         <div className="mt-6">
                           {a.tags?.[0] && (
