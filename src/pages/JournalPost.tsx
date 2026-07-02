@@ -64,18 +64,26 @@ const JournalPost = () => {
   const seoTitle = (isPt && article.seo_title_pt) || article.seo_title;
   const seoDescription = (isPt && article.seo_description_pt) || article.seo_description;
 
-  const articleLd = {
+  const cleanUrl = `${SITE_URL}/journal/${article.slug}`;
+  const articleLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description: excerpt ?? undefined,
-    image: article.cover_url ?? undefined,
     datePublished: article.published_at ?? article.created_at,
     dateModified: article.updated_at,
-    author: { "@type": "Organization", name: SITE_NAME },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-    mainEntityOfPage: `${SITE_URL}/journal/${article.slug}`,
+    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon.ico` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": cleanUrl },
   };
+  if (article.cover_url) {
+    articleLd.image = [article.cover_url];
+  }
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
