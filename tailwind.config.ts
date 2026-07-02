@@ -79,8 +79,8 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { opacity: "0", transform: "translate3d(0,16px,0)" },
+          "100%": { opacity: "1", transform: "translate3d(0,0,0)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },
@@ -94,9 +94,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 1s cubic-bezier(0.22,1,0.36,1) both",
-        "fade-in": "fade-in 1.2s ease-out both",
+        "fade-up": "fade-up 300ms cubic-bezier(0.22,1,0.36,1) both",
+        "fade-in": "fade-in 300ms ease-out both",
         "ken-burns": "ken-burns 18s ease-out both",
+
       },
     },
   },
