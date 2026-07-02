@@ -53,19 +53,23 @@ const JournalPreview = () => {
               className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
             >
               <div className="aspect-[4/3] bg-muted overflow-hidden">
-                {cover && (
-                  <img
-                    src={cover.src}
-                    srcSet={cover.srcSet}
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    alt={title}
-                    width={1000}
-                    height={750}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                )}
+                <img
+                  src={cover.src}
+                  srcSet={cover.srcSet}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  alt={title}
+                  width={1000}
+                  height={750}
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (img.src.endsWith(JOURNAL_FALLBACK_COVER)) return;
+                    img.srcset = "";
+                    img.src = JOURNAL_FALLBACK_COVER;
+                  }}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
