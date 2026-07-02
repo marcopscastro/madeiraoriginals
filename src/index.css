@@ -163,3 +163,16 @@
     filter: saturate(0.82) contrast(1.05);
   }
 }
+
+/* Respect prefers-reduced-motion: show content immediately, no motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
