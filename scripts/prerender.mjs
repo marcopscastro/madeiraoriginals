@@ -78,7 +78,7 @@ async function fetchJournalSlugs() {
   if (!SUPABASE_URL || !SUPABASE_KEY) return [];
   try {
     const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/journal_posts?select=slug&published=eq.true`,
+      `${SUPABASE_URL}/rest/v1/articles?select=slug&published=eq.true`,
       {
         headers: {
           apikey: SUPABASE_KEY,
