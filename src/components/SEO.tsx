@@ -32,7 +32,7 @@ const SEO = ({
   const { i18n } = useTranslation();
   const current = ((i18n.language?.slice(0, 2) as Lang) ?? "pt");
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const canonical = buildAlternateUrl(path, current);
+  const canonical = `${SITE_URL}${path}`;
   const ogLocale = current === "pt" ? "pt_PT" : "en_US";
   const ogLocaleAlternate = current === "pt" ? "en_US" : "pt_PT";
   const ldArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
