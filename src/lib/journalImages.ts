@@ -12,8 +12,13 @@ const JOURNAL_WEBP_BASES = new Set([
   "/journal/journal-poncha",
 ]);
 
+/** Branded fallback shown when an article has no cover_url set. */
+export const JOURNAL_FALLBACK_COVER = "/journal/journal-placeholder.webp";
+
 export function journalCoverProps(url: string | null | undefined) {
-  if (!url) return null;
+  if (!url) {
+    return { src: JOURNAL_FALLBACK_COVER, srcSet: undefined as string | undefined };
+  }
   const m = url.match(/^(\/journal\/[a-z0-9-]+)\.(jpg|jpeg|png)$/i);
   if (!m || !JOURNAL_WEBP_BASES.has(m[1])) {
     return { src: url, srcSet: undefined as string | undefined };
