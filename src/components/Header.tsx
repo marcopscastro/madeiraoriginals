@@ -54,8 +54,7 @@ const Header = () => {
           <Link to="/" aria-label="Madeira Originals — Home" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
               src={logoMark}
-              alt=""
-              aria-hidden="true"
+              alt="Madeira Originals logo"
               className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
               loading="eager"
               decoding="async"
