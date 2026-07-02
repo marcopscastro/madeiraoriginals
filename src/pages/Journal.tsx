@@ -163,19 +163,23 @@ const Journal = () => {
                         className="group block"
                       >
                         <div className="aspect-[4/5] overflow-hidden bg-muted">
-                          {cover && (
-                            <img
-                              src={cover.src}
-                              srcSet={cover.srcSet}
-                              sizes="(min-width: 768px) 50vw, 100vw"
-                              alt={(isPt && a.title_pt) || a.title}
-                              width={1200}
-                              height={1500}
-                              loading="lazy"
-                              decoding="async"
-                              className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
-                            />
-                          )}
+                          <img
+                            src={cover.src}
+                            srcSet={cover.srcSet}
+                            sizes="(min-width: 768px) 50vw, 100vw"
+                            alt={(isPt && a.title_pt) || a.title}
+                            width={1200}
+                            height={1500}
+                            loading="lazy"
+                            decoding="async"
+                            onError={(e) => {
+                              const img = e.currentTarget;
+                              if (img.src.endsWith(JOURNAL_FALLBACK_COVER)) return;
+                              img.srcset = "";
+                              img.src = JOURNAL_FALLBACK_COVER;
+                            }}
+                            className="w-full h-full object-cover img-cinematic transition-transform duration-[1400ms] ease-out group-hover:scale-[1.02]"
+                          />
                         </div>
                         <div className="mt-6">
                           {a.tags?.[0] && (
