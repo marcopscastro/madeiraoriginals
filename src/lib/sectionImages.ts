@@ -14,6 +14,7 @@ import islandHumourMobile from "@/assets/real-sao-vicente/island-humour-mobile.w
 export type ResponsiveImageSet = {
   desktop: string;
   mobile: string;
+  alt?: string;
 };
 
 export const SECTION_IMAGES: Record<
@@ -31,18 +32,22 @@ export const SECTION_IMAGES: Record<
   "atlantic-utility": {
     desktop: atlanticUtilityDesktop,
     mobile: atlanticUtilityMobile,
+    alt: "Basalt cliffs and Atlantic ocean on Madeira's north coast",
   },
   norte: {
     desktop: norteDesktop,
     mobile: norteMobile,
+    alt: "Foggy mountain road in a deep valley near São Vicente, Madeira",
   },
   "contemporary-heritage": {
     desktop: contemporaryHeritageDesktop,
     mobile: contemporaryHeritageMobile,
+    alt: "Laurissilva forest on Madeira island",
   },
   "island-humour": {
     desktop: islandHumourDesktop,
     mobile: islandHumourMobile,
+    alt: "Details of everyday life on Madeira island",
   },
 };
 
