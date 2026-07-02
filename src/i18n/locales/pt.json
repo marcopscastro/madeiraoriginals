@@ -45,7 +45,7 @@
     "scroll": "Scroll",
     "headline1": "Inspirado pela Madeira.",
     "headline2": "Criado para ser usado em qualquer lugar.",
-    "body": "Vestuário premium com raízes na cultura insular do Atlântico.",
+    "body": "Vestuário premium de um pequeno estúdio na costa norte da Madeira.",
     "ctaShop": "Ver Colecção",
     "ctaStory": "A História"
   },
@@ -188,7 +188,7 @@
   "shop": {
     "overline": "Colecção",
     "heading": "Streetwear & Vestuário da Madeira",
-    "sub": "T-shirts, hoodies e acessórios premium inspirados nas paisagens, tradições e cultura moderna da Madeira — desenhados em São Vicente, enviados para todo o mundo a partir do Funchal.",
+    "sub": "T-shirts, hoodies e acessórios premium inspirados nas paisagens e cultura da Madeira. Desenhado em São Vicente, enviado para todo o mundo a partir da ilha.",
     "all": "Todos",
     "searchPlaceholder": "Pesquisar produtos",
     "clearSearch": "Limpar pesquisa",
@@ -210,8 +210,8 @@
         "a": "Sim. Cada encomenda sai do nosso studio em São Vicente, Madeira, e segue para todo o mundo com entrega rastreada para a Europa, Reino Unido, Estados Unidos e a maior parte do resto do mundo. As opções de envio e portes são calculados no checkout consoante o destino."
       },
       {
-        "q": "Posso encomendar souvenirs da Madeira a partir de fora de Portugal?",
-        "a": "Sem dúvida. A maioria dos nossos clientes encomenda de fora de Portugal — incluindo a diáspora madeirense no Reino Unido, Channel Islands, África do Sul, Venezuela e mais além, além de viajantes que nos descobriram no Funchal ou em São Vicente e querem encomendar mais quando regressam a casa."
+        "q": "Posso encomendar de fora de Portugal?",
+        "a": "Sem dúvida. Construímos a loja a pensar na diáspora madeirense — Reino Unido, Channel Islands, África do Sul, Venezuela e mais além — bem como em quem visitou a ilha e quer levar consigo uma peça a sério. Onde quer que estejas, enviamos para ti."
       },
       {
         "q": "São feitos na Madeira?",
@@ -333,10 +333,10 @@
   },
   "manifesto": {
     "overline": "Manifesto",
-    "lineA": "Sem souvenirs.",
-    "lineB": "Sem clichés.",
-    "lineC": "Madeira, traduzida como deve ser.",
-    "body": "A Madeira Originals nasceu em São Vicente para trazer a identidade vulcânica, rude e atlântica da ilha para vestuário moderno. Pegamos nas paisagens, no clima, nas texturas e na cultura — e traduzimo-las em peças premium, ponderadas, feitas para viver em qualquer lado.",
+    "lineA": "Madeira,",
+    "lineB": "traduzida",
+    "lineC": "como deve ser.",
+    "body": "A Madeira Originals nasceu em São Vicente de uma frustração simples: uma ilha assim tão dramática merecia mais do que estampas de galos e t-shirts de aeroporto. Por isso fazemos vestuário a partir do que aqui existe. O basalto, o nevoeiro, as levadas, o tempo que muda quatro vezes antes do almoço. Desenhado e impresso no nosso estúdio, feito para ser vestido muito para lá da ilha.",
     "pillars": [
       {
         "title": "Herança Atlântica",
@@ -344,11 +344,11 @@
       },
       {
         "title": "Design Editorial",
-        "body": "Tipografia contida, construção pesada, gráficos minimalistas, execução premium."
+        "body": "Tipografia contida e gráficos minimalistas sobre peças de algodão pesado. Sem logótipos gritantes."
       },
       {
         "title": "Feito em casa",
-        "body": "Desenhado, impresso e acabado no nosso próprio estúdio em São Vicente — sem print farms de terceiros."
+        "body": "Cada peça é desenhada, impressa e acabada no nosso estúdio em São Vicente. Nada é subcontratado."
       }
     ],
     "imageAlt": "Imagem do manifesto Madeira Originals"
@@ -393,7 +393,7 @@
     "overline": "Nascida em São Vicente · Usada em qualquer lugar",
     "headingA": "Nascida em São Vicente.",
     "headingB": "Usada em qualquer lugar.",
-    "body": "Feita para a ilha, para a diáspora e para quem leva consigo um pedaço da Madeira — do Funchal a Lisboa, Jersey, Londres, Luxemburgo e mais além.",
+    "body": "Para a ilha, para a diáspora, e para quem leva consigo um pedaço da Madeira — seja no Funchal, em Lisboa, em Jersey ou em Londres.",
     "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira",
     "ctaShop": "Ver a Colecção",
     "ctaStory": "Conhecer a História",
@@ -415,14 +415,14 @@
       {
         "index": "02",
         "title": "Norte",
-        "body": "Estradas no nevoeiro, vales profundos e a força silenciosa da costa norte de São Vicente.",
+        "body": "O lado tranquilo da ilha. Estradas com nevoeiro e vales profundos acima de São Vicente.",
         "cta": "Ver Norte",
         "to": "/norte"
       },
       {
         "index": "03",
         "title": "Herança Contemporânea",
-        "body": "Laurissilva, levadas e antigos símbolos da Madeira — reinterpretados em peças modernas para vestir.",
+        "body": "Antigos símbolos da Madeira e padrões de laurissilva, redesenhados como peças modernas.",
         "cta": "Ver Herança",
         "to": "/contemporary-heritage"
       },
@@ -437,10 +437,10 @@
   },
   "origin": {
     "overline": "Origem",
-    "headingA": "Feito em São Vicente.",
-    "headingB": "Na costa norte de uma ilha Atlântica.",
-    "body1": "São Vicente fica no norte agreste da Madeira, onde o Atlântico encontra falésias de basalto escuro e o nevoeiro desce da Laurissilva até à vila. É silenciosa, moldada pelo vento, e teimosamente fiel a si própria.",
-    "body2": "A Madeira Originals nasceu porque esta ilha merece uma marca que a traduza como deve ser — não em souvenirs, mas em vestuário pensado para ser usado em qualquer parte do mundo, mantendo-se inequivocamente daqui.",
+    "headingA": "Feito em São Vicente,",
+    "headingB": "na costa norte da ilha.",
+    "body1": "São Vicente é onde o Atlântico bate nas falésias de basalto negro e o nevoeiro desce da laurissilva até à vila. A maior parte dos visitantes passa por aqui a caminho de outro sítio.",
+    "body2": "Nós ficámos, e montámos o estúdio aqui. Tudo o que vendemos é feito neste vale.",
     "cta": "Ler a história completa",
     "imageAlt": "Vila de São Vicente sob nevoeiro na costa norte da Madeira",
     "captionPlace": "São Vicente · Madeira",
@@ -473,7 +473,7 @@
   "homeNewsletter": {
     "overline": "Newsletter",
     "heading": "Junta-te ao First Drop",
-    "body": "Acesso antecipado a novos lançamentos, edições limitadas e originais feitos em São Vicente."
+    "body": "Acesso antecipado a lançamentos e edições limitadas, além de uma nota ocasional do estúdio."
   },
   "aboutUs": {
     "overline": "Sobre",
@@ -559,7 +559,7 @@
       "overline": "A Nossa Ilha · A Nossa Marca",
       "headingA": "Madeira,",
       "headingB": "como deve ser traduzida.",
-      "lead": "Uma marca de lifestyle atlântico nascida em São Vicente — na costa norte de uma ilha vulcânica no meio do oceano.",
+      "lead": "Uma marca de vestuário atlântico de São Vicente, na costa norte de uma ilha vulcânica.",
       "coords": "32.80° N · 17.04° W",
       "heroAlt": "Falésias negras de basalto e oceano Atlântico na costa norte da Madeira"
     },
@@ -569,20 +569,20 @@
       "headingA": "São Vicente.",
       "headingB": "Onde a marca começa.",
       "p1": "São Vicente fica no norte rugoso da Madeira, onde o Atlântico encontra as falésias de basalto negro e a neblina desce da laurissilva até à vila. É silenciosa, moldada pelo vento e teimosamente fiel a si mesma.",
-      "p2": "A Madeira Originals existe porque esta ilha merece uma marca que a traduza como deve ser — não em souvenirs, mas em peças que possam viver em qualquer parte do mundo continuando, inequivocamente, daqui.",
-      "p3": "Identidade atlântica. Paisagens vulcânicas. Herança contemporânea. A marca foi construída em torno destas três coordenadas e recusa afastar-se delas.",
+      "p2": "Começámos a Madeira Originals porque a ilha andava a ser subvalorizada. As lojas de souvenirs traduzem a Madeira em ímanes e galos.",
+      "p3": "Nós quisemos traduzi-la em roupa que se possa vestir em Londres ou Lisboa, e ainda assim reconhecer-se como inequivocamente daqui. Essa ideia não se moveu desde o primeiro dia.",
       "imageAlt": "Vila de São Vicente sob neblina, costa norte da Madeira"
     },
     "philosophy": {
       "chapter": "Capítulo II",
       "overline": "Filosofia",
-      "headingA": "Contida.",
-      "headingB": "Enraizada. Vestível em qualquer lugar.",
+      "headingA": "Aquilo a que",
+      "headingB": "nos obrigamos.",
       "pillars": [
         {
           "k": "01",
           "title": "Autenticidade",
-          "body": "Referências com significado — língua, geografia, clima, ofício. Nada copiado de um postal."
+          "body": "Referências que aqui têm significado — a língua, a geografia, o tempo. Nada tirado de um postal."
         },
         {
           "k": "02",
@@ -592,12 +592,12 @@
         {
           "k": "03",
           "title": "Design Vestível",
-          "body": "Peças que funcionam no Funchal, em Lisboa, Londres ou Jersey. Enraizadas na ilha, cortadas para o mundo."
+          "body": "Enraizado na ilha, com corte global. Se só faz sentido em férias, não o fazemos."
         },
         {
           "k": "04",
           "title": "Qualidade Premium",
-          "body": "Algodão pesado, construção pensada, acabamentos feitos para amaciar com o uso."
+          "body": "Algodão pesado e acabamentos que amaciam com o uso em vez de se desfazerem."
         },
         {
           "k": "05",
@@ -611,8 +611,8 @@
       "overline": "Notas de Campo",
       "headingA": "Neblina, basalto",
       "headingB": "e sal atlântico.",
-      "p1": "O tempo muda a cada hora. A ER101 serpenteia pelas falésias acima das vilas construídas na rocha. A laurissilva segura a humidade. O sal cola-se a tudo o que enfrenta o mar.",
-      "p2": "Estes são os materiais da marca — não como metáfora, mas como referência real. Texturas, paletas, peso, contenção.",
+      "p1": "O tempo aqui muda a cada hora. A ER101 serpenteia pelas falésias acima de vilas construídas na rocha, a laurissilva segura a humidade, e o sal cola-se a tudo o que enfrenta o mar.",
+      "p2": "Não tratamos nada disto como metáfora. É o material de referência real: as texturas, a paleta, o peso do tecido.",
       "imageAlt": "Muro de pedra basáltica molhada em São Vicente, Madeira"
     },
     "closing": {
@@ -1104,7 +1104,7 @@
     "overline": "First Drop · Colecção São Vicente",
     "headingA": "O primeiro drop,",
     "headingB": "feito em São Vicente.",
-    "body": "Um lançamento curado e pequeno — t-shirts de algodão pesado, um hoodie, um boné e uma tote. Desenhado em São Vicente, Madeira. Feito para durar.",
+    "body": "Um pequeno lançamento: t-shirts de algodão pesado, um hoodie, um boné e uma tote. Estamos a terminar a produção. Junta-te à lista e terás acesso antecipado quando lançar.",
     "cta": "Explorar o First Drop",
     "soonTitle": "Em breve.",
     "soonBody": "O First Drop está a ser preparado em São Vicente. Junta-te à lista abaixo para acesso antecipado quando lançar."

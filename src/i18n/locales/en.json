@@ -45,7 +45,7 @@
     "scroll": "Scroll",
     "headline1": "Inspired by Madeira.",
     "headline2": "Designed for everywhere.",
-    "body": "Premium apparel rooted in Atlantic island culture.",
+    "body": "Premium apparel from a small studio on the north coast of Madeira.",
     "ctaShop": "Explore Collection",
     "ctaStory": "The Story"
   },
@@ -188,7 +188,7 @@
   "shop": {
     "overline": "Collection",
     "heading": "Madeira Streetwear & Apparel",
-    "sub": "Premium tees, hoodies and accessories inspired by the landscapes, traditions, and modern culture of Madeira — designed in São Vicente, shipped worldwide from Funchal.",
+    "sub": "Premium tees, hoodies and accessories inspired by the landscapes and culture of Madeira. Designed in São Vicente, shipped worldwide from the island.",
     "all": "All",
     "searchPlaceholder": "Search products",
     "clearSearch": "Clear search",
@@ -210,8 +210,8 @@
         "a": "Yes. Every order leaves our studio in São Vicente, Madeira, and ships worldwide with tracked delivery to Europe, the UK, the US, and most of the rest of the world. Shipping options and live rates are calculated at checkout based on your destination."
       },
       {
-        "q": "Can I order Madeira souvenirs from outside Portugal?",
-        "a": "Absolutely. Most of our customers order from outside Portugal — including the Madeiran diaspora in the UK, Channel Islands, South Africa, Venezuela and beyond, plus travellers who discovered us in Funchal or São Vicente and want to order more once they get home."
+        "q": "Can I order from outside Portugal?",
+        "a": "Absolutely. We built the shop with the Madeiran diaspora in mind — the UK, Channel Islands, South Africa, Venezuela and beyond — as well as anyone who visited the island and wants to take a real piece of it home. Wherever you are, we ship to you."
       },
       {
         "q": "Are these made in Madeira?",
@@ -333,10 +333,10 @@
   },
   "manifesto": {
     "overline": "Manifesto",
-    "lineA": "Not souvenirs.",
-    "lineB": "Not clichés.",
-    "lineC": "Madeira, properly translated.",
-    "body": "Madeira Originals was created in São Vicente to bring the island's volcanic, rugged, Atlantic identity into modern apparel. We take the landscapes, the weather, the textures and the culture — and translate them into premium, considered pieces built to live anywhere.",
+    "lineA": "Madeira,",
+    "lineB": "properly",
+    "lineC": "translated.",
+    "body": "Madeira Originals started in São Vicente with a simple frustration: an island this dramatic deserved better than rooster prints and airport tees. So we make apparel from what's actually here. The basalt, the fog, the levadas, the weather that changes four times before lunch. Designed and printed in our own studio, built to be worn far beyond the island.",
     "pillars": [
       {
         "title": "Atlantic Heritage",
@@ -344,11 +344,11 @@
       },
       {
         "title": "Editorial Design",
-        "body": "Restrained typography, heavyweight construction, minimalist graphics, premium execution."
+        "body": "Restrained typography and minimalist graphics on heavyweight blanks. No loud logos."
       },
       {
         "title": "Made in-house",
-        "body": "Designed, printed and finished in our own studio in São Vicente — no third-party print farms."
+        "body": "Every piece is designed, printed and finished in our São Vicente studio. Nothing is outsourced."
       }
     ],
     "imageAlt": "Madeira Originals manifesto image"
@@ -393,7 +393,7 @@
     "overline": "Born in São Vicente · Worn everywhere",
     "headingA": "Born in São Vicente.",
     "headingB": "Worn everywhere.",
-    "body": "Made for the island, for the diaspora, and for anyone who carries a piece of Madeira — from Funchal to Lisbon, Jersey, London, Luxembourg and beyond.",
+    "body": "For the island, for the diaspora, and for anyone who carries a piece of Madeira with them — whether that's Funchal, Lisbon, Jersey or London.",
     "imageAlt": "Foggy laurel forest road on the north coast of Madeira",
     "ctaShop": "Shop the Collection",
     "ctaStory": "Explore the Story",
@@ -415,14 +415,14 @@
       {
         "index": "02",
         "title": "Norte",
-        "body": "Foggy roads, deep valleys and the quiet force of São Vicente's north coast.",
+        "body": "The quiet side of the island. Foggy roads and deep valleys above São Vicente.",
         "cta": "Shop Norte",
         "to": "/norte"
       },
       {
         "index": "03",
         "title": "Contemporary Heritage",
-        "body": "Laurissilva, levadas and old Madeira symbols — reworked into modern wearable pieces.",
+        "body": "Old Madeira symbols and laurissilva patterns, redrawn as modern pieces.",
         "cta": "Shop Heritage",
         "to": "/contemporary-heritage"
       },
@@ -437,10 +437,10 @@
   },
   "origin": {
     "overline": "Origin",
-    "headingA": "Made in São Vicente.",
-    "headingB": "On the north coast of an Atlantic island.",
-    "body1": "São Vicente sits on the rugged north of Madeira, where the Atlantic meets black basalt cliffs and fog rolls down the laurel forest into the village. It's quiet, wind-shaped, and stubbornly itself.",
-    "body2": "Madeira Originals exists because this island deserves a brand that translates it properly — not into souvenirs, but into apparel that could exist anywhere in the world, while staying unmistakably from here.",
+    "headingA": "Made in São Vicente,",
+    "headingB": "on the north coast of the island.",
+    "body1": "São Vicente is where the Atlantic hits black basalt cliffs and fog rolls down from the laurel forest into the village. Most visitors pass through on the way to somewhere else.",
+    "body2": "We stayed, and built the studio here. Everything we sell is made in this valley.",
     "cta": "Read the full story",
     "imageAlt": "São Vicente village under fog on the north coast of Madeira",
     "captionPlace": "São Vicente · Madeira",
@@ -473,7 +473,7 @@
   "homeNewsletter": {
     "overline": "Newsletter",
     "heading": "Join the First Drop",
-    "body": "Early access to new releases, limited runs and São Vicente-made originals."
+    "body": "Early access to releases and limited runs, plus the occasional note from the studio."
   },
   "aboutUs": {
     "overline": "About",
@@ -559,7 +559,7 @@
       "overline": "A Nossa Ilha · A Nossa Marca",
       "headingA": "Madeira,",
       "headingB": "properly translated.",
-      "lead": "An Atlantic lifestyle brand born in São Vicente — on the north coast of a volcanic island in the middle of the ocean.",
+      "lead": "An Atlantic apparel brand from São Vicente, on the north coast of a volcanic island.",
       "coords": "32.80° N · 17.04° W",
       "heroAlt": "Foggy black basalt cliffs and Atlantic Ocean on the north coast of Madeira"
     },
@@ -569,20 +569,20 @@
       "headingA": "São Vicente.",
       "headingB": "Where the brand begins.",
       "p1": "São Vicente sits on the rugged north of Madeira, where the Atlantic meets black basalt cliffs and fog rolls down the laurel forest into the village. It is quiet, wind-shaped, and stubbornly itself.",
-      "p2": "Madeira Originals exists because this island deserves a brand that translates it properly — not into souvenirs, but into pieces that could live anywhere in the world while staying unmistakably from here.",
-      "p3": "Atlantic identity. Volcanic landscapes. Contemporary heritage. The brand was built around those three coordinates and refuses to move from them.",
+      "p2": "We started Madeira Originals because the island kept being sold short. Souvenir shops translate Madeira into magnets and roosters.",
+      "p3": "We wanted to translate it into clothing you'd actually wear in London or Lisbon, and still recognise as unmistakably from here. That idea hasn't moved since day one.",
       "imageAlt": "São Vicente village under fog on the north coast of Madeira"
     },
     "philosophy": {
       "chapter": "Chapter II",
       "overline": "Philosophy",
-      "headingA": "Restrained.",
-      "headingB": "Rooted. Wearable everywhere.",
+      "headingA": "What we hold",
+      "headingB": "ourselves to.",
       "pillars": [
         {
           "k": "01",
           "title": "Authenticity",
-          "body": "References that mean something — language, geography, weather, craft. Nothing borrowed from a postcard."
+          "body": "References that mean something here — the language, the geography, the weather. Nothing borrowed from a postcard."
         },
         {
           "k": "02",
@@ -592,12 +592,12 @@
         {
           "k": "03",
           "title": "Wearable Design",
-          "body": "Pieces that work in Funchal, Lisbon, London or Jersey. Island-rooted, globally cut."
+          "body": "Island-rooted, globally cut. If it only makes sense on holiday, we don't make it."
         },
         {
           "k": "04",
           "title": "Premium Quality",
-          "body": "Heavyweight cotton, considered construction, finishes built to soften with wear rather than fall apart."
+          "body": "Heavyweight cotton and finishes that soften with wear instead of falling apart."
         },
         {
           "k": "05",
@@ -611,8 +611,8 @@
       "overline": "Field Notes",
       "headingA": "Fog, basalt,",
       "headingB": "and Atlantic salt.",
-      "p1": "The weather changes every hour. ER101 winds along the cliffs above villages built into the rock. Laurel forest holds the moisture in. Salt sticks to everything that faces the sea.",
-      "p2": "Those are the materials of the brand — not as metaphor, but as actual reference. Textures, palettes, weight, restraint.",
+      "p1": "The weather here changes every hour. ER101 winds along cliffs above villages built into the rock, the laurel forest holds the moisture in, and salt sticks to everything facing the sea.",
+      "p2": "We don't treat any of that as metaphor. It's the actual reference material: the textures, the palette, the weight of the fabric.",
       "imageAlt": "Wet black basalt stone wall in São Vicente, Madeira"
     },
     "closing": {
@@ -1104,7 +1104,7 @@
     "overline": "First Drop · São Vicente Collection",
     "headingA": "The first drop,",
     "headingB": "from São Vicente.",
-    "body": "A small, curated launch — heavyweight tees, a hoodie, a cap and a tote. Designed in São Vicente, Madeira. Built to last.",
+    "body": "A small launch: heavyweight tees, a hoodie, a cap and a tote. We're finishing production now. Join the list and you'll get first access when it lands.",
     "cta": "Explore the First Drop",
     "soonTitle": "Coming soon.",
     "soonBody": "The First Drop is being prepared in São Vicente. Join the list below to get early access when it lands."
