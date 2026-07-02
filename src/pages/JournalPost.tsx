@@ -32,6 +32,7 @@ const JournalPost = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO title={t("journal.loading")} path={`/journal/${slug}`} type="article" noIndex />
         <Header />
         <div className="max-w-3xl mx-auto px-4 py-24 text-center font-body text-muted-foreground">
           {t("journal.loading")}
