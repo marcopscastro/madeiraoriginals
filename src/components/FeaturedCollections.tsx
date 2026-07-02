@@ -47,7 +47,7 @@ const FeaturedCollections = () => {
                   <source media="(max-width: 767px)" srcSet={FEATURED_COLLECTION_IMAGES[i].mobile} />
                   <img
                     src={FEATURED_COLLECTION_IMAGES[i].desktop}
-                    alt=""
+                    alt={FEATURED_COLLECTION_IMAGES[i].alt}
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover img-cinematic transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
