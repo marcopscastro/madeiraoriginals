@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { spawnSync } from "node:child_process";
 import { componentTagger } from "lovable-tagger";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
+
 
 // Fails the production build if any t() key is missing from a locale file
 // or if a hardcoded English UI string is detected. See scripts/i18n-check.mjs.
@@ -34,6 +36,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === "development" && componentTagger(),
     mode !== "development" && i18nCheckPlugin(),
+    mcpPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {
