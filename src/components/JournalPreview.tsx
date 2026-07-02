@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { journalCoverProps } from "@/lib/journalImages";
+import { journalCoverProps, JOURNAL_FALLBACK_COVER } from "@/lib/journalImages";
 
 const JournalPreview = () => {
   const { t, i18n } = useTranslation();
