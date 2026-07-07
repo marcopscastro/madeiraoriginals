@@ -1,44 +1,24 @@
-## Diagnosis
+## What this screen means
 
-The site's Storefront API calls are succeeding (HTTP 200) but Shopify is returning an empty product list for every query:
+You're inside **Sales channels → Headless → Madeiraoriginals Cve6q Headless**. This channel exists and issued the Storefront token the site uses (`bbcc49de92200adcd5c43d7f6f847485` — confirmed working, just returning 0 products).
 
-```
-POST .../api/2025-07/graphql.json
-→ {"data":{"products":{"edges":[]}}}
-```
+The "Manage API access" panel on this page is about the token's *scopes* (which endpoints it can call), not about which products are published to the channel. Product publishing is done from the Products list, not from here.
 
-This is not a code bug. The `/shop` page, homepage bestsellers, and collection pages all use the same `getProducts()` helper, and they'd all show products the moment Shopify starts returning them. The problem is on the Shopify side: the products are active in admin, but they are not published to the sales channel that the Storefront API token belongs to.
+## Exact clicks to make products visible
 
-## Why this happens
+1. In the left sidebar of Shopify admin, click **Products**.
+2. Top-left of the products table, click the checkbox in the header row → this selects all 21 products.
+3. A blue action bar appears at the top. Click **More actions**.
+4. Choose **Add available channel** (some Shopify UIs label it **Manage → Publishing** or **Make products available** — same thing).
+5. In the dialog, tick **Madeiraoriginals Cve6q Headless** (and **Online Store** if you also want them on any Shopify-hosted URL).
+6. Click **Save** / **Done**.
+7. Refresh `https://madeiraoriginals.pt/shop`. Products appear instantly — no redeploy.
 
-Every Storefront Access Token in Shopify is tied to a specific sales channel (usually "Headless" or "Hydrogen"). A product being "Active" only means it's not archived/draft — it still has to be individually published to each sales channel to become visible through that channel's API. New products default to Online Store only, not Headless.
+## Verify from my side
 
-Secondary things that can cause the same symptom, in order of likelihood:
+Once you've done the above, tell me "done" and I'll re-run `shopify--search_products` against your live catalog. If the Storefront API still returns 0, I'll query product-by-product to find which one is still hidden (usually 1–2 have zero-stock variants with "Continue selling when out of stock" disabled).
 
-1. Products not published to the Headless/Hydrogen channel used by the current Storefront token.
-2. Products have no variant with `availableForSale: true` (all variants out of stock + "Continue selling when out of stock" disabled → filtered out).
-3. Products are in a market/region that excludes Portugal/EU, so the Storefront API hides them from this locale.
-4. The Storefront token was regenerated in Shopify and the app is still using the old one (would usually 401, but worth confirming).
+## What NOT to touch on the screen you're on
 
-## Recommended fix (you do this in Shopify admin)
-
-1. Shopify admin → **Sales channels** (left sidebar) → confirm a **Headless** (or Hydrogen) channel exists. If it doesn't, add it from the Shopify App Store — this is what the Storefront API reads from.
-2. Open a product → **Sales channels and apps** panel on the right → tick **Headless** (and Online Store) → **Save**.
-3. Do the same for every product you want on the site. You can bulk-select in the Products list → **More actions → Add available channel → Headless**.
-4. Make sure at least one variant has stock, or that the variant has **"Continue selling when out of stock"** enabled — otherwise the Storefront API still hides it.
-5. Refresh `/shop`. Products should appear immediately; no code deploy needed.
-
-## What I'll do in the app once products are visible
-
-Nothing structural needs changing. Once the Storefront API returns products:
-
-- `/shop`, homepage bestsellers, `/madeira-t-shirts`, `/madeira-hoodies`, `/madeira-accessories`, `/madeira-stickers`, and every collection page will populate automatically.
-- Featured collections filter by Shopify **tags** (`atlantic-utility`, `norte`, `contemporary-heritage`, `island-humour`). If you want products to appear in a specific homepage collection, add the matching tag on the product in Shopify.
-- Optional: I can add a small inline warning on `/shop` in dev mode that says "Storefront API returned 0 products — check sales channel publishing" so this failure mode is obvious next time. Say the word if you want it.
-
-## If you've already published to Headless
-
-If you've verified the products are published to the Headless channel and `/shop` is still empty, tell me and I'll:
-
-1. Reconnect the Shopify tools in this chat so I can call `shopify--search_products` and `shopify--count_products` against your store directly.
-2. Compare what admin sees vs. what the Storefront token sees, and identify the exact product(s) that are misconfigured.
+- Don't click **Delete storefront** — that revokes the token the site depends on and would take `/shop` offline entirely until a new token is wired in.
+- **Manage** next to Storefront API is only needed if we later want the site to read customer-specific data (orders, addresses). Not required for products.
