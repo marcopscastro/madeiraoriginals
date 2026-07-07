@@ -39,6 +39,11 @@ const CatalogoProduto = lazy(() => import("./pages/CatalogoProduto"));
 
 const queryClient = new QueryClient();
 
+const ProductRedirect = () => {
+  const { handle } = useParams();
+  return <Navigate to={`/product/${handle}`} replace />;
+};
+
 const RouteFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center font-body text-sm text-muted-foreground">
     Loading…
