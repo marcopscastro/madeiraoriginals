@@ -144,7 +144,7 @@ var get_product_default = defineTool2({
         price: `${e.node.price.amount} ${e.node.price.currencyCode}`,
         options: e.node.selectedOptions
       })),
-      url: `https://madeiraoriginals.pt/products/${p.handle}`
+      url: `https://madeiraoriginals.pt/product/${p.handle}`
     };
     return {
       content: [{ type: "text", text: JSON.stringify(product, null, 2) }],
