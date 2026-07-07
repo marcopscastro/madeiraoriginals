@@ -60,7 +60,7 @@ export default defineTool({
       tags: e.node.tags,
       price: `${e.node.priceRange.minVariantPrice.amount} ${e.node.priceRange.minVariantPrice.currencyCode}`,
       image: e.node.images.edges[0]?.node?.url ?? null,
-      url: `https://madeiraoriginals.pt/products/${e.node.handle}`,
+      url: `https://madeiraoriginals.pt/product/${e.node.handle}`,
     }));
     return {
       content: [{ type: "text", text: JSON.stringify(products, null, 2) }],
