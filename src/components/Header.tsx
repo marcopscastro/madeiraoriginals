@@ -138,13 +138,48 @@ const Header = () => {
             <button aria-label={t("nav.search")} className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
-            <button
-              aria-label={user ? t("nav.account") : t("nav.signIn")}
-              onClick={() => navigate(isAdmin ? "/admin/journal" : "/auth")}
-              className="text-foreground hover:text-primary transition-colors hidden sm:block"
-            >
-              <User size={20} />
-            </button>
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    aria-label={t("nav.account")}
+                    className="text-foreground hover:text-primary transition-colors hidden sm:block"
+                  >
+                    <User size={20} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="min-w-[200px] rounded-none">
+                  <div className="px-2 py-1.5 font-body text-xs text-muted-foreground truncate">
+                    {user.email}
+                  </div>
+                  <DropdownMenuSeparator />
+                  {isAdmin && (
+                    <DropdownMenuItem onClick={() => navigate("/admin/journal")} className="font-heading text-xs uppercase tracking-wide">
+                      {t("nav.admin")}
+                    </DropdownMenuItem>
+                  )}
+                  <DropdownMenuItem
+                    onClick={async () => {
+                      await supabase.auth.signOut();
+                      toast.success(t("nav.signOut"));
+                      navigate("/");
+                    }}
+                    className="font-heading text-xs uppercase tracking-wide"
+                  >
+                    <LogOut size={14} className="mr-2" />
+                    {t("nav.signOut")}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <button
+                aria-label={t("nav.signIn")}
+                onClick={() => navigate("/auth")}
+                className="text-foreground hover:text-primary transition-colors hidden sm:block"
+              >
+                <User size={20} />
+              </button>
+            )}
             <button
               aria-label={t("nav.cart")}
               className="relative text-foreground hover:text-primary transition-colors"
