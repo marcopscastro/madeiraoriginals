@@ -1,52 +1,44 @@
-# Make the app readable & editable outside Lovable
+## Diagnosis
 
-Two parallel tracks: (A) prerender key public routes so Claude (and crawlers) can read real HTML, (B) connect the project to GitHub so Claude Code can read/edit the codebase locally.
+The site's Storefront API calls are succeeding (HTTP 200) but Shopify is returning an empty product list for every query:
 
-## A. Prerendering (so Claude can *see* the site)
+```
+POST .../api/2025-07/graphql.json
+→ {"data":{"products":{"edges":[]}}}
+```
 
-Goal: static HTML snapshots for public pages, served from the same Vite build. No framework change, no SSR runtime.
+This is not a code bug. The `/shop` page, homepage bestsellers, and collection pages all use the same `getProducts()` helper, and they'd all show products the moment Shopify starts returning them. The problem is on the Shopify side: the products are active in admin, but they are not published to the sales channel that the Storefront API token belongs to.
 
-**Approach:** add a post-build prerender step using `vite-plugin-prerender` (or a small Puppeteer script) that renders the SPA to HTML for a fixed route list and writes `dist/<route>/index.html`. Hosting (Lovable static) already serves those files directly, so crawlers and tools like Claude get full markup.
+## Why this happens
 
-**Routes to prerender (public only):**
-- `/`, `/shop`, `/studio`, `/wholesale` (gate screen only), `/culture`, `/about`, `/contact`
-- `/journal` + each published `/journal/:slug` (fetched from Lovable Cloud at build time)
-- Collection pages: `/madeira-t-shirts`, `/madeira-hoodies`, `/madeira-accessories`, `/madeira-stickers`, `/madeira-streetwear`, `/madeira-gifts`
-- Product pages: `/product/:handle` for every Shopify product (fetched via Storefront API at build time)
+Every Storefront Access Token in Shopify is tied to a specific sales channel (usually "Headless" or "Hydrogen"). A product being "Active" only means it's not archived/draft — it still has to be individually published to each sales channel to become visible through that channel's API. New products default to Online Store only, not Headless.
 
-**Excluded:** `/auth`, `/admin/*`, anything behind the wholesale passcode beyond the gate.
+Secondary things that can cause the same symptom, in order of likelihood:
 
-**i18n handling:** prerender PT (default, canonical) markup. EN remains client-rendered via `?lang=en` — meta `hreflang` already covers SEO. (Can add EN snapshots later if needed.)
+1. Products not published to the Headless/Hydrogen channel used by the current Storefront token.
+2. Products have no variant with `availableForSale: true` (all variants out of stock + "Continue selling when out of stock" disabled → filtered out).
+3. Products are in a market/region that excludes Portugal/EU, so the Storefront API hides them from this locale.
+4. The Storefront token was regenerated in Shopify and the app is still using the old one (would usually 401, but worth confirming).
 
-**Dynamic data freshness:** snapshots refresh on each Lovable publish. Live cart, Shopify inventory, journal updates between publishes still hydrate client-side on load — prerender only seeds the initial HTML.
+## Recommended fix (you do this in Shopify admin)
 
-### Technical notes
-- Add `scripts/prerender.mjs` (Puppeteer) that boots `vite preview`, visits each URL, saves rendered HTML.
-- Route list built from a single `src/lib/prerenderRoutes.ts` source of truth + dynamic fetch of journal slugs (Supabase) and product handles (Shopify Storefront).
-- Wire `"build": "vite build && node scripts/prerender.mjs"` in `package.json`.
-- React already mounts cleanly into prerendered DOM (react-helmet-async + react-router are SSR-safe with this snapshot approach).
+1. Shopify admin → **Sales channels** (left sidebar) → confirm a **Headless** (or Hydrogen) channel exists. If it doesn't, add it from the Shopify App Store — this is what the Storefront API reads from.
+2. Open a product → **Sales channels and apps** panel on the right → tick **Headless** (and Online Store) → **Save**.
+3. Do the same for every product you want on the site. You can bulk-select in the Products list → **More actions → Add available channel → Headless**.
+4. Make sure at least one variant has stock, or that the variant has **"Continue selling when out of stock"** enabled — otherwise the Storefront API still hides it.
+5. Refresh `/shop`. Products should appear immediately; no code deploy needed.
 
-## B. GitHub + Claude Code (so Claude can *edit* the code)
+## What I'll do in the app once products are visible
 
-1. In Lovable: top-right → GitHub → **Connect to GitHub** → create a new repo (e.g. `madeira-originals`). Lovable will two-way sync every change.
-2. Locally (or anywhere Claude Code runs):
-   ```
-   git clone git@github.com:<you>/madeira-originals.git
-   cd madeira-originals
-   claude   # starts Claude Code in the repo
-   ```
-3. Claude Code can now read every file and propose edits. Commits pushed to `main` flow back into Lovable automatically.
-4. Optional: add Playwright MCP to Claude Code so it can also *render* the live preview URL and verify visual changes.
+Nothing structural needs changing. Once the Storefront API returns products:
 
-No code changes needed for track B — it's a one-time connection in the Lovable UI plus a local clone.
+- `/shop`, homepage bestsellers, `/madeira-t-shirts`, `/madeira-hoodies`, `/madeira-accessories`, `/madeira-stickers`, and every collection page will populate automatically.
+- Featured collections filter by Shopify **tags** (`atlantic-utility`, `norte`, `contemporary-heritage`, `island-humour`). If you want products to appear in a specific homepage collection, add the matching tag on the product in Shopify.
+- Optional: I can add a small inline warning on `/shop` in dev mode that says "Storefront API returned 0 products — check sales channel publishing" so this failure mode is obvious next time. Say the word if you want it.
 
-## Deliverables (track A, after approval)
-- `scripts/prerender.mjs`
-- `src/lib/prerenderRoutes.ts`
-- `package.json` build script update
-- `vite.config.ts` left as-is (prerender runs after `vite build`)
-- Short README section documenting how prerendering works and how to add new routes
+## If you've already published to Headless
 
-## What I need from you
-- Confirm track A scope (route list above) — add/remove anything?
-- For track B, just say the word and I'll walk you through the GitHub connect button; the actual connect happens in the Lovable UI, not via code.
+If you've verified the products are published to the Headless channel and `/shop` is still empty, tell me and I'll:
+
+1. Reconnect the Shopify tools in this chat so I can call `shopify--search_products` and `shopify--count_products` against your store directly.
+2. Compare what admin sees vs. what the Storefront token sees, and identify the exact product(s) that are misconfigured.
