@@ -1,12 +1,21 @@
-import { Search, User, ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
+import { Search, User, ShoppingCart, Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
 import { useCartTotals } from "@/stores/cartStore";
 import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logoMark from "@/assets/madeira-originals-logo.svg";
 
 const Header = () => {
