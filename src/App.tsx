@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import Index from "./pages/Index";
 import { COLLECTIONS } from "./lib/collections";
 import { useCartSync } from "@/hooks/useCartSync";
@@ -39,6 +39,11 @@ const CatalogoProduto = lazy(() => import("./pages/CatalogoProduto"));
 
 const queryClient = new QueryClient();
 
+const ProductRedirect = () => {
+  const { handle } = useParams();
+  return <Navigate to={`/product/${handle}`} replace />;
+};
+
 const RouteFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center font-body text-sm text-muted-foreground">
     Loading…
@@ -69,7 +74,7 @@ const AppRoutes = () => {
         <Route path="/journal" element={<Journal />} />
         <Route path="/journal/:slug" element={<JournalPost />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
-        <Route path="/products/:handle" element={<IslandFlowerProduct />} />
+        <Route path="/products/:handle" element={<ProductRedirect />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/care" element={<Care />} />
