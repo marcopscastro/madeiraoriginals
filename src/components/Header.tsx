@@ -244,12 +244,24 @@ const Header = () => {
                 {t("nav.admin")}
               </button>
             )}
-            {!user && (
+            {!user ? (
               <button
                 onClick={() => go("/auth")}
                 className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground"
               >
                 {t("nav.signIn")}
+              </button>
+            ) : (
+              <button
+                onClick={async () => {
+                  setMobileOpen(false);
+                  await supabase.auth.signOut();
+                  toast.success(t("nav.signOut"));
+                  navigate("/");
+                }}
+                className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground"
+              >
+                {t("nav.signOut")}
               </button>
             )}
           </nav>
