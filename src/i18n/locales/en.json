@@ -1397,5 +1397,9 @@
       "seoTitle": "Vinyl & Signage in Madeira — Windows, Decals & Boards",
       "seoDescription": "Window vinyl, cut lettering, decals and interior signage designed and produced in São Vicente, Madeira. Design and supply only."
     }
+  },
+  "productImage": {
+    "brandTail": "Madeira Originals premium apparel",
+    "alternateView": "alternate view {{index}} of {{total}}"
   }
 }

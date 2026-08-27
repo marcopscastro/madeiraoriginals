@@ -116,8 +116,11 @@ for (const file of files) {
     const upTo = src.slice(0, m.index);
     const lineNo = upTo.split("\n").length;
     if (lines[lineNo - 1]?.includes("i18n-ignore")) continue;
-    if (!EN.has(key)) push(file, lineNo, `missing EN key: "${key}"`);
-    if (!PT.has(key)) push(file, lineNo, `missing PT key: "${key}"`);
+    // i18next plural keys are declared as `<key>_one` / `<key>_other`.
+    const has = (set) =>
+      set.has(key) || set.has(`${key}_one`) || set.has(`${key}_other`);
+    if (!has(EN)) push(file, lineNo, `missing EN key: "${key}"`);
+    if (!has(PT)) push(file, lineNo, `missing PT key: "${key}"`);
   }
 
   // 2) Hardcoded JSX text nodes & attributes (only .tsx/.jsx — .ts has no JSX)
@@ -170,7 +173,9 @@ const looksLikeCopy = (raw) => {
 const libFiles = files.filter(
   (f) =>
     /\.ts$/.test(f) &&
-    relative(ROOT, f).split(sep).join("/").startsWith("src/lib/"),
+    relative(ROOT, f).split(sep).join("/").startsWith("src/lib/") &&
+    // MCP tool/schema descriptions are machine-facing, not UI copy.
+    !relative(ROOT, f).split(sep).join("/").startsWith("src/lib/mcp/"),
 );
 
 for (const file of libFiles) {
