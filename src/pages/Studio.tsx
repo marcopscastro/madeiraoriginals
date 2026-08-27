@@ -4,15 +4,16 @@ import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import StudioQuoteForm from "@/components/StudioQuoteForm";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
+import { Link } from "@/components/LocaleLink";
 
 const Studio = () => {
   const { t } = useTranslation();
 
-  const pillars = [
-    { key: "digital" as const, num: "01" },
-    { key: "apparel" as const, num: "02" },
-    { key: "physical" as const, num: "03" },
-  ];
+  const services = t("services.hubItems", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+    to: string;
+  }[];
 
   return (
     <div className="min-h-screen bg-background">
