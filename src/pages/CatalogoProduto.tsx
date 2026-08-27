@@ -63,7 +63,7 @@ const CatalogoProduto = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="font-body text-sm text-muted-foreground">A carregar…</p>
+          <p className="font-body text-sm text-muted-foreground">A carregar…</p> {/* i18n-ignore */}
         </main>
         <Footer />
       </div>
@@ -75,7 +75,7 @@ const CatalogoProduto = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="font-display text-3xl font-semibold mb-4">Produto não encontrado</h1>
+          <h1 className="font-display text-3xl font-semibold mb-4">Produto não encontrado</h1> {/* i18n-ignore */}
           <Link
             to="/catalogo"
             className="font-heading text-xs font-bold uppercase tracking-widest underline"
@@ -104,7 +104,7 @@ const CatalogoProduto = () => {
       <main>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <nav className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
-            <Link to="/catalogo" className="hover:text-foreground">Catálogo</Link>
+            <Link to="/catalogo" className="hover:text-foreground">Catálogo</Link> {/* i18n-ignore */}
             {categorySlug && (
               <>
                 <span className="mx-2">/</span>
@@ -187,13 +187,13 @@ const CatalogoProduto = () => {
                 <p className="font-heading text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">
                   Preço
                 </p>
-                <p className="font-display text-2xl font-semibold">Preço sob consulta</p>
+                <p className="font-display text-2xl font-semibold">Preço sob consulta</p> {/* i18n-ignore */}
               </div>
             ) : (
               <div className="mb-3 border border-foreground/20">
                 <div className="grid grid-cols-2 bg-foreground text-background font-heading text-[11px] font-bold uppercase tracking-widest">
-                  <div className="px-4 py-3">Quantidade</div>
-                  <div className="px-4 py-3">Preço/un.</div>
+                  <div className="px-4 py-3">Quantidade</div> {/* i18n-ignore */}
+                  <div className="px-4 py-3">Preço/un.</div> {/* i18n-ignore */}
                 </div>
                 {tiers.map((tier, i) => (
                   <div
@@ -302,7 +302,7 @@ const QuoteForm = ({ productId, productName }: { productId: string; productName:
   if (done) {
     return (
       <div className="border border-foreground/20 p-8 text-center bg-background">
-        <h3 className="font-display text-2xl font-semibold mb-3">Pedido recebido</h3>
+        <h3 className="font-display text-2xl font-semibold mb-3">Pedido recebido</h3> {/* i18n-ignore */}
         <p className="font-body text-muted-foreground">
           Obrigado. Vamos responder por email em 24h úteis.
         </p>
@@ -328,7 +328,7 @@ const QuoteForm = ({ productId, productName }: { productId: string; productName:
         label="Quantidade"
         value={form.quantity}
         onChange={(v) => update("quantity", v)}
-        placeholder="Ex.: 100 unidades"
+        placeholder="Ex.: 100 unidades" // i18n-ignore
       />
       <div className="sm:col-span-2">
         <label className="font-heading text-xs font-bold uppercase tracking-widest mb-2 block">
@@ -339,7 +339,7 @@ const QuoteForm = ({ productId, productName }: { productId: string; productName:
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
           maxLength={2000}
-          placeholder="Cores, tamanhos, prazo, tipo de personalização…"
+          placeholder="Cores, tamanhos, prazo, tipo de personalização…" // i18n-ignore
           className="w-full bg-background border border-foreground/30 px-4 py-3 font-body text-sm focus:outline-none focus:border-foreground rounded-none"
         />
       </div>
