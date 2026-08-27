@@ -15,8 +15,8 @@ const HomeHouseBrand = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-28">
-      <div className="border border-foreground/15">
-        <div className="grid grid-cols-3 gap-px bg-foreground/15 border-b border-foreground/15">
+      <div>
+        <div className="grid grid-cols-3 gap-px bg-foreground/15 border border-foreground/15">
           {HOUSE_BRAND_IMAGES.map((src, i) => (
             <div key={src} className="relative aspect-square overflow-hidden bg-muted">
               <img
@@ -29,7 +29,7 @@ const HomeHouseBrand = () => {
             </div>
           ))}
         </div>
-        <div className="p-8 md:p-14 lg:p-16">
+        <div className="pt-10 md:pt-14">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
             {t("home.houseBrand.eyebrow")}
           </p>
