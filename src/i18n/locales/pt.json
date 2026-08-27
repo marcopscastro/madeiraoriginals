@@ -981,7 +981,8 @@
     "subtotal": "Subtotal",
     "shippingNote": "Portes e impostos calculados na finalização.",
     "checkout": "Finalizar compra",
-    "reassurance": "Checkout seguro · Enviado da Madeira"
+    "reassurance": "Checkout seguro · Enviado da Madeira",
+    "viewItem": "Ver {{title}}"
   },
   "collection": {
     "home": "Início",
@@ -1401,5 +1402,21 @@
   "productImage": {
     "brandTail": "vestuário premium Madeira Originals",
     "alternateView": "vista alternativa {{index}} de {{total}}"
+  },
+  "validation": {
+    "businessName": "Indica o nome do negócio (mín. 2 caracteres).",
+    "contactName": "Indica o teu nome (mín. 2 caracteres).",
+    "email": "Indica um email válido.",
+    "tooLong": "Este campo é demasiado longo.",
+    "projectType": "Escolhe um tipo de projeto.",
+    "sector": "Escolhe um setor.",
+    "selectService": "Escolhe pelo menos um serviço.",
+    "selectProductLine": "Escolhe pelo menos uma linha de produto.",
+    "rating": "Escolhe uma avaliação de 1 a 5.",
+    "reviewTitleLong": "O título deve ter menos de 120 caracteres."
+  },
+  "shopifyStatus": {
+    "billingTitle": "Loja temporariamente indisponível",
+    "billingBody": "A nossa loja está temporariamente indisponível. Tenta novamente dentro de momentos."
   }
 }

@@ -981,7 +981,8 @@
     "subtotal": "Subtotal",
     "shippingNote": "Shipping & taxes calculated at checkout.",
     "checkout": "Checkout",
-    "reassurance": "Secure checkout · Ships from Madeira"
+    "reassurance": "Secure checkout · Ships from Madeira",
+    "viewItem": "View {{title}}"
   },
   "collection": {
     "home": "Home",
@@ -1401,5 +1402,21 @@
   "productImage": {
     "brandTail": "Madeira Originals premium apparel",
     "alternateView": "alternate view {{index}} of {{total}}"
+  },
+  "validation": {
+    "businessName": "Enter your business name (min. 2 characters).",
+    "contactName": "Enter your name (min. 2 characters).",
+    "email": "Enter a valid email address.",
+    "tooLong": "This field is too long.",
+    "projectType": "Choose a project type.",
+    "sector": "Choose a sector.",
+    "selectService": "Select at least one service.",
+    "selectProductLine": "Select at least one product line.",
+    "rating": "Choose a rating from 1 to 5.",
+    "reviewTitleLong": "Keep the title under 120 characters."
+  },
+  "shopifyStatus": {
+    "billingTitle": "Store temporarily unavailable",
+    "billingBody": "Our shop is temporarily unavailable. Please try again shortly."
   }
 }
