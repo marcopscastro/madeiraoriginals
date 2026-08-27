@@ -101,11 +101,15 @@ const Studio = () => {
             </h2>
 
             <article className="mt-12 border border-foreground/15 bg-background">
-              {/* Image slot — placeholder until screenshots */}
-              <div className="aspect-[4/3] md:aspect-[16/9] w-full bg-secondary/10 border-b border-foreground/15 flex items-center justify-center">
-                <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
-                  {t("studio.projects.imageSoon")}
-                </p>
+              {/* Lead case study image */}
+              <div className="relative aspect-[4/3] md:aspect-[16/9] w-full overflow-hidden img-placeholder-dark border-b border-foreground/15">
+                <img
+                  src={brasaVivaFirePit}
+                  alt={t("home.caseStudy.alts.firePit")}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover img-cinematic"
+                />
               </div>
 
               <div className="p-6 sm:p-10 md:p-12">
