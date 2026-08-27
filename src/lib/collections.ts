@@ -7,10 +7,10 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     eyebrow: "T-Shirts",
     title: "Madeira T-Shirts",
     intro:
-      "Heavyweight cotton tees with island-rooted graphics — coordinates, levadas, laurissilva, and 100% Madeira humour. Designed in São Vicente, worn everywhere.",
-    metaTitle: "Madeira T-Shirts | Premium Streetwear Tees | Madeira Originals",
+      "Ring-spun cotton tees with island-rooted graphics — coordinates, levadas, laurissilva, and 100% Madeira humour. Designed in São Vicente, worn everywhere.",
+    metaTitle: "Madeira T-Shirts | Premium Cotton Tees | Madeira Originals",
     metaDescription:
-      "Premium Madeira-inspired t-shirts in heavyweight cotton. Island graphics, coordinates and modern streetwear cuts. Designed in São Vicente, Madeira.",
+      "Premium Madeira-inspired t-shirts in ring-spun cotton. Island graphics, coordinates and modern cuts. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:streetwear AND (product_type:T-Shirt OR title:t-shirt OR title:tee)",
     faqs: [
       {
@@ -26,7 +26,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
       {
         question: "What fabric are the Madeira t-shirts made from?",
         answer:
-          "Heavyweight 100% combed cotton (220–240 gsm depending on the drop). Built to hold its shape after wash and feel substantial — the opposite of thin tourist tees.",
+          "100% ring-spun cotton (160 gsm). Soft, breathable and built to hold its shape wash after wash — the opposite of thin tourist tees.",
       },
       {
         question: "Do you ship Madeira t-shirts worldwide?",
@@ -51,7 +51,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     title: "Madeira Hoodies",
     intro:
       "Atlantic-weight hoodies built for Madeira's microclimates — and for every diaspora winter. Premium fleece, modern oversized cuts, island detailing.",
-    metaTitle: "Madeira Hoodies | Heavyweight Streetwear Hoodies | Madeira Originals",
+    metaTitle: "Madeira Hoodies | Premium Hoodies | Madeira Originals",
     metaDescription:
       "Premium Madeira hoodies in Atlantic-weight fleece. Modern cuts inspired by Madeira's landscapes and culture. Designed in São Vicente.",
     shopifyQuery: "tag:streetwear AND (product_type:Hoodie OR title:hoodie OR title:sweatshirt)",
@@ -86,7 +86,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
       "The full Madeira Originals streetwear line — tees, hoodies, accessories. Inspired by Madeira. Designed for everywhere.",
     metaTitle: "Madeira Streetwear | Premium Apparel by Madeira Originals",
     metaDescription:
-      "The full premium streetwear line by Madeira Originals. Heavyweight tees, Atlantic-weight hoodies, and island-rooted accessories from São Vicente, Madeira.",
+      "The full premium apparel line by Madeira Originals. Ring-spun cotton tees, Atlantic-weight hoodies, and island-rooted accessories from São Vicente, Madeira.",
     shopifyQuery: "tag:streetwear",
   },
   "madeira-gifts": {
@@ -97,7 +97,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
       "Real Madeira gifts for people who hate tourist-shop merch. Premium pieces, editorial design, the opposite of magnets and keychains.",
     metaTitle: "Madeira Gifts | Premium Gifts from Madeira | Madeira Originals",
     metaDescription:
-      "Premium gifts from Madeira — streetwear, accessories, stickers. Editorial, modern, 0% tourist trap. Designed in São Vicente, Madeira.",
+      "Premium gifts from Madeira — apparel, accessories, stickers. Editorial, modern, 0% tourist trap. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:streetwear",
   },
 
@@ -108,10 +108,10 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     eyebrow: "First Drop · São Vicente Collection",
     title: "First Drop",
     intro:
-      "The opening chapter. A small, curated set of premium pieces — heavyweight tees, a hoodie, a cap, a tote, and one limited São Vicente-inspired design. Designed in São Vicente, Madeira. Made to last well past the launch.",
+      "The opening chapter. A small, curated set of premium pieces — tees, a hoodie, a cap, a tote, and one limited São Vicente-inspired design. Designed in São Vicente, Madeira. Made to last well past the launch.",
     metaTitle: "First Drop — São Vicente Collection | Madeira Originals",
     metaDescription:
-      "The Madeira Originals First Drop — a curated launch collection of premium streetwear designed in São Vicente, Madeira. Limited pieces. Built for long-term wear.",
+      "The Madeira Originals First Drop — a curated launch collection of premium apparel designed in São Vicente, Madeira. Limited pieces. Built for long-term wear.",
     shopifyQuery: "tag:first-drop",
     image: SECTION_IMAGES.hero,
   },
@@ -123,10 +123,10 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     eyebrow: "Collection 01 · Atlantic Utility",
     title: "Atlantic Utility",
     intro:
-      "Minimal rugged essentials inspired by volcanic island life. Heavyweight cotton, technical detailing, built for fog, wind and salt — the quiet uniform of the north coast.",
+      "Minimal rugged essentials inspired by volcanic island life. Ring-spun cotton, technical detailing, built for fog, wind and salt — the quiet uniform of the north coast.",
     metaTitle: "Atlantic Utility | Madeira Originals",
     metaDescription:
-      "Atlantic Utility — minimal rugged apparel essentials for volcanic island life. Heavyweight cotton, technical detailing. Designed in São Vicente, Madeira.",
+      "Atlantic Utility — minimal rugged apparel essentials for volcanic island life. Ring-spun cotton, technical detailing. Designed in São Vicente, Madeira.",
     shopifyQuery: "tag:atlantic-utility OR tag:utility",
     image: SECTION_IMAGES["atlantic-utility"],
   },

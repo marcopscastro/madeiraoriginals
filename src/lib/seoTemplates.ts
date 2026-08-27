@@ -49,9 +49,9 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Streetwear & Custom Apparel",
+    title: "Madeira Originals — Creative & Print Studio | São Vicente, Madeira",
     description:
-      "Premium Madeira streetwear, t-shirts and custom apparel born in São Vicente. Inspired by Madeira, designed for everywhere. 0% tourist trap.",
+      "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection.",
     path: "/",
     eyebrow: "Madeira Originals",
     h1: "Premium Madeira Streetwear",
@@ -59,9 +59,9 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Editorial Madeira t-shirts, hoodies and accessories — designed in São Vicente, shipped worldwide.",
   },
   shop: {
-    title: "Shop Madeira T-Shirts, Hoodies & Streetwear",
+    title: "Shop Madeira T-Shirts, Hoodies & Apparel",
     description:
-      "Shop premium Madeira t-shirts, hoodies, accessories and streetwear by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping.",
+      "Shop premium Madeira t-shirts, hoodies and accessories by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping.",
     path: "/shop",
     eyebrow: "Shop",
     h1: "Madeira Streetwear & Apparel",
@@ -69,9 +69,9 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "The full Madeira Originals collection — t-shirts, hoodies, accessories and stickers, designed in São Vicente.",
   },
   about: {
-    title: "About Madeira Originals — Streetwear from Madeira",
+    title: "About Madeira Originals — Creative & Print Studio in Madeira",
     description:
-      "Madeira Originals is a premium Madeira streetwear and custom apparel brand from São Vicente — inspired by island heritage, culture and modern design.",
+      "Madeira Originals is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design.",
     path: "/about",
     eyebrow: "About",
     h1: "A Madeira Streetwear Brand from São Vicente",
@@ -81,7 +81,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   contact: {
     title: "Contact Madeira Originals — São Vicente, Madeira",
     description:
-      "Get in touch with Madeira Originals — premium Madeira streetwear and custom apparel production based in São Vicente, Madeira, Portugal.",
+      "Get in touch with Madeira Originals — a creative and print studio based in São Vicente, Madeira, Portugal.",
     path: "/contact",
     eyebrow: "Contact",
     h1: "Talk to Madeira Originals",
@@ -108,9 +108,9 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Branded pint glasses and barware for Madeira hotels, restaurants, cafés and bars. Low minimums, island-made.",
   },
   journal: {
-    title: "Madeira Originals Journal — Culture, Streetwear & Design",
+    title: "Madeira Originals Journal — Culture, Design & Print",
     description:
-      "Stories about Madeira culture, modern streetwear, island identity, custom apparel production and the design philosophy behind Madeira Originals.",
+      "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals.",
     path: "/journal",
     eyebrow: "Journal",
     h1: "The Madeira Originals Journal",
@@ -130,7 +130,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   portugalStreetwear: {
     title: "Portugal Streetwear — Madeira Originals",
     description:
-      "Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — shipped worldwide.",
+      "Premium tees, bags and headwear designed in São Vicente, Madeira — Portuguese design made on the island, shipped worldwide.",
     path: "/portugal-streetwear",
     eyebrow: "Portugal Streetwear",
     h1: "Portuguese Streetwear from Madeira",
@@ -148,7 +148,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   madeiraSouvenirs: {
     title: "Madeira Souvenirs Guide — Real Gifts From Madeira",
     description:
-      "Curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a São Vicente streetwear brand.",
+      "Curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a São Vicente creative studio.",
     path: "/madeira-souvenirs",
     eyebrow: "Madeira Souvenirs Guide",
     h1: "The Madeira Souvenirs Guide",
