@@ -35,29 +35,38 @@ const HomeCaseStudy = () => {
           </Link>
         </div>
 
-        <div className="lg:col-span-6 grid grid-cols-3 gap-px bg-secondary-foreground/15 border border-secondary-foreground/15">
-          <div className="col-span-2 relative aspect-[4/3] overflow-hidden img-placeholder-dark">
+        <div className="lg:col-span-6">
+          <div className="relative aspect-[4/3] overflow-hidden img-placeholder-dark border border-secondary-foreground/15">
             <img
-              src={caseStudyImg}
-              alt={t("home.caseStudy.imageAlt")}
+              src={firePit}
+              alt={t("home.caseStudy.alts.firePit")}
               loading="lazy"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover img-cinematic"
             />
           </div>
-          <div className="relative aspect-[2/3] overflow-hidden bg-background">
-            <img
-              src={caseStudyProduct}
-              alt={t("home.caseStudy.productAlt")}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-contain p-4"
-            />
+          <div className="mt-px grid grid-cols-3 gap-px bg-secondary-foreground/15 border border-secondary-foreground/15 border-t-0">
+            {[
+              { src: skewers, alt: t("home.caseStudy.alts.skewers") },
+              { src: badge, alt: t("home.caseStudy.alts.badge") },
+              { src: oven, alt: t("home.caseStudy.alts.oven") },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-[2/3] overflow-hidden img-placeholder-dark">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover img-cinematic"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default HomeCaseStudy;
