@@ -102,13 +102,39 @@ const ServicePage = ({ serviceKey, path }: Props) => {
                 ))}
               </div>
             </div>
-          </section>
-        )}
+        </section>
+      )}
 
-        <ServiceQuoteCTA />
-      </main>
-      <Footer />
-    </div>
+      {serviceKey === "design" && (
+        <section className="border-t border-foreground/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-8">
+              {t("services.design.recentWork")}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <figure>
+                <div className="bg-white border border-foreground/15 p-10 md:p-14 aspect-square flex items-center justify-center img-placeholder-light">
+                  <img
+                    src={frankieBurgersLogo}
+                    alt={t("services.design.frankieAlt")}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <figcaption className="mt-4 font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-primary/70">
+                  {t("services.design.recentWorkCaption")}
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <ServiceQuoteCTA />
+    </main>
+    <Footer />
+  </div>
   );
 };
 
