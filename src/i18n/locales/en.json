@@ -1256,6 +1256,7 @@
     "processHeading": "How it works",
     "hubHeading": "Services",
     "viewService": "View service",
+    "requestAccess": "Request access",
     "hubItems": [
       {
         "title": "Design",
@@ -1275,7 +1276,8 @@
       {
         "title": "Wholesale",
         "desc": "Stock our own illustrated Madeira line at trade prices, restocked from the same island.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Request access"
       }
     ],
     "cta": {

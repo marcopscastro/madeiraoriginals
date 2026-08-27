@@ -1256,6 +1256,7 @@
     "processHeading": "Como funciona",
     "hubHeading": "Serviços",
     "viewService": "Ver serviço",
+    "requestAccess": "Pedir acesso",
     "hubItems": [
       {
         "title": "Design",
@@ -1275,7 +1276,8 @@
       {
         "title": "Revenda",
         "desc": "Venda a nossa linha ilustrada da Madeira a preços de revenda, com reposição da mesma ilha.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Pedir acesso"
       }
     ],
     "cta": {
