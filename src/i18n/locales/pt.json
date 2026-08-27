@@ -462,7 +462,7 @@
         },
         {
           "question": "Enviam t-shirts para todo o mundo?",
-          "answer": "Sim. Desenhamos, imprimimos e enviamos tudo a partir do nosso estúdio em São Vicente, Madeira — sem parceiros de produção externos. Enviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo, com entrega rastreada. Os portes são calculados na finalização consoante o destino."
+          "answer": "Sim. Desenhamos, imprimimos e enviamos tudo a partir do nosso estúdio em São Vicente, Madeira — sem parceiros de produção externos. Enviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo, com entrega rastreada. Madeira: 3 dias úteis. Portugal continental: 5 a 7 dias úteis. Europa e resto do mundo: 7 a 14 dias úteis. Os portes são calculados na finalização consoante o destino."
         },
         {
           "question": "São mesmo t-shirts da Madeira ou apenas com tema de Portugal?",
@@ -1079,7 +1079,7 @@
     "viewShippingLink": "Ver envios e devoluções →",
     "shipping": {
       "title": "Envio",
-      "body": "Todas as peças são desenhadas, impressas e acabadas no nosso estúdio em São Vicente, Madeira, e enviadas de lá para todo o mundo.\n\nEnviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo. O prazo de entrega depende do destino e da transportadora local.\n\nEnvio gratuito na UE acima de 60€.",
+      "body": "Todas as peças são desenhadas, impressas e acabadas no nosso estúdio em São Vicente, Madeira, e enviadas de lá para todo o mundo.\n\nPrazos de entrega desde a encomenda até à porta:\n• Madeira: 3 dias úteis\n• Portugal continental: 5 a 7 dias úteis\n• Europa e resto do mundo: 7 a 14 dias úteis\n\nEnvio gratuito na UE acima de 60€.",
       "link": "Ver política de envio completa"
     },
     "returns": {
@@ -1109,12 +1109,12 @@
         "body": "Enviamos para todo o mundo. Portugal e Madeira, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo."
       },
       {
-        "heading": "02 — Tempo de processamento",
-        "body": "Imprimimos e acabamos tudo internamente em São Vicente. As peças em stock saem do estúdio assim que estão embaladas; peças por encomenda ou personalizadas são produzidas antes do envio."
+        "heading": "02 — Feito em São Vicente",
+        "body": "Tudo é impresso e acabado no nosso estúdio em São Vicente, Madeira, antes de ser enviado. Os prazos de entrega abaixo já incluem o nosso tempo de produção — não há uma janela de processamento separada para somar."
       },
       {
         "heading": "03 — Prazos de entrega",
-        "body": "Enviamos de São Vicente, Madeira, para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo. O prazo de entrega depende do destino e da transportadora local."
+        "body": "Enviamos de São Vicente, Madeira, para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo. Estes são os prazos totais de entrega desde o momento em que fazes a encomenda:\n\n• Madeira: 3 dias úteis\n• Portugal continental: 5 a 7 dias úteis\n• Europa e resto do mundo: 7 a 14 dias úteis"
       },
       {
         "heading": "04 — Custo de envio",
