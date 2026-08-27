@@ -462,7 +462,7 @@
         },
         {
           "question": "Do you ship Madeira t-shirts worldwide?",
-          "answer": "Yes. We ship Madeira t-shirts worldwide from our fulfilment partners in the EU, UK and US. Madeira and mainland Portugal orders typically arrive in 3–6 working days; international in 5–10."
+          "answer": "Yes. Everything is designed, printed and shipped from our own studio in São Vicente, Madeira — no outside print partners. We ship to Portugal, the EU, the UK, the US and most of the rest of the world with tracked delivery. Shipping is calculated at checkout based on your destination."
         },
         {
           "question": "Are these real Madeira t-shirts or just Portugal-themed?",
@@ -1079,7 +1079,7 @@
     "viewShippingLink": "View shipping & returns →",
     "shipping": {
       "title": "Shipping",
-      "body": "Pieces are made and finished in our São Vicente studio, then shipped worldwide.\n\nPortugal & Madeira: 2–4 business days.\nEurope: 4–7 business days.\nUK, US & rest of world: 7–14 business days.\n\nFree shipping in the EU over €60.",
+      "body": "Every piece is designed, printed and finished in our own studio in São Vicente, Madeira, and shipped from there worldwide.\n\nWe ship to Portugal, the EU, the UK, the US and most of the rest of the world. Delivery time depends on your destination and local carrier.\n\nFree shipping in the EU over €60.",
       "link": "Read full shipping policy"
     },
     "returns": {
@@ -1110,11 +1110,11 @@
       },
       {
         "heading": "02 — Processing time",
-        "body": "Most in-stock pieces leave the studio within 1–2 business days. Made-to-order and personalised pieces take 3–7 business days to print, finish and pack."
+        "body": "We print and finish everything in-house in São Vicente. In-stock pieces leave the studio as soon as they are packed; made-to-order and personalised pieces are produced before dispatch."
       },
       {
         "heading": "03 — Delivery windows",
-        "body": "Portugal & Madeira: 2–4 business days.\nEuropean Union: 4–7 business days.\nUnited Kingdom, United States, rest of world: 7–14 business days.\n\nExact delivery time depends on your local carrier."
+        "body": "We ship from São Vicente, Madeira, to Portugal, the European Union, the United Kingdom, the United States and most of the rest of the world. Delivery time depends on your destination and local carrier."
       },
       {
         "heading": "04 — Shipping cost",

@@ -85,7 +85,7 @@
       "services": "Serviços necessários * (selecciona os aplicáveis)",
       "email": "Email *",
       "phone": "Telefone",
-      "message": "Detalhes do projecto",
+      "message": "Detalhes do projeto",
       "submit": "Pedir orçamento",
       "sending": "A enviar…",
       "done": "Pedido recebido.",
@@ -192,7 +192,7 @@
     "seoTitle": "Distribuição · Madeira Originals"
   },
   "shop": {
-    "overline": "Colecção",
+    "overline": "Coleção",
     "heading": "Streetwear & Vestuário da Madeira",
     "sub": "T-shirts, hoodies e acessórios premium inspirados nas paisagens e cultura da Madeira. Desenhado em São Vicente, enviado para todo o mundo a partir da ilha.",
     "all": "Todos",
@@ -274,7 +274,7 @@
     "notFoundTitle": "Artigo não encontrado",
     "backToJournal": "← Voltar ao Diário",
     "breadcrumb": "Diário",
-    "ctaShop": "Ver a Colecção",
+    "ctaShop": "Ver a Coleção",
     "previewHeading": "Histórias da ilha.",
     "viewAll": "Ver tudo →"
   },
@@ -408,7 +408,7 @@
     "body": "Adoramos demasiado a Madeira para a reduzir a clichés. A Madeira Originals é para quem quer algo mais considerado: design moderno, significado local, execução premium e referência cultural verdadeira."
   },
   "designDirections": {
-    "overline": "Direções de Colecção",
+    "overline": "Direções de Coleção",
     "headingA": "Madeira,",
     "headingB": "reinterpretada.",
     "items": [
@@ -436,7 +436,7 @@
     "headingB": "Usada em qualquer lugar.",
     "body": "Para a ilha, para a diáspora, e para quem leva consigo um pedaço da Madeira — seja no Funchal, em Lisboa, em Jersey ou em Londres.",
     "imageAlt": "Estrada na floresta laurissilva com nevoeiro na costa norte da Madeira",
-    "ctaShop": "Ver a Colecção",
+    "ctaShop": "Ver a Coleção",
     "ctaStory": "Conhecer a História",
     "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico."
   },
@@ -454,7 +454,7 @@
         },
         {
           "question": "Como servem as t-shirts?",
-          "answer": "As nossas t-shirts têm um corte moderno e fiel ao tamanho — ligeiramente largo, ombro descaído e espaço para sobrepor. Cada página de produto indica as medidas exactas de peito e comprimento para escolheres o tamanho certo."
+          "answer": "As nossas t-shirts têm um corte moderno e fiel ao tamanho — ligeiramente largo, ombro descaído e espaço para sobrepor. Cada página de produto indica as medidas exatas de peito e comprimento para escolheres o tamanho certo."
         },
         {
           "question": "De que tecido são feitas as t-shirts?",
@@ -462,7 +462,7 @@
         },
         {
           "question": "Enviam t-shirts para todo o mundo?",
-          "answer": "Sim. Enviamos para todo o mundo a partir dos nossos parceiros de produção na UE, Reino Unido e EUA. As encomendas para a Madeira e Portugal continental chegam normalmente em 3 a 6 dias úteis; internacionais em 5 a 10."
+          "answer": "Sim. Desenhamos, imprimimos e enviamos tudo a partir do nosso estúdio em São Vicente, Madeira — sem parceiros de produção externos. Enviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo, com entrega rastreada. Os portes são calculados na finalização consoante o destino."
         },
         {
           "question": "São mesmo t-shirts da Madeira ou apenas com tema de Portugal?",
@@ -477,9 +477,9 @@
     "madeira-hoodies": {
       "eyebrow": "Hoodies",
       "title": "Hoodies da Madeira",
-      "intro": "Hoodies de peso atlântico, feitas para os microclimas da Madeira — e para todos os invernos da diáspora. Felpo premium, cortes oversized modernos, detalhes da ilha.",
+      "intro": "Hoodies de peso atlântico, feitas para os microclimas da Madeira — e para todos os invernos da diáspora. Felpa premium, cortes oversized modernos, detalhes da ilha.",
       "metaTitle": "Hoodies da Madeira | Hoodies Premium | Madeira Originals",
-      "metaDescription": "Hoodies premium da Madeira em felpo de peso atlântico. Cortes modernos inspirados nas paisagens e na cultura da ilha. Desenhadas em São Vicente."
+      "metaDescription": "Hoodies premium da Madeira em felpa de peso atlântico. Cortes modernos inspirados nas paisagens e na cultura da ilha. Desenhadas em São Vicente."
     },
     "madeira-accessories": {
       "eyebrow": "Acessórios",
@@ -507,7 +507,7 @@
       "title": "Presentes da Madeira",
       "intro": "Presentes da Madeira a sério, para quem detesta merchandise de loja de turistas. Peças premium, design editorial, o oposto de ímanes e porta-chaves.",
       "metaTitle": "Presentes da Madeira | Presentes Premium | Madeira Originals",
-      "metaDescription": "Presentes premium da Madeira — vestuário, acessórios, autocolantes. Editoriais, modernos, 0% armadilha para turistas. Desenhados em São Vicente, Madeira."
+      "metaDescription": "Presentes premium da Madeira — vestuário, acessórios, autocolantes. Editoriais, modernos, 0% tourist trap. Desenhados em São Vicente, Madeira."
     },
     "atlantic-utility": {
       "eyebrow": "Coleção 01 · Atlantic Utility",
@@ -737,7 +737,7 @@
   "contactPage": {
     "overline": "Contacto",
     "heading": "Vamos falar.",
-    "lead": "Quer queiras uma peça da colecção quer uma colaboração — estamos sediados em São Vicente, Madeira, e disponíveis em qualquer lado.",
+    "lead": "Quer queiras uma peça da coleção quer uma colaboração — estamos sediados em São Vicente, Madeira, e disponíveis em qualquer lado.",
     "generalLabel": "Geral",
     "generalNote": "Encomendas, devoluções, imprensa, colaborações.",
     "studioLabel": "Estúdio",
@@ -810,7 +810,7 @@
     "inspireHeading": "Porque a Madeira inspira os nossos desenhos",
     "inspireBody1": "A Madeira dá a um designer um vocabulário invulgarmente rico: o verde-negro da rocha vulcânica, a paleta cromática do mercado, a geometria da agricultura em socalcos, a tipografia das tabuletas antigas do Funchal, os padrões do bordado tradicional. É uma ilha pequena com uma identidade visual sobredimensionada.",
     "inspireBody2": "A Madeira Originals foi construída em redor disso. Vestuário moderno, produtos de lifestyle e acessórios — materiais premium, cortes contemporâneos, referências que dizem algo a quem conhece a ilha e que discretamente convidam à pergunta de quem não conhece.",
-    "shopLink": "Ver a colecção →"
+    "shopLink": "Ver a coleção →"
   },
   "notFound": {
     "code": "404",
@@ -1073,13 +1073,13 @@
     "built": "Qualidade de impressão premium"
   },
   "productInfo": {
-    "carePreview": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa.",
+    "carePreview": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro diretamente sobre a estampa.",
     "viewCareLink": "Ver guia de cuidados →",
     "shippingPreview": "Envio a partir da Madeira. Tempos de entrega variam consoante o destino.",
     "viewShippingLink": "Ver envios e devoluções →",
     "shipping": {
       "title": "Envio",
-      "body": "As peças são feitas e acabadas no nosso estúdio em São Vicente e enviadas para todo o mundo.\n\nPortugal e Madeira: 2–4 dias úteis.\nEuropa: 4–7 dias úteis.\nReino Unido, EUA e resto do mundo: 7–14 dias úteis.\n\nEnvio gratuito na UE acima de 60€.",
+      "body": "Todas as peças são desenhadas, impressas e acabadas no nosso estúdio em São Vicente, Madeira, e enviadas de lá para todo o mundo.\n\nEnviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo. O prazo de entrega depende do destino e da transportadora local.\n\nEnvio gratuito na UE acima de 60€.",
       "link": "Ver política de envio completa"
     },
     "returns": {
@@ -1089,7 +1089,7 @@
     },
     "care": {
       "title": "Cuidados",
-      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa. O nosso algodão ring-spun amacia com o uso — é feito para durar.",
+      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro diretamente sobre a estampa. O nosso algodão ring-spun amacia com o uso — é feito para durar.",
       "link": "Instruções completas"
     }
   },
@@ -1110,11 +1110,11 @@
       },
       {
         "heading": "02 — Tempo de processamento",
-        "body": "A maioria das peças em stock sai do estúdio em 1–2 dias úteis. Peças por encomenda ou personalizadas demoram 3–7 dias úteis a imprimir, acabar e embalar."
+        "body": "Imprimimos e acabamos tudo internamente em São Vicente. As peças em stock saem do estúdio assim que estão embaladas; peças por encomenda ou personalizadas são produzidas antes do envio."
       },
       {
         "heading": "03 — Prazos de entrega",
-        "body": "Portugal e Madeira: 2–4 dias úteis.\nUnião Europeia: 4–7 dias úteis.\nReino Unido, EUA, resto do mundo: 7–14 dias úteis.\n\nO prazo exato depende da transportadora local."
+        "body": "Enviamos de São Vicente, Madeira, para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo. O prazo de entrega depende do destino e da transportadora local."
       },
       {
         "heading": "04 — Custo de envio",
@@ -1223,7 +1223,7 @@
   },
   "productSpecs": {
     "storyHeading": "A História",
-    "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflecte as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
+    "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflete as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
     "detailsHeading": "Detalhes da Peça",
     "materialFallback": "Material: A confirmar",
     "fitFallback": "Corte: Regular / descontraído",
@@ -1294,16 +1294,16 @@
     },
     "form": {
       "overline": "Pedir Orçamento",
-      "heading": "Conta-nos o teu projecto.",
+      "heading": "Conta-nos o teu projeto.",
       "sub": "Dá-nos um briefing rápido — respondemos no prazo de um dia útil com preço e próximos passos.",
       "name": "O teu nome *",
-      "business": "Nome do negócio / projecto *",
+      "business": "Nome do negócio / projeto *",
       "email": "Email *",
       "phone": "Telefone",
-      "projectType": "Tipo de projecto *",
+      "projectType": "Tipo de projeto *",
       "quantity": "Quantidade estimada",
       "quantityHint": "ex. 50 unidades",
-      "message": "Detalhes do projecto",
+      "message": "Detalhes do projeto",
       "messageHint": "Tipo de peça, tamanhos, prazo, notas sobre logo / artwork, e tudo o que devamos saber.",
       "submit": "Pedir orçamento",
       "sending": "A enviar…",
