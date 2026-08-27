@@ -21,14 +21,18 @@
     "menu": "Menu",
     "firstDrop": "First Drop",
     "custom": "Custom",
-    "islandOfFlowers": "Island of Flowers"
+    "islandOfFlowers": "Island of Flowers",
+    "services": "Services",
+    "design": "Design",
+    "apparelPrinting": "Apparel Printing",
+    "vinylSignage": "Vinyl & Signage"
   },
   "footer": {
     "joinHeading": "Join the community.",
     "joinBody": "First access to drops, production updates, and stories from the island.",
     "shop": "Shop",
     "brand": "Brand",
-    "business": "Business",
+    "business": "Services",
     "studio": "Studio (B2B)",
     "wholesale": "Wholesale",
     "copyright": "© 2026 Madeira Originals — Creative & print studio in São Vicente, Madeira, Portugal.",
@@ -51,10 +55,10 @@
     "ctaStory": "The Story"
   },
   "studio": {
-    "overline": "Madeira Originals — Studio · B2B",
-    "h1Line1": "We build brands",
-    "h1Line2": "from the kitchen to the cloud.",
-    "subcopy": "Digital infrastructure, HORECA apparel, and physical branding — engineered in Madeira for restaurants, hotels, cafés, and local businesses.",
+    "overline": "Madeira Originals — Studio",
+    "h1Line1": "Your brand,",
+    "h1Line2": "on every surface.",
+    "subcopy": "We design, print and produce everything your business shows a customer.",
     "ctaQuote": "Request a Custom Quote",
     "ctaServices": "See Services",
     "pillarsHeading": "Service Pillars",
@@ -141,8 +145,8 @@
       "invalid": "Invalid passcode."
     },
     "overline": "Wholesale Distribution",
-    "heading": "Bulk pricing, white-label, sticker packs.",
-    "sub": "Three lines for partners and distributors. All orders flow through the studio production queue in São Vicente.",
+    "heading": "Stock a Madeira brand that isn't a souvenir.",
+    "sub": "Nine illustrated designs of São Vicente and the north coast, printed here. Buy at €12.50, sell at €25. Restock in days because we're on the same island, not the same continent.",
     "signOut": "Sign out",
     "sections": {
       "corner": {
@@ -415,10 +419,10 @@
       },
       {
         "index": "02",
-        "title": "Norte",
+        "title": "Neblina",
         "body": "The quiet side of the island. Foggy roads and deep valleys above São Vicente.",
-        "cta": "Shop Norte",
-        "to": "/norte"
+        "cta": "Shop Neblina",
+        "to": "/neblina"
       },
       {
         "index": "03",
@@ -1094,11 +1098,26 @@
     "title": "Find your fit.",
     "lead": "Our pieces follow a modern unisex cut — relaxed, slightly boxy, true-to-size. Size up for a more oversized streetwear silhouette. All measurements are flat, in centimetres, and may vary by ±1 cm.",
     "sections": [
-      { "heading": "How to measure", "body": "Lay a similar garment flat. Half-chest is measured from armpit to armpit. Length is from the highest point of the shoulder straight down to the hem. Compare to the table below." },
-      { "heading": "T-shirts (half-chest / length, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
-      { "heading": "Hoodies (half-chest / length, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
-      { "heading": "Fit notes", "body": "Ring-spun cotton has a structured drape that softens with wear. If you're between sizes, size down for a clean fit, size up for an oversized streetwear look. Caps are one-size adjustable; totes are one-size." },
-      { "heading": "Still unsure?", "body": "Email geral@madeiraoriginals.pt with your usual size and how you like it to fit — we'll recommend the right one." }
+      {
+        "heading": "How to measure",
+        "body": "Lay a similar garment flat. Half-chest is measured from armpit to armpit. Length is from the highest point of the shoulder straight down to the hem. Compare to the table below."
+      },
+      {
+        "heading": "T-shirts (half-chest / length, cm)",
+        "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78."
+      },
+      {
+        "heading": "Hoodies (half-chest / length, cm)",
+        "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78."
+      },
+      {
+        "heading": "Fit notes",
+        "body": "Ring-spun cotton has a structured drape that softens with wear. If you're between sizes, size down for a clean fit, size up for an oversized streetwear look. Caps are one-size adjustable; totes are one-size."
+      },
+      {
+        "heading": "Still unsure?",
+        "body": "Email geral@madeiraoriginals.pt with your usual size and how you like it to fit — we'll recommend the right one."
+      }
     ]
   },
   "firstDrop": {
@@ -1142,17 +1161,44 @@
       "overline": "What we make",
       "heading": "Premium custom apparel, without the agency overhead.",
       "items": [
-        { "title": "Custom T-Shirts", "body": "Ring-spun cotton tees with your design, printed in DTF for long-term wear and crisp colour." },
-        { "title": "Staff Uniforms", "body": "Hard-wearing front-of-house and back-of-house pieces. Built for daily service and frequent washing." },
-        { "title": "Event Apparel", "body": "Small or large runs for festivals, races, openings and pop-ups. Fast turnaround when you need it." },
-        { "title": "Small-Business Merch", "body": "Caps, totes, hoodies and accessories. Treated with the same care as our retail line — never souvenir-grade." },
-        { "title": "DTF Printing", "body": "Direct-to-film printing for vivid colour, fine detail and excellent wash durability on cotton blends." },
-        { "title": "UV DTF Stickers", "body": "Waterproof, weatherproof die-cut stickers for windows, equipment, packaging and merch." }
+        {
+          "title": "Custom T-Shirts",
+          "body": "Ring-spun cotton tees with your design, printed in DTF for long-term wear and crisp colour."
+        },
+        {
+          "title": "Staff Uniforms",
+          "body": "Hard-wearing front-of-house and back-of-house pieces. Built for daily service and frequent washing."
+        },
+        {
+          "title": "Event Apparel",
+          "body": "Small or large runs for festivals, races, openings and pop-ups. Fast turnaround when you need it."
+        },
+        {
+          "title": "Small-Business Merch",
+          "body": "Caps, totes, hoodies and accessories. Treated with the same care as our retail line — never souvenir-grade."
+        },
+        {
+          "title": "DTF Printing",
+          "body": "Direct-to-film printing for vivid colour, fine detail and excellent wash durability on cotton blends."
+        },
+        {
+          "title": "UV DTF Stickers",
+          "body": "Waterproof, weatherproof die-cut stickers for windows, equipment, packaging and merch."
+        }
       ]
     },
     "audiences": {
       "overline": "Built for",
-      "items": ["Restaurants", "Hotels", "Cafés", "Bars", "Events", "Tourism", "Clubs", "Local Businesses"]
+      "items": [
+        "Restaurants",
+        "Hotels",
+        "Cafés",
+        "Bars",
+        "Events",
+        "Tourism",
+        "Clubs",
+        "Local Businesses"
+      ]
     },
     "form": {
       "overline": "Request a Quote",
@@ -1179,6 +1225,83 @@
         "stickers": "UV DTF stickers",
         "other": "Other"
       }
+    }
+  },
+  "services": {
+    "listHeading": "What's included",
+    "processHeading": "How it works",
+    "hubHeading": "Services",
+    "hubItems": [
+      {
+        "title": "Design",
+        "desc": "Logo and visual identity, original illustration, printed material, brand guidelines.",
+        "to": "/design"
+      },
+      {
+        "title": "Apparel Printing",
+        "desc": "Staff uniforms and merchandise, printed on our own DTF machine in São Vicente.",
+        "to": "/apparel-printing"
+      },
+      {
+        "title": "Vinyl & Signage",
+        "desc": "Window vinyl, cut lettering, decals and interior signs, supplied ready to apply.",
+        "to": "/vinyl-signage"
+      },
+      {
+        "title": "Wholesale",
+        "desc": "Stock our own illustrated Madeira line at trade prices, restocked from the same island.",
+        "to": "/wholesale"
+      }
+    ],
+    "cta": {
+      "heading": "Tell us what you need.",
+      "body": "Send a rough idea, a photo of the space, or a sketch on a napkin. You'll get a real answer and a price within 48 hours.",
+      "button": "Request a quote"
+    },
+    "design": {
+      "overline": "Design",
+      "hero": "Your business, drawn properly.",
+      "intro": "Most small businesses on this island are running a logo someone made in Word fifteen years ago, or a stock icon bought for nine euros. It shows. We draw identities from scratch — the mark, the type, the colours, the way it behaves across everything you print.",
+      "list": [
+        "Logo and visual identity",
+        "Original illustration",
+        "Menus, cards, printed material",
+        "Brand guidelines you can hand to anyone"
+      ],
+      "process": [
+        "A conversation about the business, not a form.",
+        "Concepts to look at, usually two or three.",
+        "Revisions until it's right.",
+        "Final files, in every format you'll need."
+      ],
+      "seoTitle": "Graphic Design in Madeira — Logos, Identity & Print",
+      "seoDescription": "Logo design, visual identity, illustration and printed material for businesses in Madeira. Drawn from scratch in São Vicente."
+    },
+    "apparel": {
+      "overline": "Apparel Printing",
+      "hero": "Uniforms and merchandise, printed here.",
+      "intro": "We print on our own DTF machine in São Vicente. That means no minimum order of five hundred, no six-week wait for something to come off the boat, and no reprint charge because you hired two more people in July.",
+      "list": [
+        "Staff uniforms",
+        "Merchandise you can sell",
+        "Exclusive designs, yours only",
+        "Restocks in days, not months"
+      ],
+      "seoTitle": "Apparel Printing in Madeira — Uniforms & Merchandise",
+      "seoDescription": "Custom staff uniforms and merchandise printed on our own DTF machine in São Vicente, Madeira. No large minimums."
+    },
+    "vinyl": {
+      "overline": "Vinyl & Signage",
+      "hero": "The part your customers see first.",
+      "intro": "A window, a door, a wall, a board above the counter. We design it and produce it in the same visual language as everything else you've got, supplied ready to apply.",
+      "list": [
+        "Window vinyl and cut lettering",
+        "Decals and stickers",
+        "Interior signs and boards",
+        "Supplied cut, weeded and taped, ready to go up"
+      ],
+      "seoTitle": "Vinyl & Signage in Madeira — Windows, Decals & Boards",
+      "seoDescription": "Window vinyl, cut lettering, decals and interior signage designed and produced in São Vicente, Madeira. Design and supply only."
     }
   }
 }
