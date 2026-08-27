@@ -44,7 +44,6 @@ const Header = () => {
       href: "/shop",
       children: [
         { label: t("nav.shopAll"), href: "/shop" },
-        { label: t("nav.firstDrop"), href: "/first-drop" },
         { label: t("nav.tshirts"), href: "/madeira-t-shirts" },
         { label: t("nav.hoodies"), href: "/madeira-hoodies" },
         { label: t("nav.accessories"), href: "/madeira-accessories" },

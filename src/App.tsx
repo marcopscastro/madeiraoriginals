@@ -122,6 +122,7 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         <Route path="portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="madeira-souvenirs" element={<MadeiraSouvenirs />} />
         <Route path="island-of-flowers" element={<LocaleRedirect to="/shop" lang={lang} />} />
+        <Route path="first-drop" element={<LocaleRedirect to="/shop" lang={lang} />} />
         <Route path="culture" element={<Culture />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />

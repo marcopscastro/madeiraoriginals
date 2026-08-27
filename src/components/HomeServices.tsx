@@ -28,7 +28,7 @@ const HomeServices = () => {
             </h2>
             <p className="font-body text-base text-muted-foreground leading-relaxed">{s.desc}</p>
             <span className="mt-6 inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary group-hover:opacity-70">
-              {t("services.cta.button")} →
+              {t("services.viewService")} →
             </span>
           </Link>
         ))}

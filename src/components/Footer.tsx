@@ -10,7 +10,6 @@ const Footer = () => {
       heading: t("footer.shop"),
       links: [
         { label: t("nav.shopAll"), to: "/shop" },
-        { label: t("nav.firstDrop"), to: "/first-drop" },
         { label: t("nav.tshirts"), to: "/madeira-t-shirts" },
         { label: t("nav.hoodies"), to: "/madeira-hoodies" },
         { label: t("nav.accessories"), to: "/madeira-accessories" },
