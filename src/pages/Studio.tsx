@@ -5,6 +5,7 @@ import PageSEO from "@/components/PageSEO";
 import StudioQuoteForm from "@/components/StudioQuoteForm";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
 import { Link } from "@/components/LocaleLink";
+import brasaVivaFirePit from "@/assets/work/brasa-viva-fire-pit.jpg";
 
 const Studio = () => {
   const { t } = useTranslation();
