@@ -24,7 +24,7 @@ const HomeServices = () => {
           const img = SERVICE_CARD_IMAGES[s.to];
           return (
             <Link key={s.to} to={s.to} className="group bg-background hover:bg-muted transition-colors">
-              {img && (
+              {img ? (
                 <div className="relative aspect-[16/10] overflow-hidden img-placeholder-dark">
                   <img
                     src={img}
@@ -34,6 +34,16 @@ const HomeServices = () => {
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover img-cinematic group-hover:scale-[1.02] transition-transform duration-500"
                   />
+                </div>
+              ) : (
+                /* No truthful photograph yet — typographic tile instead of an unrelated image. */
+                <div
+                  aria-hidden
+                  className="relative aspect-[16/10] overflow-hidden bg-foreground flex items-end p-8 md:p-10"
+                >
+                  <span className="font-display text-6xl md:text-7xl leading-none tracking-tight text-accent/80">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                 </div>
               )}
               <div className="p-8 md:p-10">
