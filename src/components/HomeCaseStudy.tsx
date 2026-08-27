@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "@/components/LocaleLink";
-import caseStudyImg from "@/assets/horeca-hero.jpg";
-import caseStudyProduct from "@/assets/product-pint-brasaviva.png";
+import firePit from "@/assets/work/brasa-viva-fire-pit.jpg";
+import skewers from "@/assets/work/brasa-viva-skewers.jpg";
+import badge from "@/assets/work/brasa-viva-badge.jpg";
+import oven from "@/assets/work/brasa-viva-oven.jpg";
 
 /**
  * Homepage case study band — references the same client as the /studio case study.
