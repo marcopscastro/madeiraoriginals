@@ -372,7 +372,13 @@
       "body": "Chegaram aqui para um desenho. Saíram com ilustrações exclusivas, uma linha de fardas, merchandising que os clientes compram mesmo e um site próprio. Feito pelas mesmas mãos, do princípio ao fim.",
       "cta": "Ver o caso de estudo",
       "imageAlt": "Copos e sinalética de marca produzidos para um restaurante em São Vicente",
-      "productAlt": "Copo Brasa Viva com marca aplicada"
+      "productAlt": "Copo Brasa Viva com marca aplicada",
+      "alts": {
+        "firePit": "T-shirt Brasa Viva com estampagem nas costas do forno a lenha, desenhada e impressa pela Madeira Originals",
+        "skewers": "T-shirt Brasa Viva com ilustração da churrasqueira e espetadas, estampagem nas costas",
+        "badge": "T-shirt Brasa Viva com emblema Cozinhado com Fogo, Feito com Paixão",
+        "oven": "T-shirt Brasa Viva com ilustração do forno a lenha, estampagem nas costas"
+      }
     },
     "houseBrand": {
       "eyebrow": "Marca própria",
