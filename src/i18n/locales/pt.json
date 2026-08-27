@@ -141,7 +141,9 @@
       "placeholder": "Código de acesso",
       "submit": "Entrar no portal",
       "checking": "A verificar…",
-      "invalid": "Código inválido."
+      "invalid": "Código inválido.",
+      "noAccess": "Ainda não tem acesso?",
+      "requestAccessLink": "Peça aqui."
     },
     "overline": "Distribuição Wholesale",
     "heading": "Venda uma marca madeirense que não é uma recordação.",
@@ -360,7 +362,8 @@
       {
         "title": "Revenda",
         "desc": "A nossa coleção própria para lojas, hotéis e operadores. A partir de 25 unidades.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Pedir acesso"
       }
     ],
     "caseStudy": {
@@ -1256,6 +1259,7 @@
     "processHeading": "Como funciona",
     "hubHeading": "Serviços",
     "viewService": "Ver serviço",
+    "requestAccess": "Pedir acesso",
     "hubItems": [
       {
         "title": "Design",
@@ -1275,7 +1279,8 @@
       {
         "title": "Revenda",
         "desc": "Venda a nossa linha ilustrada da Madeira a preços de revenda, com reposição da mesma ilha.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Pedir acesso"
       }
     ],
     "cta": {

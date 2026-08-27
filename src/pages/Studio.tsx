@@ -13,6 +13,7 @@ const Studio = () => {
     title: string;
     desc: string;
     to: string;
+    label?: string;
   }[];
 
   return (
@@ -70,7 +71,7 @@ const Studio = () => {
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">{s.desc}</p>
                 <span className="mt-6 inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary group-hover:opacity-70">
-                  {t("services.viewService")} →
+                  {s.label || t("services.viewService")} →
                 </span>
               </Link>
             ))}

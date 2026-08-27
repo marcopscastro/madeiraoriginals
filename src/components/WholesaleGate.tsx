@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
+import { Link } from "@/components/LocaleLink";
 
 const STORAGE_KEY = "mo_wholesale_token";
 
@@ -86,6 +87,12 @@ const WholesaleGate = ({ children }: { children: React.ReactNode }) => {
             {submitting ? t("wholesale.gate.checking") : t("wholesale.gate.submit")}
           </button>
         </form>
+        <p className="mt-4 font-body text-sm text-muted-foreground">
+          {t("wholesale.gate.noAccess")}{" "}
+          <Link to="/contact" className="underline hover:opacity-70">
+            {t("wholesale.gate.requestAccessLink")}
+          </Link>
+        </p>
       </div>
     </section>
   );

@@ -141,7 +141,9 @@
       "placeholder": "Passcode",
       "submit": "Enter portal",
       "checking": "Checking…",
-      "invalid": "Invalid passcode."
+      "invalid": "Invalid passcode.",
+      "noAccess": "Don't have access yet?",
+      "requestAccessLink": "Request it here."
     },
     "overline": "Wholesale Distribution",
     "heading": "Stock a Madeira brand that isn't a souvenir.",
@@ -360,7 +362,8 @@
       {
         "title": "Wholesale",
         "desc": "Our own collection for shops, hotels and tour operators. From 25 units.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Request access"
       }
     ],
     "caseStudy": {
@@ -1256,6 +1259,7 @@
     "processHeading": "How it works",
     "hubHeading": "Services",
     "viewService": "View service",
+    "requestAccess": "Request access",
     "hubItems": [
       {
         "title": "Design",
@@ -1275,7 +1279,8 @@
       {
         "title": "Wholesale",
         "desc": "Stock our own illustrated Madeira line at trade prices, restocked from the same island.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Request access"
       }
     ],
     "cta": {
