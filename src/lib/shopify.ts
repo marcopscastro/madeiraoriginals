@@ -1,4 +1,5 @@
 import { toast } from "sonner";
+import i18n from "@/i18n";
 
 export const SHOPIFY_API_VERSION = "2025-07";
 export const FREE_SHIPPING_EUR = 60;
@@ -65,8 +66,8 @@ export async function storefrontApiRequest<T = any>(
   });
 
   if (response.status === 402) {
-    toast.error("Shopify: Payment required", {
-      description: "Your Shopify store needs an active billing plan. Visit https://admin.shopify.com to upgrade.",
+    toast.error(i18n.t("shopifyStatus.billingTitle"), {
+      description: i18n.t("shopifyStatus.billingBody"),
     });
     return;
   }

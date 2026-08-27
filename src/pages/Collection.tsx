@@ -16,17 +16,12 @@ export interface CollectionFaq {
 
 export interface CollectionConfig {
   slug: string;
-  eyebrow: string;
-  title: string;
-  intro: string;
-  metaTitle: string;
-  metaDescription: string;
   shopifyQuery: string;
   image?: {
     desktop: string;
     mobile: string;
   };
-  faqs?: CollectionFaq[];
+  hasFaqs?: boolean;
 }
 
 const Collection = ({ config }: { config: CollectionConfig }) => {
@@ -34,6 +29,15 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
   const { data: products = [], isLoading } = useProducts(50, config.shopifyQuery);
   const [sort, setSort] = useState<SortOption>("default");
   const [query, setQuery] = useState("");
+
+  const c = (field: string) => t(`collections.${config.slug}.${field}`);
+  const eyebrow = c("eyebrow");
+  const title = c("title");
+  const intro = c("intro");
+  const faqs = config.hasFaqs
+    ? (t(`collections.${config.slug}.faqs`, { returnObjects: true }) as CollectionFaq[])
+    : [];
+
 
   const filtered = useMemo(() => {
     let list = products;
@@ -67,15 +71,15 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={config.metaTitle}
-        description={config.metaDescription}
+        title={c("metaTitle")}
+        description={c("metaDescription")}
         path={`/${config.slug}`}
         jsonLd={
-          config.faqs && config.faqs.length > 0
+          faqs.length > 0
             ? {
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                mainEntity: config.faqs.map((f) => ({
+                mainEntity: faqs.map((f) => ({
                   "@type": "Question",
                   name: f.question,
                   acceptedAnswer: { "@type": "Answer", text: f.answer },
@@ -93,20 +97,20 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
             <span>·</span>
             <a href="/shop" className="hover:text-foreground transition-colors">{t("collection.shop")}</a>
             <span>·</span>
-            <span className="text-foreground">{config.title}</span>
+            <span className="text-foreground">{title}</span>
           </nav>
 
           <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-end">
             <div className="md:col-span-8">
               <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
-                {config.eyebrow}
+                {eyebrow}
               </p>
               <h1 className="font-display font-medium text-foreground leading-[0.98] tracking-tight text-5xl md:text-7xl lg:text-[5.5rem]">
-                {config.title}
+                {title}
               </h1>
             </div>
             <p className="md:col-span-4 font-body text-base md:text-lg text-foreground/70 leading-relaxed max-w-md">
-              {config.intro}
+              {intro}
             </p>
           </div>
 
@@ -116,7 +120,7 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
                 <source media="(max-width: 767px)" srcSet={config.image.mobile} />
                 <img
                   src={config.image.desktop}
-                  alt={config.title}
+                  alt={title}
                   width={1920}
                   height={1080}
                   loading="lazy"
@@ -133,7 +137,7 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between gap-4 border-t border-foreground/10 pt-6 mb-12 md:mb-16">
             <p className="font-heading text-[10px] uppercase tracking-[0.3em] text-foreground/55">
-              {isLoading ? "" : `${filtered.length} ${filtered.length === 1 ? "piece" : "pieces"}`}
+              {isLoading || filtered.length === 0 ? "" : t("collection.count", { count: filtered.length })}
             </p>
             <div className="flex items-center gap-4">
               <div className="relative hidden sm:block">
@@ -203,16 +207,16 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
           )}
         </section>
 
-        {config.faqs && config.faqs.length > 0 && (
+        {faqs.length > 0 && (
           <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12 pb-32 md:pb-40 border-t border-foreground/10 pt-20 md:pt-28">
             <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6 text-center">
               {t("collection.faq")}
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-medium text-foreground text-center mb-16 tracking-tight leading-tight">
-              {config.title} <span className="text-foreground/40">{t("collection.faqHeadingSuffix")}</span>
+              {title} <span className="text-foreground/40">{t("collection.faqHeadingSuffix")}</span>
             </h2>
             <dl className="space-y-10">
-              {config.faqs.map((faq) => (
+              {faqs.map((faq) => (
                 <div key={faq.question} className="border-b border-foreground/10 pb-10 last:border-b-0">
                   <dt className="font-display text-xl md:text-2xl font-medium text-foreground mb-3 tracking-tight">
                     {faq.question}

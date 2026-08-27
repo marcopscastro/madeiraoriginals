@@ -56,10 +56,10 @@ const ProductReviews = ({ productHandle, productTitle }: Props) => {
   const [submitting, setSubmitting] = useState(false);
   const starsAria = (n: number) => t("reviews.starsAria", { n });
   const schema = z.object({
-    rating: z.number().int().min(1).max(5),
-    title: z.string().trim().max(120).optional(),
-    body: z.string().trim().min(10, t("reviews.bodyMin")).max(2000),
-    author_name: z.string().trim().min(2).max(60),
+    rating: z.number().int().min(1, t("validation.rating")).max(5, t("validation.rating")),
+    title: z.string().trim().max(120, t("validation.reviewTitleLong")).optional(),
+    body: z.string().trim().min(10, t("reviews.bodyMin")).max(2000, t("validation.tooLong")),
+    author_name: z.string().trim().min(2, t("validation.contactName")).max(60, t("validation.tooLong")),
   });
 
   const refresh = async () => {

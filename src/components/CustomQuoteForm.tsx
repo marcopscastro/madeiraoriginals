@@ -2,6 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { supabase } from "@/integrations/supabase/client";
 
 const PROJECT_TYPES = [
@@ -14,14 +15,14 @@ const PROJECT_TYPES = [
 ] as const;
 type ProjectType = (typeof PROJECT_TYPES)[number];
 
-const schema = z.object({
-  business_name: z.string().trim().min(2).max(120),
-  contact_name: z.string().trim().min(2).max(80),
-  email: z.string().trim().email().max(255),
-  phone: z.string().trim().max(40).optional(),
-  project_type: z.string().trim().min(2).max(60),
-  quantity: z.string().trim().max(40).optional(),
-  message: z.string().trim().max(2000).optional(),
+const makeSchema = (t: TFunction) => z.object({
+  business_name: z.string().trim().min(2, t("validation.businessName")).max(120, t("validation.tooLong")),
+  contact_name: z.string().trim().min(2, t("validation.contactName")).max(80, t("validation.tooLong")),
+  email: z.string().trim().email(t("validation.email")).max(255, t("validation.tooLong")),
+  phone: z.string().trim().max(40, t("validation.tooLong")).optional(),
+  project_type: z.string().trim().min(2, t("validation.projectType")).max(60, t("validation.tooLong")),
+  quantity: z.string().trim().max(40, t("validation.tooLong")).optional(),
+  message: z.string().trim().max(2000, t("validation.tooLong")).optional(),
 });
 
 const CustomQuoteForm = () => {
@@ -43,7 +44,7 @@ const CustomQuoteForm = () => {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const parsed = schema.safeParse(form);
+    const parsed = makeSchema(t).safeParse(form);
     if (!parsed.success) return toast.error(parsed.error.issues[0].message);
 
     setSubmitting(true);

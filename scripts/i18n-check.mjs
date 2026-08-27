@@ -116,8 +116,11 @@ for (const file of files) {
     const upTo = src.slice(0, m.index);
     const lineNo = upTo.split("\n").length;
     if (lines[lineNo - 1]?.includes("i18n-ignore")) continue;
-    if (!EN.has(key)) push(file, lineNo, `missing EN key: "${key}"`);
-    if (!PT.has(key)) push(file, lineNo, `missing PT key: "${key}"`);
+    // i18next plural keys are declared as `<key>_one` / `<key>_other`.
+    const has = (set) =>
+      set.has(key) || set.has(`${key}_one`) || set.has(`${key}_other`);
+    if (!has(EN)) push(file, lineNo, `missing EN key: "${key}"`);
+    if (!has(PT)) push(file, lineNo, `missing PT key: "${key}"`);
   }
 
   // 2) Hardcoded JSX text nodes & attributes (only .tsx/.jsx — .ts has no JSX)
@@ -146,6 +149,52 @@ for (const file of files) {
       }
     });
   }
+}
+
+// --------------------------------------------------------------------------
+// 3) Hardcoded user-facing copy in non-JSX data/config files under src/lib
+// --------------------------------------------------------------------------
+const STRING_LITERAL = /(["'`])((?:\\.|(?!\1)[^\\])*?)\1/g;
+
+// Technical strings that are never user-facing copy.
+const TECHNICAL = /[<>{}=\/\\@#$|]|::|\b(AND|OR|NOT|select|insert|update|from|where|tag|product_type|null|undefined)\b|\.(png|jpe?g|webp|svg|avif|ts|tsx|json|css)\b/i;
+
+const looksLikeCopy = (raw) => {
+  const s = raw.trim();
+  if (s.length < 20) return false;
+  if (ALLOWED_HARDCODED.has(s)) return false;
+  if (!/[A-Za-z]{3,}/.test(s)) return false;
+  if (TECHNICAL.test(s)) return false;
+  // Needs to read like a phrase: at least 4 whitespace-separated words.
+  if (s.split(/\s+/).length < 4) return false;
+  return true;
+};
+
+const libFiles = files.filter(
+  (f) =>
+    /\.ts$/.test(f) &&
+    relative(ROOT, f).split(sep).join("/").startsWith("src/lib/") &&
+    // MCP tool/schema descriptions are machine-facing, not UI copy.
+    !relative(ROOT, f).split(sep).join("/").startsWith("src/lib/mcp/"),
+);
+
+for (const file of libFiles) {
+  const lines = readFileSync(file, "utf8").split("\n");
+  lines.forEach((line, i) => {
+    if (line.includes("i18n-ignore")) return;
+    const code = line.replace(/^\s*(\/\/|\*).*$/, "");
+    let sm;
+    STRING_LITERAL.lastIndex = 0;
+    while ((sm = STRING_LITERAL.exec(code))) {
+      const val = sm[2];
+      if (!looksLikeCopy(val)) continue;
+      push(
+        file,
+        i + 1,
+        `hardcoded user-facing copy in data/config: "${val.slice(0, 70)}${val.length > 70 ? "…" : ""}" — move it to the locale files`,
+      );
+    }
+  });
 }
 
 // --------------------------------------------------------------------------

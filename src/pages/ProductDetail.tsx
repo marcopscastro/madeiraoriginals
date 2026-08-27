@@ -250,8 +250,8 @@ const ProductDetail = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Shop", item: `${SITE_URL}/shop` },
+      { "@type": "ListItem", position: 1, name: t("collection.home"), item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: t("collection.shop"), item: `${SITE_URL}/shop` },
       { "@type": "ListItem", position: 3, name: product.title, item: `${SITE_URL}/product/${product.handle}` },
     ],
   };

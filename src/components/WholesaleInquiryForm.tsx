@@ -2,6 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { supabase } from "@/integrations/supabase/client";
 
 const LINES = ["Corner Line tees", "White-label DTF", "UV DTF stickers"] as const;
@@ -12,15 +13,15 @@ const LINE_I18N: Record<LineKey, string> = {
   "UV DTF stickers": "wholesale.form.lineUv",
 };
 
-const schema = z.object({
-  business_name: z.string().trim().min(2).max(120),
-  contact_name: z.string().trim().min(2).max(80),
-  email: z.string().trim().email().max(255),
-  phone: z.string().trim().max(40).optional(),
-  product_lines: z.array(z.string()).min(1, "Select at least one product line"),
-  estimated_volume: z.string().trim().max(60).optional(),
-  delivery_window: z.string().trim().max(60).optional(),
-  notes: z.string().trim().max(2000).optional(),
+const makeSchema = (t: TFunction) => z.object({
+  business_name: z.string().trim().min(2, t("validation.businessName")).max(120, t("validation.tooLong")),
+  contact_name: z.string().trim().min(2, t("validation.contactName")).max(80, t("validation.tooLong")),
+  email: z.string().trim().email(t("validation.email")).max(255, t("validation.tooLong")),
+  phone: z.string().trim().max(40, t("validation.tooLong")).optional(),
+  product_lines: z.array(z.string()).min(1, t("validation.selectProductLine")),
+  estimated_volume: z.string().trim().max(60, t("validation.tooLong")).optional(),
+  delivery_window: z.string().trim().max(60, t("validation.tooLong")).optional(),
+  notes: z.string().trim().max(2000, t("validation.tooLong")).optional(),
 });
 
 const WholesaleInquiryForm = ({ defaultLine }: { defaultLine?: LineKey }) => {
@@ -48,7 +49,7 @@ const WholesaleInquiryForm = ({ defaultLine }: { defaultLine?: LineKey }) => {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const product_lines = LINES.filter((l) => lines[l]);
-    const parsed = schema.safeParse({ ...form, product_lines });
+    const parsed = makeSchema(t).safeParse({ ...form, product_lines });
     if (!parsed.success) return toast.error(parsed.error.issues[0].message);
 
     setSubmitting(true);

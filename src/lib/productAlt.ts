@@ -11,7 +11,7 @@
  *  - Respect merchant-authored Shopify altText when present.
  */
 
-const BRAND_TAIL = "Madeira Originals premium streetwear";
+import i18n from "@/i18n";
 
 export function productAlt(opts: {
   title: string;
@@ -25,10 +25,10 @@ export function productAlt(opts: {
   if (shopifyAlt && shopifyAlt.trim().length > 0) return shopifyAlt.trim();
 
   if (index === 0) {
-    return `${title} — ${BRAND_TAIL}`;
+    return `${title} — ${i18n.t("productImage.brandTail")}`;
   }
   if (total > 1) {
-    return `${title} — alternate view ${index + 1} of ${total}`;
+    return `${title} — ${i18n.t("productImage.alternateView", { index: index + 1, total })}`;
   }
-  return `${title} — ${BRAND_TAIL}`;
+  return `${title} — ${i18n.t("productImage.brandTail")}`;
 }
