@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { z } from "zod";
 import { toast } from "sonner";
 import Header from "@/components/Header";

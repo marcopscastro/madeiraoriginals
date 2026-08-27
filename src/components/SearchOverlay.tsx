@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useProducts } from "@/hooks/useShopifyProducts";
 import { formatPrice } from "@/lib/shopify";
 

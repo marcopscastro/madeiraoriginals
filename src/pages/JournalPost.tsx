@@ -1,4 +1,5 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";

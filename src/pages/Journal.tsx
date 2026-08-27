@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/Header";

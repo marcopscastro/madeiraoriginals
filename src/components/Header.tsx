@@ -1,6 +1,7 @@
 import { Search, User, ShoppingCart, Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { useCartTotals } from "@/stores/cartStore";

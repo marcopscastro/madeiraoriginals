@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { ArrowLeft, Minus, Plus, ShoppingCart, Loader2 } from "lucide-react";
 import DOMPurify from "dompurify";
 import Header from "@/components/Header";
