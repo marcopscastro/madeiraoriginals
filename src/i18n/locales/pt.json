@@ -19,7 +19,6 @@
     "account": "Conta",
     "signOut": "Sair",
     "menu": "Menu",
-    "firstDrop": "First Drop",
     "custom": "Personalizado",
     "islandOfFlowers": "Ilha de Flores",
     "services": "Serviços",
@@ -399,13 +398,6 @@
     ],
     "imageAlt": "Imagem do manifesto Madeira Originals"
   },
-  "bestsellers": {
-    "overline": "First Drop · São Vicente",
-    "heading": "First Drop: São Vicente",
-    "subheading": "Vestuário inspirado na Madeira, feito para vestir em qualquer lado.",
-    "cta": "Explorar o First Drop",
-    "empty": "Sem produtos ainda — lançamentos a caminho."
-  },
   "noTouristTrap": {
     "overline": "O Nosso Padrão",
     "headingMain": "0%",
@@ -518,8 +510,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "heading": "Junta-te ao First Drop",
-    "body": "Acesso antecipado a lançamentos e edições limitadas, além de uma nota ocasional do estúdio."
+    "heading": "Fique a par.",
+    "body": "Trabalhos novos do estúdio, e peças novas na coleção."
   },
   "aboutUs": {
     "overline": "Sobre",
@@ -1161,15 +1153,6 @@
       }
     ]
   },
-  "firstDrop": {
-    "overline": "First Drop · Colecção São Vicente",
-    "headingA": "O primeiro drop,",
-    "headingB": "feito em São Vicente.",
-    "body": "Um pequeno lançamento: t-shirts, um hoodie, um boné e uma tote. Estamos a terminar a produção. Junta-te à lista e terás acesso antecipado quando lançar.",
-    "cta": "Explorar o First Drop",
-    "soonTitle": "Em breve.",
-    "soonBody": "O First Drop está a ser preparado em São Vicente. Junta-te à lista abaixo para acesso antecipado quando lançar."
-  },
   "productSpecs": {
     "storyHeading": "A História",
     "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflecte as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
@@ -1272,6 +1255,7 @@
     "listHeading": "O que inclui",
     "processHeading": "Como funciona",
     "hubHeading": "Serviços",
+    "viewService": "Ver serviço",
     "hubItems": [
       {
         "title": "Design",

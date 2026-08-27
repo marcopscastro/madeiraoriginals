@@ -19,7 +19,6 @@
     "account": "Account",
     "signOut": "Sign out",
     "menu": "Menu",
-    "firstDrop": "First Drop",
     "custom": "Custom",
     "islandOfFlowers": "Island of Flowers",
     "services": "Services",
@@ -399,13 +398,6 @@
     ],
     "imageAlt": "Madeira Originals manifesto image"
   },
-  "bestsellers": {
-    "overline": "First Drop · São Vicente",
-    "heading": "The First Drop",
-    "subheading": "Madeira-inspired apparel, made to wear anywhere.",
-    "cta": "Explore the First Drop",
-    "empty": "No products yet — drops coming soon."
-  },
   "noTouristTrap": {
     "overline": "Our Standard",
     "headingMain": "0%",
@@ -518,8 +510,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "heading": "Join the First Drop",
-    "body": "Early access to releases and limited runs, plus the occasional note from the studio."
+    "heading": "Keep in touch.",
+    "body": "New work from the studio, and new pieces in the collection."
   },
   "aboutUs": {
     "overline": "About",
@@ -1161,15 +1153,6 @@
       }
     ]
   },
-  "firstDrop": {
-    "overline": "First Drop · São Vicente Collection",
-    "headingA": "The first drop,",
-    "headingB": "from São Vicente.",
-    "body": "A small launch: tees, a hoodie, a cap and a tote. We're finishing production now. Join the list and you'll get first access when it lands.",
-    "cta": "Explore the First Drop",
-    "soonTitle": "Coming soon.",
-    "soonBody": "The First Drop is being prepared in São Vicente. Join the list below to get early access when it lands."
-  },
   "productSpecs": {
     "storyHeading": "The Story",
     "storyFallback": "Rooted in the north coast of Madeira, this piece reflects the basalt cliffs, Atlantic weather and quiet force of São Vicente.",
@@ -1272,6 +1255,7 @@
     "listHeading": "What's included",
     "processHeading": "How it works",
     "hubHeading": "Services",
+    "viewService": "View service",
     "hubItems": [
       {
         "title": "Design",
