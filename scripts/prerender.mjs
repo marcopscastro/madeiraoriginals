@@ -166,11 +166,16 @@ async function main() {
     fetchProductHandles(),
     fetchJournalSlugs(),
   ]);
-  const allRoutes = [...STATIC_ROUTES, ...productRoutes, ...journalRoutes];
+  const baseRoutes = [...STATIC_ROUTES, ...productRoutes, ...journalRoutes];
+  // Both locale trees: pt-PT at the root, English under /en.
+  const allRoutes = [
+    ...baseRoutes,
+    ...baseRoutes.map((r) => (r === "/" ? "/en" : `/en${r}`)),
+  ];
   console.log(
-    `prerender: ${allRoutes.length} routes (` +
+    `prerender: ${allRoutes.length} routes across 2 locales (` +
       `${STATIC_ROUTES.length} static, ${productRoutes.length} products, ` +
-      `${journalRoutes.length} journal)`,
+      `${journalRoutes.length} journal per locale)`,
   );
 
   const server = startPreviewServer();
