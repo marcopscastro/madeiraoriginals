@@ -2,20 +2,21 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { supabase } from "@/integrations/supabase/client";
 
 const SECTORS = ["restaurant", "cafe", "bar", "hotel", "bakery", "foodTruck", "other"] as const;
 const SERVICES = ["Digital", "Apparel", "Physical"] as const;
 type ServiceKey = (typeof SERVICES)[number];
 
-const schema = z.object({
-  business_name: z.string().trim().min(2).max(120),
-  contact_name: z.string().trim().min(2).max(80),
-  email: z.string().trim().email().max(255),
-  phone: z.string().trim().max(40).optional(),
-  horeca_sector: z.string().trim().min(2).max(60),
-  required_services: z.array(z.string()).min(1, "Select at least one service"),
-  message: z.string().trim().max(2000).optional(),
+const makeSchema = (t: TFunction) => z.object({
+  business_name: z.string().trim().min(2, t("validation.businessName")).max(120, t("validation.tooLong")),
+  contact_name: z.string().trim().min(2, t("validation.contactName")).max(80, t("validation.tooLong")),
+  email: z.string().trim().email(t("validation.email")).max(255, t("validation.tooLong")),
+  phone: z.string().trim().max(40, t("validation.tooLong")).optional(),
+  horeca_sector: z.string().trim().min(2, t("validation.sector")).max(60, t("validation.tooLong")),
+  required_services: z.array(z.string()).min(1, t("validation.selectService")),
+  message: z.string().trim().max(2000, t("validation.tooLong")).optional(),
 });
 
 const StudioQuoteForm = () => {
@@ -42,7 +43,7 @@ const StudioQuoteForm = () => {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const required_services = SERVICES.filter((s) => services[s]);
-    const parsed = schema.safeParse({ ...form, required_services });
+    const parsed = makeSchema(t).safeParse({ ...form, required_services });
     if (!parsed.success) return toast.error(parsed.error.issues[0].message);
 
     setSubmitting(true);

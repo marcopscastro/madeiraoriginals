@@ -65,7 +65,7 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
                       to={productHref}
                       onClick={() => onOpenChange(false)}
                       className="w-20 h-20 bg-muted flex-shrink-0 block"
-                      aria-label={`View ${item.product.node.title}`}
+                      aria-label={t("cart.viewItem", { title: item.product.node.title })}
                     >
                       {image ? (
                         <img

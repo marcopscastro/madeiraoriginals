@@ -80,8 +80,7 @@ const IslandFlowerProduct = () => {
       <div style={{ backgroundColor: BG, color: FG }} className="min-h-screen">
         <Header />
         <div className="max-w-7xl mx-auto px-6 py-32 text-center font-body text-sm" style={{ color: MUTED }}>
-          {/* i18n-ignore */}
-          Loading…
+          Loading… {/* i18n-ignore */}
         </div>
       </div>
     );
