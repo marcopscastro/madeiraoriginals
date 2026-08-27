@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Loader2, Minus, Plus, Trash2 } from "lucide-react";
 import { Link } from "@/components/LocaleLink";
 import { useCartStore, useCartTotals } from "@/stores/cartStore";
-import { formatPrice, FREE_SHIPPING_EUR } from "@/lib/shopify";
+import { formatPrice } from "@/lib/shopify";
 
 interface CartDrawerProps {
   open: boolean;
@@ -135,22 +135,6 @@ const CartDrawer = ({ open, onOpenChange }: CartDrawerProps) => {
             </div>
 
             <div className="border-t border-foreground/10 pt-4 space-y-3">
-              {currencyCode === "EUR" && (() => {
-                const remaining = Math.max(0, FREE_SHIPPING_EUR - totalPrice);
-                const pct = Math.min(100, (totalPrice / FREE_SHIPPING_EUR) * 100);
-                return (
-                  <div>
-                    <p className="font-heading text-[11px] uppercase tracking-widest text-muted-foreground mb-1.5">
-                      {remaining > 0
-                        ? t("cart.freeShippingAway", { amount: remaining.toFixed(2) })
-                        : t("cart.freeShippingUnlocked")}
-                    </p>
-                    <div className="h-[2px] bg-foreground/10">
-                      <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
-                    </div>
-                  </div>
-                );
-              })()}
               <div className="flex justify-between font-heading text-sm uppercase tracking-wide">
                 <span className="text-muted-foreground">{t("cart.subtotal")}</span>
                 <span className="font-bold text-foreground">

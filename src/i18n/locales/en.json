@@ -976,8 +976,6 @@
     "decrease": "Decrease",
     "increase": "Increase",
     "remove": "Remove",
-    "freeShippingAway": "€{{amount}} away from free shipping",
-    "freeShippingUnlocked": "Free shipping unlocked ✦",
     "subtotal": "Subtotal",
     "shippingNote": "Shipping & taxes calculated at checkout.",
     "checkout": "Checkout",
@@ -1079,7 +1077,7 @@
     "viewShippingLink": "View shipping & returns →",
     "shipping": {
       "title": "Shipping",
-      "body": "Every piece is designed, printed and finished in our own studio in São Vicente, Madeira, and shipped from there worldwide.\n\nDelivery estimates from order to door:\n• Madeira: 3 business days\n• Mainland Portugal: 5–7 business days\n• Europe and rest of world: 7–14 business days\n\nFree shipping in the EU over €60.",
+      "body": "Every piece is designed, printed and finished in our own studio in São Vicente, Madeira, and shipped from there worldwide.\n\nDelivery estimates from order to door:\n• Madeira: 3 business days\n• Mainland Portugal: 5–7 business days\n• Europe and rest of world: 7–14 business days\n\nShipping is calculated at checkout based on destination.\n\n• Free collection from our studio in São Vicente — order online, pick it up in person, no shipping charge.\n• Free shipping within Madeira.",
       "link": "Read full shipping policy"
     },
     "returns": {
@@ -1099,7 +1097,7 @@
   },
   "shippingPage": {
     "seoTitle": "Shipping | Madeira Originals",
-    "seoDescription": "Where we ship, how long it takes, and what it costs. Premium garments shipped worldwide from São Vicente, Madeira.",
+    "seoDescription": "Where we ship, how long it takes, and what it costs. Shipping calculated at checkout, free collection in São Vicente and free shipping within Madeira.",
     "overline": "Shipping",
     "title": "From São Vicente to your door.",
     "lead": "Every piece is made and finished in our studio on the north coast of Madeira, then sent into the world with care. Here is what to expect.",
@@ -1118,7 +1116,7 @@
       },
       {
         "heading": "04 — Shipping cost",
-        "body": "Flat rate, calculated at checkout based on destination.\n\nFree shipping on EU orders over €60."
+        "body": "Shipping is calculated at checkout based on your destination.\n\n• Free collection from our studio in São Vicente — order online, pick it up in person, no shipping charge.\n• Free shipping within Madeira — the 3 business day estimate above applies, at no cost to you."
       },
       {
         "heading": "05 — Duties & taxes",

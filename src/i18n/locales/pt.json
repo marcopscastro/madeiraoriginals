@@ -976,8 +976,6 @@
     "decrease": "Diminuir",
     "increase": "Aumentar",
     "remove": "Remover",
-    "freeShippingAway": "Faltam €{{amount}} para portes grátis",
-    "freeShippingUnlocked": "Portes grátis desbloqueados ✦",
     "subtotal": "Subtotal",
     "shippingNote": "Portes e impostos calculados na finalização.",
     "checkout": "Finalizar compra",
@@ -1079,7 +1077,7 @@
     "viewShippingLink": "Ver envios e devoluções →",
     "shipping": {
       "title": "Envio",
-      "body": "Todas as peças são desenhadas, impressas e acabadas no nosso estúdio em São Vicente, Madeira, e enviadas de lá para todo o mundo.\n\nPrazos de entrega desde a encomenda até à porta:\n• Madeira: 3 dias úteis\n• Portugal continental: 5 a 7 dias úteis\n• Europa e resto do mundo: 7 a 14 dias úteis\n\nEnvio gratuito na UE acima de 60€.",
+      "body": "Todas as peças são desenhadas, impressas e acabadas no nosso estúdio em São Vicente, Madeira, e enviadas de lá para todo o mundo.\n\nPrazos de entrega desde a encomenda até à porta:\n• Madeira: 3 dias úteis\n• Portugal continental: 5 a 7 dias úteis\n• Europa e resto do mundo: 7 a 14 dias úteis\n\nOs portes são calculados na finalização, consoante o destino.\n\n• Levantamento gratuito no nosso estúdio em São Vicente — encomendas online, levantas em mão, sem custos de envio.\n• Envio gratuito em toda a Madeira.",
       "link": "Ver política de envio completa"
     },
     "returns": {
@@ -1099,7 +1097,7 @@
   },
   "shippingPage": {
     "seoTitle": "Envio | Madeira Originals",
-    "seoDescription": "Para onde enviamos, prazos e custos. Peças premium enviadas de São Vicente, Madeira, para todo o mundo.",
+    "seoDescription": "Para onde enviamos, prazos e custos. Portes calculados na finalização, levantamento gratuito em São Vicente e envio gratuito em toda a Madeira.",
     "overline": "Envio",
     "title": "De São Vicente até à tua porta.",
     "lead": "Cada peça é feita e acabada no nosso estúdio na costa norte da Madeira, e depois enviada com cuidado. Eis o que esperar.",
@@ -1118,7 +1116,7 @@
       },
       {
         "heading": "04 — Custo de envio",
-        "body": "Taxa fixa, calculada no checkout consoante o destino.\n\nEnvio gratuito na UE acima de 60€."
+        "body": "Os portes são calculados na finalização, consoante o destino.\n\n• Levantamento gratuito no nosso estúdio em São Vicente — encomendas online, levantas em mão, sem custos de envio.\n• Envio gratuito em toda a Madeira — aplica-se o prazo de 3 dias úteis acima, sem custo para ti."
       },
       {
         "heading": "05 — Direitos e impostos",
