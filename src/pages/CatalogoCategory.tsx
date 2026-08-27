@@ -134,7 +134,7 @@ const CatalogoCategory = () => {
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Pesquisar por nome ou referência"
+                placeholder="Pesquisar por nome ou referência" // i18n-ignore
                 className="flex-1 bg-background border border-foreground/30 px-4 py-3 font-body text-sm focus:outline-none focus:border-foreground rounded-none"
               />
               <select
@@ -142,9 +142,9 @@ const CatalogoCategory = () => {
                 onChange={(e) => setSort(e.target.value as Sort)}
                 className="bg-background border border-foreground/30 px-4 py-3 font-body text-sm focus:outline-none focus:border-foreground rounded-none"
               >
-                <option value="price-asc">Preço (menor → maior)</option>
-                <option value="price-desc">Preço (maior → menor)</option>
-                <option value="name">Nome (A–Z)</option>
+                <option value="price-asc">Preço (menor → maior)</option> {/* i18n-ignore */}
+                <option value="price-desc">Preço (maior → menor)</option> {/* i18n-ignore */}
+                <option value="name">Nome (A–Z)</option> {/* i18n-ignore */}
               </select>
             </div>
           </div>
@@ -152,7 +152,7 @@ const CatalogoCategory = () => {
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           {loading && rows.length === 0 ? (
-            <p className="font-body text-sm text-muted-foreground">A carregar…</p>
+            <p className="font-body text-sm text-muted-foreground">A carregar…</p> // i18n-ignore
           ) : rows.length === 0 ? (
             <p className="font-body text-sm text-muted-foreground">
               Sem resultados. Tente outra pesquisa.

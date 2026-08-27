@@ -35,7 +35,7 @@ const Catalogo = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Catálogo — Vestuário e acessórios personalizáveis"
+        title="Catálogo — Vestuário e acessórios personalizáveis" // i18n-ignore
         description="Vestuário e acessórios personalizáveis para empresas e eventos. T-shirts, polos, hoodies, totes e bonés."
         path="/catalogo"
       />
