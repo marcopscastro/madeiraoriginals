@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 const ValueBanner = () => {
   const { t } = useTranslation();
   const items = [
-    t("valueBanner.designed"),
-    t("valueBanner.cotton"),
-    t("valueBanner.noTrap"),
-    t("valueBanner.shipped"),
+    t("valueBanner.made"),
+    t("valueBanner.scope"),
+    t("valueBanner.exclusive"),
+    t("valueBanner.label"),
   ];
 
   // Marquee-style row, repeated for seamless feel
