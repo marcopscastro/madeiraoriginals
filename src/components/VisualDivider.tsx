@@ -12,7 +12,7 @@ const VisualDivider = ({ variant = "basalt" }: Props) => {
   const fog = variant === "fog";
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-foreground grain img-placeholder-dark">
+    <section className="relative w-full h-[46svh] min-h-[280px] max-h-[420px] md:h-[80vh] md:max-h-[760px] overflow-hidden bg-foreground grain img-placeholder-dark">
       <img
         src={fog ? fogImg : basaltImg}
         alt={fog ? t("diaspora.imageAlt") : t("divider.imageAlt")}

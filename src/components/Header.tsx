@@ -72,13 +72,13 @@ const Header = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="flex flex-col leading-none min-w-0">
-              <span className="font-heading font-bold sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap text-2xl">
+            <span className="hidden xs:flex flex-col leading-none min-w-0">
+              <span className="font-heading font-bold text-base sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap">
                 MADEIRA
               </span>
               <span
-                className="font-body font-light uppercase text-accent whitespace-nowrap sm:text-[10px] md:text-[11px] -mt-1.5 text-center text-lg my-0 py-0"
-                style={{ letterSpacing: "0.38em" }}
+                className="font-body font-light uppercase text-accent whitespace-nowrap text-[8px] sm:text-[10px] md:text-[11px] -mt-0.5 sm:-mt-1.5 text-center my-0 py-0"
+                style={{ letterSpacing: "0.3em" }}
               >
                 ORIGINALS
               </span>

@@ -12,8 +12,6 @@ import islandHumourDesktop from "@/assets/real-sao-vicente/island-humour-desktop
 import islandHumourMobile from "@/assets/real-sao-vicente/island-humour-mobile.webp";
 import serviceDesign from "@/assets/hero-shirt-printed.jpg";
 import serviceApparel from "@/assets/production-studio.jpg";
-import serviceVinyl from "@/assets/horeca-hero.jpg";
-import serviceWholesale from "@/assets/manifesto-uber-teen.jpg";
 
 export type ResponsiveImageSet = {
   desktop: string;
@@ -59,11 +57,10 @@ export const FEATURED_COLLECTION_IMAGES = [
 
 /**
  * Card imagery for the services grid, keyed by the service route.
- * NOTE: only assets that already exist in the repo are used here.
+ * Only truthful photography is listed here — routes with no accurate photo
+ * (vinyl/signage, wholesale) intentionally fall back to a typographic tile.
  */
 export const SERVICE_CARD_IMAGES: Record<string, string> = {
   "/design": serviceDesign,
   "/apparel-printing": serviceApparel,
-  "/vinyl-signage": serviceVinyl,
-  "/contact": serviceWholesale,
 };

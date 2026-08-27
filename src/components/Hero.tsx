@@ -6,7 +6,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[680px] overflow-hidden bg-foreground grain img-placeholder-dark">
+    <section className="relative w-full h-[88svh] min-h-[560px] max-h-[820px] md:h-[100svh] md:min-h-[680px] md:max-h-[1040px] overflow-hidden bg-foreground grain img-placeholder-dark">
       {/* Cinematic background */}
       <picture>
         <source media="(max-width: 767px)" srcSet={SECTION_IMAGES.hero.mobile} />
@@ -35,7 +35,7 @@ const Hero = () => {
 
       {/* Top eyebrow — geographic stamp */}
       <div className="absolute top-0 inset-x-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 md:pt-12 flex items-center justify-between text-background/85">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-5 md:pt-12 flex items-center justify-between text-background/85">
           <p className="font-heading text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em]">
             {t("hero.coords")}
           </p>
@@ -47,7 +47,7 @@ const Hero = () => {
 
       {/* Headline + CTAs anchored to bottom — generous breathing room */}
       <div className="absolute inset-x-0 bottom-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-14 md:pb-24 lg:pb-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-10 md:pb-24 lg:pb-28">
           <h1 className="font-display font-medium text-background leading-[0.98] text-[2.25rem] sm:text-6xl md:text-7xl lg:text-[5.75rem] tracking-tight animate-fade-up max-w-5xl text-balance">
             {t("hero.headline1")}
             <br />
@@ -55,14 +55,14 @@ const Hero = () => {
           </h1>
 
           <p
-            className="mt-8 md:mt-10 font-body text-base md:text-lg text-background/90 max-w-md leading-relaxed animate-fade-up"
+            className="mt-5 md:mt-10 font-body text-base md:text-lg text-background/90 max-w-md leading-relaxed animate-fade-up"
             style={{ animationDelay: "220ms" }}
           >
             {t("hero.body")}
           </p>
 
           <div
-            className="mt-10 md:mt-14 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 animate-fade-up"
+            className="mt-7 md:mt-14 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 animate-fade-up"
             style={{ animationDelay: "380ms" }}
           >
             <Link
