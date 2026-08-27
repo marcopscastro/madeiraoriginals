@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import ProductCard from "@/components/ProductCard";
 import { useProducts } from "@/hooks/useShopifyProducts";

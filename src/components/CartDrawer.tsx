@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Loader2, Minus, Plus, Trash2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { useCartStore, useCartTotals } from "@/stores/cartStore";
 import { formatPrice, FREE_SHIPPING_EUR } from "@/lib/shopify";
 

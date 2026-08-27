@@ -1,6 +1,6 @@
 import { Search, User, ShoppingCart, Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocaleNavigate } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { useCartTotals } from "@/stores/cartStore";
@@ -26,7 +26,7 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const { totalItems } = useCartTotals();
   const { user, isAdmin } = useAuth();
-  const navigate = useNavigate();
+  const navigate = useLocaleNavigate();
 
   const navLinks = [
     {
@@ -134,7 +134,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            <LanguageToggle className="hidden sm:inline-flex" />
+            <LanguageToggle />
             <button aria-label={t("nav.search")} className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>

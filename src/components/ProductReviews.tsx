@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { Star } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";

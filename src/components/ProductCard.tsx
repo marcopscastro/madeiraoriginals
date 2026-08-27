@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocaleLink";
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { formatPrice, ShopifyProduct } from "@/lib/shopify";
