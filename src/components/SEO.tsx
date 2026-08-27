@@ -1,11 +1,13 @@
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import { SITE_URL, SITE_NAME, SITE_DEFAULT_DESC, ORG_JSONLD } from "@/lib/seo";
 import { SUPPORTED_LANGS, HREFLANG_MAP, type Lang } from "@/i18n";
+import { langFromPathname, localizePath, stripLocale } from "@/lib/locale";
 
 interface Props {
   title: string;
   description?: string;
+  /** Locale-free path, e.g. "/shop". The locale prefix is added automatically. */
   path?: string;
   image?: string;
   type?: "website" | "article" | "product";
@@ -13,12 +15,8 @@ interface Props {
   noIndex?: boolean;
 }
 
-const buildAlternateUrl = (path: string, lang: Lang) => {
-  // Canonical PT (default) has no ?lang param; EN gets ?lang=en.
-  if (lang === "pt") return `${SITE_URL}${path}`;
-  const sep = path.includes("?") ? "&" : "?";
-  return `${SITE_URL}${path}${sep}lang=${lang}`;
-};
+/** Absolute URL for a locale-free path in a given language. */
+const absoluteUrl = (path: string, lang: Lang) => `${SITE_URL}${localizePath(path, lang)}`;
 
 const SEO = ({
   title,
@@ -29,10 +27,11 @@ const SEO = ({
   jsonLd,
   noIndex,
 }: Props) => {
-  const { i18n } = useTranslation();
-  const current = ((i18n.language?.slice(0, 2) as Lang) ?? "pt");
+  const { pathname } = useLocation();
+  const current = langFromPathname(pathname);
+  const basePath = stripLocale(path.startsWith("/") ? path : `/${path}`);
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const canonical = `${SITE_URL}${path}`;
+  const canonical = absoluteUrl(basePath, current);
   const ogLocale = current === "pt" ? "pt_PT" : "en_US";
   const ogLocaleAlternate = current === "pt" ? "en_US" : "pt_PT";
   const ldArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
@@ -40,19 +39,14 @@ const SEO = ({
 
   return (
     <Helmet>
-      <html lang={HREFLANG_MAP[current] ?? "en"} />
+      <html lang={HREFLANG_MAP[current] ?? "pt-PT"} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
       {SUPPORTED_LANGS.map((l) => (
-        <link
-          key={l}
-          rel="alternate"
-          hrefLang={HREFLANG_MAP[l]}
-          href={buildAlternateUrl(path, l)}
-        />
+        <link key={l} rel="alternate" hrefLang={HREFLANG_MAP[l]} href={absoluteUrl(basePath, l)} />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${path}`} />
+      <link rel="alternate" hrefLang="x-default" href={absoluteUrl(basePath, "pt")} />
       {noIndex && <meta name="robots" content="noindex,nofollow" />}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
