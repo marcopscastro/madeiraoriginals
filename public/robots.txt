@@ -5,5 +5,10 @@ Disallow: /admin
 Disallow: /auth
 Disallow: /production-studio
 Disallow: /horeca
+Disallow: /en/production-studio
+Disallow: /en/horeca
+
+# Portuguese (pt-PT) is served at the root; English lives under /en.
+# Both trees are indexable and cross-linked with hreflang.
 
 Sitemap: https://madeiraoriginals.pt/sitemap.xml
