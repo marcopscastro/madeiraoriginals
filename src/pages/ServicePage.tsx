@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Link } from "@/components/LocaleLink";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
+import brasaVivaFirePit from "@/assets/work/brasa-viva-fire-pit.jpg";
 
 export type ServiceKey = "design" | "apparel" | "vinyl";
 
