@@ -4,6 +4,8 @@ import firePit from "@/assets/work/brasa-viva-fire-pit.jpg";
 import skewers from "@/assets/work/brasa-viva-skewers.jpg";
 import badge from "@/assets/work/brasa-viva-badge.jpg";
 import oven from "@/assets/work/brasa-viva-oven.jpg";
+import siteHero from "@/assets/work/brasaviva-site-hero.png";
+import siteMenu from "@/assets/work/brasaviva-site-menu.png";
 
 /**
  * Homepage case study band — references the same client as the /studio case study.
@@ -43,6 +45,23 @@ const HomeCaseStudy = () => {
               loading="lazy"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover img-cinematic"
+            />
+          </div>
+          {/* Website phone mockups — transparent PNGs, no tile/placeholder */}
+          <div className="relative z-10 -mt-16 md:-mt-24 mb-6 flex items-start justify-end gap-4 pr-4 md:pr-8 pointer-events-none">
+            <img
+              src={siteHero}
+              alt={t("home.caseStudy.alts.siteHero")}
+              loading="lazy"
+              decoding="async"
+              className="w-28 md:w-40 object-contain"
+            />
+            <img
+              src={siteMenu}
+              alt={t("home.caseStudy.alts.siteMenu")}
+              loading="lazy"
+              decoding="async"
+              className="hidden sm:block w-28 md:w-40 object-contain translate-y-6 md:translate-y-10"
             />
           </div>
           <div className="mt-px grid grid-cols-3 gap-px bg-secondary-foreground/15 border border-secondary-foreground/15 border-t-0">
