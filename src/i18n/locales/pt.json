@@ -441,40 +441,102 @@
     "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico."
   },
   "collections": {
-    "overline": "Colecções em Destaque",
-    "headingA": "Quatro formas de vestir",
-    "headingB": "a ilha.",
-    "viewAll": "Ver tudo",
-    "items": [
-      {
-        "index": "01",
-        "title": "Atlantic Utility",
-        "body": "Essenciais robustos inspirados pela costa norte da Madeira — falésias de basalto, vento marítimo e clima atlântico.",
-        "cta": "Ver Utility",
-        "to": "/atlantic-utility"
-      },
-      {
-        "index": "02",
-        "title": "Neblina",
-        "body": "O lado tranquilo da ilha. Estradas com nevoeiro e vales profundos acima de São Vicente.",
-        "cta": "Ver Neblina",
-        "to": "/neblina"
-      },
-      {
-        "index": "03",
-        "title": "Herança Contemporânea",
-        "body": "Antigos símbolos da Madeira e padrões de laurissilva, redesenhados como peças modernas.",
-        "cta": "Ver Herança",
-        "to": "/contemporary-heritage"
-      },
-      {
-        "index": "04",
-        "title": "Ícones da Ilha",
-        "body": "Detalhes reconhecíveis da Madeira, símbolos locais e pequenos momentos da vida insular — redesenhados para hoje.",
-        "cta": "Ver Ícones",
-        "to": "/island-humour"
-      }
-    ]
+    "madeira-t-shirts": {
+      "eyebrow": "T-Shirts",
+      "title": "T-Shirts da Madeira",
+      "intro": "T-shirts em algodão ring-spun com gráficos enraizados na ilha — coordenadas, levadas, laurissilva e humor 100% madeirense. Desenhadas em São Vicente, vestidas em todo o lado.",
+      "metaTitle": "T-Shirts da Madeira | Algodão Premium | Madeira Originals",
+      "metaDescription": "T-shirts premium inspiradas na Madeira, em algodão ring-spun. Gráficos da ilha, coordenadas e cortes modernos. Desenhadas em São Vicente, Madeira.",
+      "faqs": [
+        {
+          "question": "Onde são desenhadas as vossas t-shirts da Madeira?",
+          "answer": "Todas as t-shirts são desenhadas em São Vicente, na costa norte da Madeira. Os gráficos partem das coordenadas da ilha, das levadas, da laurissilva e do humor madeirense — nunca de clichés de loja de recordações."
+        },
+        {
+          "question": "Como servem as t-shirts?",
+          "answer": "As nossas t-shirts têm um corte moderno e fiel ao tamanho — ligeiramente largo, ombro descaído e espaço para sobrepor. Cada página de produto indica as medidas exactas de peito e comprimento para escolheres o tamanho certo."
+        },
+        {
+          "question": "De que tecido são feitas as t-shirts?",
+          "answer": "100% algodão ring-spun (160 g/m²). Macio, respirável e feito para manter a forma lavagem após lavagem — o oposto das t-shirts finas de turista."
+        },
+        {
+          "question": "Enviam t-shirts para todo o mundo?",
+          "answer": "Sim. Enviamos para todo o mundo a partir dos nossos parceiros de produção na UE, Reino Unido e EUA. As encomendas para a Madeira e Portugal continental chegam normalmente em 3 a 6 dias úteis; internacionais em 5 a 10."
+        },
+        {
+          "question": "São mesmo t-shirts da Madeira ou apenas com tema de Portugal?",
+          "answer": "São mesmo da Madeira. A Madeira Originals é uma marca madeirense nascida em São Vicente. Os gráficos, a linguagem e as referências vêm da própria ilha — não de iconografia genérica de \"Portugal\"."
+        },
+        {
+          "question": "Posso devolver uma t-shirt se não servir?",
+          "answer": "Sim. T-shirts por usar e por lavar podem ser devolvidas até 14 dias após a entrega. Escreve-nos e enviamos as instruções de devolução."
+        }
+      ]
+    },
+    "madeira-hoodies": {
+      "eyebrow": "Hoodies",
+      "title": "Hoodies da Madeira",
+      "intro": "Hoodies de peso atlântico, feitas para os microclimas da Madeira — e para todos os invernos da diáspora. Felpo premium, cortes oversized modernos, detalhes da ilha.",
+      "metaTitle": "Hoodies da Madeira | Hoodies Premium | Madeira Originals",
+      "metaDescription": "Hoodies premium da Madeira em felpo de peso atlântico. Cortes modernos inspirados nas paisagens e na cultura da ilha. Desenhadas em São Vicente."
+    },
+    "madeira-accessories": {
+      "eyebrow": "Acessórios",
+      "title": "Acessórios da Madeira",
+      "intro": "Bonés, totes, gorros e pequenos essenciais da ilha. Branding discreto, feitos para durar.",
+      "metaTitle": "Acessórios da Madeira | Bonés, Totes e Essenciais | Madeira Originals",
+      "metaDescription": "Bonés, totes, gorros e acessórios inspirados na Madeira. Materiais premium, design editorial, desenhados em São Vicente, Madeira."
+    },
+    "madeira-stickers": {
+      "eyebrow": "Autocolantes",
+      "title": "Autocolantes da Madeira",
+      "intro": "Autocolantes die-cut resistentes — coordenadas, micro-ícones e cultura madeirense sem estridência. Feitos com o mesmo processo UV DTF que usamos para marcas.",
+      "metaTitle": "Autocolantes da Madeira | Die-Cut UV | Madeira Originals",
+      "metaDescription": "Autocolantes premium da Madeira — die-cut, UV DTF, resistentes ao tempo. Coordenadas, ícones e cultura de São Vicente, Madeira."
+    },
+    "madeira-streetwear": {
+      "eyebrow": "Streetwear",
+      "title": "Streetwear da Madeira",
+      "intro": "A linha completa da Madeira Originals — t-shirts, hoodies, acessórios. Inspirada na Madeira. Desenhada para todo o lado.",
+      "metaTitle": "Streetwear da Madeira | Vestuário Premium | Madeira Originals",
+      "metaDescription": "A linha completa de vestuário premium da Madeira Originals. T-shirts em algodão ring-spun, hoodies de peso atlântico e acessórios com raiz na ilha, de São Vicente."
+    },
+    "madeira-gifts": {
+      "eyebrow": "Presentes",
+      "title": "Presentes da Madeira",
+      "intro": "Presentes da Madeira a sério, para quem detesta merchandise de loja de turistas. Peças premium, design editorial, o oposto de ímanes e porta-chaves.",
+      "metaTitle": "Presentes da Madeira | Presentes Premium | Madeira Originals",
+      "metaDescription": "Presentes premium da Madeira — vestuário, acessórios, autocolantes. Editoriais, modernos, 0% armadilha para turistas. Desenhados em São Vicente, Madeira."
+    },
+    "atlantic-utility": {
+      "eyebrow": "Coleção 01 · Atlantic Utility",
+      "title": "Atlantic Utility",
+      "intro": "Essenciais mínimos e robustos, inspirados na vida numa ilha vulcânica. Algodão ring-spun, detalhes técnicos, feitos para o nevoeiro, o vento e o sal — o uniforme silencioso da costa norte.",
+      "metaTitle": "Atlantic Utility | Madeira Originals",
+      "metaDescription": "Atlantic Utility — essenciais de vestuário mínimos e robustos para a vida numa ilha vulcânica. Algodão ring-spun, detalhes técnicos. Desenhados em São Vicente, Madeira."
+    },
+    "neblina": {
+      "eyebrow": "Coleção 02 · Neblina",
+      "title": "Neblina",
+      "intro": "São Vicente em forma de tecido — picos com nevoeiro, texturas de basalto e o tempo calmo da costa norte. Um estudo da face mais bruta da Madeira.",
+      "metaTitle": "Neblina | Madeira Originals",
+      "metaDescription": "Neblina — vestuário inspirado no nevoeiro de São Vicente, nas falésias de basalto e no tempo atlântico da costa norte da Madeira. Desenhado em São Vicente."
+    },
+    "contemporary-heritage": {
+      "eyebrow": "Coleção 03 · Contemporary Heritage",
+      "title": "Contemporary Heritage",
+      "intro": "Tradição bem traduzida. Símbolos madeirenses, geometria de azulejo e coordenadas da ilha redesenhados com a contenção de uma marca moderna.",
+      "metaTitle": "Contemporary Heritage | Madeira Originals",
+      "metaDescription": "Contemporary Heritage — referências tradicionais da Madeira reinterpretadas em design de vestuário moderno. Desenhado em São Vicente, Madeira."
+    },
+    "island-humour": {
+      "eyebrow": "Coleção 04 · Island Icons",
+      "title": "Island Icons",
+      "intro": "Detalhes reconhecíveis da Madeira, símbolos locais e pequenos momentos da vida da ilha — redesenhados para hoje. Tratados com a seriedade de uma marca premium.",
+      "metaTitle": "Island Icons | Madeira Originals",
+      "metaDescription": "Island Icons — detalhes reconhecíveis da Madeira e símbolos locais em vestuário premium. Desenhados em São Vicente, Madeira."
+    }
   },
   "origin": {
     "overline": "Origem",
@@ -935,7 +997,9 @@
     "emptyBody": "Lançamos novidades regularmente. Vê entretanto a loja completa.",
     "emptyCta": "Ver tudo",
     "faq": "FAQ",
-    "faqHeadingSuffix": "— Perguntas, respondidas"
+    "faqHeadingSuffix": "— Perguntas, respondidas",
+    "count_one": "{{count}} peça",
+    "count_other": "{{count}} peças"
   },
   "auth": {
     "titleLogin": "Entrar.",
