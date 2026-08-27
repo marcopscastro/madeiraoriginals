@@ -16,17 +16,12 @@ export interface CollectionFaq {
 
 export interface CollectionConfig {
   slug: string;
-  eyebrow: string;
-  title: string;
-  intro: string;
-  metaTitle: string;
-  metaDescription: string;
   shopifyQuery: string;
   image?: {
     desktop: string;
     mobile: string;
   };
-  faqs?: CollectionFaq[];
+  hasFaqs?: boolean;
 }
 
 const Collection = ({ config }: { config: CollectionConfig }) => {
@@ -34,6 +29,15 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
   const { data: products = [], isLoading } = useProducts(50, config.shopifyQuery);
   const [sort, setSort] = useState<SortOption>("default");
   const [query, setQuery] = useState("");
+
+  const c = (field: string) => t(`collections.${config.slug}.${field}`);
+  const eyebrow = c("eyebrow");
+  const title = c("title");
+  const intro = c("intro");
+  const faqs = config.hasFaqs
+    ? (t(`collections.${config.slug}.faqs`, { returnObjects: true }) as CollectionFaq[])
+    : [];
+
 
   const filtered = useMemo(() => {
     let list = products;
