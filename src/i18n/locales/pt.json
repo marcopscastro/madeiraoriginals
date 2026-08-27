@@ -21,14 +21,18 @@
     "menu": "Menu",
     "firstDrop": "First Drop",
     "custom": "Personalizado",
-    "islandOfFlowers": "Ilha de Flores"
+    "islandOfFlowers": "Ilha de Flores",
+    "services": "Serviços",
+    "design": "Design",
+    "apparelPrinting": "Impressão em Vestuário",
+    "vinylSignage": "Vinil e Sinalética"
   },
   "footer": {
     "joinHeading": "Junta-te à comunidade.",
     "joinBody": "Acesso antecipado a lançamentos, atualizações de produção e histórias da ilha.",
     "shop": "Loja",
     "brand": "Marca",
-    "business": "Negócios",
+    "business": "Serviços",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
     "copyright": "© 2026 Madeira Originals — Estúdio criativo e de impressão em São Vicente, Madeira, Portugal.",
@@ -51,12 +55,12 @@
     "ctaStory": "A História"
   },
   "studio": {
-    "overline": "Madeira Originals — Studio · B2B",
-    "h1Line1": "Construímos marcas",
-    "h1Line2": "da cozinha até à cloud.",
-    "subcopy": "Infraestrutura digital, vestuário HORECA e branding físico — produzido na Madeira para restaurantes, hotéis, cafés e negócios locais.",
+    "overline": "Madeira Originals — Estúdio",
+    "h1Line1": "A sua marca,",
+    "h1Line2": "em todas as superfícies.",
+    "subcopy": "Desenhamos, imprimimos e produzimos tudo o que o seu negócio mostra ao cliente.",
     "ctaQuote": "Pedir Orçamento Personalizado",
-    "ctaServices": "Ver Serviços",
+    "ctaServices": "Ver serviços",
     "pillarsHeading": "Pilares de Serviço",
     "pillars": {
       "digital": {
@@ -141,8 +145,8 @@
       "invalid": "Código inválido."
     },
     "overline": "Distribuição Wholesale",
-    "heading": "Preços por volume, white-label, packs de stickers.",
-    "sub": "Três linhas para parceiros e distribuidores. Todas as encomendas passam pelo studio em São Vicente.",
+    "heading": "Venda uma marca madeirense que não é uma recordação.",
+    "sub": "Nove desenhos ilustrados de São Vicente e da costa norte, impressos aqui. Compra a €12,50, vende a €25. Reposição em dias, porque estamos na mesma ilha e não no mesmo continente.",
     "signOut": "Sair",
     "sections": {
       "corner": {
@@ -299,8 +303,8 @@
       "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Originals."
     },
     "productionStudio": {
-      "title": "Studio — Vestuário Personalizado, DTF e Branding HORECA na Madeira",
-      "description": "Madeira Originals Studio: vestuário personalizado, impressão DTF, autocolantes UV DTF, branding digital e sinalética física para HORECA e empresas na Madeira."
+      "title": "Serviços — Design, Impressão em Vestuário e Sinalética na Madeira",
+      "description": "Design, impressão em vestuário, vinil e sinalética, e revenda para negócios da Madeira. Tudo o que a sua marca mostra ao cliente, feito em São Vicente."
     },
     "portugalStreetwear": {
       "title": "Streetwear Português — Madeira Originals",
@@ -415,10 +419,10 @@
       },
       {
         "index": "02",
-        "title": "Norte",
+        "title": "Neblina",
         "body": "O lado tranquilo da ilha. Estradas com nevoeiro e vales profundos acima de São Vicente.",
-        "cta": "Ver Norte",
-        "to": "/norte"
+        "cta": "Ver Neblina",
+        "to": "/neblina"
       },
       {
         "index": "03",
@@ -1094,11 +1098,26 @@
     "title": "Encontra o teu tamanho.",
     "lead": "As nossas peças seguem um corte unissexo moderno — descontraído, ligeiramente boxy, fiel ao tamanho. Sobe um tamanho para uma silhueta mais oversized. Todas as medidas são planas, em centímetros, e podem variar ±1 cm.",
     "sections": [
-      { "heading": "Como medir", "body": "Estende uma peça semelhante. O meio-peito mede-se de axila a axila. O comprimento mede-se do ponto mais alto do ombro até à bainha. Compara com a tabela abaixo." },
-      { "heading": "T-shirts (meio-peito / comprimento, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
-      { "heading": "Hoodies (meio-peito / comprimento, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
-      { "heading": "Notas de fit", "body": "O algodão ring-spun tem queda estruturada que amacia com o uso. Se estiveres entre tamanhos, desce um para um fit limpo, sobe um para um look oversized. Os bonés são one-size ajustáveis; as totes são one-size." },
-      { "heading": "Ainda em dúvida?", "body": "Escreve para geral@madeiraoriginals.pt com o teu tamanho habitual e como gostas que assente — recomendamos o certo." }
+      {
+        "heading": "Como medir",
+        "body": "Estende uma peça semelhante. O meio-peito mede-se de axila a axila. O comprimento mede-se do ponto mais alto do ombro até à bainha. Compara com a tabela abaixo."
+      },
+      {
+        "heading": "T-shirts (meio-peito / comprimento, cm)",
+        "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78."
+      },
+      {
+        "heading": "Hoodies (meio-peito / comprimento, cm)",
+        "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78."
+      },
+      {
+        "heading": "Notas de fit",
+        "body": "O algodão ring-spun tem queda estruturada que amacia com o uso. Se estiveres entre tamanhos, desce um para um fit limpo, sobe um para um look oversized. Os bonés são one-size ajustáveis; as totes são one-size."
+      },
+      {
+        "heading": "Ainda em dúvida?",
+        "body": "Escreve para geral@madeiraoriginals.pt com o teu tamanho habitual e como gostas que assente — recomendamos o certo."
+      }
     ]
   },
   "firstDrop": {
@@ -1142,17 +1161,44 @@
       "overline": "O que fazemos",
       "heading": "Vestuário personalizado premium, sem o custo de agência.",
       "items": [
-        { "title": "T-shirts Personalizadas", "body": "T-shirts em algodão ring-spun com o teu design, impressas em DTF para uso duradouro e cor nítida." },
-        { "title": "Fardamentos", "body": "Peças resistentes de sala e cozinha. Feitas para serviço diário e lavagens frequentes." },
-        { "title": "Vestuário para Eventos", "body": "Séries pequenas ou grandes para festivais, provas, aberturas e pop-ups. Resposta rápida quando é preciso." },
-        { "title": "Merch para Pequenos Negócios", "body": "Bonés, totes, hoodies e acessórios. Tratados com o mesmo cuidado da nossa linha retalho — nunca souvenir." },
-        { "title": "Impressão DTF", "body": "Impressão direct-to-film para cor vibrante, detalhe fino e excelente durabilidade na lavagem em mistos de algodão." },
-        { "title": "Autocolantes UV DTF", "body": "Autocolantes recortados, à prova de água e intempéries, para vidros, equipamento, embalagem e merch." }
+        {
+          "title": "T-shirts Personalizadas",
+          "body": "T-shirts em algodão ring-spun com o teu design, impressas em DTF para uso duradouro e cor nítida."
+        },
+        {
+          "title": "Fardamentos",
+          "body": "Peças resistentes de sala e cozinha. Feitas para serviço diário e lavagens frequentes."
+        },
+        {
+          "title": "Vestuário para Eventos",
+          "body": "Séries pequenas ou grandes para festivais, provas, aberturas e pop-ups. Resposta rápida quando é preciso."
+        },
+        {
+          "title": "Merch para Pequenos Negócios",
+          "body": "Bonés, totes, hoodies e acessórios. Tratados com o mesmo cuidado da nossa linha retalho — nunca souvenir."
+        },
+        {
+          "title": "Impressão DTF",
+          "body": "Impressão direct-to-film para cor vibrante, detalhe fino e excelente durabilidade na lavagem em mistos de algodão."
+        },
+        {
+          "title": "Autocolantes UV DTF",
+          "body": "Autocolantes recortados, à prova de água e intempéries, para vidros, equipamento, embalagem e merch."
+        }
       ]
     },
     "audiences": {
       "overline": "Para",
-      "items": ["Restaurantes", "Hotéis", "Cafés", "Bares", "Eventos", "Turismo", "Clubes", "Negócios Locais"]
+      "items": [
+        "Restaurantes",
+        "Hotéis",
+        "Cafés",
+        "Bares",
+        "Eventos",
+        "Turismo",
+        "Clubes",
+        "Negócios Locais"
+      ]
     },
     "form": {
       "overline": "Pedir Orçamento",
@@ -1179,6 +1225,83 @@
         "stickers": "Autocolantes UV DTF",
         "other": "Outro"
       }
+    }
+  },
+  "services": {
+    "listHeading": "O que inclui",
+    "processHeading": "Como funciona",
+    "hubHeading": "Serviços",
+    "hubItems": [
+      {
+        "title": "Design",
+        "desc": "Logótipo e identidade visual, ilustração original, material impresso, manual de marca.",
+        "to": "/design"
+      },
+      {
+        "title": "Impressão em Vestuário",
+        "desc": "Fardas e merchandising, impressos na nossa própria máquina DTF em São Vicente.",
+        "to": "/apparel-printing"
+      },
+      {
+        "title": "Vinil e Sinalética",
+        "desc": "Vinil de montra, letras recortadas, autocolantes e placas, prontos a aplicar.",
+        "to": "/vinyl-signage"
+      },
+      {
+        "title": "Revenda",
+        "desc": "Venda a nossa linha ilustrada da Madeira a preços de revenda, com reposição da mesma ilha.",
+        "to": "/wholesale"
+      }
+    ],
+    "cta": {
+      "heading": "Diga-nos o que precisa.",
+      "body": "Mande uma ideia, uma foto do espaço, ou um rabisco num guardanapo. Recebe uma resposta a sério e um preço em 48 horas.",
+      "button": "Pedir orçamento"
+    },
+    "design": {
+      "overline": "Design",
+      "hero": "O seu negócio, desenhado como deve ser.",
+      "intro": "A maioria dos pequenos negócios desta ilha anda com um logótipo feito no Word há quinze anos, ou um ícone comprado por nove euros. Nota-se. Aqui desenha-se de raiz — a marca, a tipografia, as cores, e a forma como tudo isso funciona em cada coisa que imprime.",
+      "list": [
+        "Logótipo e identidade visual",
+        "Ilustração original",
+        "Menus, cartões, material impresso",
+        "Manual de marca que pode entregar a qualquer pessoa"
+      ],
+      "process": [
+        "Uma conversa sobre o negócio, não um formulário.",
+        "Conceitos para ver, normalmente dois ou três.",
+        "Revisões até estar certo.",
+        "Ficheiros finais, em todos os formatos de que vai precisar."
+      ],
+      "seoTitle": "Design Gráfico na Madeira — Logótipos, Identidade e Impressão",
+      "seoDescription": "Logótipos, identidade visual, ilustração e material impresso para negócios da Madeira. Desenhado de raiz em São Vicente."
+    },
+    "apparel": {
+      "overline": "Impressão em Vestuário",
+      "hero": "Fardas e merchandising, impressos aqui.",
+      "intro": "Imprimimos na nossa própria máquina DTF em São Vicente. Isso quer dizer sem encomenda mínima de quinhentas unidades, sem seis semanas à espera que venha de barco, e sem cobrar uma reimpressão só porque contratou mais duas pessoas em julho.",
+      "list": [
+        "Fardas para equipa",
+        "Merchandising para vender",
+        "Desenhos exclusivos, só seus",
+        "Reposições em dias, não meses"
+      ],
+      "seoTitle": "Impressão em Vestuário na Madeira — Fardas e Merchandising",
+      "seoDescription": "Fardas para equipa e merchandising impressos na nossa máquina DTF em São Vicente, Madeira. Sem grandes mínimos de encomenda."
+    },
+    "vinyl": {
+      "overline": "Vinil e Sinalética",
+      "hero": "A parte que os clientes veem primeiro.",
+      "intro": "Uma montra, uma porta, uma parede, uma placa por cima do balcão. Desenhamos e produzimos na mesma linguagem visual de tudo o resto que tem, pronto a aplicar.",
+      "list": [
+        "Vinil de montra e letras recortadas",
+        "Autocolantes recortados",
+        "Placas e sinalética interior",
+        "Entregue cortado, descascado e com fita de aplicação, pronto a colar"
+      ],
+      "seoTitle": "Vinil e Sinalética na Madeira — Montras, Autocolantes e Placas",
+      "seoDescription": "Vinil de montra, letras recortadas, autocolantes e sinalética interior desenhados e produzidos em São Vicente, Madeira."
     }
   }
 }

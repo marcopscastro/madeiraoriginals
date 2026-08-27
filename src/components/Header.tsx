@@ -30,22 +30,27 @@ const Header = () => {
 
   const navLinks = [
     {
+      label: t("nav.services"),
+      href: "/studio",
+      children: [
+        { label: t("nav.design"), href: "/design" },
+        { label: t("nav.apparelPrinting"), href: "/apparel-printing" },
+        { label: t("nav.vinylSignage"), href: "/vinyl-signage" },
+        { label: t("nav.wholesale"), href: "/wholesale" },
+      ],
+    },
+    {
       label: t("nav.shop"),
       href: "/shop",
       children: [
         { label: t("nav.shopAll"), href: "/shop" },
         { label: t("nav.firstDrop"), href: "/first-drop" },
-        
         { label: t("nav.tshirts"), href: "/madeira-t-shirts" },
         { label: t("nav.hoodies"), href: "/madeira-hoodies" },
         { label: t("nav.accessories"), href: "/madeira-accessories" },
         { label: t("nav.stickers"), href: "/madeira-stickers" },
       ],
     },
-    { label: t("nav.studio"), href: "/studio" },
-    { label: t("nav.custom"), href: "/custom" },
-    { label: t("nav.wholesale"), href: "/wholesale" },
-    { label: t("nav.journal"), href: "/journal" },
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.contact"), href: "/contact" },
   ] as { label: string; href: string; children?: { label: string; href: string }[] }[];

@@ -20,8 +20,9 @@ const Footer = () => {
     {
       heading: t("footer.business"),
       links: [
-        { label: t("footer.studio"), to: "/studio" },
-        { label: t("nav.custom"), to: "/custom" },
+        { label: t("nav.design"), to: "/design" },
+        { label: t("nav.apparelPrinting"), to: "/apparel-printing" },
+        { label: t("nav.vinylSignage"), to: "/vinyl-signage" },
         { label: t("footer.wholesale"), to: "/wholesale" },
       ],
     },

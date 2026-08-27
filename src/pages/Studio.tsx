@@ -4,15 +4,16 @@ import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import StudioQuoteForm from "@/components/StudioQuoteForm";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
+import { Link } from "@/components/LocaleLink";
 
 const Studio = () => {
   const { t } = useTranslation();
 
-  const pillars = [
-    { key: "digital" as const, num: "01" },
-    { key: "apparel" as const, num: "02" },
-    { key: "physical" as const, num: "03" },
-  ];
+  const services = t("services.hubItems", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+    to: string;
+  }[];
 
   return (
     <div className="min-h-screen bg-background">
@@ -53,24 +54,25 @@ const Studio = () => {
           </div>
         </section>
 
-        {/* Pillars */}
+        {/* Services */}
         <section id="pillars" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
-            {t("studio.pillarsHeading")}
+            {t("services.hubHeading")}
           </p>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-foreground/15 border border-foreground/15">
-            {pillars.map((p) => (
-              <article key={p.key} className="bg-background p-8 md:p-10">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/15 border border-foreground/15">
+            {services.map((s, i) => (
+              <Link key={s.to} to={s.to} className="group bg-background p-8 md:p-10 hover:bg-muted transition-colors">
                 <p className="font-heading text-xs font-bold uppercase tracking-widest text-primary mb-4">
-                  {p.num}
+                  {String(i + 1).padStart(2, "0")}
                 </p>
-                <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                  {t(`studio.pillars.${p.key}.title`)}
-                </h3>
-                <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  {t(`studio.pillars.${p.key}.items`)}
-                </p>
-              </article>
+                <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+                  {s.title}
+                </h2>
+                <p className="font-body text-base text-muted-foreground leading-relaxed">{s.desc}</p>
+                <span className="mt-6 inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary group-hover:opacity-70">
+                  {t("services.cta.button")} →
+                </span>
+              </Link>
             ))}
           </div>
         </section>

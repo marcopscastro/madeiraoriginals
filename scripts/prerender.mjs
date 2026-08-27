@@ -24,6 +24,10 @@ const STATIC_ROUTES = [
   "/",
   "/shop",
   "/studio",
+  "/design",
+  "/apparel-printing",
+  "/vinyl-signage",
+  "/neblina",
   "/wholesale",
   "/culture",
   "/about",
@@ -41,7 +45,6 @@ const STATIC_ROUTES = [
   "/returns",
   "/care",
   "/size-guide",
-  "/custom",
 ];
 
 // Mirror src/lib/shopify.ts — keep in sync.

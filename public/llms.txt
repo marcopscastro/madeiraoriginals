@@ -25,7 +25,10 @@ The page list below shows the Portuguese (root) URLs. Prefix any of them with `/
 - [Madeira Stickers](/madeira-stickers): Durable die-cut UV DTF stickers.
 - [Madeira Streetwear](/madeira-streetwear): The full apparel line.
 - [Madeira Gifts](/madeira-gifts): Curated gift selection from Madeira.
-- [Studio](/studio): DTF, UV DTF, custom apparel, and team graphics for businesses.
+- [Services](/studio): Services hub — design, apparel printing, vinyl and signage, wholesale.
+- [Design](/design): Logo, visual identity, illustration and printed material.
+- [Apparel Printing](/apparel-printing): Staff uniforms and merchandise, DTF printed in São Vicente.
+- [Vinyl & Signage](/vinyl-signage): Window vinyl, cut lettering, decals and interior signs — design and supply.
 - [Wholesale](/wholesale): Trade and distributor programme.
 - [Culture](/culture): Stories and inspiration from Madeira.
 - [About](/about): Brand story, values, and team.

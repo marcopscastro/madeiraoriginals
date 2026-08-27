@@ -145,6 +145,70 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://madeiraoriginals.pt/design</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/design" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/design" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/design</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/design" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/design" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/apparel-printing</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/apparel-printing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/apparel-printing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/apparel-printing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/apparel-printing</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/apparel-printing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/apparel-printing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/apparel-printing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/vinyl-signage</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/vinyl-signage" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/vinyl-signage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/vinyl-signage" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/vinyl-signage</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/vinyl-signage" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/vinyl-signage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/vinyl-signage" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/neblina</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/neblina" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/neblina" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/neblina" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/neblina</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/neblina" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/neblina" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/neblina" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://madeiraoriginals.pt/wholesale</loc>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/wholesale" />
     <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/wholesale" />

@@ -130,15 +130,15 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
     shopifyQuery: "tag:atlantic-utility OR tag:utility",
     image: SECTION_IMAGES["atlantic-utility"],
   },
-  "norte": {
-    slug: "norte",
-    eyebrow: "Collection 02 · Norte",
-    title: "Norte",
+  "neblina": {
+    slug: "neblina",
+    eyebrow: "Collection 02 · Neblina",
+    title: "Neblina",
     intro:
       "São Vicente in fabric form — foggy peaks, basalt textures and the quiet weather of the north coast. A study of Madeira's wildest face.",
-    metaTitle: "Norte | Madeira Originals",
+    metaTitle: "Neblina | Madeira Originals",
     metaDescription:
-      "Norte — apparel inspired by São Vicente fog, basalt cliffs and the Atlantic weather of Madeira's north coast. Designed in São Vicente.",
+      "Neblina — apparel inspired by São Vicente fog, basalt cliffs and the Atlantic weather of Madeira's north coast. Designed in São Vicente.",
     shopifyQuery: "tag:norte OR tag:sao-vicente",
     image: SECTION_IMAGES.norte,
   },

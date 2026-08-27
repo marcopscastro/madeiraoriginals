@@ -27,6 +27,9 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 const Studio = lazy(() => import("./pages/Studio"));
+const Design = lazy(() => import("./pages/Design"));
+const ApparelPrinting = lazy(() => import("./pages/ApparelPrinting"));
+const VinylSignage = lazy(() => import("./pages/VinylSignage"));
 const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
@@ -42,7 +45,6 @@ const Shipping = lazy(() => import("./pages/Shipping"));
 const Returns = lazy(() => import("./pages/Returns"));
 const Care = lazy(() => import("./pages/Care"));
 const SizeGuide = lazy(() => import("./pages/SizeGuide"));
-const Custom = lazy(() => import("./pages/Custom"));
 const Catalogo = lazy(() => import("./pages/Catalogo"));
 const CatalogoCategory = lazy(() => import("./pages/CatalogoCategory"));
 const CatalogoProduto = lazy(() => import("./pages/CatalogoProduto"));
@@ -112,6 +114,10 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         <Route path="b2b" element={<LocaleRedirect to="/studio" lang={lang} />} />
         <Route path="production-studio" element={<LocaleRedirect to="/studio" lang={lang} />} />
         <Route path="horeca" element={<LocaleRedirect to="/studio" lang={lang} />} />
+        <Route path="design" element={<Design />} />
+        <Route path="apparel-printing" element={<ApparelPrinting />} />
+        <Route path="vinyl-signage" element={<VinylSignage />} />
+        <Route path="norte" element={<LocaleRedirect to="/neblina" lang={lang} />} />
         <Route path="wholesale" element={<Wholesale />} />
         <Route path="portugal-streetwear" element={<PortugalStreetwear />} />
         <Route path="madeira-souvenirs" element={<MadeiraSouvenirs />} />
@@ -130,7 +136,7 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         <Route path="size-guide" element={<SizeGuide />} />
         <Route path="sizing" element={<LocaleRedirect to="/size-guide" lang={lang} />} />
         <Route path="shipping-returns" element={<LocaleRedirect to="/shipping" lang={lang} />} />
-        <Route path="custom" element={<Custom />} />
+        <Route path="custom" element={<LocaleRedirect to="/apparel-printing" lang={lang} />} />
         <Route path="catalogo" element={<Catalogo />} />
         <Route path="catalogo/produto/:id" element={<CatalogoProduto />} />
         <Route path="catalogo/:category" element={<CatalogoCategory />} />
