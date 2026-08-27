@@ -48,11 +48,11 @@
     "overline": "Volume 01 · A Nossa Ilha",
     "coords": "32°N · Oceano Atlântico",
     "scroll": "Scroll",
-    "headline1": "Inspirado pela Madeira.",
-    "headline2": "Criado para ser usado em qualquer lugar.",
-    "body": "Vestuário premium de um pequeno estúdio na costa norte da Madeira.",
-    "ctaShop": "Ver Colecção",
-    "ctaStory": "A História"
+    "headline1": "A sua marca,",
+    "headline2": "em todas as superfícies.",
+    "body": "Estúdio criativo e de impressão em São Vicente. Logótipos, fardas, merchandising e sinalética — desenhados e produzidos na costa norte.",
+    "ctaQuote": "Pedir orçamento",
+    "ctaServices": "Ver serviços"
   },
   "studio": {
     "overline": "Madeira Originals — Estúdio",
@@ -279,8 +279,8 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Originals — Estúdio Criativo & de Impressão | São Vicente, Madeira",
-      "description": "Estúdio criativo e de impressão em São Vicente, Madeira. Design gráfico, impressão de vestuário personalizado, sinalética e a nossa coleção inspirada na Madeira."
+      "title": "Madeira Originals — Estúdio Criativo & Impressão | São Vicente",
+      "description": "Estúdio criativo e de impressão em São Vicente. Logótipos, fardas, merchandising e sinalética — desenhados e produzidos na costa norte da Madeira."
     },
     "shop": {
       "title": "Loja — T-Shirts, Hoodies e Vestuário da Madeira",
@@ -331,10 +331,51 @@
     "admin": "Admin"
   },
   "valueBanner": {
-    "designed": "Desenhado em São Vicente",
-    "cotton": "Algodão ring-spun premium",
-    "noTrap": "0% tourist trap",
-    "shipped": "Envio para todo o mundo"
+    "made": "Desenhado e impresso em São Vicente",
+    "scope": "Do logótipo à montra",
+    "exclusive": "Desenhos exclusivos por cliente",
+    "label": "Temos marca própria"
+  },
+  "home": {
+    "positioning": {
+      "heading": "A maioria dos negócios compra a sua imagem aos bocados.",
+      "body1": "O logótipo num sítio. As fardas noutro. A placa com alguém no Funchal que nunca viu o espaço. Raramente parece tudo da mesma marca.",
+      "body2": "Aqui trata-se de tudo — o desenho, a impressão, a montagem — para que tudo o que o cliente vê pertença ao mesmo lugar."
+    },
+    "servicesItems": [
+      {
+        "title": "Design",
+        "desc": "Logótipos, identidade visual, ilustração, menus, material impresso.",
+        "to": "/design"
+      },
+      {
+        "title": "Impressão em Vestuário",
+        "desc": "Fardas, t-shirts, merchandising. Impressão DTF nas nossas máquinas.",
+        "to": "/apparel-printing"
+      },
+      {
+        "title": "Vinil e Sinalética",
+        "desc": "Vinil de montra, letras aplicadas, placas e autocolantes recortados.",
+        "to": "/vinyl-signage"
+      },
+      {
+        "title": "Revenda",
+        "desc": "A nossa coleção própria para lojas, hotéis e operadores. A partir de 25 unidades.",
+        "to": "/wholesale"
+      }
+    ],
+    "caseStudy": {
+      "eyebrow": "Caso de estudo · São Vicente",
+      "heading": "Um restaurante. Uma imagem. Tudo.",
+      "body": "Chegaram aqui para um desenho. Saíram com ilustrações exclusivas, uma linha de fardas, merchandising que os clientes compram mesmo e um site próprio. Feito pelas mesmas mãos, do princípio ao fim.",
+      "cta": "Ver o caso de estudo"
+    },
+    "houseBrand": {
+      "eyebrow": "Marca própria",
+      "heading": "Também fazemos coisas para nós.",
+      "body": "A Madeira Originals começou como coleção — peças ilustradas de São Vicente, impressas nas nossas máquinas. Continua a ser o melhor argumento que temos para o que fazemos. E está à venda.",
+      "cta": "Ver a coleção"
+    }
   },
   "manifesto": {
     "overline": "Manifesto",
@@ -445,7 +486,7 @@
     "headingA": "Feito em São Vicente,",
     "headingB": "na costa norte da ilha.",
     "body1": "São Vicente é onde o Atlântico bate nas falésias de basalto negro e o nevoeiro desce da laurissilva até à vila. A maior parte dos visitantes passa por aqui a caminho de outro sítio.",
-    "body2": "Nós ficámos, e montámos o estúdio aqui. Tudo o que vendemos é feito neste vale.",
+    "body2": "Começámos aqui porque a ilha merecia melhor do que aquilo que havia, e porque os negócios desta costa eram sempre os últimos a ser servidos. Tudo o que fazemos é desenhado, impresso e acabado em São Vicente.",
     "cta": "Ler a história completa",
     "imageAlt": "Vila de São Vicente sob nevoeiro na costa norte da Madeira",
     "captionPlace": "São Vicente · Madeira",
@@ -463,8 +504,8 @@
         "v": "Interna"
       },
       {
-        "k": "Envio",
-        "v": "Mundial"
+        "k": "Clientes",
+        "v": "Ilha e mundo"
       }
     ]
   },
