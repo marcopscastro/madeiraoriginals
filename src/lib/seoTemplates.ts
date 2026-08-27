@@ -49,14 +49,14 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Originals — Creative & Print Studio | São Vicente, Madeira",
+    title: "Madeira Originals — Creative & Print Studio | São Vicente",
     description:
-      "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection.",
+      "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
     path: "/",
     eyebrow: "Madeira Originals",
-    h1: "Premium Madeira Streetwear",
+    h1: "Your brand, on every surface.",
     intro:
-      "Editorial Madeira t-shirts, hoodies and accessories — designed in São Vicente, shipped worldwide.",
+      "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
   },
   shop: {
     title: "Shop Madeira T-Shirts, Hoodies & Apparel",
