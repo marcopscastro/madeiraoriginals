@@ -31,7 +31,7 @@
     "business": "Business",
     "studio": "Studio (B2B)",
     "wholesale": "Wholesale",
-    "copyright": "© 2026 Madeira Originals — Premium streetwear, apparel & custom printing born in São Vicente, Madeira, Portugal.",
+    "copyright": "© 2026 Madeira Originals — Creative & print studio in São Vicente, Madeira, Portugal.",
     "support": "Support",
     "shipping": "Shipping",
     "returns": "Returns",
@@ -231,7 +231,7 @@
     "comingSoon": "Coming Soon",
     "reviewsOne": "review",
     "reviewsOther": "reviews",
-    "tagline": "✦ Designed in Madeira · Premium heavyweight cotton · Worldwide shipping",
+    "tagline": "✦ Designed in Madeira · Premium ring-spun cotton · Worldwide shipping",
     "quantity": "Quantity",
     "onlyLeft": "only {{stock}} left",
     "decreaseQty": "Decrease quantity",
@@ -275,28 +275,28 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Streetwear & Custom Apparel",
-      "description": "Madeira Originals — premium Madeira streetwear, t-shirts and custom apparel born in São Vicente. Inspired by Madeira, designed for everywhere. 0% tourist trap."
+      "title": "Madeira Originals — Creative & Print Studio | São Vicente, Madeira",
+      "description": "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection."
     },
     "shop": {
-      "title": "Shop Madeira T-Shirts, Hoodies & Streetwear",
-      "description": "Shop premium Madeira t-shirts, hoodies, accessories and streetwear by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
+      "title": "Shop Madeira T-Shirts, Hoodies & Apparel",
+      "description": "Shop premium Madeira t-shirts, hoodies and accessories by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
     },
     "about": {
-      "title": "About Madeira Originals — Streetwear from Madeira",
-      "description": "Madeira Originals is a premium Madeira streetwear and custom apparel brand from São Vicente — inspired by island heritage, culture and modern design."
+      "title": "About Madeira Originals — Creative & Print Studio in Madeira",
+      "description": "Madeira Originals is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design."
     },
     "contact": {
       "title": "Contact Madeira Originals — São Vicente, Madeira",
-      "description": "Get in touch with Madeira Originals — premium Madeira streetwear and custom apparel production based in São Vicente, Madeira, Portugal."
+      "description": "Get in touch with Madeira Originals — a creative and print studio based in São Vicente, Madeira, Portugal."
     },
     "culture": {
       "title": "Madeira Culture — Identity, Landscape & Atlantic Heritage",
       "description": "A guide to Madeira culture: volcanic landscapes, Atlantic identity, traditions, food, drink and the modern Madeira lifestyle that inspires our designs."
     },
     "journal": {
-      "title": "Madeira Originals Journal — Culture, Streetwear & Design",
-      "description": "Stories about Madeira culture, modern streetwear, island identity, custom apparel production and the design philosophy behind Madeira Originals."
+      "title": "Madeira Originals Journal — Culture, Design & Print",
+      "description": "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals."
     },
     "productionStudio": {
       "title": "Studio — Custom Apparel, DTF & HORECA Branding in Madeira",
@@ -304,11 +304,11 @@
     },
     "portugalStreetwear": {
       "title": "Portugal Streetwear — Madeira Originals",
-      "description": "A Portuguese streetwear brand from Madeira. Premium tees, bags and headwear designed in São Vicente — Portugal streetwear made on the island, shipped worldwide."
+      "description": "Premium tees, bags and headwear designed in São Vicente, Madeira — Portuguese design made on the island, shipped worldwide."
     },
     "madeiraSouvenirs": {
       "title": "Madeira Souvenirs Guide — Real Gifts From Madeira",
-      "description": "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran streetwear brand in São Vicente. Worldwide shipping."
+      "description": "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran creative studio in São Vicente. Worldwide shipping."
     },
     "auth": {
       "title": "Sign in — Madeira Originals",
@@ -328,7 +328,7 @@
   },
   "valueBanner": {
     "designed": "Designed in São Vicente",
-    "cotton": "Premium heavyweight cotton",
+    "cotton": "Premium ring-spun cotton",
     "noTrap": "0% tourist trap",
     "shipped": "Shipped worldwide"
   },
@@ -345,7 +345,7 @@
       },
       {
         "title": "Editorial Design",
-        "body": "Restrained typography and minimalist graphics on heavyweight blanks. No loud logos."
+        "body": "Restrained typography and minimalist graphics on ring-spun cotton blanks. No loud logos."
       },
       {
         "title": "Made in-house",
@@ -502,7 +502,7 @@
     "items": [
       {
         "label": "T-Shirts",
-        "desc": "Heavyweight tees with island-rooted graphics"
+        "desc": "Ring-spun cotton tees with island-rooted graphics"
       },
       {
         "label": "Hoodies",
@@ -598,7 +598,7 @@
         {
           "k": "04",
           "title": "Premium Quality",
-          "body": "Heavyweight cotton and finishes that soften with wear instead of falling apart."
+          "body": "Ring-spun cotton and finishes that soften with wear instead of falling apart."
         },
         {
           "k": "05",
@@ -730,7 +730,7 @@
       {
         "eyebrow": "For the souvenir-hater",
         "title": "A Madeira T-Shirt that isn't a tourist tee.",
-        "body": "Heavyweight cotton, island-rooted graphics — coordinates, levadas, Madeiran humour. Worn properly, not folded into a suitcase as an afterthought.",
+        "body": "Ring-spun cotton, island-rooted graphics — coordinates, levadas, Madeiran humour. Worn properly, not folded into a suitcase as an afterthought.",
         "cta": "Shop Madeira T-Shirts"
       },
       {
@@ -813,7 +813,7 @@
       "overline": "Portugal Streetwear · Made in Madeira",
       "headingA": "A Portuguese streetwear brand",
       "headingB": "from an island, not a capital.",
-      "body": "Madeira Originals is a premium Portuguese streetwear brand born in São Vicente, Madeira. Heavyweight tees, technical headwear, everyday carry — designed in PT, shipped worldwide.",
+      "body": "Madeira Originals is a premium Portuguese streetwear brand born in São Vicente, Madeira. Ring-spun cotton tees, technical headwear, everyday carry — designed in PT, shipped worldwide.",
       "ctaShop": "Shop Streetwear",
       "ctaAbout": "About the Brand"
     },
@@ -824,7 +824,7 @@
       {
         "eyebrow": "T-Shirts",
         "title": "Tees",
-        "body": "Heavyweight cotton tees with island-rooted graphics — coordinates, levadas, laurissilva, Madeiran humour."
+        "body": "Ring-spun cotton tees with island-rooted graphics — coordinates, levadas, laurissilva, Madeiran humour."
       },
       {
         "eyebrow": "Bags & Totes",
@@ -984,7 +984,7 @@
     },
     "care": {
       "title": "Care",
-      "body": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on the print. Our heavyweight cotton softens with wear — it is built for the long haul.",
+      "body": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on the print. Our ring-spun cotton softens with wear — it is built for the long haul.",
       "link": "Full care instructions"
     }
   },
@@ -1060,10 +1060,10 @@
   },
   "carePage": {
     "seoTitle": "Care | Madeira Originals",
-    "seoDescription": "How to care for heavyweight cotton, DTF prints, and embroidered pieces so they last for years.",
+    "seoDescription": "How to care for ring-spun cotton, DTF prints, and embroidered pieces so they last for years.",
     "overline": "Care",
     "title": "Built to soften with wear.",
-    "lead": "Our pieces are made from heavyweight cotton with premium DTF printing. Treated well, they age beautifully — softer, more personal, more yours.",
+    "lead": "Our pieces are made from ring-spun cotton with premium DTF printing. Treated well, they age beautifully — softer, more personal, more yours.",
     "sections": [
       {
         "heading": "01 — Washing",
@@ -1079,17 +1079,17 @@
       },
       {
         "heading": "04 — Storage",
-        "body": "Fold heavyweight pieces flat rather than hanging — long-term hanging stretches the shoulders. Keep away from direct sunlight to preserve the colour."
+        "body": "Fold pieces flat rather than hanging — long-term hanging stretches the shoulders. Keep away from direct sunlight to preserve the colour."
       },
       {
         "heading": "05 — Over time",
-        "body": "Heavyweight cotton softens with every wash. A small amount of fading and natural texture is part of the material — not a defect. The pieces are built to be worn, often."
+        "body": "Ring-spun cotton softens with every wash. A small amount of fading and natural texture is part of the material — not a defect. The pieces are built to be worn, often."
       }
     ]
   },
   "sizeGuidePage": {
     "seoTitle": "Size Guide | Madeira Originals",
-    "seoDescription": "Find your fit. Measurements and fit notes for Madeira Originals heavyweight tees, hoodies and accessories.",
+    "seoDescription": "Find your fit. Measurements and fit notes for Madeira Originals tees, hoodies and accessories.",
     "overline": "Size Guide",
     "title": "Find your fit.",
     "lead": "Our pieces follow a modern unisex cut — relaxed, slightly boxy, true-to-size. Size up for a more oversized streetwear silhouette. All measurements are flat, in centimetres, and may vary by ±1 cm.",
@@ -1097,7 +1097,7 @@
       { "heading": "How to measure", "body": "Lay a similar garment flat. Half-chest is measured from armpit to armpit. Length is from the highest point of the shoulder straight down to the hem. Compare to the table below." },
       { "heading": "T-shirts (half-chest / length, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
       { "heading": "Hoodies (half-chest / length, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
-      { "heading": "Fit notes", "body": "Heavyweight cotton has a structured drape that softens with wear. If you're between sizes, size down for a clean fit, size up for an oversized streetwear look. Caps are one-size adjustable; totes are one-size." },
+      { "heading": "Fit notes", "body": "Ring-spun cotton has a structured drape that softens with wear. If you're between sizes, size down for a clean fit, size up for an oversized streetwear look. Caps are one-size adjustable; totes are one-size." },
       { "heading": "Still unsure?", "body": "Email geral@madeiraoriginals.pt with your usual size and how you like it to fit — we'll recommend the right one." }
     ]
   },
@@ -1105,7 +1105,7 @@
     "overline": "First Drop · São Vicente Collection",
     "headingA": "The first drop,",
     "headingB": "from São Vicente.",
-    "body": "A small launch: heavyweight tees, a hoodie, a cap and a tote. We're finishing production now. Join the list and you'll get first access when it lands.",
+    "body": "A small launch: tees, a hoodie, a cap and a tote. We're finishing production now. Join the list and you'll get first access when it lands.",
     "cta": "Explore the First Drop",
     "soonTitle": "Coming soon.",
     "soonBody": "The First Drop is being prepared in São Vicente. Join the list below to get early access when it lands."
@@ -1142,7 +1142,7 @@
       "overline": "What we make",
       "heading": "Premium custom apparel, without the agency overhead.",
       "items": [
-        { "title": "Custom T-Shirts", "body": "Heavyweight cotton tees with your design, printed in DTF for long-term wear and crisp colour." },
+        { "title": "Custom T-Shirts", "body": "Ring-spun cotton tees with your design, printed in DTF for long-term wear and crisp colour." },
         { "title": "Staff Uniforms", "body": "Hard-wearing front-of-house and back-of-house pieces. Built for daily service and frequent washing." },
         { "title": "Event Apparel", "body": "Small or large runs for festivals, races, openings and pop-ups. Fast turnaround when you need it." },
         { "title": "Small-Business Merch", "body": "Caps, totes, hoodies and accessories. Treated with the same care as our retail line — never souvenir-grade." },

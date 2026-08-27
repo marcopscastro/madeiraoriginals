@@ -31,7 +31,7 @@
     "business": "Negócios",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
-    "copyright": "© 2026 Madeira Originals — Streetwear premium, vestuário e impressão personalizada, nascidos em São Vicente, Madeira, Portugal.",
+    "copyright": "© 2026 Madeira Originals — Estúdio criativo e de impressão em São Vicente, Madeira, Portugal.",
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
@@ -231,7 +231,7 @@
     "comingSoon": "Em breve",
     "reviewsOne": "avaliação",
     "reviewsOther": "avaliações",
-    "tagline": "✦ Desenhado na Madeira · Algodão premium pesado · Envio para todo o mundo",
+    "tagline": "✦ Desenhado na Madeira · Algodão ring-spun premium · Envio para todo o mundo",
     "quantity": "Quantidade",
     "onlyLeft": "só restam {{stock}}",
     "decreaseQty": "Diminuir quantidade",
@@ -275,28 +275,28 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Streetwear da Madeira & Vestuário Personalizado",
-      "description": "Madeira Originals — streetwear premium da Madeira, t-shirts e vestuário personalizado nascidos em São Vicente. Inspirada na Madeira, desenhada para o mundo. 0% tourist trap."
+      "title": "Madeira Originals — Estúdio Criativo & de Impressão | São Vicente, Madeira",
+      "description": "Estúdio criativo e de impressão em São Vicente, Madeira. Design gráfico, impressão de vestuário personalizado, sinalética e a nossa coleção inspirada na Madeira."
     },
     "shop": {
-      "title": "Loja — T-Shirts, Hoodies e Streetwear da Madeira",
-      "description": "Compra t-shirts, hoodies, acessórios e streetwear premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
+      "title": "Loja — T-Shirts, Hoodies e Vestuário da Madeira",
+      "description": "Compra t-shirts, hoodies e acessórios premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
     },
     "about": {
-      "title": "Sobre a Madeira Originals — Streetwear da Madeira",
-      "description": "A Madeira Originals é uma marca premium de streetwear e vestuário personalizado de São Vicente, inspirada na herança, cultura e design moderno da ilha."
+      "title": "Sobre a Madeira Originals — Estúdio Criativo na Madeira",
+      "description": "A Madeira Originals é um estúdio criativo e de impressão de São Vicente, Madeira — inspirado na herança, cultura e design moderno da ilha."
     },
     "contact": {
       "title": "Contacto — Madeira Originals, São Vicente",
-      "description": "Fala connosco. Madeira Originals — streetwear premium e produção de vestuário personalizado com sede em São Vicente, Madeira, Portugal."
+      "description": "Fala connosco. Madeira Originals — estúdio criativo e de impressão com sede em São Vicente, Madeira, Portugal."
     },
     "culture": {
       "title": "Cultura Madeirense — Identidade, Paisagem e Herança Atlântica",
       "description": "Um guia da cultura madeirense: paisagens vulcânicas, identidade atlântica, tradições, gastronomia e o estilo de vida moderno que inspira os nossos desenhos."
     },
     "journal": {
-      "title": "Diário Madeira Originals — Cultura, Streetwear e Design",
-      "description": "Histórias sobre a cultura madeirense, streetwear moderno, identidade da ilha, produção de vestuário e a filosofia de design da Madeira Originals."
+      "title": "Diário Madeira Originals — Cultura, Design e Impressão",
+      "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Originals."
     },
     "productionStudio": {
       "title": "Studio — Vestuário Personalizado, DTF e Branding HORECA na Madeira",
@@ -304,11 +304,11 @@
     },
     "portugalStreetwear": {
       "title": "Streetwear Português — Madeira Originals",
-      "description": "Uma marca portuguesa de streetwear nascida na Madeira. T-shirts, sacos e bonés premium desenhados em São Vicente — feito na ilha, enviado para todo o mundo."
+      "description": "T-shirts, sacos e bonés premium desenhados em São Vicente, Madeira — feito na ilha, enviado para todo o mundo."
     },
     "madeiraSouvenirs": {
       "title": "Guia de Souvenirs da Madeira — Presentes Verdadeiros",
-      "description": "Um guia curado dos melhores souvenirs da Madeira e presentes do Funchal — peças premium de uma marca de streetwear madeirense em São Vicente. Envio mundial."
+      "description": "Um guia curado dos melhores souvenirs da Madeira e presentes do Funchal — peças premium de um estúdio criativo madeirense em São Vicente. Envio mundial."
     },
     "auth": {
       "title": "Entrar — Madeira Originals",
@@ -328,7 +328,7 @@
   },
   "valueBanner": {
     "designed": "Desenhado em São Vicente",
-    "cotton": "Algodão premium pesado",
+    "cotton": "Algodão ring-spun premium",
     "noTrap": "0% tourist trap",
     "shipped": "Envio para todo o mundo"
   },
@@ -345,7 +345,7 @@
       },
       {
         "title": "Design Editorial",
-        "body": "Tipografia contida e gráficos minimalistas sobre peças de algodão pesado. Sem logótipos gritantes."
+        "body": "Tipografia contida e gráficos minimalistas sobre peças de algodão ring-spun. Sem logótipos gritantes."
       },
       {
         "title": "Feito em casa",
@@ -502,7 +502,7 @@
     "items": [
       {
         "label": "T-Shirts",
-        "desc": "T-shirts pesadas com gráficos enraizados na ilha"
+        "desc": "T-shirts em algodão ring-spun com gráficos enraizados na ilha"
       },
       {
         "label": "Hoodies",
@@ -598,7 +598,7 @@
         {
           "k": "04",
           "title": "Qualidade Premium",
-          "body": "Algodão pesado e acabamentos que amaciam com o uso em vez de se desfazerem."
+          "body": "Algodão ring-spun e acabamentos que amaciam com o uso em vez de se desfazerem."
         },
         {
           "k": "05",
@@ -730,7 +730,7 @@
       {
         "eyebrow": "Para quem odeia souvenirs",
         "title": "Uma t-shirt da Madeira que não é tee de turista.",
-        "body": "Algodão pesado, gráficos enraizados na ilha — coordenadas, levadas, humor madeirense. Vestida como deve ser, não dobrada na mala como reflexão tardia.",
+        "body": "Algodão ring-spun, gráficos enraizados na ilha — coordenadas, levadas, humor madeirense. Vestida como deve ser, não dobrada na mala como reflexão tardia.",
         "cta": "Ver T-Shirts da Madeira"
       },
       {
@@ -813,7 +813,7 @@
       "overline": "Streetwear Português · Feito na Madeira",
       "headingA": "Uma marca portuguesa de streetwear",
       "headingB": "de uma ilha, não de uma capital.",
-      "body": "A Madeira Originals é uma marca premium de streetwear português nascida em São Vicente, Madeira. T-shirts pesadas, headwear técnico, carry do dia a dia — desenhado em PT, enviado para todo o mundo.",
+      "body": "A Madeira Originals é uma marca premium de streetwear português nascida em São Vicente, Madeira. T-shirts em algodão ring-spun, headwear técnico, carry do dia a dia — desenhado em PT, enviado para todo o mundo.",
       "ctaShop": "Ver Streetwear",
       "ctaAbout": "Sobre a Marca"
     },
@@ -824,7 +824,7 @@
       {
         "eyebrow": "T-Shirts",
         "title": "Tees",
-        "body": "T-shirts pesadas de algodão com gráficos enraizados na ilha — coordenadas, levadas, laurissilva, humor madeirense."
+        "body": "T-shirts em algodão ring-spun com gráficos enraizados na ilha — coordenadas, levadas, laurissilva, humor madeirense."
       },
       {
         "eyebrow": "Sacos & Totes",
@@ -984,7 +984,7 @@
     },
     "care": {
       "title": "Cuidados",
-      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa. O nosso algodão pesado amacia com o uso — é feito para durar.",
+      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro directamente sobre a estampa. O nosso algodão ring-spun amacia com o uso — é feito para durar.",
       "link": "Instruções completas"
     }
   },
@@ -1060,10 +1060,10 @@
   },
   "carePage": {
     "seoTitle": "Cuidados | Madeira Originals",
-    "seoDescription": "Como cuidar do algodão pesado, das estampas DTF e dos bordados para durarem anos.",
+    "seoDescription": "Como cuidar do algodão ring-spun, das estampas DTF e dos bordados para durarem anos.",
     "overline": "Cuidados",
     "title": "Feito para amaciar com o uso.",
-    "lead": "As nossas peças são em algodão pesado com estampagem DTF premium. Bem tratadas, envelhecem com beleza — mais macias, mais pessoais, mais tuas.",
+    "lead": "As nossas peças são em algodão ring-spun com estampagem DTF premium. Bem tratadas, envelhecem com beleza — mais macias, mais pessoais, mais tuas.",
     "sections": [
       {
         "heading": "01 — Lavagem",
@@ -1079,11 +1079,11 @@
       },
       {
         "heading": "04 — Arrumação",
-        "body": "Dobra as peças pesadas em vez de pendurar — pendurar muito tempo estica os ombros. Longe de sol direto para preservar a cor."
+        "body": "Dobra as peças em vez de pendurar — pendurar muito tempo estica os ombros. Longe de sol direto para preservar a cor."
       },
       {
         "heading": "05 — Com o tempo",
-        "body": "O algodão pesado amacia a cada lavagem. Algum desbotamento ligeiro e textura natural fazem parte do material — não são defeito. As peças são feitas para serem usadas, muito."
+        "body": "O algodão ring-spun amacia a cada lavagem. Algum desbotamento ligeiro e textura natural fazem parte do material — não são defeito. As peças são feitas para serem usadas, muito."
       }
     ]
   },
@@ -1097,7 +1097,7 @@
       { "heading": "Como medir", "body": "Estende uma peça semelhante. O meio-peito mede-se de axila a axila. O comprimento mede-se do ponto mais alto do ombro até à bainha. Compara com a tabela abaixo." },
       { "heading": "T-shirts (meio-peito / comprimento, cm)", "body": "S 52 / 70 · M 55 / 72 · L 58 / 74 · XL 61 / 76 · XXL 64 / 78." },
       { "heading": "Hoodies (meio-peito / comprimento, cm)", "body": "S 58 / 70 · M 61 / 72 · L 64 / 74 · XL 67 / 76 · XXL 70 / 78." },
-      { "heading": "Notas de fit", "body": "O algodão pesado tem queda estruturada que amacia com o uso. Se estiveres entre tamanhos, desce um para um fit limpo, sobe um para um look oversized. Os bonés são one-size ajustáveis; as totes são one-size." },
+      { "heading": "Notas de fit", "body": "O algodão ring-spun tem queda estruturada que amacia com o uso. Se estiveres entre tamanhos, desce um para um fit limpo, sobe um para um look oversized. Os bonés são one-size ajustáveis; as totes são one-size." },
       { "heading": "Ainda em dúvida?", "body": "Escreve para geral@madeiraoriginals.pt com o teu tamanho habitual e como gostas que assente — recomendamos o certo." }
     ]
   },
@@ -1105,7 +1105,7 @@
     "overline": "First Drop · Colecção São Vicente",
     "headingA": "O primeiro drop,",
     "headingB": "feito em São Vicente.",
-    "body": "Um pequeno lançamento: t-shirts de algodão pesado, um hoodie, um boné e uma tote. Estamos a terminar a produção. Junta-te à lista e terás acesso antecipado quando lançar.",
+    "body": "Um pequeno lançamento: t-shirts, um hoodie, um boné e uma tote. Estamos a terminar a produção. Junta-te à lista e terás acesso antecipado quando lançar.",
     "cta": "Explorar o First Drop",
     "soonTitle": "Em breve.",
     "soonBody": "O First Drop está a ser preparado em São Vicente. Junta-te à lista abaixo para acesso antecipado quando lançar."
@@ -1142,7 +1142,7 @@
       "overline": "O que fazemos",
       "heading": "Vestuário personalizado premium, sem o custo de agência.",
       "items": [
-        { "title": "T-shirts Personalizadas", "body": "T-shirts em algodão pesado com o teu design, impressas em DTF para uso duradouro e cor nítida." },
+        { "title": "T-shirts Personalizadas", "body": "T-shirts em algodão ring-spun com o teu design, impressas em DTF para uso duradouro e cor nítida." },
         { "title": "Fardamentos", "body": "Peças resistentes de sala e cozinha. Feitas para serviço diário e lavagens frequentes." },
         { "title": "Vestuário para Eventos", "body": "Séries pequenas ou grandes para festivais, provas, aberturas e pop-ups. Resposta rápida quando é preciso." },
         { "title": "Merch para Pequenos Negócios", "body": "Bonés, totes, hoodies e acessórios. Tratados com o mesmo cuidado da nossa linha retalho — nunca souvenir." },

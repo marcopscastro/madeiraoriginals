@@ -1,7 +1,7 @@
 export const SITE_URL = "https://madeiraoriginals.pt";
 export const SITE_NAME = "Madeira Originals";
 export const SITE_DEFAULT_DESC =
-  "Madeira Originals is a premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap.";
+  "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection.";
 
 export const ORG_JSONLD = {
   "@context": "https://schema.org",
@@ -10,7 +10,7 @@ export const ORG_JSONLD = {
   url: SITE_URL,
   logo: `${SITE_URL}/favicon.ico`,
   description:
-    "Premium streetwear, custom apparel, DTF printing, UV DTF stickers, and production studio born in São Vicente, Madeira.",
+    "Creative and print studio in São Vicente, Madeira — graphic design, custom apparel printing, DTF and UV DTF production, signage, and a Madeira-inspired apparel collection.",
   brand: { "@type": "Brand", name: SITE_NAME },
   address: {
     "@type": "PostalAddress",
@@ -20,7 +20,7 @@ export const ORG_JSONLD = {
   },
   areaServed: ["PT", "EU", "Worldwide"],
   keywords: [
-    "Madeira streetwear",
+    "creative print studio Madeira",
     "Madeira clothing",
     "Madeira apparel",
     "Madeira t-shirts",
