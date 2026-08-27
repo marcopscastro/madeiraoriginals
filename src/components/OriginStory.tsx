@@ -8,7 +8,7 @@ const OriginStory = () => {
 
   return (
     <section className="bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-28 md:py-40 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-32 lg:py-40 grid lg:grid-cols-12 gap-10 lg:gap-24 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
           <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-accent mb-6">
             {t("origin.overline")}
@@ -25,7 +25,7 @@ const OriginStory = () => {
             </p>
           </div>
 
-          <dl className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 border-t border-foreground/15 pt-8 max-w-xl">
+          <dl className="mt-8 md:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 border-t border-foreground/15 pt-8 max-w-xl">
             {facts.map((f) => (
               <div key={f.k}>
                 <dt className="font-heading text-[10px] font-semibold uppercase tracking-[0.3em] text-foreground/55">
@@ -40,7 +40,7 @@ const OriginStory = () => {
 
           <Link
             to="/about"
-            className="mt-12 inline-flex items-center font-heading text-[12px] font-semibold uppercase tracking-[0.3em] text-foreground hover:text-accent transition-colors border-b border-foreground pb-1"
+            className="mt-8 md:mt-12 inline-flex items-center font-heading text-[12px] font-semibold uppercase tracking-[0.3em] text-foreground hover:text-accent transition-colors border-b border-foreground pb-1"
           >
             {t("origin.cta")} →
           </Link>

@@ -24,7 +24,7 @@ const JournalPreview = () => {
   if (!articles.length) return null;
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-28">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 md:py-28">
       <div className="flex items-end justify-between mb-10">
         <div>
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-2">
