@@ -141,7 +141,9 @@
       "placeholder": "Código de acesso",
       "submit": "Entrar no portal",
       "checking": "A verificar…",
-      "invalid": "Código inválido."
+      "invalid": "Código inválido.",
+      "noAccess": "Ainda não tem acesso?",
+      "requestAccessLink": "Peça aqui."
     },
     "overline": "Distribuição Wholesale",
     "heading": "Venda uma marca madeirense que não é uma recordação.",
