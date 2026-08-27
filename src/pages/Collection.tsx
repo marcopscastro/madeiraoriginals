@@ -137,7 +137,7 @@ const Collection = ({ config }: { config: CollectionConfig }) => {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between gap-4 border-t border-foreground/10 pt-6 mb-12 md:mb-16">
             <p className="font-heading text-[10px] uppercase tracking-[0.3em] text-foreground/55">
-              {isLoading ? "" : t("collection.count", { count: filtered.length })}
+              {isLoading || filtered.length === 0 ? "" : t("collection.count", { count: filtered.length })}
             </p>
             <div className="flex items-center gap-4">
               <div className="relative hidden sm:block">
