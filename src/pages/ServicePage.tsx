@@ -103,7 +103,8 @@ export const ServiceQuoteCTA = () => {
   const { t } = useTranslation();
   return (
     <section className="bg-foreground text-background">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-28">
+        <div className="max-w-3xl">
         <h2 className="font-display text-3xl md:text-5xl font-semibold leading-[1.05]">
           {t("services.cta.heading")}
         </h2>
@@ -112,10 +113,11 @@ export const ServiceQuoteCTA = () => {
         </p>
         <Link
           to="/contact"
-          className="mt-10 inline-flex items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
+          className="mt-10 inline-flex h-14 items-center justify-center bg-accent text-accent-foreground font-heading font-bold text-sm uppercase tracking-widest px-8 hover:opacity-90 transition-opacity"
         >
           {t("services.cta.button")}
         </Link>
+        </div>
       </div>
     </section>
   );

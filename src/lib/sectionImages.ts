@@ -10,6 +10,10 @@ import aboutDesktop from "@/assets/real-sao-vicente/about-desktop.webp";
 import aboutMobile from "@/assets/real-sao-vicente/about-mobile.webp";
 import islandHumourDesktop from "@/assets/real-sao-vicente/island-humour-desktop.webp";
 import islandHumourMobile from "@/assets/real-sao-vicente/island-humour-mobile.webp";
+import serviceDesign from "@/assets/hero-shirt-printed.jpg";
+import serviceApparel from "@/assets/production-studio.jpg";
+import serviceVinyl from "@/assets/horeca-hero.jpg";
+import serviceWholesale from "@/assets/manifesto-uber-teen.jpg";
 
 export type ResponsiveImageSet = {
   desktop: string;
@@ -52,3 +56,14 @@ export const FEATURED_COLLECTION_IMAGES = [
   SECTION_IMAGES["contemporary-heritage"],
   SECTION_IMAGES["island-humour"],
 ] as const;
+
+/**
+ * Card imagery for the services grid, keyed by the service route.
+ * NOTE: only assets that already exist in the repo are used here.
+ */
+export const SERVICE_CARD_IMAGES: Record<string, string> = {
+  "/design": serviceDesign,
+  "/apparel-printing": serviceApparel,
+  "/vinyl-signage": serviceVinyl,
+  "/contact": serviceWholesale,
+};
