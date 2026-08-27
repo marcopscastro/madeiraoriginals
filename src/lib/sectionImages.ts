@@ -59,11 +59,10 @@ export const FEATURED_COLLECTION_IMAGES = [
 
 /**
  * Card imagery for the services grid, keyed by the service route.
- * NOTE: only assets that already exist in the repo are used here.
+ * Only truthful photography is listed here — routes with no accurate photo
+ * (vinyl/signage, wholesale) intentionally fall back to a typographic tile.
  */
 export const SERVICE_CARD_IMAGES: Record<string, string> = {
   "/design": serviceDesign,
   "/apparel-printing": serviceApparel,
-  "/vinyl-signage": serviceVinyl,
-  "/contact": serviceWholesale,
 };
