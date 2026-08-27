@@ -370,13 +370,20 @@
       "eyebrow": "Case study · São Vicente",
       "heading": "One restaurant. One look. Everything.",
       "body": "They came to us for a design. They left with exclusive illustrations, a staff uniform range, a merchandise line their customers actually buy, and a website of their own. Same hands, same visual language, start to finish.",
-      "cta": "Read the case study"
+      "cta": "Read the case study",
+      "imageAlt": "Branded glassware and interior signage produced for a São Vicente restaurant",
+      "productAlt": "Brasa Viva branded pint glass"
     },
     "houseBrand": {
       "eyebrow": "Our own label",
       "heading": "We make things for ourselves, too.",
       "body": "Madeira Originals started as a collection — illustrated pieces of São Vicente, printed on our own machines. It's still the best argument we can make for what we do. And you can buy it.",
-      "cta": "Shop the collection"
+      "cta": "Shop the collection",
+      "imageAlts": [
+        "Mercado dos Lavradores illustrated t-shirt",
+        "Poncha Poncha illustrated t-shirt",
+        "Bolo do Caco embroidered cap"
+      ]
     }
   },
   "manifesto": {

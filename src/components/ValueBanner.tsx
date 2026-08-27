@@ -13,7 +13,7 @@ const ValueBanner = () => {
   return (
     <section className="bg-foreground text-background border-y border-background/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4">
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+        <div className="flex flex-wrap items-center justify-start gap-x-10 gap-y-2">
           {items.map((item, i) => (
             <p
               key={item}

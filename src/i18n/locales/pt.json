@@ -370,13 +370,20 @@
       "eyebrow": "Caso de estudo · São Vicente",
       "heading": "Um restaurante. Uma imagem. Tudo.",
       "body": "Chegaram aqui para um desenho. Saíram com ilustrações exclusivas, uma linha de fardas, merchandising que os clientes compram mesmo e um site próprio. Feito pelas mesmas mãos, do princípio ao fim.",
-      "cta": "Ver o caso de estudo"
+      "cta": "Ver o caso de estudo",
+      "imageAlt": "Copos e sinalética de marca produzidos para um restaurante em São Vicente",
+      "productAlt": "Copo Brasa Viva com marca aplicada"
     },
     "houseBrand": {
       "eyebrow": "Marca própria",
       "heading": "Também fazemos coisas para nós.",
       "body": "A Madeira Originals começou como coleção — peças ilustradas de São Vicente, impressas nas nossas máquinas. Continua a ser o melhor argumento que temos para o que fazemos. E está à venda.",
-      "cta": "Ver a coleção"
+      "cta": "Ver a coleção",
+      "imageAlts": [
+        "T-shirt ilustrada Mercado dos Lavradores",
+        "T-shirt ilustrada Poncha Poncha",
+        "Boné bordado Bolo do Caco"
+      ]
     }
   },
   "manifesto": {

@@ -24,7 +24,7 @@ const JournalPreview = () => {
   if (!articles.length) return null;
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-28">
       <div className="flex items-end justify-between mb-10">
         <div>
           <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-2">
@@ -52,7 +52,7 @@ const JournalPreview = () => {
               to={`/journal/${a.slug}`}
               className="group block border border-foreground/10 hover:border-foreground transition-colors overflow-hidden"
             >
-              <div className="aspect-[4/3] bg-muted overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden img-placeholder-light">
                 <img
                   src={cover.src}
                   srcSet={cover.srcSet}
@@ -71,12 +71,12 @@ const JournalPreview = () => {
                   className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col">
                 <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {title}
                 </h3>
                 {excerpt && (
-                  <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed line-clamp-3 min-h-[3.9375rem]">
                     {excerpt}
                   </p>
                 )}
