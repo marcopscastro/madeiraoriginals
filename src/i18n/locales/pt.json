@@ -360,7 +360,8 @@
       {
         "title": "Revenda",
         "desc": "A nossa coleção própria para lojas, hotéis e operadores. A partir de 25 unidades.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Pedir acesso"
       }
     ],
     "caseStudy": {

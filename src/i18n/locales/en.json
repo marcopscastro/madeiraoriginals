@@ -360,7 +360,8 @@
       {
         "title": "Wholesale",
         "desc": "Our own collection for shops, hotels and tour operators. From 25 units.",
-        "to": "/wholesale"
+        "to": "/contact",
+        "label": "Request access"
       }
     ],
     "caseStudy": {
