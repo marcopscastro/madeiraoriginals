@@ -68,6 +68,18 @@ const ServicePage = ({ serviceKey, path }: Props) => {
               </li>
             ))}
           </ul>
+
+          {serviceKey === "apparel" && (
+            <div className="mt-14 relative aspect-[4/3] md:aspect-[16/9] w-full overflow-hidden img-placeholder-dark border border-foreground/15">
+              <img
+                src={brasaVivaFirePit}
+                alt={t("home.caseStudy.alts.firePit")}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover img-cinematic"
+              />
+            </div>
+          )}
         </section>
 
         {/* Process */}
