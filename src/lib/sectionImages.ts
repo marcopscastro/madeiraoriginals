@@ -12,8 +12,6 @@ import islandHumourDesktop from "@/assets/real-sao-vicente/island-humour-desktop
 import islandHumourMobile from "@/assets/real-sao-vicente/island-humour-mobile.webp";
 import serviceDesign from "@/assets/hero-shirt-printed.jpg";
 import serviceApparel from "@/assets/production-studio.jpg";
-import serviceVinyl from "@/assets/horeca-hero.jpg";
-import serviceWholesale from "@/assets/manifesto-uber-teen.jpg";
 
 export type ResponsiveImageSet = {
   desktop: string;
