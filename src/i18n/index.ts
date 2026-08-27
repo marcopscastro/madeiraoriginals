@@ -23,9 +23,8 @@ if (!i18n.isInitialized) {
       load: "languageOnly",
       interpolation: { escapeValue: false },
       detection: {
-        order: ["querystring", "localStorage", "navigator"],
+        order: ["localStorage", "navigator"],
         caches: ["localStorage"],
-        lookupQuerystring: "lang",
         lookupLocalStorage: "mo_lang",
       },
     });
@@ -38,31 +37,7 @@ const applyHtmlLang = (lng: string) => {
   }
 };
 
-/**
- * Keep the `?lang=` query in sync with the active language so a refresh,
- * deep-link share, or back/forward nav never reverts the user's choice.
- * PT is the default and renders without the param; EN keeps `?lang=en`.
- */
-const syncLangQuery = (lng: string) => {
-  if (typeof window === "undefined") return;
-  const short = (lng.slice(0, 2) as Lang);
-  const url = new URL(window.location.href);
-  const current = url.searchParams.get("lang");
-  if (short === "pt") {
-    if (current === null) return;
-    url.searchParams.delete("lang");
-  } else {
-    if (current === short) return;
-    url.searchParams.set("lang", short);
-  }
-  window.history.replaceState(window.history.state, "", url.toString());
-};
-
 applyHtmlLang(i18n.language);
-syncLangQuery(i18n.language);
-i18n.on("languageChanged", (lng) => {
-  applyHtmlLang(lng);
-  syncLangQuery(lng);
-});
+i18n.on("languageChanged", applyHtmlLang);
 
 export default i18n;
