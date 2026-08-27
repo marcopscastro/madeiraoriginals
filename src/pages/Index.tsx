@@ -1,15 +1,15 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ValueBanner from "@/components/ValueBanner";
-import Manifesto from "@/components/Manifesto";
-import FirstDropFeature from "@/components/FirstDropFeature";
-import FeaturedCollections from "@/components/FeaturedCollections";
-import Bestsellers from "@/components/Bestsellers";
+import HomePositioning from "@/components/HomePositioning";
+import HomeServices from "@/components/HomeServices";
+import HomeCaseStudy from "@/components/HomeCaseStudy";
+import HomeHouseBrand from "@/components/HomeHouseBrand";
 import VisualDivider from "@/components/VisualDivider";
 import OriginStory from "@/components/OriginStory";
-import Diaspora from "@/components/Diaspora";
 import JournalPreview from "@/components/JournalPreview";
 import HomeNewsletter from "@/components/HomeNewsletter";
+import { ServiceQuoteCTA } from "@/pages/ServicePage";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
 import { SITE_URL, SITE_NAME, LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
@@ -33,19 +33,19 @@ const Index = () => (
     <main>
       <Hero />
       <ValueBanner />
-      <Manifesto />
-      <FirstDropFeature />
-      <FeaturedCollections />
+      <HomePositioning />
+      <HomeServices />
       <VisualDivider />
-      <Bestsellers />
+      <HomeCaseStudy />
+      <HomeHouseBrand />
+      <VisualDivider variant="fog" />
       <OriginStory />
       <JournalPreview />
       <HomeNewsletter />
-      <Diaspora />
+      <ServiceQuoteCTA />
     </main>
     <Footer />
   </div>
 );
 
 export default Index;
-

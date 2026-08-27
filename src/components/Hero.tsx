@@ -62,16 +62,16 @@ const Hero = () => {
             style={{ animationDelay: "380ms" }}
           >
             <Link
-              to="/shop"
+              to="/contact"
               className="inline-flex items-center justify-center bg-background text-foreground font-heading font-semibold text-[12px] uppercase tracking-[0.3em] px-10 py-[18px] hover:bg-accent hover:text-accent-foreground transition-colors duration-500"
             >
-              {t("hero.ctaShop")}
+              {t("hero.ctaQuote")}
             </Link>
             <Link
-              to="/about"
+              to="/studio"
               className="inline-flex items-center justify-center text-background font-heading font-semibold text-[12px] uppercase tracking-[0.3em] px-2 py-[18px] border-b border-background/60 hover:border-background hover:text-background/90 transition-colors duration-500"
             >
-              {t("hero.ctaStory")}
+              {t("hero.ctaServices")}
             </Link>
           </div>
         </div>
