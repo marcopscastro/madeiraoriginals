@@ -1,24 +1,36 @@
 # Madeira Originals
 
-> Premium streetwear and custom apparel brand born in São Vicente, Madeira. Inspired by Madeira, designed for everywhere. 0% tourist trap.
+> Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection. 0% tourist trap.
 
-Madeira Originals operates two lanes: a retail streetwear line (tees, hoodies, accessories, stickers) and a Production Studio offering DTF printing, UV DTF stickers, custom apparel, and rally/performance graphics for businesses and teams.
+Madeira Originals operates two lanes: a retail apparel line (tees, hoodies, accessories, stickers) and a Production Studio offering DTF printing, UV DTF stickers, custom apparel, and rally/performance graphics for businesses and teams.
+
+## Languages
+
+The site is bilingual and uses path-based locales:
+
+- Portuguese (pt-PT) is the default and lives at the root — e.g. `/shop`.
+- English lives under an `/en` prefix — e.g. `/en/shop`.
+- Slugs are identical in both trees; only the prefix changes.
+- Legacy `?lang=en` / `?lang=pt` URLs redirect to their path-based equivalent.
+
+The page list below shows the Portuguese (root) URLs. Prefix any of them with `/en` for the English version.
 
 ## Pages
 
 - [Home](/): Brand overview and featured collections.
-- [Shop](/shop): Full streetwear and apparel catalogue.
+- [Shop](/shop): Full apparel catalogue.
 - [Madeira T-Shirts](/madeira-t-shirts): Ring-spun cotton tees with island-rooted graphics.
 - [Madeira Hoodies](/madeira-hoodies): Atlantic-weight hoodies built for Madeira's microclimates.
 - [Madeira Accessories](/madeira-accessories): Caps, totes, beanies, and small island essentials.
 - [Madeira Stickers](/madeira-stickers): Durable die-cut UV DTF stickers.
-- [Madeira Streetwear](/madeira-streetwear): The full streetwear line.
+- [Madeira Streetwear](/madeira-streetwear): The full apparel line.
 - [Madeira Gifts](/madeira-gifts): Curated gift selection from Madeira.
-- [Production Studio](/production-studio): DTF, UV DTF, custom apparel, and team graphics for businesses.
+- [Studio](/studio): DTF, UV DTF, custom apparel, and team graphics for businesses.
+- [Wholesale](/wholesale): Trade and distributor programme.
 - [Culture](/culture): Stories and inspiration from Madeira.
 - [About](/about): Brand story, values, and team.
 - [Contact](/contact): Get in touch.
-- [Journal](/journal): Articles on Madeira culture, design, and streetwear.
+- [Journal](/journal): Articles on Madeira culture, design, and apparel.
 
 ## Optional
 
