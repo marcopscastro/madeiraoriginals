@@ -7,9 +7,9 @@ import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
 import { Link } from "@/components/LocaleLink";
 
 const tiers = [
-  { qty: "25–49 units", price: "€19 / unit" },
-  { qty: "50–99 units", price: "€16 / unit" },
-  { qty: "100+ units", price: "€13.50 / unit" },
+  { qty: "25–49 units", price: "€12.50 / unit" },
+  { qty: "50–99 units", price: "€11.00 / unit" },
+  { qty: "100+ units", price: "€10.00 / unit" },
 ];
 
 const Wholesale = () => {

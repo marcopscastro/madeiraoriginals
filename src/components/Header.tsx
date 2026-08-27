@@ -42,10 +42,7 @@ const Header = () => {
         { label: t("nav.stickers"), href: "/madeira-stickers" },
       ],
     },
-    { label: t("nav.studio"), href: "/studio" },
-    { label: t("nav.custom"), href: "/custom" },
-    { label: t("nav.wholesale"), href: "/wholesale" },
-    { label: t("nav.journal"), href: "/journal" },
+    { label: t("nav.services"), href: "/studio" },
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.contact"), href: "/contact" },
   ] as { label: string; href: string; children?: { label: string; href: string }[] }[];
