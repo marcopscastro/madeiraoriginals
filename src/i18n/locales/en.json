@@ -462,7 +462,7 @@
         },
         {
           "question": "Do you ship Madeira t-shirts worldwide?",
-          "answer": "Yes. Everything is designed, printed and shipped from our own studio in São Vicente, Madeira — no outside print partners. We ship to Portugal, the EU, the UK, the US and most of the rest of the world with tracked delivery. Shipping is calculated at checkout based on your destination."
+          "answer": "Yes. Everything is designed, printed and shipped from our own studio in São Vicente, Madeira — no outside print partners. We ship to Portugal, the EU, the UK, the US and most of the rest of the world with tracked delivery. Madeira: 3 business days. Mainland Portugal: 5–7 business days. Europe and rest of world: 7–14 business days. Shipping is calculated at checkout based on your destination."
         },
         {
           "question": "Are these real Madeira t-shirts or just Portugal-themed?",
@@ -1079,7 +1079,7 @@
     "viewShippingLink": "View shipping & returns →",
     "shipping": {
       "title": "Shipping",
-      "body": "Every piece is designed, printed and finished in our own studio in São Vicente, Madeira, and shipped from there worldwide.\n\nWe ship to Portugal, the EU, the UK, the US and most of the rest of the world. Delivery time depends on your destination and local carrier.\n\nFree shipping in the EU over €60.",
+      "body": "Every piece is designed, printed and finished in our own studio in São Vicente, Madeira, and shipped from there worldwide.\n\nDelivery estimates from order to door:\n• Madeira: 3 business days\n• Mainland Portugal: 5–7 business days\n• Europe and rest of world: 7–14 business days\n\nFree shipping in the EU over €60.",
       "link": "Read full shipping policy"
     },
     "returns": {
@@ -1109,12 +1109,12 @@
         "body": "We ship worldwide. Portugal and Madeira, the European Union, United Kingdom, United States, and most of the rest of the world."
       },
       {
-        "heading": "02 — Processing time",
-        "body": "We print and finish everything in-house in São Vicente. In-stock pieces leave the studio as soon as they are packed; made-to-order and personalised pieces are produced before dispatch."
+        "heading": "02 — Made in São Vicente",
+        "body": "Everything is printed and finished in our own studio in São Vicente, Madeira, before it is dispatched. The delivery estimates below already include our production time — there is no separate processing window to add."
       },
       {
         "heading": "03 — Delivery windows",
-        "body": "We ship from São Vicente, Madeira, to Portugal, the European Union, the United Kingdom, the United States and most of the rest of the world. Delivery time depends on your destination and local carrier."
+        "body": "We ship from São Vicente, Madeira, to Portugal, the European Union, the United Kingdom, the United States and most of the rest of the world. These are total delivery times from the moment you place your order:\n\n• Madeira: 3 business days\n• Mainland Portugal: 5–7 business days\n• Europe and rest of world: 7–14 business days"
       },
       {
         "heading": "04 — Shipping cost",
