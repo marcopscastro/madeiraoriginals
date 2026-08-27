@@ -118,14 +118,14 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Long-form notes on Madeira culture, streetwear and the craft behind every piece.",
   },
   productionStudio: {
-    title: "Production Studio — DTF Printing & Custom Apparel Madeira",
+    title: "Services — Design, Apparel Printing & Signage in Madeira",
     description:
-      "Madeira Originals Production Studio: custom apparel printing, DTF gang sheets, UV DTF stickers, business merch and rally team graphics — based in Madeira.",
+      "Design, apparel printing, vinyl and signage, and wholesale for businesses in Madeira. Everything your brand shows a customer, made in São Vicente.",
     path: "/studio",
-    eyebrow: "Production Studio",
-    h1: "Custom Apparel & DTF Printing in Madeira",
+    eyebrow: "Services",
+    h1: "Your brand, on every surface",
     intro:
-      "DTF gang sheets, UV DTF stickers, branded merch and rally graphics — produced in São Vicente for brands across Madeira and beyond.",
+      "We design, print and produce everything your business shows a customer — from São Vicente, Madeira.",
   },
   portugalStreetwear: {
     title: "Portugal Streetwear — Madeira Originals",
