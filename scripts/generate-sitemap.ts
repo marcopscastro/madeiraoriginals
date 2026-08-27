@@ -91,22 +91,42 @@ function isoDate(value?: string): string | undefined {
   return d.toISOString().slice(0, 10);
 }
 
+// Both language trees are emitted: pt-PT at the root, en under /en.
+const LOCALES = [
+  { lang: "pt", hreflang: "pt-PT", prefix: "" },
+  { lang: "en", hreflang: "en", prefix: "/en" },
+] as const;
+
 function buildSitemap(entries: SitemapEntry[]) {
-  const urls = entries.map((e) =>
-    [
-      `  <url>`,
-      `    <loc>${BASE_URL}${e.path}</loc>`,
-      e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
-      e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
-      e.priority ? `    <priority>${e.priority}</priority>` : null,
-      `  </url>`,
-    ]
-      .filter(Boolean)
-      .join("\n"),
-  );
+  const urls: string[] = [];
+  for (const entry of entries) {
+    for (const locale of LOCALES) {
+      const loc = `${BASE_URL}${locale.prefix}${entry.path === "/" ? "" : entry.path}` || BASE_URL;
+      const alternates = [
+        ...LOCALES.map(
+          (l) =>
+            `    <xhtml:link rel="alternate" hreflang="${l.hreflang}" href="${BASE_URL}${l.prefix}${entry.path === "/" ? "" : entry.path}${l.prefix === "" && entry.path === "/" ? "/" : ""}" />`,
+        ),
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${entry.path}" />`,
+      ];
+      urls.push(
+        [
+          `  <url>`,
+          `    <loc>${locale.prefix === "" && entry.path === "/" ? `${BASE_URL}/` : loc}</loc>`,
+          ...alternates,
+          entry.lastmod ? `    <lastmod>${entry.lastmod}</lastmod>` : null,
+          entry.changefreq ? `    <changefreq>${entry.changefreq}</changefreq>` : null,
+          entry.priority ? `    <priority>${entry.priority}</priority>` : null,
+          `  </url>`,
+        ]
+          .filter(Boolean)
+          .join("\n"),
+      );
+    }
+  }
   return [
     `<?xml version="1.0" encoding="UTF-8"?>`,
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
     ...urls,
     `</urlset>`,
     ``,
@@ -130,7 +150,7 @@ async function main() {
 
   const all = [...staticEntries, ...productEntries];
   writeFileSync(resolve("public/sitemap.xml"), buildSitemap(all));
-  console.log(`sitemap.xml written (${all.length} entries)`);
+  console.log(`sitemap.xml written (${all.length * LOCALES.length} URLs across ${LOCALES.length} locales)`);
 }
 
 main().catch((err) => {

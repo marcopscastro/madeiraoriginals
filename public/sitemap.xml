@@ -1,102 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://madeiraoriginals.pt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/shop</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/shop" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/shop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/shop" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/shop</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/shop" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/shop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/shop" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-t-shirts</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-t-shirts" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-t-shirts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-t-shirts" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-t-shirts</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-t-shirts" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-t-shirts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-t-shirts" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-hoodies</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-hoodies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-hoodies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-hoodies" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-hoodies</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-hoodies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-hoodies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-hoodies" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-accessories</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-accessories" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-accessories" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-accessories" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-accessories</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-accessories" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-accessories" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-accessories" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-stickers</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-stickers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-stickers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-stickers" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-stickers</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-stickers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-stickers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-stickers" />
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-streetwear" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-streetwear" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-gifts</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-gifts" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-gifts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-gifts" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-gifts</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-gifts" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-gifts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-gifts" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/studio</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/studio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/studio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/studio" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/studio</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/studio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/studio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/studio" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/wholesale</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/wholesale" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/wholesale" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/wholesale" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/wholesale</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/wholesale" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/wholesale" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/wholesale" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/portugal-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/portugal-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/portugal-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/portugal-streetwear" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/portugal-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/portugal-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/portugal-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/portugal-streetwear" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/madeira-souvenirs</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-souvenirs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-souvenirs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-souvenirs" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/madeira-souvenirs</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/madeira-souvenirs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/madeira-souvenirs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/madeira-souvenirs" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/culture</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/culture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/culture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/culture" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/culture</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/culture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/culture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/culture" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/about" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/contact" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/journal</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/journal</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/journal/best-souvenirs-from-madeira</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/best-souvenirs-from-madeira" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/best-souvenirs-from-madeira" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/best-souvenirs-from-madeira" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/journal/best-souvenirs-from-madeira</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/best-souvenirs-from-madeira" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/best-souvenirs-from-madeira" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/best-souvenirs-from-madeira" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/journal/modern-madeira-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/modern-madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/modern-madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/modern-madeira-streetwear" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/journal/modern-madeira-streetwear</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/modern-madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/modern-madeira-streetwear" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/modern-madeira-streetwear" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/journal/what-makes-madeira-culture-unique</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/what-makes-madeira-culture-unique" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/what-makes-madeira-culture-unique" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/what-makes-madeira-culture-unique" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/journal/what-makes-madeira-culture-unique</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/journal/what-makes-madeira-culture-unique" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/journal/what-makes-madeira-culture-unique" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/journal/what-makes-madeira-culture-unique" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://madeiraoriginals.pt/product/levada-walks-sao-vicente-madeira</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/product/levada-walks-sao-vicente-madeira" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/product/levada-walks-sao-vicente-madeira" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/product/levada-walks-sao-vicente-madeira" />
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/product/levada-walks-sao-vicente-madeira</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/product/levada-walks-sao-vicente-madeira" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/product/levada-walks-sao-vicente-madeira" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/product/levada-walks-sao-vicente-madeira" />
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
