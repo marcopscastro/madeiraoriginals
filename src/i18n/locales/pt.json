@@ -221,7 +221,7 @@
       },
       {
         "q": "São feitos na Madeira?",
-        "a": "Sim — totalmente. A Madeira Originals é desenhada, impressa e acabada internamente em São Vicente, na costa norte da Madeira. Sem produção subcontratada, sem print farms de terceiros: cada peça é cortada, prensada e embalada pela nossa equipa na ilha antes de seguir para ti."
+        "a": "Sim. A Madeira Originals é desenhada, impressa e acabada em São Vicente, na costa norte da Madeira. Cada peça é preparada, prensada e embalada pela nossa equipa na ilha antes de seguir para ti."
       }
     ]
   },
@@ -411,7 +411,7 @@
       },
       {
         "title": "Feito em casa",
-        "body": "Cada peça é desenhada, impressa e acabada no nosso estúdio em São Vicente. Nada é subcontratado."
+        "body": "Cada peça é desenhada, impressa e acabada no nosso estúdio em São Vicente."
       }
     ],
     "imageAlt": "Imagem do manifesto Madeira Originals"
@@ -477,7 +477,7 @@
         },
         {
           "question": "Enviam t-shirts para todo o mundo?",
-          "answer": "Sim. Desenhamos, imprimimos e enviamos tudo a partir do nosso estúdio em São Vicente, Madeira — sem parceiros de produção externos. Enviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo, com entrega rastreada. Madeira: 3 dias úteis. Portugal continental: 5 a 7 dias úteis. Europa e resto do mundo: 7 a 14 dias úteis. Os portes são calculados na finalização consoante o destino."
+          "answer": "Sim. Desenhamos, imprimimos e enviamos tudo a partir do nosso estúdio em São Vicente, Madeira. Enviamos para Portugal, União Europeia, Reino Unido, Estados Unidos e a maior parte do resto do mundo, com entrega rastreada. Madeira: 3 dias úteis. Portugal continental: 5 a 7 dias úteis. Europa e resto do mundo: 7 a 14 dias úteis. Os portes são calculados na finalização consoante o destino."
         },
         {
           "question": "São mesmo t-shirts da Madeira ou apenas com tema de Portugal?",
@@ -705,7 +705,7 @@
         {
           "k": "02",
           "title": "Localidade",
-          "body": "Desenhado, impresso e acabado no nosso estúdio em São Vicente. Sem produção externa, sem fulfilment de terceiros."
+          "body": "Desenhado, impresso e acabado no nosso estúdio em São Vicente, na costa norte da ilha."
         },
         {
           "k": "03",
@@ -1404,15 +1404,16 @@
     "vinyl": {
       "overline": "Vinil e Sinalética",
       "hero": "A parte que os clientes veem primeiro.",
-      "intro": "Uma montra, uma porta, uma parede, uma placa por cima do balcão. Desenhamos e produzimos na mesma linguagem visual de tudo o resto que tem, pronto a aplicar.",
+      "intro": "Uma montra, uma porta, uma parede, uma placa por cima do balcão. Desenhamos tudo na mesma linguagem visual do resto da sua marca e tratamos da produção, entregue pronto a aplicar.",
       "list": [
         "Vinil de montra e letras recortadas",
         "Autocolantes recortados",
         "Placas e sinalética interior",
-        "Entregue cortado, descascado e com fita de aplicação, pronto a colar"
+        "Entregue cortado, descascado e com fita de aplicação, pronto a colar",
+        "Prazo e orçamento confirmados por projeto, antes de avançar"
       ],
       "seoTitle": "Vinil e Sinalética na Madeira — Montras, Autocolantes e Placas",
-      "seoDescription": "Vinil de montra, letras recortadas, autocolantes e sinalética interior desenhados e produzidos em São Vicente, Madeira."
+      "seoDescription": "Vinil de montra, letras recortadas, autocolantes e sinalética interior desenhados em São Vicente, Madeira."
     }
   },
   "productImage": {
