@@ -221,7 +221,7 @@
       },
       {
         "q": "Are these made in Madeira?",
-        "a": "Yes — fully. Madeira Originals is designed, printed and finished in-house in São Vicente, on the north coast of Madeira. No outsourced fulfilment, no third-party print farms: every piece is pulled, pressed and packed by our own team on the island before it ships to you."
+        "a": "Yes. Madeira Originals is designed, printed and finished in São Vicente, on the north coast of Madeira. Every piece is pulled, pressed and packed by our own team on the island before it ships to you."
       }
     ]
   },
@@ -411,7 +411,7 @@
       },
       {
         "title": "Made in-house",
-        "body": "Every piece is designed, printed and finished in our São Vicente studio. Nothing is outsourced."
+        "body": "Every piece is designed, printed and finished in our São Vicente studio."
       }
     ],
     "imageAlt": "Madeira Originals manifesto image"
@@ -477,7 +477,7 @@
         },
         {
           "question": "Do you ship Madeira t-shirts worldwide?",
-          "answer": "Yes. Everything is designed, printed and shipped from our own studio in São Vicente, Madeira — no outside print partners. We ship to Portugal, the EU, the UK, the US and most of the rest of the world with tracked delivery. Madeira: 3 business days. Mainland Portugal: 5–7 business days. Europe and rest of world: 7–14 business days. Shipping is calculated at checkout based on your destination."
+          "answer": "Yes. Everything is designed, printed and shipped from our studio in São Vicente, Madeira. We ship to Portugal, the EU, the UK, the US and most of the rest of the world with tracked delivery. Madeira: 3 business days. Mainland Portugal: 5–7 business days. Europe and rest of world: 7–14 business days. Shipping is calculated at checkout based on your destination."
         },
         {
           "question": "Are these real Madeira t-shirts or just Portugal-themed?",
@@ -705,7 +705,7 @@
         {
           "k": "02",
           "title": "Locality",
-          "body": "Designed, printed and finished in our own studio in São Vicente. No outsourced print farms, no third-party fulfilment."
+          "body": "Designed, printed and finished in our own studio in São Vicente, on the north coast of the island."
         },
         {
           "k": "03",
@@ -1404,15 +1404,16 @@
     "vinyl": {
       "overline": "Vinyl & Signage",
       "hero": "The part your customers see first.",
-      "intro": "A window, a door, a wall, a board above the counter. We design it and produce it in the same visual language as everything else you've got, supplied ready to apply.",
+      "intro": "A window, a door, a wall, a board above the counter. We design everything in the same visual language as the rest of your brand and handle production, delivered ready to apply.",
       "list": [
         "Window vinyl and cut lettering",
-        "Decals and stickers",
+        "Cut decals and stickers",
         "Interior signs and boards",
-        "Supplied cut, weeded and taped, ready to go up"
+        "Delivered cut, weeded and with application tape, ready to stick",
+        "Lead time and quote confirmed per project before we go ahead"
       ],
       "seoTitle": "Vinyl & Signage in Madeira — Windows, Decals & Boards",
-      "seoDescription": "Window vinyl, cut lettering, decals and interior signage designed and produced in São Vicente, Madeira. Design and supply only."
+      "seoDescription": "Window vinyl, cut lettering, decals and interior signage designed in São Vicente, Madeira."
     }
   },
   "productImage": {
