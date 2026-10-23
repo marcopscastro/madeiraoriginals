@@ -161,7 +161,7 @@ var SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 var list_journal_posts_default = defineTool3({
   name: "list_journal_posts",
   title: "List journal posts",
-  description: "List published Madeira Originals journal articles (title, slug, excerpt, tags, published date).",
+  description: "List published Madeira Studio journal articles (title, slug, excerpt, tags, published date).",
   inputSchema: {
     limit: z3.number().int().min(1).max(50).optional().describe("Max results (default 20)."),
     tag: z3.string().optional().describe("Filter by tag (exact match).")
@@ -201,7 +201,7 @@ var SUPABASE_ANON2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 var get_journal_post_default = defineTool4({
   name: "get_journal_post",
   title: "Get journal post",
-  description: "Fetch the full body of a published Madeira Originals journal article by slug (English + Portuguese if present).",
+  description: "Fetch the full body of a published Madeira Studio journal article by slug (English + Portuguese if present).",
   inputSchema: {
     slug: z4.string().min(1).describe("Article slug.")
   },

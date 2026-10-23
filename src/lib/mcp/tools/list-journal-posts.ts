@@ -8,7 +8,7 @@ const SUPABASE_ANON =
 export default defineTool({
   name: "list_journal_posts",
   title: "List journal posts",
-  description: "List published Madeira Originals journal articles (title, slug, excerpt, tags, published date).",
+  description: "List published Madeira Studio journal articles (title, slug, excerpt, tags, published date).",
   inputSchema: {
     limit: z.number().int().min(1).max(50).optional().describe("Max results (default 20)."),
     tag: z.string().optional().describe("Filter by tag (exact match)."),

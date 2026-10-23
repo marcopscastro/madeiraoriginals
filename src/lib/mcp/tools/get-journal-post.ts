@@ -8,7 +8,7 @@ const SUPABASE_ANON =
 export default defineTool({
   name: "get_journal_post",
   title: "Get journal post",
-  description: "Fetch the full body of a published Madeira Originals journal article by slug (English + Portuguese if present).",
+  description: "Fetch the full body of a published Madeira Studio journal article by slug (English + Portuguese if present).",
   inputSchema: {
     slug: z.string().min(1).describe("Article slug."),
   },
