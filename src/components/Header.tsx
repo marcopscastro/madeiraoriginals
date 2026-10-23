@@ -1,9 +1,8 @@
-import { Search, User, ShoppingCart, Menu, X, ChevronDown, LogOut } from "lucide-react";
+import { Search, User, Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocaleNavigate } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { useCartTotals } from "@/stores/cartStore";
 import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import LanguageToggle from "@/components/LanguageToggle";
@@ -24,7 +23,6 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { totalItems } = useCartTotals();
   const { user, isAdmin } = useAuth();
   const navigate = useLocaleNavigate();
 
@@ -172,18 +170,6 @@ const Header = () => {
                 <User size={20} />
               </button>
             )}
-            <button
-              aria-label={t("nav.cart")}
-              className="relative text-foreground hover:text-primary transition-colors"
-              onClick={() => setCartOpen(true)}
-            >
-              <ShoppingCart size={20} />
-              {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground font-heading text-[10px] font-bold w-4 h-4 flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </button>
             <button
               aria-label={t("nav.menu")}
               className="lg:hidden text-foreground"
