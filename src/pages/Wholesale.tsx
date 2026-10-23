@@ -21,7 +21,7 @@ const Wholesale = () => {
       <SEO title={t("wholesale.seoTitle")} path="/wholesale" noIndex />
       <Header />
       <main>
-        <WholesaleGate>
+        <WholesaleGate onPricing={setTiers}>
           {/* Header strip */}
           <section className="bg-secondary text-secondary-foreground">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -90,12 +90,12 @@ const Wholesale = () => {
                 <div className="px-4 py-3">{t("wholesale.tablePrice")}</div>
               </div>
               {tiers.map((tier, i) => (
-                <div key={tier.qty} className="grid grid-cols-3 border-t border-foreground/15 font-body text-sm">
+                <div key={tier.sort_order} className="grid grid-cols-3 border-t border-foreground/15 font-body text-sm">
                   <div className="px-4 py-3 font-heading text-xs uppercase tracking-widest text-primary">
                     {t("wholesale.tierLabel", { n: i + 1 })}
                   </div>
-                  <div className="px-4 py-3">{tier.qty}</div>
-                  <div className="px-4 py-3">{tier.price}</div>
+                  <div className="px-4 py-3">{qtyLabel(tier)}</div>
+                  <div className="px-4 py-3">{priceLabel(tier)}</div>
                 </div>
               ))}
             </div>
