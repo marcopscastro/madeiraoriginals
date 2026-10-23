@@ -30,7 +30,7 @@ export default defineTool({
     if (!rows.length) {
       return { content: [{ type: "text", text: `Post not found: ${slug}` }], isError: true };
     }
-    const post = { ...rows[0], url: `https://madeiraoriginals.pt/journal/${rows[0].slug}` };
+    const post = { ...rows[0], url: `https://madeirastudio.pt/journal/${rows[0].slug}` };
     return {
       content: [{ type: "text", text: JSON.stringify(post, null, 2) }],
       structuredContent: { post },

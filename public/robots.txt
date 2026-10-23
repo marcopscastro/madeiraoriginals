@@ -11,4 +11,4 @@ Disallow: /en/horeca
 # Portuguese (pt-PT) is served at the root; English lives under /en.
 # Both trees are indexable and cross-linked with hreflang.
 
-Sitemap: https://madeiraoriginals.pt/sitemap.xml
+Sitemap: https://madeirastudio.pt/sitemap.xml

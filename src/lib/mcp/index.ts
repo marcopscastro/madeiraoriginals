@@ -7,9 +7,9 @@ import subscribeNewsletter from "./tools/subscribe-newsletter";
 
 export default defineMcp({
   name: "madeira-originals-mcp",
-  title: "Madeira Originals",
+  title: "Madeira Studio",
   version: "0.1.0",
   instructions:
-    "Tools for Madeira Originals — a premium Madeiran Atlantic lifestyle brand. Use `search_products` and `get_product` to browse the Shopify catalog (t-shirts, hoodies, Island of Flowers prints, accessories). Use `list_journal_posts` and `get_journal_post` for editorial articles. Use `subscribe_newsletter` to add an email to the mailing list.",
+    "Tools for Madeira Studio — a creative and print studio in São Vicente, with the Madeira Originals apparel collection. Use `search_products` and `get_product` to browse the Shopify catalog (t-shirts, hoodies, Island of Flowers prints, accessories). Use `list_journal_posts` and `get_journal_post` for editorial articles. Use `subscribe_newsletter` to add an email to the mailing list.",
   tools: [searchProducts, getProduct, listJournalPosts, getJournalPost, subscribeNewsletter],
 });

@@ -2,6 +2,7 @@
   "tagline": "Design · Impressão · Sinalética",
   "nav": {
     "shop": "Loja",
+    "shopPointer": "Procura as t-shirts Madeira Originals? → madeiraoriginals.pt",
     "shopAll": "Tudo",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
@@ -34,7 +35,7 @@
     "business": "Serviços",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
-    "copyright": "© 2026 Madeira Originals — Estúdio criativo e de impressão em São Vicente, Madeira, Portugal.",
+    "copyright": "Madeira Studio · by Madeira Originals · Marco Castro, São Vicente",
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
@@ -55,7 +56,7 @@
     "ctaServices": "Ver serviços"
   },
   "studio": {
-    "overline": "Madeira Originals — Estúdio",
+    "overline": "Madeira Studio — Estúdio",
     "h1Line1": "A sua marca,",
     "h1Line2": "em todas as superfícies.",
     "subcopy": "Desenhamos, imprimimos e produzimos tudo o que o seu negócio mostra ao cliente.",
@@ -112,7 +113,7 @@
       "posBrasa": {
         "eyebrow": "Brasa Viva · São Vicente · 2025",
         "title": "POS Brasa — Sistema de Gestão para Restauração",
-        "lede": "Um sistema completo de gestão para restaurantes, churrascarias e cafés, desenhado e construído internamente pela Madeira Originals. Pensado para o ritmo real do serviço: rápido, fiável e adaptado à forma como uma casa madeirense trabalha.",
+        "lede": "Um sistema completo de gestão para restaurantes, churrascarias e cafés, desenhado e construído internamente pela Madeira Studio. Pensado para o ritmo real do serviço: rápido, fiável e adaptado à forma como uma casa madeirense trabalha.",
         "about": "Desenvolvemos o POS Brasa de raiz para responder às necessidades diárias de uma operação de restauração ativa. Não é um produto genérico — é uma ferramenta moldada à mesa, à cozinha e ao balcão, refinada todos os dias em ambiente real.",
         "tagline": "Construído à medida, refinado em serviço.",
         "capabilitiesHeading": "Capacidades",
@@ -281,7 +282,7 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Originals — Estúdio Criativo & Impressão | São Vicente",
+      "title": "Madeira Studio — Estúdio Criativo & Impressão | São Vicente",
       "description": "Estúdio criativo e de impressão em São Vicente. Logótipos, fardas, merchandising e sinalética — desenhados e produzidos na costa norte da Madeira."
     },
     "shop": {
@@ -289,20 +290,20 @@
       "description": "Compra t-shirts, hoodies e acessórios premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
     },
     "about": {
-      "title": "Sobre a Madeira Originals — Estúdio Criativo na Madeira",
-      "description": "A Madeira Originals é um estúdio criativo e de impressão de São Vicente, Madeira — inspirado na herança, cultura e design moderno da ilha."
+      "title": "Sobre a Madeira Studio — Estúdio Criativo na Madeira",
+      "description": "A Madeira Studio é um estúdio criativo e de impressão de São Vicente, Madeira — inspirado na herança, cultura e design moderno da ilha."
     },
     "contact": {
-      "title": "Contacto — Madeira Originals, São Vicente",
-      "description": "Fala connosco. Madeira Originals — estúdio criativo e de impressão com sede em São Vicente, Madeira, Portugal."
+      "title": "Contacto — Madeira Studio, São Vicente",
+      "description": "Fala connosco. Madeira Studio — estúdio criativo e de impressão com sede em São Vicente, Madeira, Portugal."
     },
     "culture": {
       "title": "Cultura Madeirense — Identidade, Paisagem e Herança Atlântica",
       "description": "Um guia da cultura madeirense: paisagens vulcânicas, identidade atlântica, tradições, gastronomia e o estilo de vida moderno que inspira os nossos desenhos."
     },
     "journal": {
-      "title": "Diário Madeira Originals — Cultura, Design e Impressão",
-      "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Originals."
+      "title": "Diário Madeira Studio — Cultura, Design e Impressão",
+      "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Studio."
     },
     "productionStudio": {
       "title": "Serviços — Design, Impressão em Vestuário e Sinalética na Madeira",
@@ -317,8 +318,8 @@
       "description": "Um guia curado dos melhores souvenirs da Madeira e presentes do Funchal — peças premium de um estúdio criativo madeirense em São Vicente. Envio mundial."
     },
     "auth": {
-      "title": "Entrar — Madeira Originals",
-      "description": "Entra na tua conta Madeira Originals para gerir encomendas, o diário e pedidos de orçamento."
+      "title": "Entrar — Madeira Studio",
+      "description": "Entra na tua conta Madeira Studio para gerir encomendas, o diário e pedidos de orçamento."
     },
     "wholesale": {
       "title": "Distribuição — Portal Wholesale Madeira Originals",
@@ -375,11 +376,11 @@
       "imageAlt": "Copos e sinalética de marca produzidos para um restaurante em São Vicente",
       "productAlt": "Copo Brasa Viva com marca aplicada",
       "alts": {
-        "firePit": "T-shirt Brasa Viva com estampagem nas costas do forno a lenha, desenhada e impressa pela Madeira Originals",
+        "firePit": "T-shirt Brasa Viva com estampagem nas costas do forno a lenha, desenhada e impressa pela Madeira Studio",
         "skewers": "T-shirt Brasa Viva com ilustração da churrasqueira e espetadas, estampagem nas costas",
         "badge": "T-shirt Brasa Viva com emblema Cozinhado com Fogo, Feito com Paixão",
         "oven": "T-shirt Brasa Viva com ilustração do forno a lenha, estampagem nas costas",
-        "siteHero": "Site brasaviva.pt em telemóvel, página inicial, desenvolvido pela Madeira Originals",
+        "siteHero": "Site brasaviva.pt em telemóvel, página inicial, desenvolvido pela Madeira Studio",
         "siteMenu": "Site brasaviva.pt em telemóvel, secção de pratos"
       }
     },
@@ -665,14 +666,14 @@
     ],
     "ctaView": "Ver Serviços de Produção",
     "ctaQuote": "Pedir Orçamento",
-    "imageAlt": "Estúdio de impressão de vestuário personalizado com gang sheet DTF e cabide de peças pela Madeira Originals"
+    "imageAlt": "Estúdio de impressão de vestuário personalizado com gang sheet DTF e cabide de peças pela Madeira Studio"
   },
   "relatedProducts": {
     "overline": "Continua a coleção",
     "heading": "Mais do estúdio."
   },
   "aboutPage": {
-    "seoOverline": "Sobre a Madeira Originals",
+    "seoOverline": "Sobre a Madeira Studio",
     "volume": "Volume 02 — A História",
     "opener": {
       "overline": "A Nossa Ilha · A Nossa Marca",
@@ -742,7 +743,7 @@
     },
     "newsletterHeading": "Mantém-te perto da ilha.",
     "newsletterBody": "Acesso antecipado a novos lançamentos, atualizações de produção e histórias da Madeira.",
-    "overline": "Sobre a Madeira Originals",
+    "overline": "Sobre a Madeira Studio",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Streetwear premium e vestuário personalizado nascidos em São Vicente, Madeira.",
@@ -1043,7 +1044,7 @@
     "subscribe": "Subscrever",
     "earlyAccess": "Acesso Antecipado",
     "done": "Estás dentro. Primeiro a saber dos lançamentos.",
-    "doneToast": "Estás na lista. Bem-vindo à Madeira Originals.",
+    "doneToast": "Estás na lista. Bem-vindo à Madeira Studio.",
     "error": "Algo correu mal. Tenta novamente."
   },
   "search": {
@@ -1254,7 +1255,7 @@
     "sizeNote": "O meio-peito é medido a plano, de axila a axila. O comprimento vai do ponto mais alto do ombro até à bainha."
   },
   "custom": {
-    "seoTitle": "Vestuário & Merch Personalizado — Madeira Originals",
+    "seoTitle": "Vestuário & Merch Personalizado — Madeira Studio",
     "seoDescription": "T-shirts personalizadas, fardamentos, vestuário para eventos e merch — desenhado e impresso em São Vicente, Madeira. DTF premium, autocolantes UV DTF, pequenas séries.",
     "overline": "Vestuário Personalizado · Feito em São Vicente",
     "headingA": "A tua marca,",
@@ -1385,7 +1386,7 @@
       ],
       "recentWork": "Trabalho recente",
       "recentWorkCaption": "Frankie Burgers · Identidade e logótipo",
-      "frankieAlt": "Logótipo Frankie Burgers desenhado pela Madeira Originals",
+      "frankieAlt": "Logótipo Frankie Burgers desenhado pela Madeira Studio",
       "seoTitle": "Design Gráfico na Madeira — Logótipos, Identidade e Impressão",
       "seoDescription": "Logótipos, identidade visual, ilustração e material impresso para negócios da Madeira. Desenhado de raiz em São Vicente."
     },

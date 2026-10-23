@@ -2,6 +2,7 @@
   "tagline": "Design · Print · Signage",
   "nav": {
     "shop": "Shop",
+    "shopPointer": "Looking for Madeira Originals t-shirts? → madeiraoriginals.pt",
     "shopAll": "All",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
@@ -34,7 +35,7 @@
     "business": "Services",
     "studio": "Studio (B2B)",
     "wholesale": "Wholesale",
-    "copyright": "© 2026 Madeira Originals — Creative & print studio in São Vicente, Madeira, Portugal.",
+    "copyright": "Madeira Studio · by Madeira Originals · Marco Castro, São Vicente",
     "support": "Support",
     "shipping": "Shipping",
     "returns": "Returns",
@@ -55,7 +56,7 @@
     "ctaServices": "See services"
   },
   "studio": {
-    "overline": "Madeira Originals — Studio",
+    "overline": "Madeira Studio — Studio",
     "h1Line1": "Your brand,",
     "h1Line2": "on every surface.",
     "subcopy": "We design, print and produce everything your business shows a customer.",
@@ -112,7 +113,7 @@
       "posBrasa": {
         "eyebrow": "Brasa Viva · São Vicente · 2025",
         "title": "POS Brasa — Restaurant Management System",
-        "lede": "A complete management system for restaurants, churrascarias and cafés, designed and built in-house by Madeira Originals. Built for the real pace of service: fast, reliable, and shaped around how a Madeiran house actually works.",
+        "lede": "A complete management system for restaurants, churrascarias and cafés, designed and built in-house by Madeira Studio. Built for the real pace of service: fast, reliable, and shaped around how a Madeiran house actually works.",
         "about": "We developed POS Brasa from the ground up to meet the daily needs of a live restaurant operation. It's not a generic product — it's a tool shaped at the table, in the kitchen and at the counter, refined every day in real service.",
         "tagline": "Built bespoke, refined in service.",
         "capabilitiesHeading": "Capabilities",
@@ -281,7 +282,7 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Originals — Creative & Print Studio | São Vicente",
+      "title": "Madeira Studio — Creative & Print Studio | São Vicente",
       "description": "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast."
     },
     "shop": {
@@ -289,20 +290,20 @@
       "description": "Shop premium Madeira t-shirts, hoodies and accessories by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
     },
     "about": {
-      "title": "About Madeira Originals — Creative & Print Studio in Madeira",
-      "description": "Madeira Originals is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design."
+      "title": "About Madeira Studio — Creative & Print Studio in Madeira",
+      "description": "Madeira Studio is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design."
     },
     "contact": {
-      "title": "Contact Madeira Originals — São Vicente, Madeira",
-      "description": "Get in touch with Madeira Originals — a creative and print studio based in São Vicente, Madeira, Portugal."
+      "title": "Contact Madeira Studio — São Vicente, Madeira",
+      "description": "Get in touch with Madeira Studio — a creative and print studio based in São Vicente, Madeira, Portugal."
     },
     "culture": {
       "title": "Madeira Culture — Identity, Landscape & Atlantic Heritage",
       "description": "A guide to Madeira culture: volcanic landscapes, Atlantic identity, traditions, food, drink and the modern Madeira lifestyle that inspires our designs."
     },
     "journal": {
-      "title": "Madeira Originals Journal — Culture, Design & Print",
-      "description": "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals."
+      "title": "Madeira Studio Journal — Culture, Design & Print",
+      "description": "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Studio."
     },
     "productionStudio": {
       "title": "Services — Design, Apparel Printing & Signage in Madeira",
@@ -317,8 +318,8 @@
       "description": "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran creative studio in São Vicente. Worldwide shipping."
     },
     "auth": {
-      "title": "Sign in — Madeira Originals",
-      "description": "Sign in to your Madeira Originals account to manage orders, the journal and quote requests."
+      "title": "Sign in — Madeira Studio",
+      "description": "Sign in to your Madeira Studio account to manage orders, the journal and quote requests."
     },
     "wholesale": {
       "title": "Wholesale — Madeira Originals Distribution Portal",
@@ -375,11 +376,11 @@
       "imageAlt": "Branded glassware and interior signage produced for a São Vicente restaurant",
       "productAlt": "Brasa Viva branded pint glass",
       "alts": {
-        "firePit": "Brasa Viva t-shirt with wood-fire oven back print, designed and printed by Madeira Originals",
+        "firePit": "Brasa Viva t-shirt with wood-fire oven back print, designed and printed by Madeira Studio",
         "skewers": "Brasa Viva t-shirt with grill and skewer illustration, back print",
         "badge": "Brasa Viva t-shirt with Cooked with Fire, Made with Passion badge",
         "oven": "Brasa Viva t-shirt with wood oven illustration, back print",
-        "siteHero": "brasaviva.pt website on mobile, homepage, built by Madeira Originals",
+        "siteHero": "brasaviva.pt website on mobile, homepage, built by Madeira Studio",
         "siteMenu": "brasaviva.pt website on mobile, dishes section"
       }
     },
@@ -665,14 +666,14 @@
     ],
     "ctaView": "View Production Services",
     "ctaQuote": "Request a Quote",
-    "imageAlt": "Custom apparel printing studio with DTF gang sheet and rack of garments by Madeira Originals"
+    "imageAlt": "Custom apparel printing studio with DTF gang sheet and rack of garments by Madeira Studio"
   },
   "relatedProducts": {
     "overline": "Continue the collection",
     "heading": "More from the studio."
   },
   "aboutPage": {
-    "seoOverline": "About Madeira Originals",
+    "seoOverline": "About Madeira Studio",
     "volume": "Volume 02 — A História",
     "opener": {
       "overline": "A Nossa Ilha · A Nossa Marca",
@@ -742,7 +743,7 @@
     },
     "newsletterHeading": "Stay close to the island.",
     "newsletterBody": "First access to new drops, production updates, and stories from Madeira.",
-    "overline": "About Madeira Originals",
+    "overline": "About Madeira Studio",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Premium streetwear and custom apparel born in São Vicente, Madeira.",
@@ -1043,7 +1044,7 @@
     "subscribe": "Subscribe",
     "earlyAccess": "Get Early Access",
     "done": "You're in. First to know about drops.",
-    "doneToast": "You're on the list. Welcome to Madeira Originals.",
+    "doneToast": "You're on the list. Welcome to Madeira Studio.",
     "error": "Something went wrong. Try again."
   },
   "search": {
@@ -1254,7 +1255,7 @@
     "sizeNote": "Half-chest is measured flat from armpit to armpit. Length is from highest point of the shoulder to hem."
   },
   "custom": {
-    "seoTitle": "Custom Apparel & Merch — Madeira Originals",
+    "seoTitle": "Custom Apparel & Merch — Madeira Studio",
     "seoDescription": "Custom T-shirts, staff uniforms, event apparel and branded merch — designed and printed in São Vicente, Madeira. Premium DTF, UV DTF stickers, small-batch friendly.",
     "overline": "Custom Apparel · Made in São Vicente",
     "headingA": "Your brand,",
@@ -1385,7 +1386,7 @@
       ],
       "recentWork": "Recent work",
       "recentWorkCaption": "Frankie Burgers · Identity and logo",
-      "frankieAlt": "Frankie Burgers logo designed by Madeira Originals",
+      "frankieAlt": "Frankie Burgers logo designed by Madeira Studio",
       "seoTitle": "Graphic Design in Madeira — Logos, Identity & Print",
       "seoDescription": "Logo design, visual identity, illustration and printed material for businesses in Madeira. Drawn from scratch in São Vicente."
     },

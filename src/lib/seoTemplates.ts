@@ -11,7 +11,7 @@
 //
 // Conventions:
 //   - `title` and `h1` always include the focus keyword in natural English.
-//   - We omit "| Madeira Originals" from `title` here — the <SEO> component
+//   - We omit "| Madeira Studio" from `title` here — the <SEO> component
 //     appends it automatically (see src/components/SEO.tsx).
 //   - `description` aims for 140–160 chars, leads with the focus keyword,
 //     and includes a place anchor (Madeira / São Vicente / Funchal) where
@@ -49,11 +49,11 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Originals — Creative & Print Studio | São Vicente",
+    title: "Madeira Studio — Creative & Print Studio | São Vicente",
     description:
       "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
     path: "/",
-    eyebrow: "Madeira Originals",
+    eyebrow: "Madeira Studio",
     h1: "Your brand, on every surface.",
     intro:
       "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
@@ -69,9 +69,9 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "The full Madeira Originals collection — t-shirts, hoodies, accessories and stickers, designed in São Vicente.",
   },
   about: {
-    title: "About Madeira Originals — Creative & Print Studio in Madeira",
+    title: "About Madeira Studio — Creative & Print Studio in Madeira",
     description:
-      "Madeira Originals is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design.",
+      "Madeira Studio is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design.",
     path: "/about",
     eyebrow: "About",
     h1: "A Madeira Streetwear Brand from São Vicente",
@@ -79,12 +79,12 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Born on the north coast of Madeira. Built for people who want the island done properly — not a tourist-shop version of it.",
   },
   contact: {
-    title: "Contact Madeira Originals — São Vicente, Madeira",
+    title: "Contact Madeira Studio — São Vicente, Madeira",
     description:
-      "Get in touch with Madeira Originals — a creative and print studio based in São Vicente, Madeira, Portugal.",
+      "Get in touch with Madeira Studio — a creative and print studio based in São Vicente, Madeira, Portugal.",
     path: "/contact",
     eyebrow: "Contact",
-    h1: "Talk to Madeira Originals",
+    h1: "Talk to Madeira Studio",
     intro: "São Vicente, Madeira — replies within one working day.",
   },
   culture: {
@@ -100,7 +100,7 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   horeca: {
     title: "HORECA — Custom Glassware for Madeira Bars & Restaurants",
     description:
-      "Custom branded pint glasses and glassware for hotels, restaurants, cafés and bars across Madeira. Designed and produced by Madeira Originals.",
+      "Custom branded pint glasses and glassware for hotels, restaurants, cafés and bars across Madeira. Designed and produced by Madeira Studio.",
     path: "/horeca",
     eyebrow: "HORECA",
     h1: "Custom Glassware for Madeira Hospitality",
@@ -108,12 +108,12 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Branded pint glasses and barware for Madeira hotels, restaurants, cafés and bars. Low minimums, island-made.",
   },
   journal: {
-    title: "Madeira Originals Journal — Culture, Design & Print",
+    title: "Madeira Studio Journal — Culture, Design & Print",
     description:
-      "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals.",
+      "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Studio.",
     path: "/journal",
     eyebrow: "Journal",
-    h1: "The Madeira Originals Journal",
+    h1: "The Madeira Studio Journal",
     intro:
       "Long-form notes on Madeira culture, streetwear and the craft behind every piece.",
   },
@@ -138,12 +138,12 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Madeira Originals — a premium Portugal streetwear brand born in São Vicente. Designed in PT, made for everywhere.",
   },
   auth: {
-    title: "Sign in — Madeira Originals",
+    title: "Sign in — Madeira Studio",
     description:
-      "Sign in to your Madeira Originals account to manage orders, the journal and quote requests.",
+      "Sign in to your Madeira Studio account to manage orders, the journal and quote requests.",
     path: "/auth",
     eyebrow: "Account",
-    h1: "Sign in to Madeira Originals",
+    h1: "Sign in to Madeira Studio",
   },
   madeiraSouvenirs: {
     title: "Madeira Souvenirs Guide — Real Gifts From Madeira",

@@ -184,7 +184,7 @@ var list_journal_posts_default = defineTool3({
     const rows = await res.json();
     const posts = rows.map((r) => ({
       ...r,
-      url: `https://madeiraoriginals.pt/journal/${r.slug}`
+      url: `https://madeirastudio.pt/journal/${r.slug}`
     }));
     return {
       content: [{ type: "text", text: JSON.stringify(posts, null, 2) }],
@@ -223,7 +223,7 @@ var get_journal_post_default = defineTool4({
     if (!rows.length) {
       return { content: [{ type: "text", text: `Post not found: ${slug}` }], isError: true };
     }
-    const post = { ...rows[0], url: `https://madeiraoriginals.pt/journal/${rows[0].slug}` };
+    const post = { ...rows[0], url: `https://madeirastudio.pt/journal/${rows[0].slug}` };
     return {
       content: [{ type: "text", text: JSON.stringify(post, null, 2) }],
       structuredContent: { post }
@@ -239,7 +239,7 @@ var SUPABASE_ANON3 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 var subscribe_newsletter_default = defineTool5({
   name: "subscribe_newsletter",
   title: "Subscribe to newsletter",
-  description: "Subscribe an email address to the Madeira Originals newsletter.",
+  description: "Subscribe an email address to the Madeira Studio newsletter.",
   inputSchema: {
     email: z5.string().email().describe("Subscriber email address."),
     source: z5.string().optional().describe("Where the subscription originated (default: 'mcp').")
@@ -267,9 +267,9 @@ var subscribe_newsletter_default = defineTool5({
 // src/lib/mcp/index.ts
 var mcp_default = defineMcp({
   name: "madeira-originals-mcp",
-  title: "Madeira Originals",
+  title: "Madeira Studio",
   version: "0.1.0",
-  instructions: "Tools for Madeira Originals \u2014 a premium Madeiran Atlantic lifestyle brand. Use `search_products` and `get_product` to browse the Shopify catalog (t-shirts, hoodies, Island of Flowers prints, accessories). Use `list_journal_posts` and `get_journal_post` for editorial articles. Use `subscribe_newsletter` to add an email to the mailing list.",
+  instructions: "Tools for Madeira Studio \u2014 a creative and print studio in S\xE3o Vicente, with the Madeira Originals apparel collection. Use `search_products` and `get_product` to browse the Shopify catalog (t-shirts, hoodies, Island of Flowers prints, accessories). Use `list_journal_posts` and `get_journal_post` for editorial articles. Use `subscribe_newsletter` to add an email to the mailing list.",
   tools: [search_products_default, get_product_default, list_journal_posts_default, get_journal_post_default, subscribe_newsletter_default]
 });
 

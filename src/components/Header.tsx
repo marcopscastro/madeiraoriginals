@@ -16,7 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoMark from "@/assets/madeira-originals-logo.svg";
+import logoMark from "@/assets/MadeiraStudio_horizontal_fullcolour.svg.asset.json";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -41,7 +41,7 @@ const Header = () => {
     },
     {
       label: t("nav.shop"),
-      href: "/shop",
+      href: "https://madeiraoriginals.pt",
       children: [
         { label: t("nav.shopAll"), href: "/shop" },
         { label: t("nav.tshirts"), href: "/madeira-t-shirts" },
@@ -57,6 +57,10 @@ const Header = () => {
   const go = (href: string) => {
     setMobileOpen(false);
     setOpenDropdown(null);
+    if (href === "https://madeiraoriginals.pt") {
+      window.location.assign(href);
+      return;
+    }
     navigate(href);
   };
 
@@ -64,25 +68,14 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
-          <Link to="/" aria-label="Madeira Originals — Home" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
+          <Link to="/" aria-label="Madeira Studio — by Madeira Originals" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
-              src={logoMark}
-              alt="Madeira Originals logo" // i18n-ignore
+              src={logoMark.url}
+              alt="Madeira Studio — by Madeira Originals" // i18n-ignore
               className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
               loading="eager"
               decoding="async"
             />
-            <span className="hidden xs:flex flex-col leading-none min-w-0">
-              <span className="font-heading font-bold text-base sm:text-lg md:text-xl tracking-widest uppercase text-primary whitespace-nowrap">
-                MADEIRA
-              </span>
-              <span
-                className="font-body font-light uppercase text-accent whitespace-nowrap text-[8px] sm:text-[10px] md:text-[11px] -mt-0.5 sm:-mt-1.5 text-center my-0 py-0"
-                style={{ letterSpacing: "0.3em" }}
-              >
-                ORIGINALS
-              </span>
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
@@ -94,13 +87,12 @@ const Header = () => {
                   onMouseEnter={() => setOpenDropdown(link.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <button
-                    onClick={() => go(link.href)}
+                  <Link to={link.href} reloadDocument={link.href.startsWith("https://")}
                     className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors flex items-center gap-1"
                   >
                     {link.label}
                     <ChevronDown size={14} />
-                  </button>
+                  </Link>
                   {openDropdown === link.label && (
                     <div className="absolute left-0 top-full pt-2 min-w-[220px]">
                       <div className="bg-background border border-foreground/15 py-2">
@@ -219,12 +211,11 @@ const Header = () => {
             </div>
             {navLinks.map((link) => (
               <div key={link.label} className="border-b border-foreground/5">
-                <button
-                  onClick={() => go(link.href)}
+                <Link to={link.href} reloadDocument={link.href.startsWith("https://")} onClick={() => setMobileOpen(false)}
                   className="block w-full text-left py-3 font-heading text-sm font-semibold uppercase tracking-wide text-foreground"
                 >
                   {link.label}
-                </button>
+                </Link>
                 {link.children && (
                   <div className="pl-3 pb-2">
                     {link.children.map((c) => (
@@ -271,6 +262,9 @@ const Header = () => {
           </nav>
         )}
       </header>
+      <a href="https://madeiraoriginals.pt" className="block bg-muted px-4 py-2 text-center font-body text-xs text-foreground border-b border-foreground/10">
+        {t("nav.shopPointer")}
+      </a>
 
       <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />

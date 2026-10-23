@@ -19,12 +19,12 @@ const PortugalStreetwear = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://madeiraoriginals.pt/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://madeirastudio.pt/" },
       {
         "@type": "ListItem",
         position: 2,
         name: "Portugal Streetwear",
-        item: "https://madeiraoriginals.pt/portugal-streetwear",
+        item: "https://madeirastudio.pt/portugal-streetwear",
       },
     ],
   };

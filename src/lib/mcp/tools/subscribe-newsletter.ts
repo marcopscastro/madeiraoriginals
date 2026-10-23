@@ -8,7 +8,7 @@ const SUPABASE_ANON =
 export default defineTool({
   name: "subscribe_newsletter",
   title: "Subscribe to newsletter",
-  description: "Subscribe an email address to the Madeira Originals newsletter.",
+  description: "Subscribe an email address to the Madeira Studio newsletter.",
   inputSchema: {
     email: z.string().email().describe("Subscriber email address."),
     source: z.string().optional().describe("Where the subscription originated (default: 'mcp')."),
