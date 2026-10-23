@@ -97,13 +97,14 @@ const Header = () => {
                   )}
                 </div>
               ) : (
-                <button
+                <Link
                   key={link.label}
-                  onClick={() => go(link.href)}
+                  to={link.href}
+                  reloadDocument={link.href.startsWith("https://")}
                   className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
-                </button>
+                </Link>
               )
             )}
             {isAdmin && (
