@@ -173,18 +173,6 @@ const Header = () => {
               </button>
             )}
             <button
-              aria-label={t("nav.cart")}
-              className="relative text-foreground hover:text-primary transition-colors"
-              onClick={() => setCartOpen(true)}
-            >
-              <ShoppingCart size={20} />
-              {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground font-heading text-[10px] font-bold w-4 h-4 flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </button>
-            <button
               aria-label={t("nav.menu")}
               className="lg:hidden text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}

@@ -20,7 +20,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-14 pb-12 md:pt-24 md:pb-16">
         <div className="grid md:min-h-[620px] md:grid-cols-2 md:gap-10 lg:gap-16">
-          <figure className="order-1 flex min-w-0 flex-col md:order-2 md:justify-center">
+          <figure className="order-2 flex min-w-0 flex-col md:order-2 md:justify-center">
             <div className="aspect-[4/5] w-full min-h-0 md:h-[min(72vh,760px)] md:aspect-auto">
               <img
                 src={capelinhaTee}
@@ -38,7 +38,7 @@ const Hero = () => {
             </figcaption>
           </figure>
 
-          <div className="order-2 flex flex-col justify-center pt-12 md:order-1 md:pt-0">
+          <div className="order-1 flex flex-col justify-center pt-12 md:order-1 md:pt-0">
             <p className="mb-5 font-heading text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em] text-background/85 md:hidden">
               {t("hero.overline")}
             </p>
