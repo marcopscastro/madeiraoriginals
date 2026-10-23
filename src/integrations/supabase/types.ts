@@ -200,6 +200,24 @@ export type Database = {
         }
         Relationships: []
       }
+      pin_attempts: {
+        Row: {
+          attempted_at: string
+          id: string
+          ip: string
+        }
+        Insert: {
+          attempted_at?: string
+          id?: string
+          ip: string
+        }
+        Update: {
+          attempted_at?: string
+          id?: string
+          ip?: string
+        }
+        Relationships: []
+      }
       production_quotes: {
         Row: {
           artwork_url: string | null
@@ -430,6 +448,36 @@ export type Database = {
           product_lines?: string[]
           status?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      wholesale_pricing: {
+        Row: {
+          id: string
+          max_qty: number | null
+          min_qty: number
+          notes: string | null
+          sort_order: number
+          tier_label: string
+          unit_price_eur: number
+        }
+        Insert: {
+          id?: string
+          max_qty?: number | null
+          min_qty: number
+          notes?: string | null
+          sort_order?: number
+          tier_label: string
+          unit_price_eur: number
+        }
+        Update: {
+          id?: string
+          max_qty?: number | null
+          min_qty?: number
+          notes?: string | null
+          sort_order?: number
+          tier_label?: string
+          unit_price_eur?: number
         }
         Relationships: []
       }

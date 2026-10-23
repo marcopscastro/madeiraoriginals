@@ -5,12 +5,33 @@ import { Link } from "@/components/LocaleLink";
 
 const STORAGE_KEY = "mo_wholesale_token";
 
-const WholesaleGate = ({ children }: { children: React.ReactNode }) => {
+export type WholesaleTier = {
+  tier_label: string;
+  min_qty: number;
+  max_qty: number | null;
+  unit_price_eur: number;
+  notes: string | null;
+  sort_order: number;
+};
+
+const WholesaleGate = ({
+  children,
+  onPricing,
+}: {
+  children: React.ReactNode;
+  onPricing?: (rows: WholesaleTier[]) => void;
+}) => {
   const { t } = useTranslation();
   const [status, setStatus] = useState<"checking" | "locked" | "unlocked">("checking");
   const [passcode, setPasscode] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const fetchPricing = async (body: { passcode?: string; token?: string }) => {
+    const { data, error: e } = await supabase.functions.invoke("wholesale-pricing", { body });
+    if (e || !Array.isArray(data?.rows)) return null;
+    return data.rows as WholesaleTier[];
+  };
 
   useEffect(() => {
     const token = sessionStorage.getItem(STORAGE_KEY);
@@ -18,22 +39,37 @@ const WholesaleGate = ({ children }: { children: React.ReactNode }) => {
       setStatus("locked");
       return;
     }
-    supabase.functions
-      .invoke("validate-wholesale-token", { body: { token } })
-      .then(({ data, error: e }) => {
-        if (e || !data?.valid) {
-          sessionStorage.removeItem(STORAGE_KEY);
-          setStatus("locked");
-        } else {
-          setStatus("unlocked");
-        }
+    (async () => {
+      const { data, error: e } = await supabase.functions.invoke("validate-wholesale-token", {
+        body: { token },
       });
+      if (e || !data?.valid) {
+        sessionStorage.removeItem(STORAGE_KEY);
+        setStatus("locked");
+        return;
+      }
+      const rows = await fetchPricing({ token });
+      if (!rows) {
+        sessionStorage.removeItem(STORAGE_KEY);
+        setStatus("locked");
+        return;
+      }
+      onPricing?.(rows);
+      setStatus("unlocked");
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setSubmitting(true);
+    const rows = await fetchPricing({ passcode });
+    if (!rows) {
+      setSubmitting(false);
+      setError(t("wholesale.gate.invalid"));
+      return;
+    }
     const { data, error: err } = await supabase.functions.invoke("verify-wholesale-passcode", {
       body: { passcode },
     });
@@ -43,6 +79,7 @@ const WholesaleGate = ({ children }: { children: React.ReactNode }) => {
       return;
     }
     sessionStorage.setItem(STORAGE_KEY, data.token);
+    onPricing?.(rows);
     setStatus("unlocked");
   };
 

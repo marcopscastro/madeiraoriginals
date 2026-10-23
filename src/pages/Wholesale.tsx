@@ -1,26 +1,27 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import WholesaleGate, { wholesaleSignOut } from "@/components/WholesaleGate";
+import WholesaleGate, { wholesaleSignOut, type WholesaleTier } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
 import { Link } from "@/components/LocaleLink";
 
-const tiers = [
-  { qty: "25–49 units", price: "€12.50 / unit" },
-  { qty: "50–99 units", price: "€11.00 / unit" },
-  { qty: "100+ units", price: "€10.00 / unit" },
-];
+const qtyLabel = (tier: WholesaleTier) =>
+  tier.max_qty != null ? `${tier.min_qty}–${tier.max_qty} units` : `${tier.min_qty}+ units`;
+
+const priceLabel = (tier: WholesaleTier) => `€${Number(tier.unit_price_eur).toFixed(2)} / unit`;
 
 const Wholesale = () => {
   const { t } = useTranslation();
+  const [tiers, setTiers] = useState<WholesaleTier[]>([]);
 
   return (
     <div className="min-h-screen bg-background">
       <SEO title={t("wholesale.seoTitle")} path="/wholesale" noIndex />
       <Header />
       <main>
-        <WholesaleGate>
+        <WholesaleGate onPricing={setTiers}>
           {/* Header strip */}
           <section className="bg-secondary text-secondary-foreground">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -89,12 +90,12 @@ const Wholesale = () => {
                 <div className="px-4 py-3">{t("wholesale.tablePrice")}</div>
               </div>
               {tiers.map((tier, i) => (
-                <div key={tier.qty} className="grid grid-cols-3 border-t border-foreground/15 font-body text-sm">
+                <div key={tier.sort_order} className="grid grid-cols-3 border-t border-foreground/15 font-body text-sm">
                   <div className="px-4 py-3 font-heading text-xs uppercase tracking-widest text-primary">
                     {t("wholesale.tierLabel", { n: i + 1 })}
                   </div>
-                  <div className="px-4 py-3">{tier.qty}</div>
-                  <div className="px-4 py-3">{tier.price}</div>
+                  <div className="px-4 py-3">{qtyLabel(tier)}</div>
+                  <div className="px-4 py-3">{priceLabel(tier)}</div>
                 </div>
               ))}
             </div>

@@ -15,7 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoMark from "@/assets/MadeiraStudio_horizontal_fullcolour.svg";
+import logoMark from "@/assets/MadeiraStudio_horizontal-compact_fullcolour.svg";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -40,13 +40,6 @@ const Header = () => {
     {
       label: t("nav.shop"),
       href: "https://madeiraoriginals.pt",
-      children: [
-        { label: t("nav.shopAll"), href: "/shop" },
-        { label: t("nav.tshirts"), href: "/madeira-t-shirts" },
-        { label: t("nav.hoodies"), href: "/madeira-hoodies" },
-        { label: t("nav.accessories"), href: "/madeira-accessories" },
-        { label: t("nav.stickers"), href: "/madeira-stickers" },
-      ],
     },
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.contact"), href: "/contact" },
@@ -104,13 +97,14 @@ const Header = () => {
                   )}
                 </div>
               ) : (
-                <button
+                <Link
                   key={link.label}
-                  onClick={() => go(link.href)}
+                  to={link.href}
+                  reloadDocument={link.href.startsWith("https://")}
                   className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
-                </button>
+                </Link>
               )
             )}
             {isAdmin && (
