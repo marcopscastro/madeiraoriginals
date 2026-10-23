@@ -23,7 +23,6 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [cartOpen, setCartOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { totalItems } = useCartTotals();
   const { user, isAdmin } = useAuth();
   const navigate = useLocaleNavigate();
 
