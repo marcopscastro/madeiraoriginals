@@ -4,7 +4,7 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 
-const BASE_URL = "https://madeiraoriginals.pt";
+const BASE_URL = "https://madeirastudio.pt";
 
 // Mirror src/lib/shopify.ts — keep in sync.
 const SHOPIFY_STORE_PERMANENT_DOMAIN = "madeiraoriginals-cve6q.myshopify.com";
