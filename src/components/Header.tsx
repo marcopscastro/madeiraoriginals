@@ -16,7 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoMark from "@/assets/MadeiraStudio_horizontal_fullcolour.svg.asset.json";
+import logoMark from "@/assets/MadeiraStudio_horizontal_fullcolour.svg";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -57,10 +57,6 @@ const Header = () => {
   const go = (href: string) => {
     setMobileOpen(false);
     setOpenDropdown(null);
-    if (href === "https://madeiraoriginals.pt") {
-      window.location.assign(href);
-      return;
-    }
     navigate(href);
   };
 
@@ -70,7 +66,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
           <Link to="/" aria-label="Madeira Studio — by Madeira Originals" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
-              src={logoMark.url}
+              src={logoMark}
               alt="Madeira Studio — by Madeira Originals" // i18n-ignore
               className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
               loading="eager"
