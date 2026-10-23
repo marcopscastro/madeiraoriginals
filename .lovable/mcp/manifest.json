@@ -9,7 +9,7 @@
     "server": {
       "name": "madeira-originals-mcp",
       "version": "0.1.0",
-      "title": "Madeira Originals"
+      "title": "Madeira Studio"
     },
     "tools": [
       {
@@ -67,7 +67,7 @@
       {
         "name": "list_journal_posts",
         "title": "List journal posts",
-        "description": "List published Madeira Originals journal articles (title, slug, excerpt, tags, published date).",
+        "description": "List published Madeira Studio journal articles (title, slug, excerpt, tags, published date).",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -94,7 +94,7 @@
       {
         "name": "get_journal_post",
         "title": "Get journal post",
-        "description": "Fetch the full body of a published Madeira Originals journal article by slug (English + Portuguese if present).",
+        "description": "Fetch the full body of a published Madeira Studio journal article by slug (English + Portuguese if present).",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -119,7 +119,7 @@
       {
         "name": "subscribe_newsletter",
         "title": "Subscribe to newsletter",
-        "description": "Subscribe an email address to the Madeira Originals newsletter.",
+        "description": "Subscribe an email address to the Madeira Studio newsletter.",
         "annotations": {
           "readOnlyHint": false,
           "idempotentHint": true,
