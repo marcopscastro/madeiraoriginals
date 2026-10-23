@@ -1,19 +1,20 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import WholesaleGate, { wholesaleSignOut } from "@/components/WholesaleGate";
+import WholesaleGate, { wholesaleSignOut, type WholesaleTier } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
 import { Link } from "@/components/LocaleLink";
 
-const tiers = [
-  { qty: "25–49 units", price: "€12.50 / unit" },
-  { qty: "50–99 units", price: "€11.00 / unit" },
-  { qty: "100+ units", price: "€10.00 / unit" },
-];
+const qtyLabel = (tier: WholesaleTier) =>
+  tier.max_qty != null ? `${tier.min_qty}–${tier.max_qty} units` : `${tier.min_qty}+ units`;
+
+const priceLabel = (tier: WholesaleTier) => `€${Number(tier.unit_price_eur).toFixed(2)} / unit`;
 
 const Wholesale = () => {
   const { t } = useTranslation();
+  const [tiers, setTiers] = useState<WholesaleTier[]>([]);
 
   return (
     <div className="min-h-screen bg-background">
