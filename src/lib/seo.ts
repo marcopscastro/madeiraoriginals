@@ -1,16 +1,16 @@
 export const SITE_URL = "https://madeiraoriginals.pt";
-export const SITE_NAME = "Madeira Studio";
+export const SITE_NAME = "Madeira Originals";
 export const SITE_DEFAULT_DESC =
-  "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection.";
+  "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.";
 
 export const ORG_JSONLD = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/icon-512.png`,
+  logo: `${SITE_URL}/madeira-originals-logo.svg`,
   description:
-    "Creative and print studio in São Vicente, Madeira — graphic design, custom apparel printing, DTF and UV DTF production, signage, and a Madeira-inspired apparel collection.",
+    "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
   brand: { "@type": "Brand", name: SITE_NAME },
   address: {
     "@type": "PostalAddress",

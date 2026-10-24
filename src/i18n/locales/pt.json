@@ -2,7 +2,6 @@
   "tagline": "Design · Impressão · Sinalética",
   "nav": {
     "shop": "Loja",
-    "shopPointer": "Procura as t-shirts Madeira Originals? → madeiraoriginals.pt",
     "shopAll": "Tudo",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
@@ -35,7 +34,7 @@
     "business": "Serviços",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
-    "copyright": "Madeira Studio · by Madeira Originals · Marco Castro, São Vicente",
+    "copyright": "Madeira Originals · Marco Castro, São Vicente",
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
@@ -282,16 +281,16 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Studio — Estúdio Criativo & Impressão | São Vicente",
-      "description": "Estúdio criativo e de impressão em São Vicente. Logótipos, fardas, merchandising e sinalética — desenhados e produzidos na costa norte da Madeira."
+      "title": "Madeira Originals — Vestuário da Madeira | São Vicente",
+      "description": "T-shirts, hoodies e acessórios Madeira Originals, desenhados em São Vicente e inspirados na cultura da Madeira."
     },
     "shop": {
       "title": "Loja — T-Shirts, Hoodies e Vestuário da Madeira",
       "description": "Compra t-shirts, hoodies e acessórios premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
     },
     "about": {
-      "title": "Sobre a Madeira Studio — Estúdio Criativo na Madeira",
-      "description": "A Madeira Studio é um estúdio criativo e de impressão de São Vicente, Madeira — inspirado na herança, cultura e design moderno da ilha."
+      "title": "Sobre a Madeira Originals — Vestuário da Madeira",
+      "description": "A Madeira Originals é uma marca de vestuário de São Vicente, Madeira, inspirada na herança, cultura e design moderno da ilha."
     },
     "contact": {
       "title": "Contacto — Madeira Studio, São Vicente",
@@ -302,8 +301,8 @@
       "description": "Um guia da cultura madeirense: paisagens vulcânicas, identidade atlântica, tradições, gastronomia e o estilo de vida moderno que inspira os nossos desenhos."
     },
     "journal": {
-      "title": "Diário Madeira Studio — Cultura, Design e Impressão",
-      "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Studio."
+      "title": "Diário Madeira Originals — Cultura, Design e Vestuário",
+      "description": "Histórias sobre a cultura madeirense, identidade da ilha, design, produção de vestuário e a filosofia da Madeira Originals."
     },
     "productionStudio": {
       "title": "Serviços — Design, Impressão em Vestuário e Sinalética na Madeira",
@@ -318,8 +317,8 @@
       "description": "Um guia curado dos melhores souvenirs da Madeira e presentes do Funchal — peças premium de um estúdio criativo madeirense em São Vicente. Envio mundial."
     },
     "auth": {
-      "title": "Entrar — Madeira Studio",
-      "description": "Entra na tua conta Madeira Studio para gerir encomendas, o diário e pedidos de orçamento."
+      "title": "Entrar — Madeira Originals",
+      "description": "Entra na tua conta Madeira Originals para gerir encomendas, o diário e pedidos de orçamento."
     },
     "wholesale": {
       "title": "Distribuição — Portal Wholesale Madeira Originals",
@@ -673,7 +672,7 @@
     "heading": "Mais do estúdio."
   },
   "aboutPage": {
-    "seoOverline": "Sobre a Madeira Studio",
+    "seoOverline": "Sobre a Madeira Originals",
     "volume": "Volume 02 — A História",
     "opener": {
       "overline": "A Nossa Ilha · A Nossa Marca",
@@ -743,7 +742,7 @@
     },
     "newsletterHeading": "Mantém-te perto da ilha.",
     "newsletterBody": "Acesso antecipado a novos lançamentos, atualizações de produção e histórias da Madeira.",
-    "overline": "Sobre a Madeira Studio",
+    "overline": "Sobre a Madeira Originals",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Streetwear premium e vestuário personalizado nascidos em São Vicente, Madeira.",
@@ -1044,7 +1043,7 @@
     "subscribe": "Subscrever",
     "earlyAccess": "Acesso Antecipado",
     "done": "Estás dentro. Primeiro a saber dos lançamentos.",
-    "doneToast": "Estás na lista. Bem-vindo à Madeira Studio.",
+    "doneToast": "Estás na lista. Bem-vindo à Madeira Originals.",
     "error": "Algo correu mal. Tenta novamente."
   },
   "search": {
@@ -1337,6 +1336,7 @@
   "services": {
     "listHeading": "O que inclui",
     "processHeading": "Como funciona",
+    "movedNotice": "Os serviços de estúdio estão agora em madeirastudio.pt",
     "hubHeading": "Serviços",
     "viewService": "Ver serviço",
     "requestAccess": "Pedir acesso",
