@@ -34,7 +34,7 @@
     "business": "Serviços",
     "studio": "Studio (B2B)",
     "wholesale": "Distribuição",
-    "copyright": "Madeira Originals · Marco Castro, São Vicente",
+    "copyright": "Madeira Originals · Marco Castro, São Vicente · NIF 202158969",
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
@@ -756,8 +756,9 @@
     "lead": "Quer queiras uma peça da coleção quer uma colaboração — estamos sediados em São Vicente, Madeira, e disponíveis em qualquer lado.",
     "generalLabel": "Geral",
     "generalNote": "Encomendas, devoluções, imprensa, colaborações.",
+    "phoneLabel": "Telefone",
     "studioLabel": "Estúdio",
-    "studioAddress": "Estrada da Furna n.° 7, 9240-206 São Vicente, Madeira, Portugal"
+    "studioAddress": "Entrada do Cascalho 3, 9240-203 São Vicente, Madeira, Portugal"
   },
   "culturePage": {
     "overline": "Cultura Madeirense",

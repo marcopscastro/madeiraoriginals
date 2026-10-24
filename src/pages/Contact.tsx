@@ -34,6 +34,14 @@ const Contact = () => {
               {t("contactPage.generalNote")}
             </p>
           </div>
+          <div className="border border-foreground/10 p-8">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-widest text-primary mb-3">
+              {t("contactPage.phoneLabel")}
+            </h2>
+            <a href="tel:+351962220769" className="font-display text-xl text-foreground hover:text-primary transition-colors">
+              962 220 769
+            </a>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-foreground/10 pt-8">
