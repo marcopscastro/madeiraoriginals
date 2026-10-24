@@ -1,4 +1,4 @@
-export const SITE_URL = "https://madeirastudio.pt";
+export const SITE_URL = "https://madeiraoriginals.pt";
 export const SITE_NAME = "Madeira Studio";
 export const SITE_DEFAULT_DESC =
   "Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection.";

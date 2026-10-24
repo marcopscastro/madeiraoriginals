@@ -31,7 +31,7 @@ export default defineTool({
     const rows = await res.json();
     const posts = rows.map((r: any) => ({
       ...r,
-      url: `https://madeirastudio.pt/journal/${r.slug}`,
+      url: `https://madeiraoriginals.pt/journal/${r.slug}`,
     }));
     return {
       content: [{ type: "text", text: JSON.stringify(posts, null, 2) }],

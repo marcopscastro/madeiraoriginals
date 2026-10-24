@@ -184,7 +184,7 @@ var list_journal_posts_default = defineTool3({
     const rows = await res.json();
     const posts = rows.map((r) => ({
       ...r,
-      url: `https://madeirastudio.pt/journal/${r.slug}`
+      url: `https://madeiraoriginals.pt/journal/${r.slug}`
     }));
     return {
       content: [{ type: "text", text: JSON.stringify(posts, null, 2) }],
@@ -223,7 +223,7 @@ var get_journal_post_default = defineTool4({
     if (!rows.length) {
       return { content: [{ type: "text", text: `Post not found: ${slug}` }], isError: true };
     }
-    const post = { ...rows[0], url: `https://madeirastudio.pt/journal/${rows[0].slug}` };
+    const post = { ...rows[0], url: `https://madeiraoriginals.pt/journal/${rows[0].slug}` };
     return {
       content: [{ type: "text", text: JSON.stringify(post, null, 2) }],
       structuredContent: { post }
