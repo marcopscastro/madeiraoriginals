@@ -1,6 +1,7 @@
 import { Link } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
 import NewsletterForm from "@/components/NewsletterForm";
+import logoMark from "@/assets/madeira-originals-logo.svg";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -49,6 +50,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid md:grid-cols-5 gap-12">
           <div className="md:col-span-1">
+            <Link to="/" aria-label="Madeira Originals" className="inline-block mb-4"> {/* i18n-ignore */}
+              <img src={logoMark} alt="Madeira Originals" className="h-11 w-auto" loading="lazy" decoding="async" /> {/* i18n-ignore */}
+            </Link>
             <h3 className="font-display text-2xl font-semibold text-foreground">
               {t("footer.joinHeading")}
             </h3>

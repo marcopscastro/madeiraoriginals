@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
+import StudioMovedNotice from "@/components/StudioMovedNotice";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -9,6 +10,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <PageSEO routeKey="contact" />
       <Header />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8"><StudioMovedNotice /></div>
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
           {t("contactPage.overline")}

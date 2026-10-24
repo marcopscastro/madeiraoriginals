@@ -15,7 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoMark from "@/assets/MadeiraStudio_horizontal-compact_fullcolour.svg";
+import logoMark from "@/assets/madeira-originals-logo.svg";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -37,10 +37,6 @@ const Header = () => {
         { label: t("nav.wholesale"), href: "/wholesale" },
       ],
     },
-    {
-      label: t("nav.shop"),
-      href: "https://madeiraoriginals.pt",
-    },
     { label: t("nav.about"), href: "/about" },
     { label: t("nav.contact"), href: "/contact" },
   ] as { label: string; href: string; children?: { label: string; href: string }[] }[];
@@ -55,10 +51,10 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
-          <Link to="/" aria-label="Madeira Studio — by Madeira Originals" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
+          <Link to="/" aria-label="Madeira Originals" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
               src={logoMark}
-              alt="Madeira Studio — by Madeira Originals" // i18n-ignore
+              alt="Madeira Originals" // i18n-ignore
               className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
               loading="eager"
               decoding="async"
@@ -238,9 +234,6 @@ const Header = () => {
           </nav>
         )}
       </header>
-      <a href="https://madeiraoriginals.pt" className="block bg-muted px-4 py-2 text-center font-body text-xs text-foreground border-b border-foreground/10">
-        {t("nav.shopPointer")}
-      </a>
 
       <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />

@@ -6,6 +6,7 @@ import StudioQuoteForm from "@/components/StudioQuoteForm";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
 import { Link } from "@/components/LocaleLink";
 import brasaVivaFirePit from "@/assets/work/brasa-viva-fire-pit.jpg";
+import StudioMovedNotice from "@/components/StudioMovedNotice";
 
 const Studio = () => {
   const { t } = useTranslation();
@@ -22,6 +23,7 @@ const Studio = () => {
       <PageSEO routeKey="productionStudio" jsonLd={LOCAL_BUSINESS_JSONLD} />
       <Header />
       <main>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><StudioMovedNotice /></div>
         {/* Hero — darker, technical, brutalist */}
         <section className="bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
