@@ -10,6 +10,6 @@
 - [x] Audit remaining domain references: none in the codebase; verify PT/EN canonical, hreflang, og:url and JSON-LD in the browser.
 
 # Madeira Originals brand restoration
-- [ ] Restore header/footer and shared site identity; remove shop self-link/banner.
-- [ ] Add bilingual studio-move notices on the five retained pages and remove their sitemap entries.
-- [ ] Update brand rules; verify sitemap, locales, brand/domain tests and automatic build without publishing.
+- [x] Restore header/footer and shared site identity; remove shop self-link/banner.
+- [x] Add bilingual studio-move notices on the five retained pages and remove their sitemap entries.
+- [x] Update brand rules; sitemap regenerated (38 URLs), locales (715/715), seven brand/domain tests, automatic build and desktop/mobile browser checks passed; no publishing.
