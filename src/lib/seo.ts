@@ -48,8 +48,8 @@ export const LOCAL_BUSINESS_JSONLD = {
     "Custom apparel printing, DTF gang sheets, UV DTF stickers, and business merchandise studio in São Vicente, Madeira.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Estrada da Furna n.° 7",
-    postalCode: "9240-206",
+    streetAddress: "Entrada do Cascalho 3",
+    postalCode: "9240-203",
     addressLocality: "São Vicente",
     addressRegion: "Madeira",
     addressCountry: "PT",
