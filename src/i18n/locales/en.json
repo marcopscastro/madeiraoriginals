@@ -2,7 +2,6 @@
   "tagline": "Design · Print · Signage",
   "nav": {
     "shop": "Shop",
-    "shopPointer": "Looking for Madeira Originals t-shirts? → madeiraoriginals.pt",
     "shopAll": "All",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
@@ -35,7 +34,7 @@
     "business": "Services",
     "studio": "Studio (B2B)",
     "wholesale": "Wholesale",
-    "copyright": "Madeira Studio · by Madeira Originals · Marco Castro, São Vicente",
+    "copyright": "Madeira Originals · Marco Castro, São Vicente",
     "support": "Support",
     "shipping": "Shipping",
     "returns": "Returns",
@@ -282,16 +281,16 @@
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Studio — Creative & Print Studio | São Vicente",
-      "description": "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast."
+      "title": "Madeira Originals — Madeira Apparel | São Vicente",
+      "description": "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture."
     },
     "shop": {
       "title": "Shop Madeira T-Shirts, Hoodies & Apparel",
       "description": "Shop premium Madeira t-shirts, hoodies and accessories by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
     },
     "about": {
-      "title": "About Madeira Studio — Creative & Print Studio in Madeira",
-      "description": "Madeira Studio is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design."
+      "title": "About Madeira Originals — Madeira Apparel",
+      "description": "Madeira Originals is an apparel brand from São Vicente, Madeira, inspired by island heritage, culture and modern design."
     },
     "contact": {
       "title": "Contact Madeira Studio — São Vicente, Madeira",
@@ -302,8 +301,8 @@
       "description": "A guide to Madeira culture: volcanic landscapes, Atlantic identity, traditions, food, drink and the modern Madeira lifestyle that inspires our designs."
     },
     "journal": {
-      "title": "Madeira Studio Journal — Culture, Design & Print",
-      "description": "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Studio."
+      "title": "Madeira Originals Journal — Culture, Design & Apparel",
+      "description": "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals."
     },
     "productionStudio": {
       "title": "Services — Design, Apparel Printing & Signage in Madeira",
@@ -318,8 +317,8 @@
       "description": "A curated guide to the best Madeira souvenirs and Funchal gifts — premium, gift-ready picks from a Madeiran creative studio in São Vicente. Worldwide shipping."
     },
     "auth": {
-      "title": "Sign in — Madeira Studio",
-      "description": "Sign in to your Madeira Studio account to manage orders, the journal and quote requests."
+      "title": "Sign in — Madeira Originals",
+      "description": "Sign in to your Madeira Originals account to manage orders, the journal and quote requests."
     },
     "wholesale": {
       "title": "Wholesale — Madeira Originals Distribution Portal",
@@ -673,7 +672,7 @@
     "heading": "More from the studio."
   },
   "aboutPage": {
-    "seoOverline": "About Madeira Studio",
+    "seoOverline": "About Madeira Originals",
     "volume": "Volume 02 — A História",
     "opener": {
       "overline": "A Nossa Ilha · A Nossa Marca",
@@ -743,7 +742,7 @@
     },
     "newsletterHeading": "Stay close to the island.",
     "newsletterBody": "First access to new drops, production updates, and stories from Madeira.",
-    "overline": "About Madeira Studio",
+    "overline": "About Madeira Originals",
     "headingA": "A Nossa Ilha.",
     "headingB": "A Nossa Marca.",
     "lead": "Premium streetwear and custom apparel born in São Vicente, Madeira.",
@@ -1044,7 +1043,7 @@
     "subscribe": "Subscribe",
     "earlyAccess": "Get Early Access",
     "done": "You're in. First to know about drops.",
-    "doneToast": "You're on the list. Welcome to Madeira Studio.",
+    "doneToast": "You're on the list. Welcome to Madeira Originals.",
     "error": "Something went wrong. Try again."
   },
   "search": {
@@ -1337,6 +1336,7 @@
   "services": {
     "listHeading": "What's included",
     "processHeading": "How it works",
+    "movedNotice": "Studio services have moved to madeirastudio.pt",
     "hubHeading": "Services",
     "viewService": "View service",
     "requestAccess": "Request access",

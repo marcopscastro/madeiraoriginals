@@ -1,8 +1,8 @@
-# Madeira Studio
+# Madeira Originals
 
-> Creative and print studio in São Vicente, Madeira. Graphic design, custom apparel printing, signage and our own Madeira-inspired collection. 0% tourist trap.
+> Madeira Originals apparel from São Vicente, Madeira. T-shirts, hoodies, accessories and stickers inspired by island culture. 0% tourist trap.
 
-Madeira Studio operates two lanes: the Madeira Originals retail apparel line (tees, hoodies, accessories, stickers) and a Production Studio offering DTF printing, UV DTF stickers, custom apparel, and rally/performance graphics for businesses and teams.
+Madeira Originals is the apparel brand at https://madeiraoriginals.pt. Studio services have moved to the separate Madeira Studio site at https://madeirastudio.pt. Legacy service pages remain available with a notice linking to the studio site.
 
 ## Languages
 
@@ -25,14 +25,11 @@ The page list below shows the Portuguese (root) URLs. Prefix any of them with `/
 - [Madeira Stickers](/madeira-stickers): Durable die-cut UV DTF stickers.
 - [Madeira Streetwear](/madeira-streetwear): The full apparel line.
 - [Madeira Gifts](/madeira-gifts): Curated gift selection from Madeira.
-- [Services](/studio): Services hub — design, apparel printing, vinyl and signage, wholesale.
-- [Design](/design): Logo, visual identity, illustration and printed material.
-- [Apparel Printing](/apparel-printing): Staff uniforms and merchandise, DTF printed in São Vicente.
-- [Vinyl & Signage](/vinyl-signage): Window vinyl, cut lettering, decals and interior signs — design and supply.
+- [Studio services](https://madeirastudio.pt): Design, apparel printing, vinyl and signage on the separate studio site.
 - [Wholesale](/wholesale): Trade and distributor programme.
 - [Culture](/culture): Stories and inspiration from Madeira.
 - [About](/about): Brand story, values, and team.
-- [Contact](/contact): Get in touch.
+- [Studio contact](https://madeirastudio.pt): Contact the studio on its separate site; the legacy /contact page remains available with a move notice.
 - [Journal](/journal): Articles on Madeira culture, design, and apparel.
 
 ## Optional

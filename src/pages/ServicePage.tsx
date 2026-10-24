@@ -6,6 +6,7 @@ import { Link } from "@/components/LocaleLink";
 import { LOCAL_BUSINESS_JSONLD } from "@/lib/seo";
 import brasaVivaFirePit from "@/assets/work/brasa-viva-fire-pit.jpg";
 import frankieBurgersLogo from "@/assets/work/frankie-burgers-logo.jpg";
+import StudioMovedNotice from "@/components/StudioMovedNotice";
 
 export type ServiceKey = "design" | "apparel" | "vinyl";
 
@@ -34,6 +35,7 @@ const ServicePage = ({ serviceKey, path }: Props) => {
       />
       <Header />
       <main>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><StudioMovedNotice /></div>
         {/* Hero */}
         <section className="bg-secondary text-secondary-foreground">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
