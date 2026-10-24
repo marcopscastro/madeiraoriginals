@@ -11,7 +11,7 @@
 //
 // Conventions:
 //   - `title` and `h1` always include the focus keyword in natural English.
-//   - We omit "| Madeira Studio" from `title` here — the <SEO> component
+//   - We omit "| Madeira Originals" from `title` here — the <SEO> component
 //     appends it automatically (see src/components/SEO.tsx).
 //   - `description` aims for 140–160 chars, leads with the focus keyword,
 //     and includes a place anchor (Madeira / São Vicente / Funchal) where
@@ -49,11 +49,11 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Studio — Creative & Print Studio | São Vicente",
+    title: "Madeira Originals — Madeira Apparel | São Vicente",
     description:
-      "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
+      "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
     path: "/",
-    eyebrow: "Madeira Studio",
+    eyebrow: "Madeira Originals",
     h1: "Your brand, on every surface.",
     intro:
       "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
@@ -69,9 +69,9 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "The full Madeira Originals collection — t-shirts, hoodies, accessories and stickers, designed in São Vicente.",
   },
   about: {
-    title: "About Madeira Studio — Creative & Print Studio in Madeira",
+    title: "About Madeira Originals — Madeira Apparel",
     description:
-      "Madeira Studio is a creative and print studio from São Vicente, Madeira — inspired by island heritage, culture and modern design.",
+      "Madeira Originals is an apparel brand from São Vicente, Madeira, inspired by island heritage, culture and modern design.",
     path: "/about",
     eyebrow: "About",
     h1: "A Madeira Streetwear Brand from São Vicente",
@@ -108,12 +108,12 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Branded pint glasses and barware for Madeira hotels, restaurants, cafés and bars. Low minimums, island-made.",
   },
   journal: {
-    title: "Madeira Studio Journal — Culture, Design & Print",
+    title: "Madeira Originals Journal — Culture, Design & Apparel",
     description:
-      "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Studio.",
+      "Stories about Madeira culture, island identity, design, custom apparel production and the philosophy behind Madeira Originals.",
     path: "/journal",
     eyebrow: "Journal",
-    h1: "The Madeira Studio Journal",
+    h1: "The Madeira Originals Journal",
     intro:
       "Long-form notes on Madeira culture, streetwear and the craft behind every piece.",
   },
@@ -138,12 +138,12 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Madeira Originals — a premium Portugal streetwear brand born in São Vicente. Designed in PT, made for everywhere.",
   },
   auth: {
-    title: "Sign in — Madeira Studio",
+    title: "Sign in — Madeira Originals",
     description:
-      "Sign in to your Madeira Studio account to manage orders, the journal and quote requests.",
+      "Sign in to your Madeira Originals account to manage orders, the journal and quote requests.",
     path: "/auth",
     eyebrow: "Account",
-    h1: "Sign in to Madeira Studio",
+    h1: "Sign in to Madeira Originals",
   },
   madeiraSouvenirs: {
     title: "Madeira Souvenirs Guide — Real Gifts From Madeira",
