@@ -20,12 +20,12 @@ const MadeiraSouvenirs = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://madeirastudio.pt/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://madeiraoriginals.pt/" },
       {
         "@type": "ListItem",
         position: 2,
         name: "Madeira Souvenirs",
-        item: "https://madeirastudio.pt/madeira-souvenirs",
+        item: "https://madeiraoriginals.pt/madeira-souvenirs",
       },
     ],
   };
