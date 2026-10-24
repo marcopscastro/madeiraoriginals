@@ -6,5 +6,5 @@
 
 # Canonical domain move
 - [x] Update this project's site URLs to the apparel domain, preserving copy and pages.
-- [ ] Regenerate sitemap and verify domain tests, locales and automatic build.
-- [ ] Audit and report any remaining references to the studio domain.
+- [x] Regenerate sitemap and verify domain tests, locales and automatic build.
+- [x] Audit remaining domain references: none in the codebase; verify PT/EN canonical, hreflang, og:url and JSON-LD in the browser.
