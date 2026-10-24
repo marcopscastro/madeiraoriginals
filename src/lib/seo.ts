@@ -12,8 +12,13 @@ export const ORG_JSONLD = {
   description:
     "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
   brand: { "@type": "Brand", name: SITE_NAME },
+  telephone: "+351 962 220 769",
+  email: "geral@madeiraoriginals.pt",
+  vatID: "PT202158969",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Entrada do Cascalho 3",
+    postalCode: "9240-203",
     addressLocality: "São Vicente",
     addressRegion: "Madeira",
     addressCountry: "PT",
