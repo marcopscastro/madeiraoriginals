@@ -1,3 +1,9 @@
+# Apparel shop rebuild
+- [ ] Replace homepage and navigation with apparel collection and wholesale.
+- [ ] Redirect studio routes, update customer contact and legal pages.
+- [ ] Verify catalogue, journal images, SEO, locale parity, tests and mobile/desktop.
+- [ ] Check security and request publishing; report hosting limitations.
+
 # Studio rebrand
 - [x] Replace studio copy, logos, icons and site metadata; preserve apparel references.
 - [x] Verify locales, TypeScript and desktop/mobile presentation; produce per-file and retained-reference report.
