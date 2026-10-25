@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { isStorefrontProduct } from "@/lib/storefrontCatalog";
 import {
   PRODUCTS_QUERY,
   PRODUCT_BY_HANDLE_QUERY,
@@ -15,7 +16,7 @@ export function useProducts(first = 20, query?: string) {
         PRODUCTS_QUERY,
         { first, query: query ?? null }
       );
-      return res?.data?.products?.edges ?? [];
+      return (res?.data?.products?.edges ?? []).filter((product) => isStorefrontProduct(product.node));
     },
   });
 }
@@ -29,7 +30,8 @@ export function useProductByHandle(handle: string | undefined) {
         PRODUCT_BY_HANDLE_QUERY,
         { handle }
       );
-      return res?.data?.product ?? null;
+      const product = res?.data?.product;
+      return product && isStorefrontProduct(product) ? product : null;
     },
   });
 }
