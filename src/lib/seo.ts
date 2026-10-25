@@ -1,7 +1,7 @@
 export const SITE_URL = "https://madeiraoriginals.pt";
 export const SITE_NAME = "Madeira Originals";
 export const SITE_DEFAULT_DESC =
-  "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.";
+  "Madeira Originals t-shirts, hoodies and accessories with designs of places across Madeira — first collection: São Vicente. Printed to order in our studio.";
 
 export const ORG_JSONLD = {
   "@context": "https://schema.org",
@@ -10,7 +10,7 @@ export const ORG_JSONLD = {
   url: SITE_URL,
   logo: `${SITE_URL}/madeira-originals-logo.svg`,
   description:
-    "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
+    "Madeira Originals t-shirts, hoodies and accessories with designs of places across Madeira — first collection: São Vicente. Printed to order in our studio.",
   brand: { "@type": "Brand", name: SITE_NAME },
   telephone: "+351 962 220 769",
   email: "geral@madeiraoriginals.pt",
