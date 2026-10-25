@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import { langFromPathname, localizeHref, stripLocale } from "@/lib/locale";
 import type { Lang } from "@/i18n";
+import { STUDIO_REDIRECTS } from "@/lib/studioRedirects";
 
 /** Active locale, derived from the URL. */
 export const useLang = (): Lang => langFromPathname(useLocation().pathname);
@@ -38,6 +39,8 @@ export const useLocaleNavigate = () => {
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(({ to, ...props }, ref) => {
   const lang = useLang();
+  const moved = typeof to === "string" ? STUDIO_REDIRECTS[stripLocale(to)] : undefined;
+  if (moved) return <RouterLink ref={ref} to={moved} {...props} reloadDocument />;
   const resolved: To = typeof to === "string" ? localizeHref(to, lang) : to;
   return <RouterLink ref={ref} to={resolved} {...props} />;
 });

@@ -43,7 +43,14 @@ const PolicyPage = ({ seoTitle, seoDescription, path, overline, title, lead, sec
                 {s.heading}
               </h2>
               <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
-                {s.body}
+                {s.body.split(/((?:https:\/\/[^\s]+)|(?:geral@madeiraoriginals\.pt))/g).map((part, index) => {
+                  if (part === "geral@madeiraoriginals.pt") return <a key={index} href={`mailto:${part}`} className="text-foreground underline break-words">{part}</a>;
+                  if (part.startsWith("https://")) {
+                    const url = part.replace(/[.,;]$/, "");
+                    return <a key={index} href={url} className="text-foreground underline break-words">{part}</a>;
+                  }
+                  return part;
+                })}
               </p>
             </section>
           ))}

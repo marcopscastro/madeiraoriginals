@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   const { t } = useTranslation();
   const { data: products = [] } = useProducts(100);
-  const product = products.find((p) => p.node.handle.startsWith("capelinha-do-calhau")) ?? products[0];
+  // Levada Walks has a live garment photograph; the other live covers currently show artwork only.
+  const product = products.find((p) => p.node.handle.startsWith("levada-walks")) ?? products[0];
   const image = product?.node.images.edges[0]?.node;
   return (
     <section className="w-full bg-foreground text-background">
@@ -23,7 +24,7 @@ const Hero = () => {
           </div>
           {image && <figure className="min-w-0">
             <Link to={`/product/${product.node.handle}`} className="block aspect-[4/5] md:aspect-square overflow-hidden">
-              <img src={image.url} alt={image.altText || product.node.title} width={1000} height={1250} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-contain" />
+              <img src={image.url} alt={t("shopHome.heroImageAlt")} width={1000} height={1250} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-contain" />
             </Link>
             <figcaption className="mt-3 font-heading text-xs text-background/80">{product.node.title}</figcaption>
           </figure>}
