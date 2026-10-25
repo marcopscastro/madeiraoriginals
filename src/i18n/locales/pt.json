@@ -156,7 +156,7 @@
     "signOut": "Sair",
     "sections": {
       "corner": {
-        "title": "Premium Corner Line",
+        "title": "Coleção São Vicente",
         "body": "T-shirts core Madeira Originals, escalões de preço por volume."
       },
       "whiteLabel": {
@@ -184,10 +184,10 @@
       "submit": "Submeter pedido",
       "sending": "A enviar…",
       "done": "Pedido recebido.",
-      "doneBody": "Entraremos em contacto em um dia útil.",
+      "doneBody": "Recebemos o teu pedido de revenda. Vamos responder por email.",
       "volumeHint": "ex.: 250 unidades",
-      "windowHint": "ex.: 4-6 semanas",
-      "lineCorner": "T-shirts Corner Line",
+      "windowHint": "Data pretendida",
+      "lineCorner": "T-shirts da coleção São Vicente",
       "lineWhiteLabel": "DTF white-label",
       "lineUv": "Autocolantes UV DTF"
     },
@@ -332,7 +332,7 @@
     }
   },
   "common": {
-    "sendFailed": "Não foi possível enviar. Escreve para studio@madeiraoriginals.pt.",
+    "sendFailed": "Não foi possível enviar. Escreve para geral@madeiraoriginals.pt.",
     "loading": "A carregar…",
     "shopAll": "Ver tudo",
     "comingSoon": "Em breve",
@@ -1461,7 +1461,8 @@
     "originCta": "Ler a história",
     "wholesaleHeading": "Para lojas, hotéis e operadores.",
     "wholesaleBody": "A partir de 25 unidades.",
-    "studioLine": "Precisa de fardas, merchandising ou sinalética para o seu negócio? Isso é com o Madeira Studio →"
+    "studioLine": "Precisa de fardas, merchandising ou sinalética para o seu negócio? Isso é com o Madeira Studio →",
+    "heroImageAlt": "T-shirt Levada Walks da Madeira Originals, com ilustração de uma levada de São Vicente"
   },
   "privacyPage": {
     "seoTitle": "Privacidade | Madeira Originals",

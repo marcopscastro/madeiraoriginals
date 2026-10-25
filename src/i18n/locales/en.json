@@ -156,7 +156,7 @@
     "signOut": "Sign out",
     "sections": {
       "corner": {
-        "title": "Premium Corner Line",
+        "title": "São Vicente collection",
         "body": "Core Madeira Originals tees, bulk pricing tiers."
       },
       "whiteLabel": {
@@ -184,10 +184,10 @@
       "submit": "Submit inquiry",
       "sending": "Sending…",
       "done": "Inquiry received.",
-      "doneBody": "We'll be in touch within one working day.",
+      "doneBody": "We received your wholesale inquiry and will reply by email.",
       "volumeHint": "e.g. 250 units",
-      "windowHint": "e.g. 4-6 weeks",
-      "lineCorner": "Corner Line tees",
+      "windowHint": "Preferred date",
+      "lineCorner": "São Vicente collection t-shirts",
       "lineWhiteLabel": "White-label DTF",
       "lineUv": "UV DTF stickers"
     },
@@ -332,7 +332,7 @@
     }
   },
   "common": {
-    "sendFailed": "Could not send. Email studio@madeiraoriginals.pt instead.",
+    "sendFailed": "Could not send. Email geral@madeiraoriginals.pt instead.",
     "loading": "Loading…",
     "shopAll": "Shop all",
     "comingSoon": "Coming soon",
@@ -1461,7 +1461,8 @@
     "originCta": "Read the story",
     "wholesaleHeading": "For shops, hotels and operators.",
     "wholesaleBody": "From 25 units.",
-    "studioLine": "Need uniforms, merchandise or signage for your business? That’s Madeira Studio →"
+    "studioLine": "Need uniforms, merchandise or signage for your business? That’s Madeira Studio →",
+    "heroImageAlt": "Madeira Originals Levada Walks t-shirt with an illustration of a São Vicente levada"
   },
   "privacyPage": {
     "seoTitle": "Privacy | Madeira Originals",
