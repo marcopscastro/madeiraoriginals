@@ -10,7 +10,7 @@ const OriginStory = () => {
       <p className="mt-6 font-body text-base md:text-lg text-muted-foreground leading-relaxed">{t("shopHome.originBody")}</p>
       <Link to="/about" className="mt-6 inline-flex min-h-11 items-center font-heading text-sm underline underline-offset-4">{t("shopHome.originCta")} →</Link>
     </div>
-    <figure className="aspect-[4/3] overflow-hidden bg-muted"><img src={road} alt={t("diaspora.imageAlt")} width={1200} height={900} loading="lazy" decoding="async" className="h-full w-full object-cover" /></figure>
+    <figure className="aspect-[4/3] overflow-hidden bg-muted"><img src={road} alt={t("shopHome.originImageAlt")} width={1200} height={900} loading="lazy" decoding="async" className="h-full w-full object-cover" /></figure>
   </div></section>;
 };
 export default OriginStory;
