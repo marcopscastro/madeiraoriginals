@@ -1,3 +1,7 @@
+# Returns and locale prices
+- [ ] Remove sale exclusions while retaining personalised-only withdrawal exception.
+- [ ] Use active-locale currency formatting throughout the store; verify tests, automatic build and live PT/EN shopping flow, then request publishing.
+
 # Apparel shop rebuild
 - [x] Replace homepage and navigation with apparel collection and wholesale.
 - [x] Redirect studio routes, update customer contact and legal pages; classic hosting supports replacement navigation, not HTTP 301.
