@@ -49,14 +49,14 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Originals — São Vicente T-shirts, Madeira",
+    title: "Madeira Originals — T-shirts of places in Madeira",
     description:
-      "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
+      "T-shirts with designs of places in Madeira you won't find anywhere else. The first collection is São Vicente, on the north coast. Printed to order in our studio.",
     path: "/",
     eyebrow: "Madeira Originals",
-    h1: "São Vicente, on a t-shirt.",
+    h1: "The Madeira that isn't on the postcard.",
     intro:
-      "Nine north-coast designs, printed to order in São Vicente.",
+      "Designs of places across the island — first collection: São Vicente. Printed to order in our studio.",
   },
   shop: {
     title: "Shop Madeira T-Shirts, Hoodies & Apparel",
