@@ -99,10 +99,13 @@ export function formatCheckoutUrl(checkoutUrl: string): string {
   }
 }
 
-export function formatPrice(money: ShopifyMoney): string {
-  const amount = parseFloat(money.amount);
-  const symbol = money.currencyCode === "EUR" ? "€" : money.currencyCode === "USD" ? "$" : `${money.currencyCode} `;
-  return `${symbol}${amount.toFixed(2)}`;
+export function formatPrice(money: ShopifyMoney, language = i18n.resolvedLanguage ?? i18n.language ?? "pt"): string {
+  return new Intl.NumberFormat(language.startsWith("pt") ? "pt-PT" : "en-IE", {
+    style: "currency",
+    currency: money.currencyCode,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(Number(money.amount));
 }
 
 // Display-only remap for inch-based art-print sizes → EU format.

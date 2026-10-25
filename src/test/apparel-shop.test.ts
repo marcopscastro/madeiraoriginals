@@ -15,6 +15,10 @@ describe("apparel shop rules", () => {
   it("hides posters", () => expect(isStorefrontProduct({ handle: "madeira-poster" })).toBe(false));
   it("hides Printify products", () => expect(isStorefrontProduct({ handle: "madeira-tee", vendor: "Printify" })).toBe(false));
   it("keeps standard printed-to-order designs returnable", () => expect(hasWithdrawalRight(false)).toBe(true));
+  it("keeps non-personalised sale items within the 14-day withdrawal right", () => {
+    expect(hasWithdrawalRight(false)).toBe(true);
+    expect(COMMERCE_POLICY.withdrawalDays).toBe(14);
+  });
   it("excludes customer-personalised designs from withdrawal", () => expect(hasWithdrawalRight(true)).toBe(false));
   it("retains the 14-day withdrawal period", () => expect(COMMERCE_POLICY.withdrawalDays).toBe(14));
   it("retains the 25-unit wholesale minimum", () => expect(COMMERCE_POLICY.wholesaleMinimum).toBe(25));

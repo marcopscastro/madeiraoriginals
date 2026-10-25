@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WholesaleGate, { wholesaleSignOut, type WholesaleTier } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
+import { formatPrice } from "@/lib/shopify";
 
 const qtyLabel = (tier: WholesaleTier) =>
   tier.max_qty != null ? `${tier.min_qty}–${tier.max_qty} units` : `${tier.min_qty}+ units`;
 
-const priceLabel = (tier: WholesaleTier) => `€${Number(tier.unit_price_eur).toFixed(2)} / unit`;
+const priceLabel = (tier: WholesaleTier) => `${formatPrice({ amount: String(tier.unit_price_eur), currencyCode: "EUR" })} / unit`;
 
 const Wholesale = () => {
   const { t } = useTranslation();

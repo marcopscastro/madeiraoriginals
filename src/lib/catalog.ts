@@ -1,3 +1,5 @@
+import { formatPrice } from "@/lib/shopify";
+
 export const CATEGORIES = [
   "T-shirts",
   "Polos",
@@ -20,15 +22,9 @@ export const SLUG_TO_CATEGORY: Record<string, Category> = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([cat, slug]) => [slug, cat as Category]),
 ) as Record<string, Category>;
 
-const ptPriceFormatter = new Intl.NumberFormat("pt-PT", {
-  style: "currency",
-  currency: "EUR",
-  minimumFractionDigits: 2,
-});
-
 export const formatEUR = (n: number | null | undefined) => {
   if (n == null || isNaN(Number(n))) return "—";
-  return ptPriceFormatter.format(Number(n));
+  return formatPrice({ amount: String(n), currencyCode: "EUR" });
 };
 
 export type PriceTier = {
