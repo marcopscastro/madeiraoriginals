@@ -119,7 +119,7 @@
       {
         "name": "subscribe_newsletter",
         "title": "Subscribe to newsletter",
-        "description": "Subscribe an email address to the Madeira Studio newsletter.",
+        "description": "Subscribe an email address to the Madeira Originals newsletter.",
         "annotations": {
           "readOnlyHint": false,
           "idempotentHint": true,
@@ -135,13 +135,19 @@
               "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
               "description": "Subscriber email address."
             },
+            "consent": {
+              "type": "boolean",
+              "const": true,
+              "description": "Explicit consent to Madeira Originals marketing emails, required."
+            },
             "source": {
               "description": "Where the subscription originated (default: 'mcp').",
               "type": "string"
             }
           },
           "required": [
-            "email"
+            "email",
+            "consent"
           ]
         },
         "outputSchema": null
