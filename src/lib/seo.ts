@@ -24,19 +24,7 @@ export const ORG_JSONLD = {
     addressCountry: "PT",
   },
   areaServed: ["PT", "EU", "Worldwide"],
-  keywords: [
-    "creative print studio Madeira",
-    "Madeira clothing",
-    "Madeira apparel",
-    "Madeira t-shirts",
-    "Madeira gifts",
-    "Madeira lifestyle brand",
-    "custom apparel Madeira",
-    "DTF printing Madeira",
-    "UV DTF Madeira",
-    "DTF gang sheets Madeira",
-    "business merchandise Madeira",
-  ],
+  keywords: ["Madeira t-shirts", "São Vicente t-shirts", "Madeira apparel", "Madeira Originals"  ],
 };
 
 export const LOCAL_BUSINESS_JSONLD = {

@@ -27,7 +27,7 @@ const Wholesale = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
                 <p className="font-heading text-[11px] font-bold uppercase tracking-[0.35em] text-accent mb-3">
-                  {t("tagline")}
+                  {t("nav.wholesale")}
                 </p>
                 <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] opacity-70 mb-3">
                   {t("wholesale.overline")}

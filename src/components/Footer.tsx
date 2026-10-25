@@ -18,17 +18,9 @@ const Footer = () => {
       ],
     },
     {
-      heading: t("footer.business"),
-      links: [
-        { label: t("nav.design"), to: "/design" },
-        { label: t("nav.apparelPrinting"), to: "/apparel-printing" },
-        { label: t("nav.vinylSignage"), to: "/vinyl-signage" },
-        { label: t("footer.wholesale"), to: "/wholesale" },
-      ],
-    },
-    {
       heading: t("footer.brand"),
       links: [
+        { label: t("nav.wholesale"), to: "/wholesale" },
         { label: t("nav.about"), to: "/about" },
         { label: t("nav.journal"), to: "/journal" },
         { label: t("nav.contact"), to: "/contact" },
@@ -39,6 +31,9 @@ const Footer = () => {
       links: [
         { label: t("footer.shipping"), to: "/shipping" },
         { label: t("footer.returns"), to: "/returns" },
+        { label: t("footer.privacy"), to: "/privacidade" },
+        { label: t("footer.terms"), to: "/termos" },
+        { label: t("footer.complaints"), to: "https://www.livroreclamacoes.pt" },
         { label: t("footer.care"), to: "/care" },
         { label: t("footer.sizeGuide"), to: "/size-guide" },
       ],
@@ -48,7 +43,7 @@ const Footer = () => {
   return (
     <footer className="border-t-2 border-foreground bg-background pb-safe pl-safe pr-safe">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-5 gap-12">
+        <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <Link to="/" aria-label="Madeira Originals" className="inline-block mb-4"> {/* i18n-ignore */}
               <img src={logoMark} alt="Madeira Originals" className="h-11 w-auto" loading="lazy" decoding="async" /> {/* i18n-ignore */}
@@ -70,7 +65,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {s.links.map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="font-body text-sm text-muted-foreground hover:text-foreground">
+                    <Link to={l.to} reloadDocument={l.to.startsWith("https://")} className="font-body text-sm text-muted-foreground hover:text-foreground">
                       {l.label}
                     </Link>
                   </li>
@@ -81,9 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-foreground/10">
-          <p className="font-heading text-base md:text-lg font-bold uppercase tracking-[0.35em] text-accent text-center mb-4">
-            {t("tagline")}
-          </p>
+          <p className="font-body text-sm text-muted-foreground text-center mb-6"><a href="https://madeirastudio.pt" className="underline underline-offset-4">{t("footer.studioLink")}</a></p>
           <p className="font-heading text-[10px] uppercase tracking-[0.35em] text-muted-foreground text-center mb-6">
             {t("footer.designedIn")}
           </p>

@@ -1,4 +1,4 @@
-import { Search, User, Menu, X, ChevronDown, LogOut } from "lucide-react";
+import { Search, User, Menu, X, ChevronDown, LogOut, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocaleNavigate } from "@/components/LocaleLink";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import CartDrawer from "@/components/CartDrawer";
 import SearchOverlay from "@/components/SearchOverlay";
 import LanguageToggle from "@/components/LanguageToggle";
+import { Button } from "@/components/ui/button";
+import { useCartStore } from "@/stores/cartStore";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -26,19 +28,23 @@ const Header = () => {
   const { user, isAdmin } = useAuth();
   const navigate = useLocaleNavigate();
 
+  const cartCount = useCartStore((s) => s.items.reduce((sum, item) => sum + item.quantity, 0));
+
   const navLinks = [
     {
-      label: t("nav.services"),
-      href: "/studio",
+      label: t("nav.shop"),
+      href: "/shop",
       children: [
-        { label: t("nav.design"), href: "/design" },
-        { label: t("nav.apparelPrinting"), href: "/apparel-printing" },
-        { label: t("nav.vinylSignage"), href: "/vinyl-signage" },
-        { label: t("nav.wholesale"), href: "/wholesale" },
+        { label: t("nav.tshirts"), href: "/madeira-t-shirts" },
+        { label: t("nav.hoodies"), href: "/madeira-hoodies" },
+        { label: t("nav.accessories"), href: "/madeira-accessories" },
+        { label: t("nav.stickers"), href: "/madeira-stickers" },
+        { label: t("common.shopAll"), href: "/shop" },
       ],
     },
+    { label: t("nav.wholesale"), href: "/wholesale" },
     { label: t("nav.about"), href: "/about" },
-    { label: t("nav.contact"), href: "/contact" },
+    { label: t("nav.journal"), href: "/journal" },
   ] as { label: string; href: string; children?: { label: string; href: string }[] }[];
 
   const go = (href: string) => {
@@ -50,12 +56,12 @@ const Header = () => {
   return (
     <>
       <header className="sticky top-0 z-50 bg-background border-b border-foreground/10 pt-safe pl-safe pr-safe">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between min-h-16 py-2 flex-wrap gap-2 sm:gap-4">
           <Link to="/" aria-label="Madeira Originals" className="flex items-center gap-2 min-w-0"> {/* i18n-ignore */}
             <img
               src={logoMark}
               alt="Madeira Originals" // i18n-ignore
-              className="h-9 sm:h-10 md:h-11 w-auto flex-shrink-0"
+              className="h-7 sm:h-10 md:h-11 w-auto flex-shrink-0"
               loading="eager"
               decoding="async"
             />
@@ -69,6 +75,8 @@ const Header = () => {
                   className="relative"
                   onMouseEnter={() => setOpenDropdown(link.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
+                  onFocus={() => setOpenDropdown(link.label)}
+                  onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setOpenDropdown(null); }}
                 >
                   <Link to={link.href} reloadDocument={link.href.startsWith("https://")}
                     className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors flex items-center gap-1"
@@ -113,9 +121,9 @@ const Header = () => {
             )}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-0 sm:gap-1 flex-shrink-0">
             <LanguageToggle />
-            <button aria-label={t("nav.search")} className="text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
+            <button aria-label={t("nav.search")} className="min-h-11 min-w-11 flex items-center justify-center text-foreground hover:text-primary transition-colors" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
             {user ? (
@@ -123,7 +131,7 @@ const Header = () => {
                 <DropdownMenuTrigger asChild>
                   <button
                     aria-label={t("nav.account")}
-                    className="text-foreground hover:text-primary transition-colors hidden sm:block"
+                    className="min-h-11 min-w-11 flex items-center justify-center text-foreground hover:text-primary transition-colors"
                   >
                     <User size={20} />
                   </button>
@@ -155,14 +163,18 @@ const Header = () => {
               <button
                 aria-label={t("nav.signIn")}
                 onClick={() => navigate("/auth")}
-                className="text-foreground hover:text-primary transition-colors hidden sm:block"
+                className="min-h-11 min-w-11 flex items-center justify-center text-foreground hover:text-primary transition-colors"
               >
                 <User size={20} />
               </button>
             )}
+            <Button variant="ghost" size="icon" aria-label={t("nav.cart")} onClick={() => setCartOpen(true)} className="relative rounded-none min-h-11 min-w-11">
+              <ShoppingBag size={20} />
+              {cartCount > 0 && <span className="absolute top-0 right-0 font-heading text-[10px]">{cartCount}</span>}
+            </Button>
             <button
               aria-label={t("nav.menu")}
-              className="lg:hidden text-foreground"
+              className="lg:hidden min-h-11 min-w-11 flex items-center justify-center text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}

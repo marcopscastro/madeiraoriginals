@@ -97,7 +97,7 @@ const WholesaleGate = ({
     <section className="min-h-[70vh] flex items-center">
       <div className="max-w-md mx-auto w-full px-4 sm:px-6 py-16">
         <p className="font-heading text-[11px] font-bold uppercase tracking-[0.35em] text-accent mb-4">
-          {t("tagline")}
+          {t("nav.wholesale")}
         </p>
         <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
           {t("wholesale.gate.overline")}

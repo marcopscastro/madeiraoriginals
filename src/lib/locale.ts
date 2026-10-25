@@ -32,7 +32,11 @@ export const stripLocale = (pathname: string): string => {
 
 /** Prefix a locale-free path for the given language. */
 export const localizePath = (path: string, lang: Lang): string => {
-  const clean = stripLocale(path.startsWith("/") ? path : `/${path}`);
+  let clean = stripLocale(path.startsWith("/") ? path : `/${path}`);
+  if (clean === "/privacy") clean = "/privacidade";
+  if (clean === "/terms") clean = "/termos";
+  if (lang === "en" && clean === "/privacidade") return "/en/privacy";
+  if (lang === "en" && clean === "/termos") return "/en/terms";
   if (isUnlocalizedPath(clean)) return clean;
   const prefix = LOCALE_PREFIX[lang] ?? "";
   if (clean === "/") return prefix || "/";

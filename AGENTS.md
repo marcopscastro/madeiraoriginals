@@ -1,4 +1,7 @@
 # Project rules
-- Keep shared identity and metadata scoped to the apparel site; studio services belong to a separate site, so retained legacy service content must not redefine the global brand.
-- Import the apparel logo SVG directly from assets using the existing logo convention, because asset-serving paths are unavailable in the local Vite preview.
-- Use one translated StudioMovedNotice on each retained studio/contact page and exclude those routes from sitemap generation, so both locale trees communicate the move consistently without deleting pages.
+- Keep this project apparel-only: shop, own-collection wholesale and customer support; studio services are external redirects to Madeira Studio, not rendered service pages.
+- Import the apparel logo SVG directly from assets, because the local preview does not support asset-serving pointers for that logo.
+- Apply shared storefront eligibility to catalogue lists, product reads, sitemap and prerender discovery so posters and Printify products stay hidden without modifying Shopify data.
+- Legal route helpers map /privacidade to /en/privacy and /termos to /en/terms; all other localized slugs remain identical.
+- Keep wholesale pricing and passcode validation on the server; public pages must never contain private tier values.
+- Classic hosting cannot emit external HTTP 301s or route-specific HTTP 404s; use replacement navigation for moved routes and noindex for unknown routes, without pretending these are server responses.
