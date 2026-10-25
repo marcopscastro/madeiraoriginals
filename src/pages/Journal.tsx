@@ -54,13 +54,13 @@ const Journal = () => {
         <section className="border-b border-foreground/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-32 md:pt-44 pb-16 md:pb-24">
             <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.45em] text-accent mb-6">
-              {t("journal.overline")} · Field Notes · Atlantic Dispatches
+              {t("journal.overline")}
             </p>
             <h1 className="font-display font-medium leading-[0.98] tracking-tight text-5xl sm:text-7xl md:text-8xl text-foreground max-w-5xl">
               {t("journal.heading")}
             </h1>
             <p className="mt-8 max-w-xl font-body text-base md:text-lg text-foreground/65 leading-relaxed">
-              Stories, field notes and dispatches from São Vicente and the wider Atlantic — culture, craft, weather and the modern Madeira identity.
+              {t("journal.intro")}
             </p>
           </div>
 
@@ -106,7 +106,7 @@ const Journal = () => {
             <>
               {/* Lead story */}
               {lead && (() => {
-                const cover = journalCoverProps(lead.cover_url);
+                const cover = journalCoverProps(lead.cover_url, lead.slug);
                 return (
                   <Link to={`/journal/${lead.slug}`} className="group block mb-24 md:mb-32">
                     <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
@@ -144,7 +144,7 @@ const Journal = () => {
                           </p>
                         )}
                         <span className="mt-6 inline-block font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground border-b border-foreground pb-1">
-                          Read →
+                          {t("journal.read")} →
                         </span>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ const Journal = () => {
               {rest.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-20">
                   {rest.map((a) => {
-                    const cover = journalCoverProps(a.cover_url);
+                    const cover = journalCoverProps(a.cover_url, a.slug);
                     return (
                       <Link
                         key={a.slug}

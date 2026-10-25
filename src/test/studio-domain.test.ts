@@ -13,7 +13,7 @@ describe("apparel site identity", () => {
       "Madeira Originals", "Madeira Originals", "Madeira Originals",
     ]);
   });
-  it.each(["/studio", "/design", "/apparel-printing", "/vinyl-signage", "/contact"])(
+  it.each(["/studio", "/design", "/apparel-printing", "/vinyl-signage"])(
     "excludes moved service page %s from both sitemap locale trees",
     (path) => {
       const sitemap = readFileSync("public/sitemap.xml", "utf8");

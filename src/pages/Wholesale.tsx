@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WholesaleGate, { wholesaleSignOut, type WholesaleTier } from "@/components/WholesaleGate";
 import WholesaleInquiryForm from "@/components/WholesaleInquiryForm";
-import { Link } from "@/components/LocaleLink";
 
 const qtyLabel = (tier: WholesaleTier) =>
   tier.max_qty != null ? `${tier.min_qty}–${tier.max_qty} units` : `${tier.min_qty}+ units`;
@@ -27,7 +26,7 @@ const Wholesale = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
                 <p className="font-heading text-[11px] font-bold uppercase tracking-[0.35em] text-accent mb-3">
-                  {t("tagline")}
+                  {t("nav.wholesale")}
                 </p>
                 <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] opacity-70 mb-3">
                   {t("wholesale.overline")}
@@ -48,29 +47,6 @@ const Wholesale = () => {
               >
                 {t("wholesale.signOut")}
               </button>
-            </div>
-          </section>
-
-          {/* Catalogue link */}
-          <section className="border-b border-foreground/15">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <p className="font-heading text-[11px] font-bold uppercase tracking-[0.3em] text-primary mb-2">
-                  Catálogo B2B
-                </p>
-                <h3 className="font-display text-xl md:text-2xl font-semibold">
-                  Vestuário e acessórios personalizáveis
-                </h3>
-                <p className="font-body text-sm text-muted-foreground mt-1">
-                  T-shirts, polos, hoodies, totes e bonés — preços por escalão.
-                </p>
-              </div>
-              <Link
-                to="/catalogo"
-                className="self-start md:self-auto font-heading text-xs font-bold uppercase tracking-widest bg-foreground text-background px-5 py-3 hover:opacity-90"
-              >
-                Abrir catálogo →
-              </Link>
             </div>
           </section>
 
@@ -102,42 +78,6 @@ const Wholesale = () => {
             <a
               href="#inquire"
               className="mt-6 inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary hover:opacity-70"
-            >
-              {t("wholesale.inquire")} →
-            </a>
-          </section>
-
-          {/* White-label */}
-          <section id="white-label" className="bg-muted/50 border-y border-foreground/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-              <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">02</p>
-              <h2 className="font-display text-2xl md:text-4xl font-semibold text-foreground mb-3">
-                {t("wholesale.sections.whiteLabel.title")}
-              </h2>
-              <p className="font-body text-base text-muted-foreground max-w-2xl mb-6">
-                {t("wholesale.sections.whiteLabel.body")}
-              </p>
-              <a
-                href="#inquire"
-                className="inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary hover:opacity-70"
-              >
-                {t("wholesale.inquire")} →
-              </a>
-            </div>
-          </section>
-
-          {/* UV DTF */}
-          <section id="uv-dtf" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-            <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">03</p>
-            <h2 className="font-display text-2xl md:text-4xl font-semibold text-foreground mb-3">
-              {t("wholesale.sections.uvdtf.title")}
-            </h2>
-            <p className="font-body text-base text-muted-foreground max-w-2xl mb-6">
-              {t("wholesale.sections.uvdtf.body")}
-            </p>
-            <a
-              href="#inquire"
-              className="inline-block font-heading text-xs font-bold uppercase tracking-widest text-primary hover:opacity-70"
             >
               {t("wholesale.inquire")} →
             </a>

@@ -239,9 +239,10 @@ var SUPABASE_ANON3 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 var subscribe_newsletter_default = defineTool5({
   name: "subscribe_newsletter",
   title: "Subscribe to newsletter",
-  description: "Subscribe an email address to the Madeira Studio newsletter.",
+  description: "Subscribe an email address to the Madeira Originals newsletter.",
   inputSchema: {
     email: z5.string().email().describe("Subscriber email address."),
+    consent: z5.literal(true).describe("Explicit consent to Madeira Originals marketing emails, required."),
     source: z5.string().optional().describe("Where the subscription originated (default: 'mcp').")
   },
   annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },

@@ -23,10 +23,6 @@ const ORIGIN = `http://127.0.0.1:${PORT}`;
 const STATIC_ROUTES = [
   "/",
   "/shop",
-  "/studio",
-  "/design",
-  "/apparel-printing",
-  "/vinyl-signage",
   "/neblina",
   "/wholesale",
   "/culture",
@@ -45,6 +41,8 @@ const STATIC_ROUTES = [
   "/returns",
   "/care",
   "/size-guide",
+  "/privacidade",
+  "/termos",
 ];
 
 // Mirror src/lib/shopify.ts — keep in sync.
@@ -56,7 +54,7 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 async function fetchProductHandles() {
-  const query = `{ products(first: 100) { edges { node { handle } } } }`;
+  const query = `{ products(first: 100) { edges { node { handle title productType vendor tags } } } }`;
   try {
     const res = await fetch(SHOPIFY_URL, {
       method: "POST",
@@ -68,7 +66,7 @@ async function fetchProductHandles() {
     });
     if (!res.ok) return [];
     const json = await res.json();
-    return (json.data?.products?.edges ?? []).map(
+    return (json.data?.products?.edges ?? []).filter((e) => !/printify|poster|art[ -]?print|wall[ -]?art|p[oó]ster|quadro/i.test([e.node.handle,e.node.title,e.node.productType,e.node.vendor,...(e.node.tags ?? [])].join(" "))).map(
       (e) => `/product/${e.node.handle}`,
     );
   } catch (err) {
@@ -78,7 +76,7 @@ async function fetchProductHandles() {
 }
 
 async function fetchJournalSlugs() {
-  if (!SUPABASE_URL || !SUPABASE_KEY) return [];
+  if (!SUPABASE_URL || !SUPABASE_KEY) return ["/journal/best-souvenirs-from-madeira", "/journal/modern-madeira-streetwear", "/journal/what-makes-madeira-culture-unique"];
   try {
     const res = await fetch(
       `${SUPABASE_URL}/rest/v1/articles?select=slug&published=eq.true`,
@@ -137,6 +135,9 @@ async function snapshot(browser, route) {
       waitUntil: "networkidle0",
       timeout: 30000,
     });
+    if (route.includes("/journal/") || route.includes("/product/")) {
+      await page.waitForSelector("main h1", { timeout: 20000 });
+    }
     // Give React Query / lazy chunks a small grace period.
     await wait(400);
     const html = await page.content();
@@ -173,7 +174,7 @@ async function main() {
   // Both locale trees: pt-PT at the root, English under /en.
   const allRoutes = [
     ...baseRoutes,
-    ...baseRoutes.map((r) => (r === "/" ? "/en" : `/en${r}`)),
+    ...baseRoutes.map((r) => r === "/" ? "/en" : r === "/privacidade" ? "/en/privacy" : r === "/termos" ? "/en/terms" : `/en${r}`),
   ];
   console.log(
     `prerender: ${allRoutes.length} routes across 2 locales (` +

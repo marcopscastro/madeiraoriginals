@@ -1,3 +1,9 @@
+# Apparel shop rebuild
+- [x] Replace homepage and navigation with apparel collection and wholesale.
+- [x] Redirect studio routes, update customer contact and legal pages; classic hosting supports replacement navigation, not HTTP 301.
+- [x] Verify nine live €25 products and cart, three journal images and metadata, 751/751 locale keys, 23 tests, automatic build and 390/1440 PT/EN.
+- [x] Security checked with no critical findings; publishing requested after final checks. Report HTTP redirect/404 hosting limitations and unchanged security warnings.
+
 # Studio rebrand
 - [x] Replace studio copy, logos, icons and site metadata; preserve apparel references.
 - [x] Verify locales, TypeScript and desktop/mobile presentation; produce per-file and retained-reference report.

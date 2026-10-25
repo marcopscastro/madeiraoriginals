@@ -5,12 +5,10 @@ import { useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
 import { supabase } from "@/integrations/supabase/client";
 
-const LINES = ["Corner Line tees", "White-label DTF", "UV DTF stickers"] as const;
+const LINES = ["Corner Line tees"] as const;
 type LineKey = (typeof LINES)[number];
 const LINE_I18N: Record<LineKey, string> = {
   "Corner Line tees": "wholesale.form.lineCorner",
-  "White-label DTF": "wholesale.form.lineWhiteLabel",
-  "UV DTF stickers": "wholesale.form.lineUv",
 };
 
 const makeSchema = (t: TFunction) => z.object({
@@ -36,9 +34,7 @@ const WholesaleInquiryForm = ({ defaultLine }: { defaultLine?: LineKey }) => {
     notes: "",
   });
   const [lines, setLines] = useState<Record<LineKey, boolean>>({
-    "Corner Line tees": defaultLine === "Corner Line tees",
-    "White-label DTF": defaultLine === "White-label DTF",
-    "UV DTF stickers": defaultLine === "UV DTF stickers",
+    "Corner Line tees": !defaultLine || defaultLine === "Corner Line tees",
   });
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);

@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Check } from "lucide-react";
+import { Link } from "@/components/LocaleLink";
+import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Props {
@@ -17,6 +19,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Pro
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot
   const [loading, setLoading] = useState(false);
+  const [consent, setConsent] = useState(false);
   const [done, setDone] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
@@ -26,6 +29,7 @@ const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Pro
       setDone(true);
       return;
     }
+    if (!consent) return;
     const parsed = schema.safeParse({ email });
     if (!parsed.success) {
       toast.error(parsed.error.issues[0].message);
@@ -55,7 +59,8 @@ const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Pro
   }
 
   return (
-    <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-0 w-full min-w-0">
+    <form onSubmit={submit} className="w-full min-w-0">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
       <input
         type="text"
         name="website"
@@ -76,13 +81,18 @@ const NewsletterForm = ({ source = "footer", variant = "footer", ctaLabel }: Pro
         size={1}
         className="flex-1 min-w-0 bg-background border border-foreground px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary rounded-none"
       />
-      <button
+      <Button
         type="submit"
-        disabled={loading}
+        disabled={loading || !consent}
         className="bg-primary text-primary-foreground font-heading text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:opacity-90 transition-opacity whitespace-nowrap disabled:opacity-50"
       >
         {loading ? t("newsletter.joining") : ctaLabel ?? (variant === "inline" ? t("newsletter.join") : t("newsletter.subscribe"))}
-      </button>
+      </Button>
+      </div>
+      <label className="mt-3 flex gap-3 items-start font-body text-xs leading-relaxed text-inherit">
+        <input type="checkbox" required checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1 h-4 w-4 shrink-0" />
+        <span>{t("newsletter.consent")} <Link to="/privacidade" className="underline underline-offset-2">{t("newsletter.privacyLink")}</Link></span>
+      </label>
     </form>
   );
 };

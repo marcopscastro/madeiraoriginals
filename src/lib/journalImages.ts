@@ -13,9 +13,17 @@ const JOURNAL_WEBP_BASES = new Set([
 ]);
 
 /** Branded fallback shown when an article has no cover_url set. */
-export const JOURNAL_FALLBACK_COVER = "/journal/journal-placeholder.webp";
+export const JOURNAL_FALLBACK_COVER = "/journal/culture-hero-1000.webp";
 
-export function journalCoverProps(url: string | null | undefined) {
+const ARTICLE_COVERS: Record<string, string> = {
+  "best-souvenirs-from-madeira": "/journal/journal-souvenirs-cover.webp",
+  "modern-madeira-streetwear": "/journal/journal-streetwear-cover.webp",
+  "what-makes-madeira-culture-unique": "/journal/culture-hero-1000.webp",
+};
+
+export function journalCoverProps(url: string | null | undefined, slug?: string) {
+  url = (slug && ARTICLE_COVERS[slug]) || url;
+  if (url?.includes("journal-placeholder")) url = JOURNAL_FALLBACK_COVER;
   if (!url) {
     return { src: JOURNAL_FALLBACK_COVER, srcSet: undefined as string | undefined };
   }

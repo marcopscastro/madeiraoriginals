@@ -49,14 +49,14 @@ export type PageSeoKey =
 
 export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
   home: {
-    title: "Madeira Originals — Madeira Apparel | São Vicente",
+    title: "Madeira Originals — São Vicente T-shirts, Madeira",
     description:
       "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture.",
     path: "/",
     eyebrow: "Madeira Originals",
-    h1: "Your brand, on every surface.",
+    h1: "São Vicente, on a t-shirt.",
     intro:
-      "A creative and print studio in São Vicente, Madeira. Logos, uniforms, merchandise and signage — designed and produced on the north coast.",
+      "Nine north-coast designs, printed to order in São Vicente.",
   },
   shop: {
     title: "Shop Madeira T-Shirts, Hoodies & Apparel",
@@ -79,13 +79,13 @@ export const PAGE_SEO: Record<PageSeoKey, PageSeoTemplate> = {
       "Born on the north coast of Madeira. Built for people who want the island done properly — not a tourist-shop version of it.",
   },
   contact: {
-    title: "Contact Madeira Studio — São Vicente, Madeira",
+    title: "Contact Madeira Originals — Orders & Returns",
     description:
-      "Get in touch with Madeira Studio — a creative and print studio based in São Vicente, Madeira, Portugal.",
+      "Contact Madeira Originals about orders, sizes, returns and wholesale.",
     path: "/contact",
     eyebrow: "Contact",
-    h1: "Talk to Madeira Studio",
-    intro: "São Vicente, Madeira — replies within one working day.",
+    h1: "Contact Madeira Originals",
+    intro: "Orders, sizes, returns and wholesale.",
   },
   culture: {
     title: "Madeira Culture — Identity, Landscape & Atlantic Heritage",

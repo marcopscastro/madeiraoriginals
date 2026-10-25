@@ -16,6 +16,8 @@ import Index from "./pages/Index";
 import { COLLECTIONS } from "./lib/collections";
 import { useCartSync } from "@/hooks/useCartSync";
 import { localizePath, stripLocale, langFromPathname } from "@/lib/locale";
+import SEO from "@/components/SEO";
+import { STUDIO_REDIRECTS } from "@/lib/studioRedirects";
 import type { Lang } from "@/i18n";
 
 // Lazy-load non-critical routes to shrink initial bundle
@@ -26,10 +28,7 @@ const Culture = lazy(() => import("./pages/Culture"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 
-const Studio = lazy(() => import("./pages/Studio"));
-const Design = lazy(() => import("./pages/Design"));
-const ApparelPrinting = lazy(() => import("./pages/ApparelPrinting"));
-const VinylSignage = lazy(() => import("./pages/VinylSignage"));
+const Legal = lazy(() => import("./pages/Legal"));
 const Wholesale = lazy(() => import("./pages/Wholesale"));
 const PortugalStreetwear = lazy(() => import("./pages/PortugalStreetwear"));
 const MadeiraSouvenirs = lazy(() => import("./pages/MadeiraSouvenirs"));
@@ -96,6 +95,12 @@ const ProductRedirect = ({ lang }: { lang: Lang }) => {
   return <Navigate to={localizePath(`/product/${handle}`, lang)} replace />;
 };
 
+const ExternalStudioRedirect = ({ to }: { to: string }) => {
+  const { t } = useTranslation();
+  useEffect(() => { window.location.replace(to); }, [to]);
+  return <><SEO title={t("services.movedNotice")} noIndex /><a href={to}>{t("services.movedNotice")}</a></>;
+};
+
 /**
  * The full route tree, rendered once per locale.
  * Paths are relative so the same tree serves "/" (pt) and "/en" (en).
@@ -110,13 +115,9 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         {Object.values(COLLECTIONS).map((c) => (
           <Route key={c.slug} path={c.slug} element={<Collection config={c} />} />
         ))}
-        <Route path="studio" element={<Studio />} />
-        <Route path="b2b" element={<LocaleRedirect to="/studio" lang={lang} />} />
-        <Route path="production-studio" element={<LocaleRedirect to="/studio" lang={lang} />} />
-        <Route path="horeca" element={<LocaleRedirect to="/studio" lang={lang} />} />
-        <Route path="design" element={<Design />} />
-        <Route path="apparel-printing" element={<ApparelPrinting />} />
-        <Route path="vinyl-signage" element={<VinylSignage />} />
+        {Object.entries(STUDIO_REDIRECTS).map(([path, to]) => <Route key={path} path={path.slice(1)} element={<ExternalStudioRedirect to={to} />} />)
+        }
+        {["b2b", "production-studio", "horeca"].map((path) => <Route key={path} path={path} element={<ExternalStudioRedirect to={STUDIO_REDIRECTS["/studio"]} />} />)}
         <Route path="norte" element={<LocaleRedirect to="/neblina" lang={lang} />} />
         <Route path="wholesale" element={<Wholesale />} />
         <Route path="portugal-streetwear" element={<PortugalStreetwear />} />
@@ -130,6 +131,8 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         <Route path="journal/:slug" element={<JournalPost />} />
         <Route path="product/:handle" element={<ProductDetail />} />
         <Route path="products/:handle" element={<ProductRedirect lang={lang} />} />
+        <Route path={lang === "pt" ? "privacidade" : "privacy"} element={<Legal kind="privacy" />} />
+        <Route path={lang === "pt" ? "termos" : "terms"} element={<Legal kind="terms" />} />
         <Route path="shipping" element={<Shipping />} />
         <Route path="returns" element={<Returns />} />
         <Route path="care" element={<Care />} />
@@ -137,7 +140,7 @@ const LocaleRoutes = ({ lang }: { lang: Lang }) => {
         <Route path="size-guide" element={<SizeGuide />} />
         <Route path="sizing" element={<LocaleRedirect to="/size-guide" lang={lang} />} />
         <Route path="shipping-returns" element={<LocaleRedirect to="/shipping" lang={lang} />} />
-        <Route path="custom" element={<LocaleRedirect to="/apparel-printing" lang={lang} />} />
+        <Route path="custom" element={<ExternalStudioRedirect to={STUDIO_REDIRECTS["/apparel-printing"]} />} />
         <Route path="catalogo" element={<Catalogo />} />
         <Route path="catalogo/produto/:id" element={<CatalogoProduto />} />
         <Route path="catalogo/:category" element={<CatalogoCategory />} />
