@@ -3,6 +3,8 @@
 
 import { writeFileSync } from "fs";
 import { resolve } from "path";
+import { localizePath } from "../src/lib/locale";
+import { isStorefrontProduct } from "../src/lib/storefrontCatalog";
 
 const BASE_URL = "https://madeiraoriginals.pt";
 
@@ -33,6 +35,11 @@ const staticEntries: SitemapEntry[] = [
   { path: "/portugal-streetwear", changefreq: "monthly", priority: "0.7" },
   { path: "/madeira-souvenirs", changefreq: "monthly", priority: "0.7" },
   { path: "/culture", changefreq: "monthly", priority: "0.6" },
+  { path: "/contact", changefreq: "monthly", priority: "0.5" },
+  { path: "/privacidade", changefreq: "yearly", priority: "0.3" },
+  { path: "/termos", changefreq: "yearly", priority: "0.3" },
+  { path: "/shipping", changefreq: "monthly", priority: "0.5" },
+  { path: "/returns", changefreq: "monthly", priority: "0.5" },
   { path: "/about", changefreq: "monthly", priority: "0.6" },
   { path: "/journal", changefreq: "weekly", priority: "0.8" },
   // Known journal posts (hand-curated; expand here as new ones publish)
@@ -41,7 +48,7 @@ const staticEntries: SitemapEntry[] = [
   { path: "/journal/what-makes-madeira-culture-unique", changefreq: "monthly", priority: "0.7" },
 ];
 
-type ProductNode = { handle: string; updatedAt: string };
+type ProductNode = { handle: string; updatedAt: string; title: string; productType: string; vendor: string; tags: string[] };
 
 async function fetchAllProductHandles(): Promise<ProductNode[]> {
   const all: ProductNode[] = [];
@@ -53,7 +60,7 @@ async function fetchAllProductHandles(): Promise<ProductNode[]> {
       products(first: $first, after: $after) {
         edges {
           cursor
-          node { handle updatedAt }
+          node { handle updatedAt title productType vendor tags }
         }
         pageInfo { hasNextPage }
       }
@@ -75,7 +82,7 @@ async function fetchAllProductHandles(): Promise<ProductNode[]> {
     if (json.errors) throw new Error(`Shopify errors: ${JSON.stringify(json.errors)}`);
 
     const edges: Array<{ cursor: string; node: ProductNode }> = json.data?.products?.edges ?? [];
-    edges.forEach((e) => all.push(e.node));
+    edges.filter((e) => isStorefrontProduct(e.node)).forEach((e) => all.push(e.node));
     const hasNext: boolean = json.data?.products?.pageInfo?.hasNextPage ?? false;
     if (!hasNext || edges.length === 0) break;
     cursor = edges[edges.length - 1].cursor;
@@ -100,11 +107,11 @@ function buildSitemap(entries: SitemapEntry[]) {
   const urls: string[] = [];
   for (const entry of entries) {
     for (const locale of LOCALES) {
-      const loc = `${BASE_URL}${locale.prefix}${entry.path === "/" ? "" : entry.path}` || BASE_URL;
+      const loc = `${BASE_URL}${localizePath(entry.path, locale.lang)}`;
       const alternates = [
         ...LOCALES.map(
           (l) =>
-            `    <xhtml:link rel="alternate" hreflang="${l.hreflang}" href="${BASE_URL}${l.prefix}${entry.path === "/" ? "" : entry.path}${l.prefix === "" && entry.path === "/" ? "/" : ""}" />`,
+            `    <xhtml:link rel="alternate" hreflang="${l.hreflang}" href="${BASE_URL}${localizePath(entry.path, l.lang)}" />`,
         ),
         `    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${entry.path}" />`,
       ];

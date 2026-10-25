@@ -45,7 +45,7 @@ const JournalPreview = () => {
         {articles.map((a) => {
           const title = (isPt && a.title_pt) || a.title;
           const excerpt = (isPt && a.excerpt_pt) || a.excerpt;
-          const cover = journalCoverProps(a.cover_url);
+          const cover = journalCoverProps(a.cover_url, a.slug);
           return (
             <Link
               key={a.slug}

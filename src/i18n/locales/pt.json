@@ -2,13 +2,13 @@
   "tagline": "Design · Impressão · Sinalética",
   "nav": {
     "shop": "Loja",
-    "shopAll": "Tudo",
+    "shopAll": "Ver tudo",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
     "accessories": "Acessórios",
     "stickers": "Autocolantes",
     "studio": "Studio",
-    "wholesale": "Distribuição",
+    "wholesale": "Revenda",
     "journal": "Diário",
     "about": "Sobre",
     "contact": "Contacto",
@@ -27,20 +27,24 @@
     "vinylSignage": "Vinil e Sinalética"
   },
   "footer": {
-    "joinHeading": "Junta-te à comunidade.",
-    "joinBody": "Acesso antecipado a lançamentos, atualizações de produção e histórias da ilha.",
+    "joinHeading": "Novidades da coleção.",
+    "joinBody": "Novas t-shirts e histórias de São Vicente por email.",
     "shop": "Loja",
     "brand": "Marca",
     "business": "Serviços",
     "studio": "Studio (B2B)",
-    "wholesale": "Distribuição",
+    "wholesale": "Revenda",
     "copyright": "Madeira Originals · Marco Castro, São Vicente · NIF 202158969",
     "support": "Suporte",
     "shipping": "Envio",
     "returns": "Devoluções",
     "care": "Cuidados",
     "sizeGuide": "Guia de Tamanhos",
-    "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico."
+    "designedIn": "Desenhado em São Vicente, Madeira. Inspirado pelo Atlântico.",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "complaints": "Livro de Reclamações",
+    "studioLink": "Design e impressão para empresas: madeirastudio.pt"
   },
   "hero": {
     "imageAlt": "T-shirt preta Madeira Originals com a ilustração Capelinha do Calhau, desenhada e impressa em São Vicente",
@@ -146,9 +150,9 @@
       "noAccess": "Ainda não tem acesso?",
       "requestAccessLink": "Peça aqui."
     },
-    "overline": "Distribuição Wholesale",
+    "overline": "Revenda",
     "heading": "Venda uma marca madeirense que não é uma recordação.",
-    "sub": "Nove desenhos ilustrados de São Vicente e da costa norte, impressos aqui. Preços por escalão, consoante a quantidade. Reposição em dias, porque estamos na mesma ilha e não no mesmo continente.",
+    "sub": "A nossa coleção própria para lojas, hotéis e operadores. A partir de 25 unidades, impressas por encomenda em São Vicente.",
     "signOut": "Sair",
     "sections": {
       "corner": {
@@ -194,8 +198,8 @@
   },
   "shop": {
     "overline": "Coleção",
-    "heading": "Streetwear & Vestuário da Madeira",
-    "sub": "T-shirts, hoodies e acessórios premium inspirados nas paisagens e cultura da Madeira. Desenhado em São Vicente, enviado para todo o mundo a partir da ilha.",
+    "heading": "T-shirts de São Vicente.",
+    "sub": "Nove desenhos da costa norte, a 25€ por t-shirt. Impressos por encomenda em São Vicente.",
     "all": "Todos",
     "searchPlaceholder": "Pesquisar produtos",
     "clearSearch": "Limpar pesquisa",
@@ -277,24 +281,26 @@
     "breadcrumb": "Diário",
     "ctaShop": "Ver a Coleção",
     "previewHeading": "Histórias da ilha.",
-    "viewAll": "Ver tudo →"
+    "viewAll": "Ver tudo →",
+    "intro": "Histórias de São Vicente e da cultura madeirense.",
+    "read": "Ler"
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Originals — Vestuário da Madeira | São Vicente",
-      "description": "T-shirts, hoodies e acessórios Madeira Originals, desenhados em São Vicente e inspirados na cultura da Madeira."
+      "title": "Madeira Originals — T-shirts de São Vicente, Madeira",
+      "description": "Nove desenhos de São Vicente e da costa norte da Madeira. T-shirts a 25€, impressas por encomenda no nosso estúdio em São Vicente."
     },
     "shop": {
       "title": "Loja — T-Shirts, Hoodies e Vestuário da Madeira",
-      "description": "Compra t-shirts, hoodies e acessórios premium da Madeira Originals. Desenhado em São Vicente, Madeira. Envio para todo o mundo."
+      "description": "Nove desenhos de São Vicente e da costa norte da Madeira. T-shirts a 25€, impressas por encomenda no nosso estúdio em São Vicente."
     },
     "about": {
       "title": "Sobre a Madeira Originals — Vestuário da Madeira",
       "description": "A Madeira Originals é uma marca de vestuário de São Vicente, Madeira, inspirada na herança, cultura e design moderno da ilha."
     },
     "contact": {
-      "title": "Contacto — Madeira Studio, São Vicente",
-      "description": "Fala connosco. Madeira Studio — estúdio criativo e de impressão com sede em São Vicente, Madeira, Portugal."
+      "title": "Contacto — Madeira Originals",
+      "description": "Contacto para encomendas, tamanhos, devoluções e revenda Madeira Originals. Levantamento no estúdio em São Vicente."
     },
     "culture": {
       "title": "Cultura Madeirense — Identidade, Paisagem e Herança Atlântica",
@@ -591,8 +597,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "heading": "Fique a par.",
-    "body": "Trabalhos novos do estúdio, e peças novas na coleção."
+    "heading": "Novidades da Madeira Originals.",
+    "body": "Novos desenhos da coleção e histórias de São Vicente por email."
   },
   "aboutUs": {
     "overline": "Sobre",
@@ -716,7 +722,7 @@
         {
           "k": "04",
           "title": "Qualidade Premium",
-          "body": "Algodão ring-spun e acabamentos que amaciam com o uso em vez de se desfazerem."
+          "body": "Cada desenho parte de um lugar de São Vicente e é impresso por encomenda no nosso estúdio."
         },
         {
           "k": "05",
@@ -752,12 +758,12 @@
   },
   "contactPage": {
     "overline": "Contacto",
-    "heading": "Vamos falar.",
-    "lead": "Quer queiras uma peça da coleção quer uma colaboração — estamos sediados em São Vicente, Madeira, e disponíveis em qualquer lado.",
+    "heading": "Encomendas, tamanhos e devoluções.",
+    "lead": "Fala connosco sobre a tua encomenda, o tamanho de uma peça, uma devolução ou revenda da coleção.",
     "generalLabel": "Geral",
-    "generalNote": "Encomendas, devoluções, imprensa, colaborações.",
+    "generalNote": "Encomendas, tamanhos, devoluções e revenda.",
     "phoneLabel": "Telefone",
-    "studioLabel": "Estúdio",
+    "studioLabel": "Levantamento gratuito no estúdio",
     "studioAddress": "Caminho da Furna 7, 9240-206 São Vicente, Madeira, Portugal"
   },
   "culturePage": {
@@ -1045,7 +1051,9 @@
     "earlyAccess": "Acesso Antecipado",
     "done": "Estás dentro. Primeiro a saber dos lançamentos.",
     "doneToast": "Estás na lista. Bem-vindo à Madeira Originals.",
-    "error": "Algo correu mal. Tenta novamente."
+    "error": "Algo correu mal. Tenta novamente.",
+    "consent": "Quero receber por email novidades da Madeira Originals. Posso cancelar a subscrição por email a qualquer momento.",
+    "privacyLink": "Ler a política de privacidade"
   },
   "search": {
     "placeholder": "Procurar produtos...",
@@ -1099,7 +1107,7 @@
     },
     "returns": {
       "title": "Devoluções",
-      "body": "14 dias para devolver peças não usadas, em estado original, para reembolso ou troca. Peças por encomenda ou personalizadas não são devolvíveis.",
+      "body": "Tens 14 dias após a entrega para exercer o direito de livre resolução. Os desenhos standard impressos por encomenda são elegíveis. Apenas peças personalizadas (nome, número ou desenho feito a teu pedido) estão excluídas deste direito; artigos em saldo final mantêm os direitos legais.",
       "link": "Ver política de devoluções"
     },
     "care": {
@@ -1110,7 +1118,7 @@
   },
   "policy": {
     "questions": "Dúvidas sobre a tua encomenda?",
-    "contactLink": "Fala com o estúdio"
+    "contactLink": "Contacta-nos"
   },
   "shippingPage": {
     "seoTitle": "Envio | Madeira Originals",
@@ -1166,7 +1174,7 @@
       },
       {
         "heading": "04 — Reembolsos",
-        "body": "Depois de recebermos e inspecionarmos a devolução, o reembolso é emitido no método de pagamento original em 5–10 dias úteis. O custo de envio original não é reembolsável."
+        "body": "Em caso de livre resolução, reembolsamos os pagamentos recebidos, incluindo o custo da entrega standard (não suplementos por entrega especial), no mesmo meio de pagamento, até 14 dias após a comunicação. Podemos reter o reembolso até recebermos a peça ou prova do envio. O custo direto da devolução fica a teu cargo, salvo defeito ou erro nosso."
       },
       {
         "heading": "05 — Trocas",
@@ -1174,7 +1182,7 @@
       },
       {
         "heading": "06 — Não elegíveis",
-        "body": "Peças por encomenda, personalizadas ou em saldo final não podem ser devolvidas ou trocadas. Está sempre indicado na página do produto."
+        "body": "Peças personalizadas com nome, número ou um desenho feito a teu pedido não beneficiam do direito de livre resolução, nos termos do DL 24/2014. Os desenhos standard da coleção, mesmo impressos por encomenda, podem ser devolvidos no prazo de 14 dias. Artigos em saldo final podem estar excluídos de trocas comerciais, mas mantêm o direito legal de livre resolução e os direitos em caso de defeito."
       }
     ]
   },
@@ -1439,5 +1447,90 @@
   "shopifyStatus": {
     "billingTitle": "Loja temporariamente indisponível",
     "billingBody": "A nossa loja está temporariamente indisponível. Tenta novamente dentro de momentos."
+  },
+  "shopHome": {
+    "headline": "São Vicente, em t-shirt.",
+    "subline": "Nove desenhos de lugares da costa norte, da Capelinha do Calhau ao Vale Imperioso. Impressos por encomenda no nosso estúdio em São Vicente.",
+    "ctaShop": "Ver a coleção",
+    "ctaWholesale": "Revenda para lojas",
+    "collectionHeading": "Nove lugares. São Vicente.",
+    "productsUnavailable": "Não foi possível carregar a coleção.",
+    "facts": "Impresso em São Vicente · Envio grátis na Madeira · Levantamento no estúdio · 14 dias para devolver",
+    "originHeading": "Da costa norte.",
+    "originBody": "São Vicente é o ponto de partida. O basalto, o nevoeiro e as levadas passam dos lugares para os desenhos. Da Capelinha do Calhau ao Vale Imperioso, cada t-shirt guarda uma referência desta costa.",
+    "originCta": "Ler a história",
+    "wholesaleHeading": "Para lojas, hotéis e operadores.",
+    "wholesaleBody": "A partir de 25 unidades.",
+    "studioLine": "Precisa de fardas, merchandising ou sinalética para o seu negócio? Isso é com o Madeira Studio →"
+  },
+  "privacyPage": {
+    "seoTitle": "Privacidade | Madeira Originals",
+    "seoDescription": "Como a Madeira Originals trata dados de encomendas, contas, newsletter e contactos, e como exercer os teus direitos.",
+    "overline": "Privacidade",
+    "title": "Política de privacidade.",
+    "lead": "Esta política aplica-se à loja Madeira Originals. Última atualização: 25 de outubro de 2026.",
+    "sections": [
+      {
+        "heading": "Responsável pelo tratamento",
+        "body": "Marco Paulo Sousa de Castro, empresário em nome individual (ENI), NIF 202158969. Sede registada: Entrada do Cascalho 3, 9240-203 São Vicente, Madeira, Portugal. Contacto: geral@madeiraoriginals.pt; +351 962 220 769."
+      },
+      {
+        "heading": "Dados e finalidades",
+        "body": "Ao comprar, os dados de identificação, contacto, entrega, encomenda e pagamento são tratados no checkout Shopify para celebrar e executar o contrato. A Shopify trata dados por nossa conta e pode também tratá-los para finalidades próprias descritas na sua política. Não recolhemos dados de cartão neste site. A criação de conta trata email e dados de autenticação na Lovable Cloud. A newsletter guarda email, origem da subscrição e data na Lovable Cloud. Os contactos por email ou telefone são tratados para responder ao teu pedido; esta página não tem formulário de contacto. Pedidos de revenda guardam os dados de negócio, contacto e pedido fornecidos por ti."
+      },
+      {
+        "heading": "Bases legais",
+        "body": "Encomendas, contas necessárias à compra e pedidos pré-contratuais: execução de contrato ou diligências a teu pedido (artigo 6.º, n.º 1, alínea b), RGPD). Faturação e obrigações fiscais: obrigação legal (alínea c)). Newsletter: consentimento (alínea a)), que podes retirar sem afetar o tratamento anterior. Segurança e resposta a contactos não contratuais: interesse legítimo (alínea f)), limitado ao necessário."
+      },
+      {
+        "heading": "Conservação",
+        "body": "Dados de encomenda e faturação: durante a relação contratual e os prazos legais de conservação aplicáveis; documentos fiscais, em regra, 10 anos. Newsletter: até retirares o consentimento ou a lista deixar de ser usada. Contactos e pedidos de revenda: pelo tempo necessário à resposta, seguimento e defesa de direitos, com eliminação quando deixarem de ser necessários. Dados de conta: enquanto a conta estiver ativa ou forem necessários para obrigações legais. Não conservamos dados indefinidamente sem finalidade."
+      },
+      {
+        "heading": "Prestadores e transferências",
+        "body": "Usamos Shopify para catálogo, carrinho e checkout, e Lovable Cloud para contas, newsletter, diário e pedidos de revenda. Prestadores de pagamento e transporte recebem os dados necessários ao serviço contratado. Estes serviços podem tratar dados fora do Espaço Económico Europeu; quando aplicável, as transferências dependem de decisão de adequação ou de garantias como cláusulas contratuais-tipo. Consulta https://www.shopify.com/legal/privacy para informação sobre a Shopify. Os tipos e regiões de transferências efetivas dependem dos serviços usados na tua encomenda."
+      },
+      {
+        "heading": "Cookies e armazenamento no navegador",
+        "body": "Não identificámos cookies de análise ou publicidade no site. Usamos armazenamento funcional para carrinho, sessão de conta, idioma e acesso temporário à revenda. O site carrega fontes do Google e comunica com Shopify e Lovable Cloud; esses pedidos transmitem dados técnicos, como endereço IP. O checkout Shopify é externo e pode usar os seus próprios cookies e escolhas de privacidade. Não instalamos ferramentas de análise ou publicidade sem rever esta política e, quando exigido, pedir consentimento prévio."
+      },
+      {
+        "heading": "Direitos e reclamações",
+        "body": "Podes pedir acesso, retificação, apagamento, limitação, portabilidade e oposição, quando aplicáveis, e retirar consentimento. Escreve para geral@madeiraoriginals.pt; podemos pedir informação mínima para confirmar a identidade. Respondemos nos prazos do RGPD, em regra um mês. Podes apresentar reclamação à Comissão Nacional de Proteção de Dados: https://www.cnpd.pt. Não usamos decisões exclusivamente automatizadas com efeitos jurídicos ou equivalentes."
+      }
+    ]
+  },
+  "termsPage": {
+    "seoTitle": "Termos de venda | Madeira Originals",
+    "seoDescription": "Condições de compra, pagamento, entrega, livre resolução e resolução de litígios da loja Madeira Originals.",
+    "overline": "Termos",
+    "title": "Termos de venda.",
+    "lead": "Aplicam-se às compras na loja Madeira Originals. Última atualização: 25 de outubro de 2026.",
+    "sections": [
+      {
+        "heading": "Vendedor",
+        "body": "Madeira Originals · Marco Paulo Sousa de Castro, ENI, NIF 202158969. Sede: Entrada do Cascalho 3, 9240-203 São Vicente, Madeira, Portugal. Email: geral@madeiraoriginals.pt. Telefone: 962 220 769 (+351). Levantamento: Caminho da Furna 7, 9240-206 São Vicente."
+      },
+      {
+        "heading": "Produtos, preços e pagamento",
+        "body": "Os desenhos standard da coleção são impressos por encomenda em São Vicente. Os preços apresentados são em euros e incluem IVA. O preço e o total final, incluindo portes e eventuais encargos, são apresentados antes de confirmares a encomenda no checkout Shopify. Os meios de pagamento disponíveis são os indicados nesse checkout. A confirmação da encomenda e do pagamento é enviada pelos canais do checkout."
+      },
+      {
+        "heading": "Entrega e levantamento",
+        "body": "Prazos totais, incluindo produção: Madeira, 3 dias úteis; Portugal continental, 5–7 dias úteis; Europa e resto do mundo, 7–14 dias úteis. São estimativas de entrega, conforme /shipping. Envio gratuito em toda a Madeira. Levantamento gratuito no estúdio, Caminho da Furna 7, 9240-206 São Vicente. Para os restantes destinos, os portes são calculados na finalização, consoante o destino. Contacta-nos se houver atraso; os teus direitos legais em caso de incumprimento mantêm-se."
+      },
+      {
+        "heading": "Livre resolução e devoluções",
+        "body": "Tens 14 dias após receberes os bens para comunicar a livre resolução para geral@madeiraoriginals.pt, por declaração inequívoca. Depois da comunicação, envia os bens no prazo legal de 14 dias. Podes examinar a peça como numa loja; responde apenas pela desvalorização causada por uso além do necessário. Os desenhos standard impressos por encomenda são devolvíveis. Peças personalizadas com nome, número ou desenho feito a teu pedido estão excluídas nos termos do DL 24/2014. Saldos ou etiquetas de venda final não retiram direitos legais. Reembolsamos o preço e a entrega standard no mesmo meio, até 14 dias da comunicação, podendo aguardar os bens ou prova do envio. O custo direto da devolução é teu, salvo defeito ou erro nosso. Consulta /returns."
+      },
+      {
+        "heading": "Conformidade e reclamações",
+        "body": "Os direitos legais relativos a bens defeituosos ou não conformes não são limitados por estes termos. Comunica o problema para geral@madeiraoriginals.pt com o número de encomenda e a informação necessária. Livro de Reclamações Eletrónico: https://www.livroreclamacoes.pt."
+      },
+      {
+        "heading": "Resolução alternativa de litígios",
+        "body": "Em caso de litígio de consumo, podes recorrer ao CACCRAM — Centro de Arbitragem de Conflitos de Consumo da Região Autónoma da Madeira. Informação: https://www.madeira.gov.pt/cacc. Aplica-se a legislação portuguesa, sem prejuízo das normas imperativas de proteção do consumidor que sejam aplicáveis."
+      }
+    ]
   }
 }

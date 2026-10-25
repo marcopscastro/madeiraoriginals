@@ -209,6 +209,86 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://madeiraoriginals.pt/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/privacidade</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/privacidade" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/privacidade" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/privacidade" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/privacidade" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/termos</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/termos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/termos" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/termos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/termos" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/shipping</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/shipping" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/shipping" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/shipping" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/shipping</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/shipping" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/shipping" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/shipping" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/returns</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/returns" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/returns" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/returns" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madeiraoriginals.pt/en/returns</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/returns" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/returns" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://madeiraoriginals.pt/returns" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://madeiraoriginals.pt/about</loc>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://madeiraoriginals.pt/about" />
     <xhtml:link rel="alternate" hreflang="en" href="https://madeiraoriginals.pt/en/about" />

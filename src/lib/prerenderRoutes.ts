@@ -7,10 +7,6 @@
 export const STATIC_PRERENDER_ROUTES: readonly string[] = [
   "/",
   "/shop",
-  "/studio",
-  "/design",
-  "/apparel-printing",
-  "/vinyl-signage",
   "/neblina",
   "/wholesale", // renders the passcode gate (public)
   "/culture",
@@ -29,4 +25,6 @@ export const STATIC_PRERENDER_ROUTES: readonly string[] = [
   "/returns",
   "/care",
   "/size-guide",
+  "/privacidade",
+  "/termos",
 ];

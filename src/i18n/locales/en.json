@@ -2,7 +2,7 @@
   "tagline": "Design · Print · Signage",
   "nav": {
     "shop": "Shop",
-    "shopAll": "All",
+    "shopAll": "View all",
     "tshirts": "T-Shirts",
     "hoodies": "Hoodies",
     "accessories": "Accessories",
@@ -27,8 +27,8 @@
     "vinylSignage": "Vinyl & Signage"
   },
   "footer": {
-    "joinHeading": "Join the community.",
-    "joinBody": "First access to drops, production updates, and stories from the island.",
+    "joinHeading": "Collection news.",
+    "joinBody": "New t-shirts and stories from São Vicente by email.",
     "shop": "Shop",
     "brand": "Brand",
     "business": "Services",
@@ -40,7 +40,11 @@
     "returns": "Returns",
     "care": "Care",
     "sizeGuide": "Size Guide",
-    "designedIn": "Designed in São Vicente, Madeira. Inspired by the Atlantic."
+    "designedIn": "Designed in São Vicente, Madeira. Inspired by the Atlantic.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "complaints": "Complaints Book",
+    "studioLink": "Design and printing for businesses: madeirastudio.pt"
   },
   "hero": {
     "imageAlt": "Black Madeira Originals t-shirt with the Capelinha do Calhau illustration, designed and printed in São Vicente",
@@ -146,9 +150,9 @@
       "noAccess": "Don't have access yet?",
       "requestAccessLink": "Request it here."
     },
-    "overline": "Wholesale Distribution",
+    "overline": "Wholesale",
     "heading": "Stock a Madeira brand that isn't a souvenir.",
-    "sub": "Nine illustrated designs of São Vicente and the north coast, printed here. Tiered pricing by quantity. Restock in days because we're on the same island, not the same continent.",
+    "sub": "Our own collection for shops, hotels and operators. From 25 units, printed to order in São Vicente.",
     "signOut": "Sign out",
     "sections": {
       "corner": {
@@ -194,8 +198,8 @@
   },
   "shop": {
     "overline": "Collection",
-    "heading": "Madeira Streetwear & Apparel",
-    "sub": "Premium tees, hoodies and accessories inspired by the landscapes and culture of Madeira. Designed in São Vicente, shipped worldwide from the island.",
+    "heading": "São Vicente t-shirts.",
+    "sub": "Nine north-coast designs, €25 per t-shirt. Printed to order in São Vicente.",
     "all": "All",
     "searchPlaceholder": "Search products",
     "clearSearch": "Clear search",
@@ -277,24 +281,26 @@
     "breadcrumb": "Journal",
     "ctaShop": "Shop the Collection",
     "previewHeading": "Stories from the island.",
-    "viewAll": "View all →"
+    "viewAll": "View all →",
+    "intro": "Stories of São Vicente and Madeiran culture.",
+    "read": "Read"
   },
   "pageSeo": {
     "home": {
-      "title": "Madeira Originals — Madeira Apparel | São Vicente",
-      "description": "Madeira Originals t-shirts, hoodies and accessories, designed in São Vicente and inspired by Madeira's culture."
+      "title": "Madeira Originals — São Vicente T-shirts, Madeira",
+      "description": "Nine designs of São Vicente and Madeira’s north coast. €25 t-shirts, printed to order in our studio in São Vicente."
     },
     "shop": {
       "title": "Shop Madeira T-Shirts, Hoodies & Apparel",
-      "description": "Shop premium Madeira t-shirts, hoodies and accessories by Madeira Originals. Designed in São Vicente, Madeira. Worldwide shipping."
+      "description": "Nine designs of São Vicente and Madeira’s north coast. €25 t-shirts, printed to order in our studio in São Vicente."
     },
     "about": {
       "title": "About Madeira Originals — Madeira Apparel",
       "description": "Madeira Originals is an apparel brand from São Vicente, Madeira, inspired by island heritage, culture and modern design."
     },
     "contact": {
-      "title": "Contact Madeira Studio — São Vicente, Madeira",
-      "description": "Get in touch with Madeira Studio — a creative and print studio based in São Vicente, Madeira, Portugal."
+      "title": "Contact — Madeira Originals",
+      "description": "Contact Madeira Originals about orders, sizes, returns and wholesale. Studio pickup in São Vicente."
     },
     "culture": {
       "title": "Madeira Culture — Identity, Landscape & Atlantic Heritage",
@@ -591,8 +597,8 @@
   },
   "homeNewsletter": {
     "overline": "Newsletter",
-    "heading": "Keep in touch.",
-    "body": "New work from the studio, and new pieces in the collection."
+    "heading": "Madeira Originals news.",
+    "body": "New collection designs and stories from São Vicente by email."
   },
   "aboutUs": {
     "overline": "About",
@@ -716,7 +722,7 @@
         {
           "k": "04",
           "title": "Premium Quality",
-          "body": "Ring-spun cotton and finishes that soften with wear instead of falling apart."
+          "body": "Each design starts with a place in São Vicente and is printed to order in our studio."
         },
         {
           "k": "05",
@@ -752,12 +758,12 @@
   },
   "contactPage": {
     "overline": "Contact",
-    "heading": "Let's talk.",
-    "lead": "Whether you're after a piece from the collection or a collaboration — we're based in São Vicente, Madeira and reachable anywhere.",
+    "heading": "Orders, sizes and returns.",
+    "lead": "Contact us about your order, a garment size, a return or wholesale of the collection.",
     "generalLabel": "General",
-    "generalNote": "Orders, returns, press, collaborations.",
+    "generalNote": "Orders, sizes, returns and wholesale.",
     "phoneLabel": "Phone",
-    "studioLabel": "Studio",
+    "studioLabel": "Free studio pickup",
     "studioAddress": "Caminho da Furna 7, 9240-206 São Vicente, Madeira, Portugal"
   },
   "culturePage": {
@@ -1045,7 +1051,9 @@
     "earlyAccess": "Get Early Access",
     "done": "You're in. First to know about drops.",
     "doneToast": "You're on the list. Welcome to Madeira Originals.",
-    "error": "Something went wrong. Try again."
+    "error": "Something went wrong. Try again.",
+    "consent": "I want to receive Madeira Originals news by email. I can unsubscribe by email at any time.",
+    "privacyLink": "Read the privacy policy"
   },
   "search": {
     "placeholder": "Search products...",
@@ -1099,7 +1107,7 @@
     },
     "returns": {
       "title": "Returns",
-      "body": "14 days to return unworn pieces in original condition for a refund or exchange. Made-to-order and personalised items are non-returnable.",
+      "body": "You have 14 days after delivery to exercise your right of withdrawal. Standard designs printed to order are eligible. Only personalised pieces (a name, number or design made at your request) are excluded from this right; final-sale items retain statutory rights.",
       "link": "Read full returns policy"
     },
     "care": {
@@ -1110,7 +1118,7 @@
   },
   "policy": {
     "questions": "Questions about your order?",
-    "contactLink": "Talk to the studio"
+    "contactLink": "Contact us"
   },
   "shippingPage": {
     "seoTitle": "Shipping | Madeira Originals",
@@ -1166,7 +1174,7 @@
       },
       {
         "heading": "04 — Refunds",
-        "body": "Once we receive and inspect the return, your refund is issued to the original payment method within 5–10 business days. Original shipping costs are non-refundable."
+        "body": "For statutory withdrawal, we refund payments received, including standard delivery costs (not premium-delivery supplements), using the original payment method within 14 days of notification. We may withhold reimbursement until we receive the item or proof of dispatch. You pay direct return costs unless the item is faulty or we made an error."
       },
       {
         "heading": "05 — Exchanges",
@@ -1174,7 +1182,7 @@
       },
       {
         "heading": "06 — Not eligible",
-        "body": "Made-to-order, personalised, and final-sale pieces cannot be returned or exchanged. This is always noted clearly on the product page."
+        "body": "Personalised pieces with a name, number or design made at your request are excluded from the right of withdrawal under Portuguese Decree-Law 24/2014. Standard collection designs, even when printed to order, can be returned within 14 days. Final-sale items may be excluded from voluntary exchanges but retain the statutory withdrawal right and rights for faulty goods."
       }
     ]
   },
@@ -1439,5 +1447,90 @@
   "shopifyStatus": {
     "billingTitle": "Store temporarily unavailable",
     "billingBody": "Our shop is temporarily unavailable. Please try again shortly."
+  },
+  "shopHome": {
+    "headline": "São Vicente, on a t-shirt.",
+    "subline": "Nine designs of north-coast places, from Capelinha do Calhau to Vale Imperioso. Printed to order in our studio in São Vicente.",
+    "ctaShop": "Shop the collection",
+    "ctaWholesale": "Wholesale for shops",
+    "collectionHeading": "Nine places. São Vicente.",
+    "productsUnavailable": "The collection could not be loaded.",
+    "facts": "Printed in São Vicente · Free Madeira delivery · Studio pickup · 14-day returns",
+    "originHeading": "From the north coast.",
+    "originBody": "São Vicente is the starting point. Basalt, mist and levadas move from the landscape into the designs. From Capelinha do Calhau to Vale Imperioso, each t-shirt carries a reference to this coast.",
+    "originCta": "Read the story",
+    "wholesaleHeading": "For shops, hotels and operators.",
+    "wholesaleBody": "From 25 units.",
+    "studioLine": "Need uniforms, merchandise or signage for your business? That’s Madeira Studio →"
+  },
+  "privacyPage": {
+    "seoTitle": "Privacy | Madeira Originals",
+    "seoDescription": "How Madeira Originals handles orders, accounts, newsletter and contact data, and how to exercise your rights.",
+    "overline": "Privacy",
+    "title": "Privacy policy.",
+    "lead": "This policy applies to the Madeira Originals shop. Last updated: 25 October 2026.",
+    "sections": [
+      {
+        "heading": "Data controller",
+        "body": "Marco Paulo Sousa de Castro, empresário em nome individual (ENI), NIF 202158969. Sede registada: Entrada do Cascalho 3, 9240-203 São Vicente, Madeira, Portugal. Contacto: geral@madeiraoriginals.pt; +351 962 220 769."
+      },
+      {
+        "heading": "Data and purposes",
+        "body": "When you buy, identification, contact, delivery, order and payment data are handled in Shopify checkout to enter into and perform the contract. Shopify processes data on our behalf and may also process data for its own purposes described in its policy. We do not collect card details on this site. Account creation handles email and authentication data in Lovable Cloud. The newsletter stores email, subscription source and date in Lovable Cloud. Email or telephone contacts are handled to answer your request; the contact page has no contact form. Wholesale inquiries store the business, contact and inquiry information you provide."
+      },
+      {
+        "heading": "Legal bases",
+        "body": "Orders, accounts needed for purchases and pre-contract inquiries: performance of a contract or steps at your request (GDPR Article 6(1)(b)). Invoicing and tax duties: legal obligation (Article 6(1)(c)). Newsletter: consent (Article 6(1)(a)), which you can withdraw without affecting earlier processing. Security and non-contract inquiries: legitimate interests (Article 6(1)(f)), limited to what is necessary."
+      },
+      {
+        "heading": "Retention",
+        "body": "Order and invoice data: throughout the contractual relationship and applicable legal retention periods; tax records are generally kept for 10 years. Newsletter: until you withdraw consent or the list is no longer used. Contact and wholesale inquiries: as needed to reply, follow up and defend legal rights, with deletion when no longer needed. Account data: while the account is active or necessary for legal obligations. Data is not kept indefinitely without a purpose."
+      },
+      {
+        "heading": "Providers and transfers",
+        "body": "We use Shopify for catalogue, cart and checkout, and Lovable Cloud for accounts, newsletter, journal and wholesale inquiries. Payment and delivery providers receive the data necessary for the contracted service. These services may process data outside the European Economic Area; where applicable, transfers rely on adequacy decisions or safeguards such as standard contractual clauses. See https://www.shopify.com/legal/privacy for Shopify information. Actual transfer types and regions depend on the services used for your order."
+      },
+      {
+        "heading": "Cookies and browser storage",
+        "body": "No analytics or advertising cookies were identified on this site. Functional browser storage is used for the cart, account session, language and temporary wholesale access. The site loads Google fonts and communicates with Shopify and Lovable Cloud; these requests transmit technical data such as IP addresses. External Shopify checkout may use its own cookies and privacy choices. We do not add analytics or advertising tools without reviewing this policy and obtaining prior consent where required."
+      },
+      {
+        "heading": "Rights and complaints",
+        "body": "You may request access, rectification, erasure, restriction, portability and objection where applicable, and withdraw consent. Email geral@madeiraoriginals.pt; we may request minimal information to verify your identity. We reply within GDPR deadlines, generally one month. You may complain to Portugal’s supervisory authority, Comissão Nacional de Proteção de Dados: https://www.cnpd.pt. We do not use solely automated decisions with legal or similarly significant effects."
+      }
+    ]
+  },
+  "termsPage": {
+    "seoTitle": "Terms of sale | Madeira Originals",
+    "seoDescription": "Purchase, payment, delivery, withdrawal and dispute resolution terms for the Madeira Originals shop.",
+    "overline": "Terms",
+    "title": "Terms of sale.",
+    "lead": "These terms apply to purchases from the Madeira Originals shop. Last updated: 25 October 2026.",
+    "sections": [
+      {
+        "heading": "Seller",
+        "body": "Madeira Originals · Marco Paulo Sousa de Castro, ENI, NIF 202158969. Sede: Entrada do Cascalho 3, 9240-203 São Vicente, Madeira, Portugal. Email: geral@madeiraoriginals.pt. Telefone: 962 220 769 (+351). Levantamento: Caminho da Furna 7, 9240-206 São Vicente."
+      },
+      {
+        "heading": "Products, prices and payment",
+        "body": "Standard collection designs are printed to order in São Vicente. Prices are shown in euros and include VAT. The price and final total, including shipping and any charges, are presented before you confirm your order in Shopify checkout. Available payment methods are those shown in checkout. Order and payment confirmation is provided through checkout channels."
+      },
+      {
+        "heading": "Delivery and pickup",
+        "body": "Total delivery estimates including production: Madeira, 3 working days; mainland Portugal, 5–7 working days; Europe and rest of world, 7–14 working days, as stated on /en/shipping. Free delivery within Madeira. Free studio pickup at Caminho da Furna 7, 9240-206 São Vicente. For other destinations, shipping is calculated at checkout based on destination. Contact us if there is a delay; statutory rights for non-performance remain unchanged."
+      },
+      {
+        "heading": "Withdrawal and returns",
+        "body": "You have 14 days after receiving the goods to notify withdrawal by an unambiguous statement to geral@madeiraoriginals.pt. Return the goods within 14 days after notification. You may inspect the garment as in a shop; you are only responsible for loss in value caused by handling beyond what is necessary. Standard designs printed to order are returnable. Pieces personalised with a name, number or design made at your request are excluded under Portuguese Decree-Law 24/2014. Sale or final-sale labels do not remove statutory rights. We refund the price and standard delivery using the original payment method within 14 days of notification, and may wait for goods or proof of dispatch. You pay direct return costs unless there is a fault or our error. See /en/returns."
+      },
+      {
+        "heading": "Conformity and complaints",
+        "body": "These terms do not limit statutory rights for faulty or non-conforming goods. Contact geral@madeiraoriginals.pt with your order number and relevant information. Electronic Complaints Book: https://www.livroreclamacoes.pt."
+      },
+      {
+        "heading": "Alternative dispute resolution",
+        "body": "For consumer disputes, you may contact CACCRAM, Centro de Arbitragem de Conflitos de Consumo da Região Autónoma da Madeira. Information: https://www.madeira.gov.pt/cacc. Portuguese law applies without prejudice to any applicable mandatory consumer-protection rules."
+      }
+    ]
   }
 }

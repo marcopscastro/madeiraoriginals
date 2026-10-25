@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { SUPPORTED_LANGS, type Lang } from "@/i18n";
 import { langFromPathname, localizePath, stripLocale } from "@/lib/locale";
 
@@ -25,18 +26,18 @@ const LanguageToggle = ({ className = "" }: { className?: string }) => {
       aria-label={i18n.t("language.label")}
     >
       {SUPPORTED_LANGS.map((l, i) => (
-        <button
+        <Button variant="ghost"
           key={l}
           onClick={() => set(l)}
           aria-pressed={current === l}
-          className={`px-2.5 py-1 transition-colors ${
+          className={`min-w-11 min-h-11 rounded-none px-2 transition-colors ${
             current === l
               ? "bg-foreground text-background"
               : "text-foreground/70 hover:text-foreground"
           } ${i > 0 ? "border-l border-foreground/30" : ""}`}
         >
           {l.toUpperCase()}
-        </button>
+        </Button>
       ))}
     </div>
   );

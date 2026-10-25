@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { localizePath } from "@/lib/locale";
 import { journalCoverProps } from "@/lib/journalImages";
 
 const JournalPost = () => {
@@ -20,10 +21,11 @@ const JournalPost = () => {
     queryKey: ["article", slug],
     enabled: !!slug,
     queryFn: async () => {
+      if (!slug) return null;
       const { data } = await supabase
         .from("articles")
         .select("*")
-        .eq("slug", slug!)
+        .eq("slug", slug)
         .eq("published", true)
         .maybeSingle();
       return data;
@@ -65,7 +67,8 @@ const JournalPost = () => {
   const seoTitle = (isPt && article.seo_title_pt) || article.seo_title;
   const seoDescription = (isPt && article.seo_description_pt) || article.seo_description;
 
-  const cleanUrl = `${SITE_URL}/journal/${article.slug}`;
+  const cleanUrl = `${SITE_URL}${localizePath(`/journal/${article.slug}`, isPt ? "pt" : "en")}`;
+  const coverImage = new URL(journalCoverProps(article.cover_url, article.slug).src, SITE_URL).href;
   const articleLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -82,9 +85,7 @@ const JournalPost = () => {
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": cleanUrl },
   };
-  if (article.cover_url) {
-    articleLd.image = [article.cover_url];
-  }
+  articleLd.image = [coverImage];
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -99,8 +100,9 @@ const JournalPost = () => {
   return (
     <div className="min-h-screen bg-background grain-fixed">
       <SEO
-        title={seoTitle ?? title}
-        description={seoDescription ?? excerpt ?? undefined}
+        title={seoTitle || title}
+        description={seoDescription || excerpt || bodyMd?.replace(/[#*]/g, "").slice(0, 160)}
+        image={coverImage}
         path={`/journal/${article.slug}`}
         type="article"
         jsonLd={[articleLd, breadcrumbLd]}
@@ -132,7 +134,7 @@ const JournalPost = () => {
         </div>
 
         {(() => {
-          const cover = journalCoverProps(article.cover_url);
+          const cover = journalCoverProps(article.cover_url, article.slug);
           return cover ? (
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
               <img

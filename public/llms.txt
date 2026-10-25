@@ -2,7 +2,7 @@
 
 > Madeira Originals apparel from São Vicente, Madeira. T-shirts, hoodies, accessories and stickers inspired by island culture. 0% tourist trap.
 
-Madeira Originals is the apparel brand at https://madeiraoriginals.pt. Studio services have moved to the separate Madeira Studio site at https://madeirastudio.pt. Legacy service pages remain available with a notice linking to the studio site.
+Madeira Originals is the apparel brand at https://madeiraoriginals.pt. Studio services have moved to the separate Madeira Studio site at https://madeirastudio.pt. Studio service routes redirect to the separate studio site.
 
 ## Languages
 
@@ -29,7 +29,9 @@ The page list below shows the Portuguese (root) URLs. Prefix any of them with `/
 - [Wholesale](/wholesale): Trade and distributor programme.
 - [Culture](/culture): Stories and inspiration from Madeira.
 - [About](/about): Brand story, values, and team.
-- [Studio contact](https://madeirastudio.pt): Contact the studio on its separate site; the legacy /contact page remains available with a move notice.
+- [Contact](/contact): Shop orders, sizes, returns and wholesale.
+- [Privacy](/privacidade) (English: /en/privacy).
+- [Terms of sale](/termos) (English: /en/terms).
 - [Journal](/journal): Articles on Madeira culture, design, and apparel.
 
 ## Optional
