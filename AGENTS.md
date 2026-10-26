@@ -7,4 +7,4 @@
 - Use the shared formatPrice helper for displayed currency amounts so Intl.NumberFormat follows the active storefront language everywhere.
 - Classic hosting cannot emit external HTTP 301s or route-specific HTTP 404s; use replacement navigation for moved routes and noindex for unknown routes, without pretending these are server responses.
 
-- All Storefront operations include language context and Portugal country context; React Query keys include language and cart sync recreates checkout on locale changes while preserving variant IDs and quantities, because Shopify checkout language is set at cart creation.
+- All Storefront operations include active language context (PT_PT for this store's Portuguese translations, EN for English) and Portugal country context; React Query keys include language and cart sync recreates checkout on locale changes while preserving variant IDs and quantities, because Shopify checkout language is set at cart creation.
