@@ -1,3 +1,8 @@
+# Shopify product languages
+- [ ] Apply active-language Shopify queries, cache refresh and checkout language; retain cart selections across language changes.
+- [ ] Remove unsupported product claims and placeholders; unify care instructions and localise all product UI.
+- [ ] Run tests, locale checks, automatic build and 390px PT/EN purchase-flow checks; publish.
+
 # Returns and locale prices
 - [x] Remove sale exclusions while retaining personalised-only withdrawal exception; terms retain statutory sale-item rights.
 - [x] Use active-locale currency formatting throughout the store; tests and automatic build passed, and live PT/EN grid, search, product and cart checked.
