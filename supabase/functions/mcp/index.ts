@@ -8,12 +8,12 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 // src/lib/mcp/tools/search-products.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z } from "npm:zod@^4.4.3";
-var STOREFRONT_URL = "https://madeiraoriginals-cve6q.myshopify.com/api/2025-07/graphql.json";
+var STOREFRONT_URL = "https://madeiraoriginals-cve6q.myshopify.com/api/2026-10/graphql.json";
 var STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 var QUERY = (
   /* GraphQL */
   `
-  query SearchProducts($query: String, $first: Int!) {
+  query SearchProducts($query: String, $first: Int!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     products(first: $first, query: $query) {
       edges {
         node {
@@ -37,20 +37,21 @@ var search_products_default = defineTool({
   title: "Search products",
   description: "Search Madeira Originals products (t-shirts, hoodies, prints, accessories) from the live Shopify catalog. Returns title, handle, price, image, and product URL.",
   inputSchema: {
+    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
     query: z.string().optional().describe(
       "Shopify search query, e.g. 'levada', 'tag:streetwear', 'product_type:hoodie'. Leave empty to list latest products."
     ),
     limit: z.number().int().min(1).max(50).optional().describe("Max results (default 12).")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ query, limit }) => {
+  handler: async ({ query, limit, language = "PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN
       },
-      body: JSON.stringify({ query: QUERY, variables: { query: query ?? "", first: limit ?? 12 } })
+      body: JSON.stringify({ query: QUERY, variables: { query: query ?? "", first: limit ?? 12, language } })
     });
     if (!res.ok) {
       return { content: [{ type: "text", text: `Shopify error ${res.status}` }], isError: true };
@@ -75,12 +76,12 @@ var search_products_default = defineTool({
 // src/lib/mcp/tools/get-product.ts
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z as z2 } from "npm:zod@^4.4.3";
-var STOREFRONT_URL2 = "https://madeiraoriginals-cve6q.myshopify.com/api/2025-07/graphql.json";
+var STOREFRONT_URL2 = "https://madeiraoriginals-cve6q.myshopify.com/api/2026-10/graphql.json";
 var STOREFRONT_TOKEN2 = "bbcc49de92200adcd5c43d7f6f847485";
 var QUERY2 = (
   /* GraphQL */
   `
-  query GetProduct($handle: String!) {
+  query GetProduct($handle: String!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     product(handle: $handle) {
       id
       title
@@ -110,17 +111,18 @@ var get_product_default = defineTool2({
   title: "Get product",
   description: "Fetch a single Madeira Originals product by its handle, including full description, variants, and images.",
   inputSchema: {
+    language: z2.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
     handle: z2.string().min(1).describe("Product handle, e.g. 'levada-walks-madeira-island-t-shirt'.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ handle }) => {
+  handler: async ({ handle, language = "PT" }) => {
     const res = await fetch(STOREFRONT_URL2, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN2
       },
-      body: JSON.stringify({ query: QUERY2, variables: { handle } })
+      body: JSON.stringify({ query: QUERY2, variables: { handle, language } })
     });
     if (!res.ok) {
       return { content: [{ type: "text", text: `Shopify error ${res.status}` }], isError: true };

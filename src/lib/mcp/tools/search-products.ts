@@ -2,11 +2,11 @@ import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 
 const STOREFRONT_URL =
-  "https://madeiraoriginals-cve6q.myshopify.com/api/2025-07/graphql.json";
+  "https://madeiraoriginals-cve6q.myshopify.com/api/2026-10/graphql.json";
 const STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 
 const QUERY = /* GraphQL */ `
-  query SearchProducts($query: String, $first: Int!) {
+  query SearchProducts($query: String, $first: Int!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     products(first: $first, query: $query) {
       edges {
         node {
@@ -31,6 +31,7 @@ export default defineTool({
   description:
     "Search Madeira Originals products (t-shirts, hoodies, prints, accessories) from the live Shopify catalog. Returns title, handle, price, image, and product URL.",
   inputSchema: {
+    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
     query: z
       .string()
       .optional()
@@ -40,14 +41,14 @@ export default defineTool({
     limit: z.number().int().min(1).max(50).optional().describe("Max results (default 12)."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ query, limit }) => {
+  handler: async ({ query, limit, language = "PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN,
       },
-      body: JSON.stringify({ query: QUERY, variables: { query: query ?? "", first: limit ?? 12 } }),
+      body: JSON.stringify({ query: QUERY, variables: { query: query ?? "", first: limit ?? 12, language } }),
     });
     if (!res.ok) {
       return { content: [{ type: "text", text: `Shopify error ${res.status}` }], isError: true };

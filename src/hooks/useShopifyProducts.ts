@@ -17,8 +17,7 @@ export function useProducts(first = 20, query?: string) {
     queryKey: ["shopify-products", language, first, query ?? null],
     queryFn: async (): Promise<ShopifyProduct[]> => {
       const res = await storefrontApiRequest<{ products: { edges: ShopifyProduct[] } }>(
-        getShopifyLanguage,
-  PRODUCTS_QUERY,
+        PRODUCTS_QUERY,
         { first, query: query ?? null, language }
       );
       return (res?.data?.products?.edges ?? []).filter((product) => isStorefrontProduct(product.node));

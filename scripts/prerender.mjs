@@ -47,14 +47,14 @@ const STATIC_ROUTES = [
 
 // Mirror src/lib/shopify.ts — keep in sync.
 const SHOPIFY_URL =
-  "https://madeiraoriginals-cve6q.myshopify.com/api/2025-07/graphql.json";
+  "https://madeiraoriginals-cve6q.myshopify.com/api/2026-10/graphql.json";
 const SHOPIFY_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 async function fetchProductHandles() {
-  const query = `{ products(first: 100) { edges { node { handle title productType vendor tags } } } }`;
+  const query = `query ProductHandles($language: LanguageCode!) @inContext(language: $language, country: PT) { products(first: 100) { edges { node { handle title productType vendor tags } } } }`;
   try {
     const res = await fetch(SHOPIFY_URL, {
       method: "POST",
@@ -62,7 +62,7 @@ async function fetchProductHandles() {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": SHOPIFY_TOKEN,
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query, variables: { language: "PT" } }),
     });
     if (!res.ok) return [];
     const json = await res.json();

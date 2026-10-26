@@ -2,11 +2,11 @@ import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 
 const STOREFRONT_URL =
-  "https://madeiraoriginals-cve6q.myshopify.com/api/2025-07/graphql.json";
+  "https://madeiraoriginals-cve6q.myshopify.com/api/2026-10/graphql.json";
 const STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 
 const QUERY = /* GraphQL */ `
-  query GetProduct($handle: String!) {
+  query GetProduct($handle: String!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     product(handle: $handle) {
       id
       title
@@ -36,17 +36,18 @@ export default defineTool({
   title: "Get product",
   description: "Fetch a single Madeira Originals product by its handle, including full description, variants, and images.",
   inputSchema: {
+    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
     handle: z.string().min(1).describe("Product handle, e.g. 'levada-walks-madeira-island-t-shirt'."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ handle }) => {
+  handler: async ({ handle, language = "PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": STOREFRONT_TOKEN,
       },
-      body: JSON.stringify({ query: QUERY, variables: { handle } }),
+      body: JSON.stringify({ query: QUERY, variables: { handle, language } }),
     });
     if (!res.ok) {
       return { content: [{ type: "text", text: `Shopify error ${res.status}` }], isError: true };

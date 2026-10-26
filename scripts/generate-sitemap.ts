@@ -11,7 +11,7 @@ const BASE_URL = "https://madeiraoriginals.pt";
 // Mirror src/lib/shopify.ts — keep in sync.
 const SHOPIFY_STORE_PERMANENT_DOMAIN = "madeiraoriginals-cve6q.myshopify.com";
 const SHOPIFY_STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
-const SHOPIFY_API_VERSION = "2025-07";
+const SHOPIFY_API_VERSION = "2026-10";
 const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
 
 interface SitemapEntry {
@@ -56,7 +56,7 @@ async function fetchAllProductHandles(): Promise<ProductNode[]> {
   const PAGE_SIZE = 100;
 
   const query = `
-    query ProductHandles($first: Int!, $after: String) {
+    query ProductHandles($first: Int!, $after: String, $language: LanguageCode!) @inContext(language: $language, country: PT) {
       products(first: $first, after: $after) {
         edges {
           cursor
@@ -75,7 +75,7 @@ async function fetchAllProductHandles(): Promise<ProductNode[]> {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": SHOPIFY_STOREFRONT_TOKEN,
       },
-      body: JSON.stringify({ query, variables: { first: PAGE_SIZE, after: cursor } }),
+      body: JSON.stringify({ query, variables: { first: PAGE_SIZE, after: cursor, language: "PT" } }),
     });
     if (!res.ok) throw new Error(`Shopify HTTP ${res.status}`);
     const json: any = await res.json();
