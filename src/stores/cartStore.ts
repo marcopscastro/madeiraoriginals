@@ -7,6 +7,7 @@ import {
   CART_LINES_UPDATE_MUTATION,
   CART_QUERY,
   formatCheckoutUrl,
+  getShopifyLanguage,
   ShopifyMoney,
   ShopifyProductNode,
   storefrontApiRequest,
@@ -26,6 +27,7 @@ interface CartStore {
   items: CartItem[];
   cartId: string | null;
   checkoutUrl: string | null;
+  language: "PT_PT" | "EN" | null;
   isLoading: boolean;
   isSyncing: boolean;
   addItem: (item: Omit<CartItem, "lineId">) => Promise<boolean>;
@@ -53,7 +55,7 @@ async function createShopifyCart(
   item: CartItem
 ): Promise<{ cartId: string; checkoutUrl: string; lineId: string } | null> {
   const data = await storefrontApiRequest<any>(CART_CREATE_MUTATION, {
-    input: { lines: [{ quantity: item.quantity, merchandiseId: item.variantId }] },
+    input: { buyerIdentity: { countryCode: "PT" }, lines: [{ quantity: item.quantity, merchandiseId: item.variantId }] },
   });
   const errors: UserError[] = data?.data?.cartCreate?.userErrors || [];
   if (errors.length > 0) {
@@ -130,10 +132,12 @@ export const useCartStore = create<CartStore>()(
       items: [],
       cartId: null,
       checkoutUrl: null,
+      language: null,
       isLoading: false,
       isSyncing: false,
 
       addItem: async (item) => {
+        await get().syncCart();
         const { items, cartId, clearCart } = get();
         const existing = items.find((i) => i.variantId === item.variantId);
 
@@ -145,6 +149,7 @@ export const useCartStore = create<CartStore>()(
             set({
               cartId: result.cartId,
               checkoutUrl: result.checkoutUrl,
+              language: getShopifyLanguage(),
               items: [{ ...item, lineId: result.lineId }],
             });
             return true;
@@ -232,7 +237,7 @@ export const useCartStore = create<CartStore>()(
         }
       },
 
-      clearCart: () => set({ items: [], cartId: null, checkoutUrl: null }),
+      clearCart: () => set({ items: [], cartId: null, checkoutUrl: null, language: null }),
       getCheckoutUrl: () => get().checkoutUrl,
 
       syncCart: async () => {
@@ -240,10 +245,40 @@ export const useCartStore = create<CartStore>()(
         if (!cartId || isSyncing) return;
         set({ isSyncing: true });
         try {
-          const data = await storefrontApiRequest<any>(CART_QUERY, { id: cartId });
+          const language = getShopifyLanguage();
+          const data = await storefrontApiRequest<any>(CART_QUERY, { id: cartId, language });
           if (!data) return;
-          const cart = data?.data?.cart;
-          if (!cart || cart.totalQuantity === 0) clearCart();
+          let cart = data?.data?.cart;
+          if (!cart || cart.totalQuantity === 0) { clearCart(); return; }
+          if (get().language !== language) {
+            // Checkout's language is fixed at cart creation. Recreate the cart,
+            // keeping Shopify variant IDs and quantities, never manual URLs.
+            const result = await storefrontApiRequest<any>(CART_CREATE_MUTATION, {
+              language,
+              input: { buyerIdentity: { countryCode: "PT" }, lines: cart.lines.edges.map(
+                ({ node }: { node: { quantity: number; merchandise: { id: string } } }) =>
+                  ({ quantity: node.quantity, merchandiseId: node.merchandise.id })
+              ) },
+            });
+            const created = result?.data?.cartCreate;
+            if (!created?.cart || created.userErrors?.length) return;
+            const refreshed = await storefrontApiRequest<any>(CART_QUERY, { id: created.cart.id, language });
+            if (!refreshed?.data?.cart) return;
+            cart = refreshed.data.cart;
+          }
+          // Ignore an obsolete response if the language changed while fetching.
+          if (language !== getShopifyLanguage()) return;
+          const items: CartItem[] = cart.lines.edges.map(({ node }: { node: {
+            id: string; quantity: number; merchandise: {
+              id: string; title: string; price: ShopifyMoney;
+              selectedOptions: CartItem["selectedOptions"]; product: CartItem["product"]["node"];
+            };
+          } }) => ({
+            lineId: node.id, quantity: node.quantity, variantId: node.merchandise.id,
+            variantTitle: node.merchandise.title, price: node.merchandise.price,
+            selectedOptions: node.merchandise.selectedOptions, product: { node: node.merchandise.product },
+          }));
+          set({ cartId: cart.id, checkoutUrl: formatCheckoutUrl(cart.checkoutUrl), items, language });
         } catch (error) {
           console.error("Failed to sync cart:", error);
         } finally {
@@ -258,6 +293,7 @@ export const useCartStore = create<CartStore>()(
         items: state.items,
         cartId: state.cartId,
         checkoutUrl: state.checkoutUrl,
+        language: state.language,
       }),
     }
   )

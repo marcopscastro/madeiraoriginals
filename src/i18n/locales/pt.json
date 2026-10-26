@@ -218,11 +218,11 @@
     "faqs": [
       {
         "q": "Fazem envios para todo o mundo?",
-        "a": "Sim. Cada encomenda sai do nosso studio em São Vicente, Madeira, e segue para todo o mundo com entrega rastreada para a Europa, Reino Unido, Estados Unidos e a maior parte do resto do mundo. As opções de envio e portes são calculados no checkout consoante o destino."
+        "a": "Sim. Cada encomenda sai do nosso estúdio em São Vicente, Madeira, e segue para todo o mundo com entrega rastreada para a Europa, Reino Unido, Estados Unidos e a maior parte do resto do mundo. As opções de envio e portes são calculados na finalização, consoante o destino."
       },
       {
         "q": "Posso encomendar de fora de Portugal?",
-        "a": "Sem dúvida. Construímos a loja a pensar na diáspora madeirense — Reino Unido, Channel Islands, África do Sul, Venezuela e mais além — bem como em quem visitou a ilha e quer levar consigo uma peça a sério. Onde quer que estejas, enviamos para ti."
+        "a": "Sem dúvida. Construímos a loja a pensar na diáspora madeirense — Reino Unido, Ilhas do Canal, África do Sul, Venezuela e mais além — bem como em quem visitou a ilha e quer levar consigo uma peça a sério. Onde quer que estejas, enviamos para ti."
       },
       {
         "q": "São feitos na Madeira?",
@@ -236,12 +236,13 @@
     "backToShop": "Voltar à Loja",
     "home": "Início",
     "shop": "Loja",
+    "safetyHeading": "Segurança e conformidade do produto",
     "zoomImage": "Ampliar imagem",
     "thumbAria": "Ver imagem {{i}} de {{total}}",
     "comingSoon": "Em breve",
     "reviewsOne": "avaliação",
     "reviewsOther": "avaliações",
-    "tagline": "✦ Desenhado na Madeira · Algodão ring-spun premium · Envio para todo o mundo",
+    "tagline": "Impresso por encomenda em São Vicente · Envio para todo o mundo",
     "quantity": "Quantidade",
     "onlyLeft": "só restam {{stock}}",
     "decreaseQty": "Diminuir quantidade",
@@ -260,15 +261,14 @@
     "addError": "Não foi possível adicionar ao carrinho",
     "addErrorBody": "Essa variante pode estar esgotada. Tenta novamente.",
     "inspirationHeading": "Desenhado com inspiração madeirense.",
-    "inspirationBody": "Cada peça Madeira Originals está enraizada nas paisagens, tradições e cultura moderna da Ilha da Madeira — traduzida em materiais premium e cortes editoriais. Veste a ilha no Funchal, em Lisboa ou onde quer que a diáspora a leve.",
-    "materialsHeading": "Materiais, corte & cuidados.",
+    "inspirationBody": "Desenhos inspirados nos lugares e na cultura da Madeira, impressos por encomenda em São Vicente.",
+    "materialsHeading": "Impressão & cuidados.",
     "materials": [
-      "Construção em algodão premium, feita para durar e amaciar com o uso.",
-      "Corte unissexo moderno — fiel ao tamanho na maioria dos casos; sobe um tamanho para um look oversized.",
-      "Lavar à máquina a frio, do avesso. Secar a baixa temperatura ou ao ar.",
-      "Desenhado na Madeira. Enviado para todo o mundo."
+      "Impressão DTF.",
+      "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
+      "Impresso por encomenda em São Vicente. Envio para todo o mundo."
     ],
-    "seoFallback": "{{title}} premium inspirado na cultura e identidade da Ilha da Madeira."
+    "seoFallback": "{{title}} com um desenho inspirado na Madeira."
   },
   "journal": {
     "overline": "Diário",
@@ -675,7 +675,7 @@
   },
   "relatedProducts": {
     "overline": "Continua a coleção",
-    "heading": "Mais do estúdio."
+    "heading": "Mais da coleção."
   },
   "aboutPage": {
     "seoOverline": "Sobre a Madeira Originals",
@@ -1002,7 +1002,7 @@
     "subtotal": "Subtotal",
     "shippingNote": "Portes e impostos calculados na finalização.",
     "checkout": "Finalizar compra",
-    "reassurance": "Checkout seguro · Enviado da Madeira",
+    "reassurance": "Finalização segura · Enviado da Madeira",
     "viewItem": "Ver {{title}}"
   },
   "collection": {
@@ -1090,13 +1090,13 @@
     "bodyMin": "Conta-nos um pouco mais (mín. 10 caracteres)"
   },
   "productTrust": {
-    "origin": "Desenhado em São Vicente, Madeira",
+    "origin": "Impresso em São Vicente, Madeira",
     "shipping": "Envio a partir da Madeira",
-    "secure": "Checkout seguro",
-    "built": "Qualidade de impressão premium"
+    "secure": "Finalização segura",
+    "built": "Levantamento grátis no estúdio"
   },
   "productInfo": {
-    "carePreview": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro diretamente sobre a estampa.",
+    "carePreview": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
     "viewCareLink": "Ver guia de cuidados →",
     "shippingPreview": "Envio a partir da Madeira. Tempos de entrega variam consoante o destino.",
     "viewShippingLink": "Ver envios e devoluções →",
@@ -1112,7 +1112,7 @@
     },
     "care": {
       "title": "Cuidados",
-      "body": "Lavar do avesso a 30°C. Não usar máquina de secar. Não passar a ferro diretamente sobre a estampa. O nosso algodão ring-spun amacia com o uso — é feito para durar.",
+      "body": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
       "link": "Instruções completas"
     }
   },
@@ -1188,30 +1188,26 @@
   },
   "carePage": {
     "seoTitle": "Cuidados | Madeira Originals",
-    "seoDescription": "Como cuidar do algodão ring-spun, das estampas DTF e dos bordados para durarem anos.",
+    "seoDescription": "Cuidados com as peças Madeira Originals e as estampas DTF: lavagem a 30 °C, sem máquina de secar.",
     "overline": "Cuidados",
-    "title": "Feito para amaciar com o uso.",
-    "lead": "As nossas peças são em algodão ring-spun com estampagem DTF premium. Bem tratadas, envelhecem com beleza — mais macias, mais pessoais, mais tuas.",
+    "title": "Cuidados com a tua peça.",
+    "lead": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
     "sections": [
       {
         "heading": "01 — Lavagem",
-        "body": "Lavar a frio (máx. 30°C), do avesso, com cores semelhantes. Detergente suave. Sem amaciador — cobre o algodão e desgasta a estampa com o tempo."
+        "body": "Lavar do avesso a 30 °C."
       },
       {
         "heading": "02 — Secagem",
-        "body": "Secar ao ar, à sombra. Evita a máquina de secar sempre que possível — o calor é inimigo do algodão e da estampa. Se mesmo assim usares, programa mais baixo."
+        "body": "Não usar máquina de secar."
       },
       {
         "heading": "03 — Engomar",
-        "body": "Engomar do avesso, em temperatura média. Nunca diretamente sobre a estampa. Para peças bordadas, passar à volta do bordado ou colocar um pano entre o ferro e o desenho."
+        "body": "Não passar a ferro sobre a estampa."
       },
       {
         "heading": "04 — Arrumação",
         "body": "Dobra as peças em vez de pendurar — pendurar muito tempo estica os ombros. Longe de sol direto para preservar a cor."
-      },
-      {
-        "heading": "05 — Com o tempo",
-        "body": "O algodão ring-spun amacia a cada lavagem. Algum desbotamento ligeiro e textura natural fazem parte do material — não são defeito. As peças são feitas para serem usadas, muito."
       }
     ]
   },
@@ -1248,15 +1244,13 @@
     "storyHeading": "A História",
     "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflete as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
     "detailsHeading": "Detalhes da Peça",
-    "materialFallback": "Material: A confirmar",
-    "fitFallback": "Corte: Regular / descontraído",
     "gsmLine": "Gramagem: {{gsm}} gsm",
-    "printFallback": "Impressão: DTF premium",
-    "care": "Cuidados: Lavar do avesso a 30°C",
-    "origin": "Origem: Desenhado em São Vicente, Madeira",
+    "printFallback": "Impressão: DTF",
+    "care": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
+    "origin": "Origem: Impresso em São Vicente, Madeira",
     "builtToLast": "Feito para uso duradouro",
     "sizeHeading": "Tamanho & Corte",
-    "sizeIntro": "Corte moderno e descontraído. Sobe um tamanho para uma silhueta mais oversized. Medidas aproximadas, podem variar ±1 cm.",
+    "sizeIntro": "Consulta o guia de tamanhos ou contacta-nos para confirmar as medidas da peça.",
     "tSize": "Tamanho",
     "tChest": "Peito (½)",
     "tLength": "Comprimento",

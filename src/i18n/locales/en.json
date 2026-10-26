@@ -236,12 +236,13 @@
     "backToShop": "Back to Shop",
     "home": "Home",
     "shop": "Shop",
+    "safetyHeading": "Product safety & compliance",
     "zoomImage": "Zoom image",
     "thumbAria": "View image {{i}} of {{total}}",
     "comingSoon": "Coming Soon",
     "reviewsOne": "review",
     "reviewsOther": "reviews",
-    "tagline": "✦ Designed in Madeira · Premium ring-spun cotton · Worldwide shipping",
+    "tagline": "Printed to order in São Vicente · Worldwide shipping",
     "quantity": "Quantity",
     "onlyLeft": "only {{stock}} left",
     "decreaseQty": "Decrease quantity",
@@ -260,15 +261,14 @@
     "addError": "Couldn't add to cart",
     "addErrorBody": "That variant may be out of stock. Please try again.",
     "inspirationHeading": "Designed with Madeira inspiration.",
-    "inspirationBody": "Every Madeira Originals piece is rooted in the landscapes, traditions and modern culture of Madeira Island — translated through premium materials and editorial cuts. Wear the island in Funchal, Lisbon, or anywhere the diaspora carries it.",
-    "materialsHeading": "Materials, fit & care.",
+    "inspirationBody": "Designs inspired by the places and culture of Madeira, printed to order in São Vicente.",
+    "materialsHeading": "Print & care.",
     "materials": [
-      "Premium cotton construction, made to last and soften with wear.",
-      "Modern unisex fit — true to size for most; size up for an oversized look.",
-      "Machine wash cold, inside out. Tumble dry low or hang to dry.",
-      "Designed in Madeira. Shipped worldwide."
+      "DTF printing.",
+      "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
+      "Printed to order in São Vicente. Worldwide shipping."
     ],
-    "seoFallback": "Premium {{title}} inspired by Madeira Island culture and identity."
+    "seoFallback": "{{title}} with a design inspired by Madeira."
   },
   "journal": {
     "overline": "Journal",
@@ -675,7 +675,7 @@
   },
   "relatedProducts": {
     "overline": "Continue the collection",
-    "heading": "More from the studio."
+    "heading": "More from the collection."
   },
   "aboutPage": {
     "seoOverline": "About Madeira Originals",
@@ -1090,13 +1090,13 @@
     "bodyMin": "Tell us a bit more (min 10 chars)"
   },
   "productTrust": {
-    "origin": "Designed in São Vicente, Madeira",
+    "origin": "Printed in São Vicente, Madeira",
     "shipping": "Shipping from Madeira",
     "secure": "Secure checkout",
-    "built": "Premium print quality"
+    "built": "Free studio collection"
   },
   "productInfo": {
-    "carePreview": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on print.",
+    "carePreview": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
     "viewCareLink": "View full care guide →",
     "shippingPreview": "Ships from Madeira. Delivery times vary by destination.",
     "viewShippingLink": "View shipping & returns →",
@@ -1112,7 +1112,7 @@
     },
     "care": {
       "title": "Care",
-      "body": "Wash inside out at 30°C. Do not tumble dry. Do not iron directly on the print. Our ring-spun cotton softens with wear — it is built for the long haul.",
+      "body": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
       "link": "Full care instructions"
     }
   },
@@ -1188,30 +1188,26 @@
   },
   "carePage": {
     "seoTitle": "Care | Madeira Originals",
-    "seoDescription": "How to care for ring-spun cotton, DTF prints, and embroidered pieces so they last for years.",
+    "seoDescription": "Care for Madeira Originals garments and DTF prints: wash at 30 °C, no tumble drying.",
     "overline": "Care",
-    "title": "Built to soften with wear.",
-    "lead": "Our pieces are made from ring-spun cotton with premium DTF printing. Treated well, they age beautifully — softer, more personal, more yours.",
+    "title": "Care for your garment.",
+    "lead": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
     "sections": [
       {
         "heading": "01 — Washing",
-        "body": "Wash cold (max 30°C), inside out, with similar colours. Use a mild detergent. Skip the fabric softener — it coats the cotton and dulls the print over time."
+        "body": "Wash inside out at 30 °C."
       },
       {
         "heading": "02 — Drying",
-        "body": "Hang to dry in the shade. Avoid the tumble dryer when possible — heat is the enemy of both cotton and print. If you must tumble dry, use the lowest setting."
+        "body": "Do not tumble dry."
       },
       {
         "heading": "03 — Ironing",
-        "body": "Iron inside out, on medium heat. Never iron directly on the print. For embroidered pieces, iron around the embroidery or place a cloth between the iron and the design."
+        "body": "Do not iron over the print."
       },
       {
         "heading": "04 — Storage",
         "body": "Fold pieces flat rather than hanging — long-term hanging stretches the shoulders. Keep away from direct sunlight to preserve the colour."
-      },
-      {
-        "heading": "05 — Over time",
-        "body": "Ring-spun cotton softens with every wash. A small amount of fading and natural texture is part of the material — not a defect. The pieces are built to be worn, often."
       }
     ]
   },
@@ -1248,15 +1244,13 @@
     "storyHeading": "The Story",
     "storyFallback": "Rooted in the north coast of Madeira, this piece reflects the basalt cliffs, Atlantic weather and quiet force of São Vicente.",
     "detailsHeading": "Garment Details",
-    "materialFallback": "Material: To be confirmed",
-    "fitFallback": "Fit: Regular / relaxed fit",
     "gsmLine": "Weight: {{gsm}} gsm",
-    "printFallback": "Print: Premium DTF print",
-    "care": "Care: Wash inside out at 30°C",
-    "origin": "Origin: Designed in São Vicente, Madeira",
+    "printFallback": "Print: DTF",
+    "care": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
+    "origin": "Origin: Printed in São Vicente, Madeira",
     "builtToLast": "Built for long-term wear",
     "sizeHeading": "Size & Fit",
-    "sizeIntro": "Modern relaxed cut. Size up for a more oversized streetwear silhouette. Measurements are approximate and may vary by ±1 cm.",
+    "sizeIntro": "Check the size guide or contact us to confirm garment measurements.",
     "tSize": "Size",
     "tChest": "Chest (half)",
     "tLength": "Length",
