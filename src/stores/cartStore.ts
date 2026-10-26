@@ -27,7 +27,7 @@ interface CartStore {
   items: CartItem[];
   cartId: string | null;
   checkoutUrl: string | null;
-  language: "PT" | "EN" | null;
+  language: "PT_PT" | "EN" | null;
   isLoading: boolean;
   isSyncing: boolean;
   addItem: (item: Omit<CartItem, "lineId">) => Promise<boolean>;

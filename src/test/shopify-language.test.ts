@@ -10,7 +10,7 @@ afterEach(async () => {
 });
 
 describe("Shopify language context", () => {
-  it.each([["pt-PT", "PT"], ["en", "EN"]])("requests %s products in %s", async (locale, language) => {
+  it.each([["pt-PT", "PT_PT"], ["en", "EN"]])("requests %s products in %s", async (locale, language) => {
     await i18n.changeLanguage(locale);
     const fetcher = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ data: {} }) });
     vi.stubGlobal("fetch", fetcher);
@@ -48,12 +48,12 @@ describe("Shopify language context", () => {
     useCartStore.setState({ cartId: "cart-old", language: "EN" });
     await useCartStore.getState().syncCart();
     const creation = bodies.find(body => body.query.includes("mutation cartCreate"));
-    expect(creation?.variables.language).toBe("PT");
+    expect(creation?.variables.language).toBe("PT_PT");
     expect(creation?.variables.input).toEqual({ buyerIdentity: { countryCode: "PT" }, lines: [{ quantity: 2, merchandiseId: variantId }] });
     const state = useCartStore.getState();
     expect(state.items[0].quantity).toBe(2);
     expect(state.items[0].selectedOptions).toEqual([{ name: "Cor", value: "Preto" }]);
     expect(state.checkoutUrl).toBe("https://example.com/checkout?channel=online_store");
-    expect(state.language).toBe("PT");
+    expect(state.language).toBe("PT_PT");
   });
 });

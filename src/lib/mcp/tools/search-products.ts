@@ -31,7 +31,7 @@ export default defineTool({
   description:
     "Search Madeira Originals products (t-shirts, hoodies, prints, accessories) from the live Shopify catalog. Returns title, handle, price, image, and product URL.",
   inputSchema: {
-    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
+    language: z.enum(["PT_PT", "EN"]).optional().describe("Storefront language; defaults to PT_PT."),
     query: z
       .string()
       .optional()
@@ -41,7 +41,7 @@ export default defineTool({
     limit: z.number().int().min(1).max(50).optional().describe("Max results (default 12)."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ query, limit, language = "PT" }) => {
+  handler: async ({ query, limit, language = "PT_PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {

@@ -62,7 +62,7 @@ async function fetchProductHandles() {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": SHOPIFY_TOKEN,
       },
-      body: JSON.stringify({ query, variables: { language: "PT" } }),
+      body: JSON.stringify({ query, variables: { language: "PT_PT" } }),
     });
     if (!res.ok) return [];
     const json = await res.json();

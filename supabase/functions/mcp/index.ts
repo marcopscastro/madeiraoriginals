@@ -37,14 +37,14 @@ var search_products_default = defineTool({
   title: "Search products",
   description: "Search Madeira Originals products (t-shirts, hoodies, prints, accessories) from the live Shopify catalog. Returns title, handle, price, image, and product URL.",
   inputSchema: {
-    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
+    language: z.enum(["PT_PT", "EN"]).optional().describe("Storefront language; defaults to PT_PT."),
     query: z.string().optional().describe(
       "Shopify search query, e.g. 'levada', 'tag:streetwear', 'product_type:hoodie'. Leave empty to list latest products."
     ),
     limit: z.number().int().min(1).max(50).optional().describe("Max results (default 12).")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ query, limit, language = "PT" }) => {
+  handler: async ({ query, limit, language = "PT_PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {
@@ -111,11 +111,11 @@ var get_product_default = defineTool2({
   title: "Get product",
   description: "Fetch a single Madeira Originals product by its handle, including full description, variants, and images.",
   inputSchema: {
-    language: z2.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
+    language: z2.enum(["PT_PT", "EN"]).optional().describe("Storefront language; defaults to PT_PT."),
     handle: z2.string().min(1).describe("Product handle, e.g. 'levada-walks-madeira-island-t-shirt'.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ handle, language = "PT" }) => {
+  handler: async ({ handle, language = "PT_PT" }) => {
     const res = await fetch(STOREFRONT_URL2, {
       method: "POST",
       headers: {

@@ -75,7 +75,7 @@ async function fetchAllProductHandles(): Promise<ProductNode[]> {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": SHOPIFY_STOREFRONT_TOKEN,
       },
-      body: JSON.stringify({ query, variables: { first: PAGE_SIZE, after: cursor, language: "PT" } }),
+      body: JSON.stringify({ query, variables: { first: PAGE_SIZE, after: cursor, language: "PT_PT" } }),
     });
     if (!res.ok) throw new Error(`Shopify HTTP ${res.status}`);
     const json: any = await res.json();

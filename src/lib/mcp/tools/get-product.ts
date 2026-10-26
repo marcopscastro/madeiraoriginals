@@ -36,11 +36,11 @@ export default defineTool({
   title: "Get product",
   description: "Fetch a single Madeira Originals product by its handle, including full description, variants, and images.",
   inputSchema: {
-    language: z.enum(["PT", "EN"]).optional().describe("Storefront language; defaults to PT."),
+    language: z.enum(["PT_PT", "EN"]).optional().describe("Storefront language; defaults to PT_PT."),
     handle: z.string().min(1).describe("Product handle, e.g. 'levada-walks-madeira-island-t-shirt'."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ handle, language = "PT" }) => {
+  handler: async ({ handle, language = "PT_PT" }) => {
     const res = await fetch(STOREFRONT_URL, {
       method: "POST",
       headers: {

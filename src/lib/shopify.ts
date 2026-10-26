@@ -6,8 +6,8 @@ export const SHOPIFY_STORE_PERMANENT_DOMAIN = "madeiraoriginals-cve6q.myshopify.
 export const SHOPIFY_STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 export const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
 
-export function getShopifyLanguage(language = i18n.resolvedLanguage ?? i18n.language ?? "pt"): "PT" | "EN" {
-  return language.toLowerCase().startsWith("pt") ? "PT" : "EN";
+export function getShopifyLanguage(language = i18n.resolvedLanguage ?? i18n.language ?? "pt"): "PT_PT" | "EN" {
+  return language.toLowerCase().startsWith("pt") ? "PT_PT" : "EN";
 }
 
 export interface ShopifyMoney {
