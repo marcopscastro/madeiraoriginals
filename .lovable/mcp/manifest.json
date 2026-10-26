@@ -25,6 +25,14 @@
           "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "properties": {
+            "language": {
+              "description": "Storefront language; defaults to PT_PT.",
+              "type": "string",
+              "enum": [
+                "PT_PT",
+                "EN"
+              ]
+            },
             "query": {
               "description": "Shopify search query, e.g. 'levada', 'tag:streetwear', 'product_type:hoodie'. Leave empty to list latest products.",
               "type": "string"
@@ -52,6 +60,14 @@
           "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "properties": {
+            "language": {
+              "description": "Storefront language; defaults to PT_PT.",
+              "type": "string",
+              "enum": [
+                "PT_PT",
+                "EN"
+              ]
+            },
             "handle": {
               "type": "string",
               "minLength": 1,
