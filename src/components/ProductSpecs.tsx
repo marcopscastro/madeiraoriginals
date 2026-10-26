@@ -45,20 +45,20 @@ const ProductSpecs = ({ metafields, productTitle }: Props) => {
     <section className="mt-16 md:mt-20 border-t border-foreground/10 pt-12 md:pt-16 space-y-14 md:space-y-20">
       {/* Story */}
       <div className="grid md:grid-cols-12 gap-6 md:gap-10">
-        <p className="md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
+        <p className="min-w-0 md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
           {t("productSpecs.storyHeading")}
         </p>
-        <p className="md:col-span-9 font-body text-base md:text-lg text-foreground/75 leading-relaxed max-w-3xl whitespace-pre-line">
+        <p className="min-w-0 md:col-span-9 font-body text-base md:text-lg text-foreground/75 leading-relaxed max-w-3xl whitespace-pre-line">
           {story}
         </p>
       </div>
 
       {/* Garment Details */}
       <div className="grid md:grid-cols-12 gap-6 md:gap-10">
-        <p className="md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
+        <p className="min-w-0 md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
           {t("productSpecs.detailsHeading")}
         </p>
-        <ul className="md:col-span-9 space-y-2 max-w-2xl">
+        <ul className="min-w-0 md:col-span-9 space-y-2 max-w-2xl">
           {detailLines.map((line) => (
             <li
               key={line}
@@ -72,10 +72,10 @@ const ProductSpecs = ({ metafields, productTitle }: Props) => {
 
       {/* Size & Fit */}
       <div className="grid md:grid-cols-12 gap-6 md:gap-10">
-        <p className="md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
+        <p className="min-w-0 md:col-span-3 font-heading text-[11px] font-semibold uppercase tracking-[0.35em] text-accent">
           {t("productSpecs.sizeHeading")}
         </p>
-        <div className="md:col-span-9 max-w-2xl">
+        <div className="min-w-0 md:col-span-9 max-w-2xl">
           <p className="font-body text-sm md:text-base text-foreground/75 leading-relaxed mb-6">
             {t("productSpecs.sizeIntro")}
           </p>
@@ -85,23 +85,23 @@ const ProductSpecs = ({ metafields, productTitle }: Props) => {
               {sizeGuide}
             </p>
           ) : (
-            <div className="overflow-x-auto -mx-2 sm:mx-0">
-              <table className="w-full min-w-[420px] border-t border-foreground/10">
+            <div className="min-w-0">
+              <table className="w-full table-fixed border-t border-foreground/10">
                 <thead>
-                  <tr className="font-heading text-[10px] font-semibold uppercase tracking-[0.25em] text-foreground/55">
-                    <th className="text-left py-3 px-2 font-medium">{t("productSpecs.tSize")}</th>
-                    <th className="text-left py-3 px-2 font-medium">{t("productSpecs.tChest")}</th>
-                    <th className="text-left py-3 px-2 font-medium">{t("productSpecs.tLength")}</th>
+                  <tr className="font-heading text-[10px] font-semibold uppercase tracking-[0.15em] sm:tracking-[0.25em] text-foreground/55 break-words">
+                    <th className="text-left py-3 px-1 sm:px-2 font-medium whitespace-normal break-words">{t("productSpecs.tSize")}</th>
+                    <th className="text-left py-3 px-1 sm:px-2 font-medium whitespace-normal break-words">{t("productSpecs.tChest")}</th>
+                    <th className="text-left py-3 px-1 sm:px-2 font-medium whitespace-normal break-words">{t("productSpecs.tLength")}</th>
                   </tr>
                 </thead>
                 <tbody className="font-body text-sm text-foreground/80">
                   {fallbackSizes.map((row) => (
                     <tr key={row.size} className="border-t border-foreground/10">
-                      <td className="py-3 px-2 font-heading text-xs font-semibold uppercase tracking-widest">
+                      <td className="py-3 px-1 sm:px-2 font-heading text-xs font-semibold uppercase tracking-widest">
                         {row.size}
                       </td>
-                      <td className="py-3 px-2">{row.chest} cm</td>
-                      <td className="py-3 px-2">{row.length} cm</td>
+                      <td className="py-3 px-1 sm:px-2">{row.chest} cm</td>
+                      <td className="py-3 px-1 sm:px-2">{row.length} cm</td>
                     </tr>
                   ))}
                 </tbody>

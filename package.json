@@ -16,7 +16,8 @@
     "preview": "vite preview",
     "sitemap": "bunx tsx scripts/generate-sitemap.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:mobile-overflow": "python3 tests/e2e/mobile_overflow_check.py"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
