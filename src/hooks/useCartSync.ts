@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { useCartStore } from "@/stores/cartStore";
 
 export function useCartSync() {
+  const { i18n } = useTranslation();
+  const language = i18n.resolvedLanguage ?? i18n.language;
   const syncCart = useCartStore((s) => s.syncCart);
 
   useEffect(() => {
@@ -11,5 +14,5 @@ export function useCartSync() {
     };
     document.addEventListener("visibilitychange", onVisibility);
     return () => document.removeEventListener("visibilitychange", onVisibility);
-  }, [syncCart]);
+  }, [syncCart, language]);
 }

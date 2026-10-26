@@ -17,8 +17,8 @@ const ProductSpecs = ({ metafields, productTitle }: Props) => {
   const { t } = useTranslation();
 
   const story = getMf(metafields, "story") || t("productSpecs.storyFallback");
-  const material = getMf(metafields, "material") || t("productSpecs.materialFallback");
-  const fit = getMf(metafields, "fit") || t("productSpecs.fitFallback");
+  const material = getMf(metafields, "material");
+  const fit = getMf(metafields, "fit");
   const gsm = getMf(metafields, "gsm");
   const printMethod = getMf(metafields, "print_method") || t("productSpecs.printFallback");
   const sizeGuide = getMf(metafields, "size_guide");

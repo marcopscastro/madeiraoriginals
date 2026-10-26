@@ -34,6 +34,7 @@ const ProductDetail = () => {
   const rating = useProductRating(handle);
 
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
+  const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -65,9 +66,10 @@ const ProductDetail = () => {
 
   // Default-select the first available variant's options
   useEffect(() => {
-    if (!product || singleVariant) return;
-    if (Object.keys(selectedOptions).length > 0) return;
-    const firstAvailable = variants.find((v) => v.availableForSale) ?? variants[0];
+    if (!product) return;
+    // Option names change with Shopify's language; preserve the variant by ID.
+    const previouslySelected = variants.find((v) => v.id === selectedVariantId);
+    const firstAvailable = previouslySelected ?? variants.find((v) => v.availableForSale) ?? variants[0];
     if (firstAvailable) {
       const initial: Record<string, string> = {};
       firstAvailable.selectedOptions.forEach((o) => {
@@ -76,7 +78,11 @@ const ProductDetail = () => {
       setSelectedOptions(initial);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [product?.id]);
+  }, [product]);
+
+  useEffect(() => {
+    if (activeVariant) setSelectedVariantId(activeVariant.id);
+  }, [activeVariant]);
 
   // For a given option, check if a value has any in-stock variant given other current selections
   const isValueAvailable = (optionName: string, value: string) => {
@@ -449,7 +455,7 @@ const ProductDetail = () => {
               <Accordion type="single" collapsible className="mt-6 border border-foreground/10">
                 <AccordionItem value="gpsr" className="border-0">
                   <AccordionTrigger className="px-4 py-3 font-heading text-[11px] font-bold uppercase tracking-widest text-foreground hover:no-underline hover:text-primary [&[data-state=open]]:text-primary">
-                    Product safety & compliance{/* i18n-ignore */}
+                    {t("product.safetyHeading")}
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4">
                     <div

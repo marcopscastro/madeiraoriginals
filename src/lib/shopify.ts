@@ -1,10 +1,14 @@
 import { toast } from "sonner";
 import i18n from "@/i18n";
 
-export const SHOPIFY_API_VERSION = "2025-07";
+export const SHOPIFY_API_VERSION = "2026-10";
 export const SHOPIFY_STORE_PERMANENT_DOMAIN = "madeiraoriginals-cve6q.myshopify.com";
 export const SHOPIFY_STOREFRONT_TOKEN = "bbcc49de92200adcd5c43d7f6f847485";
 export const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
+
+export function getShopifyLanguage(language = i18n.resolvedLanguage ?? i18n.language ?? "pt"): "PT" | "EN" {
+  return language.toLowerCase().startsWith("pt") ? "PT" : "EN";
+}
 
 export interface ShopifyMoney {
   amount: string;
@@ -63,7 +67,7 @@ export async function storefrontApiRequest<T = any>(
       "Content-Type": "application/json",
       "X-Shopify-Storefront-Access-Token": SHOPIFY_STOREFRONT_TOKEN,
     },
-    body: JSON.stringify({ query, variables }),
+    body: JSON.stringify({ query, variables: { ...variables, language: variables.language ?? getShopifyLanguage() } }),
   });
 
   if (response.status === 402) {
@@ -161,7 +165,7 @@ export function extractGpsrBlock(html: string): { cleanedHtml: string; gpsrHtml:
 // ---------- Queries ----------
 
 export const PRODUCTS_QUERY = `
-  query GetProducts($first: Int!, $query: String) {
+  query GetProducts($first: Int!, $query: String, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     products(first: $first, query: $query) {
       edges {
         node {
@@ -193,7 +197,7 @@ export const PRODUCTS_QUERY = `
 `;
 
 export const PRODUCT_BY_HANDLE_QUERY = `
-  query GetProductByHandle($handle: String!) {
+  query GetProductByHandle($handle: String!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     product(handle: $handle) {
       id
       title
@@ -237,13 +241,22 @@ export const PRODUCT_BY_HANDLE_QUERY = `
 `;
 
 export const CART_QUERY = `
-  query cart($id: ID!) {
-    cart(id: $id) { id totalQuantity }
+  query cart($id: ID!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
+    cart(id: $id) {
+      id totalQuantity checkoutUrl
+      lines(first: 100) { edges { node {
+        id quantity
+        merchandise { ... on ProductVariant {
+          id title price { amount currencyCode } selectedOptions { name value }
+          product { id title handle images(first: 1) { edges { node { url altText } } } }
+        } }
+      } } }
+    }
   }
 `;
 
 export const CART_CREATE_MUTATION = `
-  mutation cartCreate($input: CartInput!) {
+  mutation cartCreate($input: CartInput!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     cartCreate(input: $input) {
       cart {
         id
@@ -256,7 +269,7 @@ export const CART_CREATE_MUTATION = `
 `;
 
 export const CART_LINES_ADD_MUTATION = `
-  mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
+  mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     cartLinesAdd(cartId: $cartId, lines: $lines) {
       cart {
         id
@@ -268,7 +281,7 @@ export const CART_LINES_ADD_MUTATION = `
 `;
 
 export const CART_LINES_UPDATE_MUTATION = `
-  mutation cartLinesUpdate($cartId: ID!, $lines: [CartLineUpdateInput!]!) {
+  mutation cartLinesUpdate($cartId: ID!, $lines: [CartLineUpdateInput!]!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     cartLinesUpdate(cartId: $cartId, lines: $lines) {
       cart { id }
       userErrors { field message }
@@ -277,7 +290,7 @@ export const CART_LINES_UPDATE_MUTATION = `
 `;
 
 export const CART_LINES_REMOVE_MUTATION = `
-  mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!) {
+  mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!, $language: LanguageCode!) @inContext(language: $language, country: PT) {
     cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
       cart { id }
       userErrors { field message }
