@@ -73,11 +73,11 @@
       },
       "apparel": {
         "title": "HORECA Apparel",
-        "items": "High-durability DTF staff uniforms (Front & Back of House) · Custom aprons"
+        "items": "High-durability staff uniforms (Front & Back of House) · Custom aprons"
       },
       "physical": {
         "title": "Physical Branding",
-        "items": "UV DTF equipment decals · Laser-engraved menus · Stone signage"
+        "items": "Durable equipment decals · Laser-engraved menus · Stone signage"
       }
     },
     "trustedBy": "Trusted by",
@@ -161,10 +161,10 @@
       },
       "whiteLabel": {
         "title": "White-Label Manufacturing",
-        "body": "Custom design and DTF printing for souvenir shops — your branding, our production."
+        "body": "Custom design and printing for souvenir shops — your branding, our production."
       },
       "uvdtf": {
-        "title": "UV DTF Merch",
+        "title": "Sticker Merch",
         "body": "Bulk waterproof sticker packs. Mix designs, low minimums."
       }
     },
@@ -188,8 +188,8 @@
       "volumeHint": "e.g. 250 units",
       "windowHint": "Preferred date",
       "lineCorner": "São Vicente collection t-shirts",
-      "lineWhiteLabel": "White-label DTF",
-      "lineUv": "UV DTF stickers"
+      "lineWhiteLabel": "White-label",
+      "lineUv": "Durable stickers"
     },
     "tableQty": "Qty",
     "tablePrice": "Price",
@@ -264,7 +264,7 @@
     "inspirationBody": "Designs inspired by the places and culture of Madeira, printed to order in São Vicente.",
     "materialsHeading": "Print & care.",
     "materials": [
-      "DTF printing.",
+      "Printed in our studio.",
       "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
       "Printed to order in São Vicente. Worldwide shipping."
     ],
@@ -328,7 +328,7 @@
     },
     "wholesale": {
       "title": "Wholesale — Madeira Originals Distribution Portal",
-      "description": "Wholesale distribution for Madeira Originals: premium Corner Line, white-label apparel and UV DTF production for retailers and distributors. Passcode-protected."
+      "description": "Wholesale distribution for Madeira Originals: premium Corner Line, white-label apparel and in-house production for retailers and distributors. Passcode-protected."
     }
   },
   "common": {
@@ -358,7 +358,7 @@
       },
       {
         "title": "Apparel Printing",
-        "desc": "Uniforms, t-shirts, merchandise. DTF printed on our own machines.",
+        "desc": "Uniforms, t-shirts, merchandise. Printed in our studio.",
         "to": "/apparel-printing"
       },
       {
@@ -513,9 +513,9 @@
     "madeira-stickers": {
       "eyebrow": "Stickers",
       "title": "Madeira Stickers",
-      "intro": "Durable die-cut stickers — coordinates, micro-icons, and quiet Madeira culture. Made with the same UV DTF process we run for brands.",
+      "intro": "Durable die-cut stickers — coordinates, micro-icons, and quiet Madeira culture. Made in our studio with the same process we run for brands.",
       "metaTitle": "Madeira Stickers | Die-Cut UV Stickers | Madeira Originals",
-      "metaDescription": "Premium Madeira stickers — die-cut, UV DTF, weatherproof. Coordinates, icons, and culture from São Vicente, Madeira."
+      "metaDescription": "Premium Madeira stickers — die-cut, weatherproof. Coordinates, icons, and culture from São Vicente, Madeira."
     },
     "madeira-streetwear": {
       "eyebrow": "Streetwear",
@@ -646,18 +646,18 @@
     "overline": "Production Studio",
     "headingA": "Custom apparel.",
     "headingB": "Built in Madeira.",
-    "body": "Custom apparel, DTF gang sheets, UV DTF stickers, and technical print solutions for brands, businesses, restaurants, teams, and creators.",
+    "body": "Custom apparel, durable stickers, and technical print solutions for brands, businesses, restaurants, teams, and creators.",
     "services": [
       {
         "label": "Custom Apparel Printing",
         "anchor": "custom-apparel"
       },
       {
-        "label": "DTF Gang Sheets",
+        "label": "Gang Sheets",
         "anchor": "dtf"
       },
       {
-        "label": "UV DTF Stickers",
+        "label": "Durable stickers",
         "anchor": "uv-dtf"
       },
       {
@@ -671,7 +671,7 @@
     ],
     "ctaView": "View Production Services",
     "ctaQuote": "Request a Quote",
-    "imageAlt": "Custom apparel printing studio with DTF gang sheet and rack of garments by Madeira Studio"
+    "imageAlt": "Custom apparel printing studio with print equipment and rack of garments by Madeira Studio"
   },
   "relatedProducts": {
     "overline": "Continue the collection",
@@ -873,7 +873,7 @@
       {
         "eyebrow": "For under €15",
         "title": "Madeira stickers — small, durable, real.",
-        "body": "Die-cut UV DTF stickers built to outlast the airport magnets. Coordinates, micro-icons, real Madeira culture.",
+        "body": "Die-cut stickers built to outlast the airport magnets. Coordinates, micro-icons, real Madeira culture.",
         "cta": "Shop Stickers"
       }
     ],
@@ -1188,7 +1188,7 @@
   },
   "carePage": {
     "seoTitle": "Care | Madeira Originals",
-    "seoDescription": "Care for Madeira Originals garments and DTF prints: wash at 30 °C, no tumble drying.",
+    "seoDescription": "Care for Madeira Originals garments and prints: wash at 30 °C, no tumble drying.",
     "overline": "Care",
     "title": "Care for your garment.",
     "lead": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
@@ -1245,7 +1245,7 @@
     "storyFallback": "Rooted in the north coast of Madeira, this piece reflects the basalt cliffs, Atlantic weather and quiet force of São Vicente.",
     "detailsHeading": "Garment Details",
     "gsmLine": "Weight: {{gsm}} gsm",
-    "printFallback": "Print: DTF",
+    "printFallback": "Printed in our studio in São Vicente",
     "care": "Wash inside out at 30 °C. Do not tumble dry. Do not iron over the print.",
     "origin": "Origin: Printed in São Vicente, Madeira",
     "builtToLast": "Built for long-term wear",
@@ -1258,7 +1258,7 @@
   },
   "custom": {
     "seoTitle": "Custom Apparel & Merch — Madeira Studio",
-    "seoDescription": "Custom T-shirts, staff uniforms, event apparel and branded merch — designed and printed in São Vicente, Madeira. Premium DTF, UV DTF stickers, small-batch friendly.",
+    "seoDescription": "Custom T-shirts, staff uniforms, event apparel and branded merch — designed and printed in São Vicente, Madeira. In-house printing, small-batch friendly.",
     "overline": "Custom Apparel · Made in São Vicente",
     "headingA": "Your brand,",
     "headingB": "in our materials.",
@@ -1272,7 +1272,7 @@
       "items": [
         {
           "title": "Custom T-Shirts",
-          "body": "Ring-spun cotton tees with your design, printed in DTF for long-term wear and crisp colour."
+          "body": "Ring-spun cotton tees with your design, printed in our studio for long-term wear and crisp colour."
         },
         {
           "title": "Staff Uniforms",
@@ -1287,11 +1287,11 @@
           "body": "Caps, totes, hoodies and accessories. Treated with the same care as our retail line — never souvenir-grade."
         },
         {
-          "title": "DTF Printing",
-          "body": "Direct-to-film printing for vivid colour, fine detail and excellent wash durability on cotton blends."
+          "title": "Garment printing",
+          "body": "In-studio printing for vivid colour, fine detail and excellent wash durability on cotton blends."
         },
         {
-          "title": "UV DTF Stickers",
+          "title": "Durable stickers",
           "body": "Waterproof, weatherproof die-cut stickers for windows, equipment, packaging and merch."
         }
       ]
@@ -1331,7 +1331,7 @@
         "uniforms": "Staff uniforms",
         "events": "Event apparel",
         "merch": "Branded merch",
-        "stickers": "UV DTF stickers",
+        "stickers": "Durable stickers",
         "other": "Other"
       }
     }
@@ -1351,7 +1351,7 @@
       },
       {
         "title": "Apparel Printing",
-        "desc": "Staff uniforms and merchandise, printed on our own DTF machine in São Vicente.",
+        "desc": "Staff uniforms and merchandise, printed in our own studio in São Vicente.",
         "to": "/apparel-printing"
       },
       {
@@ -1396,7 +1396,7 @@
     "apparel": {
       "overline": "Apparel Printing",
       "hero": "Uniforms and merchandise, printed here.",
-      "intro": "We print on our own DTF machine in São Vicente. That means no minimum order of five hundred, no six-week wait for something to come off the boat, and no reprint charge because you hired two more people in July.",
+      "intro": "We print in our own studio in São Vicente. That means no minimum order of five hundred, no six-week wait for something to come off the boat, and no reprint charge because you hired two more people in July.",
       "list": [
         "Staff uniforms",
         "Merchandise you can sell",
@@ -1404,7 +1404,7 @@
         "Restocks in days, not months"
       ],
       "seoTitle": "Apparel Printing in Madeira — Uniforms & Merchandise",
-      "seoDescription": "Custom staff uniforms and merchandise printed on our own DTF machine in São Vicente, Madeira. No large minimums."
+      "seoDescription": "Custom staff uniforms and merchandise printed in our own studio in São Vicente, Madeira. No large minimums."
     },
     "vinyl": {
       "overline": "Vinyl & Signage",

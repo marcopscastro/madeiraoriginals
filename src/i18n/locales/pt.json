@@ -73,11 +73,11 @@
       },
       "apparel": {
         "title": "Vestuário HORECA",
-        "items": "Fardas DTF de alta durabilidade (Sala & Cozinha) · Aventais personalizados"
+        "items": "Fardas de alta durabilidade (Sala & Cozinha) · Aventais personalizados"
       },
       "physical": {
         "title": "Branding Físico",
-        "items": "Decalques UV DTF para equipamento · Menus gravados a laser · Sinalética em pedra"
+        "items": "Decalques resistentes para equipamento · Menus gravados a laser · Sinalética em pedra"
       }
     },
     "trustedBy": "Confiam em nós",
@@ -161,10 +161,10 @@
       },
       "whiteLabel": {
         "title": "Fabrico White-Label",
-        "body": "Design personalizado e impressão DTF para lojas de souvenirs — a tua marca, a nossa produção."
+        "body": "Design personalizado e impressão para lojas de souvenirs — a tua marca, a nossa produção."
       },
       "uvdtf": {
-        "title": "Merch UV DTF",
+        "title": "Merch de autocolantes",
         "body": "Packs de autocolantes à prova de água. Mistura designs, mínimos baixos."
       }
     },
@@ -188,8 +188,8 @@
       "volumeHint": "ex.: 250 unidades",
       "windowHint": "Data pretendida",
       "lineCorner": "T-shirts da coleção São Vicente",
-      "lineWhiteLabel": "DTF white-label",
-      "lineUv": "Autocolantes UV DTF"
+      "lineWhiteLabel": "White-label",
+      "lineUv": "Autocolantes resistentes"
     },
     "tableQty": "Qtd",
     "tablePrice": "Preço",
@@ -264,7 +264,7 @@
     "inspirationBody": "Desenhos inspirados nos lugares e na cultura da Madeira, impressos por encomenda em São Vicente.",
     "materialsHeading": "Impressão & cuidados.",
     "materials": [
-      "Impressão DTF.",
+      "Impresso no nosso estúdio.",
       "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
       "Impresso por encomenda em São Vicente. Envio para todo o mundo."
     ],
@@ -328,7 +328,7 @@
     },
     "wholesale": {
       "title": "Distribuição — Portal Wholesale Madeira Originals",
-      "description": "Distribuição wholesale Madeira Originals: Corner Line premium, vestuário white-label e produção UV DTF para retalhistas e distribuidores. Acesso por código."
+      "description": "Distribuição wholesale Madeira Originals: Corner Line premium, vestuário white-label e produção própria para retalhistas e distribuidores. Acesso por código."
     }
   },
   "common": {
@@ -358,7 +358,7 @@
       },
       {
         "title": "Impressão em Vestuário",
-        "desc": "Fardas, t-shirts, merchandising. Impressão DTF nas nossas máquinas.",
+        "desc": "Fardas, t-shirts, merchandising. Impressão no nosso estúdio.",
         "to": "/apparel-printing"
       },
       {
@@ -513,9 +513,9 @@
     "madeira-stickers": {
       "eyebrow": "Autocolantes",
       "title": "Autocolantes da Madeira",
-      "intro": "Autocolantes die-cut resistentes — coordenadas, micro-ícones e cultura madeirense sem estridência. Feitos com o mesmo processo UV DTF que usamos para marcas.",
+      "intro": "Autocolantes die-cut resistentes — coordenadas, micro-ícones e cultura madeirense sem estridência. Feitos no nosso estúdio, com o mesmo processo que usamos para marcas.",
       "metaTitle": "Autocolantes da Madeira | Die-Cut UV | Madeira Originals",
-      "metaDescription": "Autocolantes premium da Madeira — die-cut, UV DTF, resistentes ao tempo. Coordenadas, ícones e cultura de São Vicente, Madeira."
+      "metaDescription": "Autocolantes premium da Madeira — die-cut, resistentes ao tempo. Coordenadas, ícones e cultura de São Vicente, Madeira."
     },
     "madeira-streetwear": {
       "eyebrow": "Streetwear",
@@ -646,18 +646,18 @@
     "overline": "Production Studio",
     "headingA": "Vestuário personalizado.",
     "headingB": "Feito na Madeira.",
-    "body": "Vestuário personalizado, gang sheets DTF, autocolantes UV DTF e soluções técnicas de impressão para marcas, empresas, restaurantes, equipas e criadores.",
+    "body": "Vestuário personalizado, autocolantes resistentes e soluções técnicas de impressão para marcas, empresas, restaurantes, equipas e criadores.",
     "services": [
       {
         "label": "Impressão de Vestuário Personalizado",
         "anchor": "custom-apparel"
       },
       {
-        "label": "Gang Sheets DTF",
+        "label": "Gang Sheets",
         "anchor": "dtf"
       },
       {
-        "label": "Autocolantes UV DTF",
+        "label": "Autocolantes resistentes",
         "anchor": "uv-dtf"
       },
       {
@@ -671,7 +671,7 @@
     ],
     "ctaView": "Ver Serviços de Produção",
     "ctaQuote": "Pedir Orçamento",
-    "imageAlt": "Estúdio de impressão de vestuário personalizado com gang sheet DTF e cabide de peças pela Madeira Studio"
+    "imageAlt": "Estúdio de impressão de vestuário personalizado, com equipamento e cabide de peças pela Madeira Studio"
   },
   "relatedProducts": {
     "overline": "Continua a coleção",
@@ -873,7 +873,7 @@
       {
         "eyebrow": "Abaixo de €15",
         "title": "Autocolantes da Madeira — pequenos, duradouros, reais.",
-        "body": "Autocolantes UV DTF die-cut feitos para sobreviver aos ímanes do aeroporto. Coordenadas, micro-ícones, cultura madeirense verdadeira.",
+        "body": "Autocolantes die-cut feitos para sobreviver aos ímanes do aeroporto. Coordenadas, micro-ícones, cultura madeirense verdadeira.",
         "cta": "Ver Autocolantes"
       }
     ],
@@ -1188,7 +1188,7 @@
   },
   "carePage": {
     "seoTitle": "Cuidados | Madeira Originals",
-    "seoDescription": "Cuidados com as peças Madeira Originals e as estampas DTF: lavagem a 30 °C, sem máquina de secar.",
+    "seoDescription": "Cuidados com as peças Madeira Originals e as estampas: lavagem a 30 °C, sem máquina de secar.",
     "overline": "Cuidados",
     "title": "Cuidados com a tua peça.",
     "lead": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
@@ -1245,7 +1245,7 @@
     "storyFallback": "Enraizada na costa norte da Madeira, esta peça reflete as falésias de basalto, o tempo Atlântico e a força silenciosa de São Vicente.",
     "detailsHeading": "Detalhes da Peça",
     "gsmLine": "Gramagem: {{gsm}} gsm",
-    "printFallback": "Impressão: DTF",
+    "printFallback": "Impressão: no nosso estúdio em São Vicente",
     "care": "Lavar do avesso a 30 °C. Não usar máquina de secar. Não passar a ferro sobre a estampa.",
     "origin": "Origem: Impresso em São Vicente, Madeira",
     "builtToLast": "Feito para uso duradouro",
@@ -1258,7 +1258,7 @@
   },
   "custom": {
     "seoTitle": "Vestuário & Merch Personalizado — Madeira Studio",
-    "seoDescription": "T-shirts personalizadas, fardamentos, vestuário para eventos e merch — desenhado e impresso em São Vicente, Madeira. DTF premium, autocolantes UV DTF, pequenas séries.",
+    "seoDescription": "T-shirts personalizadas, fardamentos, vestuário para eventos e merch — desenhado e impresso em São Vicente, Madeira. Impressão no estúdio, pequenas séries.",
     "overline": "Vestuário Personalizado · Feito em São Vicente",
     "headingA": "A tua marca,",
     "headingB": "nos nossos materiais.",
@@ -1272,7 +1272,7 @@
       "items": [
         {
           "title": "T-shirts Personalizadas",
-          "body": "T-shirts em algodão ring-spun com o teu design, impressas em DTF para uso duradouro e cor nítida."
+          "body": "T-shirts em algodão ring-spun com o teu design, impressas no nosso estúdio para uso duradouro e cor nítida."
         },
         {
           "title": "Fardamentos",
@@ -1287,11 +1287,11 @@
           "body": "Bonés, totes, hoodies e acessórios. Tratados com o mesmo cuidado da nossa linha retalho — nunca souvenir."
         },
         {
-          "title": "Impressão DTF",
-          "body": "Impressão direct-to-film para cor vibrante, detalhe fino e excelente durabilidade na lavagem em mistos de algodão."
+          "title": "Impressão de estampas",
+          "body": "Impressão no nosso estúdio para cor vibrante, detalhe fino e excelente durabilidade na lavagem em mistos de algodão."
         },
         {
-          "title": "Autocolantes UV DTF",
+          "title": "Autocolantes resistentes",
           "body": "Autocolantes recortados, à prova de água e intempéries, para vidros, equipamento, embalagem e merch."
         }
       ]
@@ -1331,7 +1331,7 @@
         "uniforms": "Fardamentos",
         "events": "Vestuário para eventos",
         "merch": "Merch de marca",
-        "stickers": "Autocolantes UV DTF",
+        "stickers": "Autocolantes resistentes",
         "other": "Outro"
       }
     }
@@ -1351,7 +1351,7 @@
       },
       {
         "title": "Impressão em Vestuário",
-        "desc": "Fardas e merchandising, impressos na nossa própria máquina DTF em São Vicente.",
+        "desc": "Fardas e merchandising, impressos no nosso estúdio em São Vicente.",
         "to": "/apparel-printing"
       },
       {
@@ -1396,7 +1396,7 @@
     "apparel": {
       "overline": "Impressão em Vestuário",
       "hero": "Fardas e merchandising, impressos aqui.",
-      "intro": "Imprimimos na nossa própria máquina DTF em São Vicente. Isso quer dizer sem encomenda mínima de quinhentas unidades, sem seis semanas à espera que venha de barco, e sem cobrar uma reimpressão só porque contratou mais duas pessoas em julho.",
+      "intro": "Imprimimos no nosso estúdio em São Vicente. Isso quer dizer sem encomenda mínima de quinhentas unidades, sem seis semanas à espera que venha de barco, e sem cobrar uma reimpressão só porque contratou mais duas pessoas em julho.",
       "list": [
         "Fardas para equipa",
         "Merchandising para vender",
@@ -1404,7 +1404,7 @@
         "Reposições em dias, não meses"
       ],
       "seoTitle": "Impressão em Vestuário na Madeira — Fardas e Merchandising",
-      "seoDescription": "Fardas para equipa e merchandising impressos na nossa máquina DTF em São Vicente, Madeira. Sem grandes mínimos de encomenda."
+      "seoDescription": "Fardas para equipa e merchandising impressos no nosso estúdio em São Vicente, Madeira. Sem grandes mínimos de encomenda."
     },
     "vinyl": {
       "overline": "Vinil e Sinalética",
