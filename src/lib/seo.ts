@@ -33,7 +33,7 @@ export const LOCAL_BUSINESS_JSONLD = {
   name: SITE_NAME,
   url: SITE_URL,
   description:
-    "Custom apparel printing, DTF gang sheets, UV DTF stickers, and business merchandise studio in São Vicente, Madeira.",
+    "Custom apparel printing and business merchandise studio in São Vicente, Madeira.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Caminho da Furna 7",
