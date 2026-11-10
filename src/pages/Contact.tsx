@@ -36,8 +36,8 @@ const Contact = () => {
             <h2 className="font-heading text-xs font-bold uppercase tracking-widest text-primary mb-3">
               {t("contactPage.phoneLabel")}
             </h2>
-            <a href="tel:+351962220769" className="font-display text-xl text-foreground hover:text-primary transition-colors">
-              962 220 769
+            <a href="tel:+351965640227" className="font-display text-xl text-foreground hover:text-primary transition-colors">
+              965 640 227
             </a>
           </div>
         </div>
