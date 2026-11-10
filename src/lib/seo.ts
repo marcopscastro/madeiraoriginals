@@ -12,7 +12,7 @@ export const ORG_JSONLD = {
   description:
     "Madeira Originals t-shirts, hoodies and accessories with designs of places across Madeira — first collection: São Vicente. Printed to order in our studio.",
   brand: { "@type": "Brand", name: SITE_NAME },
-  telephone: "+351 962 220 769",
+  telephone: "+351 965 640 227",
   email: "geral@madeiraoriginals.pt",
   vatID: "PT202158969",
   address: {
